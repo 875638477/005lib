@@ -129,6 +129,7 @@ IT8987E 的价值是：笔记本量产验证多、ACPI EC 模型成熟。代价�
 **平台侧**
 
 - [ ] 目标 SoC/PCH 是否引出 LPC 或 eSPI？电压域与复位是否可接 EC？  
+- [ ] 预留针座若是 TPM：手册确认是 **LPC-TPM** 还是 **SPI_TPM**（后者不可作 EC）？  
 - [ ] 是否具备改 BIOS 权限（AMI/Insydemore/coreboot/自研 UEFI）？  
 - [ ] Windows / Linux 目标版本对 Control Method Battery 的验证计划？
 
