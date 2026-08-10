@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
+  <defs>
+    <style type="text/css"><![CDATA[
+      .t { font: 700 24px sans-serif; fill: #111111; }
+      .h { font: 700 15px sans-serif; fill: #111111; }
+      .s { font: 12px sans-serif; fill: #222222; }
+      .frame { fill: #fafafa; stroke: #333333; stroke-width: 2; }
+      .pwr { stroke: #b33b1a; stroke-width: 4; fill: none; }
+      .gnd { stroke: #1f5d3a; stroke-width: 4; fill: none; }
+      .chip { fill: #ffffff; stroke: #333333; stroke-width: 1.5; }
+    ]]></style>
+  </defs>
+  <rect width="1400" height="900" fill="#ffffff"/>
+  <text x="40" y="40" class="t">Dual DPS-1200FB Backplane Schematic Overview (Rev A)</text>
+  <text x="40" y="65" class="s">Conceptual drawing · see netlist and sheet notes for full connectivity</text>
+
+  <rect x="40" y="100" width="160" height="320" class="frame"/>
+  <text x="70" y="125" class="h">J1 SLOT A</text>
+  <text x="55" y="155" class="s">1-13,52-64 +12V</text>
+  <text x="55" y="180" class="s">14-26,39-51 GND</text>
+  <text x="55" y="205" class="s">33 EN_A#</text>
+  <text x="55" y="230" class="s">36 PRE_A</text>
+  <text x="55" y="255" class="s">37 SB_A</text>
+  <text x="55" y="280" class="s">35 PSOK_A</text>
+  <text x="55" y="305" class="s">38 ALARM_A</text>
+  <text x="55" y="330" class="s">31/32 SCL/SDA</text>
+  <text x="55" y="355" class="s">27-29 ADR_A</text>
+  <text x="55" y="380" class="s">30 SGND</text>
+  <text x="55" y="405" class="s">34 ISHARE_A</text>
+
+  <rect x="1200" y="100" width="160" height="320" class="frame"/>
+  <text x="1230" y="125" class="h">J2 SLOT B</text>
+  <text x="1215" y="155" class="s">1-13,52-64 +12V</text>
+  <text x="1215" y="180" class="s">14-26,39-51 GND</text>
+  <text x="1215" y="205" class="s">33 EN_B#</text>
+  <text x="1215" y="230" class="s">36 PRE_B</text>
+  <text x="1215" y="255" class="s">37 SB_B</text>
+  <text x="1215" y="280" class="s">35 PSOK_B</text>
+  <text x="1215" y="305" class="s">38 ALARM_B</text>
+  <text x="1215" y="330" class="s">31/32 SCL/SDA</text>
+  <text x="1215" y="355" class="s">27-29 ADR_B</text>
+  <text x="1215" y="380" class="s">30 SGND</text>
+  <text x="1215" y="405" class="s">34 ISHARE_B</text>
+
+  <rect x="280" y="140" width="840" height="70" fill="#ffe8d6" stroke="#b33b1a" stroke-width="2"/>
+  <text x="500" y="180" class="h">VBUS_12V bus (V12A hard-tied to V12B)</text>
+  <path class="pwr" d="M200 160 H280"/>
+  <path class="pwr" d="M1120 160 H1200"/>
+
+  <rect x="280" y="230" width="840" height="50" fill="#e2f5ea" stroke="#1f5d3a" stroke-width="2"/>
+  <text x="600" y="260" class="h">PGND power plane</text>
+  <path class="gnd" d="M200 250 H280"/>
+  <path class="gnd" d="M1120 250 H1200"/>
+
+  <rect x="280" y="320" width="240" height="160" class="chip"/>
+  <text x="330" y="345" class="h">Slot A control</text>
+  <text x="300" y="370" class="s">SB_A -22k- PRE_A</text>
+  <text x="300" y="395" class="s">EN_A# -- SW1 -- SGND</text>
+  <text x="300" y="420" class="s">PSOK_A -- LED</text>
+  <text x="300" y="445" class="s">ALARM_A -- LED</text>
+  <text x="300" y="470" class="s">ISHARE_A = TP</text>
+
+  <rect x="880" y="320" width="240" height="160" class="chip"/>
+  <text x="930" y="345" class="h">Slot B control</text>
+  <text x="900" y="370" class="s">SB_B -22k- PRE_B</text>
+  <text x="900" y="395" class="s">EN_B# -- SW2 -- SGND</text>
+  <text x="900" y="420" class="s">PSOK_B -- LED</text>
+  <text x="900" y="445" class="s">ALARM_B -- LED</text>
+  <text x="900" y="470" class="s">ISHARE_B = TP</text>
+
+  <rect x="560" y="320" width="280" height="160" class="chip"/>
+  <text x="630" y="345" class="h">Manage / Standby</text>
+  <text x="580" y="370" class="s">Shared SCL/SDA + 4.7k pull-up</text>
+  <text x="580" y="395" class="s">ADR_B straps for unique addr</text>
+  <text x="580" y="420" class="s">SB_A/B Schottky to SBS_BUS</text>
+  <text x="580" y="445" class="s">LDO to 3V3 (optional)</text>
+  <text x="580" y="470" class="s">J3 PMBus header</text>
+
+  <rect x="400" y="540" width="600" height="120" fill="#fff4e8" stroke="#b33b1a" stroke-width="2"/>
+  <text x="560" y="575" class="h">Output JOUT</text>
+  <text x="450" y="605" class="s">M8 studs: VBUS_12V x2 , PGND x2</text>
+  <text x="450" y="630" class="s">External breaker / shunt / meter recommended</text>
+  <path class="pwr" d="M700 210 V540"/>
+  <path class="gnd" d="M760 280 V540"/>
+
+  <rect x="40" y="700" width="1320" height="160" class="frame"/>
+  <text x="60" y="730" class="h">Edge-finger fanout notes</text>
+  <text x="60" y="760" class="s">All +12V pins must enter a wide pour/via farm immediately. Same for GND. Keep control pins away from high di/dt loops.</text>
+  <text x="60" y="790" class="s">PRE: pull toward SB via 10k-22k. EN#: active-low to SGND. Do not wire EN/PRE onto the power bus.</text>
+  <text x="60" y="820" class="s">Rev B may insert ORing MOSFETs between V12A/V12B and VBUS_12V (see sheets/05-oring-optional.md).</text>
+</svg>
