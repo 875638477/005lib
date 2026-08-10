@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <defs>
+    <style type="text/css"><![CDATA[
+      .title { font: 700 28px sans-serif; fill: #1a1a1a; }
+      .label { font: 600 16px sans-serif; fill: #1a1a1a; }
+      .small { font: 13px sans-serif; fill: #333333; }
+      .box { fill: #f7f3ea; stroke: #2f4f4f; stroke-width: 2; }
+      .psu { fill: #e8f1ef; stroke: #1f4e5f; stroke-width: 2; }
+      .bus { fill: #ffe8c8; stroke: #b85c38; stroke-width: 3; }
+      .ctrl { fill: #eef2ff; stroke: #3d4a8f; stroke-width: 2; }
+      .arrow { stroke: #1a1a1a; stroke-width: 2; fill: none; marker-end: url(#m); }
+    ]]></style>
+    <marker id="m" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#1a1a1a"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="720" fill="#f5f7f6"/>
+  <text x="40" y="48" class="title">DPS-1200FB Dual Power Cage / Backplane</text>
+  <text x="40" y="78" class="small">Rev A · paralleled bus · per-slot enable · shared PMBus</text>
+
+  <rect x="60" y="120" width="220" height="160" class="psu" rx="8"/>
+  <text x="90" y="155" class="label">PSU A</text>
+  <text x="80" y="185" class="small">DPS-1200FB</text>
+  <text x="80" y="208" class="small">AC IN A</text>
+  <text x="80" y="231" class="small">+12V / SB / EN</text>
+  <text x="80" y="254" class="small">PMBus ADR=A</text>
+
+  <rect x="60" y="320" width="220" height="160" class="psu" rx="8"/>
+  <text x="90" y="355" class="label">PSU B</text>
+  <text x="80" y="385" class="small">DPS-1200FB</text>
+  <text x="80" y="408" class="small">AC IN B</text>
+  <text x="80" y="431" class="small">+12V / SB / EN</text>
+  <text x="80" y="454" class="small">PMBus ADR=B</text>
+
+  <rect x="360" y="120" width="480" height="360" class="box" rx="10"/>
+  <text x="500" y="155" class="label">Power Backplane PCB</text>
+
+  <rect x="390" y="180" width="180" height="80" class="ctrl" rx="6"/>
+  <text x="420" y="210" class="small">SLOT A 64Pin</text>
+  <text x="420" y="232" class="small">PRE / EN / PSOK</text>
+
+  <rect x="630" y="180" width="180" height="80" class="ctrl" rx="6"/>
+  <text x="660" y="210" class="small">SLOT B 64Pin</text>
+  <text x="660" y="232" class="small">PRE / EN / PSOK</text>
+
+  <rect x="390" y="290" width="420" height="70" class="bus" rx="6"/>
+  <text x="480" y="335" class="label">VBUS_12V / PGND Bus</text>
+
+  <rect x="390" y="385" width="200" height="70" class="ctrl" rx="6"/>
+  <text x="420" y="415" class="small">Enable SW / LED</text>
+  <text x="420" y="437" class="small">SB to 3V3 LDO</text>
+
+  <rect x="610" y="385" width="200" height="70" class="ctrl" rx="6"/>
+  <text x="640" y="415" class="small">SCL/SDA pull-up</text>
+  <text x="640" y="437" class="small">ADR straps</text>
+
+  <rect x="920" y="250" width="220" height="120" class="bus" rx="8"/>
+  <text x="955" y="295" class="label">System 12V Load</text>
+  <text x="945" y="325" class="small">Stud / busbar out</text>
+  <text x="945" y="348" class="small">Add breaker</text>
+
+  <path class="arrow" d="M280 200 H360"/>
+  <path class="arrow" d="M280 400 H360"/>
+  <path class="arrow" d="M840 325 H920"/>
+
+  <rect x="60" y="540" width="1080" height="130" class="box" rx="8"/>
+  <text x="90" y="580" class="label">Mechanical Power Cage</text>
+  <text x="90" y="610" class="small">Rails · hot-plug alignment · EMI panel · airflow · chassis earth</text>
+  <text x="90" y="640" class="small">Backplane mounts at rear; independent AC per slot; DC merged on bus</text>
+</svg>
