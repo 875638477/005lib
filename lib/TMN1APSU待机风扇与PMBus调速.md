@@ -84,18 +84,52 @@ TMN1APSU 没有公开同等手册，但不能排除它用同一套 PMBus 风格�
 
 ---
 
-## 3. 建议的实测顺序
+## 3. 风扇 PWM 和转速脚电平
+
+拆解风扇是 NMB `04028DA-12V-B6K`，4 线：红 12 V、黑 GND、白转速（Tach/FG）、棕 PWM。  
+`12V-B6K` 是华为定制料号，公开手册按同系列 `04028DA` 四线规格；板上实际高电平以示波器测插头为准。
+
+### 3.1 风扇本体（NMB 手册）
+
+| 脚 | 方向 | 低电平 | 高电平 | 备注 |
+| --- | --- | --- | --- | --- |
+| PWM（棕） | 风扇输入 | **0–0.4 V** = 停（0% duty） | **3.0–5.0 V** = 满速（100% duty） | 25 kHz；**悬空 = 满速** |
+| 转速 / FG（白） | 开集电极输出 | 饱和压降 **≤ 0.4 V** | **等于外部上拉电压**，自己不供高电平 | 每转 2 个脉冲；`Ic ≤ 5 mA`；`Vce` 一般可到 +30 V |
+| 电源（红） | 供电 | — | **12 V**（10.8–13.2 V） | 不要和 PWM/FG 逻辑电平搞混 |
+
+PWM 高电平上限按 Intel 4-wire 是 **5.25 V**，短路灌电流不超过约 5 mA。  
+转速脚在 Intel 规范里允许主机上拉到 12 V（最大约 12.6–13.2 V），但那是主板习惯，不是风扇自己输出 12 V。
+
+### 3.2 电源板侧（推断，未实测）
+
+充电头网拆解主控是 **STM32F334C8T7**，`VDD` 只有 **2.0–3.6 V**，板上典型是 **3.3 V**。
+
+因此插在 TMN1APSU 原插座上时，更可能看到：
+
+| 信号 | 板上高电平 | 低电平 |
+| --- | --- | --- |
+| PWM | 约 **3.3 V**（满足 NMB ≥ 3.0 V） | ≈ 0 V / < 0.4 V |
+| 转速 FG | 约 **3.3 V**（MCU 上拉，不是 12 V） | ≤ 0.4 V |
+
+3.3 V 推挽或开漏都能驱动这颗风扇的 PWM。  
+自己外接 MCU 时：PWM 用 **3.3 V** 即可，不要灌 12 V 进去；转速脚用 **4.7–10 kΩ 上拉到 3.3 V** 再读，不要上拉到 12 V 再直接进 3.3 V GPIO。
+
+用示波器在风扇插头上量：PWM 高电平、FG 高电平，一次就能确认这台是 3.3 V 还是偶发 5 V 缓冲。
+
+---
+
+## 4. 建议的实测顺序
 
 仓库脚本：[`scripts/tmn1apsu_fan_pmbus.py`](../scripts/tmn1apsu_fan_pmbus.py)
 
-### 3.1 接线
+### 4.1 接线
 
 1. 找到金手指上的 **SCL / SDA / SGND**（官方引脚表未公开，需对照原机背板或用万用表从 NSi8100N 隔离器次级追）。社区只确认了 **第 14 脚为使能**，不要把使能脚当成 I2C。
 2. 逻辑电平按华为同门电源处理：**3.3 V**，主机侧 3–10 kΩ 上拉到 3.3 V，**不要用 5 V I2C**。
 3. 时钟先用 **100 kHz**。华为手册里 `CAPABILITY (0x19) = 0x90` 表示支持 PEC、100 kHz。
 4. 地址先按华为电源常见 7-bit 扫描：`0x58–0x5F`（对应 8-bit 写地址 `0xB0–0xBE`，由 A2/A1/A0 绑地决定）。悬空地址位一般为 1。
 
-### 3.2 只读探测（先做这个）
+### 4.2 只读探测（先做这个）
 
 ```bash
 # 需要 i2c-dev；建议在树莓派 / 工控机 / USB-I2C 适配器上跑
@@ -110,7 +144,7 @@ sudo python3 scripts/tmn1apsu_fan_pmbus.py --bus 1 --probe
 
 看到合理的厂家字符串和转速，再谈写命令。
 
-### 3.3 开机后降速（每次上电做一次）
+### 4.3 开机后降速（每次上电做一次）
 
 确认只读正常后：
 
@@ -135,7 +169,7 @@ sudo python3 scripts/tmn1apsu_fan_pmbus.py --bus 1 --addr 0x58 --set-duty 30 --p
 
 ---
 
-## 4. 为什么不建议直接改风扇 PWM 线
+## 5. 为什么不建议直接改风扇 PWM 线
 
 拆解显示风扇是插拔 4 线，硬件上确实能在 PWM 脚另接 MCU。  
 但华为同门电源会：
@@ -151,7 +185,7 @@ sudo python3 scripts/tmn1apsu_fan_pmbus.py --bus 1 --addr 0x58 --set-duty 30 --p
 
 ---
 
-## 5. 和标准 PMBus / SMBus 的关系
+## 6. 和标准 PMBus / SMBus 的关系
 
 - 物理层是 **SMBus/I2C**（华为写 I2C，时序按 PSMI/SMBus，常见要 PEC）。
 - 命令码与 PMBus 重合（`0x3A/0x3B/0x90` 等），所以习惯上叫 PMBus。
@@ -162,7 +196,7 @@ sudo python3 scripts/tmn1apsu_fan_pmbus.py --bus 1 --addr 0x58 --set-duty 30 --p
 
 ---
 
-## 6. 安全
+## 7. 安全
 
 - 这是 3000 W、53.5 V 电源。金手指上既有高压相关信号，也有逻辑地，接错会烧隔离器和 MCU。
 - 空载降速相对安全，**带载或壳体发烫时不要强行低于实测稳定点**。
@@ -171,7 +205,7 @@ sudo python3 scripts/tmn1apsu_fan_pmbus.py --bus 1 --addr 0x58 --set-duty 30 --p
 
 ---
 
-## 7. 参考
+## 8. 参考
 
 - 华为数字能源产品页：TMN1APSU，I2C / 均流 / 1+1 / 热插拔
 - 充电头网拆解：TMN1APSU，NSi8100N，NMB 04028DA-12V-B6K
@@ -180,3 +214,6 @@ sudo python3 scripts/tmn1apsu_fan_pmbus.py --bus 1 --addr 0x58 --set-duty 30 --p
 - PAC3000S12-T1 Technical Manual：系统可关风扇；待机可最低转速；命令表含 `FAN_COMMAND`
 - PMBus Application Profile for AC/DC Server Power Supplies Rev 1.2：`FAN_COMMAND_1` 只加速
 - 华为交换机：`device power fan-speed min-value`（电源风扇最低转速，默认约 20%）
+- NMB 04028DA 手册：PWM `0–0.4 V` 停、`3.0–5.0 V` 满速、25 kHz、悬空满速
+- NMB Fan Engineering：Tach 开集电极，`Ic max 5 mA`，`Vce(sat) ≤ 0.4 V`，每转 2 脉冲
+- Intel 4-Wire PWM Fans Spec：PWM `VMax 5.25 V`，`VIL 0.8 V`；Tach 开集电极，主机可上拉到 12 V
