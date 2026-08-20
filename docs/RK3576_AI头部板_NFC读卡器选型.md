@@ -203,6 +203,7 @@ WLCSP 比 PN7160 BGA 还小一圈，但 RK3576 上要自己维护轮询、防冲
 | 电压 | 2.2～3.6 V，发射脚可到 5.5 V |
 | 读距 | 手册典型到 50 mm，看天线 |
 | 软件 | 寄存器级，类似 RC522/PN532；**无 Linux NCI** |
+| 公开资料 | **弱**：官网基本只有产品说明书；原理图 / 天线匹配 / 完整驱动要找代理 |
 | 货 | LCSC 常见，打样容易 |
 
 更低成本、只要 Type A：FM17522-QNA（同样 QFN32、有 I2C、有 LPCD）。  
@@ -219,6 +220,32 @@ WLCSP 比 PN7160 BGA 还小一圈，但 RK3576 上要自己维护轮询、防冲
 | PN5180 / PN5190 / CLRC663 | 读卡很强，主流是 SPI，软件重 |
 | PN7642 | 片内 Cortex-M33，头部已有 RK3576，浪费 |
 | 125 kHz / UHF 读头 | 不是手机 NFC |
+
+### 4.5 设计资料 / 开源 / 原理图（三颗料差很多）
+
+按「能不能直接抄着画板、Linux 上直接编」排序：**PN7160 ≫ ST25R3916B ≫ FM17550**。  
+FM17550 你的判断对：公开侧几乎没有能当参考设计用的原理图和开源栈。
+
+| | **PN7160** | **ST25R3916B** | **FM17550** |
+| --- | --- | --- | --- |
+| 数据手册 | 公开 [PN7160_PN7161](https://www.nxp.com/docs/en/data-sheet/PN7160_PN7161.pdf) | 公开 [DS13541](https://www.st.com/resource/en/datasheet/st25r3916b.pdf) | 官网「产品说明书」可下；完整手册常要登录/代理 |
+| 硬件设计指南 | **AN12988**（含典型应用原理图） | 数据手册第 2 章 + AN；评估板当参考 | **没有**对等的公开 HW design guide |
+| 天线 / 匹配 | **AN13219** + NXP Antenna Design Tool | AN5264 等天线笔记 + AAT 说明 | 手册里几页典型值，无计算器、无调谐流程 |
+| **可抄原理图** | **UM11496** 里 OM27160 整页原理图；设计包 **[HW6635](https://www.nxp.com/doc/HW6635)**（原理图 + BOM + Gerber） | STEVAL-25R3916B / X-NUCLEO-NFC08A1：**PDF 原理图 + Gerber + Altium** 在 st.com CAD | **官网不放**；立功/复旦代理项目包才有。网上 GitCode「原理图分享」是转载，不能当量产依据 |
+| 评估板 | OM27160A1HN / A1EVK（I2C） | STEVAL-25R3916B、X-NUCLEO-NFC08A1 | 立功有 FM175xx 开发套件，要申请，不公开 Gerber |
+| **Linux 开源** | **完整官方栈**：内核 [nxpnfc](https://github.com/NXPNFCLinux/nxpnfc)，用户态 [linux_libnfc-nci](https://github.com/NXPNFCLinux/linux_libnfc-nci)（分支 `NCI2.0_PN7160`），移植 **AN13287** | 官方是 **RFAL 用户态移植** [STSW-ST25R013](https://www.st.com/en/embedded-software/stsw-st25r013.html)（样例走 **SPI + 树莓派**，I2C 要自己改）；社区内核 [pguyot/st25r391x](https://github.com/pguyot/st25r391x) 仅 I2C | **没有**官方 Linux 驱动，也没有 NCI。MCU 示例（STM8/STM32）靠代理 Demo 或民间仓库，质量参差 |
+| MCU / 裸机 | AN13288 NCI 例程 | **X-CUBE-NFC6**、STSW-ST25RFAL002、UM2890（RFAL 最完整，但是 STM32 味道） | 代理 Demo：寄存器读写 + 14443 状态机 |
+| Android | AOSP / nxp-nfc-infra 有 PN7160 | 无现成 AOSP NFC HAL | 无 |
+| 设备树 | `compatible = "nxp,nxpnfc"` 直接挂 | 无主线绑定；要自己写 | 无 |
+| 本板工作量 | 抄 HW6635 电源/晶振/EMC，改天线尺寸 | 抄 STEVAL 射频，软件把 RFAL 从 SPI 改到 I2C0 | 先向复旦/立功要「FM17550 参考原理图 + 驱动包」，否则硬件和协议都从手册抠 |
+
+要点：
+
+- **PN7160**：设计资料和开源都是官方、成套的。画板抄 AN12988 / HW6635，软件抄 AN13287。料号 **A=I2C、B=SPI**，原理图能抄，芯片不能买成 B1。
+- **ST25R3916B**：硬件资料同样公开、能下到 Altium。软件不缺，但缺的是「Linux SoC + I2C」这一条现成路：官方 Linux 包按 SPI 写，RFAL 要自己接到 RK3576 的 I2C0。比 PN7160 重的是软件，不是没原理图。
+- **FM17550**：LCSC 好买不等于资料好拿。复旦官网产品页对 FM17550 只挂说明书，**不提供** NXP/ST 那种公开原理图包、Gerber、天线工具、GitHub 协议栈。完整参考设计走销售/FAE。GitCode 上的「FM17550 开发资料 / 原理图」是民间汇总，版权和正确性都无法当开源方案。RK3576 上等于从寄存器手册自己写读卡器。
+
+因此：要公开原理图 + 开源 Linux，不要把 FM17550 当默认。它只适合「已经能从代理拿到包、只读国内 14443/M1」的产线。
 
 ---
 
@@ -293,9 +320,9 @@ I2C 地址避开总线上已有从设备。PN7160 默认 0x28。
 
 | 芯片 | 内核 | 用户态 | 工作量 |
 | --- | --- | --- | --- |
-| **PN7160/61** | `nxp,nxpnfc` + `/dev/nxpnfc` 或 alt-i2c | `linux_libnfc-nci` | **最小** |
-| ST25R3916B | 无官方主线 NCI；可自写 I2C 字符设备 | ST RFAL 移植 | 中 |
-| FM17550 | 无 | 自己写 14443 状态机 | 大 |
+| **PN7160/61** | `nxp,nxpnfc` + `/dev/nxpnfc` 或 alt-i2c | [linux_libnfc-nci](https://github.com/NXPNFCLinux/linux_libnfc-nci) | **最小** |
+| ST25R3916B | 无官方主线 NCI；SPI 样例见 STSW-ST25R013，I2C 可参考 [st25r391x](https://github.com/pguyot/st25r391x) | ST RFAL（X-CUBE-NFC6 / STSW-ST25RFAL002）移植到 I2C0 | 中 |
+| FM17550 | 无公开驱动 | 代理 Demo 或自写 14443 状态机 | **大，先确认能要到资料再选型** |
 
 功能建议分两个守护进程状态，不要同时猛发场：
 
