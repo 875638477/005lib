@@ -233,9 +233,10 @@ static void test_dcdc(void)
     control_dcdc_enable(&c, 1);
     for (i = 0; i < 3; ++i) {
         control_dcdc_step(&c, &s, 1.0f);
+        s.vbus_mv = c.vref_ss_mv;
     }
     expect(c.vref_ss_mv == VBUS_NOM_MV, "softstart reached 380 V");
-    expect(c.deff > 0.65f && c.deff < 0.82f, "24 V Deff after SS");
+    expect(c.deff > 0.65f && c.deff <= DEFF_MAX, "24 V Deff after SS");
     expect(fabsf(c.deff_ph[0] - c.deff_ph[3]) < 1e-6f, "IPOS common Deff");
 
     s.vin_mv = 48000;

@@ -123,18 +123,15 @@ prot_fault_t protect_eval(protect_t *p, const sense_eng_t *s, uint32_t dt_us)
 
     if (p->state == PROT_ST_IDLE) {
         p->state = PROT_ST_PRECHARGE;
-    } else if (p->state == PROT_ST_PRECHARGE) {
-        if (s->vin_mv >= VIN_MIN_MV) {
-            p->state = PROT_ST_DCDC_SS;
-        }
-    } else if (p->state == PROT_ST_DCDC_SS) {
-        if (s->vbus_mv >= (VBUS_NOM_MV - 20000)) {
-            p->state = PROT_ST_INV_SS;
-        }
-    } else if (p->state == PROT_ST_INV_SS) {
-        if (s->vbus_mv >= (VBUS_NOM_MV - 20000)) {
-            p->state = PROT_ST_RUN;
-        }
+    }
+    if (p->state == PROT_ST_PRECHARGE && s->vin_mv >= VIN_MIN_MV) {
+        p->state = PROT_ST_DCDC_SS;
+    }
+    if (p->state == PROT_ST_DCDC_SS && s->vbus_mv >= (VBUS_NOM_MV - 20000)) {
+        p->state = PROT_ST_INV_SS;
+    }
+    if (p->state == PROT_ST_INV_SS && s->vbus_mv >= (VBUS_NOM_MV - 20000)) {
+        p->state = PROT_ST_RUN;
     }
     return PROT_OK;
 }

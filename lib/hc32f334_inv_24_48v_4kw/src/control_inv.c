@@ -132,6 +132,7 @@ void control_inv_step(control_inv_t *c, const sense_eng_t *s, float dt_s)
     vac = (float)s->vac_mv / 1000.0f;
     c->vac_acc += vac * vac;
     c->rms_n++;
+    m_corr = c->pi_rms.i_state;
     if (c->rms_n >= (FSW_INV_HZ / (uint32_t)c->f_out_hz)) {
         c->vac_rms_v = sqrtf(c->vac_acc / (float)c->rms_n);
         c->vac_acc = 0.0f;
@@ -139,10 +140,8 @@ void control_inv_step(control_inv_t *c, const sense_eng_t *s, float dt_s)
         m_corr = pi_step(&c->pi_rms,
                          ((float)VAC_RMS_NOM_MV / 1000.0f) - c->vac_rms_v,
                          1.0f / (float)c->f_out_hz);
-        c->m = clampf(m_ff + m_corr, M_MIN, c->m_ss);
-    } else if (c->m < M_MIN) {
-        c->m = clampf(m_ff, M_MIN, c->m_ss);
     }
+    c->m = clampf(m_ff + m_corr, M_MIN, c->m_ss);
 
     vref = c->m * sinf(c->theta) * vbus;
     pr_out = pr_step(&c->pr, vref - vac, dt_s);
