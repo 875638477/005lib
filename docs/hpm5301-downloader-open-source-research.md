@@ -1,7 +1,7 @@
 # 基于 HPM5301 的下载器开源软硬件调研记录
 
-> 调研日期：2026-09-15  
-> 调研对象：MicroLink 以及可用于实现同类下载器的 HPM5301 开源项目  
+> 调研日期：2026-09-15
+> 调研对象：MicroLink 以及可用于实现同类下载器的 HPM5301 开源项目
 > 记录范围：硬件资料、设备固件、上位机、构建方式、许可证、功能差异和建议实现路线
 
 ## 1. 调研结论
@@ -552,8 +552,7 @@ MicroLink 的离线下载、U 盘拖拽和 PikaPython 功能不依赖 Keil 或 I
 - 唯一且稳定的 USB 序列号；
 - Microsoft OS/WCID 描述符；
 - WinUSB Compatible ID；
-- CMSIS-DAP 推荐的设备接口 GUID  
-  `{CDB3B5AD-293B-4663-AA36-1AAE46463776}`。
+- CMSIS-DAP 推荐的设备接口 GUID `{CDB3B5AD-293B-4663-AA36-1AAE46463776}`。
 
 Windows 8 及以上在描述符正确时通常不需要单独安装驱动。Linux 通常需要配置 udev
 权限规则。
@@ -741,4 +740,3 @@ HSLink Pro / CherryDAP
 15. [IAR EWARM：CMSIS-DAP options](https://docs.iar.com/ewarm/10.1x/en/c-spy-debugging/debugger-options/reference-information-on-c-spy-hardware-debugger-driver-options/cmsis-dap-options.html)
 16. [IAR RISC-V：C-SPY drivers overview](https://docs.iar.com/ewriscv/3.4x/en/c-spy-debugging/the-iar-c-spy-debugger/c-spy-drivers-overview.html)
 17. [pyOCD：Debug probes](https://pyocd.io/docs/debug_probes.html)
-
