@@ -17,7 +17,7 @@
 
 | 功能 | 做法 | 备注 |
 | --- | --- | --- |
-| CMSIS-DAP v2 | 目标 SWD + JTAG，SPI1 高速时序 | PA26 到 PA29，与 HSLink / YBLINK 同组 |
+| CMSIS-DAP v2 | 目标 SWD 与 JTAG 共用 PA27/PA28 | JTAG 再加 PA29 TDI、PA26 TDO |
 | 5301 本机 JTAG | PA04 到 PA08 保持原功能 | 给 5301 自己调试 / 烧录，不接目标 |
 | 双路 USB 串口 | UART2、UART3 引出 | UART2 脚位对齐 MicroLink |
 | 本机 UART0 ISP | PA00 / PA01 不改用途 | 只给 5301 自己用 |
@@ -35,6 +35,41 @@ USB HS
  ├── CDC1    UART3
  └── MSC     外部 SPI Flash 上的 FAT
 ```
+
+## 1.1 SWD 和 JTAG 已经共用，不要再拆成两套目标脚
+
+可以共用，而且目标侧**已经共用**。ARM 规定时钟和数据线是同一对脚：
+
+| 物理线 | SWD | JTAG | 本板接到 |
+| --- | --- | --- | --- |
+| 时钟 | SWCLK | TCK | **PA27** |
+| 双向数据 | SWDIO | TMS | **PA28** |
+| 数据入 | 不用 | TDI | PA29 |
+| 数据出 | 不用（或 SWO） | TDO | PA26 |
+| 复位 | nRESET | SRST | PB10 |
+
+```text
+              目标 20pin 同一组线
+                     │
+        ┌────────────┴────────────┐
+        │                         │
+     SWD 模式                  JTAG 模式
+   只用 PA27 + PA28            再加 PA29 + PA26
+   （加 PB10 复位）             （加 PB10 复位）
+```
+
+固件用 CMSIS-DAP 在两种协议间切换，**不必为 SWD 和 JTAG 各占一套 IO**。MicroLink、HSLink、YBLINK 都是这样。只调 Cortex-M 时 TDI/TDO 可以不接到目标；要调 RISC-V 目标或 JTAG 链时，同一插座上的 TDI/TDO 才有用。
+
+**不能共用的是另外那套口，因为连的是两颗芯片：**
+
+| 插座 | 连谁 | 协议 | 脚 |
+| --- | --- | --- | --- |
+| 目标 20pin | 用户板上的 MCU | SWD 或 JTAG，CLK/DIO 共用 | PA26–PA29、PB10 |
+| 5301-JTAG | 下载器自己这颗 HPM5301 | 只有 JTAG，没有 ARM SWD | PA04–PA08 |
+
+HPM5301 是 RISC-V，调试口就是手册里的 JTAG（PA06 TCK、PA07 TMS、PA05 TDI、PA04 TDO、PA08 TRST）。不能把这 5 脚并进目标 20pin，否则 5301 和目标 MCU 会挂在同一条调试链上。
+
+日常刷本机固件走 UART0 ISP。5301-JTAG 只给“单步调试下载器自己”用。若确定不用，插座可以改成测试点，但不要改成第二套目标 SWD。
 
 ## 2. 为什么外部 Flash 选 SPI，不选 QSPI
 
@@ -62,8 +97,8 @@ HPM5301 的 XPI0 / SPI1 / 高速 DAP 挤在同一组脚上：
 1. UART0 只服务 5301 的 ROM ISP / 打印，不接到目标，不进 USB CDC。
 2. **UART2 必须是 PB08 TX、PB09 RX**，与 MicroLink 一致。
 3. UART3 仍出 PB15 TX、PB14 RX。
-4. **PA04 到 PA08 只做 5301 本机 JTAG**，做独立调试座，不接目标、不做 LA。
-5. 目标 DAP 仍在 PA26 到 PA29，保留 SPI1。
+4. **PA04 到 PA08 只做 5301 本机 JTAG**，不接目标。目标 SWD/JTAG 已经在 PA26–PA29 上共用，不要再复制一套。
+5. 目标 DAP：SWCLK/TCK = PA27，SWDIO/TMS = PA28，JTAG 再加 TDI=PA29、TDO=PA26。
 6. 外部 Flash 走 SPI2。
 7. OLED 走 **I2C0（PA02 / PA03）+ PY01 RES**。UART2 占了原来的 I2C2。
 8. 逻辑分析仪减到 3 路，全部 GPIOA，一次读 DI。
@@ -126,7 +161,7 @@ PC USB 转串口 3.3 V
 
 ### 5.2 5301 本机 JTAG（PA04 到 PA08）
 
-这是 **HPM5301 自己的调试口**，不是目标 MCU 的 JTAG。
+这是 **HPM5301 自己的调试口**，不是目标 MCU 的 JTAG，也不能和目标 SWD 共用。5301 没有 ARM SWD。
 
 | 5301 | 功能 | 接到 |
 | --- | --- | --- |
@@ -164,15 +199,19 @@ GND          ------------------- GND
 - 第一版可固定 3.3 V，或跟 VTref 做电平转换
 - 本版不做 DTR/RTS。若要 ESP32 自动下载，用 PA30 / PA31，LA 减到 1 路
 
-### 5.4 目标 DAPLink：SWD + JTAG
+### 5.4 目标 DAPLink：SWD 与 JTAG 共用同一组脚
 
-| 目标信号 | 5301 | 外设 |
-| --- | --- | --- |
-| SWCLK / TCK | PA27 | SPI1.SCLK 或 FGPIO |
-| SWDIO / TMS | PA28 | SPI1.MISO / 双向 |
-| TDI | PA29 | SPI1.MOSI |
-| TDO | PA26 | GPIO 输入 |
-| nRESET / SRST | PB10 | 开漏，4.7 kΩ 上拉到 Vref |
+不要再为 SWD 单独申请 IO。和 20pin 标准一样：
+
+| 目标信号 | 5301 | SWD | JTAG | 外设 |
+| --- | --- | --- | --- | --- |
+| SWCLK / TCK | PA27 | 用 | 用 | SPI1.SCLK 或 FGPIO |
+| SWDIO / TMS | PA28 | 用 | 用 | SPI1.MISO / 双向 |
+| TDI | PA29 | 不用 | 用 | SPI1.MOSI |
+| TDO | PA26 | 不用 | 用 | GPIO 输入 |
+| nRESET | PB10 | 用 | 用 | 开漏，4.7 kΩ 上拉到 Vref |
+
+只调 Cortex-M 的 SWD 时，TDI/TDO 可以不焊到目标，但 PCB 上仍建议引出，同一固件即可切 JTAG。
 
 20pin 1.27 mm（目标侧，不是 5301-JTAG）：
 
