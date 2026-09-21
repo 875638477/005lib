@@ -5,6 +5,7 @@
 > 内容范围：基本原理、开源方案、HPM5301 实现、Keil/IAR/OpenOCD 接入、硬件设计、固件架构、离线烧录和验证方法
 >
 > 示波器与分析仪专项：[scope-and-logic-analyzer.md](scope-and-logic-analyzer.md)
+> HPM5301 可以自己做最基础的 8 路 GPIO 逻辑分析仪（先采后传），详见该文档第 6 节。
 
 ## 1. 结论
 

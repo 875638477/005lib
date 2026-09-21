@@ -195,6 +195,7 @@ GitHub API 未识别到 MicroLink 根许可证，仓库树中也未发现适用�
 - SystemView：SWD 读取目标 RTT 通道 1 的 RTOS 事件，转发到上位机时间轴；
 - README 中的逻辑分析仪图片是外部仪器测量 SWD/UART，不是设备内置 GPIO 采样。
 - 其中 `10M_TTL.jpg` 的窗口是 Kingst LA2016 / KingstVIS。图里的 `I/O电平标准` 是外部探头阈值，不是 MicroLink 用 IO 做采集。
+- 若自己做最基础的 GPIO 逻辑分析仪：HPM5301 可以。建议 8 路、1 到 10 MSa/s、32 到 128 Ki 点、先采后传、SUMP/PulseView。做不到 LA2016 那种 200 MHz 和可调阈值。优先在 EVKLite 上用 GPIO0 + 定时器/DMA 验证，再考虑塞进下载器。
 
 详细实现、命令、帧格式和源码对应关系见
 [scope-and-logic-analyzer.md](../001DIY/009ST_LINK_XDS110/03Daplink/scope-and-logic-analyzer.md)。

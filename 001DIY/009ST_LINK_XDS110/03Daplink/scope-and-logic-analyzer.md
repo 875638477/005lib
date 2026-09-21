@@ -332,50 +332,127 @@ SystemView 只是把通道 1 的二进制事件流转发给上位机，由上位
 
 `usb2python.c` 依赖 `SEGGER_RTTView.h`、`SEGGER_SystemView.h`。公开树里能看到调用，完整采集实现可能在未完全开源的固件中。复刻时应自行实现 RTT 扫描和环形缓冲读写，不要直接复制 SEGGER 专有源码。
 
-## 6. 若要做成真正的硬件逻辑分析仪
+## 6. 用 HPM5301 自己做最基础的逻辑分析仪
 
-不能沿用 VOFA+/SystemView 这条路。需要单独的数字采集通道。
+可以。公开 MicroLink **没有** 这套功能，但 HPM5301 这颗主控**自己就能做出最基础的 GPIO 逻辑分析仪**。它做不到 `10M_TTL.jpg` 里康芯微 LA2016 那种 1 GSa / 200 MHz，也不需要做到那种程度。
 
-### 6.1 硬件
+不能沿用 VOFA+/SystemView。那些读的是目标 RAM，不是探头上的高低电平。
 
-- 8 到 16 路高速 GPIO 或比较器；
-- 与 SWD 引脚隔离或分时复用；
-- 足够 SRAM 或外部 SRAM/HyperRAM；
-- USB HS 连续上传；
-- 输入保护、限幅、可选阈值调节。
+### 6.1 结论
 
-HPM5301 适合 USB HS 上传，但 GPIO 采样深度和触发能力有限，高速率通道数会很快碰到 SRAM 和 USB 带宽上限。
+| 目标 | 能否用 HPM5301 自己做 |
+| --- | --- |
+| 4 到 8 路、先采后传、电平触发 | 能 |
+| 1 到 10 MSa/s 看 UART / I2C / SPI | 能，适合作为第一版 |
+| 定时器 + DMA 把采样率做稳 | 能，官方已有反向的 DMA 推 GPIO |
+| PulseView 用 SUMP/OLS 打开 | 能，协议简单 |
+| 16 路、可调阈值、200 MHz、长时间流式 | 基本不能，或性价比很差 |
 
-### 6.2 常见软件协议
+HPM5301IEG1 官方规格对这件事够用：
 
-| 协议 | 上位机 | 特点 |
-| --- | --- | --- |
-| SUMP / OLS | PulseView、sigrok、OLS | 实现简单，先采后传 |
-| 自定义流式协议 | 自研上位机 | 可持续上传，固件更复杂 |
-| nanoDLA / FX2 兼容 | PulseView | 常见开源 LA，主控通常不是 HPM5301 |
+- 额定约 360 MHz RISC-V，不是 USB 的 480 Mbps；
+- 288 KB SRAM，其中 ILM/DLM 各 128 KB；
+- 内置 USB High-Speed PHY，先采后传时上传不是瓶颈；
+- QFN48 大约 29 个 I/O，下载器占用 USB、SWD/JTAG、UART 后，仍能挤出 8 路输入；
+- 有 GPIO0、FGPIO、HDMA、TRGM、PWM/GPTMR、PLB、2 路模拟比较器。
 
-最小 SUMP 流程：
+先楫公开过「PWM/TRGM + HDMA 推 GPIO DO」，脉宽可到约 50 ns。逻辑分析仪是它的反向：定时器触发 DMA，从 GPIO 输入寄存器搬到 SRAM。CPU 死循环读 FGPIO 也能先跑通，只是抖动更大。HPM5300 勘误有 **E00037 FGPIO 使用限制**，正式采样优先走 AHB 上的 `GPIO0`，FGPIO 只适合做原型。
+
+### 6.2 最基础该做成什么样
+
+第一版不要对标商品逻辑分析仪，对标「能看 8 路 3.3 V 数字波形」即可：
+
+- 8 路输入，尽量落在同一 GPIO 口，一次读一个寄存器；
+- 采样率 1 / 2 / 5 / 10 MSa/s 可选；
+- 深度 32 Ki 到 128 Ki 点；
+- 单通道上升沿或下降沿触发，也可无触发立刻采满；
+- 采满再经 USB CDC 回传；
+- 上位机用 PulseView 的 SUMP/OLS，或先导出 raw 再导入。
+
+容量估算（8 路打包成 1 字节/点）：
+
+| SRAM 缓冲 | 10 MSa/s 窗口 | 1 MSa/s 窗口 | 典型用途 |
+| --- | --- | --- | --- |
+| 32 KiB | 3.3 ms | 33 ms | 看几个 UART 字节、I2C 起始 |
+| 64 KiB | 6.6 ms | 66 ms | 推荐第一版 |
+| 128 KiB | 13 ms | 131 ms | 固件瘦身后可争取 |
+
+固件、USB、DAP、栈会吃掉一部分 288 KB，不要按满片 SRAM 规划。下载器形态上 64 KiB 比较稳。
+
+10 Mbaud UART 的 1 bit 是 100 ns。按每个 bit 采 4 到 10 个点，采样率大约 10 到 40 MSa/s。第一版 10 MSa/s 够看波形和粗解码；要稳解码 10 Mbaud，再把 DMA 采样往上推。普通 115200 UART、100 kHz / 400 kHz I2C、几 MHz SPI，1 到 10 MSa/s 已经够用。
+
+### 6.3 三档实现
 
 ```text
-上位机下发采样率、通道、触发、深度
-        │
-        ▼
-固件等触发并写入样本缓冲
-        │
-        ▼
-采集结束后经 USB/UART 回传
-        │
-        ▼
-PulseView 解码 I2C/SPI/UART 等
+第 1 档  CPU 读 GPIO
+  等触发 -> 循环读 DI -> 写入缓冲 -> USB 回传
+  优点：半天能在 EVKLite 上看到波形
+  代价：采样率有抖动，不宜宣称精确 MHz
+
+第 2 档  GPTMR/PWM + TRGM + HDMA
+  定时节拍 -> DMA 读 GPIO0->DI -> SRAM
+  优点：节拍由硬件定，CPU 只等采完
+  参考：先楫「DMA 推 GPIO」文章的反向搬运
+
+第 3 档  PLB/比较器做硬件触发 + DMA 采集
+  优点：触发更干净
+  代价：要读用户手册和勘误，不适合第一周
 ```
 
-### 6.3 和调试器共存
+第 1 档就能回答「自己能不能做出来」。第 2 档才值得接到下载器固件里。
 
-SWD 下载与 GPIO 采样会争用 CPU、DMA、USB 和引脚。建议：
+最小数据路径：
 
-1. 模式互斥：调试 / 示波器 / 逻辑分析仪；
+```text
+被测 3.3 V 数字线
+    │ 串联 100~330 Ω，共地
+    ▼
+HPM5301 GPIO 输入（同一端口的 8 个脚）
+    │ CPU 或 HDMA 读 DI
+    ▼
+SRAM 环形/线性缓冲（32~128 KiB）
+    │ 采满后
+    ▼
+USB HS CDC / WinUSB
+    ▼
+PulseView（SUMP）或自研曲线窗
+```
+
+### 6.4 硬件注意
+
+- 输入保护：串联电阻，可选 Schottky 或 TVS。GPIO 不是 LA2016 那种探头，5 V 或负压会损坏芯片。
+- 电平：普通 GPIO 按 3.3 V CMOS 识别，没有「I/O 电平标准 -> Vth=1.65 V」那种可调阈值。两路 ACMP 最多给 1 到 2 个通道做模拟门限。
+- 引脚：HPM5301EVKLite 的树莓派排针最适合先做 8 路。塞进 MicroLink/HSLink 外形时，不要占用 SWD、复位、UART、USB。
+- 同口采样：8 路最好在同一个 `GPIO_DI` 寄存器里，避免拼多个口带来的通道间错位。
+- 和调试器隔离：LA 输入不要直接焊到 SWD 脚上。
+- 缓冲位置：HDMA 更适合 AHB SRAM；CPU 紧循环可读 DLM。先楫也提示 HDMA 访问 AHB SRAM 更快。
+
+### 6.5 上位机协议
+
+| 协议 | 上位机 | 是否适合第一版 |
+| --- | --- | --- |
+| 自定义：速率 + 通道数 + raw 字节 | 串口助手 / Python 画图 | 最容易验证 |
+| SUMP / OLS 子集 | PulseView、sigrok | 推荐作为正式接口 |
+| 连续流式自研协议 | 自研上位机 | 第二版再做 |
+| nanoDLA / FX2 | PulseView | 不要走，主控模型不同 |
+
+SUMP 只要实现：识别设备、设置采样率、通道、触发、深度、开始采集、回传缓冲。解码 I2C/SPI/UART 由 PulseView 完成，固件不必做协议解析。
+
+### 6.6 和调试器共存
+
+SWD、UART、U 盘和 GPIO 采样会争用 CPU、DMA、USB 和引脚：
+
+1. 模式互斥：调试 / VOFA+ / 逻辑分析仪；
 2. 或分时：停采后再允许 DAP；
-3. 不要在 USB MSC 写文件时做高速采集。
+3. 不要在 USB MSC 写文件时高速采集；
+4. 采集中关闭不必要的中断，避免第 1 档采样抖动。
+
+### 6.7 不要期待的能力
+
+- 替代 Kingst LA2016 / Saleae 的深度、模拟阈值和 100 MHz 以上带宽；
+- 连续采数秒、数分钟而不丢点（片内没有那么深的缓冲，流式还要再设计）；
+- 在 QFN48 下载器上轻松做 16 路带保护的探头；
+- 用现有 MicroLink 公开固件打开 PulseView。那是另一套固件。
 
 ## 7. 建议的实现顺序
 
@@ -385,9 +462,9 @@ SWD 下载与 GPIO 采样会争用 CPU、DMA、USB 和引脚。建议：
 2. 实现 RTT 控制块扫描和通道 0 转发，得到 RTTView；
 3. 增加 VOFA+ JustFloat 周期采样，得到迷你示波器；
 4. 增加 RTT 通道 1 转发，对接 SystemView；
-5. 若仍需要电气级数字时序，再单独做 GPIO LA。
+5. 若仍需要电气级数字时序，再按第 6 节做 GPIO LA：先 EVKLite 8 路 CPU 采样，再上 DMA，最后才接到下载器固件。
 
-第 3 步就能覆盖 MicroLink 宣传的“迷你示波器”。第 4 步覆盖“软件逻辑分析仪”。第 5 步才是传统逻辑分析仪。
+第 3 步就能覆盖 MicroLink 宣传的“迷你示波器”。第 4 步覆盖“软件逻辑分析仪”。第 5 步才是传统逻辑分析仪，而且 HPM5301 只适合做最基础的那一档。
 
 ## 8. 验证方法
 
@@ -412,6 +489,14 @@ SWD 下载与 GPIO 采样会争用 CPU、DMA、USB 和引脚。建议：
 
 如果 PulseView 无法识别设备，这是预期现象：公开 MicroLink 不是 SUMP 设备。
 
+### 8.4 自制 GPIO LA
+
+1. 用 HPM5301EVKLite 的 8 个 GPIO 接已知信号，例如板载 UART 回环或 1 kHz PWM；
+2. 无触发采满 64 KiB，经 USB 回传后应看到周期稳定的几何波形；
+3. 用 115200 8N1 发 `0x55`，在 1 MSa/s 下应能数出约 8.7 µs 的帧宽；
+4. 换到定时器 + DMA 后，同样信号的周期抖动应明显小于 CPU 紧循环；
+5. 5 V 或未共地的信号不要直接进脚。
+
 ## 9. 参考
 
 1. [Aladdin-Wang/MicroLink](https://github.com/Aladdin-Wang/MicroLink)
@@ -421,3 +506,5 @@ SWD 下载与 GPIO 采样会争用 CPU、DMA、USB 和引脚。建议：
 5. `MicroLink/microlink_app/src/swd_host/swd_host.h`
 6. `MicroLink/external/pikapython/main.py`
 7. [sigrok SUMP](https://sigrok.org/wiki/SUMP_compatibles)
+8. [先楫：DMA 推 GPIO](https://www.hpmicro.com/service-support/technical-articles/134)
+9. HPM5300 勘误 E00037（FGPIO 使用限制）
