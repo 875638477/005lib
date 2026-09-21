@@ -1,7 +1,7 @@
 # DAPLink / CMSIS-DAP 下载器详细说明
 
-> 目标存放位置：`D:\001DIY\009ST_LINK_XDS110\03Daplink`  
-> 整理日期：2026-09-21  
+> 目标存放位置：`D:\001DIY\009ST_LINK_XDS110\03Daplink`
+> 整理日期：2026-09-21
 > 内容范围：基本原理、开源方案、HPM5301 实现、Keil/IAR/OpenOCD 接入、硬件设计、固件架构、离线烧录和验证方法
 
 ## 1. 结论
@@ -898,4 +898,3 @@ HPM5301
 12. [OpenOCD Debug Adapter Configuration](https://openocd.org/doc/html/Debug-Adapter-Configuration.html)
 13. [IAR EWARM CMSIS-DAP options](https://docs.iar.com/ewarm/10.1x/en/c-spy-debugging/debugger-options/reference-information-on-c-spy-hardware-debugger-driver-options/cmsis-dap-options.html)
 14. [pyOCD Debug probes](https://pyocd.io/docs/debug_probes.html)
-
