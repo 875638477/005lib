@@ -5,8 +5,9 @@
 > 内容范围：基本原理、开源方案、HPM5301 实现、Keil/IAR/OpenOCD 接入、硬件设计、固件架构、离线烧录和验证方法
 >
 > 示波器与分析仪专项：[scope-and-logic-analyzer.md](scope-and-logic-analyzer.md)
-> HPM5301 可以自己做最基础的 8 路 GPIO 逻辑分析仪（先采后传），详见该文档第 6 节。
-> 新版硬件与 IO 分配：[hardware-io-map.md](hardware-io-map.md)（UART0 仅 ISP，UART2/3 引出，SPI Flash，OLED，DAP，8 路 LA）
+> HPM5301 可以做 GPIO 逻辑分析仪（先采后传）。开发板可做到 8 路，新版 QFN48 下载器实装 3 路，详见该文档第 6 节和 hardware-io-map.md。
+> 新版硬件与 IO 分配：[hardware-io-map.md](hardware-io-map.md)
+> UART0 仅 ISP；PA04–PA08 为本机 JTAG；UART2 = PB08/PB09（对齐 MicroLink）；OLED = PA02/PA03/PY01；LA 3 路
 
 ## 1. 结论
 
