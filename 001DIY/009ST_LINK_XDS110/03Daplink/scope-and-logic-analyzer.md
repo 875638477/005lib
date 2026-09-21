@@ -179,7 +179,42 @@ void loop(void)
 
 ## 4. 逻辑分析仪：公开仓库里实际是什么
 
-### 4.1 没有 GPIO 硬件逻辑分析仪
+### 4.1 `10M_TTL.jpg` 不是 MicroLink 用 IO 做逻辑分析仪
+
+[10M_TTL.jpg](https://github.com/Aladdin-Wang/MicroLink/blob/main/images/microlink/10M_TTL.jpg) 容易被看成“MicroLink 用 IO 口实现逻辑分析仪”，因为它有通道、阈值、脉宽和时间轴。画面实际内容是：
+
+- 窗口标题：`LA2016已连接 - KingstVIS`
+- 设备型号：`LA2016`
+- 采样：`1 GSa / 200 MHz`
+- 左侧设置：`I/O电平标准 3.3V CMOS -> Vth=1.65 V`
+- 通道 0 解码：`UART / RS232 / 485`
+- 右侧测量：脉宽 `100 ns`，占空比 `50%`，频率 `5 MHz`
+- 游标：`A1 - A2 = 100 ns`
+
+这是**康芯微 Kingst LA2016** 的上位机。`I/O电平标准` 是外部逻辑分析仪探头的输入阈值，用来告诉 LA2016：“被测信号是 3.3 V CMOS，比较门限 1.65 V”。它不是 MicroLink 固件里的 GPIO 采集配置。
+
+README 原文也写明了用途：
+
+> 使用逻辑分析仪抓取波形如图所示，每个bit传输的时间为 1/10M = 100ns。
+
+上一张图 `10M_Baud.jpg` 是串口助手以 10 Mbaud 收发 `0x55`。`0x55` 的比特是 `01010101`，所以 TTL 波形接近 5 MHz 方波，每个 bit 100 ns。测试关系是：
+
+```text
+PC 串口助手
+    │ USB CDC
+    ▼
+MicroLink UART TX  （被测对象，输出 10 Mbaud）
+    │ 飞线接到外部探头
+    ▼
+Kingst LA2016
+    │
+    ▼
+KingstVIS 显示通道 0 并做 UART 解码
+```
+
+同目录的 `clk.jpg` 也是外部仪器：Tektronix 示波器在测 SWD CLK，时基 100 ns/div。这些图用来证明 MicroLink **自己能发出** 10 MHz SWD 和 10 Mbaud UART，不是证明它内置逻辑分析仪。
+
+### 4.2 没有 GPIO 硬件逻辑分析仪
 
 在 `Aladdin-Wang/MicroLink` 的文件树中，未找到：
 
@@ -193,7 +228,7 @@ void loop(void)
 
 README 中的逻辑分析仪图片，是用外部仪器测量 MicroLink 自己的 SWD CLK 和 10 Mbaud UART。
 
-### 4.2 最接近“分析仪”的是 SystemView
+### 4.3 最接近“分析仪”的是 SystemView
 
 SystemView 把 RTOS 事件画成时间轴，看起来像软件逻辑分析仪：
 
@@ -258,7 +293,7 @@ RTT 日志则是：
 RTTView.start(0x20000000, 1024)
 ```
 
-### 4.3 RTT / SystemView 采集原理
+### 4.4 RTT / SystemView 采集原理
 
 目标 MCU 中的 RTT 控制块大致为：
 
