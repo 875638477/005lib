@@ -200,6 +200,9 @@ GitHub API 未识别到 MicroLink 根许可证，仓库树中也未发现适用�
 详细实现、命令、帧格式和源码对应关系见
 [scope-and-logic-analyzer.md](../001DIY/009ST_LINK_XDS110/03Daplink/scope-and-logic-analyzer.md)。
 
+自行重做硬件、外挂 SPI Flash、双串口、OLED 和 8 路逻辑分析仪的 IO 分配见
+[hardware-io-map.md](../001DIY/009ST_LINK_XDS110/03Daplink/hardware-io-map.md)。
+
 ## 4. HSLink Pro 调研
 
 ### 4.1 项目组成

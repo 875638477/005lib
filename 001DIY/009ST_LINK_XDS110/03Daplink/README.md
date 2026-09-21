@@ -6,6 +6,7 @@
 >
 > 示波器与分析仪专项：[scope-and-logic-analyzer.md](scope-and-logic-analyzer.md)
 > HPM5301 可以自己做最基础的 8 路 GPIO 逻辑分析仪（先采后传），详见该文档第 6 节。
+> 新版硬件与 IO 分配：[hardware-io-map.md](hardware-io-map.md)（UART0 仅 ISP，UART2/3 引出，SPI Flash，OLED，DAP，8 路 LA）
 
 ## 1. 结论
 
