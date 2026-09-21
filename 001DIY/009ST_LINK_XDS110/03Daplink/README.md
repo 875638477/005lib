@@ -3,6 +3,8 @@
 > 目标存放位置：`D:\001DIY\009ST_LINK_XDS110\03Daplink`
 > 整理日期：2026-09-21
 > 内容范围：基本原理、开源方案、HPM5301 实现、Keil/IAR/OpenOCD 接入、硬件设计、固件架构、离线烧录和验证方法
+>
+> 示波器与分析仪专项：[scope-and-logic-analyzer.md](scope-and-logic-analyzer.md)
 
 ## 1. 结论
 

@@ -187,6 +187,17 @@ GitHub API 未识别到 MicroLink 根许可证，仓库树中也未发现适用�
 - 第三方组件的开源许可证不会自动覆盖 MicroLink 自有代码；
 - 在作者补充许可证或书面授权前，不建议直接把 MicroLink 自有代码放入要发布或销售的产品。
 
+### 3.7 迷你示波器与逻辑分析仪
+
+公开仓库和后续 MKLink 文档中的“示波器/分析仪”不是 ADC 或 GPIO 仪器：
+
+- 迷你示波器：SWD 周期读取目标 RAM 变量，封装 VOFA+ JustFloat，经 USB CDC 画曲线；
+- SystemView：SWD 读取目标 RTT 通道 1 的 RTOS 事件，转发到上位机时间轴；
+- README 中的逻辑分析仪图片是外部仪器测量 SWD/UART，不是设备内置 GPIO 采样。
+
+详细实现、命令、帧格式和源码对应关系见
+[scope-and-logic-analyzer.md](../001DIY/009ST_LINK_XDS110/03Daplink/scope-and-logic-analyzer.md)。
+
 ## 4. HSLink Pro 调研
 
 ### 4.1 项目组成
