@@ -231,6 +231,45 @@ GND          ------------------- GND
 | 4 / 6 / 8 / 10 / 12 | GND | GND |
 | 19 | +5 V | 可选，限流 |
 
+### 5.4.1 HSLink Pro 为什么把 PA28 和 PA29 并到 SWDIO/TMS
+
+[HSLink Pro](https://cherrydap.cherry-embedded.org/projects/HSLink%20Pro.html) 的 20pin 上仍然只有**一根** TMS/SWDIO。并联发生在下载器内部，不是连接器上多出一根线。
+
+固件 `DAP_config.h` 的定义是：
+
+| 脚 | 固件名 | SPI1 | 作用 |
+| --- | --- | --- | --- |
+| PA29 | `PIN_TMS` | MOSI | 驱动 SWDIO/TMS |
+| PA28 | `PIN_TMS_IN` | MISO | 只采样同一根线 |
+| PA27 | `PIN_TCK_SLV` | SCLK | SWCLK/TCK |
+
+作者在 CherryDAP 讨论里写明：HSLink Pro 把输入和输出并联，TMS 仍是单线半双工；`TMS_IN` 配成输入即可。隔离版才把输入、输出拆开，因为隔离器只能单向。
+
+这样做是为了用 SPI 外设跑到约 80 MHz：
+
+```text
+目标 SWDIO
+    │
+    ▼
+74LVC1T45（方向由 SWDIO_DIR 控制）
+    │  MCU 侧同一节点
+    ├── PA29  SPI1.MOSI   写出请求、写数据
+    └── PA28  SPI1.MISO   读 ACK、读数据
+```
+
+- 发的时候：电平转换朝目标，PA29 驱动。PA28 同时看见自己发出的波形。
+- 收的时候：电平转换朝 MCU，PA29 改成输入，避免和目标对灌。PA28 一直是输入，SPI 的 RX 继续采样，不用在每个 turnaround 里改引脚复用。
+- SPI 的 `mosi_bidir=1` 时，单靠 PA29 也能半双工。把 MISO 并上去，是让收、发各用一个脚，方向切换更干净。
+- GPIO 模拟模式更慢：既要改 `SWDIO_DIR`，又要改 PA29 的输入/输出。
+
+注意：HSLink 的 JTAG TDI **不是** PA29。当前固件里 TDI 是 PB13，TDO 是 PB12。PA29 已经让给 TMS 驱动。
+
+本方案现在按 YBLINK 把 PA29 单独当 TDI、PA28 单独当 SWDIO。这样能做 SWD/JTAG，但走不到 HSLink 那种 SPI 高速半双工。若要对齐 80 MHz：
+
+1. PA28 与 PA29 在 1T45 的 MCU 侧短接，对外仍是一根 SWDIO/TMS；
+2. TDI 改到空脚（HSLink 用 PB13，本板 PB13 已是 Flash MOSI，需要另选）；
+3. 另留一脚做 `SWDIO_DIR`，接 1T45 的 DIR。自动方向芯片可以省掉这一脚，但 80 MHz 时方向切换不如 1T45 干净。
+
 ### 5.5 外部 SPI Flash：U 盘 + 离线库
 
 ```text
