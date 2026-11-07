@@ -1,0 +1,18 @@
+{
+  "source_commit": "13f296b367587d4c416ca930fa4bb9388d1dcbe3",
+  "source_subtree": "5542e8387bedf160b2fb67baa0b95345e3d62a29",
+  "shortcuts": [
+    {
+      "path": "01env/005lib D.lnk",
+      "payload": "shortcuts/005.lnk",
+      "before_sha256": "01fc1007d39969b27ec29cd2055d591586d74a82287f10b8cbbe65f50463b9b0",
+      "after_sha256": "33818ba951210196cc8cf645111123af48fbd439405b3d01c9219fe47240d9dd"
+    },
+    {
+      "path": "01env/005lib -D.lnk",
+      "payload": "shortcuts/006.lnk",
+      "before_sha256": "01fc1007d39969b27ec29cd2055d591586d74a82287f10b8cbbe65f50463b9b0",
+      "after_sha256": "33818ba951210196cc8cf645111123af48fbd439405b3d01c9219fe47240d9dd"
+    }
+  ]
+}
