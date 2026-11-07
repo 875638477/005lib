@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,hashlib
-H=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
+H=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
 def vk(v):return (v['net'],tuple(round(x,5) for x in v['xy']),v['padstack'])
 def pins(s):
  return {p['ref']:{'package':p['package'],'model':p.get('model'),'value':p.get('value'),'xy':p['xy'],'rotation':p['rotation'],'mirrored':p.get('mirrored'),'pins':[{k:a.get(k) for k in ['number','xy','net','padstack','rotation','mechanical','figure','padLocalBBox','padBBox']} for a in p['pins']]} for p in s['placements']}

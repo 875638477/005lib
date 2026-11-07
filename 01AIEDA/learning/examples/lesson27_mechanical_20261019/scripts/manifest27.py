@@ -1,6 +1,6 @@
 import pathlib,json,hashlib,datetime
-B=pathlib.Path(r'D:/001DIY/005lib/01AIEDA/learning/examples/lesson27_mechanical_20261019')
-N=pathlib.Path(r'D:/001DIY/005lib/01AIEDA/learning/notes/lesson27_mechanical_20261019.md')
+B=pathlib.Path(r'D:/005lib/01AIEDA/learning/examples/lesson27_mechanical_20261019')
+N=pathlib.Path(r'D:/005lib/01AIEDA/learning/notes/lesson27_mechanical_20261019.md')
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest().upper()
 visual={'reviewed':'2026-10-19 Asia/Shanghai','file':'preview.png','status':'PASS','basis':'native readonly readback TSV; not Cadence screenshot','checked':['four corner holes and symmetric datums','closed C2 outline with expected aspect','USB slot/land/locator alignment and opening -Y/insertion +Y','courtyard local edge exception','hardware and height keepout positions','legend and dimension labels readable after adjustment'],'previewSHA256':sha(B/'preview.png')}
 (B/'visual_qa.json').write_text(json.dumps(visual,indent=2),encoding='utf8')

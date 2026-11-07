@@ -1,7 +1,7 @@
 # Isolated native Capture 17.2 database lesson. All paths stay in 01AIEDA.
-source {D:/001DIY/005lib/01AIEDA/learning/scripts/c12_helpers.tcl}
+source {D:/005lib/01AIEDA/learning/scripts/c12_helpers.tcl}
 namespace eval ::C11Design {
-    variable root {D:/001DIY/005lib/01AIEDA/learning}
+    variable root {D:/005lib/01AIEDA/learning}
     proc cs {v} {return [DboTclHelper_sMakeCString $v]}
     proc ok {s label} {if {[$s Failed]} {error "Native state failed: $label"}}
     proc obj {o s label} {ok $s $label; if {$o eq "NULL"} {error "NULL: $label"}; return $o}

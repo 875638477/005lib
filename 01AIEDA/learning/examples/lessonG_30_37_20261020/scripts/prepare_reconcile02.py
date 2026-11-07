@@ -1,7 +1,7 @@
 from pathlib import Path
 import subprocess
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonG_30_37_20261020')
-P=Path(r'D:\001DIY\005lib\01AIEDA\learning\tools\python_3_14_0\python.exe')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonG_30_37_20261020')
+P=Path(r'D:\005lib\01AIEDA\learning\tools\python_3_14_0\python.exe')
 for key in ['4L','2L']:
  tag=f'{key}_v3'
  subprocess.run([str(P),str(R/'scripts/compile_placement.py'),'--variant',key,'--tag',tag],check=True)

@@ -8,7 +8,7 @@ import argparse,csv,hashlib,json,re
 import xml.etree.ElementTree as E
 
 ROOT=Path('D:/001DIY/004computer/lga1700/13shared_libraries_pc_20261025')
-PUBLIC=Path('D:/001DIY/005lib')
+PUBLIC=Path('D:/005lib')
 FROZEN_SHA='F2A40E1AF0848305F352A75DB13C783406EF48303A8AFE7A53851A35B1863E05'
 LIB_EXT={'.olb','.pad','.psm','.dra','.ssm','.fsm'}
 ACTIVE_SUFFIX={'.cmd','.bat','.ps1','.tcl','.il','.opj','.cfg','.dml','.ini','.env'}

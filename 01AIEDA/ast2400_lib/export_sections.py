@@ -9,8 +9,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 SRC = ROOT / "AST2400_pins.csv"
 OUT_DIR = ROOT / "sections"
-CAP_DIR = Path(r"D:\001DIY\005lib\01captureLib\AST2400")
-SCRIPT_DIR = Path(r"D:\001DIY\005lib\01script_file\AST2400")
+CAP_DIR = Path(r"D:\005lib\01captureLib\AST2400")
+SCRIPT_DIR = Path(r"D:\005lib\01script_file\AST2400")
 
 
 def main() -> None:

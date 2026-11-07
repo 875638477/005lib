@@ -9,10 +9,10 @@
     "-nographic",
     "-readonly",
     "-s",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson29_constraints_20261019\\scripts\\read_coupon.scr",
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lesson29_constraints_20261019\\scripts\\read_coupon.scr",
     "-p",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson29_constraints_20261019\\logs\\read_coupon",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson29_constraints_20261019\\native\\F29_PHASE_COUPON.brd"
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lesson29_constraints_20261019\\logs\\read_coupon",
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lesson29_constraints_20261019\\native\\F29_PHASE_COUPON.brd"
   ],
   "completed": true,
   "exitCode": 0,
@@ -21,8 +21,8 @@
   "readonly": true,
   "scriptSHA256": "E09242CB24C003D099C7A75DC46599633FED170027541F9F22BD1C21D7E944CE",
   "processEnvironmentOverrides": {
-    "TEMP": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson29_constraints_20261019\\logs\\read_coupon\\tmp",
-    "TMP": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson29_constraints_20261019\\logs\\read_coupon\\tmp",
-    "ALLEGRO_PCBENV": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson29_constraints_20261019\\logs\\read_coupon\\pcbenv"
+    "TEMP": "D:\\005lib\\01AIEDA\\learning\\examples\\lesson29_constraints_20261019\\logs\\read_coupon\\tmp",
+    "TMP": "D:\\005lib\\01AIEDA\\learning\\examples\\lesson29_constraints_20261019\\logs\\read_coupon\\tmp",
+    "ALLEGRO_PCBENV": "D:\\005lib\\01AIEDA\\learning\\examples\\lesson29_constraints_20261019\\logs\\read_coupon\\pcbenv"
   }
 }

@@ -1,5 +1,5 @@
 ﻿from pathlib import Path
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
 s=(R/'scripts/compile_batchHI_v21.py').read_text()
 s=s.replace('proofs=[]\nplaced_moves=', '''proofs=[]
 delete_prefix=[]

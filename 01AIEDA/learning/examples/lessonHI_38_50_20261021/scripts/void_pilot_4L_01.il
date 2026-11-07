@@ -1,7 +1,7 @@
 
 procedure(hiVoidPilot()
  let((f mark shapes)
-  f=outfile("D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/logs/void_pilot_4L_01/hi_permanent_void_pilot.txt")
+  f=outfile("D:/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/logs/void_pilot_4L_01/hi_permanent_void_pilot.txt")
   hiRegistry=nil
   axlDBRefreshId(nil)
   mark=axlDBTransactionStart()

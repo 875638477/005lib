@@ -1,6 +1,6 @@
 from pathlib import Path
 import sys,json,dataclasses,collections,hashlib,re
-J=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonJK_51_59_20261022');sys.path.insert(0,str(J/'tooling/packages'))
+J=Path(r'D:\005lib\01AIEDA\learning\examples\lessonJK_51_59_20261022');sys.path.insert(0,str(J/'tooling/packages'))
 from gerbonara import GerberFile
 from gerbonara.utils import MM
 def canon(a):

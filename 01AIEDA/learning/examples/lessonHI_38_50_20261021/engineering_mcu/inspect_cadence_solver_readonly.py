@@ -1,5 +1,5 @@
 import pathlib,hashlib,json,struct,shutil,os,datetime
-R=pathlib.Path(r"D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu");C=pathlib.Path(r"C:\Program0\Cadence\SPB172")
+R=pathlib.Path(r"D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu");C=pathlib.Path(r"C:\Program0\Cadence\SPB172")
 files=[];notes=[]
 for name in("bem2d.exe","bem2d2.exe","bem2d3.exe"):
  p=C/"tools/bin"/name;b=p.read_bytes();o=struct.unpack_from("<I",b,0x3c)[0];machine,nsect,_,_,_,optsz,_=struct.unpack_from("<HHIIIHH",b,o+4);opt=o+24;magic=struct.unpack_from("<H",b,opt)[0];dirs=opt+(112 if magic==0x20b else 96);importrva,importsize=struct.unpack_from("<II",b,dirs+8)

@@ -2,7 +2,7 @@
 from pathlib import Path
 import re
 
-p = sorted(Path(r"D:\001DIY\005lib\AUTOlib\ul_AST2400\OrcadCaptureXML").glob("*.xml"))[-1]
+p = sorted(Path(r"D:\005lib\AUTOlib\ul_AST2400\OrcadCaptureXML").glob("*.xml"))[-1]
 t = p.read_text(encoding="utf-8")
 print("file", p.name)
 bw = re.findall(r'x2="(\d+)"', t)

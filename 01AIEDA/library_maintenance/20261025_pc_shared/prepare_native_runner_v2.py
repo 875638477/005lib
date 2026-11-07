@@ -1,5 +1,5 @@
 ﻿from pathlib import Path
-M=Path(r'D:\001DIY\005lib\01AIEDA\library_maintenance\20261025_pc_shared')
+M=Path(r'D:\005lib\01AIEDA\library_maintenance\20261025_pc_shared')
 s=(M/'run_global_suffix_psm_native_audit.py').read_text(encoding='utf-8-sig')
 s=s.replace('import argparse,collections,concurrent.futures,hashlib,importlib.util,json,pathlib,shutil,time','import argparse,collections,concurrent.futures,hashlib,importlib.util,json,pathlib,shutil,time,subprocess')
 s=s.replace(' ap.add_argument("--timeout-per-chunk",type=int,default=1200)',' ap.add_argument("--timeout-per-chunk",type=int,default=1200)\n ap.add_argument("--max-assets",type=int,default=0)\n ap.add_argument("--start-index",type=int,default=0)')

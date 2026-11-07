@@ -1,9 +1,9 @@
 from pathlib import Path
 import csv,json,hashlib,collections,shutil
-B=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lesson29_constraints_20261019_review')
+B=Path(r'D:\005lib\01AIEDA\learning\examples\lesson29_constraints_20261019_review')
 B.mkdir(exist_ok=True)
 (B/'source').mkdir(exist_ok=True);(B/'scripts').mkdir(exist_ok=True)
-S=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lesson28_stackup_20261019\logs\baseline01')
+S=Path(r'D:\005lib\01AIEDA\learning\examples\lesson28_stackup_20261019\logs\baseline01')
 r=list(csv.DictReader((S/'pads.tsv').open(),delimiter='\t',quoting=csv.QUOTE_NONE))
 nets=collections.defaultdict(set);pins={}
 q=lambda s:s.strip('"')

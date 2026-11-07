@@ -1,6 +1,6 @@
 from pathlib import Path
 import shutil
-r=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonF_stack_artwork_correction_20261019\review')
+r=Path(r'D:\005lib\01AIEDA\learning\examples\lessonF_stack_artwork_correction_20261019\review')
 shutil.copy2(r/'review.json',r/'review_preliminary.json')
 shutil.copy2(r/'independent_review.py',r/'independent_review_initial.py')
 p=r/'independent_review.py';s=p.read_text(encoding='utf-8')

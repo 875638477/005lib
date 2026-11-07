@@ -1,6 +1,6 @@
 from pathlib import Path
 import sys,json,math
-H=Path(r'D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021');sys.path.insert(0,str(H/'scripts'));from routing_geometry import *
+H=Path(r'D:/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021');sys.path.insert(0,str(H/'scripts'));from routing_geometry import *
 O=H/'engineering_power';w=load(O/'N40_2L_networks.json');r=load(O/'N40_2L_rules.json');p=load(O/'N40_2L_policy.json');n=load(H/'review/PROVISIONAL_UNSAVED_b016_2L_try09.json');s=CopperScene(n,w,r,p)
 for xy in [[35.8,20.5],[35.65,20.5],[35.7,20.45],[35.8,20.4]]:
  pts=[[35.8,21.95],xy];g=LineString(pts).buffer(.3);hits=[]

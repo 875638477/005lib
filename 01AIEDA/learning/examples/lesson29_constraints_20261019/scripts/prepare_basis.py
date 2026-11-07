@@ -1,5 +1,5 @@
 import pathlib,json
-R=pathlib.Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lesson29_constraints_20261019')
+R=pathlib.Path(r'D:\005lib\01AIEDA\learning\examples\lesson29_constraints_20261019')
 p=R/'constraint_plan_preparation.json';d=json.loads(p.read_text())
 d['basis']={
 'default':'Teaching conservative minimum0.20mm width and0.20mm spacing; comfortably above the documented selected-board process limits. Not a current-density/thermal certification.',

@@ -1,6 +1,6 @@
 from pathlib import Path
 import sys,json,math,csv,re
-H=Path(r'D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021');sys.path.insert(0,str(H/'scripts'));from routing_geometry import *
+H=Path(r'D:/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021');sys.path.insert(0,str(H/'scripts'));from routing_geometry import *
 from shapely.ops import nearest_points
 O=H/'engineering_power';root=load(H/'review/reference_projection_screen_b016.json');audit={}
 for v in ['2L','4L']:

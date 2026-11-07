@@ -21,7 +21,7 @@ assert len(mapping)==1131
 mappath=O/'CACHE7_COMPLETE_1131_UNCHANGED_FP_MAP.json';put(mappath,mapping)
 compiler=O/'compile_cache7_guards_only.py';text=(R/'tools/compile_capture13_native_plan.py').read_text('utf-8');assert text.count('assert len(fpchanges)>0')==1;text=text.replace('assert len(fpchanges)>0','assert len(fpchanges)==0, "Cache7 must not edit instanceFP"');compiler.write_text(text,encoding='utf-8')
 compiled=O/'compiled';assert not compiled.exists(),'Fresh compiler output required'
-subprocess.run([r'C:\Users\Administrator\.local\bin\python3.15.exe',str(compiler),'--source-plan',str(sourcepath),'--instance-map',str(mappath),'--out',str(compiled),'--new-source-identity',r'D:\001DIY\005LIB\01CAPTURELIB\COMMON_PC.OLB'],check=True)
+subprocess.run([r'C:\Users\Administrator\.local\bin\python3.15.exe',str(compiler),'--source-plan',str(sourcepath),'--instance-map',str(mappath),'--out',str(compiled),'--new-source-identity',r'D:\005lib\01CAPTURELIB\COMMON_PC.OLB'],check=True)
 native=(M/'capture_all81_plan13/apply_all81_capture_footprints_only.tcl').read_text('utf-8')
 block='''# Bind exactcached DboPackage via the proven placed-instance GetPackage API.
 # PublicOLB sameDboPackage GetPCBFootprint/SetPCBFootprint are already nativelyproven.

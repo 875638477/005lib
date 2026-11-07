@@ -9,10 +9,10 @@
     "-nographic",
     "-readonly",
     "-s",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson29_constraints_20261019\\scripts\\reopen01.scr",
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lesson29_constraints_20261019\\scripts\\reopen01.scr",
     "-p",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson29_constraints_20261019\\logs\\reopen01",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson29_constraints_20261019\\native\\F29_CONSTRAINTS.brd"
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lesson29_constraints_20261019\\logs\\reopen01",
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lesson29_constraints_20261019\\native\\F29_CONSTRAINTS.brd"
   ],
   "completed": true,
   "exitCode": 0,
@@ -21,8 +21,8 @@
   "readonly": true,
   "scriptSHA256": "ED077AF37581CCC52F4C6643BFB57E4180E4C9FA89296CCFB8068C0A2617E471",
   "processEnvironmentOverrides": {
-    "TEMP": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson29_constraints_20261019\\logs\\reopen01\\tmp",
-    "TMP": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson29_constraints_20261019\\logs\\reopen01\\tmp",
-    "ALLEGRO_PCBENV": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson29_constraints_20261019\\logs\\reopen01\\pcbenv"
+    "TEMP": "D:\\005lib\\01AIEDA\\learning\\examples\\lesson29_constraints_20261019\\logs\\reopen01\\tmp",
+    "TMP": "D:\\005lib\\01AIEDA\\learning\\examples\\lesson29_constraints_20261019\\logs\\reopen01\\tmp",
+    "ALLEGRO_PCBENV": "D:\\005lib\\01AIEDA\\learning\\examples\\lesson29_constraints_20261019\\logs\\reopen01\\pcbenv"
   }
 }

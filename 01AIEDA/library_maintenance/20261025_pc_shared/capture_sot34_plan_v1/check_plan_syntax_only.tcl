@@ -1,4 +1,4 @@
-set m {D:/001DIY/005lib/01AIEDA/library_maintenance/20261025_pc_shared/capture_sot34_plan_v1}
+set m {D:/005lib/01AIEDA/library_maintenance/20261025_pc_shared/capture_sot34_plan_v1}
 set f [open [file join $m apply_capture13_footprints_only.tcl] r]
 set script [read $f];close $f
 if {![info complete $script]} {error {Native script Tcl syntax incomplete}}

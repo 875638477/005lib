@@ -1,5 +1,5 @@
 import pathlib,json,math,hashlib,shutil
-R=pathlib.Path(r"D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu");H=R.parent
+R=pathlib.Path(r"D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu");H=R.parent
 u=json.loads((R/"plans/usb_critical_routes_v4.json").read_text(encoding="utf-8"))
 m=json.loads((R/"plans/mcu_critical_routes_v5.json").read_text(encoding="utf-8"))
 power=json.loads((H/"engineering_power/power_star_03b.json").read_text(encoding="utf-8"))

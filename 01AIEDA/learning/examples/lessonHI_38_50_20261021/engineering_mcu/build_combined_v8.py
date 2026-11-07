@@ -1,5 +1,5 @@
 import pathlib,json
-R=pathlib.Path(r"D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu");H=R.parent
+R=pathlib.Path(r"D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu");H=R.parent
 m=json.loads((R/"plans/mcu_critical_routes_v6.json").read_text(encoding="utf-8"))
 for o in m["operations"]:
  if o["id"]=="ADC_PIN_CAP":o["points"]=[[38.25,31.25],[38.25,32.2],[37.8,32.2],[37.7,32.3],[35.5,32.3],[34.8,33]]

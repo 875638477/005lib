@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,shutil,hashlib
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');P=R/'engineering_power';note=R.parent.parent/'notes/lessonHI_power_20261021.md';dest=P/'source/official_BOOT_diagnostic';dest.mkdir(exist_ok=True)
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');P=R/'engineering_power';note=R.parent.parent/'notes/lessonHI_power_20261021.md';dest=P/'source/official_BOOT_diagnostic';dest.mkdir(exist_ok=True)
 base=Path(r'C:\Program0\Cadence\SPB172\share\pcb\examples\skill\DOC\FUNCS');apis=['axlDBCreatePath.txt','axlDBControl.txt','axlDBDynamicShapes.txt','axlShapeDynamicUpdate.txt']
 items=[]
 for name in apis:

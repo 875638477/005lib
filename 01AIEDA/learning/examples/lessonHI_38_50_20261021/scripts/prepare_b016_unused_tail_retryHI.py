@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,hashlib,shutil,subprocess,sys
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest().upper()
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest().upper()
 s=(R/'scripts/compile_batchHI_v32.py').read_text().replace("elif typ=='secondExactBatch':","elif typ in ['secondExactBatch','exactBatch']:").replace("  statements.extend(placement_statements);placed_moves=True","  if typ=='secondExactBatch':statements.extend(placement_statements);placed_moves=True");(R/'scripts/compile_batchHI_v33.py').write_text(s,encoding='utf8')
 for v,t in [('2L','10'),('4L','05')]:
  d=json.loads((R/f'batches/clearance_remaining_{v}_b016_phased.json').read_text());omit=[o for o in d['operations'] if o['id'].startswith('NSS_OLD_R25_V3_BRANCH_CLEANUP_')];assert len(omit)==2;d['operations']=[o for o in d['operations'] if o not in omit];d['rejectedLiveFeedDeletion']={'omittedOriginalOperations':omit,'reason':'Root approved withdrawal in both variants. Actual C11.1->R27.1 supply chain is live. Original frozen01 retained but these2ops explicitly superseded; cannot infer manualdeadstub from generatedGNDorphan count.'};d['proofs'].append({'from':'C11.1','to':'R27.1','connected':True})

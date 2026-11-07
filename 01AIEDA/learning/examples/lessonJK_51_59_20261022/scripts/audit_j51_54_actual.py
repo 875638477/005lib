@@ -1,6 +1,6 @@
 from pathlib import Path
 import sys,json,hashlib,math,re,csv,collections,datetime
-ROOT=Path(r'D:/001DIY/005lib/01AIEDA')
+ROOT=Path(r'D:/005lib/01AIEDA')
 HI=ROOT/'learning/examples/lessonHI_38_50_20261021'
 JK=ROOT/'learning/examples/lessonJK_51_59_20261022'
 OUT=JK/'audits'; OUT.mkdir(exist_ok=True)

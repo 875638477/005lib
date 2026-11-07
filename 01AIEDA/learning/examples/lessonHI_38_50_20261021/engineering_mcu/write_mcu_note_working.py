@@ -1,5 +1,5 @@
 import pathlib,datetime,json,hashlib
-R=pathlib.Path(r"D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu");H=R.parent
+R=pathlib.Path(r"D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu");H=R.parent
 note=R.parents[2]/"notes/lessonHI_mcu_20261021.md"
 body="""# H/I 第38—50课：MCU、振荡器、复位、ADC与USB路由专项
 

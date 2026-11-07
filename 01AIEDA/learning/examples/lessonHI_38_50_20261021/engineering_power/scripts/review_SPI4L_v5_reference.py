@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,sys,math,hashlib
-H=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');R=H/'engineering_power';sys.path.insert(0,str(H/'tooling/packages'));sys.path.insert(0,str(R/'scripts'))
+H=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');R=H/'engineering_power';sys.path.insert(0,str(H/'tooling/packages'));sys.path.insert(0,str(R/'scripts'))
 from shapely.geometry import LineString,Point,box
 from shapely.ops import unary_union
 from cadence_poly import conservative_plane

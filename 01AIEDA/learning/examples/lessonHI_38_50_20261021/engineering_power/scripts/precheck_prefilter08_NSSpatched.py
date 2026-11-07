@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,math
-R=Path(r'D:\001DIY\005lib\01AIEDA/learning/examples/lessonHI_38_50_20261021/engineering_power')
+R=Path(r'D:\005lib\01AIEDA/learning/examples/lessonHI_38_50_20261021/engineering_power')
 base=json.loads((R.parent/'inventory/checkpoints/usb_esd_4L_b008/normalized.json').read_text())
 files=['STAR_reroute_07b.json','interface_CAN_routes_04.json','CAN_local_supply_05.json','V3_peripheral_distribution_06b.json','VDDA_prefilter_reroute_08.json','source/root_SPI_NSS_westvia_patch_proposal.json']
 plans=[json.loads((R/f).read_text()) for f in files]

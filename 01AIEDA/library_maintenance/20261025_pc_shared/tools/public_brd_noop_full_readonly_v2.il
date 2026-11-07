@@ -6,7 +6,7 @@ load("D:/001DIY/004computer/lga1700/12electrical_fixed_20261025/tools/native_aud
 load("D:/001DIY/004computer/lga1700/12electrical_fixed_20261025/rules/replay/native_constraints_helpers.il")
 load("D:/001DIY/004computer/lga1700/13shared_libraries_pc_20261025/w/pcb_migration/pc13_export_board_definitions.il")
 load("D:/001DIY/004computer/lga1700/12electrical_fixed_20261025/tools/shape_power_repair/shape_snapshot.il")
-load("D:/001DIY/005lib/01AIEDA/learning/scripts/allegro_value_text_owner_readonly.il")
+load("D:/005lib/01AIEDA/learning/scripts/allegro_value_text_owner_readonly.il")
 
 procedure(spRing(f vertices)
  let((first v xy r)

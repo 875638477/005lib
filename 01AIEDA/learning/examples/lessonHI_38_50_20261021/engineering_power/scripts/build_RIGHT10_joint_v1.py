@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,math,sys
-H=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');R=H/'engineering_power';sys.path.insert(0,str(H/'tooling/packages'))
+H=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');R=H/'engineering_power';sys.path.insert(0,str(H/'tooling/packages'))
 from shapely.geometry import Polygon
 b=json.loads((H/'inventory/checkpoints/postcritical_2L_b010/normalized.json').read_text());orig=json.loads((H/'engineering_mcu/plans/mcu_critical_routes_v6.json').read_text())
 p=dict(status='DRAFT_FULL_RIGHT10_REWORK_NEEDS_GEOMETRY_AND_NATIVE',batchId='RIGHT10_source_joint_v1',variant='BOTH',operations=[],placementChanges=[dict(ref='C15',xy=[47.3,30.4016],rotation=270,purpose='Free PB8/PB9 source copper, maintain local direct VDD/VSS loop'),dict(ref='R28',xy=[53,28],rotation=180,purpose='BOOT0 pulldown removes old ground pad/thermal obstruction from PB5 fanout')],sourceCheckpoint='postcritical_2L/4L_b010; rebase final SPIb012 geometry',rules=[],requiredProofs=[])

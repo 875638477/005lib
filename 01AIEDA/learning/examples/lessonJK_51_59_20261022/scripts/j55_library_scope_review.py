@@ -1,6 +1,6 @@
 ﻿from pathlib import Path
 import json,collections,hashlib
-R=Path('D:/001DIY/005lib/01AIEDA');J=R/'learning/examples/lessonJK_51_59_20261022';H=R/'learning/examples/lessonHI_38_50_20261021';D=R/'learning/examples/de_15_26_20261019';ns={};src=(J/'scripts/j55_57_build.py').read_text(encoding='utf-8-sig');exec(src[:src.index("req=['REF DES")],ns);rows=ns['srows'];load=ns['load'];dump=ns['dump'];sha=ns['sha']
+R=Path('D:/005lib/01AIEDA');J=R/'learning/examples/lessonJK_51_59_20261022';H=R/'learning/examples/lessonHI_38_50_20261021';D=R/'learning/examples/de_15_26_20261019';ns={};src=(J/'scripts/j55_57_build.py').read_text(encoding='utf-8-sig');exec(src[:src.index("req=['REF DES")],ns);rows=ns['srows'];load=ns['load'];dump=ns['dump'];sha=ns['sha']
 for v in ['2L','4L']:
  S=load(H/f'inventory/checkpoints/padentry_{v}_b019_DRC_PENDING/normalized.json');L=Path(S['readbackDirectory']);g=rows(L/'g_package_geometry.tsv');items=[]
  for package in sorted({p['package'] for p in S['placements']}):

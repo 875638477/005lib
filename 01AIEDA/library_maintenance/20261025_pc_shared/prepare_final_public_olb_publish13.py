@@ -46,7 +46,7 @@ def main():
  a.out.mkdir(parents=True);archive=a.out/'ORIGINAL_THIRTEEN_PUBLIC_OLBS.zip';members=[]
  with zipfile.ZipFile(archive,'x',compression=zipfile.ZIP_DEFLATED,compresslevel=6) as z:
   for r in replacements:
-   member=str(Path(r['public']).relative_to(Path('D:/001DIY/005lib/01captureLib'))).replace('\\','/');z.write(r['public'],member);members.append({'path':r['public'],'member':member,'sha256':r['old_sha256'],'bytes':r['old_bytes']})
+   member=str(Path(r['public']).relative_to(Path('D:/005lib/01captureLib'))).replace('\\','/');z.write(r['public'],member);members.append({'path':r['public'],'member':member,'sha256':r['old_sha256'],'bytes':r['old_bytes']})
  with zipfile.ZipFile(archive) as z:
   need(len(z.namelist())==13,'Final original ZIP count mismatch')
   for m in members:

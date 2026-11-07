@@ -9,7 +9,7 @@ procedure(hiTinyViaApprovalPilot(out)
   mark=axlDBTransactionStart()
   unwindProtect(progn(
    axlDBControl('drcEnable nil)
-   axlSetVariable("padpath" list("D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/library"))
+   axlSetVariable("padpath" list("D:/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/library"))
    unless(axlLoadPadstack("HI_VIA026_C052_TENT") error("Cannot load private via definition\n"))
    hiRegistry=nil
    hiCSet(f 'physical "HI_PILOT_TINY_APPROVAL" parent list(list('vias "L28_VIA030_C060:HI_VIA026_C052_TENT")))

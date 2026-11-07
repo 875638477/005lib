@@ -1,5 +1,5 @@
 import pathlib,shutil,json
-R=pathlib.Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lesson29_constraints_20261019')
+R=pathlib.Path(r'D:\005lib\01AIEDA\learning\examples\lesson29_constraints_20261019')
 p=R/'scripts/build29.il';s=p.read_text()
 a=s.index('procedure(f29Class(');b=s.index('procedure(f29DumpDRC',a)
 s=s[:a]+r'''
@@ -25,7 +25,7 @@ s=s.replace('axlCnsClassTableCreate("NC_SWITCHING" c','axlCnsClassTableCreate("N
 s=s.replace('axlCnsClassTableCreate("NC_USB_FS" "NC_DIGITAL_GENERAL"','axlCnsClassTableCreate("NC_USB_FS_S" "NC_DIGITAL_GENERAL_S"')
 # Preserve original source; only this new file is authoritative for v2.
 (R/'scripts/build29_v2.il').write_text(s,encoding='ascii')
-src=pathlib.Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lesson28_stackup_20261019\native\F28_4L.brd')
+src=pathlib.Path(r'D:\005lib\01AIEDA\learning\examples\lesson28_stackup_20261019\native\F28_4L.brd')
 dst=R/'native/F29_CONSTRAINTS_v2.brd';assert not dst.exists();shutil.copy2(src,dst)
 log=R/'logs/build02';log.mkdir(exist_ok=True)
 scr='set NOCONFIRM\nskill errset(load("'+(R/'scripts/build29_v2.il').as_posix()+'") t)\nskill errset(f29Build("'+dst.as_posix()+'" "'+log.as_posix()+'") t)\nquit\nfillin "yes"\n'

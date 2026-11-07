@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,copy,csv,re,hashlib,shutil,subprocess,sys
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest().upper();s=(R/'scripts/normalize_HI_actual_v5.py').read_text();ns={'json':json,'re':re};exec(s[s.index('def sx('):s.index('symbols=')],ns);sx=ns['sx']
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest().upper();s=(R/'scripts/normalize_HI_actual_v5.py').read_text();ns={'json':json,'re':re};exec(s[s.index('def sx('):s.index('symbols=')],ns);sx=ns['sx']
 # Health failure still exports realunsavedgeometry before denying SaveAs.
 p=R/'scripts/batchHI_dynamic_void_and_ground_trial_v1.il';s=p.read_text();s='hiGroundTrialHealthCount=0\n'+s;s=s.replace('f=outfile(strcat(out "/hi_all_ground_common_trial.txt"))','hiGroundTrialHealthCount=hiGroundTrialHealthCount+1\n  f=outfile(sprintf(nil "%s/hi_all_ground_common_trial_%d.txt" out hiGroundTrialHealthCount))');s=s.replace('error("Groundtrial actualcommon/fill/orphan health failed; preserveactualdiagnostics, noSave\\n")','progn(gSnapshot(out hiDiagnosticLibrary) hiNetworkInventory(out) hiExtraRead(out) hiShapeBoundaryRead(out) hiRouteRoles(out) hiBranchAudit(out) error("Groundtrial actualcommon/fill/orphan health failed; preserveactualdiagnostics, noSave\\n"))');p.write_text(s,encoding='ascii')
 for v in ['4L','2L']:

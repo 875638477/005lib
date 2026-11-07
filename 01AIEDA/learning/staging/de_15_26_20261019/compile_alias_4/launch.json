@@ -6,8 +6,8 @@
     "-safe",
     "-nographic",
     "-s",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\scripts\\de_compile_alias.scr",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\de_15_26_20261019\\library\\DE_HDR1X4_254_TH.dra"
+    "D:\\005lib\\01AIEDA\\learning\\scripts\\de_compile_alias.scr",
+    "D:\\005lib\\01AIEDA\\learning\\examples\\de_15_26_20261019\\library\\DE_HDR1X4_254_TH.dra"
   ],
   "startUTC": "2026-10-19T02:45:07.165043+00:00",
   "pid": 31292,

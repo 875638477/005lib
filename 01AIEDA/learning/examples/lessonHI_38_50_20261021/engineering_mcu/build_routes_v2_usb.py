@@ -1,5 +1,5 @@
 import pathlib,json,math,datetime,hashlib
-R=pathlib.Path(r"D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu")
+R=pathlib.Path(r"D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu")
 p=json.loads((R/"plans/mcu_critical_routes_v1.json").read_text(encoding="utf-8"))
 p["status"]="CANDIDATE_V2_NATIVE_DRC_AND_ISOLATION_PENDING";p["supersedes"]="v1 HSE anchor conflicts with new internal V3V3 star; original kept for audit, do not execute old anchor."
 for o in p["operations"]:

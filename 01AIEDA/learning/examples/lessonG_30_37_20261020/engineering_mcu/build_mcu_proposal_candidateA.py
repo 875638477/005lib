@@ -1,5 +1,5 @@
 import os,json,pathlib,math,hashlib,itertools
-ROOT=pathlib.Path(r"D:\001DIY\005lib\01AIEDA\learning\examples\lessonG_30_37_20261020\engineering_mcu")
+ROOT=pathlib.Path(r"D:\005lib\01AIEDA\learning\examples\lessonG_30_37_20261020\engineering_mcu")
 os.environ["TMP"]=os.environ["TEMP"]=str(ROOT/"runtime")
 G=ROOT.parent
 inventory=G/"inventory/inventory_4L.json"

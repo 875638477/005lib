@@ -2,11 +2,11 @@
 
 ## 公共库维护更改记录入口（2026-10-25）
 
-用户指定：所有库维护的工作记录统一保存在 `D:/001DIY/005lib/01AIEDA/library_maintenance/`，创建、修改、合并、删除和验证均按日期/任务记录；后续维护同步更新 `EDA.md` 与库维护总索引。
+用户指定：所有库维护的工作记录统一保存在 `D:/005lib/01AIEDA/library_maintenance/`，创建、修改、合并、删除和验证均按日期/任务记录；后续维护同步更新 `EDA.md` 与库维护总索引。
 
 本次记录：[焊盘与封装整理归档](library_maintenance/20261025_pad_psm_merge/README.txt)；总索引：[library_maintenance/INDEX.txt](library_maintenance/INDEX.txt)。原生库文件仍使用既定公共库路径。
 
-> 本文件夹 `D:\001DIY\005lib\01AIEDA` 是 AI 接管 Cadence 的**永久工程目录**。
+> 本文件夹 `D:\005lib\01AIEDA` 是 AI 接管 Cadence 的**永久工程目录**。
 > 以后用 Cursor 直接打开本文件夹继续工作,所有信息都记录在本文档中。
 > 创建日期:2026-06-10
 
@@ -45,7 +45,7 @@ SKILL 回调 AIB_ipcData 被异步唤醒 → 执行 command.il
 ## 三、目录结构
 
 ```
-D:\001DIY\005lib\01AIEDA\
+D:\005lib\01AIEDA\
 ├── AI接管cadence.md          ← 本文档(总记录)
 └── ai_bridge\
     ├── ai_bridge.il          ← 驻留 Allegro 的桥接脚本(核心,v2 IPC 事件驱动)
@@ -67,7 +67,7 @@ D:\001DIY\005lib\01AIEDA\
 
 ```
 errset(loadi(strcat(axlOSSlash(getShellEnvVar("FP_SKILL")),"FP_Load.il"),"fastprint"))
-errset(loadi("D:/001DIY/005lib/01AIEDA/ai_bridge/ai_bridge.il","ai_bridge"))
+errset(loadi("D:/005lib/01AIEDA/ai_bridge/ai_bridge.il","ai_bridge"))
 ```
 
 第一行是 EDA365 Skill 的(原有),第二行是 AI 桥接(新增),两者共存互不影响。
@@ -137,7 +137,7 @@ Allegro 每次启动会自动加载桥接并开始轮询。
 | 日期 | 事项 |
 |---|---|
 | 2026-06-10 | 方案确定:SKILL 文件桥;在旧目录 `D:\003Software\001AD_CAD_Cadence_creo\eda365\ai_bridge` 首次搭建 |
-| 2026-06-10 | 因 eda365 软件安装目录易丢失,整体迁移到 `D:\001DIY\005lib\01AIEDA`(本目录),allegro.ilinit 已同步改指新路径,旧目录桥接文件已删除 |
+| 2026-06-10 | 因 eda365 软件安装目录易丢失,整体迁移到 `D:\005lib\01AIEDA`(本目录),allegro.ilinit 已同步改指新路径,旧目录桥接文件已删除 |
 | 2026-06-10 | 链路验证通过:打开 .brd 后查询成功(760 元件/621 网络)。确认 17.2 无定时器 API,固定使用手动模式:AI 下发指令后用户在 Allegro 输 `ai_run` |
 | 2026-06-10 | 桥接升级 v2:按键注入方案被 Windows 拦截弃用;探测发现 ipc 进程族可用,改为 `ipcBeginProcess` 事件驱动,全自动免手输,实测 1.5 秒响应。备份已建:`backup_by_AI\01AI3576allV1_00_00_20260610_231257.brd` |
 

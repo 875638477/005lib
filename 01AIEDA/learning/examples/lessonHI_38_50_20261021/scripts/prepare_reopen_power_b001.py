@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,shutil
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
 shutil.copyfile(R/'scripts/batchHI.il',R/'source/batchHI_b001_executed.il')
 d=json.loads((R/'batches/power_4L_b001.json').read_text())
 h=(R/'scripts/power_4L_b001.scr').read_text().split('skill errset(hiBatchProgram()')[0]

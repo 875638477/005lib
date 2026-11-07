@@ -1,5 +1,5 @@
 import pathlib,json,datetime,hashlib
-R=pathlib.Path(r"D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu")
+R=pathlib.Path(r"D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu")
 p=R/"plans/usb_critical_routes_v6.json";u=json.loads(p.read_text(encoding="utf-8"));mapping=[]
 for o in u["commonOperations"]:
  if o["type"]=="via" and "OR_VERIFIED" in o["padstack"]:

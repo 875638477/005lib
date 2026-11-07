@@ -12,7 +12,7 @@ import subprocess
 
 WORK = Path(__file__).resolve().parent
 ROOT = WORK.parent
-SOURCE = Path(r"D:\001DIY\005lib")
+SOURCE = Path(r"D:\005lib")
 REPO = ROOT / "git_upload_005lib_20261025/repository"
 GIT = ROOT / "git_upload_005lib_20261025/tools/mingit/cmd/git.exe"
 REL = "01AIEDA/library_maintenance/20261025_github_destination_fix"
@@ -98,7 +98,7 @@ def main():
     (SOURCE / "01AIEDA/GITHUB_LOCATION.txt").write_text(
         "当前GitHub库位置（2026-10-25按用户纠正）\n"
         "https://github.com/875638477/001Diy/tree/main/005lib\n"
-        "本机 D:\\001DIY\\005lib 对应 001Diy 仓库内的 005lib 子目录。\n"
+        "本机 D:\\005lib 对应 001Diy 仓库内的 005lib 子目录。\n"
         "9个01目录继续保持本机内部层级。旧独立仓库875638477/005lib为错误位置，迁移核验后删除。\n"
         "维护记录：library_maintenance/20261025_github_destination_fix/README.txt\n", encoding="utf-8")
     (LOG / "README.txt").write_text(

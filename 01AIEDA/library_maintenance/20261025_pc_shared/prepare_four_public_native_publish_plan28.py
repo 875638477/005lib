@@ -2,7 +2,7 @@
 from pathlib import Path
 import argparse,hashlib,json
 M=Path(__file__).resolve().parent
-PUBLIC=Path('D:/001DIY/005lib/01brdlib')
+PUBLIC=Path('D:/005lib/01brdlib')
 sha=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest().upper()
 jr=lambda p:json.loads(Path(p).read_text('utf-8-sig'))
 def proof(p):

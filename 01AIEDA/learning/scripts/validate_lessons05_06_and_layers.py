@@ -1,6 +1,6 @@
 """Evidence-based validation for lesson06 and lesson05 independent repeat. Stdlib only."""
 import pathlib,json,csv,hashlib,re
-ROOT=pathlib.Path(r'D:\001DIY\005lib\01AIEDA')
+ROOT=pathlib.Path(r'D:\005lib\01AIEDA')
 B=ROOT/'learning/examples/lesson06_operations'
 def rows(p):
  with p.open(encoding='utf-8-sig',newline='') as f:return [{k:v.strip('"') for k,v in r.items()} for r in csv.DictReader(f,delimiter='\t')]
@@ -51,7 +51,7 @@ for stage in ['create02','reopen']:
  if stage=='reopen':assert j['readonlyHashUnchanged']
 r5={'status':'PASS','matchedNativeTsvFiles':matches,'repeatCreateExitCode':0,'repeatReopenExitCode':0,'qtAssertionReproduced':False,'originalQtAssertionRetained':True,'rootCause':'Not established','repeatBoardSHA256':sha(repeat/'lesson05_instances.brd')}
 (repeat/'validation.json').write_text(json.dumps(r5,indent=2),encoding='utf-8')
-env=pathlib.Path(r'D:\001DIY\005lib\01env');audit=[]
+env=pathlib.Path(r'D:\005lib\01env');audit=[]
 for p in sorted(env.glob('drill*.txt')):
  text=p.read_text(encoding='utf-8-sig',errors='replace');films=[]
  for block in re.split(r'(?=axlFilmCreate\s*\()',text):

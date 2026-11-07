@@ -1,12 +1,12 @@
 param(
- [string]$NetlistDir='D:\001DIY\005lib\01AIEDA\learning\staging\lga1700_pcb_repair_20261023\trial_paths_names\netlist',
- [string]$Output='D:\001DIY\005lib\01AIEDA\learning\staging\lga1700_pcb_repair_20261023\topology_comparison.json'
+ [string]$NetlistDir='D:\005lib\01AIEDA\learning\staging\lga1700_pcb_repair_20261023\trial_paths_names\netlist',
+ [string]$Output='D:\005lib\01AIEDA\learning\staging\lga1700_pcb_repair_20261023\topology_comparison.json'
 )
 $ErrorActionPreference = 'Stop'
-$root = 'D:\001DIY\005lib\01AIEDA\learning\staging\lga1700_pcb_repair_20261023'
+$root = 'D:\005lib\01AIEDA\learning\staging\lga1700_pcb_repair_20261023'
 $pcbPath = Join-Path $root 'native_current\component_pins.tsv'
 $pstPath = Join-Path $NetlistDir 'pstxnet.dat'
-$pagePath = 'D:\001DIY\005lib\01AIEDA\learning\staging\lga1700_migration_20261022\native_audit_after_device_20261023\pins.tsv'
+$pagePath = 'D:\005lib\01AIEDA\learning\staging\lga1700_migration_20261022\native_audit_after_device_20261023\pins.tsv'
 $pcbRows = @(Import-Csv -LiteralPath $pcbPath -Delimiter "`t")
 $pstText = [IO.File]::ReadAllText($pstPath)
 function New-Set { return ,(New-Object 'System.Collections.Generic.HashSet[string]' ([StringComparer]::OrdinalIgnoreCase)) }

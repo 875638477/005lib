@@ -9,10 +9,10 @@
     "-nographic",
     "-readonly",
     "-s",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson28_stackup_20261019\\scripts\\mechbase01.scr",
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lesson28_stackup_20261019\\scripts\\mechbase01.scr",
     "-p",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson28_stackup_20261019\\logs\\mechbase01",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson28_stackup_20261019\\source\\F27_MECHANICAL.brd"
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lesson28_stackup_20261019\\logs\\mechbase01",
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lesson28_stackup_20261019\\source\\F27_MECHANICAL.brd"
   ],
   "completed": true,
   "exitCode": 0,

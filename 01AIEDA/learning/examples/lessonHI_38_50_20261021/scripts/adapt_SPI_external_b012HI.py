@@ -1,6 +1,6 @@
 ﻿from pathlib import Path
 import json,copy,hashlib
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
 p=R/'scripts/batchHI_shapes_v3.il';s=p.read_text();body=(R/'scripts/batchHI.il').read_text();i=body.index('procedure(hiFinalize(');fn=body[i:]
 fn=fn.replace('let((count)','let((count drcResult)')
 fn=fn.replace('  axlDRCUpdate(t) f29DumpDRC(f "HI_BATCH_FINAL")','''  fprintf(f "HI_FULL_DRC_REQUEST_BEGIN time=%L g_mode=t online=%L physicalModes=%L spacingModes=%L electricalModes=%L\\n" getCurrentTime() axlDBControl('drcEnable) axlCNSPhysicalModeGet('all) axlCNSSpacingModeGet('all) axlCNSEcsetModeGet('all)) drain(f)

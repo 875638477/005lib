@@ -11,7 +11,7 @@ spec=importlib.util.spec_from_file_location('exact_public_guard',M/'publish_exac
 G=importlib.util.module_from_spec(spec);spec.loader.exec_module(G)
 sha,need=G.sha,G.need
 jr=lambda p:json.loads(Path(p).read_text('utf-8-sig'))
-ROOT=Path('D:/001DIY/005lib/01brdlib').resolve()
+ROOT=Path('D:/005lib/01brdlib').resolve()
 NAMES={'00012.brd','0010.brd','006.brd','008.brd'}
 GUARD_SHA='F9D19CC95DCEA9686967EF7CF954EE7E6858225E7F9C949A203C340E6A153D88'
 

@@ -1,6 +1,6 @@
 from pathlib import Path
 import argparse,json,hashlib,shutil
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonG_30_37_20261020')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonG_30_37_20261020')
 P=argparse.ArgumentParser();P.add_argument('--plan',default=str(R/'plans/placement_plan.json'));P.add_argument('--variant',choices=['4L','2L'],required=True);P.add_argument('--tag',required=True)
 a=P.parse_args();planpath=Path(a.plan);assert planpath.resolve().is_relative_to(R.resolve());data=json.loads(planpath.read_text())
 placements=data['placements'];assert len(placements)==80 and len({x['ref'] for x in placements})==80

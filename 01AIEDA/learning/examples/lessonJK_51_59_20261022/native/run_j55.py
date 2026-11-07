@@ -1,5 +1,5 @@
 import pathlib,os,sys,json,subprocess,hashlib,datetime,argparse,shutil
-R=pathlib.Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonJK_51_59_20261022');HI=R.parent/'lessonHI_38_50_20261021';C=pathlib.Path(r'C:\Program0\Cadence\SPB172\tools\bin')
+R=pathlib.Path(r'D:\005lib\01AIEDA\learning\examples\lessonJK_51_59_20261022');HI=R.parent/'lessonHI_38_50_20261021';C=pathlib.Path(r'C:\Program0\Cadence\SPB172\tools\bin')
 P=argparse.ArgumentParser();P.add_argument('--variant',choices=['2L','4L'],required=True);P.add_argument('--mode',choices=['build','reopen'],required=True);P.add_argument('--tag',required=True);a=P.parse_args();assert all(x.isalnum() or x=='_' for x in a.tag)
 sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest().upper()
 config=json.loads((R/'native/source_guard.json').read_text(encoding='utf8'));before={x['path']:sha(pathlib.Path(x['path'])) for x in config['protectedOriginals']};assert all(before[x['path']]==x['sha256'] for x in config['protectedOriginals'])

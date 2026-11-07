@@ -1,5 +1,5 @@
 from pathlib import Path
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
 for key in ['4L','2L']:
  src=(R/f'scripts/baseline_{key}_02.scr').read_text()
  h=src[:src.index('skill errset(axlDRCUpdate')]

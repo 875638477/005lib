@@ -1,6 +1,6 @@
 import pathlib,json,shutil,importlib.util
 p=pathlib.Path(r'D:/001DIY/004computer/lga1700/13shared_libraries_pc_20261025/w/pcb_migration');s=importlib.util.spec_from_file_location('b',p/'run_pc_native_audit.py');b=importlib.util.module_from_spec(s);s.loader.exec_module(b)
-r=pathlib.Path(r'D:/001DIY/005lib/01AIEDA/library_maintenance/20261025_pc_shared/fixture4');r.mkdir(exist_ok=False);seed=b.B/'symbol_jobs/probe9/blank.brd';h=b.sha(seed);shutil.copyfile(seed,r/'seed2.brd');e=b.envfor(r)
+r=pathlib.Path(r'D:/005lib/01AIEDA/library_maintenance/20261025_pc_shared/fixture4');r.mkdir(exist_ok=False);seed=b.B/'symbol_jobs/probe9/blank.brd';h=b.sha(seed);shutil.copyfile(seed,r/'seed2.brd');e=b.envfor(r)
 il='''procedure(pc13Empty4(output report)
  let((f name x)
   unless(null(axlDBGetDesign()->symdefs) && null(axlDBGetDesign()->padstacks) error("Fixture is not empty"))

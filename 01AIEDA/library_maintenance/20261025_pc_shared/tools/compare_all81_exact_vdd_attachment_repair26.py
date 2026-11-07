@@ -2,7 +2,7 @@
 from pathlib import Path
 from collections import Counter
 import argparse,hashlib,importlib.util,json
-R=Path(r'D:\001DIY\004computer\lga1700\13shared_libraries_pc_20261025');M=Path(r'D:\001DIY\005lib\01AIEDA\library_maintenance\20261025_pc_shared')
+R=Path(r'D:\001DIY\004computer\lga1700\13shared_libraries_pc_20261025');M=Path(r'D:\005lib\01AIEDA\library_maintenance\20261025_pc_shared')
 s=importlib.util.spec_from_file_location('complete_typed_partition_tools',R/'tools/compare_copper_pin_partitions.py');P=importlib.util.module_from_spec(s);s.loader.exec_module(P)
 need=P.need;sha=P.sha;load=P.load
 SOURCE='49AF5EE7252CA9E8C4C48D8F60AD4D1113DA559814585356B14F6150A195C063'

@@ -1,6 +1,6 @@
 from pathlib import Path
 import json
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power')
 e=json.loads((R/'ESD_ground_routes_04b.json').read_text())
 e['revision']='04c:04b40,8.95via rejected for actualDMmergey8.6 overlap;40.25,9.3 approved fullgroup screen byMCUagentv8.'
 for o in e['operations']:

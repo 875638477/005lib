@@ -1,5 +1,5 @@
 ﻿import pathlib,json,math
-P=pathlib.Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu\plans')
+P=pathlib.Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu\plans')
 for v in ['2L','4L']:
  n=json.loads((P/f'GPIO_actualB016_{v}_59_snapshot.json').read_text());nw=json.loads((P/f'GPIO_actualB016_{v}_59_networks.json').read_text());r=json.loads((P/f'GPIO_actualB016_{v}_59_rules.json').read_text());p=json.loads((P/f'GPIO_actualB016_{v}_59_policy.json').read_text())
  pp=next(z for z in n['placements'] if z['ref']=='J12');assert pp['xy']==[40,55];pp['xy']=[18,9];shift=[-22,-46]

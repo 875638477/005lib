@@ -1,5 +1,5 @@
 from pathlib import Path
-p=Path(r'D:\001DIY\005lib\01AIEDA\learning\staging\f_27_29_20261019\finalize_records.py')
+p=Path(r'D:\005lib\01AIEDA\learning\staging\f_27_29_20261019\finalize_records.py')
 s=p.read_text(encoding='utf-8')
 a=s.index(' entries=list(m) if isinstance(m,list)')
 b=s.index(' manifests.append(',a)

@@ -1,5 +1,5 @@
 from pathlib import Path
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
 s=(R/'scripts/adapt_power03bHI.py').read_text().replace('power_star_03b.json','power_star_03c.json').replace("b003b.json","b003c.json")
 (R/'scripts/adapt_power03cHI.py').write_text(s,encoding='ascii')
 s=(R/'scripts/compile_batchHI_v3.py').read_text()

@@ -1,5 +1,5 @@
 from pathlib import Path
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonG_30_37_20261020')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonG_30_37_20261020')
 s=(R/'scripts/validate_nativeG_v4.py').read_text()
 needle="inputs=json.loads((R/'source/input_manifest.json').read_text())[:2]"
 extra="""for key,attempt in [('4L','01'),('2L','02')]:

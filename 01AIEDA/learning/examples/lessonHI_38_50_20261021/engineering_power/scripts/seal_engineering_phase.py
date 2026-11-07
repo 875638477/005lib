@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,hashlib
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power');H=R.parent
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power');H=R.parent
 # Current canonical candidate has an independent subset manifest; no self hashing.
 selected=[]
 for v in ['2L','4L']:

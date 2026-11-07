@@ -1,6 +1,6 @@
 ﻿from pathlib import Path
 import sys,json,hashlib,subprocess,copy
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');sys.dont_write_bytecode=True;sys.path.insert(0,str(R/'tooling/packages'));from shapely.geometry import Polygon
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');sys.dont_write_bytecode=True;sys.path.insert(0,str(R/'tooling/packages'));from shapely.geometry import Polygon
 sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest().upper();helper=R/'scripts/batchHI_dynamic_void_and_ground_trial_v2.il';s=(R/'scripts/batchHI_dynamic_void_and_ground_trial_v1.il').read_text();s=s.replace('foreach(v voids unless(length(setof(h shape->voids hiPolygonMatches(h v)))==1', 'foreach(h shape->voids fprintf(f "HI_NEW_GLOBAL_VOID_ACTUAL_POLY=%L\\n" car(axlPolyFromDB(h))->vertices))\n  foreach(v voids unless(length(setof(h shape->voids hiPolygonMatches(h v)))==1');helper.write_text(s,encoding='ascii');c=(R/'scripts/compile_batchHI_v34.py').read_text().replace('batchHI_dynamic_void_and_ground_trial_v1.il','batchHI_dynamic_void_and_ground_trial_v2.il');(R/'scripts/compile_batchHI_v35.py').write_text(c,encoding='utf8')
 for v in ['4L','2L']:
  d=json.loads((R/f'batches/TOP_trial_{v}_b018_PRE_ALL69_DRC_PENDING_try02.json').read_text());cfg=json.loads((R/f'native_work/b018_{v}_try02/guard_configuration.json').read_text());dif=[]

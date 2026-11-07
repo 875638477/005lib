@@ -1,6 +1,6 @@
 ﻿from pathlib import Path
 import json,hashlib,stat,subprocess,sys
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');PTH=R.parent.parent/'tools/python_3_14_0/python.exe';sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest().upper()
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');PTH=R.parent.parent/'tools/python_3_14_0/python.exe';sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest().upper()
 protected=[]
 for v in ['2L','4L']:
  p=R/f'native/HI_{v}_USB_aux_{v}_b014.brd';protected.append({'path':str(p),'sha256':sha(p),'role':'Existing b014 checkpoint; never opened by write-capable batch'})

@@ -1,7 +1,7 @@
 import os,json,pathlib,hashlib,math,re,itertools
-ROOT=pathlib.Path(r"D:\001DIY\005lib\01AIEDA\learning\examples\lessonG_30_37_20261020\engineering_mcu")
+ROOT=pathlib.Path(r"D:\005lib\01AIEDA\learning\examples\lessonG_30_37_20261020\engineering_mcu")
 os.environ["TMP"]=os.environ["TEMP"]=str(ROOT/"runtime")
-note=pathlib.Path(r"D:\001DIY\005lib\01AIEDA\learning\notes\lessonG_mcu_20261020.md")
+note=pathlib.Path(r"D:\005lib\01AIEDA\learning\notes\lessonG_mcu_20261020.md")
 p=json.loads((ROOT/"placement_mcu.json").read_text(encoding="utf-8"))
 a=json.loads((ROOT/"placement_mcu_candidateA.json").read_text(encoding="utf-8"))
 def lookup(d,ref,n): return next(v["xy"] for c in d["placements"] if c["ref"]==ref for v in c["pins"] if v["number"]==str(n))

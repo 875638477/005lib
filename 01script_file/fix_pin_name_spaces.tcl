@@ -4,7 +4,7 @@
 #   2. Add _2/_3... suffix when the sanitized Pin Name is still duplicated
 #
 # Usage in OrCAD Capture command window:
-#   source {D:\001DIY\005lib\01script_file\fix_pin_name_spaces.tcl}
+#   source {D:\005lib\01script_file\fix_pin_name_spaces.tcl}
 #
 # Notes:
 #   - Open the target .opj/.dsn first.

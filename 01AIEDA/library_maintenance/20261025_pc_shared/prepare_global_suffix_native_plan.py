@@ -2,7 +2,7 @@
 import argparse,pathlib,re,json,hashlib,collections
 P=argparse.ArgumentParser();P.add_argument("--out",type=pathlib.Path,required=True);A=P.parse_args()
 assert not A.out.exists(),"Fresh inventory directory required";A.out.mkdir(parents=True)
-BASE=pathlib.Path(r"D:/001DIY/005lib")
+BASE=pathlib.Path(r"D:/005lib")
 ROOTS=[BASE/n for n in ["01Psm_lib","01brdlib","01Pad_lib","01captureLib","01script_file","01env"]]
 R=pathlib.Path(r"D:/001DIY/004computer/lga1700/13shared_libraries_pc_20261025")
 M=BASE/"01AIEDA/library_maintenance/20261025_pc_shared"

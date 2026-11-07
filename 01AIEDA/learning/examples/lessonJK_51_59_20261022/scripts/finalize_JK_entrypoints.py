@@ -1,5 +1,5 @@
 from pathlib import Path
-R=Path(r'D:\001DIY\005lib\01AIEDA');J=R/'learning/examples/lessonJK_51_59_20261022'
+R=Path(r'D:\005lib\01AIEDA');J=R/'learning/examples/lessonJK_51_59_20261022'
 p=R/'learning/notes/lessonJK_51_59_20261022.md';s=p.read_text(encoding='utf8')
 s=s.replace('原生保存/独立fresh成功；56个GND pin','原生保存/独立fresh成功，新栈独立结构审查73/73项及约束/补采样后核8/8项通过；56个GND pin',1)
 s+='\n### 新四层装配身份与门槛补证\n\n新栈逐件实际VALUE、器件/引脚/文字/高度与源J55匹配后，另出[新栈BOM与坐标入口](../examples/lessonJK_51_59_20261022/assembly/NEWSTACK_4L_L2_GND_L3_V3V3_TRAINING/README.md)，绑定471176A9…新板SHA；旧J55/current索引和旧输出不覆盖。详见[新栈装配身份笔记](lessonJK_newstack4L_identity_20261023.md)。\n\n原77条门槛作为历史快照不改，新栈实际实施/源身份补证与仍开放的SI/PI/制造/实物条件见[新栈门槛补充](../examples/lessonJK_51_59_20261022/audits/jk_release_gate_newstack4L_supplement_20261023.json)。活动层功能policy已由PENDING更新为实际应用状态，导致旧门槛清单一个来源指针的SHA变化；已恢复[原字节快照](../examples/lessonJK_51_59_20261022/backups/layer_function_policy_before_actual_application_20261022.json)，其1188字节和SHA与旧清单完全一致，新旧映射见[记录](../examples/lessonJK_51_59_20261022/review/layer_policy_history_mapping.json)。不将这次有意进度更新冒充所有历史来源均未变化，也不修改旧封存。\n'

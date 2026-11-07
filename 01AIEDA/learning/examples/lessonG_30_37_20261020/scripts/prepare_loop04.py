@@ -1,5 +1,5 @@
 from pathlib import Path
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonG_30_37_20261020')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonG_30_37_20261020')
 region=r'''
 procedure(gEscapeRegion(f)
  let((region shape tbl nc net old parent classname)

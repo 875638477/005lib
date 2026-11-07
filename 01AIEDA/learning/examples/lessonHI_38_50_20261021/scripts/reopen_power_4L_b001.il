@@ -1,6 +1,6 @@
 procedure(hiPowerReopenProof()
  let((f)
-  f=outfile("D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/logs/reopen_power_4L_b001/hi_reopen_endpoint_proofs.txt")
+  f=outfile("D:/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/logs/reopen_power_4L_b001/hi_reopen_endpoint_proofs.txt")
   hiRegistry=nil
   hiBindExistingVia(f "V_HI_C3_A" "GND" list(23.2 18.0) "L28_VIA030_C060")
   hiBindExistingVia(f "V_HI_C3_B" "GND" list(23.2 18.8) "L28_VIA030_C060")

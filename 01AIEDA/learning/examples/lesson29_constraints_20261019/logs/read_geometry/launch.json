@@ -9,10 +9,10 @@
     "-nographic",
     "-readonly",
     "-s",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson29_constraints_20261019\\scripts\\read_geometry.scr",
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lesson29_constraints_20261019\\scripts\\read_geometry.scr",
     "-p",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson29_constraints_20261019\\logs\\read_geometry",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson29_constraints_20261019\\native\\F29_CONSTRAINTS_v3.brd"
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lesson29_constraints_20261019\\logs\\read_geometry",
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lesson29_constraints_20261019\\native\\F29_CONSTRAINTS_v3.brd"
   ],
   "completed": true,
   "exitCode": 0,
@@ -21,8 +21,8 @@
   "readonly": true,
   "scriptSHA256": "FB03461959F91B952F3B978B29ACED5EC843FB124ADF2D4BB0C9DE6BEB987CA5",
   "processEnvironmentOverrides": {
-    "TEMP": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson29_constraints_20261019\\logs\\read_geometry\\tmp",
-    "TMP": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson29_constraints_20261019\\logs\\read_geometry\\tmp",
-    "ALLEGRO_PCBENV": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson29_constraints_20261019\\logs\\read_geometry\\pcbenv"
+    "TEMP": "D:\\005lib\\01AIEDA\\learning\\examples\\lesson29_constraints_20261019\\logs\\read_geometry\\tmp",
+    "TMP": "D:\\005lib\\01AIEDA\\learning\\examples\\lesson29_constraints_20261019\\logs\\read_geometry\\tmp",
+    "ALLEGRO_PCBENV": "D:\\005lib\\01AIEDA\\learning\\examples\\lesson29_constraints_20261019\\logs\\read_geometry\\pcbenv"
   }
 }

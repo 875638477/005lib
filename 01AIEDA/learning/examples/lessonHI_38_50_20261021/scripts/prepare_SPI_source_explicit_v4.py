@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,hashlib
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
 d=json.loads((R/'plans/SPI_NSS_explicit_v3b.json').read_text(encoding='utf8'));d['status']='EXPLICIT_SPI_SOURCE_V4_PRECISE_COPPER_NOT_GRID_ONLY';d['basis']='R24.1 right edge34.07 and NSS vertical34.8 give only .13mm legal center span before numerical grid margin. Choose SCKx34.385 with actual .215 copper gaps, not two unnecessary signal vias.'
 for net,id,pts,src,dst in [('PA5_SPI_SCK','SPI_SOURCE_SCK_PRECISE',[[35.75,28.75],[34.385,28.75],[34.385,30.215],[33.6,31]],'U1.15','R21.1'),('PA6_SPI_MISO','SPI_SOURCE_MISO_PRECISE',[[35.75,28.25],[33.6,28.25],[33.6,29]],'U1.16','R24.1'),('PA7_SPI_MOSI','SPI_SOURCE_MOSI_PRECISE',[[35.75,27.75],[34.35,27.75],[33.6,27]],'U1.17','R22.1')]:
  d['operations'].append({'type':'route','id':id,'net':net,'layer':'TOP','points':pts,'width':.2,'from':src,'to':dst,'purpose':'Explicit precise source-side route with correct series-resistor order, controls actual pad edge gaps; native/return verification pending'})

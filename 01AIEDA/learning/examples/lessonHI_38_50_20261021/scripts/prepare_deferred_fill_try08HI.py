@@ -1,6 +1,6 @@
 ﻿from pathlib import Path
 import json,hashlib,stat,subprocess,sys
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest().upper()
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest().upper()
 s=(R/'scripts/compile_batchHI_v24.py').read_text();s=s.replace(" elif typ=='replaceShape':", " elif typ=='removeConstructionShape':statements.append(f'hiRemoveExactConstructionShape(f {q(ident)} {q(net)} {q(op[\"layer\"])} {points(op[\"polygon\"])} '+('t' if op.get('dynamic',False) else 'nil')+')')\n elif typ=='replaceShape':")
 (R/'scripts/compile_batchHI_v25.py').write_text(s,encoding='utf8')
 for v in ['2L','4L']:

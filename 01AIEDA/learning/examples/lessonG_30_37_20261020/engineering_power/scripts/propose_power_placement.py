@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,math,collections
-B=Path(r'D:\001DIY\005lib\01AIEDA/learning/examples/lessonG_30_37_20261020')
+B=Path(r'D:\005lib\01AIEDA/learning/examples/lessonG_30_37_20261020')
 R=B/'engineering_power'
 data=[
 ('J1',[6,13],0,'Bench DC entry; exact connector/cable/tool envelope pending'),

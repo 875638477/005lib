@@ -1,7 +1,7 @@
 
 procedure(hiUSBLengthChallenge()
  let((f ec base)
-  f=outfile("D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/logs/reopen_usb_esd_2L_b008_bulk/hi_usb_native_length_challenges.txt")
+  f=outfile("D:/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/logs/reopen_usb_esd_2L_b008_bulk/hi_usb_native_length_challenges.txt")
   ec="HI_E_USB_CONNECTOR_2L" base="HI2L_E_USB_BUDGET"
   fprintf(f "BASELINE_CONNECTOR_ALL=%L\nBASELINE_SHARED_ALL=%L\n" axlCNSEcsetValueGet(ec 'all t) axlCNSEcsetValueGet(base 'all t))
   unwindProtect(

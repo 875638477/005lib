@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,hashlib,subprocess,sys,shutil
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest().upper()
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest().upper()
 protected=[]
 for v in ['2L','4L']:
  for p in [R/f'native/HI_{v}_USB_aux_{v}_b014.brd',R/f'native_candidates/HI_{v}_source_b015_DRC_PENDING.brd']:

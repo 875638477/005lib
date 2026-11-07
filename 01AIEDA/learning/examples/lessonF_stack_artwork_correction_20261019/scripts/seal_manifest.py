@@ -1,6 +1,6 @@
 from pathlib import Path
 import hashlib,json
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonF_stack_artwork_correction_20261019')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonF_stack_artwork_correction_20261019')
 out=R/'artifact_manifest.json'
 files=[]
 for p in sorted(R.rglob('*')):

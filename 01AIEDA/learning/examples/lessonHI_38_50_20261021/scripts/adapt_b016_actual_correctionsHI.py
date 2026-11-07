@@ -1,7 +1,7 @@
 from pathlib import Path
 import json,hashlib,copy,csv,runpy,sys,math,shutil
 sys.dont_write_bytecode=True
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');sys.path.insert(0,str(R/'tooling/packages'));sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest().upper()
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');sys.path.insert(0,str(R/'tooling/packages'));sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest().upper()
 Builder=runpy.run_path(str(R/'scripts/scoped_rule_builderHI_v2.py'))['ScopedRuleBuilder']
 for v in ['2L','4L']:
  C=R/f'inventory/checkpoints/source_{v}_b015_DRC_PENDING';identity=json.loads((C/'networks.json').read_text());assert sha(Path(identity['board']))==identity['sha256'];N=json.loads((C/'normalized.json').read_text());B=Path(identity['readback']);tag=f'clearance_remaining_{v}_b016_DRC_PENDING';snap=R/'source/engineering_snapshots'/tag;snap.mkdir(parents=True,exist_ok=True)

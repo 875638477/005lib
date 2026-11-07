@@ -1,6 +1,6 @@
 from pathlib import Path
 import json
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power')
 p=json.loads((R/'source/root_SPI_NSS_explicit_v3b.json').read_text(encoding='utf-8'))
 p['status']='POWER_REVIEW_PROPOSAL_PATCH_ROOT_NSS3B_WESTVIA_KEEP_ROOT_APPROVAL'
 for o in p['operations']:

@@ -1,7 +1,7 @@
 import importlib.util,json,pathlib,shutil,sys
 P=pathlib.Path(r'D:/001DIY/004computer/lga1700/13shared_libraries_pc_20261025/w/pcb_migration')
 spec=importlib.util.spec_from_file_location('base_audit',P/'run_pc_native_audit.py');b=importlib.util.module_from_spec(spec);spec.loader.exec_module(b)
-R=pathlib.Path(r'D:/001DIY/005lib/01AIEDA/library_maintenance/20261025_pc_shared/native_audits/final13');R.mkdir(parents=True,exist_ok=False)
+R=pathlib.Path(r'D:/005lib/01AIEDA/library_maintenance/20261025_pc_shared/native_audits/final13');R.mkdir(parents=True,exist_ok=False)
 for n in ['output','units']: (R/n).mkdir()
 e=b.envfor(R)
 final=json.loads((P/'FINAL_REF_MAPPING.json').read_text(encoding='utf-8-sig'))

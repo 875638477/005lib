@@ -1,5 +1,5 @@
 ﻿import pathlib,json,sys,math,hashlib,copy,itertools
-R=pathlib.Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu');H=R.parent;P=R/'plans';sys.path.insert(0,str(H/'scripts'));from routing_geometry import *
+R=pathlib.Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu');H=R.parent;P=R/'plans';sys.path.insert(0,str(H/'scripts'));from routing_geometry import *
 from shapely import affinity
 left=load(P/'GPIO_left_joint_fanout_07.json');left.pop('physicalGroundViaApproval',None);(P/'GPIO_left_joint_fanout_07.json').write_text(json.dumps(left,indent=2),encoding='utf8')
 nss=load(P/'NSS_pullup_local_relayout_01.json');north=load(P/'GPIO_north_joint_fanout_02.json');south=load(P/'GPIO_south_joint_fanout_05.json')

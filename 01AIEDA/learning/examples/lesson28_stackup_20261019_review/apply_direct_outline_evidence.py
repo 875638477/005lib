@@ -1,5 +1,5 @@
 from pathlib import Path
-O=Path(r'D:/001DIY/005lib/01AIEDA/learning/examples/lesson28_stackup_20261019_review')
+O=Path(r'D:/005lib/01AIEDA/learning/examples/lesson28_stackup_20261019_review')
 p=O/'review28.py';s=p.read_text();(O/'review28_before_direct_outline.py').write_text(s)
 old=""" outline=[a for a in geom if a['layer']=='BOARD GEOMETRY/DESIGN_OUTLINE']
  ck(f'{n}L real outline persists',len(outline)==1 and outline[0]['bbox']==[[0,0],[80,60]])"""

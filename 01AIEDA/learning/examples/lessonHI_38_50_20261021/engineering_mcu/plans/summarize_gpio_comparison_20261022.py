@@ -1,5 +1,5 @@
 ﻿import pathlib,json,math,hashlib,datetime
-P=pathlib.Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu\plans');H=P.parents[1]
+P=pathlib.Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu\plans');H=P.parents[1]
 def load(p):return json.loads(p.read_text(encoding='utf-8-sig'))
 def metrics(z):
  out=[]

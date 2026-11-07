@@ -1,6 +1,6 @@
 from pathlib import Path
 import sys,json,math,csv,re
-H=Path(r'D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021');sys.path.insert(0,str(H/'scripts'));from routing_geometry import *
+H=Path(r'D:/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021');sys.path.insert(0,str(H/'scripts'));from routing_geometry import *
 O=H/'engineering_power';n=load(H/'review/PROVISIONAL_UNSAVED_b016_2L_try11.json');w=load(O/'N49_2L_networks.json');r=load(O/'N49_2L_rules.json');p=load(O/'N49_2L_policy.json');s=CopperScene(n,w,r,p)
 j=next(c for c in n['placements'] if c['ref']=='J2');print('J2',[(a['number'],a['net'],a['xy']) for a in j['pins'] if a['net']=='GND'])
 candidates=[([44.32,2.6],[[44.32,6.78],[44.32,2.6]]),([46.8,2.2],[[44.32,6.78],[46.8,4.3],[46.8,2.2]]),([47.8,3.2],[[44.32,6.295],[45.8,6.295],[47.8,4.295],[47.8,3.2]]),([49.5,4.8],[[44.32,6.295],[46,6.295],[47.495,4.8],[49.5,4.8]]),([43.8,10.7764],[[44.32,6.295],[45.3,6.295],[45.3,10.7764],[43.8,10.7764]])]

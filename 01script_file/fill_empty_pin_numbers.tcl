@@ -3,7 +3,7 @@
 # Name "1" becomes number "1". Existing numbers are left unchanged.
 #
 # Capture command window:
-#   source {D:\001DIY\005lib\01script_file\fill_empty_pin_numbers.tcl}
+#   source {D:\005lib\01script_file\fill_empty_pin_numbers.tcl}
 #
 # Open the design first. After the script, Ctrl+S and recreate the netlist.
 

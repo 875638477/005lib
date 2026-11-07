@@ -1,5 +1,5 @@
 ﻿import sys,pathlib,json,math
-R=pathlib.Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu');H=R.parent;P=R/'plans';sys.path.insert(0,str(H/'scripts'));from routing_geometry import *
+R=pathlib.Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu');H=R.parent;P=R/'plans';sys.path.insert(0,str(H/'scripts'));from routing_geometry import *
 for variant in ('4L','2L'):
  n=load(P/f'GPIO_future_{variant}_06_snapshot.json');pol=load(P/f'GPIO_future_{variant}_06_policy.json');s=CopperScene(n,load(P/f'GPIO_future_{variant}_06_networks.json'),load(P/f'GPIO_future_{variant}_06_rules.json'),pol)
  for o in s.obstacles:

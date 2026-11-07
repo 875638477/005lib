@@ -1,6 +1,6 @@
 from pathlib import Path
 import json
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power')
 for v in ['2L','4L']:
  f=R/f'RIGHT10_FULL_{v}_v11.json';p=json.loads(f.read_text());(R/f'RIGHT10_FULL_{v}_v11_failed01.json').write_bytes(f.read_bytes())
  for o in p['operations']:

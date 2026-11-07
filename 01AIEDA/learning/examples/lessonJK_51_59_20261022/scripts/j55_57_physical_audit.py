@@ -1,7 +1,7 @@
 """Explicit drill, mask and stencil review from embedded native pad shapes, no native mutations."""
 from pathlib import Path
 import sys,json,csv,re,math,collections,itertools
-R=Path('D:/001DIY/005lib/01AIEDA');J=R/'learning/examples/lessonJK_51_59_20261022';H=R/'learning/examples/lessonHI_38_50_20261021'
+R=Path('D:/005lib/01AIEDA');J=R/'learning/examples/lessonJK_51_59_20261022';H=R/'learning/examples/lessonHI_38_50_20261021'
 sys.path.insert(0,str(H/'tooling/packages'))
 from shapely.geometry import box,Point,LineString
 # Reuse only the builder's pure helper declarations; does not execute the build body.

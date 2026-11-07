@@ -1,5 +1,5 @@
 from pathlib import Path
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonG_30_37_20261020\engineering_power')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonG_30_37_20261020\engineering_power')
 p=R/'scripts/review_final_native.py'
 text=p.read_text(encoding='utf-8')
 text=text.replace("p['net']==net)","(p['net'] or None)==net)").replace("np['net']==net and","(np['net'] or None)==net and")

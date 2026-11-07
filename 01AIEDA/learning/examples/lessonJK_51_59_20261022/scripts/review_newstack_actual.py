@@ -1,7 +1,7 @@
 """Independent real-plane/route/return review. Reads only stable native exports; no Cadence."""
 from pathlib import Path
 import sys,json,csv,re,math,hashlib,collections,datetime
-R=Path(r'D:/001DIY/005lib/01AIEDA');H=R/'learning/examples/lessonHI_38_50_20261021';J=R/'learning/examples/lessonJK_51_59_20261022';O=J/'review/independent_newstack';O.mkdir(parents=True,exist_ok=True)
+R=Path(r'D:/005lib/01AIEDA');H=R/'learning/examples/lessonHI_38_50_20261021';J=R/'learning/examples/lessonJK_51_59_20261022';O=J/'review/independent_newstack';O.mkdir(parents=True,exist_ok=True)
 L=J/'logs/native_newstack_4L_reopen_01';S=J/'logs/native_j55_4L_reopen_01';G=J/'logs/native_newstack_4L_build_try03/newstack_guard.txt';B=J/'native/4L/JK_4L_L2_GND_L3_V3V3_STACK_TRAINING_NOT_RELEASED.brd'
 sys.path[:0]=[str(H/'scripts'),str(H/'engineering_power/scripts'),str(H/'tooling/packages')]
 from native_sexpr_data import parse

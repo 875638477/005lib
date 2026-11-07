@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,hashlib
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power')
 p=R/'README.md';s=p.read_text(encoding='utf-8')
 if 'VDDA_prefilter_reroute_08.json is a candidate' not in s:s += '\nVDDA_prefilter_reroute_08.json is a candidate requiring completeSPIapproval, not automatically executable. It fixes actualC8pad clearance and moves TOPpowervertical westofSCKcorridor. LatestSPI sourcev5 read-onlyscreen: readouts/SPI_source_v5_power_prefilter08_precheck.json (50629 geometry checks, no issue in declaredscope). ActualUSB8 maskzero-margin finding and nativefield-solverfailure remain manufacturing/SIopen, see note sections10-11.\n'
 p.write_text(s,encoding='utf-8')

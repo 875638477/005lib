@@ -9,10 +9,10 @@
     "-nographic",
     "-readonly",
     "-s",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson28_stackup_20261019\\scripts\\reopen2_02.scr",
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lesson28_stackup_20261019\\scripts\\reopen2_02.scr",
     "-p",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson28_stackup_20261019\\logs\\reopen2_02",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson28_stackup_20261019\\native\\F28_2L.brd"
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lesson28_stackup_20261019\\logs\\reopen2_02",
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lesson28_stackup_20261019\\native\\F28_2L.brd"
   ],
   "completed": true,
   "exitCode": 0,

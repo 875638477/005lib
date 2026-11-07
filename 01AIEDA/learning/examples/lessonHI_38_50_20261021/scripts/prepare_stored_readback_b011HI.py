@@ -1,6 +1,6 @@
 ﻿from pathlib import Path
 import json,shutil,hashlib
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
 tag='reopen_island_stitch_2L_b011_stored_only';out=(R/'logs'/tag).as_posix();Q=json.dumps
 meta=json.loads((R/'scripts/island_stitch_2L_b011_compiled.json').read_text())
 pt=lambda xy:'list('+' '.join(str(float(x)) for x in xy)+')'

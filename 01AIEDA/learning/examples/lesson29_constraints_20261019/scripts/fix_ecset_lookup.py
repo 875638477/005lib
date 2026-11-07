@@ -1,5 +1,5 @@
 import pathlib
-R=pathlib.Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lesson29_constraints_20261019')
+R=pathlib.Path(r'D:\005lib\01AIEDA\learning\examples\lesson29_constraints_20261019')
 s=(R/'scripts/challenges29_v2.il').read_text()
 s=s.replace('axlNetEcsetValueGet("USB_DP"','axlNetEcsetValueGet(axlDBFindByName(\'net "USB_DP")')
 s=s.replace('list("MIN_LINE_WIDTH" "0.20 MM" "MIN_NECK_WIDTH" "0.20 MM")','list(list("MIN_LINE_WIDTH" "0.20 MM"))')

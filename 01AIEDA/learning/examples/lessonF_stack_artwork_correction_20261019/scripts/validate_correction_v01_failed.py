@@ -1,6 +1,6 @@
 from pathlib import Path
 import re,json,csv,hashlib,collections
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonF_stack_artwork_correction_20261019')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonF_stack_artwork_correction_20261019')
 checks=[];details={}
 def ck(n,v,a=None):checks.append({'name':n,'pass':bool(v),'actual':a})
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest().upper()

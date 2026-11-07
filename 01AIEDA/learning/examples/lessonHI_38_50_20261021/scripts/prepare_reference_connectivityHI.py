@@ -1,5 +1,5 @@
 ﻿from pathlib import Path
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
 p=R/'scripts/batchHI_shapes_v3.il';s=p.read_text();start=s.index('procedure(hiReferenceCoverageRead(out step)');end=s.index('\nprocedure(',start+1)
 body=s[start:end]
 body=body.replace('sampleCount p)','sampleCount p globalGraph connected floating)')

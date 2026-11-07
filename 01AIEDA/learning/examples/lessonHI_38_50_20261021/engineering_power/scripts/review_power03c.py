@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,math,csv,hashlib,sys,shutil,re
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power');H=R.parent
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power');H=R.parent
 sys.path.insert(0,str(H/'tooling/packages'))
 from shapely.geometry import Polygon,LineString,Point,box
 from shapely.ops import unary_union

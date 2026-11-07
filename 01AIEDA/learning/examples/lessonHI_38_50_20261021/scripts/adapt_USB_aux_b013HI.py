@@ -1,6 +1,6 @@
 ﻿from pathlib import Path
 import json,hashlib,copy
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
 body=r'''procedure(hiCCSpacingChallenge(out)
  let((f name result hit hasCC)
   f=outfile(strcat(out "/hi_cc_spacing_challenge.txt")) name="HI_USB_CC1_J2_S_2L" hit=nil

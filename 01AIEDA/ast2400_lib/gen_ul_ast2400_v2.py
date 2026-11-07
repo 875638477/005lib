@@ -10,7 +10,7 @@ from datetime import datetime
 from pathlib import Path
 from xml.sax.saxutils import escape
 
-ROOT = Path(r"D:\001DIY\005lib")
+ROOT = Path(r"D:\005lib")
 CSV_CANDIDATES = [
     ROOT / "01AIEDA" / "ast2400_lib" / "AST2400_pins.csv",
     ROOT / "AUTOlib" / "ul_AST2400" / "AST2400_pins.csv",

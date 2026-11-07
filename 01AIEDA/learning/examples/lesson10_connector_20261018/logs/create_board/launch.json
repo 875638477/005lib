@@ -8,10 +8,10 @@
     "-safe",
     "-nographic",
     "-s",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson10_connector_20261018\\scripts\\create_board.scr",
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lesson10_connector_20261018\\scripts\\create_board.scr",
     "-p",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson10_connector_20261018\\logs\\create_board",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson10_connector_20261018\\lesson10_connector.brd"
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lesson10_connector_20261018\\logs\\create_board",
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lesson10_connector_20261018\\lesson10_connector.brd"
   ],
   "pid": 11140,
   "completed_normally": true,

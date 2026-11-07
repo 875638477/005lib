@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,hashlib,csv,re,datetime
-R=Path(r'D:/001DIY/005lib/01AIEDA');J=R/'learning/examples/lessonJK_51_59_20261022';A=J/'audits';N=R/'learning/notes/lessonJK_51_54_20261022.md';checks=[]
+R=Path(r'D:/005lib/01AIEDA');J=R/'learning/examples/lessonJK_51_59_20261022';A=J/'audits';N=R/'learning/notes/lessonJK_51_54_20261022.md';checks=[]
 def ld(p):return json.loads(Path(p).read_text(encoding='utf-8-sig'))
 def ck(name,ok,detail=None):checks.append(dict(id=name,passed=bool(ok),detail=detail))
 reg=ld(A/'j51_54_issues.json');ids=[x['id'] for x in reg['issues']];ck('unique_stable_issue_IDs',len(ids)==len(set(ids))==54);ck('new_stack_legacy_issues_present',{'JK52_STACK_LEGACY','JK53_STACK_LEGACY'}<=set(ids))

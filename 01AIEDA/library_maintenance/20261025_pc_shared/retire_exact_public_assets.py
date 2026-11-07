@@ -7,7 +7,7 @@ their original bytes. Journal is flushed for each entry.
 """
 from pathlib import Path
 import argparse,hashlib,json,os,sys,zipfile
-ALLOWED_ROOTS=[Path(r'D:\001DIY\005lib')/name for name in ('01Psm_lib','01brdlib','01Pad_lib','01captureLib','01script_file','01env')]
+ALLOWED_ROOTS=[Path(r'D:\005lib')/name for name in ('01Psm_lib','01brdlib','01Pad_lib','01captureLib','01script_file','01env')]
 sha=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest().upper()
 jr=lambda p:json.loads(Path(p).read_text('utf-8-sig'))
 def require(ok,message):
@@ -68,7 +68,7 @@ def closure(path,planpath,plan):
  require(d.get('canonical_target_proofs'),'Cold native canonical target proof required');return {'path':str(path),'sha256':sha(path),'all_retired_stems_zero_in_all_8_reference_categories':True}
 def main():
  ap=argparse.ArgumentParser(description=__doc__);ap.add_argument('--plan',type=Path,required=True);ap.add_argument('--mode',choices=['dry-run','stage','apply'],required=True);ap.add_argument('--guard',type=Path,required=True);ap.add_argument('--work',type=Path,required=True);ap.add_argument('--closure',type=Path);ap.add_argument('--reuse-backup-receipt',type=Path);a=ap.parse_args();plan=jr(a.plan);assets=plan_assets(plan)
- require(a.work.resolve().is_relative_to(Path(r'D:\001DIY\005lib\01AIEDA').resolve()),'Retirement work must stay under learning/maintenance root');a.work.mkdir(exist_ok=True,parents=True)
+ require(a.work.resolve().is_relative_to(Path(r'D:\005lib\01AIEDA').resolve()),'Retirement work must stay under learning/maintenance root');a.work.mkdir(exist_ok=True,parents=True)
  guard=check_guard(a.guard);base={'plan':str(a.plan),'plan_sha256':sha(a.plan),'guard':guard,'mode':a.mode,'assets':len(assets),'bytes':sum(x['bytes'] for x in assets),'public_files_written':0,'public_files_removed':0}
  if a.mode=='dry-run':
   atomic_json(a.work/'DRY_RUN.json',dict(base,status='PASS_EXACT_PATH_SHA_AND_FULL_PUBLIC_GUARD_DRY_RUN'));print(json.dumps(base));return

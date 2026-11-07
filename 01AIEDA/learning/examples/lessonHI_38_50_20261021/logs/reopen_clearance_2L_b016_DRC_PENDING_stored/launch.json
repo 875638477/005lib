@@ -9,10 +9,10 @@
     "-nographic",
     "-readonly",
     "-s",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\scripts\\reopen_clearance_2L_b016_DRC_PENDING_stored.scr",
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\scripts\\reopen_clearance_2L_b016_DRC_PENDING_stored.scr",
     "-p",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\reopen_clearance_2L_b016_DRC_PENDING_stored",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\native_candidates\\HI_2L_clearance_remaining_b016_DRC_PENDING.brd"
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\reopen_clearance_2L_b016_DRC_PENDING_stored",
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\native_candidates\\HI_2L_clearance_remaining_b016_DRC_PENDING.brd"
   ],
   "completed": true,
   "finishUTC": "2026-10-21T21:37:55.673104+00:00",
@@ -25,8 +25,8 @@
   "readonly": true,
   "scriptSHA256": "A447B10FB061FC2FF20CE2D668D0DCAF05425B97E659E2B164B1BD0037B1CA96",
   "processEnvironmentOverrides": {
-    "TEMP": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\reopen_clearance_2L_b016_DRC_PENDING_stored\\tmp",
-    "TMP": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\reopen_clearance_2L_b016_DRC_PENDING_stored\\tmp",
-    "ALLEGRO_PCBENV": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\reopen_clearance_2L_b016_DRC_PENDING_stored\\pcbenv"
+    "TEMP": "D:\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\reopen_clearance_2L_b016_DRC_PENDING_stored\\tmp",
+    "TMP": "D:\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\reopen_clearance_2L_b016_DRC_PENDING_stored\\tmp",
+    "ALLEGRO_PCBENV": "D:\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\reopen_clearance_2L_b016_DRC_PENDING_stored\\pcbenv"
   }
 }

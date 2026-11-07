@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,copy,hashlib
-H=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');R=H/'engineering_power'
+H=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');R=H/'engineering_power'
 m=json.loads((R/'RIGHT10_interface_corridors_v7.json').read_text());
 for o in m['operations']:
  if o['id']=='RIGHT_SDA_EXPLICIT_BOTTOM':o['points']=[[46.8,27.15],[60,27.15],[60,36],[59.2,36.8]]

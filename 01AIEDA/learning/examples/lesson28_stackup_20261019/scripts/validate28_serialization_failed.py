@@ -1,6 +1,6 @@
 from pathlib import Path
 import csv,json,hashlib,math,re,collections,html,sys
-B=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lesson28_stackup_20261019')
+B=Path(r'D:\005lib\01AIEDA\learning\examples\lesson28_stackup_20261019')
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest().upper()
 def rows(p):
  return [dict(zip(a[0],r)) for a in [list(csv.reader(p.open(encoding='utf-8'),delimiter='\t',quoting=csv.QUOTE_NONE))] for r in a[1:]]

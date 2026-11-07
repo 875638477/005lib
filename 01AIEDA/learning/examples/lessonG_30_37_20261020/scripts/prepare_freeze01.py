@@ -1,5 +1,5 @@
 from pathlib import Path
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonG_30_37_20261020')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonG_30_37_20261020')
 (R/'current').mkdir(exist_ok=True)
 s=(R/'scripts/finalG_v2.il').read_text().replace("axlCNSGetPhysical(c nil k)","axlCNSGetPhysical(c \"TOP\" k)")
 (R/'scripts/finalG_v3.il').write_text(s,encoding='ascii')

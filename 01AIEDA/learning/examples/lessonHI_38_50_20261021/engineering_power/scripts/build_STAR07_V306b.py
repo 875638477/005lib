@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,math
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power')
 ops=[]
 for i,pts in enumerate([[[30.7,32],[30.7,24]],[[30.7,24],[37,24]]],1):
  ops.append(dict(type='deleteSegment',id='RIPUP_STAR_OLD_'+str(i),net='V3V3',layer='BOTTOM',points=pts,width=.6,purpose='Delete uniqueactualsegment bynet/layer/exactstartEnd(orreverse)/width only; neverdeleteentiremergedpath. Preserveallothercopper.'))

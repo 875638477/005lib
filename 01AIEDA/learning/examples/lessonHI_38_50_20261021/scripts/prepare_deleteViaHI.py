@@ -1,5 +1,5 @@
 ﻿from pathlib import Path
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
 body=r'''procedure(hiAllVias()
  let((seen result)
   seen=nil result=nil

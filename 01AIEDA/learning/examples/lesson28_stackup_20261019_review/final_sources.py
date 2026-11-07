@@ -1,5 +1,5 @@
 from pathlib import Path
-O=Path(r'D:/001DIY/005lib/01AIEDA/learning/examples/lesson28_stackup_20261019_review')
+O=Path(r'D:/005lib/01AIEDA/learning/examples/lesson28_stackup_20261019_review')
 p=O/'review28.py';s=p.read_text()
 s=s.replace("webInputs=[", """for src in spec['sources']:
  fp=B/src['file']

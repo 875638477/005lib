@@ -1,5 +1,5 @@
 from pathlib import Path
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power')
 for fn in ['review_power02d.py','review_power03c.py']:
  p=R/'scripts'/fn;s=p.read_text()
  needle=" summary=(rb/'native_summary.txt').read_text()"

@@ -1,7 +1,7 @@
 ; =====================================================================
 ; ai_bridge.il -- AI <-> Allegro PCB Editor command bridge  (v2, IPC)
 ;
-; Location: D:/001DIY/005lib/01AIEDA/ai_bridge/ai_bridge.il
+; Location: D:/005lib/01AIEDA/ai_bridge/ai_bridge.il
 ;
 ; How it works (event driven, no polling timer needed):
 ;   - AI writes SKILL code into  exchange/command.il
@@ -21,12 +21,12 @@
 ; NOTE: keep this file pure ASCII to avoid codepage issues.
 ; =====================================================================
 
-AIB_exchDir  = "D:/001DIY/005lib/01AIEDA/ai_bridge/exchange"
+AIB_exchDir  = "D:/005lib/01AIEDA/ai_bridge/exchange"
 AIB_cmdFile  = strcat(AIB_exchDir "/command.il")
 AIB_cmdFlag  = strcat(AIB_exchDir "/command.flag")
 AIB_resFile  = strcat(AIB_exchDir "/result.txt")
 AIB_resFlag  = strcat(AIB_exchDir "/result.flag")
-AIB_watchCmd = "cmd /c D:\\001DIY\\005lib\\01AIEDA\\ai_bridge\\flag_watch.bat"
+AIB_watchCmd = "cmd /c D:\\005lib\\01AIEDA\\ai_bridge\\flag_watch.bat"
 AIB_runCount = 0
 AIB_running  = nil
 

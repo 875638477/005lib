@@ -1,5 +1,5 @@
 from pathlib import Path
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
 s=(R/'scripts/prepare_readbackHI_v2.py').read_text().replace("R/'scripts/batchHI_extended.il',R/'scripts/extraReadHI.il'","R/'scripts/batchHI_extended.il',R/'scripts/batchHI_shapes_v3.il',R/'scripts/extraReadHI.il'")
 s=s.replace("h+='skill errset(hiExtraRead(\"'+out+'\") t)\\n'","h+='skill errset(hiExtraRead(\"'+out+'\") t)\\n'\nh+='skill errset(hiShapeBoundaryRead(\"'+out+'\") t)\\n'")
 needle=" for op in d.get('operations',[]):\n  if op['type']=='via':"

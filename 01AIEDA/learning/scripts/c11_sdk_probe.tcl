@@ -1,4 +1,4 @@
-set root {D:/001DIY/005lib/01AIEDA/learning}
+set root {D:/005lib/01AIEDA/learning}
 set report [open [file join $root logs capture_C_20261019 sdk_probe.txt] w]
 fconfigure $report -encoding utf-8 -buffering line
 puts $report [list START [info patchlevel] [info nameofexecutable]]

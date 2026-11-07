@@ -15,7 +15,7 @@ import re
 import struct
 from PIL import Image, ImageChops, ImageDraw, ImageStat
 
-ROOT = Path(r"D:\001DIY\005lib\01AIEDA\study_records")
+ROOT = Path(r"D:\005lib\01AIEDA\study_records")
 OUT = ROOT / "evidence" / "video_batch2"
 SOURCE = Path(r"D:\005study\72讲速成视频【Cadence Allegro16.6视频教程】完整版")
 OLD_SOURCE = Path(r"D:\005study\72讲速成视频【Cadence Allegro16.6视频教程")

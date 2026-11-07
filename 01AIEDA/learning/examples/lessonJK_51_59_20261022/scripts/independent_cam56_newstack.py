@@ -1,5 +1,5 @@
 import pathlib,sys,json,re,csv,warnings,hashlib,math,collections,base64,xml.etree.ElementTree as ET
-R=pathlib.Path(r'D:\001DIY\005lib\01AIEDA');J=R/'learning/examples/lessonJK_51_59_20261022';H=R/'learning/examples/lessonHI_38_50_20261021'
+R=pathlib.Path(r'D:\005lib\01AIEDA');J=R/'learning/examples/lessonJK_51_59_20261022';H=R/'learning/examples/lessonHI_38_50_20261021'
 sys.path[:0]=[str(J/'tooling/packages'),str(H/'tooling/packages'),str(R/'learning/tools/pymupdf_1_28_2')]
 from gerbonara import GerberFile,ExcellonFile
 from gerbonara.cam import FileSettings

@@ -1,5 +1,5 @@
 ﻿import pathlib,shutil,os,sys,json,hashlib,subprocess,datetime
-R=pathlib.Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonJK_51_59_20261022');O=R/'eco/DE_REPLAY_ONLY';O.mkdir(exist_ok=False);C=pathlib.Path(r'C:\Program0\Cadence\SPB172\tools\bin');I=R/'eco/source_inputs'
+R=pathlib.Path(r'D:\005lib\01AIEDA\learning\examples\lessonJK_51_59_20261022');O=R/'eco/DE_REPLAY_ONLY';O.mkdir(exist_ok=False);C=pathlib.Path(r'C:\Program0\Cadence\SPB172\tools\bin');I=R/'eco/source_inputs'
 sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest().upper()
 man=json.loads((R/'eco/replay_input_manifest.json').read_text(encoding='utf8'));files=man['files'];protected={str(p):sha(p) for x in files for p in [pathlib.Path(x['path']),pathlib.Path(x['source'])]};assert all(sha(pathlib.Path(x['path']))==x['sha256']==sha(pathlib.Path(x['source'])) for x in files)
 guard=json.loads((R/'native/source_guard.json').read_text());protected.update({x['path']:sha(pathlib.Path(x['path'])) for x in guard['protectedOriginals']})

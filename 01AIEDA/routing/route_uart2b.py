@@ -1,7 +1,7 @@
 # Rasterized A* router for UART2_RX / UART2_TX on ETCH/BOTTOM (units: mils)
 import heapq, math
 
-REGION = "D:/001DIY/005lib/01AIEDA/routing/big_region.txt"
+REGION = "D:/005lib/01AIEDA/routing/big_region.txt"
 XMIN, XMAX = -1000, 300
 YMIN, YMAX = -800, -100
 W = XMAX - XMIN + 1

@@ -1,12 +1,12 @@
 set s [DboState]
-set p {D:/001DIY/005lib/01AIEDA/learning/examples/de_15_26_20261019/native/de_integrated_baseline.dsn}
+set p {D:/005lib/01AIEDA/learning/examples/de_15_26_20261019/native/de_integrated_baseline.dsn}
 set d [::DE::obj [$::DboSession_s_pDboSession GetDesign [::DE::cs $p] $s] $s Open]
 lappend ::DE::designs $d
 set top [::DE::obj [$d GetRootSchematic $s] $s Root]
 set r [$top Expand]
 set msg [::DE::cs {}];$r Message $msg
 set result [dict create failed [$r Failed] code [$r Code] severity [$r Severity] message [DboTclHelper_sGetConstCharPtr $msg]]
-::DE::write {D:/001DIY/005lib/01AIEDA/learning/logs/de_15_26_20261019/expand_state.tcldict} $result
+::DE::write {D:/005lib/01AIEDA/learning/logs/de_15_26_20261019/expand_state.tcldict} $result
 set rows "name\tpage_number\tid\tinstances\twires"
 set pi [$top NewPagesIter $s]
 for {set page [$pi NextPage $s]} {$page ne "NULL"} {set page [$pi NextPage $s]} {
@@ -19,5 +19,5 @@ for {set page [$pi NextPage $s]} {$page ne "NULL"} {set page [$pi NextPage $s]} 
  append rows "\n[join [list [::DE::str $page GetName] [$page GetPageNumber $s] [$page GetId $s] $ni $nw] \t]"
 }
 delete_DboSchematicPagesIter $pi
-::DE::write {D:/001DIY/005lib/01AIEDA/learning/logs/de_15_26_20261019/page_inventory.tcldict} $rows
+::DE::write {D:/005lib/01AIEDA/learning/logs/de_15_26_20261019/page_inventory.tcldict} $rows
 set result

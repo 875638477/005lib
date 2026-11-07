@@ -16,7 +16,7 @@ from datetime import datetime
 from pathlib import Path
 from xml.sax.saxutils import escape
 
-ROOT = Path(r"D:\001DIY\005lib")
+ROOT = Path(r"D:\005lib")
 PART = "HPM5361ICF1"
 FP_NAME = "LQFP64_10X10_P0D5"
 PAD_H = "r155_30"    # 1.55 x 0.30 mm, left/right
@@ -647,7 +647,7 @@ def write_guides(out: Path, xml_name: str) -> None:
 <li>Open OrCAD Capture CIS 17.2</li>
 <li>File - Import - Library XML</li>
 <li>Select {xml_name}</li>
-<li>Save OLB to D:/001DIY/005lib/01captureLib/{PART}.OLB</li>
+<li>Save OLB to D:/005lib/01captureLib/{PART}.OLB</li>
 </ol>
 <p>Part {PART} is homogeneous: all 64 pins on one page, full pinmux visible.</p>
 </body></html>

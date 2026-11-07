@@ -1,5 +1,5 @@
 set ::C14DefinitionsOnly 1
-source {D:/001DIY/005lib/01AIEDA/learning/scripts/c14_propagation.tcl}
+source {D:/005lib/01AIEDA/learning/scripts/c14_propagation.tcl}
 proc ::C14Prop::replaceInstances {} {
  variable base; variable log
  set s [::C12::session]; set st [DboState]; set result {}

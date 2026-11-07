@@ -1,5 +1,5 @@
 import pathlib,json,hashlib
-B=pathlib.Path(r"D:\001DIY\005lib\01AIEDA\learning\examples\lesson10_connector_20261018")
+B=pathlib.Path(r"D:\005lib\01AIEDA\learning\examples\lesson10_connector_20261018")
 for n in ["library","scripts","logs","runtime","verification"]:(B/n).mkdir(exist_ok=True)
 L=B/"library";S=B/"scripts"
 def write(p,t):p.write_text(t,encoding="utf-8",newline="\n")

@@ -1,6 +1,6 @@
 from pathlib import Path
 import json
-B=Path(r'D:\001DIY\005lib\01AIEDA');R=B/'learning/examples/lessonHI_38_50_20261021';P=B/'learning/notes/lessonHI_38_50_20261021.md';s=P.read_text(encoding='utf8')
+B=Path(r'D:\005lib\01AIEDA');R=B/'learning/examples/lessonHI_38_50_20261021';P=B/'learning/notes/lessonHI_38_50_20261021.md';s=P.read_text(encoding='utf8')
 parts=['## 2026-10-22续作：已冻结MCU6与USB8，整板仍在进行','', '|板|当前有效原生板|SHA256|剩余最少连接/原生DRC|','|---|---|---|---|']
 for v in ['2L','4L']:
  d=json.loads((R/'inventory'/('current_'+v+'.json')).read_text(encoding='utf8'));name=Path(d['board']).name;parts.append(f'|{v}|[{name}](../examples/lessonHI_38_50_20261021/native/{name})|`{d["sha256"]}`|{int(d["summary"]["nativeRemainingConnections"])}/0|')

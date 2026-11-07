@@ -65,7 +65,7 @@ for key,row in A.items():
   for prop in props:
    if str(prop[0])=='LIBRARY_PATH':
     val=str(prop[1]).lower().replace('\\','/');
-    if not val.startswith('d:/001diy/005lib/'):private.append({'target':key,'path':val})
+    if not val.startswith('D:/005lib/'):private.append({'target':key,'path':val})
  if key in public:
   p=public[key];y=native['public',key].signature();exact=x['signature']==y['signature'] and not x['issues'] and not y['issues']
   results.append({'name':key,'category':'NEW_TARGET_FULL_COLD_PUBLIC_NATIVE_EXACT','exact':exact,'actual':x,'reference':y,

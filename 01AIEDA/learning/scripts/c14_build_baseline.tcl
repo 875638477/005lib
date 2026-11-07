@@ -1,9 +1,9 @@
-source {D:/001DIY/005lib/01AIEDA/learning/scripts/c12_helpers.tcl}
-source {D:/001DIY/005lib/01AIEDA/learning/scripts/c14_helpers.tcl}
+source {D:/005lib/01AIEDA/learning/scripts/c12_helpers.tcl}
+source {D:/005lib/01AIEDA/learning/scripts/c14_helpers.tcl}
 namespace eval ::C14Run {
- variable root {D:/001DIY/005lib/01AIEDA/learning}
- variable base {D:/001DIY/005lib/01AIEDA/learning/examples/lesson14_capture/run04}
- variable log {D:/001DIY/005lib/01AIEDA/learning/logs/lesson14_capture_20261019/run04}
+ variable root {D:/005lib/01AIEDA/learning}
+ variable base {D:/005lib/01AIEDA/learning/examples/lesson14_capture/run04}
+ variable log {D:/005lib/01AIEDA/learning/logs/lesson14_capture_20261019/run04}
 }
 proc ::C14Run::check {s context} {::C12::check $s $context}
 proc ::C14Run::c {s} {return [::C12::cstring $s]}

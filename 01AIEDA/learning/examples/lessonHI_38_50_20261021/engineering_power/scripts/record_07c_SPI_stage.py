@@ -1,5 +1,5 @@
 from pathlib import Path
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power');n=R.parents[2]/'notes/lessonHI_power_20261021.md'
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power');n=R.parents[2]/'notes/lessonHI_power_20261021.md'
 s=n.read_text(encoding='utf-8')
 s=s.replace('当前返工候选为 **STAR_reroute_07b.json**','当时返工候选为 **STAR_reroute_07b.json**（现为失败历史，最终07c见第12节）')
 append='''

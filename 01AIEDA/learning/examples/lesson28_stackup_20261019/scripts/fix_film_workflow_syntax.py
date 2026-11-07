@@ -1,5 +1,5 @@
 from pathlib import Path
-B=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lesson28_stackup_20261019')
+B=Path(r'D:\005lib\01AIEDA\learning\examples\lesson28_stackup_20261019')
 p=B/'scripts'/'workflow.py';s=p.read_text();a=s.index("elif mode.startswith('filmfix'):");b=s.index("elif mode.startswith('reopen'):")
 s=s[:a]+'''elif mode.startswith('filmfix'):
  n=int(mode[-1]);board=B/'native'/('F28_%dL.brd'%n);out=B/'logs'/tag

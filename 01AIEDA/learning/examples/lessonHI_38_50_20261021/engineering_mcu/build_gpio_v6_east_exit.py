@@ -1,5 +1,5 @@
 import pathlib,json
-R=pathlib.Path(r"D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu")
+R=pathlib.Path(r"D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu")
 g=json.loads((R/"plans/gpio_north_escape_v3.json").read_text(encoding="utf-8"));g["status"]="CANDIDATE_V6_PC14_EAST_EXIT_PRESERVE_SPI_SOURCE_BANK"
 for o in g["operations"]:
  if o["id"]=="GPIO_GPIO_PC14_BOTTOM_START":o["points"]=[[41,27.8],[43.6,25.2],[45.6,25.2]];o["to"]=["GPIO_PC14_EAST_EXIT"];o["purpose"]="Rootrequested southeastBOTTOMescape; no weststub acrossnewSTARorSPIbank."

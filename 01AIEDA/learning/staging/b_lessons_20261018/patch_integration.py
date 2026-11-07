@@ -1,5 +1,5 @@
 from pathlib import Path
-p=Path(r'D:\001DIY\005lib\01AIEDA\learning\staging\b_lessons_20261018\finish_b_records.py')
+p=Path(r'D:\005lib\01AIEDA\learning\staging\b_lessons_20261018\finish_b_records.py')
 s=p.read_text()
 start=s.index('# Validate each local Markdown link introduced')
 s=s[:start]+"""print(json.dumps({'status':report['status'],'summary':str(note),'report':str(out),'inventoryFiles':len(inventory),'editedFiles':len(changes)},ensure_ascii=True))

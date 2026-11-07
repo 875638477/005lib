@@ -1,6 +1,6 @@
 ﻿from pathlib import Path
 import json,argparse,math,hashlib
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
 p=argparse.ArgumentParser();p.add_argument('--plan',required=True);p.add_argument('--variant',choices=['2L','4L'],required=True);p.add_argument('--output',required=True);a=p.parse_args();planpath=Path(a.plan);plan=json.loads(planpath.read_text(encoding='utf-8-sig'));identity=plan.get('inputBoardIdentity') or json.loads((R/f'inventory/current_{a.variant}.json').read_text());snapshot=Path(identity['checkpointDirectory'])/'normalized.json';N=json.loads(snapshot.read_text());board=Path(identity['board']);assert hashlib.sha256(board.read_bytes()).hexdigest().upper()==identity['sha256'];ops=plan['operations'];assert len({o['id'] for o in ops})==len(ops)
 def near(a,b):return len(a)==len(b) and all(abs(x-y)<.00011 for x,y in zip(a,b))
 def pointsEqual(a,b):return len(a)==len(b) and all(near(x,y) for x,y in zip(a,b))

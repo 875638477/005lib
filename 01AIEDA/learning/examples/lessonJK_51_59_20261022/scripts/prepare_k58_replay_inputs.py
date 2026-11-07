@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,hashlib,re,shutil,datetime,html,csv
-R=Path(r'D:/001DIY/005lib/01AIEDA');D=R/'learning/examples/de_15_26_20261019';F=D/'native_flow_final';J=R/'learning/examples/lessonJK_51_59_20261022';E=J/'eco';S=E/'source_inputs';O=E/'DE_REPLAY_ONLY'
+R=Path(r'D:/005lib/01AIEDA');D=R/'learning/examples/de_15_26_20261019';F=D/'native_flow_final';J=R/'learning/examples/lessonJK_51_59_20261022';E=J/'eco';S=E/'source_inputs';O=E/'DE_REPLAY_ONLY'
 assert not S.exists(),'source_inputs exists: do not overwrite another preparation'
 for name in ['replay_input_manifest.json','expected_delta.json','execute_plan.json']:assert not (E/name).exists(),name
 S.mkdir();copied=[];checks=[]

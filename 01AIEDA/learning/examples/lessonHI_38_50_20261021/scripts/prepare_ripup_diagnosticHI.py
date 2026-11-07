@@ -1,6 +1,6 @@
 ﻿from pathlib import Path
 import json
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
 m=json.loads((R/'scripts/source_service_2L_b015_guarded_compiled.json').read_text())
 p=json.loads((R/'batches/source_service_2L_b015_guarded.json').read_text())
 q=lambda x:json.dumps(x)

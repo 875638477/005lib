@@ -1,6 +1,6 @@
 ﻿from pathlib import Path
 import json,math,hashlib
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');out=[]
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');out=[]
 for v in ['2L','4L']:
  C=R/f'inventory/checkpoints/source_{v}_b015_DRC_PENDING';N=json.loads((C/'normalized.json').read_text());checks=[]
  for net,pin,limit in [('GPIO_PB1','19',2.8),('GPIO_PB10','21',2.6),('VBUS_PRESENT_N','18',1.4)]:

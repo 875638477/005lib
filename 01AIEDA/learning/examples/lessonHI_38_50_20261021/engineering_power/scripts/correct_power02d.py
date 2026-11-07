@@ -1,6 +1,6 @@
 from pathlib import Path
 import json
-R=Path(r'D:\001DIY\005lib\01AIEDA/learning/examples/lessonHI_38_50_20261021/engineering_power')
+R=Path(r'D:\005lib\01AIEDA/learning/examples/lessonHI_38_50_20261021/engineering_power')
 d=json.loads((R/'power_paths_02c.json').read_text())
 d['supersedes']='power_paths_02c.json: root independent review prefers y10.6 INPUT rail avoiding long broadside overlap with BOTTOM V5sense y12. No other operation changed.'
 for o in d['operations']:

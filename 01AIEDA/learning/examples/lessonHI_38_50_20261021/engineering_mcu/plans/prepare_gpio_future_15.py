@@ -1,5 +1,5 @@
 import pathlib,json,sys,math,hashlib,copy,itertools
-R=pathlib.Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu');H=R.parent;P=R/'plans';sys.path.insert(0,str(H/'scripts'));from routing_geometry import *
+R=pathlib.Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu');H=R.parent;P=R/'plans';sys.path.insert(0,str(H/'scripts'));from routing_geometry import *
 from shapely import affinity
 left=load(P/'GPIO_left_joint_fanout_07.json');left.pop('physicalGroundViaApproval',None);(P/'GPIO_left_joint_fanout_07.json').write_text(json.dumps(left,indent=2),encoding='utf8')
 nss=load(P/'NSS_pullup_local_relayout_02.json');north=load(P/'GPIO_north_joint_fanout_02.json');south=load(H/'plans/GPIO_south_joint_root_v6.json');pb15=load(P/'GPIO_PB15_bottom_exit_delta_01.json');south=copy.deepcopy(south);south['operations']=[o for o in south['operations'] if o['id'] not in pb15['replacePendingOperationIds']]+pb15['operations'];south['longRouteAnchors'].update(pb15['longRouteAnchors']);south['spacingExceptions']=[x for x in south['spacingExceptions'] if x['id'] not in pb15['removePendingSpacingExceptionIds']]+pb15['spacingExceptions'];south['physicalExceptions']+=pb15['physicalExceptions']

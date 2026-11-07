@@ -1,5 +1,5 @@
 import os,json,pathlib,math,hashlib,datetime,re,shutil
-R=pathlib.Path(r"D:\001DIY\005lib\01AIEDA\learning\examples\lessonG_30_37_20261020\engineering_mcu")
+R=pathlib.Path(r"D:\005lib\01AIEDA\learning\examples\lessonG_30_37_20261020\engineering_mcu")
 G=R.parent
 os.environ["TMP"]=os.environ["TEMP"]=str(R/"runtime")
 def load(p):
@@ -89,7 +89,7 @@ html=[
 (r"C:\Program0\Cadence\SPB172\doc\cmug\02objects.html","#region","Region shapes and Region-Class constraint scope")]
 apis={"status":"READ_ONLY_OFFICIAL_API_RESEARCH_UNEXECUTED_DRAFT","copiedPrimaryReferences":sources,"localManualSections":[{"path":p,"anchor":a,"SHA256":sha(pathlib.Path(p)),"finding":f} for p,a,f in html],"recommendedScope":"Copy S_POWER_030 into new CSet; change only smdpin_line and line_line to .20mm on actual TOP applicability; bind region-class NC_POWER_LV_S to three small disconnected shapes covering only three VDD/VSS pin necks/transition; preserve normal .60/neck.25/max1mm and all via/hole constraints. Native must verify inside/outside region and reopen. Do not change global default/power class.","licenseCondition":"Regions unavailable PCB L or below; API success/current native DRC and inside/outside challenge mandatory.","notAWorkingResult":"No region created by this review; pin_escape_region_draft.il unexecuted and requires caller-supplied real layer/subclass and reviewed boxes."}
 (R/"pin_escape_api_review.json").write_text(json.dumps(apis,ensure_ascii=False,indent=2),encoding="utf-8")
-note=pathlib.Path(r"D:\001DIY\005lib\01AIEDA\learning\notes\lessonG_mcu_20261020.md")
+note=pathlib.Path(r"D:\005lib\01AIEDA\learning\notes\lessonG_mcu_20261020.md")
 text=note.read_text(encoding="utf-8-sig")
 marker="## 8. 统一布局原生快照专项复核（2026-10-20）"
 if marker in text:text=text[:text.index(marker)].rstrip()+"\n"

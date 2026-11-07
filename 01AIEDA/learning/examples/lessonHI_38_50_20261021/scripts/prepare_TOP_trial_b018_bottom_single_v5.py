@@ -1,6 +1,6 @@
 ﻿from pathlib import Path
 import json,hashlib,subprocess,sys
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest().upper()
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest().upper()
 s=(R/'scripts/batchHI_dynamic_void_and_ground_trial_v3.il').read_text().replace('  hiGroundTrialHealthCount=hiGroundTrialHealthCount+1','  when(expectedVias==84 && hiGroundTrialHealthCount==0 hiRemoveExplicitNorthBottomFragment(out))\n  hiGroundTrialHealthCount=hiGroundTrialHealthCount+1')
 s+='''
 procedure(hiRemoveExplicitNorthBottomFragment(out)

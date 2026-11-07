@@ -3,7 +3,7 @@ from pathlib import Path
 from datetime import datetime, timezone, timedelta
 import json
 
-ROOT = Path(r"D:\001DIY\005lib\01AIEDA\study_records")
+ROOT = Path(r"D:\005lib\01AIEDA\study_records")
 OUT = ROOT / "evidence" / "video_batch2"
 snapshot = json.loads((OUT / "directory_snapshot.json").read_text(encoding="utf-8"))
 lessons = {number: json.loads((OUT / f"lesson{number:02d}_frames.json").read_text(encoding="utf-8")) for number in (1, 2)}

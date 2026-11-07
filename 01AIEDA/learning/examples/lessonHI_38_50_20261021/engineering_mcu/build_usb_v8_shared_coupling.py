@@ -1,5 +1,5 @@
 import pathlib,json,math,hashlib,copy
-R=pathlib.Path(r"D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu");H=R.parent
+R=pathlib.Path(r"D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu");H=R.parent
 u=json.loads((R/"plans/usb_critical_routes_v7.json").read_text(encoding="utf-8"))
 u["status"]="CANDIDATE_V8_SHARED_DM_COUPLED_TRUNK_PRESERVE_MCU_ELECTRICAL_BUDGET"
 newpoints={"4L":[[39.4,18.3984],[39.4,18.95],[40.6,20.15],[40.6,21.745],[40.75,21.895],[40.75,22.75]],"2L":[[39.4,18.3984],[39.4,18.95],[40.59,20.14],[40.59,21.7492],[40.75,21.9092],[40.75,22.75]]}

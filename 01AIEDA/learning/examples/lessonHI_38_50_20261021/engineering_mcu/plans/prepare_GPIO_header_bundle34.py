@@ -1,5 +1,5 @@
 import pathlib,json,sys,math,hashlib,copy
-P=pathlib.Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu\plans');H=P.parents[1];sys.path.insert(0,str(H/'scripts'));from routing_geometry import *
+P=pathlib.Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu\plans');H=P.parents[1];sys.path.insert(0,str(H/'scripts'));from routing_geometry import *
 fix=load(P/'GPIO_LEFT_NORTH_spacing_fix_09.json')
 for v in ['2L','4L']:
  B=H/f'inventory/checkpoints/source_{v}_b015_DRC_PENDING';n=load(B/'normalized.json');nw=load(B/'networks.json');rs=load(B/'base_net_rules.json');pol=load(P/f'GPIO_future_{v}_32_policy.json');assert nw['nativeLog']==n['readbackDirectory']

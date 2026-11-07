@@ -1,5 +1,5 @@
 ﻿from pathlib import Path
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
 p=R/'scripts/batchHI_route_probe_v1.il';s=p.read_text();s=s.replace('let((ret actualPoints actualWidths)','let((ret actualPoints actualWidths paths rr previous index)');s=s.replace('  ret=gRouteNative(net actualPoints actualWidths strcat("ETCH/" layer) f id)','''  if(equal(id "RIGHT_BOOT_DIRECT_TOP") then
    paths=nil previous=car(actualPoints) index=0
    fprintf(f "HI_BOOT_PHYSICAL_NATIVE_NET_NAMES MCU=%L R28=%L targetLogicalNet=%L\\n" gPin("U1" "44")->net->name gPin("R28" "1")->net->name axlDBFindByName('net net)) drain(f)

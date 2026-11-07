@@ -3,7 +3,7 @@ from pathlib import Path
 import json
 import re
 
-root = Path(r"D:\001DIY\005lib\01AIEDA\study_records")
+root = Path(r"D:\005lib\01AIEDA\study_records")
 data = json.loads((root / "evidence" / "video_inventory.json").read_text(encoding="utf-8"))
 sources = {source["source_key"]: source for source in data["source_directories"]}
 old = sources["short_named"]

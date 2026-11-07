@@ -1,5 +1,5 @@
 set s [DboState]
-set path {D:/001DIY/005lib/01AIEDA/learning/examples/de_15_26_20261019/native/de_integrated_eco.dsn}
+set path {D:/005lib/01AIEDA/learning/examples/de_15_26_20261019/native/de_integrated_eco.dsn}
 set d [::DE::obj [$::DboSession_s_pDboSession GetDesignAndSchematics [::DE::cs $path] $s] $s Open];lappend ::DE::designs $d
 set top [::DE::obj [$d GetRootSchematic $s] $s Root]
 ::DE::obj [$d GetRootOccurrence $s] $s InitializeOccurrence

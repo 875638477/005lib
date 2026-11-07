@@ -9,10 +9,10 @@
     "-nographic",
     "-readonly",
     "-s",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonG_30_37_20261020\\scripts\\inventory_2L.scr",
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lessonG_30_37_20261020\\scripts\\inventory_2L.scr",
     "-p",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonG_30_37_20261020\\logs\\inventory_2L",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonG_30_37_20261020\\backups\\G_2L_INPUT.brd"
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lessonG_30_37_20261020\\logs\\inventory_2L",
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lessonG_30_37_20261020\\backups\\G_2L_INPUT.brd"
   ],
   "completed": true,
   "exitCode": 0,
@@ -21,8 +21,8 @@
   "readonly": true,
   "scriptSHA256": "9585AA9A419353434609A81519F77E9C2C3DD982175453C846608ADE5EB931CF",
   "processEnvironmentOverrides": {
-    "TEMP": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonG_30_37_20261020\\logs\\inventory_2L\\tmp",
-    "TMP": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonG_30_37_20261020\\logs\\inventory_2L\\tmp",
-    "ALLEGRO_PCBENV": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonG_30_37_20261020\\logs\\inventory_2L\\pcbenv"
+    "TEMP": "D:\\005lib\\01AIEDA\\learning\\examples\\lessonG_30_37_20261020\\logs\\inventory_2L\\tmp",
+    "TMP": "D:\\005lib\\01AIEDA\\learning\\examples\\lessonG_30_37_20261020\\logs\\inventory_2L\\tmp",
+    "ALLEGRO_PCBENV": "D:\\005lib\\01AIEDA\\learning\\examples\\lessonG_30_37_20261020\\logs\\inventory_2L\\pcbenv"
   }
 }

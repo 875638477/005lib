@@ -1,5 +1,5 @@
 from pathlib import Path
-B=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lesson29_constraints_20261019_review')
+B=Path(r'D:\005lib\01AIEDA\learning\examples\lesson29_constraints_20261019_review')
 p=B/'scripts'/'review29.py';s=p.read_text()
 insert=r'''
 conn=[r for r in table(A/'logs'/'coupon_connections.tsv') if r['kind'] in ['NET','PIN']]

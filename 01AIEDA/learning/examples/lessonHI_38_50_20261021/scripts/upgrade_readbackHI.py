@@ -1,5 +1,5 @@
 from pathlib import Path
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
 p=R/'scripts/prepare_readbackHI.py'
 s=p.read_text()
 s=s.replace("P.add_argument('--plan');","P.add_argument('--plan');P.add_argument('--compiled');")

@@ -1,6 +1,6 @@
 ﻿from pathlib import Path
 import re,json,csv,hashlib
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
 s=(R/'scripts/normalize_HI_actual_v4.py').read_text();exec(s[s.index('def sx('):s.index('symbols=')])
 for v,tag in [('4L','private_pad_inspect_4L_01'),('2L','private_pad_inspect_2L_02')]:
  B=R/'logs'/tag;L=json.loads((B/'launch.json').read_text());assert L['completed'] and L['exitCode']==0 and L['beforeSHA256']==L['afterSHA256'];assert '*Error*' not in (B/'stdout.txt').read_text()

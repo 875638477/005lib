@@ -1,5 +1,5 @@
 from pathlib import Path
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
 p=R/'scripts/normalize_HI_actual_v4.py';s=p.read_text().replace("role['lineThermal']=bool(role.get('thermal'))","role['lineThermal']=bool(role.get('lineThermal',role.get('thermal')))");p.write_text(s,encoding='ascii')
 s=(R/'scripts/prepare_readbackHI_v6.py').read_text()
 start=s.index("h+='skill errset(axlDRCUpdate")

@@ -1,4 +1,4 @@
-source {D:/001DIY/005lib/01AIEDA/learning/scripts/c13_helpers.tcl}
+source {D:/005lib/01AIEDA/learning/scripts/c13_helpers.tcl}
 namespace eval ::C13 {
 set d [ok [$session GetDesignAndSchematics [cs "$root/examples/lesson13_capture/c13_scope_v4.dsn"] $s] Open]
 set ro [ok [$d GetRootOccurrence $s] Root]

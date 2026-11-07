@@ -1,5 +1,5 @@
 from pathlib import Path
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
 s=(R/'scripts/adapt_usb_esd06HI.py').read_text()
 s=s.replace("for op in original:\n  if op['type']!='route':continue","for op in original:\n  if op['type']=='via' and op['padstack']=='L28_VIA030_C060_OR_VERIFIED_TENTED_PRIVATE_VARIANT':\n   op['engineeringPlaceholderPadstack']=op['padstack'];op['padstack']='L28_VIA030_C060';op['padstackResolution']='Existing embedded and HI-library standard through-via. Native actual TOP/BOTTOM mask figureNULL and Film drawMissingPadApertures=false were verified in edit_pilot_4L_02/2L_02; no new variant required.'\n  if op['type']!='route':continue")
 s=s.replace('b006.json','b006a.json')

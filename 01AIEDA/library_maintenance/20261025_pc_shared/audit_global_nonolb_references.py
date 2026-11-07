@@ -3,7 +3,7 @@ from pathlib import Path
 from collections import Counter
 import csv, hashlib, json, re
 
-M=Path(r'D:\001DIY\005lib\01AIEDA\library_maintenance\20261025_pc_shared')
+M=Path(r'D:\005lib\01AIEDA\library_maintenance\20261025_pc_shared')
 P=M/'global_suffix_inventory_v1'
 OUT=M/'global_suffix_reference_audit_v1'
 OUT.mkdir(exist_ok=True)
@@ -60,7 +60,7 @@ usage=B/'usage_audit'/'usage_counts.json'
 u=jread(usage);boards=[]
 for source in u['sources']:
  p=Path(source['source'])
- if not str(p).lower().startswith(str(Path(r'D:\001DIY\005lib\01brdlib')).lower()+'\\'):continue
+ if not str(p).lower().startswith(str(Path(r'D:\005lib\01brdlib')).lower()+'\\'):continue
  evidence=[]
  for rel,expected in source['evidence'].items():
   ep=B/rel;actualsha=sha(ep)

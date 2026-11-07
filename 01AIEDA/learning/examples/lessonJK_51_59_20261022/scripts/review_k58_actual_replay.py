@@ -1,7 +1,7 @@
 """JK this-round ECO independent read-only verification. No native calls."""
 from pathlib import Path
 import json,csv,re,hashlib,datetime
-R=Path(r'D:/001DIY/005lib/01AIEDA/learning/examples/lessonJK_51_59_20261022');E=R/'eco';S=E/'source_inputs';B=E/'DE_REPLAY_ONLY';O=R/'review/independent_K58';O.mkdir(parents=True,exist_ok=True)
+R=Path(r'D:/005lib/01AIEDA/learning/examples/lessonJK_51_59_20261022');E=R/'eco';S=E/'source_inputs';B=E/'DE_REPLAY_ONLY';O=R/'review/independent_K58';O.mkdir(parents=True,exist_ok=True)
 files={};checks=[]
 def raw(p):
  p=Path(p);b=p.read_bytes();files[str(p)]={'path':str(p),'sha256':hashlib.sha256(b).hexdigest().upper(),'bytes':len(b)};return b

@@ -9,10 +9,10 @@
     "-nographic",
     "-readonly",
     "-s",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonG_30_37_20261020\\scripts\\reopen_2L_v1.scr",
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lessonG_30_37_20261020\\scripts\\reopen_2L_v1.scr",
     "-p",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonG_30_37_20261020\\logs\\reopen_2L_v1",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonG_30_37_20261020\\native\\G_2L_PLACEMENT_2L_v1.brd"
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lessonG_30_37_20261020\\logs\\reopen_2L_v1",
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lessonG_30_37_20261020\\native\\G_2L_PLACEMENT_2L_v1.brd"
   ],
   "completed": true,
   "exitCode": 0,
@@ -21,8 +21,8 @@
   "readonly": true,
   "scriptSHA256": "46079B2950D0812229AF8A963CA17D8CB454AD0F1799FE29339BFC9C3B708CB3",
   "processEnvironmentOverrides": {
-    "TEMP": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonG_30_37_20261020\\logs\\reopen_2L_v1\\tmp",
-    "TMP": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonG_30_37_20261020\\logs\\reopen_2L_v1\\tmp",
-    "ALLEGRO_PCBENV": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonG_30_37_20261020\\logs\\reopen_2L_v1\\pcbenv"
+    "TEMP": "D:\\005lib\\01AIEDA\\learning\\examples\\lessonG_30_37_20261020\\logs\\reopen_2L_v1\\tmp",
+    "TMP": "D:\\005lib\\01AIEDA\\learning\\examples\\lessonG_30_37_20261020\\logs\\reopen_2L_v1\\tmp",
+    "ALLEGRO_PCBENV": "D:\\005lib\\01AIEDA\\learning\\examples\\lessonG_30_37_20261020\\logs\\reopen_2L_v1\\pcbenv"
   }
 }

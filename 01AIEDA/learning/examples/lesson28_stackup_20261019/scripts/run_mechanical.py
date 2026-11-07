@@ -1,6 +1,6 @@
 from pathlib import Path
 import subprocess,sys,json
-B=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lesson28_stackup_20261019')
+B=Path(r'D:\005lib\01AIEDA\learning\examples\lesson28_stackup_20261019')
 for tag,board in [('mechbase01',B/'source'/'F27_MECHANICAL.brd'),('mech2_01',B/'native'/'F28_2L.brd'),('mech4_01',B/'native'/'F28_4L.brd')]:
  out=B/'logs'/tag;s=B/'scripts'/(tag+'.scr')
  assert not s.exists()

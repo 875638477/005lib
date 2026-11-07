@@ -16,7 +16,7 @@ def main():
  for name in names:
   src=M.parents[2]/'01Psm_lib'/(name+'.psm')
   # M is01AIEDA/library_maintenance/date; library root is third parent.
-  src=Path(r'D:\001DIY\005lib\01Psm_lib')/(name+'.psm');alias='p0010_cold_'+name;dst=D/'aliases'/(alias+'.psm');assert src.is_file();shutil.copyfile(src,dst);assert sha(src)==sha(dst)
+  src=Path(r'D:\005lib\01Psm_lib')/(name+'.psm');alias='p0010_cold_'+name;dst=D/'aliases'/(alias+'.psm');assert src.is_file();shutil.copyfile(src,dst);assert sha(src)==sha(dst)
   rows.append(dict(target=name,source=str(src),source_sha256=sha(src),alias=alias,alias_path=str(dst),alias_sha256=sha(dst)))
  jobs='\n'.join('('+sk(r['target'])+' '+sk(r['alias'])+')' for r in rows)
  s='load('+sk(R/'w/pcb_migration/pc13_export_board_definitions.il')+')\nload('+sk(R.parent/'cadence_geometry_merge_20261025/psm_export.il')+')\n'
@@ -31,7 +31,7 @@ procedure(pub0010Canonical6Context(dir)
   unless(equal(beforeUnits '("millimeters" 4)) error("Canonical6 must use actual0010 original mm4 context\\n"))
   beforeFonts=pub0010FontContextSnapshot(strcat(dir "/SOURCE_ALL_TEXTBLOCKS_BEFORE.ilist")) beforeDefs=length(axlDBGetDesign()->symdefs)
   jobs='(@JOBS@) exported=0
-  axlSetVariable("psmpath" @PSMPATH@) axlSetVariable("padpath" "D:/001DIY/005lib/01Pad_lib")
+  axlSetVariable("psmpath" @PSMPATH@) axlSetVariable("padpath" "D:/005lib/01Pad_lib")
   f=outfile(strcat(dir "/PACKAGE_SOURCE_AND_UNIQUE_ALIAS_MANIFEST.tsv")) fprintf(f "canonical\\talias\\tsourcecachefile\\tpublicaliasfile\\n")
   foreach(job jobs
    name=car(job) alias=cadr(job)
@@ -46,7 +46,7 @@ procedure(pub0010Canonical6Context(dir)
   unless(equal(beforeUnits axlDBGetDesignUnits()) && equal(beforeFonts afterFonts) && exported==6 && length(axlDBGetDesign()->symdefs)==beforeDefs+6 error("Canonical6 changed source unit/font context or reused package cache\\n"))
   f=outfile(strcat(dir "/CANONICAL6_CONTEXT_COMPLETE.txt")) fprintf(f "SIX_PUBLIC_PACKAGE_BYTE_ALIASES_LOADED_FRESH_IN_ACTUAL0010_MM4_10L_SOURCE_FONTS_CONTEXT\\nNO_BOARD_SAVE_NO_PUBLIC_WRITES\\nEXISTING_PAD_CACHE_REUSE_EXPLICIT_REQUIRES_FULL_PUBLIC_PAD_MANUFACTURING_XML_PROOF\\n") close(f) t))
 '''
- s=s.replace('@JOBS@',jobs).replace('@PSMPATH@',sk(str(D/'aliases').replace('\\','/')+' D:/001DIY/005lib/01Psm_lib'));balanced(s);h=D/'public0010_canonical6_context_v1.il';h.write_text(s,'utf-8')
+ s=s.replace('@JOBS@',jobs).replace('@PSMPATH@',sk(str(D/'aliases').replace('\\','/')+' D:/005lib/01Psm_lib'));balanced(s);h=D/'public0010_canonical6_context_v1.il';h.write_text(s,'utf-8')
  inputs=[h]+[Path(r['source']) for r in rows]+[Path(r['alias_path']) for r in rows]+[R/'w/pcb_migration/pc13_export_board_definitions.il',R.parent/'cadence_geometry_merge_20261025/psm_export.il',R.parent/'cadence_geometry_merge_20261025/dra_audit/export.il']
  p=D/'MANIFEST.json';p.write_text(json.dumps(dict(schema='PUBLIC0010_CANONICAL6_PACKAGE_CACHEMISS_SAME_NATIVE_CONTEXT_V1',source_board=str(M/'public0010_nil_route_stub_run13_v2_partial/PUB0010_PARTIAL_UNAPPROVED.brd'),source_sha256='1ABA0FDC27DE553535CDE454840EA245CBEBB5FDC1392A0B07E0218D11CDE26A',helper=str(h),entry='pub0010Canonical6Context',marker='CANONICAL6_CONTEXT_COMPLETE.txt',assets=rows,pad_reuse_requires_separate_full_manufacturing_proof=True,files=[dict(path=str(x),sha256=sha(x)) for x in inputs]),indent=2),'utf-8');print(json.dumps(dict(helper_sha256=sha(h),manifest_sha256=sha(p)),indent=2))
 if __name__=='__main__':main()

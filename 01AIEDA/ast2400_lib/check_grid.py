@@ -5,12 +5,12 @@ import re
 pat = re.compile(r'startY="(-?\d+)"')
 hot = re.compile(r'hotptX="(-?\d+)"[^>]*startX="(-?\d+)"')
 
-t = sorted(Path(r"D:\001DIY\005lib\AUTOlib\ul_TPS65217CRSLR\OrcadCaptureXML").glob("*.xml"))[-1]
+t = sorted(Path(r"D:\005lib\AUTOlib\ul_TPS65217CRSLR\OrcadCaptureXML").glob("*.xml"))[-1]
 text = t.read_text(encoding="utf-8", errors="replace")
 ys = sorted(set(int(y) for y in pat.findall(text)))
 print("TPS", t.name, "Y", ys, "d", [ys[i + 1] - ys[i] for i in range(len(ys) - 1)])
 
-a = sorted(Path(r"D:\001DIY\005lib\AUTOlib\ul_AST2400\OrcadCaptureXML").glob("*.xml"))[-1]
+a = sorted(Path(r"D:\005lib\AUTOlib\ul_AST2400\OrcadCaptureXML").glob("*.xml"))[-1]
 text = a.read_text(encoding="utf-8")
 parts = text.split("<LibPart>")[1:]
 for i, part in enumerate(parts):

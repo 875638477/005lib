@@ -1,6 +1,6 @@
 from pathlib import Path
 import json
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
 tag='drc_bulk_control_pilot_4L_01';out=(R/'logs'/tag).as_posix()
 code=r'''
 procedure(hiDrcControlPilot()

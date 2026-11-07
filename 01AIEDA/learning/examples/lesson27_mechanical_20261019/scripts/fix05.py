@@ -1,5 +1,5 @@
 from pathlib import Path
-B=Path(r'D:/001DIY/005lib/01AIEDA/learning/examples/lesson27_mechanical_20261019')
+B=Path(r'D:/005lib/01AIEDA/learning/examples/lesson27_mechanical_20261019')
 s=(B/'scripts/lesson27.il').read_text()
 (B/'logs/create04/first_complete_source.il').write_text(s)
 a=s.index('  b=car(axlDBCreateShape')

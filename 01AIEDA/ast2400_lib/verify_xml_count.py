@@ -2,7 +2,7 @@
 from pathlib import Path
 import re
 
-xml = Path(r"D:\001DIY\005lib\01captureLib\AST2400\OrcadCaptureXML\2026-07-15_15-40-52.xml").read_text(
+xml = Path(r"D:\005lib\01captureLib\AST2400\OrcadCaptureXML\2026-07-15_15-40-52.xml").read_text(
     encoding="utf-8"
 )
 print("SymbolPinScalar", xml.count("<SymbolPinScalar>"))

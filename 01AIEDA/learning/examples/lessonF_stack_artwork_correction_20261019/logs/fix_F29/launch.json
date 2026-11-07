@@ -8,10 +8,10 @@
     "-safe",
     "-nographic",
     "-s",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonF_stack_artwork_correction_20261019\\scripts\\fix_F29.scr",
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lessonF_stack_artwork_correction_20261019\\scripts\\fix_F29.scr",
     "-p",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonF_stack_artwork_correction_20261019\\logs\\fix_F29",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonF_stack_artwork_correction_20261019\\current\\F29_CONSTRAINTS_v4.brd"
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lessonF_stack_artwork_correction_20261019\\logs\\fix_F29",
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lessonF_stack_artwork_correction_20261019\\current\\F29_CONSTRAINTS_v4.brd"
   ],
   "completed": true,
   "exitCode": 0,
@@ -20,8 +20,8 @@
   "readonly": false,
   "scriptSHA256": "1A1E90DE84EFF24A365B83CC24068771210D1639DA9CF941D1DE26B75FD942F6",
   "processEnvironmentOverrides": {
-    "TEMP": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonF_stack_artwork_correction_20261019\\logs\\fix_F29\\tmp",
-    "TMP": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonF_stack_artwork_correction_20261019\\logs\\fix_F29\\tmp",
-    "ALLEGRO_PCBENV": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonF_stack_artwork_correction_20261019\\logs\\fix_F29\\pcbenv"
+    "TEMP": "D:\\005lib\\01AIEDA\\learning\\examples\\lessonF_stack_artwork_correction_20261019\\logs\\fix_F29\\tmp",
+    "TMP": "D:\\005lib\\01AIEDA\\learning\\examples\\lessonF_stack_artwork_correction_20261019\\logs\\fix_F29\\tmp",
+    "ALLEGRO_PCBENV": "D:\\005lib\\01AIEDA\\learning\\examples\\lessonF_stack_artwork_correction_20261019\\logs\\fix_F29\\pcbenv"
   }
 }

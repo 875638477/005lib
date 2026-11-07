@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,csv,re,hashlib,collections,datetime,sys
-R=Path(r'D:/001DIY/005lib/01AIEDA');H=R/'learning/examples/lessonHI_38_50_20261021';J=R/'learning/examples/lessonJK_51_59_20261022';O=J/'review/independent_newstack';S=J/'logs/native_j55_4L_reopen_01';L=J/'logs/native_newstack_4L_reopen_01';U=J/'logs/native_newstack_reference_segments_01'
+R=Path(r'D:/005lib/01AIEDA');H=R/'learning/examples/lessonHI_38_50_20261021';J=R/'learning/examples/lessonJK_51_59_20261022';O=J/'review/independent_newstack';S=J/'logs/native_j55_4L_reopen_01';L=J/'logs/native_newstack_4L_reopen_01';U=J/'logs/native_newstack_reference_segments_01'
 sys.path.insert(0,str(H/'scripts'));from native_sexpr_data import parse
 r=json.loads((O/'review.json').read_text());assert not r['failed'];checks=[];extra=[]
 def ck(k,v,d=None):checks.append(dict(id=k,passed=bool(v),detail=d))

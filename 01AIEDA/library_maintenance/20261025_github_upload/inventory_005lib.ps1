@@ -1,5 +1,5 @@
 $ErrorActionPreference = 'Stop'
-$sourceRoot = 'D:\001DIY\005lib'
+$sourceRoot = 'D:\005lib'
 $reportRoot = 'D:\001DIY\004computer\lga1700\git_upload_005lib_20261025'
 $topDirs = @(Get-ChildItem -LiteralPath $sourceRoot -Directory -Force | Where-Object { $_.Name -like '01*' })
 $files = New-Object 'System.Collections.Generic.List[object]'

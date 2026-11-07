@@ -1,6 +1,6 @@
 ﻿from pathlib import Path
 import json,hashlib,stat,subprocess,sys
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest().upper()
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest().upper()
 for v in ['2L','4L']:
  old=json.loads((R/f'native_work/source_b015_{v}_try04/guard_configuration.json').read_text());work=R/f'native_work/source_b015_{v}_try05';work.mkdir(exist_ok=False);scratch=work/'input.brd'
  with scratch.open('xb') as f:f.write(Path(old['scratchReadonlyInput']).read_bytes())

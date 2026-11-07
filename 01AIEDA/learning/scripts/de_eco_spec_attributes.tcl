@@ -1,5 +1,5 @@
-set source {D:/001DIY/005lib/01AIEDA/learning/examples/de_15_26_20261019/native/de_integrated_eco_final.dsn}
-set backup {D:/001DIY/005lib/01AIEDA/learning/staging/de_15_26_20261019/de_eco_before_attribute_fix.dsn}
+set source {D:/005lib/01AIEDA/learning/examples/de_15_26_20261019/native/de_integrated_eco_final.dsn}
+set backup {D:/005lib/01AIEDA/learning/staging/de_15_26_20261019/de_eco_before_attribute_fix.dsn}
 if {[file exists $backup]} {error "Attribute fix already backed up; do not replay"}
 file copy $source $backup
 set s [DboState];set sess $::DboSession_s_pDboSession

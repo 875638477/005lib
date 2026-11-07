@@ -1,6 +1,6 @@
 ﻿from pathlib import Path
 import json,hashlib
-M=Path(r'D:\001DIY\005lib\01AIEDA\library_maintenance\20261025_pc_shared')
+M=Path(r'D:\005lib\01AIEDA\library_maintenance\20261025_pc_shared')
 review=M/'global_suffix_native_review_v3';allrows={e['stem'].lower():e for p in review.glob('e*_SCHEMA_GEOMETRY.json') for e in json.loads(p.read_text(encoding='utf-8'))}
 selected={'c0201_fcs':('c0201_pc','PAD_NAME_COLLISION'),'l0201_fcs':('l0201_pc','PAD_NAME_COLLISION'),'r0201_fcs':('r0201_pc','PAD_NAME_COLLISION'),'c0402_fcs':('c0402_pc','ZERO_DRILL_LEGACY_PAD_TYPE'),'c0805big':('c0805_pc','ZERO_DRILL_LEGACY_PAD_TYPE')}
 rows=[]

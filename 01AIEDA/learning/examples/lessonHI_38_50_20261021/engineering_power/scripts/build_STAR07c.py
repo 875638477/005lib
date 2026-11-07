@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,math
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power')
 s=json.loads((R/'STAR_reroute_07b.json').read_text(encoding='utf-8'))
 for o in s['operations']:
  if o['id']=='STAR_DIAG_GROUND_RETURN':

@@ -8,10 +8,10 @@
                  "-readonly",
                  "-nographic",
                  "-s",
-                 "D:\\001DIY\\005lib\\01AIEDA\\learning\\scripts\\lesson02_readonly_quit.scr",
+                 "D:\\005lib\\01AIEDA\\learning\\scripts\\lesson02_readonly_quit.scr",
                  "-p",
-                 "D:\\001DIY\\005lib\\01AIEDA\\learning\\logs\\lesson02_readonly_quit_20261017",
-                 "D:\\001DIY\\005lib\\01AIEDA\\learning\\logs\\lesson02_readonly_quit_20261017\\demo_ver_17p2.brd"
+                 "D:\\005lib\\01AIEDA\\learning\\logs\\lesson02_readonly_quit_20261017",
+                 "D:\\005lib\\01AIEDA\\learning\\logs\\lesson02_readonly_quit_20261017\\demo_ver_17p2.brd"
              ],
-    "processOnlyAllegroPcbEnv":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\logs\\lesson02_readonly_quit_20261017\\pcbenv"
+    "processOnlyAllegroPcbEnv":  "D:\\005lib\\01AIEDA\\learning\\logs\\lesson02_readonly_quit_20261017\\pcbenv"
 }

@@ -1,8 +1,8 @@
 load {C:/Program0/Cadence/spb172/tools/bin/orDb_Dll_Tcl64.dll} DboTclWriteBasic
 set ::DboSession_s_pDboSession [DboTclHelper_sCreateSession]
 DboSession -this $::DboSession_s_pDboSession
-source {D:/001DIY/005lib/01AIEDA/learning/scripts/de_capture_helpers.tcl}
-set root {D:/001DIY/005lib/01AIEDA/learning/staging/lga1700_pcb_repair_20261023/stub_xml_roundtrip_probe}
+source {D:/005lib/01AIEDA/learning/scripts/de_capture_helpers.tcl}
+set root {D:/005lib/01AIEDA/learning/staging/lga1700_pcb_repair_20261023/stub_xml_roundtrip_probe}
 puts [list export_command [info commands XMATIC_DSN2XML] import_command [info commands XMATIC_XML2DSN]]
 if {[info commands XMATIC_DSN2XML] eq {} || [info commands XMATIC_XML2DSN] eq {}} {exit 2}
 set code [catch {

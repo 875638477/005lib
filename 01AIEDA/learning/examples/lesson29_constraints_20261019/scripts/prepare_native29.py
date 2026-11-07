@@ -1,5 +1,5 @@
 import pathlib,json,hashlib
-R=pathlib.Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lesson29_constraints_20261019')
+R=pathlib.Path(r'D:\005lib\01AIEDA\learning\examples\lesson29_constraints_20261019')
 d=json.loads((R/'constraint_plan_preparation.json').read_text())
 classes={
 'POWER_INPUT':('P_POWER_060','S_POWER_030'),
@@ -17,8 +17,8 @@ procedure(f29Must(ret label)
  unless(ret error("F29 operation failed: %s\n" label))
  ret)
 procedure(f29Setup()
- axlSetVariable("padpath" list("D:/001DIY/005lib/01AIEDA/learning/examples/lesson28_stackup_20261019/native" "D:/001DIY/005lib/01AIEDA/learning/examples/de_15_26_20261019/library"))
- axlSetVariable("psmpath" list("D:/001DIY/005lib/01AIEDA/learning/examples/de_15_26_20261019/library")))
+ axlSetVariable("padpath" list("D:/005lib/01AIEDA/learning/examples/lesson28_stackup_20261019/native" "D:/005lib/01AIEDA/learning/examples/de_15_26_20261019/library"))
+ axlSetVariable("psmpath" list("D:/005lib/01AIEDA/learning/examples/de_15_26_20261019/library")))
 procedure(f29Phys(name width neck necklen)
  f29Must(axlCNSCreate('physical name nil) name)
  foreach(v list(list('width_min width) list('neckwidth_min neck) list('necklength_max necklen) list('vias "L28_VIA030_C060"))

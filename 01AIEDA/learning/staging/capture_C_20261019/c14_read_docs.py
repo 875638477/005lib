@@ -6,7 +6,7 @@ import json
 import sys
 from datetime import datetime, timezone, timedelta
 
-ROOT = Path(r"D:\001DIY\005lib\01AIEDA\learning\staging\capture_C_20261019")
+ROOT = Path(r"D:\005lib\01AIEDA\learning\staging\capture_C_20261019")
 DOC = Path(r"C:\Program0\Cadence\SPB172\doc")
 sys.stdout.reconfigure(encoding="utf-8")
 

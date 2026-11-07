@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,math,copy
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');P=R/'engineering_power'
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');P=R/'engineering_power'
 old=json.loads((R/'plans/CAN_RXD_2L_engineered_04.json').read_text());q=copy.deepcopy(old);q['batchId']='CAN_RXD_2L_engineered_05';q['status']='EXPLICIT_CAN_AND_LOW_SPEED_VBUS_FUTURE_REPLACEMENT_REQUIRES_NATIVE';q['operations']=[o for o in q['operations']if o['id']not in ['CAN2L_WEST_RETURN','CAN2L_REFERENCE_CROSS_LEFT','CAN2L_REFERENCE_CROSS_RIGHT','CAN2L_REFERENCE_COPLANAR_BRIDGE']]
 next(o for o in q['operations']if o['id']=='CAN2L_WEST_TOP_DNP')['points']=[[34.45,1.95],[34.05,2.35],[34.05,16.05],[36.3,18.3],[36.3236,18.3]]
 for id,xy in [('CAN2L_REFERENCE_CROSS_LEFT',[34.25,17.25]),('CAN2L_REFERENCE_CROSS_RIGHT',[35.2,18.5])]:q['operations'].append(dict(type='via',id=id,net='GND',xy=xy,padstack='L28_VIA030_C060',purpose='CommonGND either sideof finiteVBUSsenseBOTTOMslot, pairedwith explicitTOPgroundbridge'))

@@ -190,7 +190,7 @@ function Copy-MissingTemplates([string]$Root, [string[]]$Names, [bool]$Preview) 
         if (Test-Path -LiteralPath (Join-Path $candidate 'BOM.txt') -PathType Leaf) { $source=$candidate; break }
         $parent=$parent.Parent
     }
-    if (-not $source -and (Test-Path -LiteralPath 'D:\001DIY\005lib\01env\BOM.txt' -PathType Leaf)) { $source='D:\001DIY\005lib\01env' }
+    if (-not $source -and (Test-Path -LiteralPath 'D:\005lib\01env\BOM.txt' -PathType Leaf)) { $source='D:\005lib\01env' }
     if (-not $source) { Write-Host 'Template source not found; copying skipped.'; return }
     foreach ($name in $Names) {
         if ($name -notin @('BOM.txt','reports.txt','drill4noet.txt')) { throw 'Unrecognized template name.' }

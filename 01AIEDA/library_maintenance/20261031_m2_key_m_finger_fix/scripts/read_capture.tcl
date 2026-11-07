@@ -1,4 +1,4 @@
-source {D:/001DIY/005lib/01AIEDA/learning/scripts/capture_dbo_readonly_common.tcl}
+source {D:/005lib/01AIEDA/learning/scripts/capture_dbo_readonly_common.tcl}
 load {C:/Program0/Cadence/SPB172/tools/bin/orDb_Dll_Tcl64.dll} DboTclWriteBasic
 set ::DboSession_s_pDboSession [DboTclHelper_sCreateSession]
 DboSession -this $::DboSession_s_pDboSession

@@ -1,7 +1,7 @@
 ﻿from pathlib import Path
 import json,hashlib,xml.etree.ElementTree as ET
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
-S=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lesson28_stackup_20261019\native\l28_via030_c060.pxml')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
+S=Path(r'D:\005lib\01AIEDA\learning\examples\lesson28_stackup_20261019\native\l28_via030_c060.pxml')
 B=R/'native/private_padstacks';B.mkdir(exist_ok=True)
 text=S.read_text();text=text.replace('l28_via030_c060','hi_via026_c052_tented').replace('0.300','0.260').replace('0.600','0.520')
 p=B/'hi_via026_c052_tented.pxml';p.write_text(text,encoding='utf8')

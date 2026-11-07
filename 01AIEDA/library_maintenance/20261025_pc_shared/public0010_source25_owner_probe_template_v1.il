@@ -1,6 +1,6 @@
 ; Read-only actual source routing/owner versus old/new REGULAR pad polygons.
 ; Detached source polygons survive a ROOT TOP-LEVEL open, never a nested open.
-load("D:/001DIY/005lib/01AIEDA/library_maintenance/20261025_pc_shared/public0010_nil_route_stub_bundle13_v1/public0010_nil_route_stub_repair_v1.il")
+load("D:/005lib/01AIEDA/library_maintenance/20261025_pc_shared/public0010_nil_route_stub_bundle13_v1/public0010_nil_route_stub_repair_v1.il")
 procedure(pc25Step(message)
  fprintf(pc25StepPort "%s\n" message) drain(pc25StepPort))
 procedure(pc25Poly(f p)

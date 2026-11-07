@@ -1,6 +1,6 @@
 ﻿from pathlib import Path
 import json,hashlib
-R=Path(r'D:\001DIY\005lib\01AIEDA');H=R/'learning/examples/lessonHI_38_50_20261021';P=H/'engineering_mcu/plans';N=R/'learning/notes/lessonHI_mcu_20261021.md'
+R=Path(r'D:\005lib\01AIEDA');H=R/'learning/examples/lessonHI_38_50_20261021';P=H/'engineering_mcu/plans';N=R/'learning/notes/lessonHI_mcu_20261021.md'
 text='''
 
 ## 17. 2026-10-22 后半程：手动门户、布局比较与尚未通过的条件

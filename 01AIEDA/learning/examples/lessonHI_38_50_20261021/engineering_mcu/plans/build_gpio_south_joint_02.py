@@ -1,5 +1,5 @@
 ﻿import pathlib,json,sys,math,hashlib
-R=pathlib.Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu');H=R.parent;P=R/'plans';sys.path.insert(0,str(H/'scripts'));from routing_geometry import *
+R=pathlib.Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu');H=R.parent;P=R/'plans';sys.path.insert(0,str(H/'scripts'));from routing_geometry import *
 p=load(P/'GPIO_south_joint_fanout_01.json');p['batchId']='GPIO_south_joint_fanout_02';p['status']='ENGINEERED_SOURCE_GROUP_PENDING_NATIVE_DRC_REFERENCE'
 ops=p['operations'];by={o['id']:o for o in ops}
 by['SOUTH_SOURCE_30_VIA']['xy']=[39.7,21.7];by['SOUTH_SOURCE_30_NECK']['points']=[[39.75,22.75],[39.75,21.75],[39.7,21.7]];p['partialEndpoints']['PA9_UART_TX']['xy']=[39.7,21.7]

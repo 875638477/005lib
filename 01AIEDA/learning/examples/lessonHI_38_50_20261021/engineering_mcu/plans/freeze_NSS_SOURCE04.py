@@ -1,5 +1,5 @@
 ﻿import pathlib,json
-P=pathlib.Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu\plans');q=json.loads((P/'NSS_pullup_local_relayout_03.json').read_text());q['batchId']='NSS_pullup_local_relayout_04_SOURCE_ONLY';q['status']='FROZEN_SOURCE_AND_LOCAL_PULLUP_LAYOUT_PENDING_NATIVE'
+P=pathlib.Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu\plans');q=json.loads((P/'NSS_pullup_local_relayout_03.json').read_text());q['batchId']='NSS_pullup_local_relayout_04_SOURCE_ONLY';q['status']='FROZEN_SOURCE_AND_LOCAL_PULLUP_LAYOUT_PENDING_NATIVE'
 q['operations']=[o for o in q['operations'] if o['id'] not in ['NSS03_DELETE_STAR_BOTTOM_STEM','NSS03_DELETE_UNUSED_STAR_VIA','NSS03_MAIN_V3_TOP_FEED'] and not(o['type']=='deleteSegment' and o['net']=='V3V3' and o['layer']=='BOTTOM')]
 for v,ops in q['variantOperations'].items():
  for o in ops:

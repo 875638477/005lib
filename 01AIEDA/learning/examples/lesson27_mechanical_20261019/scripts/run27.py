@@ -1,6 +1,6 @@
 import pathlib,os,subprocess,json,hashlib,datetime,sys,shutil
-B=pathlib.Path(r'D:/001DIY/005lib/01AIEDA/learning/examples/lesson27_mechanical_20261019')
-R=pathlib.Path(r'D:/001DIY/005lib/01AIEDA')
+B=pathlib.Path(r'D:/005lib/01AIEDA/learning/examples/lesson27_mechanical_20261019')
+R=pathlib.Path(r'D:/005lib/01AIEDA')
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest().upper()
 for d in ['source','library','scripts','logs','runtime','readback']: (B/d).mkdir(parents=True,exist_ok=True)
 inputs=[

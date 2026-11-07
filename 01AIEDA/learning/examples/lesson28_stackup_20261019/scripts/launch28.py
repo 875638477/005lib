@@ -6,7 +6,7 @@ p=argparse.ArgumentParser()
 p.add_argument('--mode',choices=['create','readonly','edit'],required=True)
 p.add_argument('--board',required=True);p.add_argument('--script',required=True);p.add_argument('--log',required=True)
 a=p.parse_args()
-root=pathlib.Path(r'D:\001DIY\005lib\01AIEDA').resolve()
+root=pathlib.Path(r'D:\005lib\01AIEDA').resolve()
 board=pathlib.Path(a.board).resolve();script=pathlib.Path(a.script).resolve();log=pathlib.Path(a.log).resolve()
 for v in [board,script,log]:
     assert v.is_relative_to(root),'Outside learning root'

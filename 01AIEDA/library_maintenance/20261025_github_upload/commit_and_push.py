@@ -13,7 +13,7 @@ from datetime import datetime, timezone
 
 TASK = Path(__file__).resolve().parent
 REPO = TASK / "repository"
-SOURCE_LOG = Path(r"D:\001DIY\005lib\01AIEDA\library_maintenance\20261025_github_upload")
+SOURCE_LOG = Path(r"D:\005lib\01AIEDA\library_maintenance\20261025_github_upload")
 REL_LOG = Path("01AIEDA/library_maintenance/20261025_github_upload")
 GIT = TASK / "tools/mingit/cmd/git.exe"
 GH = TASK / "tools/gh/bin/gh.exe"

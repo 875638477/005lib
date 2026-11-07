@@ -103,7 +103,7 @@ del *.PCBPreview /s
 del *.SchPreview /s
 del *.pcbdoc_viewstate /s
 
-copy D:\001DIY\005lib\01env\BOM.txt .\
-copy D:\001DIY\005lib\01env\reports.txt .\
+copy D:\005lib\01env\BOM.txt .\
+copy D:\005lib\01env\reports.txt .\
 
 exit

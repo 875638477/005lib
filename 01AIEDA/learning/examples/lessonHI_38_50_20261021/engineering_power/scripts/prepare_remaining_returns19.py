@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,copy,math
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');P=R/'engineering_power'
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');P=R/'engineering_power'
 for v in ['2L','4L']:
  q=json.loads((P/f'source/RIGHT11_UART03_virtual_{v}.json').read_text(encoding='utf-8'))
  b=next(x for x in q['operations'] if x['id']=='RIGHT_BOOT_DIRECT_TOP');b['points']=[[46.8,27.65],[47.27,27.18],[52.8984,27.18],[52.8984,28]]

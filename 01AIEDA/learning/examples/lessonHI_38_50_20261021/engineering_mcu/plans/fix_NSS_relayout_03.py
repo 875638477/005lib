@@ -1,5 +1,5 @@
 ﻿import pathlib,json,math
-P=pathlib.Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu\plans');q=json.loads((P/'NSS_pullup_local_relayout_01.json').read_text());
+P=pathlib.Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu\plans');q=json.loads((P/'NSS_pullup_local_relayout_01.json').read_text());
 for c in q['placementChanges']:
  if c['ref']=='R23':c['xy']=[33.5,32]
 for o in q['operations']:

@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,hashlib
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power');p=json.loads((R/'RIGHT10_source_joint_v4.json').read_text());old=json.loads((R/'RIGHT10_source_joint_v3.json').read_text());oldop={o['id']:o for o in old['operations']};p['batchId']='RIGHT10_source_joint_v5';p['placementChanges']=old['placementChanges']
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power');p=json.loads((R/'RIGHT10_source_joint_v4.json').read_text());old=json.loads((R/'RIGHT10_source_joint_v3.json').read_text());oldop={o['id']:o for o in old['operations']};p['batchId']='RIGHT10_source_joint_v5';p['placementChanges']=old['placementChanges']
 restore={'RIGHT_VSS47_CAP_GROUND','RIGHT_VDD48_CAP','RIGHT_C15_COMMON_GND','RIGHT_R28_GND_TOP'}
 p['operations']=[oldop[o['id']] if o['id'] in restore else o for o in p['operations'] if o['id']!='RIGHT_C16_GND_BRANCH']
 for a in p['anchors']:

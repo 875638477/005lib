@@ -1,5 +1,5 @@
 from pathlib import Path
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
 s=(R/'scripts/edit_pilotHI_v2.il').read_text()
 s=s.replace('routes ret a b c gnd shape path void graph)','routes ret a b c gnd shape path void graph seg rippedPoints rippedWidth beforeCount afterCount)')
 needle='  unless(equal(axlDBFindByName(\'net "V3V3")->unconnected initialUnc) error("Reroute changed V3V3 required joins\\n"))'

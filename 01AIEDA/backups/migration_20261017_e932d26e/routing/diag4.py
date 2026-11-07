@@ -1,6 +1,6 @@
 # bidirectional flood fill for UART2_RX with full bottom data
 from collections import deque
-src = open("D:/001DIY/005lib/01AIcadence/routing/route_all3.py").read()
+src = open("D:/005lib/01AIcadence/routing/route_all3.py").read()
 src = src.split("rx = route(")[0]
 ns = {}
 exec(src, ns)

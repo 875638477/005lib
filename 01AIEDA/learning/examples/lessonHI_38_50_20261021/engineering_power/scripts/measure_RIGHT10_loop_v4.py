@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,math,sys
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power');sys.path.insert(0,str(R.parent/'tooling/packages'))
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power');sys.path.insert(0,str(R.parent/'tooling/packages'))
 from shapely.geometry import Polygon
 oldv=[[44.25,29.75],[45.05,29.75],[45.45,30.15],[46.5,30.3]];oldg=[[44.25,29.25],[45.05,29.25],[45.45,28.85],[46.5,28.7252]]
 p=json.loads((R/'RIGHT10_source_joint_v4.json').read_text());op={o['id']:o for o in p['operations']};newv=op['RIGHT_VDD48_NECK']['points']+op['RIGHT_VDD48_CAP']['points'][1:2];ng=op['RIGHT_VSS47_NECK']['points']+op['RIGHT_VSS47_CAP_GROUND']['points'][1:];newg=ng[:ng.index([47.95,28.7252])+1]

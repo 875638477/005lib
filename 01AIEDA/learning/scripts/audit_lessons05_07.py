@@ -1,6 +1,6 @@
 """Final archive audit; does not start EDA software."""
 import pathlib,json,hashlib,re,csv,datetime
-R=pathlib.Path(r'D:\001DIY\005lib\01AIEDA')
+R=pathlib.Path(r'D:\005lib\01AIEDA')
 def read(p):return p.read_text(encoding='utf-8-sig')
 def J(p):return json.loads(read(p))
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest().upper()

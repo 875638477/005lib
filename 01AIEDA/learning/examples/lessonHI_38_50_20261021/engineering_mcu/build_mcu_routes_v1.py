@@ -1,5 +1,5 @@
 import pathlib,json,hashlib,shutil,datetime,math,sys,os
-B=pathlib.Path(r"D:\001DIY\005lib\01AIEDA");G=B/"learning/examples/lessonG_30_37_20261020";R=B/"learning/examples/lessonHI_38_50_20261021/engineering_mcu"
+B=pathlib.Path(r"D:\005lib\01AIEDA");G=B/"learning/examples/lessonG_30_37_20261020";R=B/"learning/examples/lessonHI_38_50_20261021/engineering_mcu"
 for x in ("source","runtime","plans","review"):(R/x).mkdir(parents=True,exist_ok=True)
 os.environ["TMP"]=os.environ["TEMP"]=str(R/"runtime")
 inputs=[B/"EDA.md",B/"\u8bfe\u7a0b\u7d22\u5f15.md",B/"learning/notes/record_location_rules.md",B/"learning/notes/lessonG_mcu_20261020.md",B/"learning/notes/lessonG_30_37_20261020.md",G/"inventory/normalized_actual_2L.json",G/"inventory/normalized_actual_4L.json",G/"engineering_mcu/local_copper_independent_final_review.json",G/"current/G_4L_LAYOUT_v1.brd",G/"current/G_2L_LAYOUT_v1.brd"]

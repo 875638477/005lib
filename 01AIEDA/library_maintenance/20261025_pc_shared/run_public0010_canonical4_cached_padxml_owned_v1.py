@@ -7,7 +7,7 @@ Native success is not equivalence: complete manufacturing XML review follows.
 """
 from pathlib import Path
 import argparse,hashlib,importlib.util,json,os,shutil,subprocess,time,xml.etree.ElementTree as E
-M=Path(__file__).parent;CAD=Path(r'C:\Program0\cadence\SPB172');PUBLIC=Path(r'D:\001DIY\005lib')
+M=Path(__file__).parent;CAD=Path(r'C:\Program0\cadence\SPB172');PUBLIC=Path(r'D:\005lib')
 NAMES=['smd_o360x300p0s10','smd_o400x640p0s10','smd_o500x400p0s10','pad_1_1d3']
 sha=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest().upper();jr=lambda p:json.loads(Path(p).read_text('utf-8-sig'))
 def need(ok,msg):

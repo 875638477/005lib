@@ -1,6 +1,6 @@
 ﻿from pathlib import Path
 import json,hashlib,stat,subprocess,sys
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest().upper()
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest().upper()
 s=(R/'scripts/compile_batchHI_v22.py').read_text();s=s.replace("R/'scripts/batchHI_exact_ripup_v2.il',il]","R/'scripts/batchHI_exact_ripup_v2.il',R/'scripts/batchHI_route_probe_v1.il',il]");(R/'scripts/compile_batchHI_v23.py').write_text(s,encoding='utf8')
 for v in ['2L','4L']:
  old=json.loads((R/f'native_work/source_b015_{v}_try03/guard_configuration.json').read_text());work=R/f'native_work/source_b015_{v}_try04';work.mkdir(exist_ok=False);scratch=work/'input.brd'

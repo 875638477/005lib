@@ -1,6 +1,6 @@
 ﻿from pathlib import Path
 import hashlib,json,re,csv,collections,datetime
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonJK_51_59_20261022');N=R.parent.parent/'notes/lessonJK_native56_20261022.md';sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest().upper()
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonJK_51_59_20261022');N=R.parent.parent/'notes/lessonJK_native56_20261022.md';sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest().upper()
 s=N.read_text(encoding='utf-8-sig');s=s.replace('固定铜线/过孔/铜形、原 CSet/net/class/Film/层叠、symdef 与机械数据','过孔/铜形、原 CSet/net/class/Film/层叠、symdef 与机械数据；固定手工线段另由实际 route_geometry/role/CAM 独立对比闭合（见下方空采样勘误）')
 s+='''
 

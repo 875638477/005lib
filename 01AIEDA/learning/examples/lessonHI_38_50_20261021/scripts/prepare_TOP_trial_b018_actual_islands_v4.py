@@ -1,6 +1,6 @@
 ﻿from pathlib import Path
 import json,hashlib,subprocess,sys,shutil
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest().upper()
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest().upper()
 helper=(R/'scripts/batchHI_dynamic_void_and_ground_trial_v2.il').read_text();helper=helper.replace('polygon differs\\n"))) shape))','polygon differs\\n")))\n  when(equal(id "B018_APP_TOP_TRIAL") hiRemoveActualUnconnectedTopFragments(f shape)) shape))')
 helper+='''
 procedure(hiRemoveActualUnconnectedTopFragments(f mother)

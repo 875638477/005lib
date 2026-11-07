@@ -4,7 +4,7 @@ import hashlib
 import json
 import tkinter
 
-ROOT = Path(r"D:\001DIY\005lib\01AIEDA\learning")
+ROOT = Path(r"D:\005lib\01AIEDA\learning")
 EXAMPLE = ROOT / "examples" / "lesson12_capture"
 HELPER = ROOT / "scripts" / "c12_helpers.tcl"
 EXAMPLE.mkdir(parents=True, exist_ok=True)

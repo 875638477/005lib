@@ -1,5 +1,5 @@
 import pathlib,json
-R=pathlib.Path(r"D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu")
+R=pathlib.Path(r"D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu")
 p=json.loads((R/"plans/mcu_critical_routes_v4.json").read_text(encoding="utf-8"));p["status"]="CANDIDATE_V5_NO_OVERLAP_OR_SUB020_IN_COMPLETE_LOCAL_SCREEN_NATIVE_RULES_PENDING"
 for o in p["operations"]:
  if o["id"]=="C24_APP_GND":o["xy"]=[34.4,35.7]

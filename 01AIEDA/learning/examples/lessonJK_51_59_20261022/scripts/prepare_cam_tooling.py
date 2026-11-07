@@ -1,5 +1,5 @@
 import pathlib,json,urllib.request,hashlib,zipfile,sys
-J=pathlib.Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonJK_51_59_20261022')
+J=pathlib.Path(r'D:\005lib\01AIEDA\learning\examples\lessonJK_51_59_20261022')
 W=J/'tooling/wheels';P=J/'tooling/packages';W.mkdir(parents=True,exist_ok=True);P.mkdir(parents=True,exist_ok=True)
 M=[]
 for name in ['gerbonara','rtree','click']:

@@ -1,5 +1,5 @@
 ﻿from pathlib import Path
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
 p=R/'scripts/batchHI_exact_ripup_v2.il';s=p.read_text();a=s.index('   if(equal(type "deleteVia")');b=s.index('   unless(length(matches)==1',a);s=s[:a]+'''   if(equal(type "deleteVia") then matches=list(hiUniqueVia(net geom value)) else matches=hiFindExactManualLine(net layer geom value))
 '''+s[b:]
 s='''procedure(hiFindExactManualLine(net layer points width)

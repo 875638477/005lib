@@ -1,5 +1,5 @@
 ﻿import pathlib,json,sys,math,hashlib
-R=pathlib.Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu');H=R.parent;P=R/'plans';sys.path.insert(0,str(H/'scripts'));from routing_geometry import *
+R=pathlib.Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu');H=R.parent;P=R/'plans';sys.path.insert(0,str(H/'scripts'));from routing_geometry import *
 refs=[('GPIO_PB12',25,37.25,[37,21.25]),('GPIO_PB13',26,37.75,[37.5,20.75]),('GPIO_PB14',27,38.25,[38,21.25]),('GPIO_PB15',28,38.75,[38.5,20.7]),('USB_ATTACH_N',29,39.25,[39,21.2]),('PA9_UART_TX',30,39.75,[39.5,21.7]),('PA10_UART_RX',31,40.25,[40,20.5])]
 ops=[];ends={}
 for net,pin,x,xy in refs:

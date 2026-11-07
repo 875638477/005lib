@@ -1,6 +1,6 @@
 ﻿from pathlib import Path
 import json,hashlib
-M=Path(r'D:\001DIY\005lib\01AIEDA\library_maintenance\20261025_pc_shared')
+M=Path(r'D:\005lib\01AIEDA\library_maintenance\20261025_pc_shared')
 x=json.loads((M/'global_suffix_intent_overrides_v2.json').read_text(encoding='utf-8'))
 x['supersedes']='global_suffix_intent_overrides_v2.json (zero-drill SMD variants are ordinarySMT without functional TH or corruption inference)'
 x['overrides']=[r for r in x['overrides'] if r['anomaly_kind']=='PAD_NAME_COLLISION']

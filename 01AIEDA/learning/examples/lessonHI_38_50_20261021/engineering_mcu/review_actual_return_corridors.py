@@ -1,5 +1,5 @@
 import pathlib,json,sys,math,datetime
-R=pathlib.Path(r"D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu");H=R.parent
+R=pathlib.Path(r"D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu");H=R.parent
 sys.path.insert(0,str(H/"tooling/packages"));sys.path.insert(0,str(R))
 from shapely.geometry import LineString,Point
 from review_usb_native_paths import copper_ground,sha

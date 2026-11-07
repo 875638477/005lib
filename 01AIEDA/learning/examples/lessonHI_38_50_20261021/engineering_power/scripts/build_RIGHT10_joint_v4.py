@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,math,hashlib
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power');p=json.loads((R/'RIGHT10_source_joint_v3.json').read_text());p['batchId']='RIGHT10_source_joint_v4';tops={a['net'] for a in p['anchors'] if a['pin']%2==0};p['operations']=[o for o in p['operations'] if not(any(o['id']=='RIGHT_'+n+'_VIA' or o['id']=='RIGHT_'+n+'_BOTTOM_ANCHOR' for n in tops))]
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power');p=json.loads((R/'RIGHT10_source_joint_v3.json').read_text());p['batchId']='RIGHT10_source_joint_v4';tops={a['net'] for a in p['anchors'] if a['pin']%2==0};p['operations']=[o for o in p['operations'] if not(any(o['id']=='RIGHT_'+n+'_VIA' or o['id']=='RIGHT_'+n+'_BOTTOM_ANCHOR' for n in tops))]
 for a in p['anchors']:
  if a['net'] in tops:a['via']=None;a['anchorLayer']='TOP';a['anchor']=[47.6,27.8] if a['net']=='GPIO_PB9' else [46.8,round(a['pin']*.5+5.65,4)];a['conservativePadCenterToFlare_mm']=2.1414213562;a['effectivePadEdgeToFlareUpper_mm']=1.5414213562
  else:a['anchor']=[46.8,a['anchor'][1]]

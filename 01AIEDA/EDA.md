@@ -29,19 +29,19 @@ C:\Program0\cadence\LicenseManager172
 
 C:\Program0\cadence\SPBData172\pcbenv
 
-D:\001DIY\005lib\01AIEDA 是 ai接管cadence 路径文件 待验证
+D:\005lib\01AIEDA 是 ai接管cadence 路径文件 待验证
 
-D:\001DIY\005lib\01brdlib  pcb库路径文件
+D:\005lib\01brdlib  pcb库路径文件
 
-D:\001DIY\005lib\01captureLib 原理图库路径
+D:\005lib\01captureLib 原理图库路径
 
-D:\001DIY\005lib\01env  环境变量 快捷方式路径
+D:\005lib\01env  环境变量 快捷方式路径
 
-D:\001DIY\005lib\01Pad_lib 焊盘库路径
+D:\005lib\01Pad_lib 焊盘库路径
 
-D:\001DIY\005lib\01Psm_lib 封装库路径
+D:\005lib\01Psm_lib 封装库路径
 
-D:\001DIY\005lib\01script_file 用脚本的路径
+D:\005lib\01script_file 用脚本的路径
 
 C:\Program0\SumatraPDF\SumatraPDF.exe  是pdf阅读器的路径
 
@@ -59,11 +59,11 @@ CADENCE 17.2电路设计与仿真 从入门到精通 云课版 (李鹏) (z-libra
 
 
 
-`D:/001DIY/005lib/01AIEDA` 是全部公共库维护的统一工作与记录入口。公共库的创建、修改、尺寸/几何合并、删除、检查及恢复记录，统一放在 `library_maintenance/`，按日期和任务分目录；维护过程中产生的脚本、中间物、清单、日志、验证证据和备份同步归档，并更新本入口。
+`D:/005lib/01AIEDA` 是全部公共库维护的统一工作与记录入口。公共库的创建、修改、尺寸/几何合并、删除、检查及恢复记录，统一放在 `library_maintenance/`，按日期和任务分目录；维护过程中产生的脚本、中间物、清单、日志、验证证据和备份同步归档，并更新本入口。
 
 
 
-本次两轮焊盘/封装库整理已统一归档，见[2026-10-25焊盘与封装维护记录](library_maintenance/20261025_pad_psm_merge/README.txt)及[库维护总索引](library_maintenance/INDEX.txt)。按实际尺寸和完整几何合并，C/R/L开头封装保持；数字0402/0603/0805带后缀封装的删除清单、兼容旧名映射和原生验证可直接查看。2026-10-25按用户指示删除重复的汇总备份ZIP；删除前26476个原件的大小和SHA256重新核验全部一致，两轮原始记录树及三套原始恢复目录保留，详见[ZIP核验与删除记录](library_maintenance/20261025_github_upload/README_backup_removal.txt)。历史归档清单与验证文件仅代表删除前状态。 GitHub当前正确位置为[001Diy/005lib](https://github.com/875638477/001Diy/tree/main/005lib)：D:/001DIY对应001Diy仓库根，D:/001DIY/005lib对应仓库内005lib子目录，9个01目录位于005lib下。以本机最新目录为准更新此子目录并清理旧项，仓库外层文件保留；见[路径纠正记录](library_maintenance/20261025_github_destination_fix/README.txt)。此前[上传记录](library_maintenance/20261025_github_upload/README.txt)中的独立005lib仓库地址属于历史错误位置。
+本次两轮焊盘/封装库整理已统一归档，见[2026-10-25焊盘与封装维护记录](library_maintenance/20261025_pad_psm_merge/README.txt)及[库维护总索引](library_maintenance/INDEX.txt)。按实际尺寸和完整几何合并，C/R/L开头封装保持；数字0402/0603/0805带后缀封装的删除清单、兼容旧名映射和原生验证可直接查看。2026-10-25按用户指示删除重复的汇总备份ZIP；删除前26476个原件的大小和SHA256重新核验全部一致，两轮原始记录树及三套原始恢复目录保留，详见[ZIP核验与删除记录](library_maintenance/20261025_github_upload/README_backup_removal.txt)。历史归档清单与验证文件仅代表删除前状态。 GitHub当前正确位置为[001Diy/005lib](https://github.com/875638477/005lib/tree/main)：D:/001DIY对应001Diy仓库根，D:/001DIY/005lib对应仓库内005lib子目录，9个01目录位于005lib下。以本机最新目录为准更新此子目录并清理旧项，仓库外层文件保留；见[路径纠正记录](library_maintenance/20261025_github_destination_fix/README.txt)。此前[上传记录](library_maintenance/20261025_github_upload/README.txt)中的独立005lib仓库地址属于历史错误位置。
 
 
 
@@ -144,7 +144,7 @@ CADENCE 17.2电路设计与仿真 从入门到精通 云课版 (李鹏) (z-libra
 
 
 
-**统一学习目录：D:\001Diy\005lib\01AIEDA。** 学习计划放在本文开头，本库保留通用学习内容、工具和既有课程练习及证据。实际工程的所有工作材料均按对应工程根保存；本轮目录分离不改变无关课程进度与开放项。
+**统一学习目录：D:\005lib\01AIEDA。** 学习计划放在本文开头，本库保留通用学习内容、工具和既有课程练习及证据。实际工程的所有工作材料均按对应工程根保存；本轮目录分离不改变无关课程进度与开放项。
 
 
 
@@ -644,7 +644,7 @@ Cadence 支持自动化。不能将其原生工程不便直接按文本修改，
 
 - 本次工作目录：D:\001DIY\023USB\08UsbIPDapLink。
 
-- 用户指定的记录文件：D:\001Diy\005lib\01AIEDA\EDA.md。
+- 用户指定的记录文件：D:\005lib\01AIEDA\EDA.md。
 
 - 环境信息只作为本次会话快照，后续操作应重新确认当前软件与工程状态。
 
@@ -938,7 +938,7 @@ Codex 技能由 SKILL.md 及可选 references、scripts、assets 等资源组成
 
 
 
-推荐以 D:\001Diy\005lib\01AIEDA 作为资料的统一整理目录，按需要设置操作手册、脚本、关键截图、示例工程及技能等子目录。**这是讨论中的建议，目前没有创建这些子目录或新增技能。**
+推荐以 D:\005lib\01AIEDA 作为资料的统一整理目录，按需要设置操作手册、脚本、关键截图、示例工程及技能等子目录。**这是讨论中的建议，目前没有创建这些子目录或新增技能。**
 
 
 
@@ -1038,7 +1038,7 @@ Codex 技能由 SKILL.md 及可选 references、scripts、assets 等资源组成
 
 - 将当前学习计划放在 EDA.md 开头。
 
-- 将学习资料、记录、脚本和练习成果统一到 D:\001Diy\005lib\01AIEDA。
+- 将学习资料、记录、脚本和练习成果统一到 D:\005lib\01AIEDA。
 
 - 用户询问 native pipe 找不到的含义：它是 Codex Windows 桌面控制工具与本机控制服务的通信通道未连接，不是已确认的 Cadence 程序或工程文件缺失；具体原因未确定。
 
@@ -1110,7 +1110,7 @@ Codex 技能由 SKILL.md 及可选 references、scripts、assets 等资源组成
 
 
 
-- 旧 D:\001DIY\005lib\01AIcadence 目录的桥接、watcher 和 exchange 关键路径均不存在，现有资料实际位于 01AIEDA。
+- 旧 D:\005lib\01AIcadence 目录的桥接、watcher 和 exchange 关键路径均不存在，现有资料实际位于 01AIEDA。
 
 - 本轮发现 31 个文本脚本/操作文档含旧目录引用，采用完整 ASCII 目录段替换为 01AIEDA；迁移前原字节保存在 backups 下，逐文件变更及哈希见迁移清单。
 
@@ -1384,7 +1384,7 @@ eda_l04_smd_1000x1500.pad（3648 字节）、eda_l04_two_pin_training.dra（6555
 
 
 
-用户要求补全将要学习的全部课程，并将索引从 learning 移到 01AIEDA 根目录。本轮确认实际文件为 D:\001DIY\005lib\01AIEDA\课程索引.md，原 learning 下同名文件不存在。已在根目录补全 60 课主线、5 个按需进阶专题、每课主要内容/验收/状态及已有记录链接。覆盖库与 Capture、MCU/电源/滤波/接口原理图、布局、两层/四层逐段走线、SI/PI/EMI 基本设计要求、生产输出、综合工程、实物闭环及资料迁移。三文字层原点和默认高度 1 mm 已纳入封装验收。第 5 课及以后仍为计划，本轮没有执行这些后续课程。
+用户要求补全将要学习的全部课程，并将索引从 learning 移到 01AIEDA 根目录。本轮确认实际文件为 D:\005lib\01AIEDA\课程索引.md，原 learning 下同名文件不存在。已在根目录补全 60 课主线、5 个按需进阶专题、每课主要内容/验收/状态及已有记录链接。覆盖库与 Capture、MCU/电源/滤波/接口原理图、布局、两层/四层逐段走线、SI/PI/EMI 基本设计要求、生产输出、综合工程、实物闭环及资料迁移。三文字层原点和默认高度 1 mm 已纳入封装验收。第 5 课及以后仍为计划，本轮没有执行这些后续课程。
 
 
 
@@ -1472,7 +1472,7 @@ eda_l04_smd_1000x1500.pad（3648 字节）、eda_l04_two_pin_training.dra（6555
 
 
 
-D:\001DIY\005lib\01env\drill*.txt 是对应光绘层信息/脚本。本轮只读盘点13份并保存各文件原始SHA、铜Film/ETCH映射；未执行、未改模板或快捷方式。第7四层练习实际读回TOP-L2-L3-BOTTOM。
+D:\005lib\01env\drill*.txt 是对应光绘层信息/脚本。本轮只读盘点13份并保存各文件原始SHA、铜Film/ETCH映射；未执行、未改模板或快捷方式。第7四层练习实际读回TOP-L2-L3-BOTTOM。
 
 
 
@@ -1500,7 +1500,7 @@ D:\001DIY\005lib\01env\drill*.txt 是对应光绘层信息/脚本。本轮只读
 
 
 
-用户已要求所有学习资料集中于 D:\001DIY\005lib\01AIEDA。本次仍在 C:\Users\Administrator\AppData\Local\Temp 创建了中转脚本、JSON输入包、笔记草稿和子任务审查文件；工具变更列表显示其中6个文件，用户据此指出目录不一致。
+用户已要求所有学习资料集中于 D:\005lib\01AIEDA。本次仍在 C:\Users\Administrator\AppData\Local\Temp 创建了中转脚本、JSON输入包、笔记草稿和子任务审查文件；工具变更列表显示其中6个文件，用户据此指出目录不一致。
 
 
 

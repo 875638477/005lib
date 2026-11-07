@@ -1,6 +1,6 @@
 import pathlib,shutil,json,importlib.util,xml.etree.ElementTree as E,copy,hashlib
 p=pathlib.Path(r'D:/001DIY/004computer/lga1700/13shared_libraries_pc_20261025/w/pcb_migration');s=importlib.util.spec_from_file_location('b',p/'run_pc_native_audit.py');b=importlib.util.module_from_spec(s);s.loader.exec_module(b)
-m=pathlib.Path(r'D:/001DIY/005lib/01AIEDA/library_maintenance/20261025_pc_shared');r=m/'via_reopen13';r.mkdir(exist_ok=False)
+m=pathlib.Path(r'D:/005lib/01AIEDA/library_maintenance/20261025_pc_shared');r=m/'via_reopen13';r.mkdir(exist_ok=False)
 protected={};files=list((m/'via_new_stage').glob('*.pad'));assert len(files)==3
 for f in files:protected[str(f)]=b.sha(f);shutil.copyfile(f,r/f.name)
 env=b.envfor(r);run=b.launch([b.CAD/'tools/bin/padstack_editor.exe','-xo','*.pad'],r,env,60,'reexport');assert run['exit_code']==0

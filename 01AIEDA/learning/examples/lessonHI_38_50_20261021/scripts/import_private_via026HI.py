@@ -1,6 +1,6 @@
 ﻿from pathlib import Path
 import json,os,subprocess,shutil,hashlib,datetime
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');B=R/'native/private_padstacks';old=B/'hi_via026_c052_tented.pxml';p=B/'hi_via026_c052_tent.pxml';p.write_text(old.read_text().replace('hi_via026_c052_tented','hi_via026_c052_tent'),encoding='utf8')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');B=R/'native/private_padstacks';old=B/'hi_via026_c052_tented.pxml';p=B/'hi_via026_c052_tent.pxml';p.write_text(old.read_text().replace('hi_via026_c052_tented','hi_via026_c052_tent'),encoding='utf8')
 log=R/'logs/private_via026_import01';log.mkdir(exist_ok=False);env=os.environ.copy()
 for key,sub in [('TEMP','tmp'),('TMP','tmp'),('ALLEGRO_PCBENV','pcbenv')]:
  (log/sub).mkdir(exist_ok=True);env[key]=str(log/sub)

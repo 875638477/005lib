@@ -78,7 +78,7 @@ for key,row in A.items():
   for prop in props:
    if str(prop[0])=='LIBRARY_PATH':
     val=str(prop[1]).lower().replace('\\','/');
-    if not val.startswith('d:/001diy/005lib/'):private.append({'target':key,'path':val})
+    if not val.startswith('D:/005lib/'):private.append({'target':key,'path':val})
  if key in public:
   p=public[key];y=native['public',key].signature();exact=x['signature']==y['signature'] and not x['issues'] and not y['issues']
   results.append({'name':key,'category':'NEW_TARGET_FULL_COLD_PUBLIC_NATIVE_EXACT','exact':exact,'actual':x,'reference':y,
@@ -89,7 +89,7 @@ for key,row in A.items():
   pad_guard=[]
   for attrs,props in actual.nodes.values():
    if attrs.get('objType')!='padstack':continue
-   pad=Path(r'D:\001DIY\005lib\01Pad_lib')/(str(attrs['name'])+'.pad')
+   pad=Path(r'D:\005lib\01Pad_lib')/(str(attrs['name'])+'.pad')
    expected=oldguard.get(str(pad).casefold())
    pad_guard.append({'path':str(pad),'old_public_sha256':expected,'current_sha256':sha(pad) if pad.is_file() else None})
   assert all(x['old_public_sha256'] and x['old_public_sha256']==x['current_sha256'] for x in pad_guard),('Retained publicPAD changed since original full compatibility proof',key,pad_guard)

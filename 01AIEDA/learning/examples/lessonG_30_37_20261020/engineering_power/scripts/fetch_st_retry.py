@@ -1,6 +1,6 @@
 from pathlib import Path
 import urllib.request, json, hashlib, sys
-B=Path(r'D:\001DIY\005lib\01AIEDA')
+B=Path(r'D:\005lib\01AIEDA')
 R=B/'learning/examples/lessonG_30_37_20261020/engineering_power'
 urls=['https://www.st.com/content/ccc/resource/technical/document/datasheet/06/1d/48/9c/6c/20/4a/b2/CD00050750.pdf/files/CD00050750.pdf/jcr%3Acontent/translations/en.CD00050750.pdf','https://www.st.com/resource/en/datasheet/usblc6-2.pdf']
 results=[]

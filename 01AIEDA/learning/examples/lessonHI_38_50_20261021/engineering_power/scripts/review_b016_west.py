@@ -1,6 +1,6 @@
 from pathlib import Path
 import sys,json,math,hashlib
-H=Path(r'D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021');sys.path.insert(0,str(H/'scripts'));from routing_geometry import *
+H=Path(r'D:/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021');sys.path.insert(0,str(H/'scripts'));from routing_geometry import *
 O=H/'engineering_power';src=H/'review/PROVISIONAL_UNSAVED_b016_2L_try09.json';n=load(src);w=load(O/'N40_2L_networks.json');r=load(O/'N40_2L_rules.json');p=load(O/'N40_2L_policy.json');s=CopperScene(n,w,r,p);xy=[35.8,20.5];bridge=[[35.8,21.95],xy];checks=[]
 for layer,g,isvia in [('TOP',LineString(bridge).buffer(.3),False),('TOP',Point(xy).buffer(.3,quad_segs=32),True),('BOTTOM',Point(xy).buffer(.3,quad_segs=32),True)]:
  for a in s.obstacles:

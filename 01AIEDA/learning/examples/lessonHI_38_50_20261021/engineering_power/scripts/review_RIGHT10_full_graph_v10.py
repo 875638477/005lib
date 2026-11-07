@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,sys,math,hashlib
-H=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');R=H/'engineering_power';sys.path.insert(0,str(H/'tooling/packages'));from shapely.geometry import Point,LineString,box
+H=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');R=H/'engineering_power';sys.path.insert(0,str(H/'tooling/packages'));from shapely.geometry import Point,LineString,box
 v=sys.argv[1] if len(sys.argv)>1 else '2L';f=R/f'RIGHT10_FULL_{v}_v10.json';p=json.loads(f.read_text());b=json.loads((H/f'inventory/checkpoints/USB_aux_{v}_b014/normalized.json').read_text());nets={a['net'] for a in p['anchors']};items=[];links=[];pins={};newids=set()
 def add(net,layer,geom,label,new=False):
  i=len(items);items.append(dict(net=net,layer=layer,g=geom,label=label,new=new));return i

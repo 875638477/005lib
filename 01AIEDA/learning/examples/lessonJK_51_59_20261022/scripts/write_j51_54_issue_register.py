@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,csv,sys,math,hashlib,datetime,html
-R=Path(r'D:/001DIY/005lib/01AIEDA');H=R/'learning/examples/lessonHI_38_50_20261021';J=R/'learning/examples/lessonJK_51_59_20261022';A=J/'audits'
+R=Path(r'D:/005lib/01AIEDA');H=R/'learning/examples/lessonHI_38_50_20261021';J=R/'learning/examples/lessonJK_51_59_20261022';A=J/'audits'
 def ld(p):return json.loads(Path(p).read_text(encoding='utf-8-sig'))
 def dump(p,d):Path(p).write_text(json.dumps(d,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 s=ld(A/'j51_consistency_and_drc.json');nets=ld(A/'j51_all69_net_matrix.json')['rows'];proj=ld(A/'j52_actual_reference_projection.json')['rows'];domains=ld(A/'j53_actual_power_domains.json')['domains'];issues=[]

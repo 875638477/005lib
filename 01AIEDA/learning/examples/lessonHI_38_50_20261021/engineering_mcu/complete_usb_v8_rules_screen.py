@@ -1,5 +1,5 @@
 import pathlib,json
-R=pathlib.Path(r"D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu")
+R=pathlib.Path(r"D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu")
 u=json.loads((R/"plans/usb_critical_routes_v8.json").read_text(encoding="utf-8"))
 u["sourceEscapeException2L"]={"group":"HI_USB_J2_SOURCE_ESCAPE","layer":"TOP","polygon":[[38.95,7.25],[39.55,7.25],[39.55,8.55],[38.95,8.55]],"classPair":["HI2L_USB_FS_S","HI2L_USB_AUX_S"],"copyFrom":"HI2L_S_CLASSCLASS_10","changes":{"smdpin_line":.20},"preserved":"Allotherfieldsandglobal.5 USB-vsUSB_AUX remain; only2LlocalTOPsourceescape","actualTrigger":"J2.B7DMverticalx39.25 versusCC1(A5)pad actual.25<global.5. Copperitselfhasordinary.20margin, no globalreduction."}
 u["electricalBudgetCandidate"]["native2L"]={"phase_mm":3.2757,"max_uncoupled_DP_mm":11.5394,"max_uncoupled_DM_mm":8.2637,"connectorClone4_13p5Covers":True}

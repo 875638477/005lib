@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,copy,math,sys
-H=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');R=H/'engineering_power';sys.path.insert(0,str(H/'scripts'));from routing_geometry import CopperScene,Point,Polygon,LAYERS
+H=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');R=H/'engineering_power';sys.path.insert(0,str(H/'scripts'));from routing_geometry import CopperScene,Point,Polygon,LAYERS
 sys.path.insert(0,str(R/'scripts'));from cadence_poly import conservative_plane
 v=sys.argv[1] if len(sys.argv)>1 else '2L';p=json.loads((R/f'RIGHT10_FULL_{v}_v8.json').read_text());pol=json.loads((R/f'RIGHT10_full_policy_{v}_v8.json').read_text());b=json.loads((R/f'source/RIGHT10_long_{v}_b014_virtual.json').read_text());nw=json.loads((H/f'inventory/checkpoints/USB_aux_{v}_b014/networks.json').read_text());rules=json.loads((H/f'inventory/checkpoints/USB_aux_{v}_b014/base_net_rules.json').read_text())
 for d in pol['pendingDeleteVias']:

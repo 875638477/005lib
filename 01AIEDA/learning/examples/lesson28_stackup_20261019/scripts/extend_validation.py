@@ -1,5 +1,5 @@
 from pathlib import Path
-B=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lesson28_stackup_20261019')
+B=Path(r'D:\005lib\01AIEDA\learning\examples\lesson28_stackup_20261019')
 p=B/'scripts'/'validate28.py';s=p.read_text()
 marker="eq('2L source mask default Dk explicitly unqualified'"
 at=s.index(marker)

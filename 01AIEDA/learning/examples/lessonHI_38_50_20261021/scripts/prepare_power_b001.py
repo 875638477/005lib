@@ -1,6 +1,6 @@
 from pathlib import Path
 import json
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
 p=R/'engineering_power/power_critical_paths_01.json';d=json.loads(p.read_text())
 d['batchId']='power_4L_b001';d['variant']='4L';d['sourceExpectedSHA256']='2D4A146A61F92AE6459C9E855AB086ED47B42360409608D8A12E30BB7EA21526'
 d['constraintOperations']=[]

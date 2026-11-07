@@ -1,5 +1,5 @@
 $ErrorActionPreference='Stop'
-$repairRoot='D:\001DIY\005lib\01AIEDA\learning\staging\lga1700_pcb_repair_20261023'
+$repairRoot='D:\005lib\01AIEDA\learning\staging\lga1700_pcb_repair_20261023'
 $auditRoot=Join-Path $repairRoot 'xml_equivalence_audit'
 function Compare-AuditTable($fileName,[string[]]$columns=@()) {
  $paths=@((Join-Path $auditRoot "before\$fileName"),(Join-Path $auditRoot "after\$fileName"))

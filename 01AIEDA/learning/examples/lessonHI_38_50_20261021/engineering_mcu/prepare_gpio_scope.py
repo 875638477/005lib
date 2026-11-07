@@ -1,5 +1,5 @@
 import pathlib,json,hashlib
-R=pathlib.Path(r"D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu");H=R.parent
+R=pathlib.Path(r"D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu");H=R.parent
 n=json.loads((H/"inventory/checkpoints/usb_esd_4L_b008/normalized.json").read_text(encoding="utf-8"));nw=json.loads((H/"inventory/checkpoints/usb_esd_4L_b008/networks.json").read_text(encoding="utf-8"));pol=json.loads((H/"plans/ordinary_policy_4L_v5.json").read_text(encoding="utf-8"));terms=[]
 for q in nw["nets"]:
  if q["net"].startswith("GPIO_"):

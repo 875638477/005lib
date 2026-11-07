@@ -8,10 +8,10 @@
     "-safe",
     "-nographic",
     "-s",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson09_qfn_qfp_20261018\\scripts\\board_create.scr",
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lesson09_qfn_qfp_20261018\\scripts\\board_create.scr",
     "-p",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson09_qfn_qfp_20261018\\logs\\board_create",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson09_qfn_qfp_20261018\\library\\l09_placement_4layer.brd"
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lesson09_qfn_qfp_20261018\\logs\\board_create",
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lesson09_qfn_qfp_20261018\\library\\l09_placement_4layer.brd"
   ],
   "completed": true,
   "exitCode": 0,

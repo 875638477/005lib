@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,hashlib,re,datetime,urllib.parse
-R=Path(r'D:\001DIY\005lib\01AIEDA');J=R/'learning/examples/lessonJK_51_59_20261022'
+R=Path(r'D:\005lib\01AIEDA');J=R/'learning/examples/lessonJK_51_59_20261022'
 def dump(p,d):p.write_text(json.dumps(d,ensure_ascii=False,indent=2),encoding='utf8')
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest().upper()
 manifests=[J/'native/native56_artifact_manifest.json',J/'audits/j51_54_artifact_manifest.json',J/'audits/j55_57_artifact_manifest.json',J/'audits/jk_release_gate_manifest.json',J/'review/independent_K58/artifact_manifest.json',J/'review/independent_newstack/artifact_manifest.json',J/'audits/jk_newstack4L_identity_manifest.json']

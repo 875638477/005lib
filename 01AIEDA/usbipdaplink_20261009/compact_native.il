@@ -66,7 +66,7 @@ procedure(AI_groupMove(name refs area delta angle origin)
 
 AI_log=outfile("D:/001DIY/023USB/08UsbIPDapLink/02pcb/compact_layout/compact_move_log.txt")
 AI_mark=axlDBTransactionStart()
-AI_ok=errset(load("D:/001DIY/005lib/01AIEDA/usbipdaplink_20261009/compact_moves.il") t)
+AI_ok=errset(load("D:/005lib/01AIEDA/usbipdaplink_20261009/compact_moves.il") t)
 if(AI_ok then
   axlDBTransactionCommit(AI_mark)
   fprintf(AI_log "SHAPE_UPDATE %L\n" axlShapeDynamicUpdate(nil t))

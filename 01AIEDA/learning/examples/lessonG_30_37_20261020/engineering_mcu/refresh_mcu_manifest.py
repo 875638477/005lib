@@ -1,6 +1,6 @@
 import pathlib,re,json,hashlib,datetime
-R=pathlib.Path(r"D:\001DIY\005lib\01AIEDA\learning\examples\lessonG_30_37_20261020\engineering_mcu")
-note=pathlib.Path(r"D:\001DIY\005lib\01AIEDA\learning\notes\lessonG_mcu_20261020.md")
+R=pathlib.Path(r"D:\005lib\01AIEDA\learning\examples\lessonG_30_37_20261020\engineering_mcu")
+note=pathlib.Path(r"D:\005lib\01AIEDA\learning\notes\lessonG_mcu_20261020.md")
 text=note.read_text(encoding="utf-8-sig")
 old="仍待主任务原生证据：全部80件布局/高度/机械/引脚与原基线一致，局部铜/过孔/实际地平面读回，三对去耦真实连通与当前规则、USB走廊、HSE/ADC路径预审及全局布局冻结。后续完整布线/参考连续性、晶体实测/ADC精度/热/USB工艺释放、GUI均保持各自待验，不用DRC=0代替。"
 new="统一布局阶段的本组24件/96pin已在第8节补上两板原生读回及独立复核；全部80件布局/高度/机械/引脚保持由主任务全板报告负责。尚待单列局部铜/过孔/实际地平面读回、三对去耦真实连通与短颈/最小区域规则，HSE/ADC仍为布局及走廊预审。后续完整布线/参考连续性、晶体实测/ADC精度/热/USB工艺释放、GUI均保持各自待验，不用DRC=0代替。"

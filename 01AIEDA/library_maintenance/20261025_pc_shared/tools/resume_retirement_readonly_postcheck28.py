@@ -3,7 +3,7 @@ Never calls plan_assets/apply, never unlinks or modifies a public entry.
 """
 from pathlib import Path
 import copy,hashlib,importlib.util,json,os
-M=Path(r'D:\001DIY\005lib\01AIEDA\library_maintenance\20261025_pc_shared')
+M=Path(r'D:\005lib\01AIEDA\library_maintenance\20261025_pc_shared')
 W=M/'public_retirement_all_confirmed_stage13_v2'
 JOURNAL_SHA='8FA12693BA28254F7FACC9A345515B6301DC25B435F553F7DFD70A248FF3C796'
 GUARD_SHA='C2835B5651C473873A8664AC68520E32795B3D09E8BBF0134AE5BA13BA6DBBEC'

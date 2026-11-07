@@ -1,5 +1,5 @@
 import json,pathlib,hashlib,copy,math
-ROOT=pathlib.Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
+ROOT=pathlib.Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
 def load(p): return json.loads((ROOT/p).read_text(encoding='utf8'))
 def save(p,x): (ROOT/p).write_text(json.dumps(x,ensure_ascii=False,indent=2),encoding='utf8')
 def digest(p): return hashlib.sha256((ROOT/p).read_bytes()).hexdigest().upper()

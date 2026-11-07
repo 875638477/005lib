@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,csv,re
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');s=(R/'scripts/normalize_HI_actual_v5.py').read_text();ns={'json':json,'re':re};exec(s[s.index('def sx('):s.index('symbols=')],ns);sx=ns['sx'];rows=lambda p:list(csv.DictReader(p.open(encoding='utf8'),delimiter='\t',quotechar='\0'))
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');s=(R/'scripts/normalize_HI_actual_v5.py').read_text();ns={'json':json,'re':re};exec(s[s.index('def sx('):s.index('symbols=')],ns);sx=ns['sx'];rows=lambda p:list(csv.DictReader(p.open(encoding='utf8'),delimiter='\t',quotechar='\0'))
 def cs(B,domain):return {(x['cset'],x['layer']):dict(sx(x['values'])) for x in rows(B/(domain+'_csets.tsv'))}
 D={'status':'B016_BOTH_NATIVE_CSET_FIELD_DIFF_VALIDATED','variants':{}}
 for v,t in [('2L','12'),('4L','05')]:

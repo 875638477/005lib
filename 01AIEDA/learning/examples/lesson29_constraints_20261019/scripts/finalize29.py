@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,hashlib,html,sys,re
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lesson29_constraints_20261019')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lesson29_constraints_20261019')
 s=json.loads((R/'constraint_spec.json').read_text())
 s.update(status='APPLIED_SAVED_REOPENED_DRC_CHALLENGE_PROVEN',finalBoard='native/F29_CONSTRAINTS_v3.brd',finalReadback='logs/read_final02',validation='validation.json',finalBoardSHA256=hashlib.sha256((R/'native/F29_CONSTRAINTS_v3.brd').read_bytes()).hexdigest().upper())
 s['profile_applicability']='Four-layer lesson28 JLC04161H-7628 target only; not fabrication released. Not the OSH Park2layer profile:0.15mm neck is below that process0.1524mm published minimum.2layer requires separate constraints.'
@@ -55,7 +55,7 @@ tx(40,993,'Native data preview, not a Cadence UI screenshot. Full sources, failu
 svg.append('</svg>')
 out='\n'.join(svg)
 (R/'constraint_overview.svg').write_text(out,encoding='utf8')
-sys.path.insert(0,r'D:\001DIY\005lib\01AIEDA\learning\tools\pymupdf_1_28_2')
+sys.path.insert(0,r'D:\005lib\01AIEDA\learning\tools\pymupdf_1_28_2')
 import fitz
 doc=fitz.open(stream=out.encode(),filetype='svg')
 doc[0].get_pixmap(matrix=fitz.Matrix(1,1)).save(R/'constraint_overview.png')

@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,sys,math
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');sys.path.insert(0,str(R/'tooling/packages'))
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');sys.path.insert(0,str(R/'tooling/packages'))
 from shapely.geometry import LineString,Point,box
 points=[[46.8,27.65],[47.15,27.3],[52.8984,27.3],[52.8984,28]]
 geom=LineString(points).buffer(.1,cap_style=1,join_style=1);rows=[]

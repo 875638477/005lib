@@ -1,5 +1,5 @@
 from pathlib import Path
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
 s=(R/'scripts/adapt_usb_esd06aHI.py').read_text().replace('usb_critical_routes_v6.json','usb_critical_routes_v8.json').replace('b006a.json','b008.json')
 needle=" sc='NC_USB_FS_S' if v=='4L' else 'HI2L_USB_FS_S'"
 s=s.replace(needle,''' constraints.append({'type':'ecsetCopy','name':'HI_E_USB_CONNECTOR_'+v,'copyFrom':'E_USB_FS_BUDGET' if v=='4L' else 'HI2L_E_USB_BUDGET','pair':'DP_USB_CONNECTOR','values':{'Differential_Pair_Phase_Tolerance':'4 MM','Differential_Pair_Max_Uncoupled_Length':'13.5 MM'}})

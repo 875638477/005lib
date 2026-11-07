@@ -3,7 +3,7 @@ from pathlib import Path
 import hashlib,json,zipfile
 
 M=Path(__file__).resolve().parent
-ROOT=Path('D:/001DIY/005lib/01brdlib').resolve()
+ROOT=Path('D:/005lib/01brdlib').resolve()
 GUARD=M/'public_olb_final13_published13/PUBLIC_GUARD_AFTER_EXACT13_OLB.json'
 OUT=M/'original_public_four_brd_backup13'
 NAMES=('00012.brd','0010.brd','006.brd','008.brd')

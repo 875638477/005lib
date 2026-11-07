@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,math,sys,hashlib
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power');sys.path.insert(0,str(R.parent/'tooling/packages'));from shapely.geometry import Polygon
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power');sys.path.insert(0,str(R.parent/'tooling/packages'));from shapely.geometry import Polygon
 p=json.loads((R/'RIGHT10_FULL_2L_v10.json').read_text());ops={o['id']:o for o in p['operations']};ov=[[44.25,29.75],[45.05,29.75],[45.45,30.15],[46.5,30.3]];og=[[44.25,29.25],[45.05,29.25],[45.45,28.85],[46.5,28.7252]];nv=ops['RIGHT_VDD48_NECK']['points']+ops['RIGHT_VDD48_CAP']['points'][1:2];ng=ops['RIGHT_VSS47_NECK']['points']+ops['RIGHT_VSS47_CAP_GROUND']['points'][1:];ng=ng[:ng.index([47.3,28.7252])+1]
 def ln(a):return sum(math.dist(x,y) for x,y in zip(a,a[1:]))
 def info(v,g):return dict(VDDcenterline_mm=ln(v),VSScenterline_mm=ln(g),pairedCenterlineTotal_mm=ln(v)+ln(g),closedPlanarCenterlineLoopArea_mm2=Polygon(v+g[::-1]).area)

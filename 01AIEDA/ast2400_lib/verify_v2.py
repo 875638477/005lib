@@ -3,7 +3,7 @@ from pathlib import Path
 import re
 from collections import Counter
 
-cap = sorted(Path(r"D:\001DIY\005lib\AUTOlib\ul_AST2400\OrcadCaptureXML").glob("*.xml"))[-1]
+cap = sorted(Path(r"D:\005lib\AUTOlib\ul_AST2400\OrcadCaptureXML").glob("*.xml"))[-1]
 t = cap.read_text(encoding="utf-8")
 print("file", cap.name)
 print("LibParts", t.count("<LibPart>"), "pins", t.count("<SymbolPinScalar>"))

@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,hashlib,datetime
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
 s=(R/'scripts/launchHI_600.py').read_text().replace('import argparse,pathlib,subprocess,os,json,datetime,hashlib','import argparse,pathlib,subprocess,os,json,datetime,hashlib,shutil')
 needle="env.update(TEMP=str(log/'tmp'),TMP=str(log/'tmp'),ALLEGRO_PCBENV=str(log/'pcbenv'))"
 s=s.replace(needle,needle+"""

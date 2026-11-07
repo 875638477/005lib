@@ -5,7 +5,7 @@ Flat CSV checks follow Spreadsheets skill; no workbook or factory angle invented
 from pathlib import Path
 import csv, json, re, hashlib, collections, datetime
 
-R = Path(r'D:/001DIY/005lib/01AIEDA')
+R = Path(r'D:/005lib/01AIEDA')
 J = R / 'learning/examples/lessonJK_51_59_20261022'
 OLD = J / 'logs/native_j55_4L_reopen_01'
 NEW = J / 'logs/native_newstack_4L_reopen_01'

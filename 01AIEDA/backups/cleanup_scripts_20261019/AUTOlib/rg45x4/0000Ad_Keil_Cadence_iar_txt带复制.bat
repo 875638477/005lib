@@ -108,7 +108,7 @@ del *.db /s
 ::假定winrar软件安装于c盘默认目录下，如自定义目录安装，请修改该行
 ::set "rar=C:\Program0\WinRAR1\WinRAR.exe"
 ::默认对当前批处理文件所在文件夹及子文件夹操作，也可以自定义文件夹根目录
-::set srcdir="D:\001DIY\005lib\01env"
+::set srcdir="D:\005lib\01env"
 ::set srcdir="E:\批量解压"
 ::winrar命令行只支持对.rar操作
 ::GZ代表压缩包的后缀名
@@ -118,10 +118,10 @@ del *.db /s
 ::set WinRarDir=%Program0%\WinRAR1
 
 :: x即解压。-y是说如果遇到提示说是否覆盖，选择yes
-start  /wait  ""  "C:\Program0\WinRAR1\WinRAR.exe"  x  -l -y  D:\001DIY\005lib\01env\01env.rar  D:\001DIY\005lib\01env\
+start  /wait  ""  "C:\Program0\WinRAR1\WinRAR.exe"  x  -l -y  D:\005lib\01env\01env.rar  D:\005lib\01env\
 
-copy D:\001DIY\005lib\01env\BOM.txt .\
-copy D:\001DIY\005lib\01env\reports.txt .\
-copy D:\001DIY\005lib\01env\drill4noet.txt .\
+copy D:\005lib\01env\BOM.txt .\
+copy D:\005lib\01env\reports.txt .\
+copy D:\005lib\01env\drill4noet.txt .\
 
 exit

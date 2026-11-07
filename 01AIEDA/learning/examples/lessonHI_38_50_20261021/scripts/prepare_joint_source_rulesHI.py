@@ -1,7 +1,7 @@
 from pathlib import Path
 import json,runpy,hashlib,sys,argparse
 sys.dont_write_bytecode=True
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');sys.path.insert(0,str(R/'tooling/packages'))
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');sys.path.insert(0,str(R/'tooling/packages'))
 from shapely.geometry import Polygon,Point
 Builder=runpy.run_path(str(R/'scripts/scoped_rule_builderHI.py'))['ScopedRuleBuilder']
 p=argparse.ArgumentParser();p.add_argument('--variant',choices=['2L','4L'],required=True);p.add_argument('--right',required=True);p.add_argument('--north',required=True);p.add_argument('--south',required=True);p.add_argument('--left',required=True);p.add_argument('--output',required=True);a=p.parse_args();v=a.variant

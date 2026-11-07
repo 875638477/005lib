@@ -1,6 +1,6 @@
 from pathlib import Path
 import argparse,json,csv,hashlib,subprocess,shutil
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
 P=argparse.ArgumentParser();P.add_argument('--log',required=True);P.add_argument('--variant',choices=['4L','2L'],required=True);P.add_argument('--tag',required=True);a=P.parse_args()
 B=Path(a.log);assert B.resolve().is_relative_to(R.resolve())
 key=a.variant;C=R/'inventory/checkpoints'/a.tag;C.mkdir(parents=True,exist_ok=True)

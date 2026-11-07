@@ -1,6 +1,6 @@
 from pathlib import Path
 import sys,json,math,copy
-H=Path(r'D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021');sys.path.insert(0,str(H/'scripts'));from routing_geometry import load
+H=Path(r'D:/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021');sys.path.insert(0,str(H/'scripts'));from routing_geometry import load
 P=H/'engineering_mcu/plans';O=H/'engineering_power';
 for v in ['2L','4L']:
  n=load(P/f'GPIO_future_{v}_36_snapshot.json');w=load(P/f'GPIO_future_{v}_36_networks.json');r=load(P/f'GPIO_future_{v}_36_rules.json');p=load(P/f'GPIO_future_{v}_36_policy.json');ops=[]

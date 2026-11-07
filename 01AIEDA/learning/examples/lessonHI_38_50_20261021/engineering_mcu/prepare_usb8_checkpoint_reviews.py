@@ -1,5 +1,5 @@
 import pathlib,json
-R=pathlib.Path(r"D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu")
+R=pathlib.Path(r"D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu")
 f=R/"review_usb_native_paths.py";s=f.read_text(encoding="utf-8");s=s.replace('start=key("TOP",pin(n,*src));end=key("TOP",pin(n,*dst));','resolve=lambda s: s if isinstance(s[0],(int,float)) else pin(n,*s)\n start=key("TOP",resolve(src));end=key("TOP",resolve(dst));')
 s=s.replace('paths={name:graph_path(n,*args) for name,args in requests.items()}','requests.update({"DP_PULLUP_TEE":("USB_DP",(40.455 if variant=="4L" else 40.905,14.6),("R11","2")),"A_DP_TO_SERIES":("USB_DP",("J2","A6"),("R5","2")),"A_DM_TO_SERIES":("USB_DM",("J2","A7"),("R6","2")),"B_DP_TO_SERIES":("USB_DP",("J2","B6"),("R5","2")),"B_DM_TO_SERIES":("USB_DM",("J2","B7"),("R6","2"))})\n paths={name:graph_path(n,*args) for name,args in requests.items()}')
 f.write_text(s,encoding="utf-8")

@@ -1,6 +1,6 @@
 from pathlib import Path
 import csv,json,re,math,hashlib
-B=Path(r'D:\001DIY\005lib\01AIEDA');G=B/'learning/examples/lessonG_30_37_20261020';R=G/'engineering_power'
+B=Path(r'D:\005lib\01AIEDA');G=B/'learning/examples/lessonG_30_37_20261020';R=G/'engineering_power'
 source=json.loads((B/'learning/examples/de_15_26_20261019/integrated_circuit.json').read_text(encoding='utf-8'))
 inventory=json.loads((G/'inventory/inventory_4L.json').read_text(encoding='utf-8'))
 src={x['ref']:x for x in source['components']};inv={x['ref']:x for x in inventory['components']}

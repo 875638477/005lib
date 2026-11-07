@@ -1,5 +1,5 @@
 import pathlib,json,csv,re,hashlib,math
-R=pathlib.Path(r'D:/001DIY/005lib/01AIEDA')
+R=pathlib.Path(r'D:/005lib/01AIEDA')
 B=R/'learning/examples/lesson28_stackup_20261019'
 O=R/'learning/examples/lesson28_stackup_20261019_review';O.mkdir(parents=True,exist_ok=True)
 P=R/'learning/examples/lesson27_mechanical_20261019'

@@ -2,7 +2,7 @@
 from pathlib import Path
 from collections import defaultdict
 import json,hashlib
-M=Path(r'D:\001DIY\005lib\01AIEDA\library_maintenance\20261025_pc_shared');OUT=M/'global_canonical_publish_v1';OUT.mkdir(exist_ok=True)
+M=Path(r'D:\005lib\01AIEDA\library_maintenance\20261025_pc_shared');OUT=M/'global_canonical_publish_v1';OUT.mkdir(exist_ok=True)
 P=M/'global_suffix_inventory_v1/PSM_NATIVE_AUDIT_PLAN.json';plan=json.loads(P.read_text(encoding='utf-8'));frozen={r['stem'].lower():r for r in plan['representatives']};guard=json.loads(Path(plan['public_guard_manifest']).read_text(encoding='utf-8'))['files'];gf={x['path'].lower():x for x in guard}
 sha=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest().upper()
 reviews={e['stem'].lower():e for p in (M/'global_suffix_native_review_v3').glob('e*_SCHEMA_GEOMETRY.json') for e in json.loads(p.read_text(encoding='utf-8'))}

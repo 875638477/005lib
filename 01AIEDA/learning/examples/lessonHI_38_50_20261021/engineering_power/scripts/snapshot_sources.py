@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,shutil,hashlib
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power')
 E=R.parent.parent
 items=[
 (E/'lessonG_30_37_20261020/engineering_power/sources/tps54202_revC.pdf','tps54202_revC.pdf','https://www.ti.com/lit/ds/symlink/tps54202.pdf','TPS54202RevC layoutp20-21/packagep28'),

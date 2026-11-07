@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,copy,math
-H=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');R=H/'engineering_power';s=json.loads((H/'plans/GPIO_south_joint_root_v8.json').read_text());removed=[o for o in s['operations'] if o['id'] in ['SOUTH_RETURN_SWDIO','SOUTH_GND_SWDIO_BRANCH']];s['operations']=[o for o in s['operations'] if o['id'] not in ['SOUTH_RETURN_SWDIO','SOUTH_GND_SWDIO_BRANCH']];(R/'source/GPIO_south_root_v8_jointdelta02.json').write_text(json.dumps(s,indent=2),encoding='utf-8')
+H=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');R=H/'engineering_power';s=json.loads((H/'plans/GPIO_south_joint_root_v8.json').read_text());removed=[o for o in s['operations'] if o['id'] in ['SOUTH_RETURN_SWDIO','SOUTH_GND_SWDIO_BRANCH']];s['operations']=[o for o in s['operations'] if o['id'] not in ['SOUTH_RETURN_SWDIO','SOUTH_GND_SWDIO_BRANCH']];(R/'source/GPIO_south_root_v8_jointdelta02.json').write_text(json.dumps(s,indent=2),encoding='utf-8')
 for v in ['2L','4L']:
  p=json.loads((R/f'RIGHT10_FULL_{v}_v10.json').read_text());p['batchId']=f'RIGHT10_FULL_{v}_v11';p['revision'] += ' Jointservice revision11: SWCLK realBOTTOMbridge/2normalvias+2pairedground stitches; PC14BOTTOMbypass row22.7->23.7; no refmoves, SWDIOv16 kept.';p['operations']=[o for o in p['operations'] if o['id']!='RIGHT_LONG_SWCLK_0_R0']
  for o in p['operations']:

@@ -8,7 +8,7 @@ from pathlib import Path
 import re
 import sys
 
-sys.path.insert(0, 'D:/001DIY/005lib/01AIEDA/learning/tools/pymupdf_1_28_2')
+sys.path.insert(0, 'D:/005lib/01AIEDA/learning/tools/pymupdf_1_28_2')
 import pymupdf as fitz
 
 def parse_skill(value):
@@ -48,7 +48,7 @@ def same_xy(row, origin):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--base', type=Path, default=Path('D:/001DIY/005lib/01AIEDA/learning/examples/lesson05_instances'))
+    parser.add_argument('--base', type=Path, default=Path('D:/005lib/01AIEDA/learning/examples/lesson05_instances'))
     parser.add_argument('--output', type=Path, required=True)
     args = parser.parse_args()
     base = args.base.resolve()

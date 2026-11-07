@@ -1,7 +1,7 @@
 ﻿from pathlib import Path
 from collections import Counter
 import json,hashlib,csv,xml.etree.ElementTree as ET
-M=Path(r'D:\001DIY\005lib\01AIEDA\library_maintenance\20261025_pc_shared');R=Path(r'D:\001DIY\004computer\lga1700\13shared_libraries_pc_20261025');OUT=M/'global_canonical_publish_v1'
+M=Path(r'D:\005lib\01AIEDA\library_maintenance\20261025_pc_shared');R=Path(r'D:\001DIY\004computer\lga1700\13shared_libraries_pc_20261025');OUT=M/'global_canonical_publish_v1'
 sha=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest().upper()
 jr=lambda p:json.loads(Path(p).read_text(encoding='utf-8-sig'))
 names=['ao3414_sot23-3','sot23-3','ao4468_so8','sop-8-150mil','sot23_123']

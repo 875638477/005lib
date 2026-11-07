@@ -1,5 +1,5 @@
 from pathlib import Path
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonG_30_37_20261020')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonG_30_37_20261020')
 il=(R/'scripts/local_loops01.il').read_text()
 il=il.replace('35.15:24.25','35.75:24.25').replace('35.15:24.75','35.75:24.75').replace('42.75:22.15','42.75:22.75').replace('42.25:22.15','42.25:22.75').replace('44.85:29.75','44.25:29.75').replace('44.85:29.25','44.25:29.25')
 il=il.replace('f=outfile(strcat(out "/local_loops.txt"))','f=outfile(strcat(out "/local_loops.txt"))\n  gEscapeRegion(f)')

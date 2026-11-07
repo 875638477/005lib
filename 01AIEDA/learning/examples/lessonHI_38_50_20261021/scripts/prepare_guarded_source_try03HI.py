@@ -1,6 +1,6 @@
 ﻿from pathlib import Path
 import json,hashlib,stat,subprocess,sys
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest().upper()
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest().upper()
 p=R/'scripts/batchHI_exact_ripup_v2.il';s=p.read_text();s=s.replace('drain(f) drain(f) drain(f) drain(f)','drain(f)').replace('drain(f) drain(f)','drain(f)');s=s.replace('object=%L parent=%L\\n" id type net selected selected->objType','object=%L originalDescriptor=%L\\n" id type net selected spec');s=s.replace('fprintf(f "HI_EXACT_NATIVE_LIST_DELETE_RETURNED\\n") drain(f)\n    fprintf(f "HI_EXACT_NATIVE_LIST_DELETE_RETURNED\\n") drain(f)','fprintf(f "HI_EXACT_NATIVE_LIST_DELETE_RETURNED\\n") drain(f)');p.write_text(s,encoding='ascii')
 for v in ['2L','4L']:
  old=json.loads((R/f'native_work/source_b015_{v}_try02/guard_configuration.json').read_text())

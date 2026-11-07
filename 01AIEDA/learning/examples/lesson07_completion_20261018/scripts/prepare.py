@@ -1,7 +1,7 @@
 ﻿from pathlib import Path
 import json, os, subprocess, datetime,hashlib
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lesson07_completion_20261018')
-source=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lesson07_padstacks\library\eda_l07_npth_200_ko.pxml').read_text()
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lesson07_completion_20261018')
+source=Path(r'D:\005lib\01AIEDA\learning\examples\lesson07_padstacks\library\eda_l07_npth_200_ko.pxml').read_text()
 import re
 source=source.replace('eda_l07_npth_200_ko','eda_l07c_npth_200_null')
 source=re.sub(r'  <pad><type>KEEPOUT</type>.*?</pad>\n','',source)

@@ -62,7 +62,7 @@ i=i+1
 r=axlDBCreateSymbol(list("de_xal6060_2land" "PACKAGE") 200:170 nil 0.0)
 unless(r error("Isolated load failed de_xal6060_2land\n"))
 i=i+1
-unless(axlSaveDesign(?design "D:/001DIY/005lib/01AIEDA/learning/examples/de_15_26_20261019/dependencies_verified.brd" ?noMru t ?noConfirm t) error("Save failed\n"))
+unless(axlSaveDesign(?design "D:/005lib/01AIEDA/learning/examples/de_15_26_20261019/dependencies_verified.brd" ?noMru t ?noConfirm t) error("Save failed\n"))
 deDependencyRead(out)
 printf("DE_FINAL_ISOLATED_CREATE_COMPLETE %d\n" i)
 t))

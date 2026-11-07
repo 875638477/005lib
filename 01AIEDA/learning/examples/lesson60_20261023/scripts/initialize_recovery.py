@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,hashlib,datetime,shutil
-R=Path(r'D:\001DIY\005lib\01AIEDA');L=R/'learning/examples/lesson60_20261023'
+R=Path(r'D:\005lib\01AIEDA');L=R/'learning/examples/lesson60_20261023'
 for name in ['review','backups','scripts','sources','inventory','package','native','sealed_snapshots']:(L/name).mkdir(parents=True,exist_ok=True)
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest().upper()
 jk=R/'learning/examples/lessonJK_51_59_20261022'

@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,math,sys,shutil,hashlib,importlib
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');P=R/'engineering_power';p=P/'scripts/cadence_poly.py';backup=P/'scripts/cadence_poly_v2_before_coincident_arc_20261022.py'
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');P=R/'engineering_power';p=P/'scripts/cadence_poly.py';backup=P/'scripts/cadence_poly_v2_before_coincident_arc_20261022.py'
 s=p.read_text(encoding='utf-8');assert 'COINCIDENT_ARC_ENDPOINTS'not in s
 if not backup.exists():shutil.copyfile(p,backup)
 s=s.replace('ROUNDED_ARC_FLATTENED = []','ROUNDED_ARC_FLATTENED = []\nCOINCIDENT_ARC_ENDPOINTS = []')

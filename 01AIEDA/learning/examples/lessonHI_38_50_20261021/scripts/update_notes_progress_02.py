@@ -1,5 +1,5 @@
 from pathlib import Path
-P=Path(r'D:\001DIY\005lib\01AIEDA\learning\notes\lessonHI_38_50_20261021.md')
+P=Path(r'D:\005lib\01AIEDA\learning\notes\lessonHI_38_50_20261021.md')
 s=P.read_text(encoding='utf8')
 insert='''
 ### 电源批次02d与03c：已保存重开

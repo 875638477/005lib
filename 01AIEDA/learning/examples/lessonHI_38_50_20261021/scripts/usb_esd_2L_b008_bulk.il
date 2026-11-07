@@ -1,6 +1,6 @@
 procedure(hiBatchProgram()
  let((f)
-  f=outfile("D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/logs/usb_esd_2L_b008_bulk/hi_batch_execution.txt")
+  f=outfile("D:/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/logs/usb_esd_2L_b008_bulk/hi_batch_execution.txt")
   fprintf(f "HI_BATCH_DRC_BEFORE=%L\n" axlDBControl('drcEnable))
   unwindProtect(
    progn(
@@ -57,11 +57,11 @@ procedure(hiBatchProgram()
     hiVia(f "V_HI_C10_VBUS" "USB_VBUS" list(43.8 9.2016) "L28_VIA030_C060")
     hiRoute(f "ESD_VBUS_C10" "USB_VBUS" "TOP" list(list(43.8 9.2016) list(42.7 9.2016)) list(0.6))
     hiShape(f "HI_USB_TOP_REFERENCE" "GND" "TOP" list(list(37.7 4.3) list(42.2 4.3) list(42.2 6.6) list(37.7 6.6)) t list())
-    hiHSEIsolationChallengeGraph("D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/logs/usb_esd_2L_b008_bulk" list(45.45 28.85) "BOTTOM" list(list(42.2 39.8) list(44.2 39.8) list(47.8 33.5)))
+    hiHSEIsolationChallengeGraph("D:/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/logs/usb_esd_2L_b008_bulk" list(45.45 28.85) "BOTTOM" list(list(42.2 39.8) list(44.2 39.8) list(47.8 33.5)))
     t)
    progn(
     axlDBControl('drcEnable t)
     fprintf(f "HI_UNWIND_DRC_RESTORED=%L\n" axlDBControl('drcEnable))))
   unless(axlDBControl('drcEnable) error("Final DRC must be enabled\n"))
-  hiFinalize(f "D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/logs/usb_esd_2L_b008_bulk" "D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/native/HI_2L_usb_esd_2L_b008_bulk.brd" "D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/library" list(list("J2.A6" "USB_DP_MIRROR_A" t) list("J2.B6" "USB_DP_MIRROR_B" t) list("USB_DP_MIRROR_A" "USB_DP_MIRROR_B" t) list("J2.A7" "J2.B7" t) list("J2.B6" "U4.6" t) list("J2.B7" "U4.4" t) list("R5.1" "U1.33" t) list("R5.1" "R12.1" t) list("R6.1" "R13.1" t) list("U4.6" "U4.1" t) list("U4.4" "U4.3" t) list("USB_DP_TRUNK_NODE" "R11.2" t) list("R6.1" "U1.32" t) list("U4.2" "V_HI_ESD_A" t) list("ESD_U4_RETURN" "V_HI_ESD_B" t) list("C10.2" "V_HI_C10_B" t) list("U4.5" "V_HI_ESD_VBUS_LEFT" t) list("V_HI_ESD_VBUS_LEFT" "V_HI_C10_VBUS" t) list("V_HI_C10_VBUS" "C10.1" t) list("J2.A6" "U4.6" t) list("J2.B6" "U4.6" t) list("J2.A7" "U4.4" t) list("J2.B7" "U4.4" t) list("U4.1" "R5.2" t) list("U4.3" "R6.2" t) list("R11.2" "R5.2" t) list("R5.1" "U1.33" t) list("R6.1" "U1.32" t) list("U4.2" "U1.47" t) list("C10.2" "U1.47" t) list("USB_RETURN_LEFT" "HI_USB_TOP_REFERENCE" t) list("USB_RETURN_RIGHT" "HI_USB_TOP_REFERENCE" t)))
+  hiFinalize(f "D:/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/logs/usb_esd_2L_b008_bulk" "D:/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/native/HI_2L_usb_esd_2L_b008_bulk.brd" "D:/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/library" list(list("J2.A6" "USB_DP_MIRROR_A" t) list("J2.B6" "USB_DP_MIRROR_B" t) list("USB_DP_MIRROR_A" "USB_DP_MIRROR_B" t) list("J2.A7" "J2.B7" t) list("J2.B6" "U4.6" t) list("J2.B7" "U4.4" t) list("R5.1" "U1.33" t) list("R5.1" "R12.1" t) list("R6.1" "R13.1" t) list("U4.6" "U4.1" t) list("U4.4" "U4.3" t) list("USB_DP_TRUNK_NODE" "R11.2" t) list("R6.1" "U1.32" t) list("U4.2" "V_HI_ESD_A" t) list("ESD_U4_RETURN" "V_HI_ESD_B" t) list("C10.2" "V_HI_C10_B" t) list("U4.5" "V_HI_ESD_VBUS_LEFT" t) list("V_HI_ESD_VBUS_LEFT" "V_HI_C10_VBUS" t) list("V_HI_C10_VBUS" "C10.1" t) list("J2.A6" "U4.6" t) list("J2.B6" "U4.6" t) list("J2.A7" "U4.4" t) list("J2.B7" "U4.4" t) list("U4.1" "R5.2" t) list("U4.3" "R6.2" t) list("R11.2" "R5.2" t) list("R5.1" "U1.33" t) list("R6.1" "U1.32" t) list("U4.2" "U1.47" t) list("C10.2" "U1.47" t) list("USB_RETURN_LEFT" "HI_USB_TOP_REFERENCE" t) list("USB_RETURN_RIGHT" "HI_USB_TOP_REFERENCE" t)))
   t))

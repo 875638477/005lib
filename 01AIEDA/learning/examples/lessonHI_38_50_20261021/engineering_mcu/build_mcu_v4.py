@@ -1,5 +1,5 @@
 import pathlib,json,sys
-R=pathlib.Path(r"D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu")
+R=pathlib.Path(r"D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu")
 p=json.loads((R/"plans/mcu_critical_routes_v3.json").read_text(encoding="utf-8"))
 p["status"]="CANDIDATE_V4_FULL_COPPER_SCREEN_PENDING"
 p["placementChanges"][0]={"ref":"C21","xy":[39.478,36.25],"rotation":180,"purpose":"Same PlaceBound as37.7,36.25 r0 but swap pad ends: NRST39.3764,right / GND37.8016,left. Removes VDDA/ground route crossings. PlaceBound spacing is not actual body/assembly qualification."}

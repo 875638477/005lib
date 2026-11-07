@@ -1,6 +1,6 @@
 ﻿from pathlib import Path
 import json,hashlib,shutil,datetime
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');sha=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest().upper();report=json.loads((R/'review/b019_native_report.json').read_text(encoding='utf8'));assert all(b['scoped']['zeroNetCount']==65 for b in report['boards'].values())
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');sha=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest().upper();report=json.loads((R/'review/b019_native_report.json').read_text(encoding='utf8'));assert all(b['scoped']['zeroNetCount']==65 for b in report['boards'].values())
 text='''# b017—b019 原生执行记录（2026-10-22 续作）
 
 本阶段完成 North6 原生精细布线、两层/四层实际 TOP 地铜试验，以及四个右侧 MCU 脚的焊盘内接线规范化。两板各剩 7 个 South GPIO 终端连接；USB 相关原生求解与 whole-board DRC 未通过，不是完整训练板发布。

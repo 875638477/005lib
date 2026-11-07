@@ -1,6 +1,6 @@
 from pathlib import Path
 import json
-R=Path(r'D:\001DIY\005lib\01AIEDA/learning/examples/lessonHI_38_50_20261021/engineering_power')
+R=Path(r'D:\005lib\01AIEDA/learning/examples/lessonHI_38_50_20261021/engineering_power')
 d=json.loads((R/'power_paths_02.json').read_text())
 d['supersedes']='power_paths_02.json: V5_SENSE_C5_R1 TOP path crosses VIN_C2_C3; preserve old file as rejected path history'
 old=[o for o in d['operations'] if o['id']=='V5_SENSE_C5_R1'][0]

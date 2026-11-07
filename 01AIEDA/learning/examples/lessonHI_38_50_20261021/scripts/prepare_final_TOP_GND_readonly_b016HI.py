@@ -1,7 +1,7 @@
 from pathlib import Path
 import json,csv,re,hashlib,sys,copy
 sys.dont_write_bytecode=True
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');sys.path.insert(0,str(R/'tooling/packages'));from shapely.geometry import Polygon,LineString;from shapely.ops import unary_union
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');sys.path.insert(0,str(R/'tooling/packages'));from shapely.geometry import Polygon,LineString;from shapely.ops import unary_union
 sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest().upper();s=(R/'scripts/normalize_HI_actual_v5.py').read_text();ns={'json':json,'re':re};exec(s[s.index('def sx('):s.index('symbols=')],ns);sx=ns['sx'];rows=lambda p:list(csv.DictReader(p.open(encoding='utf8'),delimiter='\t',quotechar='\0'));out=R/'plans/native_prepared';out.mkdir(exist_ok=True);report={'status':'READONLY_B016_TOP_POUR_REBASE_GEOMETRY_PREPARED_NOT_EXECUTED_REBASE_AGAIN_AFTER_GPIO','variants':{}}
 for v in ['2L','4L']:
  C=R/f'inventory/checkpoints/clearance_{v}_b016_DRC_PENDING';ident=json.loads((C/'networks.json').read_text());N=json.loads((C/'normalized.json').read_text());B=Path(ident['readback']);assert sha(Path(ident['board']))==ident['sha256'];src=R/f'plans/final_TOP_GND_candidate_{v}_01.json';d=json.loads(src.read_text());original=copy.deepcopy(d);bounds=[]

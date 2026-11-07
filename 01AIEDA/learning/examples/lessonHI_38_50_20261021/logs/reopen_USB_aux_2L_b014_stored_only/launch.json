@@ -9,10 +9,10 @@
     "-nographic",
     "-readonly",
     "-s",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\scripts\\reopen_USB_aux_2L_b014_stored_only.scr",
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\scripts\\reopen_USB_aux_2L_b014_stored_only.scr",
     "-p",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\reopen_USB_aux_2L_b014_stored_only",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\native\\HI_2L_USB_aux_2L_b014.brd"
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\reopen_USB_aux_2L_b014_stored_only",
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\native\\HI_2L_USB_aux_2L_b014.brd"
   ],
   "completed": true,
   "finishUTC": "2026-10-21T18:41:08.146780+00:00",
@@ -25,8 +25,8 @@
   "readonly": true,
   "scriptSHA256": "45A30E92D263A9ADB8D5DC7EC0781E65D708A32CF30879B039762618DC3C93C8",
   "processEnvironmentOverrides": {
-    "TEMP": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\reopen_USB_aux_2L_b014_stored_only\\tmp",
-    "TMP": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\reopen_USB_aux_2L_b014_stored_only\\tmp",
-    "ALLEGRO_PCBENV": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\reopen_USB_aux_2L_b014_stored_only\\pcbenv"
+    "TEMP": "D:\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\reopen_USB_aux_2L_b014_stored_only\\tmp",
+    "TMP": "D:\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\reopen_USB_aux_2L_b014_stored_only\\tmp",
+    "ALLEGRO_PCBENV": "D:\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\logs\\reopen_USB_aux_2L_b014_stored_only\\pcbenv"
   }
 }

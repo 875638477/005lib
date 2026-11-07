@@ -1,6 +1,6 @@
 from pathlib import Path
 import sys,json,collections,math,hashlib,csv
-H=Path(r'D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021');O=H/'engineering_power'
+H=Path(r'D:/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021');O=H/'engineering_power'
 sys.path[:0]=[str(H/'scripts'),str(H/'tooling/packages')]
 from routing_geometry import *
 def key(a):return(a['net'],a['layer'],round(a['width'],7),tuple(sorted(tuple(round(v,5)for v in p)for p in a['startEnd'])))

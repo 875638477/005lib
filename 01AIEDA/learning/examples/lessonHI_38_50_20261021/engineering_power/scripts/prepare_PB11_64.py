@@ -1,6 +1,6 @@
 from pathlib import Path
 import sys,json,copy
-H=Path(r'D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021');sys.path.insert(0,str(H/'scripts'));from routing_geometry import *
+H=Path(r'D:/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021');sys.path.insert(0,str(H/'scripts'));from routing_geometry import *
 P=H/'engineering_mcu/plans';O=H/'engineering_power'
 for v in ['2L','4L']:
  n=load(P/f'GPIO_actualB016_{v}_59_snapshot.json');w=load(P/f'GPIO_actualB016_{v}_59_networks.json');r=load(P/f'GPIO_actualB016_{v}_59_rules.json');p=load(P/f'GPIO_actualB016_{v}_59_policy.json');others=[a for a in load(P/f'GPIO_TARGET63_{v}_policy.json').get('pendingOperations',[]) if a['net']!='GPIO_PB11'];p['pendingOperations']=others;s=CopperScene(n,w,r,p)

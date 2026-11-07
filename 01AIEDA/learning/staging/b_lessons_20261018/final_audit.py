@@ -1,5 +1,5 @@
 import pathlib,json,hashlib,re
-R=pathlib.Path(r'D:\001DIY\005lib\01AIEDA')
+R=pathlib.Path(r'D:\005lib\01AIEDA')
 cfg=json.loads((R/'learning/staging/b_lessons_20261018/integration_payload.json').read_text(encoding='utf-8'))
 p=R/'learning/logs/b_lessons_07_10_20261018.json'
 report=json.loads(p.read_text(encoding='utf-8'))

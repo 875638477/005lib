@@ -7,8 +7,8 @@
     "-nographic",
     "-readonly",
     "-s",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\de_15_26_20261019\\native_flow_final\\eco_readback.scr",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\de_15_26_20261019\\native_flow_final\\DE_ECO.brd"
+    "D:\\005lib\\01AIEDA\\learning\\examples\\de_15_26_20261019\\native_flow_final\\eco_readback.scr",
+    "D:\\005lib\\01AIEDA\\learning\\examples\\de_15_26_20261019\\native_flow_final\\DE_ECO.brd"
   ],
   "startUTC": "2026-10-19T03:10:24.516664+00:00",
   "pid": 5264,

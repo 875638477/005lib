@@ -1,6 +1,6 @@
 ﻿from pathlib import Path
 import json
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
 p=R/'scripts/batchHI_shapes_v3.il';s=p.read_text();body=r'''
 procedure(hiGroundPointCheck(f id xy topConnected bottomConnected)
  let((graph shapes expected actual)

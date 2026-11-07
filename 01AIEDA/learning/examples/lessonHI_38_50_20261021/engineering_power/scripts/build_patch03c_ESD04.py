@@ -1,6 +1,6 @@
 from pathlib import Path
 import json
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power')
 def save(n,o):(R/n).write_text(json.dumps(o,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
 s=json.loads((R/'power_star_03b.json').read_text())
 s['revision']='03c: native03b left/south region1.3 overrode historicalG31 outward1.3657; retain inherited1.4 only in these two local regions.'

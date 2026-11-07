@@ -1,6 +1,6 @@
 ﻿from pathlib import Path
 import json,shutil,hashlib
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');d=json.loads((R/'engineering_power/RIGHT10_source_joint_v1.json').read_text());old=d['oscillatorReferenceRework']['source'];new=d['oscillatorReference'];Q=json.dumps
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');d=json.loads((R/'engineering_power/RIGHT10_source_joint_v1.json').read_text());old=d['oscillatorReferenceRework']['source'];new=d['oscillatorReference'];Q=json.dumps
 pt=lambda p:'list('+' '.join(str(float(x)) for x in p)+')';pts=lambda pp:'list('+' '.join(pt(p) for p in pp)+')'
 body=r'''procedure(hiPolygonMatches(obj points)
  let((poly vertices actual n ok found)

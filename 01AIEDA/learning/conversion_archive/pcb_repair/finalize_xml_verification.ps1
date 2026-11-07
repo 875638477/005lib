@@ -1,5 +1,5 @@
 $ErrorActionPreference='Stop'
-$repairRoot='D:\001DIY\005lib\01AIEDA\learning\staging\lga1700_pcb_repair_20261023'
+$repairRoot='D:\005lib\01AIEDA\learning\staging\lga1700_pcb_repair_20261023'
 $ar=Join-Path $repairRoot 'xml_equivalence_audit'
 $raw=Get-Content -LiteralPath (Join-Path $ar 'verification_raw.json') -Raw | ConvertFrom-Json
 function Read-Audit($side,$file){Import-Csv -LiteralPath (Join-Path $ar "$side\$file") -Delimiter "`t"}

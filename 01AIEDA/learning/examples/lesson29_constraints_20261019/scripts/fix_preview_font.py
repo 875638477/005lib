@@ -1,6 +1,6 @@
 from pathlib import Path
 import shutil
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lesson29_constraints_20261019')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lesson29_constraints_20261019')
 p=R/'scripts/finalize29.py';s=p.read_text()
 shutil.copy2(p,R/'scripts/finalize29_v1_preview.py')
 s=s.replace("v['physical'],'spacing_cset':v['spacing']","v.get('physical',v.get('physical_cset')),'spacing_cset':v.get('spacing',v.get('spacing_cset'))")

@@ -1,5 +1,5 @@
 from pathlib import Path
-B=Path(r'D:/001DIY/005lib/01AIEDA/learning/examples/lesson27_mechanical_20261019')
+B=Path(r'D:/005lib/01AIEDA/learning/examples/lesson27_mechanical_20261019')
 p=B/'scripts/lesson27.il';s=p.read_text();(B/'logs/create05/rejected_source.il').write_text(s)
 s=s.replace('l27_npth_d200_v2','l27_npth_d200_mech')
 s=s.replace('  f=outfile(strcat(out "/package.txt"))','  axlSetSymbolType("mechanical")\n  f=outfile(strcat(out "/package.txt"))')

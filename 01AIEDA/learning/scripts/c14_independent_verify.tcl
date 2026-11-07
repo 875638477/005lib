@@ -1,7 +1,7 @@
 set ::C14DefinitionsOnly 1
-source {D:/001DIY/005lib/01AIEDA/learning/scripts/c14_propagation.tcl}
+source {D:/005lib/01AIEDA/learning/scripts/c14_propagation.tcl}
 proc ::C14Prop::verifySaved {} {
- set root {D:/001DIY/005lib/01AIEDA/learning}
+ set root {D:/005lib/01AIEDA/learning}
  set log "$root/logs/lesson14_capture_20261019/independent_natural"
  set sources [list baseline "$root/examples/lesson14_capture/run04/c14_baseline.dsn"]
  foreach mode {update_preserve relocated_preserve replace_properties} {lappend sources $mode "$root/examples/lesson14_capture/final/c14_${mode}.dsn"}

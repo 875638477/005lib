@@ -18,7 +18,7 @@ import time
 
 TASK = Path(__file__).resolve().parent
 REPO = TASK / "repository"
-SOURCE_LOG = Path(r"D:\001DIY\005lib\01AIEDA\library_maintenance\20261025_github_upload")
+SOURCE_LOG = Path(r"D:\005lib\01AIEDA\library_maintenance\20261025_github_upload")
 REL_LOG = "01AIEDA/library_maintenance/20261025_github_upload"
 GIT = TASK / "tools/mingit/cmd/git.exe"
 BASE = "6e478a7603b6adbe790ea0ad0409fba48ca27e43"

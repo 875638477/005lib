@@ -1,5 +1,5 @@
 import pathlib,json,math,hashlib,datetime
-R=pathlib.Path(r"D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu")
+R=pathlib.Path(r"D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu")
 u=json.loads((R/"plans/usb_critical_routes_v3.json").read_text(encoding="utf-8"))
 u["status"]="CANDIDATE_V4_MINIMUM_MIRROR_WITH_TRUE_U4_PCB_FLOW_2L_GAP016"
 u["commonOperations"] += [

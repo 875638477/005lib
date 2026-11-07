@@ -1,8 +1,8 @@
 from pathlib import Path
 import json,hashlib,subprocess,sys,shutil,os,datetime
-B=Path(r'D:/001DIY/005lib/01AIEDA/learning/examples/lesson28_stackup_20261019')
+B=Path(r'D:/005lib/01AIEDA/learning/examples/lesson28_stackup_20261019')
 R=B.parents[2]
-SOURCE=Path(r'D:/001DIY/005lib/01AIEDA/learning/examples/lesson27_mechanical_20261019/F27_MECHANICAL.brd')
+SOURCE=Path(r'D:/005lib/01AIEDA/learning/examples/lesson27_mechanical_20261019/F27_MECHANICAL.brd')
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest().upper()
 def launch(mode,board,scr,tag):
  log=B/'logs'/tag

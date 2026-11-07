@@ -1,5 +1,5 @@
 import pathlib,os,sys,json,subprocess,hashlib,datetime,argparse
-R=pathlib.Path(r"D:\001DIY\005lib\01AIEDA\learning\examples\lessonJK_51_59_20261022")
+R=pathlib.Path(r"D:\005lib\01AIEDA\learning\examples\lessonJK_51_59_20261022")
 C=pathlib.Path(r"C:\Program0\Cadence\SPB172\tools\bin")
 P=argparse.ArgumentParser();P.add_argument('--variant',choices=['2L','4L'],required=True);P.add_argument('--action',choices=['params','list','artwork','nctape','ncroute'],required=True);P.add_argument('--tag',required=True);P.add_argument('--board');a=P.parse_args()
 assert all(x.isalnum() or x=='_' for x in a.tag)

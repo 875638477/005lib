@@ -1,5 +1,5 @@
 import pathlib,json,math
-R=pathlib.Path(r"D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu")
+R=pathlib.Path(r"D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu")
 u=json.loads((R/"plans/usb_critical_routes_v2.json").read_text(encoding="utf-8"))
 for c in u["placementChanges"]:
  if c["ref"]=="R11":c["xy"]=[42.9764,14.6];c["rotation"]=180;c["purpose"]="DPpad2=(41.3,14.6), sourcepad1=(42.8748,14.6). Directly adjacent maintrunk: .845mm4L or.4mm2L; cannot put.94mm pad onto.41mm-centered4Lpair without short toDM."

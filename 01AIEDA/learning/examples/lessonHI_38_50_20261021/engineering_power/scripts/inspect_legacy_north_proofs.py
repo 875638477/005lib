@@ -1,6 +1,6 @@
 from pathlib import Path
 import json
-H=Path(r'D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021');O=H/'engineering_power'
+H=Path(r'D:/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021');O=H/'engineering_power'
 for v in ['2L','4L']:
  p=H/('batches/clearance_remaining_2L_b016_SH2_common_fixed.json' if v=='2L' else 'batches/clearance_remaining_4L_b016_tail_cleanup.json');q=json.loads(p.read_text());print(v,[(k,type(x).__name__,len(x) if isinstance(x,(list,dict)) else '') for k,x in q.items()]);out=[]
  def walk(x,path):

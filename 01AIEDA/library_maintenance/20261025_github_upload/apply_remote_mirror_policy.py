@@ -19,7 +19,7 @@ import subprocess
 
 
 WORK = Path(r"D:\001DIY\004computer\lga1700\git_upload_005lib_20261025")
-SOURCE = Path(r"D:\001DIY\005lib")
+SOURCE = Path(r"D:\005lib")
 REPO = WORK / "repository"
 REL_LOG = Path("01AIEDA/library_maintenance/20261025_github_upload")
 SOURCE_LOG = SOURCE / REL_LOG

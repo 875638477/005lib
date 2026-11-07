@@ -1,5 +1,5 @@
 import pathlib,sys,json,math
-H=pathlib.Path(r'D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021');sys.path.insert(0,str(H/'scripts'));from routing_geometry import *
+H=pathlib.Path(r'D:/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021');sys.path.insert(0,str(H/'scripts'));from routing_geometry import *
 
 P=H/'engineering_mcu/plans';n=load(P/'GPIO_future_2L_36_snapshot.json');w=load(P/'GPIO_future_2L_36_networks.json');r=load(P/'GPIO_future_2L_36_rules.json');p=load(P/'GPIO_future_2L_36_policy.json');scene=CopperScene(n,w,r,p)
 sel=['GPIO_PA1','GPIO_PA2','GPIO_PA3','GPIO_PC13','GPIO_PC14','GPIO_PC15'];cols=['#c12b20','#cf8515','#227b19','#722a9c','#1491aa','#cf207c'];colors=dict(zip(sel,cols));colors.update(GND='#708c71',V3V3='#dc3bac',VDDA='#c63bb8',ADC0='#08a3ab',ADC_IN='#00aeb7')
@@ -23,6 +23,6 @@ for layer in LAYERS:
   if a['net'] in sel:shapes.append(f'<text x="{pp(a["xy"])[0]}" y="{pp(a["xy"])[1]}" font-size="14" fill="black">{a["net"]}</text>')
  svg='<svg xmlns="http://www.w3.org/2000/svg" width="1960" height="980">'+''.join(shapes)+'</svg>'
  (H/f'engineering_power/readouts/north36_{layer}.svg').write_text(svg)
- sys.path.insert(0,r'D:/001DIY/005lib/01AIEDA/learning/tools/pymupdf_1_28_2')
+ sys.path.insert(0,r'D:/005lib/01AIEDA/learning/tools/pymupdf_1_28_2')
  import pymupdf
  z=pymupdf.open(stream=svg.encode(),filetype='svg');pdf=pymupdf.open(stream=z.convert_to_pdf(),filetype='pdf');pdf[0].get_pixmap().save(str(H/f'engineering_power/readouts/north36_{layer}.png'))

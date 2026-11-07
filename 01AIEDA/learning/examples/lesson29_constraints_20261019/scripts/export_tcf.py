@@ -1,5 +1,5 @@
 import pathlib,subprocess,hashlib,os,json,datetime
-R=pathlib.Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lesson29_constraints_20261019')
+R=pathlib.Path(r'D:\005lib\01AIEDA\learning\examples\lesson29_constraints_20261019')
 board=R/'native/F29_CONSTRAINTS_v3.brd'
 out=R/'exports/F29_RULES.tcf'
 log=R/'exports/techfile_run';log.mkdir(exist_ok=False);(log/'tmp').mkdir()

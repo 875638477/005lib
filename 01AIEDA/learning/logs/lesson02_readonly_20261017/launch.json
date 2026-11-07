@@ -9,13 +9,13 @@
                  "-readonly",
                  "-nographic",
                  "-s",
-                 "D:\\001DIY\\005lib\\01AIEDA\\learning\\scripts\\lesson02_readonly.scr",
+                 "D:\\005lib\\01AIEDA\\learning\\scripts\\lesson02_readonly.scr",
                  "-p",
-                 "D:\\001DIY\\005lib\\01AIEDA\\learning\\logs\\lesson02_readonly_20261017",
-                 "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson02_readonly\\demo_ver_17p2.brd"
+                 "D:\\005lib\\01AIEDA\\learning\\logs\\lesson02_readonly_20261017",
+                 "D:\\005lib\\01AIEDA\\learning\\examples\\lesson02_readonly\\demo_ver_17p2.brd"
              ],
-    "workingDirectory":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\logs\\lesson02_readonly_20261017",
-    "processOnlyAllegroPcbEnv":  "D:\\001DIY\\005lib\\01AIEDA\\learning\\logs\\lesson02_readonly_20261017\\pcbenv",
+    "workingDirectory":  "D:\\005lib\\01AIEDA\\learning\\logs\\lesson02_readonly_20261017",
+    "processOnlyAllegroPcbEnv":  "D:\\005lib\\01AIEDA\\learning\\logs\\lesson02_readonly_20261017\\pcbenv",
     "originalBoardModified":  false,
     "globalSettingsModified":  false
 }

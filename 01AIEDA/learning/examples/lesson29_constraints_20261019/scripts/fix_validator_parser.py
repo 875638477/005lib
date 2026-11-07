@@ -1,6 +1,6 @@
 from pathlib import Path
 import shutil
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lesson29_constraints_20261019')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lesson29_constraints_20261019')
 shutil.copy2(R/'scripts/validate29.py',R/'scripts/validate29_v1_parser_failed.py')
 shutil.copy2(R/'validation.json',R/'validation_v1_parser_failed.json')
 p=R/'scripts/validate29.py';s=p.read_text()

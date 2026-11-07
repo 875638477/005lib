@@ -1,6 +1,6 @@
 from pathlib import Path
 import sys,json,math,heapq,copy
-H=Path(r'D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021');O=H/'engineering_power';sys.path[:0]=[str(H/'scripts'),str(O/'scripts'),str(H/'tooling/packages')]
+H=Path(r'D:/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021');O=H/'engineering_power';sys.path[:0]=[str(H/'scripts'),str(O/'scripts'),str(H/'tooling/packages')]
 from routing_geometry import *
 import shapely,numpy as np
 cp=H/'inventory/checkpoints/padentry_2L_b019_DRC_PENDING';base=load(cp/'normalized.json');w=load(cp/'networks.json');r=load(cp/'base_net_rules.json');policy=load(O/'N49_2L_policy.json');policy['pendingOperations']=[]

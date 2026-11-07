@@ -1,5 +1,5 @@
 import pathlib,json,hashlib,datetime,re
-ROOT=pathlib.Path(r'D:\001DIY\005lib\01AIEDA')
+ROOT=pathlib.Path(r'D:\005lib\01AIEDA')
 P=ROOT/'learning/staging/b_lessons_20261018/integration_payload.json'
 cfg=json.loads(P.read_text(encoding='utf-8'))
 def sha(b):return hashlib.sha256(b).hexdigest().upper()

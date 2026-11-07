@@ -8,10 +8,10 @@
     "-safe",
     "-nographic",
     "-s",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson06_operations\\scripts\\create.scr",
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lesson06_operations\\scripts\\create.scr",
     "-p",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson06_operations\\logs\\create03",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson06_operations\\lesson06_operations.brd"
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lesson06_operations\\logs\\create03",
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lesson06_operations\\lesson06_operations.brd"
   ],
   "completed": true,
   "exitCode": 0,

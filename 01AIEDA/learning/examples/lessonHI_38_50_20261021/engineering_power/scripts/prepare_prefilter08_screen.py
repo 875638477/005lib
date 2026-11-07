@@ -1,6 +1,6 @@
 from pathlib import Path
 import shutil
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power')
 shutil.copyfile(R.parent/'plans/SPI_NSS_explicit_v3b.json',R/'source/root_SPI_NSS_explicit_v3b.json')
 s=(R/'scripts/precheck_STAR07b_V306b.py').read_text()
 s=s.replace("mcu_4L_b006/normalized.json","usb_esd_4L_b008/normalized.json")

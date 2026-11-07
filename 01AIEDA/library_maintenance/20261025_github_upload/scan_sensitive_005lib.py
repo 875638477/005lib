@@ -9,7 +9,7 @@ from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
 
-BASE = Path(r'D:\001DIY\005lib')
+BASE = Path(r'D:\005lib')
 OUT = Path(r'D:\001DIY\004computer\lga1700\git_upload_005lib_20261025')
 TEXT_EXT = {'.txt','.md','.rst','.log','.json','.jsonl','.csv','.tsv','.xml','.yaml','.yml','.ini','.cfg','.conf','.config','.env','.bat','.cmd','.ps1','.py','.pyw','.js','.ts','.jsx','.tsx','.html','.htm','.css','.scss','.c','.h','.cpp','.hpp','.java','.go','.rs','.sh','.bash','.zsh','.il','.ils','.scr','.reg','.sql','.toml','.properties','.lic','.dat','.tcl','.skill','.envrc','.gitignore','.gitattributes','.asc','.pem','.key','.pfx','.p12','.bak','.old'}
 BIN_EXT = {'.exe','.dll','.pyd','.pyc','.png','.jpg','.jpeg','.gif','.ico','.bmp','.webp','.pdf','.docx','.xlsx','.pptx','.7z','.rar','.tar','.gz','.xz','.bz2','.zst','.dra','.psm','.pad','.bsm','.ssm','.osm','.brd','.db','.db3','.dbk','.opj','.dsn','.olb','.stp','.step','.sldprt','.sldasm','.wrl','.3ds','.dwg','.dxf','.lnk','.cat','.mp4','.avi','.wav','.zip'}

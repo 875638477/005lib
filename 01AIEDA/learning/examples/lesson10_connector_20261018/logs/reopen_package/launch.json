@@ -11,10 +11,10 @@
     "-symbol",
     "package",
     "-s",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson10_connector_20261018\\scripts\\read_package.scr",
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lesson10_connector_20261018\\scripts\\read_package.scr",
     "-p",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson10_connector_20261018\\logs\\reopen_package",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson10_connector_20261018\\library\\l10_gct_usb4105_gf_a_12land.dra"
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lesson10_connector_20261018\\logs\\reopen_package",
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lesson10_connector_20261018\\library\\l10_gct_usb4105_gf_a_12land.dra"
   ],
   "pid": 1512,
   "completed_normally": true,

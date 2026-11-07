@@ -1,7 +1,7 @@
 ﻿"""Readonly feedback for exactly public0010's owned final candidate, source protected."""
 from pathlib import Path
 import argparse,hashlib,json,os,shutil,subprocess,time
-M=Path(r'D:\001DIY\005lib\01AIEDA\library_maintenance\20261025_pc_shared');R=Path(r'D:\001DIY\004computer\lga1700\13shared_libraries_pc_20261025');CAD=Path(r'C:\Program0\cadence\SPB172');SOURCE=Path(r'D:\001DIY\005lib\01brdlib\0010.brd');SOURCE_SHA='680500B07BC97F2B9D47064F83A01D0376AE43ADD486171F9B46087109E1B898'
+M=Path(r'D:\005lib\01AIEDA\library_maintenance\20261025_pc_shared');R=Path(r'D:\001DIY\004computer\lga1700\13shared_libraries_pc_20261025');CAD=Path(r'C:\Program0\cadence\SPB172');SOURCE=Path(r'D:\005lib\01brdlib\0010.brd');SOURCE_SHA='680500B07BC97F2B9D47064F83A01D0376AE43ADD486171F9B46087109E1B898'
 def need(v,m):
  if not v:raise ValueError(m)
 def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest().upper()

@@ -1,6 +1,6 @@
 from pathlib import Path
 import hashlib,json
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power'); H=R.parent
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power'); H=R.parent
 note=H.parent.parent/'notes/lessonHI_power_20261021.md'
 def item(p):return dict(path=str(p),sha256=hashlib.sha256(p.read_bytes()).hexdigest().upper(),size=p.stat().st_size)
 old=R/'artifact_manifest.json';history=R/'artifact_manifest_phase_v10_20261022.json'

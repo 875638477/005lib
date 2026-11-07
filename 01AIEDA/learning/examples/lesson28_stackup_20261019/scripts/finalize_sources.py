@@ -1,6 +1,6 @@
 from pathlib import Path
 import re,json,hashlib
-B=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lesson28_stackup_20261019')
+B=Path(r'D:\005lib\01AIEDA\learning\examples\lesson28_stackup_20261019')
 p=B/'scripts'/'validate28.py';s=p.read_text()
 s=s.replace("sources.append(('https://gct.co/connector/usb4105'","sources.append(('https://gct.co/files/drawings/usb4105.pdf'")
 mark="(B/'specification.json').write_text"
@@ -17,7 +17,7 @@ p=B/'scripts'/'lesson28.il';s=p.read_text()
 s=s.replace('"/copper_films_2.il" else "/copper_films_4.il"','"/copper_films_2_exact.il" else "/copper_films_4_exact.il"')
 p.write_text(s,encoding='ascii')
 # Check saved UTF-8 note and every local relative link.
-note=Path(r'D:\001DIY\005lib\01AIEDA\learning\notes\lesson28_stackup_20261019.md')
+note=Path(r'D:\005lib\01AIEDA\learning\notes\lesson28_stackup_20261019.md')
 text=note.read_text(encoding='utf-8')
 missing=[]
 for target in re.findall(r'\]\(([^)]+)\)',text):

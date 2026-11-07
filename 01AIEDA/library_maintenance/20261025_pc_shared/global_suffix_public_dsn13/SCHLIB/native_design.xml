@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <Design xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="C:/Program0/Cadence/SPB172/tools/capture/tclscripts/capDB/dsn.xsd">
 
-  <Defn name="D:\001DIY\005lib\01captureLib\SCHLIB.DSN" objectType="SCHEMATIC" rootName="SCHEMATIC1" useExplicitDbId="1"/>
+  <Defn name="D:\005lib\01captureLib\SCHLIB.DSN" objectType="SCHEMATIC" rootName="SCHEMATIC1" useExplicitDbId="1"/>
 
   <DefaultValues>
     <Defn/>

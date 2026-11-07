@@ -1,6 +1,6 @@
 from pathlib import Path
 import shutil
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power')
 p=R/'scripts/review_power02d.py'
 shutil.copyfile(R/'readouts/review_power02d.json',R/'readouts/review_power02d_failed_parser_v1.json')
 s=p.read_text()

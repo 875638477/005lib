@@ -1,6 +1,6 @@
 from pathlib import Path
 import json
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power')
 e=json.loads((R/'ESD_ground_routes_04.json').read_text())
 e['revision']='04b adds shortVBUSbridge as agreed withUSB route owner; no TOP data crossing'
 e['prerequisites']=[p for p in e['prerequisites'] if'VBUS U4.5->C10.1' not in p]

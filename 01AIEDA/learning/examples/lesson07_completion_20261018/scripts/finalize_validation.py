@@ -1,6 +1,6 @@
 ﻿from pathlib import Path
 import json
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lesson07_completion_20261018')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lesson07_completion_20261018')
 s=(R/'scripts/validate.py').read_text(encoding='utf-8-sig')
 s=s.replace("('create_board02','L7C_BOARD COMPLETE')","('create_board03','L7C_BOARD COMPLETE')").replace("('reopen_board','L7C_READ COMPLETE')","('reopen_board02','L7C_READ COMPLETE')").replace("read('reopen_board')","read('reopen_board02')")
 s=s.replace("result={'date':", "result={'status':'PASS_CAD_LESSON07_COMPLETION' if all(c['pass'] for c in checks) else 'FAIL_CAD_LESSON07_COMPLETION','finalBoard':str(R/'library/eda_l07c_clearance_4layer_v2.brd'),'finalSpec':str(R/'spec_v2.json'),'finalReadback':str(R/'logs/reopen_board02/readback.txt'),'date':")

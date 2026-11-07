@@ -1,5 +1,5 @@
 import pathlib
-R=pathlib.Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lesson29_constraints_20261019')
+R=pathlib.Path(r'D:\005lib\01AIEDA\learning\examples\lesson29_constraints_20261019')
 p=R/'scripts/launch29.py';s=p.read_text().replace("P.add_argument('--board',required=True)","P.add_argument('--new',action='store_true');P.add_argument('--symbol-package',action='store_true');P.add_argument('--board',required=True)")
 s=s.replace("assert board.is_file() and script.is_file()","assert script.is_file(); assert not board.exists() if a.new else board.is_file()")
 s=s.replace("before=sha(board)","before=sha(board) if board.exists() else None")

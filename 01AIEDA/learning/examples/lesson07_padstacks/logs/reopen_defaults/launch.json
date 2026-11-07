@@ -9,10 +9,10 @@
     "-nographic",
     "-readonly",
     "-s",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson07_padstacks\\scripts\\read_defaults.scr",
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lesson07_padstacks\\scripts\\read_defaults.scr",
     "-p",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson07_padstacks\\logs\\reopen_defaults",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson07_padstacks\\library\\eda_l07_padstack_coupon.dra"
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lesson07_padstacks\\logs\\reopen_defaults",
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lesson07_padstacks\\library\\eda_l07_padstack_coupon.dra"
   ],
   "completed": true,
   "exitCode": 0,

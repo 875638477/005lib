@@ -10,10 +10,10 @@
                  "-symbol",
                  "package",
                  "-s",
-                 "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\qmi8610\\scripts\\create.scr",
+                 "D:\\005lib\\01AIEDA\\learning\\examples\\qmi8610\\scripts\\create.scr",
                  "-p",
-                 "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\qmi8610\\logs\\create",
-                 "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\qmi8610\\library\\qmi8610_lga16_3d3_p0d5.dra"
+                 "D:\\005lib\\01AIEDA\\learning\\examples\\qmi8610\\logs\\create",
+                 "D:\\005lib\\01AIEDA\\learning\\examples\\qmi8610\\library\\qmi8610_lga16_3d3_p0d5.dra"
              ],
     "completed":  true,
     "scriptSHA":  "CCCF81CA8739727147F1B96B7AB3D454592612434FA7134D03AB181B1028F13C",

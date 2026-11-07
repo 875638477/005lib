@@ -1,7 +1,7 @@
 """New JK release-gate view. Preserve every inherited issue status/payload; never modify sealed reviews."""
 from pathlib import Path
 import json,csv,hashlib,datetime,collections,re
-R=Path('D:/001DIY/005lib/01AIEDA');J=R/'learning/examples/lessonJK_51_59_20261022';NOTE=R/'learning/notes/lessonJK_release_gate_20261023.md'
+R=Path('D:/005lib/01AIEDA');J=R/'learning/examples/lessonJK_51_59_20261022';NOTE=R/'learning/notes/lessonJK_release_gate_20261023.md'
 def read(p):return json.loads(Path(p).read_text(encoding='utf-8-sig'))
 def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest().upper()
 def writejson(p,d):Path(p).write_text(json.dumps(d,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')

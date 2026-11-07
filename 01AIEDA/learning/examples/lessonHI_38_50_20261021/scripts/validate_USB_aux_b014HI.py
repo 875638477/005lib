@@ -1,6 +1,6 @@
 ﻿from pathlib import Path
 import json,csv,hashlib,re
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
 report={'status':'PASS_NATIVE_USB_AUX_INTERMEDIATE_BUILD_AND_STORED_REOPEN_NOT_FINAL_RELEASE','variants':{},'limitations':['Final wholeboard full fresh DRC, complete69net routing, actual reference widths/topology and manufacturing assembly review remain pending.','No valid SI impedance or propagation results claimed; internal Field solution failed messages remain.','Fresh readbacks here deliberately read stored DRC and actual geometry/connectivity only, without claiming recalculation.']}
 for v in ['2L','4L']:
  C=R/f'inventory/checkpoints/USB_aux_{v}_b014';D=json.loads((C/'networks.json').read_text());N=json.loads((C/'normalized.json').read_text());B=R/f'logs/USB_aux_{v}_b014';F=Path(D['readback']);old=R/f'logs/reopen_SPI_external_{v}_b012_stored_only';L=json.loads((B/'launch.json').read_text());t=(B/'hi_batch_execution.txt').read_text();h=(B/'hi_hse_isolation_challenge.txt').read_text();checks=[]

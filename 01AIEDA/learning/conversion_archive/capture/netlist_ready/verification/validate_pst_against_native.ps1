@@ -1,5 +1,5 @@
 $ErrorActionPreference = 'Stop'
-$stage = 'D:\001DIY\005lib\01AIEDA\learning\staging\lga1700_migration_20261022'
+$stage = 'D:\005lib\01AIEDA\learning\staging\lga1700_migration_20261022'
 $pstDir = Join-Path $stage 'pst_export_fixed_20261023\netlist'
 $nativePath = Join-Path $stage 'native_audit_after_device_20261023\pins.tsv'
 $native = @(Import-Csv -LiteralPath $nativePath -Delimiter "`t")

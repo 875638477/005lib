@@ -50,7 +50,7 @@ def main():
 
 按冻结清单实际删除3069个旧PSM/DRA/同名self-device TXT目录项，逻辑文件大小87,476,185字节。未声称等量物理磁盘空间已释放（存在硬链接及保留归档）。其余10364个公共文件逐SHA未变，不删除共享PAD。两份已逐成员SHA/CRC回读的原别名备份归档及原4模块备份保留；需要恢复时先按BACKUP_STAGE.json定位指定文件及归档成员，解压到暂存目录核对SHA，再决定是否重新启用旧名，不要整包覆盖当前公共库。
 
-全部实际回执及当前正式身份汇总见[FINAL13_SHARED_LIBRARY_RESULT.json](verification/FINAL13_SHARED_LIBRARY_RESULT.json)。方法与脚本在D:/001DIY/005lib/01AIEDA/library_maintenance/20261025_pc_shared；历史失败/旧计划仅作留证，当前状态以本记录和README为准。旧工程、原件和既有压缩包保留。
+全部实际回执及当前正式身份汇总见[FINAL13_SHARED_LIBRARY_RESULT.json](verification/FINAL13_SHARED_LIBRARY_RESULT.json)。方法与脚本在D:/005lib/01AIEDA/library_maintenance/20261025_pc_shared；历史失败/旧计划仅作留证，当前状态以本记录和README为准。旧工程、原件和既有压缩包保留。
 '''
     write_atomic(record,text.encode('utf-8'))
     log=P/'转换记录.md';b=log.read_bytes();need('## 四十一　13版公共库统一'.encode('utf-8') not in b,'Final section already exists')
@@ -62,7 +62,7 @@ def main():
 
 本机不只处理AO3414/AO4468示例，13份公共OLB及4个PCB模块完成迁移。1067旧名在48个原生来源×8类引用实际全0后，精确删除3069个旧PSM/DRA/self-device TXT文件（87,476,185逻辑字节）；其余10364个公共文件SHA保持，公共127目标及154PAD制造对象通过。原别名ZIP、4模块原件ZIP、脚本、方法和关键校验记录保留。真实焊盘/功能/制造差异变体保留独立名称。
 
-完整过程、0010原热连接精确恢复及静态路径事实、全部79缓存ID双射、实际文件回执见[工程更改记录](./13shared_libraries_pc_20261025/工程更改记录.md)和[最终核验](./13shared_libraries_pc_20261025/verification/FINAL13_SHARED_LIBRARY_RESULT.json)。通用学习方法已更新D:/001DIY/005lib/01AIEDA及其learning/notes/public_shared_library_migration_pc_naming.md。旧11/12、01sch/02pcb、AD原件及既有归档保留；A16待布线及硬件/固件/MRC/VRM/VREF/DRC制造开放项未因本轮库归并关闭。
+完整过程、0010原热连接精确恢复及静态路径事实、全部79缓存ID双射、实际文件回执见[工程更改记录](./13shared_libraries_pc_20261025/工程更改记录.md)和[最终核验](./13shared_libraries_pc_20261025/verification/FINAL13_SHARED_LIBRARY_RESULT.json)。通用学习方法已更新D:/005lib/01AIEDA及其learning/notes/public_shared_library_migration_pc_naming.md。旧11/12、01sch/02pcb、AD原件及既有归档保留；A16待布线及硬件/固件/MRC/VRM/VREF/DRC制造开放项未因本轮库归并关闭。
 '''
     write_atomic(log,b+addition.encode('utf-8'));need(log.read_bytes().startswith(b),'Conversion history prefix changed')
     result=dict(status='PASS_PROJECT13_AND_MACHINE_SHARED_LIBRARY_CONSOLIDATION_COMPLETE',created_local=datetime.datetime.now().astimezone().isoformat(),formal_designs=[dict(path=str(p),sha256=h) for p,h in designs],main_footprints_before=81,main_footprints_after=59,main_physical_refs=1066,main_numbered_pins=6494,main_physical_FP_changes=994,public_olbs_replaced=13,public_boards_replaced=4,retired_stems=1067,retired_file_entries=3069,retired_logical_bytes=87476185,remaining_public_files=10364,canonical_targets=127,canonical_PAD_manufacturing_objects=154,protected_four_original_inputs_unchanged=True,proofs={k:dict(path=str(p),sha256=sha(p),status=q[k]['status']) for k,p in documents.items()},records=[dict(path=str(p),sha256=sha(p)) for p in [readme,record,log]],scope='Library consolidation and original connectivity preservation; existing hardware/routing/manufacturing open items remain documented.')

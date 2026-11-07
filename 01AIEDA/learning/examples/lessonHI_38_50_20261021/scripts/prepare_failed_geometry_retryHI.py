@@ -1,5 +1,5 @@
 ﻿from pathlib import Path
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
 p=R/'scripts/batchHI_route_probe_v1.il';s=p.read_text();s=s.replace('    rr=gRouteNative(net list(previous p)', '''    when(index==1
      gSnapshot(hiDiagnosticOutput hiDiagnosticLibrary)
      hiRouteRoles(hiDiagnosticOutput)

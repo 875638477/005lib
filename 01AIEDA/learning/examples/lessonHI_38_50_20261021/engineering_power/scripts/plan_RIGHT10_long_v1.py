@@ -1,7 +1,7 @@
 """Explicit per-net path candidates inside engineering policies; no Cadence writes."""
 import pathlib,sys,argparse,json,math,heapq,time
 sys.path.insert(0,str(pathlib.Path(__file__).resolve().parent))
-sys.path.insert(0,r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\scripts')
+sys.path.insert(0,r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\scripts')
 from routing_geometry import CopperScene,load,LAYERS,ROOT,Point
 P=argparse.ArgumentParser();P.add_argument('--snapshot',required=True);P.add_argument('--networks',required=True);P.add_argument('--rules',required=True);P.add_argument('--policy',required=True);P.add_argument('--out',required=True);P.add_argument('--nets',required=True);P.add_argument('--step',type=float,default=.05);P.add_argument('--max-expanded',type=int,default=350000);args=P.parse_args()
 snapshot=load(args.snapshot);networks=load(args.networks);policy=load(args.policy)

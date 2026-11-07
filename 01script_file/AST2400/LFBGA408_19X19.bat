@@ -5,8 +5,8 @@ pushd "%~dp0"
 set "ALLEGRO=C:\Program0\Cadence\spb172\tools\bin\allegro.exe"
 set "FP=LFBGA408_19X19"
 set "PAD=c16"
-set "PAD_LIB=D:\001DIY\005lib\01Pad_lib"
-set "PSM_LIB=D:\001DIY\005lib\01Psm_lib"
+set "PAD_LIB=D:\005lib\01Pad_lib"
+set "PSM_LIB=D:\005lib\01Psm_lib"
 set "scriptDir=%CD%"
 set "skillScriptPath=!scriptDir:\=/!"
 
@@ -27,7 +27,7 @@ if not exist "builder.ile" (
 )
 if not exist "%FP%.xml" (
   echo ERROR: missing %FP%.xml
-  echo Run: python D:\001DIY\005lib\01AIcadence\ast2400_lib\build_allegro_fp.py
+  echo Run: python D:\005lib\01AIcadence\ast2400_lib\build_allegro_fp.py
   goto FAIL
 )
 

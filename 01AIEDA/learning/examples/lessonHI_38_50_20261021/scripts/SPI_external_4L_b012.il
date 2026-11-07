@@ -1,6 +1,6 @@
 procedure(hiBatchProgram()
  let((f)
-  f=outfile("D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/logs/SPI_external_4L_b012/hi_batch_execution.txt")
+  f=outfile("D:/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/logs/SPI_external_4L_b012/hi_batch_execution.txt")
   fprintf(f "HI_BATCH_DRC_BEFORE=%L\n" axlDBControl('drcEnable))
   unwindProtect(
    progn(
@@ -28,11 +28,11 @@ procedure(hiBatchProgram()
     hiVia(f "SPI4_RETURN_2" "GND" list(15.1 28.55) "L28_VIA030_C060")
     hiVia(f "SPI4_RETURN_3" "GND" list(12.2 27.8) "L28_VIA030_C060")
     hiVia(f "SPI4_RETURN_4" "GND" list(29.2 33.05) "L28_VIA030_C060")
-    hiHSEIsolationChallengeGraph("D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/logs/SPI_external_4L_b012" list(45.45 28.85) "L2" list(list(42.2 39.8) list(44.2 39.8) list(47.8 33.5)))
+    hiHSEIsolationChallengeGraph("D:/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/logs/SPI_external_4L_b012" list(45.45 28.85) "L2" list(list(42.2 39.8) list(44.2 39.8) list(47.8 33.5)))
     t)
    progn(
     axlDBControl('drcEnable t)
     fprintf(f "HI_UNWIND_DRC_RESTORED=%L\n" axlDBControl('drcEnable))))
   unless(axlDBControl('drcEnable) error("Final DRC must be enabled\n"))
-  hiFinalize(f "D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/logs/SPI_external_4L_b012" "D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/native/HI_4L_SPI_external_4L_b012.brd" "D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/library" list(list("R21.2" "J6.2" t) list("R22.2" "J6.3" t) list("R24.2" "J6.4" t) list("R23.2" "J6.5" t) list("SPI4_RETURN_1" "U1.23" t) list("SPI4_RETURN_2" "U1.23" t) list("SPI4_RETURN_3" "U1.23" t) list("SPI4_RETURN_4" "U1.23" t)))
+  hiFinalize(f "D:/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/logs/SPI_external_4L_b012" "D:/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/native/HI_4L_SPI_external_4L_b012.brd" "D:/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/library" list(list("R21.2" "J6.2" t) list("R22.2" "J6.3" t) list("R24.2" "J6.4" t) list("R23.2" "J6.5" t) list("SPI4_RETURN_1" "U1.23" t) list("SPI4_RETURN_2" "U1.23" t) list("SPI4_RETURN_3" "U1.23" t) list("SPI4_RETURN_4" "U1.23" t)))
   t))

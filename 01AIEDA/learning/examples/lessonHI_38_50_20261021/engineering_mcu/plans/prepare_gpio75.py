@@ -1,5 +1,5 @@
 ﻿import pathlib,json,math
-P=pathlib.Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu\plans');v='2L'
+P=pathlib.Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu\plans');v='2L'
 for typ in ['snapshot','networks','rules','policy']:
  z=json.loads((P/f'GPIO_J12south_{v}_68_{typ}.json').read_text())
  if typ=='snapshot':

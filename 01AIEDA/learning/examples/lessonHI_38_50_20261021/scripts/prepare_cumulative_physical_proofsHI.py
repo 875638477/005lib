@@ -1,6 +1,6 @@
 ﻿from pathlib import Path
 import json,hashlib,argparse,re
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
 a=argparse.ArgumentParser();a.add_argument('--variant',choices=['2L','4L'],required=True);a.add_argument('--output',required=True);a.add_argument('--extra-plan',action='append',default=[]);a=a.parse_args();v=a.variant
 source=json.loads((R/f'inventory/current_{v}.json').read_text());C=Path(source['checkpointDirectory']);N=json.loads((C/'normalized.json').read_text());D=json.loads((C/'networks.json').read_text());realNets={n['net'] for n in D['nets']};terminals={};contracts=[]
 for c in N['placements']:

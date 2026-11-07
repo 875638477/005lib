@@ -1,6 +1,6 @@
 ; Restore ONLY real source thermal Cu which is missing outside the OLD land.
 ; Deliberately do not reintroduce the old land inside the approved canonical pad.
-load("D:/001DIY/005lib/01AIEDA/library_maintenance/20261025_pc_shared/public0010_source25_owner_probe_bundle13_v2/public0010_source25_owner_probe_v2.il")
+load("D:/005lib/01AIEDA/library_maintenance/20261025_pc_shared/public0010_source25_owner_probe_bundle13_v2/public0010_source25_owner_probe_v2.il")
 procedure(pc25ExternalSourcePrepare(dir)
  let((f objects row key o p count)
   pub0010Source25Prepare(dir) f=outfile(strcat(dir "/SOURCE25_THERMAL_OWNERSHIP_GUARD.ilist")) count=0

@@ -1,5 +1,5 @@
 ﻿from pathlib import Path
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
 s=(R/'scripts/scoped_rule_builderHI.py').read_text();s=s.replace('def __init__(self,variant):','def __init__(self,variant,baseline_path=None,prefix="HI_JS"):').replace("self.variant=variant;self.base=json.loads((R/f'inventory/base_net_rules_{variant}.json').read_text())", "self.variant=variant;self.prefix=prefix;self.base=json.loads((Path(baseline_path) if baseline_path else R/f'inventory/base_net_rules_{variant}.json').read_text())").replace("return f'HI_JS_{kind}{self.serial:03d}_{self.variant}'", "return f'{self.prefix}_{kind}{self.serial:03d}_{self.variant}'");(R/'scripts/scoped_rule_builderHI_v2.py').write_text(s,encoding='utf8')
 s=(R/'scripts/compile_batchHI_v28.py').read_text().replace("R/'scripts/extraReadHI.il',R/'scripts/batchHI_intermediate_drc_pending.il'", "R/'scripts/extraReadHI.il',R/'scripts/batchHI_b016_scoped_reference.il',R/'scripts/batchHI_intermediate_drc_pending.il'")
 s=s.replace("statements=['hiRegistry=nil'", "statements=['hiDeferredReferences=nil','hiReferenceParamsBefore=nil','hiRegistry=nil'")

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <Design xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="C:/Program0/Cadence/SPB172/tools/capture/tclscripts/capDB/dsn.xsd">
 
-  <Defn name="D:\001DIY\005lib\01captureLib\Lib.DSN" objectType="SCHEMATIC" rootName="Lib" useExplicitDbId="1"/>
+  <Defn name="D:\005lib\01captureLib\Lib.DSN" objectType="SCHEMATIC" rootName="Lib" useExplicitDbId="1"/>
 
   <DefaultValues>
     <Defn/>
@@ -115,7 +115,7 @@
   <Cache>
     <Defn/>
     <GlobalSymbol>
-      <Defn name="VCC" sourceLibName="D:\001DIY\005LIB\01CAPTURELIB\CAPSYM.OLB"/>
+      <Defn name="VCC" sourceLibName="D:\005lib\01CAPTURELIB\CAPSYM.OLB"/>
       <SymbolDisplayProp>
         <Defn locX="0" locY="-10" name="Name" rotation="0" textJustification="0"/>
         <PropFont>
@@ -169,7 +169,7 @@
       </SymbolPinScalar>
     </GlobalSymbol>
     <PortSymbol>
-      <Defn name="PORTBOTH-L" sourceLibName="D:\001DIY\005LIB\01CAPTURELIB\CAPSYM.OLB"/>
+      <Defn name="PORTBOTH-L" sourceLibName="D:\005lib\01CAPTURELIB\CAPSYM.OLB"/>
       <SymbolDisplayProp>
         <Defn locX="32" locY="5" name="Name" rotation="0" textJustification="0"/>
         <PropFont>
@@ -235,7 +235,7 @@
       </SymbolPinScalar>
     </PortSymbol>
     <TitleBlockSymbol>
-      <Defn name="FZKJBlock" sourceLibName="D:\001DIY\005LIB\01CAPTURELIB\CAPSYM.OLB"/>
+      <Defn name="FZKJBlock" sourceLibName="D:\005lib\01CAPTURELIB\CAPSYM.OLB"/>
       <SymbolDisplayProp>
         <Defn locX="81" locY="82" name="Page Modify Date" rotation="0" textJustification="0"/>
         <PropFont>
@@ -424,7 +424,7 @@
       </Line>
     </TitleBlockSymbol>
     <GlobalSymbol>
-      <Defn name="GND" sourceLibName="D:\001DIY\005LIB\01CAPTURELIB\CAPSYM.OLB"/>
+      <Defn name="GND" sourceLibName="D:\005lib\01CAPTURELIB\CAPSYM.OLB"/>
       <SymbolDisplayProp>
         <Defn locX="0" locY="10" name="Name" rotation="0" textJustification="0"/>
         <PropFont>
@@ -484,7 +484,7 @@
       </SymbolPinScalar>
     </GlobalSymbol>
     <GlobalSymbol>
-      <Defn name="GND_P" sourceLibName="D:\001DIY\005LIB\01CAPTURELIB\CAPSYM.OLB"/>
+      <Defn name="GND_P" sourceLibName="D:\005lib\01CAPTURELIB\CAPSYM.OLB"/>
       <SymbolDisplayProp>
         <Defn locX="-4" locY="10" name="Name" rotation="0" textJustification="0"/>
         <PropFont>
@@ -541,7 +541,7 @@
       </SymbolPinScalar>
     </GlobalSymbol>
     <Package>
-      <Defn alphabeticNumbering="2" isHomogeneous="1" name="TP_1" pcbFootprint="TPS-1D00" pcbLib="" refdesPrefix="TP" sourceLibName="D:\001DIY\005LIB\01CAPTURELIB\CAPSYM.OLB"/>
+      <Defn alphabeticNumbering="2" isHomogeneous="1" name="TP_1" pcbFootprint="TPS-1D00" pcbLib="" refdesPrefix="TP" sourceLibName="D:\005lib\01CAPTURELIB\CAPSYM.OLB"/>
       <LibPart>
         <Defn CellName="TP_1"/>
         <NormalView>
@@ -766,7 +766,7 @@
         <Defn name=""/>
       </NetScalar>
       <Global>
-        <Defn color="48" dbId="8438388" libName="D:\001DIY\005LIB\01CAPTURELIB\CAPSYM.OLB" locX="265" locY="150" mirror="0" name="GND" rotation="0" symbolName="GND"/>
+        <Defn color="48" dbId="8438388" libName="D:\005lib\01CAPTURELIB\CAPSYM.OLB" locX="265" locY="150" mirror="0" name="GND" rotation="0" symbolName="GND"/>
         <GlobalDisplayProp>
           <Defn dbId="8438432" locX="0" locY="10" name="Name" rotation="0" textJustification="0"/>
           <PropFont>
@@ -781,7 +781,7 @@
         </GlobalDisplayProp>
       </Global>
       <Global>
-        <Defn color="48" dbId="8438396" libName="D:\001DIY\005LIB\01CAPTURELIB\CAPSYM.OLB" locX="305" locY="150" mirror="0" name="GND_P" rotation="0" symbolName="GND_P"/>
+        <Defn color="48" dbId="8438396" libName="D:\005lib\01CAPTURELIB\CAPSYM.OLB" locX="305" locY="150" mirror="0" name="GND_P" rotation="0" symbolName="GND_P"/>
         <GlobalDisplayProp>
           <Defn dbId="8438434" locX="-4" locY="10" name="Name" rotation="0" textJustification="0"/>
           <PropFont>
@@ -796,7 +796,7 @@
         </GlobalDisplayProp>
       </Global>
       <Global>
-        <Defn color="48" dbId="8438380" libName="D:\001DIY\005LIB\01CAPTURELIB\CAPSYM.OLB" locX="455" locY="165" mirror="0" name="VCC" rotation="0" symbolName="VCC"/>
+        <Defn color="48" dbId="8438380" libName="D:\005lib\01CAPTURELIB\CAPSYM.OLB" locX="455" locY="165" mirror="0" name="VCC" rotation="0" symbolName="VCC"/>
         <GlobalDisplayProp>
           <Defn dbId="8438430" locX="0" locY="-10" name="Name" rotation="0" textJustification="0"/>
           <PropFont>
@@ -811,7 +811,7 @@
         </GlobalDisplayProp>
       </Global>
       <Port>
-        <Defn color="48" dbId="8438374" libName="D:\001DIY\005LIB\01CAPTURELIB\CAPSYM.OLB" locX="190" locY="100" mirror="0" name="PORTBOTH-L" rotation="0" symbolName="PORTBOTH-L" type="1"/>
+        <Defn color="48" dbId="8438374" libName="D:\005lib\01CAPTURELIB\CAPSYM.OLB" locX="190" locY="100" mirror="0" name="PORTBOTH-L" rotation="0" symbolName="PORTBOTH-L" type="1"/>
         <PortDisplayProp>
           <Defn dbId="8438428" locX="32" locY="5" name="Name" rotation="0" textJustification="0"/>
           <PropFont>
@@ -826,7 +826,7 @@
         </PortDisplayProp>
       </Port>
       <TitleBlock>
-        <Defn color="48" dbId="8438344" libName="D:\001DIY\005LIB\01CAPTURELIB\CAPSYM.OLB" locX="879" locY="716" name="FZKJBlock" rotation="0" symbolName="FZKJBlock"/>
+        <Defn color="48" dbId="8438344" libName="D:\005lib\01CAPTURELIB\CAPSYM.OLB" locX="879" locY="716" name="FZKJBlock" rotation="0" symbolName="FZKJBlock"/>
         <KeepInLowerRightCorner>
           <Defn val="true"/>
         </KeepInLowerRightCorner>
@@ -943,7 +943,7 @@
         </TitleBlockUserProp>
       </TitleBlock>
       <PartInst>
-        <Defn color="48" dbId="8438366" deviceDesignator="" libName="D:\001DIY\005LIB\01CAPTURELIB\CAPSYM.OLB" locX="315" locY="280" mirror="0" name="INS8438360" pkgName="TP_1" rotation="0"/>
+        <Defn color="48" dbId="8438366" deviceDesignator="" libName="D:\005lib\01CAPTURELIB\CAPSYM.OLB" locX="315" locY="280" mirror="0" name="INS8438360" pkgName="TP_1" rotation="0"/>
         <GraphicName>
           <Defn name="TP_1.Normal"/>
         </GraphicName>

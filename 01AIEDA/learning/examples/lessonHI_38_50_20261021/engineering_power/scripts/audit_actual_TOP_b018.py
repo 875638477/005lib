@@ -1,6 +1,6 @@
 from pathlib import Path
 import sys,json,math,csv,re,hashlib,argparse
-H=Path(r'D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021')
+H=Path(r'D:/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021')
 O=H/'engineering_power'
 sys.path[:0]=[str(H/'scripts'),str(O/'scripts'),str(H/'tooling/packages')]
 from routing_geometry import *

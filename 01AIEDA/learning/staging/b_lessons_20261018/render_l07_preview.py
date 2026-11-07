@@ -1,5 +1,5 @@
 import sys,pathlib,xml.etree.ElementTree as ET
-b=pathlib.Path(r'D:\001DIY\005lib\01AIEDA\learning')
+b=pathlib.Path(r'D:\005lib\01AIEDA\learning')
 sys.path.insert(0,str(b/'tools'/'pymupdf_1_28_2'))
 import pymupdf
 s=b/'examples'/'lesson07_completion_20261018'/'preview.svg'

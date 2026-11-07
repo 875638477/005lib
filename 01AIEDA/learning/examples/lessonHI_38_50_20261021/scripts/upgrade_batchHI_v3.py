@@ -1,5 +1,5 @@
 from pathlib import Path
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
 s=(R/'scripts/compile_batchHI_v2.py').read_text()
 s=s.replace(" elif typ=='region':"," elif typ=='netClass':\n  statements.append(f'hiAssignNetClass(f {q(op[\"name\"])} \\'{op[\"domain\"]} {q(op[\"cset\"])} list('+ ' '.join(q(n) for n in op['nets'])+'))')\n elif typ=='region':")
 s=s.replace(" if typ=='via':statements.append(", " if typ=='bindShape':statements.append(f'hiBindExistingShape(f {q(ident)} {q(net)} {q(op[\"layer\"])})')\n elif typ=='void':statements.append(f'hiVoid(f {q(op[\"shapeId\"])} {points(op[\"polygon\"])})')\n elif typ=='via':statements.append(")

@@ -10,7 +10,7 @@ from datetime import datetime
 from pathlib import Path
 from xml.sax.saxutils import escape
 
-ROOT = Path(r"D:\001DIY\005lib")
+ROOT = Path(r"D:\005lib")
 CSV_PATH = ROOT / "01captureLib" / "AST2400" / "AST2400_pins.csv"
 UL_BUILDER = ROOT / "AUTOlib" / "ul_TPS65217CRSLR" / "AllegroV17_2" / "builder.ile"
 OUT = ROOT / "AUTOlib" / "ul_AST2400"
@@ -427,7 +427,7 @@ def write_guides(out: Path) -> None:
 <li>Open OrCAD Capture CIS 17.2</li>
 <li>File - Import - Library XML</li>
 <li>Select the .xml in this folder</li>
-<li>Save OLB to D:/001DIY/005lib/01captureLib/AST2400.OLB</li>
+<li>Save OLB to D:/005lib/01captureLib/AST2400.OLB</li>
 </ol>
 <p>Part AST2400 is heterogeneous with 8 sections A..H.</p>
 </body></html>
@@ -468,7 +468,7 @@ def write_readme(out: Path, n_pins: int) -> None:
 1. 打开 Capture 17.2
 2. `File` → `Import` → `Library XML`
 3. 选择 `OrcadCaptureXML/*AST2400*.xml`
-4. 另存为 `D:\\001DIY\\005lib\\01captureLib\\AST2400.OLB`
+4. 另存为 `D:\\005lib\\01captureLib\\AST2400.OLB`
 
 ## Allegro 封装生成
 1. 先切换到 Cadence 17.2 环境（`allegro.exe` 可用）

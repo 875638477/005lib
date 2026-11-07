@@ -1,6 +1,6 @@
 procedure(hiBatchProgram()
  let((f)
-  f=outfile("D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/logs/SPI_external_2L_b012/hi_batch_execution.txt")
+  f=outfile("D:/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/logs/SPI_external_2L_b012/hi_batch_execution.txt")
   fprintf(f "HI_BATCH_DRC_BEFORE=%L\n" axlDBControl('drcEnable))
   unwindProtect(
    progn(
@@ -43,11 +43,11 @@ procedure(hiBatchProgram()
     hiVia(f "SPI_RETURN_NSS_W" "GND" list(20.8 33.75) "L28_VIA030_C060")
     hiRoute(f "SPI_GUARD_CLOCK_MOSI" "GND" "BOTTOM" list(list(28.6 29.0) list(28.85 29.25) list(22.8 29.25)) list(0.6 0.6))
     hiRoute(f "SPI_GUARD_MISO_NSS" "GND" "BOTTOM" list(list(29.9 31.55) list(21.0 31.55)) list(0.6))
-    hiHSEIsolationChallengeGraph("D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/logs/SPI_external_2L_b012" list(45.45 28.85) "BOTTOM" list(list(42.2 39.8) list(44.2 39.8) list(47.8 33.5)))
+    hiHSEIsolationChallengeGraph("D:/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/logs/SPI_external_2L_b012" list(45.45 28.85) "BOTTOM" list(list(42.2 39.8) list(44.2 39.8) list(47.8 33.5)))
     t)
    progn(
     axlDBControl('drcEnable t)
     fprintf(f "HI_UNWIND_DRC_RESTORED=%L\n" axlDBControl('drcEnable))))
   unless(axlDBControl('drcEnable) error("Final DRC must be enabled\n"))
-  hiFinalize(f "D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/logs/SPI_external_2L_b012" "D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/native/HI_2L_SPI_external_2L_b012.brd" "D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/library" list(list("R21.2" "J6.2" t) list("R22.2" "J6.3" t) list("R24.2" "J6.4" t) list("R23.2" "J6.5" t) list("SPI_RETURN_SCK_E" "U1.23" t) list("SPI_RETURN_SCK_W" "U1.23" t) list("SPI_RETURN_MOSI_E" "U1.23" t) list("SPI_RETURN_MOSI_W" "U1.23" t) list("SPI_RETURN_MISO_E" "U1.23" t) list("SPI_RETURN_GUARD_E" "U1.23" t) list("SPI_RETURN_GUARD_W" "U1.23" t) list("SPI_RETURN_NSS_E" "U1.23" t) list("SPI_RETURN_NSS_W" "U1.23" t) list("SPI_GUARD_CLOCK_MOSI" "U1.23" t) list("SPI_GUARD_MISO_NSS" "U1.23" t) list("C9.1" "SPI_PREFILTER_ROW_SHIFT" t)))
+  hiFinalize(f "D:/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/logs/SPI_external_2L_b012" "D:/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/native/HI_2L_SPI_external_2L_b012.brd" "D:/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/library" list(list("R21.2" "J6.2" t) list("R22.2" "J6.3" t) list("R24.2" "J6.4" t) list("R23.2" "J6.5" t) list("SPI_RETURN_SCK_E" "U1.23" t) list("SPI_RETURN_SCK_W" "U1.23" t) list("SPI_RETURN_MOSI_E" "U1.23" t) list("SPI_RETURN_MOSI_W" "U1.23" t) list("SPI_RETURN_MISO_E" "U1.23" t) list("SPI_RETURN_GUARD_E" "U1.23" t) list("SPI_RETURN_GUARD_W" "U1.23" t) list("SPI_RETURN_NSS_E" "U1.23" t) list("SPI_RETURN_NSS_W" "U1.23" t) list("SPI_GUARD_CLOCK_MOSI" "U1.23" t) list("SPI_GUARD_MISO_NSS" "U1.23" t) list("C9.1" "SPI_PREFILTER_ROW_SHIFT" t)))
   t))

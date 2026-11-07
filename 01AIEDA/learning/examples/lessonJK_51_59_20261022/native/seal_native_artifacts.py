@@ -1,6 +1,6 @@
 ﻿from pathlib import Path
 import hashlib,json,datetime
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonJK_51_59_20261022');M=R/'native/native56_artifact_manifest.json';roots=[R/'native',R/'source/env_oO_chain',R/'source/native56_official',R/'source/j55_official',R/'source/j55_readback_helpers',R/'source/newstack_official',R/'eco/DE_REPLAY_ONLY'];roots+=list((R/'logs').glob('native_*'));roots+=list((R/'exports').glob('native_*'));roots+=list((R/'exports').glob('J55_corrected_*'));roots+=list((R/'exports').glob('supplement_*'));roots+=list((R/'exports').glob('newstack_*'));roots+=list((R/'exports').glob('devicevalues_*'))
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonJK_51_59_20261022');M=R/'native/native56_artifact_manifest.json';roots=[R/'native',R/'source/env_oO_chain',R/'source/native56_official',R/'source/j55_official',R/'source/j55_readback_helpers',R/'source/newstack_official',R/'eco/DE_REPLAY_ONLY'];roots+=list((R/'logs').glob('native_*'));roots+=list((R/'exports').glob('native_*'));roots+=list((R/'exports').glob('J55_corrected_*'));roots+=list((R/'exports').glob('supplement_*'));roots+=list((R/'exports').glob('newstack_*'));roots+=list((R/'exports').glob('devicevalues_*'))
 files=set()
 for root in roots:
  assert root.resolve().is_relative_to(R.resolve())

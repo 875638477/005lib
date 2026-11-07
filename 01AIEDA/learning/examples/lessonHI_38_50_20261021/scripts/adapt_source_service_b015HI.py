@@ -1,7 +1,7 @@
 from pathlib import Path
 import json,hashlib,copy,csv,runpy,subprocess,sys
 sys.dont_write_bytecode=True
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');PTH=R.parent.parent/'tools/python_3_14_0/python.exe';sys.path.insert(0,str(R/'tooling/packages'))
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');PTH=R.parent.parent/'tools/python_3_14_0/python.exe';sys.path.insert(0,str(R/'tooling/packages'))
 from shapely.geometry import Polygon,box
 for v in ['2L','4L']:
  tag=f'source_service_{v}_b015';paths=[R/'engineering_mcu/plans/GPIO_north_joint_fanout_02.json',R/'plans/GPIO_south_joint_root_v9.json',R/'engineering_mcu/plans/GPIO_left_joint_fanout_07.json',R/'engineering_mcu/plans/NSS_pullup_local_relayout_04_SOURCE_ONLY.json',R/f'engineering_power/RIGHT10_FULL_{v}_v11.json',R/f'plans/ordinary_remote_{v}_v9.json',R/f'plans/root_south_services_{v}_v18.json'];snap=R/'source/engineering_snapshots'/tag;snap.mkdir(parents=True,exist_ok=True);d=[];evidence=[]

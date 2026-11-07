@@ -1,7 +1,7 @@
 ﻿import pathlib,json,hashlib,datetime
 BASE=pathlib.Path(__file__).resolve().parent.parent
 NOTE=BASE.parents[1]/'notes'/'lesson09_qfn_qfp_20261018.md'
-ROOT=pathlib.Path(r'D:\001DIY\005lib\01AIEDA').resolve()
+ROOT=pathlib.Path(r'D:\005lib\01AIEDA').resolve()
 assert BASE.is_relative_to(ROOT) and NOTE.is_relative_to(ROOT)
 result=json.loads((BASE/'validation.json').read_text(encoding='utf-8-sig'))
 assert result['status']=='PASS_CAD_LESSON09' and result['thermalVias']['uniqueNativeDBIDs']==5

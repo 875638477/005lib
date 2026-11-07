@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,hashlib,math
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');P=R/'engineering_power';note=R.parent.parent/'notes/lessonHI_power_20261021.md'
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');P=R/'engineering_power';note=R.parent.parent/'notes/lessonHI_power_20261021.md'
 def item(p):return dict(path=str(p),sha256=hashlib.sha256(p.read_bytes()).hexdigest().upper(),size=p.stat().st_size)
 can=P/'CAN_RXD_2L_engineered_07.json';q=json.loads(can.read_text());proofs=[]
 for a in q['proofs']:

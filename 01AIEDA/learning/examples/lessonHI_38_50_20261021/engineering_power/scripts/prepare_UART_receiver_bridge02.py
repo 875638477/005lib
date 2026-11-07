@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,math
-H=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');R=H/'engineering_power'
+H=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');R=H/'engineering_power'
 for v in ['2L','4L']:
  p=dict(batchId=f'UART_RX_receiver_bridge_{v}_02',variant=v,status='FULL_ENDPOINT_CANDIDATE_NATIVE_AND_RETURN_PENDING',requiredSourcePlan=f'plans/root_south_services_{v}_v19.json',operations=[],proofs=[dict(net='UART_RX',source='R17.2',target='R18.1')],preserveGroundReturns=['RIGHT_RETURN_RIGHT_PB5_MID_VIA','RIGHT_RETURN_RIGHT_PB4_FAR_VIA'],sourceExisting='R17 90deg@(50.12,23.361), sourceconnection fromrootservice19; no otherrefmoved')
  def route(i,l,pts):p['operations'].append(dict(type='route',id=i,net='UART_RX',layer=l,points=pts,width=.2,purpose='Receiver longroute jointly screened; preserves existingGND returns using realshortlayerbridges. Actualreference/nativeDRC required.'))

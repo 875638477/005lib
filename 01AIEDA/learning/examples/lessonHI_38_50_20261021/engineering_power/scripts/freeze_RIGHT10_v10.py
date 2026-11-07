@@ -1,6 +1,6 @@
 from pathlib import Path
 import json
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power');H=R.parent;two=json.loads((H/'plans/ordinary_remote_2L_v7.json').read_text());remote=[o for o in two['operations'] if o['net'] in ['I2C_SCL','I2C_SDA']]
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power');H=R.parent;two=json.loads((H/'plans/ordinary_remote_2L_v7.json').read_text());remote=[o for o in two['operations'] if o['net'] in ['I2C_SCL','I2C_SDA']]
 for v in ['2L','4L']:
  p=json.loads((R/f'RIGHT10_FULL_{v}_v9.json').read_text());old=[o for o in p['operations'] if o['id'].startswith('HI_') and o['net'] in ['I2C_SCL','I2C_SDA']];oldids={o['id'] for o in old};p['operations']=[o for o in p['operations'] if o['id'] not in oldids]+remote;p['batchId']=f'RIGHT10_FULL_{v}_v10';p['rootMustExcludeDuplicateOperations'] += [o['id'] for o in old];p['returnReview']=[a for a in p['returnReview'] if a['signalVia'] not in oldids];p['revision'] += ' Fullv10 uses the same manually checked allTOP I2C far routes for bothvariants; old4L v7 BOTTOM SDA crosses newGPIOtrunk and is rejected. No inner signals or unwanted spare transition.'
  p['frozenPlanInputs'] += [dict(path=str(R/f'RIGHT10_FULL_{v}_v9.json'),sha256=__import__('hashlib').sha256((R/f'RIGHT10_FULL_{v}_v9.json').read_bytes()).hexdigest())];(R/f'RIGHT10_FULL_{v}_v10.json').write_text(json.dumps(p,indent=2),encoding='utf-8')

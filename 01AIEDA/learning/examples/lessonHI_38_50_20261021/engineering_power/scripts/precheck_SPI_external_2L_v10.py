@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,sys,math
-H=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');R=H/'engineering_power';sys.path.insert(0,str(H/'tooling/packages'))
+H=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');R=H/'engineering_power';sys.path.insert(0,str(H/'tooling/packages'))
 from shapely.geometry import Point,LineString,box
 b=json.loads((H/'inventory/checkpoints/postcritical_2L_b010/normalized.json').read_text());p=json.loads((R/'SPI_external_2L_engineered_v10.json').read_text())
 for o in p['operations']:

@@ -1,5 +1,5 @@
 ﻿import pathlib,json,math,sys
-P=pathlib.Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu\plans');H=P.parents[1];sys.path.insert(0,str(H/'scripts'));from routing_geometry import *
+P=pathlib.Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu\plans');H=P.parents[1];sys.path.insert(0,str(H/'scripts'));from routing_geometry import *
 for v in ['2L','4L']:
  n=load(P/f'GPIO_J12south_{v}_68_snapshot.json');nw=load(P/f'GPIO_J12south_{v}_68_networks.json');rs=load(P/f'GPIO_J12south_{v}_68_rules.json');p=load(P/f'GPIO_J12south_{v}_68_policy.json');ops=[]
  def dv(net,xy):

@@ -2,7 +2,7 @@
 from pathlib import Path
 import json,math
 from PIL import Image,ImageDraw,ImageFont
-R=Path('D:/001DIY/005lib/01AIEDA');J=R/'learning/examples/lessonJK_51_59_20261022';H=R/'learning/examples/lessonHI_38_50_20261021'
+R=Path('D:/005lib/01AIEDA');J=R/'learning/examples/lessonJK_51_59_20261022';H=R/'learning/examples/lessonHI_38_50_20261021'
 font=ImageFont.truetype('C:/Windows/Fonts/arial.ttf',15);small=ImageFont.truetype('C:/Windows/Fonts/arial.ttf',12);title=ImageFont.truetype('C:/Windows/Fonts/arialbd.ttf',25)
 scale=18;ox=60;oy=1200
 xy=lambda p:(round(ox+p[0]*scale),round(oy-p[1]*scale))

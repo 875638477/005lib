@@ -1,6 +1,6 @@
 from pathlib import Path
 import hashlib,json
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonG_30_37_20261020')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonG_30_37_20261020')
 # Preserve the exact earlier successful attempt SCR after its reused filename was regenerated.
 old=(R/'scripts/place_4L_v1.scr').read_text().replace('/logs/place_4L_v1','/logs/place_4L_v2')
 p=R/'source/place_4L_attempt02_original.scr';p.write_text(old,encoding='ascii')

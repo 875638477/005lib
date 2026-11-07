@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,math
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power')
 s=json.loads((R/'STAR_reroute_07.json').read_text())
 s['revision']='07b actualpad/retainedcopper screen corrected GNDbridge aroundGPIO22/VDD24tip'
 for o in s['operations']:

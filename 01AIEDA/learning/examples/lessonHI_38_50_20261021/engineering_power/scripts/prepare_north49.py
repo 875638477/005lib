@@ -1,6 +1,6 @@
 from pathlib import Path
 import sys,json,math
-H=Path(r'D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021');sys.path.insert(0,str(H/'scripts'));from routing_geometry import *
+H=Path(r'D:/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021');sys.path.insert(0,str(H/'scripts'));from routing_geometry import *
 O=H/'engineering_power'
 plans=[('GPIO_PC13','BOTTOM',[[42,28.9],[41.3,28.9],[35.25,34.95],[34.05,34.95]]),('GPIO_PC15','BOTTOM',[[40.3,28.9],[40.3,29],[34.8,34.5],[33.55,34.5]]),('GPIO_PA1','BOTTOM',[[37.5,29.6],[37.5,30.95],[34.4,34.05],[33.25,34.05]]),('GPIO_PA2','BOTTOM',[[36.6,30.4],[36.6,31.25],[34.25,33.6],[33.0,33.6]]),('GPIO_PA3','BOTTOM',[[35.2,31.65],[35.4,31.85],[34.1,33.15],[32.75,33.15]])]
 for v in ['2L','4L']:

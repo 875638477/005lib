@@ -1,6 +1,6 @@
 from pathlib import Path
 import sys,json,math,copy,hashlib
-H=Path(r'D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021');sys.path.insert(0,str(H/'scripts'));from routing_geometry import *
+H=Path(r'D:/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021');sys.path.insert(0,str(H/'scripts'));from routing_geometry import *
 O=H/'engineering_power'
 for v in ['2L','4L']:
  cp=H/f'inventory/checkpoints/clearance_{v}_b016_DRC_PENDING';n=load(cp/'normalized.json');w=load(cp/'networks.json');r=load(cp/'base_net_rules.json');p=load(O/f'N49_{v}_policy.json');p['pendingOperations']=[];q=load(O/f'GPIO_NORTH6_{v}_50.json');old=next(a for a in q['operations'] if a['id']==f'N50_{v}_RETURN_1');newxy=[41.4,28.15];oldxy=old['xy'];old['xy']=newxy;old['purpose']='Local common GND return for genuine new PC14 source transition; replacing old-signalvia41,27.8 leaves historical antipad in frozen fills, so require actual regenerated commonproof rather than full frozen disk predicate.'

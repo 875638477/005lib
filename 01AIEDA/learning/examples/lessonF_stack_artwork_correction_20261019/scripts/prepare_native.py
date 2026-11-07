@@ -1,6 +1,6 @@
 from pathlib import Path
 import json
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonF_stack_artwork_correction_20261019')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonF_stack_artwork_correction_20261019')
 refs=[]
 for n in [2,4]:
  d=json.loads((R/f'source/drill{n}_parsed.json').read_text())
@@ -106,13 +106,13 @@ src='fcorTemplateLayers=list('+ls+')\n'+src
 (R/'scripts/correction.il').write_text(src,encoding='ascii')
 p=R.as_posix()
 loads=[
-'D:/001DIY/005lib/01AIEDA/learning/scripts/de_board_read.il',
-'D:/001DIY/005lib/01AIEDA/learning/examples/lesson29_constraints_20261019/scripts/build29_v2.il',
-'D:/001DIY/005lib/01AIEDA/learning/examples/lesson29_constraints_20261019/scripts/read29.il',
-'D:/001DIY/005lib/01AIEDA/learning/examples/lesson29_constraints_20261019/scripts/extra_read29.il',
-'D:/001DIY/005lib/01AIEDA/learning/examples/lesson29_constraints_20261019/scripts/specific_proof.il',
-'D:/001DIY/005lib/01AIEDA/learning/examples/lesson28_stackup_20261019/scripts/more28.il',
-'D:/001DIY/005lib/01AIEDA/learning/examples/lesson28_stackup_20261019/scripts/mechanical28.il',
+'D:/005lib/01AIEDA/learning/scripts/de_board_read.il',
+'D:/005lib/01AIEDA/learning/examples/lesson29_constraints_20261019/scripts/build29_v2.il',
+'D:/005lib/01AIEDA/learning/examples/lesson29_constraints_20261019/scripts/read29.il',
+'D:/005lib/01AIEDA/learning/examples/lesson29_constraints_20261019/scripts/extra_read29.il',
+'D:/005lib/01AIEDA/learning/examples/lesson29_constraints_20261019/scripts/specific_proof.il',
+'D:/005lib/01AIEDA/learning/examples/lesson28_stackup_20261019/scripts/more28.il',
+'D:/005lib/01AIEDA/learning/examples/lesson28_stackup_20261019/scripts/mechanical28.il',
 p+'/scripts/correction.il']
 header='set NOCONFIRM\n'+''.join('skill errset(load("'+x+'") t)\n' for x in loads)
 records=json.loads((R/'input_manifest.json').read_text())

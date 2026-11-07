@@ -1,5 +1,5 @@
 import pathlib,json
-R=pathlib.Path(r"D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu")
+R=pathlib.Path(r"D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu")
 g=json.loads((R/"plans/gpio_north_escape_v2.json").read_text(encoding="utf-8"))
 top={"GPIO_PC13":[[42.25,31.25],[42.25,29.15],[42,28.9]],"GPIO_PC14":[[41.75,31.25],[41.75,29.8],[41,29.8],[41,27.8]],"GPIO_PC15":[[41.25,31.25],[41.25,30.25],[40.3,30.25],[40.3,28.9]]}
 bottom={"GPIO_PC13":[[42,28.9],[42,31.1],[35.8,31.1]],"GPIO_PC14":[[41,27.8],[41,28.0],[39.5,28.0],[39.5,28.5],[35,28.5]],"GPIO_PC15":[[40.3,28.9],[40.3,30.3],[35.4,30.3]]}

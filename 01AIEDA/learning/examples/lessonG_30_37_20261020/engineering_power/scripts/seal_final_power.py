@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,hashlib
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonG_30_37_20261020\engineering_power');G=R.parent;B=G.parents[2]
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonG_30_37_20261020\engineering_power');G=R.parent;B=G.parents[2]
 note=B/'learning/notes/lessonG_power_20261020.md'
 s=note.read_text(encoding='utf-8')
 add="\nU2\u9ad8\u5ea6\u8865\u8bc1\uff1aTPS54202DDCR\u5b98\u65b9p28 DDC0006A\u56fe\u5df2\u6e32\u67d3\u89c6\u89c9\u6838\u5bf9\uff0cmax1.1mm\uff1b\u89c1rendered/tps54202_revC_p28.png\u3002\u4e0d\u80fd\u5957\u7528U3/U4\u76841.45mm\u6216native\u9ed8\u8ba41mm\u3002\n"

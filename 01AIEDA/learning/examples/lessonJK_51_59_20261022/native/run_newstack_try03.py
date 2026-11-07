@@ -1,5 +1,5 @@
 import pathlib,shutil,json,hashlib,subprocess,sys
-R=pathlib.Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonJK_51_59_20261022');H=R.parent/'lessonHI_38_50_20261021';v='4L';tag='newstack_4L_build_try03';log=R/'logs'/('native_'+tag);out=R/'exports/newstack_4L_TRAINING_NOT_FOR_FAB';assert out.is_dir()
+R=pathlib.Path(r'D:\005lib\01AIEDA\learning\examples\lessonJK_51_59_20261022');H=R.parent/'lessonHI_38_50_20261021';v='4L';tag='newstack_4L_build_try03';log=R/'logs'/('native_'+tag);out=R/'exports/newstack_4L_TRAINING_NOT_FOR_FAB';assert out.is_dir()
 base=R/'native/4L/JK_4L_J55_text_height_review_NOT_RELEASED.brd';work=R/'native/4L/newstack_4L_try03_WORKING_COPY.brd';assert not work.exists();shutil.copy2(base,work)
 new=R/'native/4L/JK_4L_L2_GND_L3_V3V3_STACK_TRAINING_NOT_RELEASED.brd';assert not new.exists()
 sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest().upper();assert sha(base)=='9DEC773FE106E09C9844FEF5F160E1A1B3348BFC693926579F0CAF0A6A18DCF0'

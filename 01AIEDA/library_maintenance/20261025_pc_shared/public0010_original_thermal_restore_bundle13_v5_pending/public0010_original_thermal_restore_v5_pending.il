@@ -1,6 +1,6 @@
 ; Root finite decision27: restore original21 real board paths, not cropped shapes.
 ; Whole source thermal path Cu may overlap the old land; no old land is cloned.
-load("D:/001DIY/005lib/01AIEDA/library_maintenance/20261025_pc_shared/public0010_external_thermal_restore_bundle13_v2/public0010_external_thermal_restore_v2.il")
+load("D:/005lib/01AIEDA/library_maintenance/20261025_pc_shared/public0010_external_thermal_restore_bundle13_v2/public0010_external_thermal_restore_v2.il")
 procedure(pc25OriginalThermalPrepare(dir)
  let((f row key objects o parent rp converted ps)
   pc25ExternalSourcePrepare(dir) pc25OriginalPaths=nil

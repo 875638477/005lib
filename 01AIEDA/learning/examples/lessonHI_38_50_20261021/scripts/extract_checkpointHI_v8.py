@@ -1,6 +1,6 @@
 from pathlib import Path
 import argparse,json,csv,hashlib,subprocess,shutil,re
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
 P=argparse.ArgumentParser();P.add_argument('--log',required=True);P.add_argument('--variant',choices=['4L','2L'],required=True);P.add_argument('--tag',required=True);P.add_argument('--stored-state-only',action='store_true');P.add_argument('--no-alias-update',action='store_true');P.add_argument('--interactive-only',action='store_true');a=P.parse_args()
 assert not a.interactive_only or (a.stored_state_only and a.no_alias_update)
 B=Path(a.log);assert B.resolve().is_relative_to(R.resolve())

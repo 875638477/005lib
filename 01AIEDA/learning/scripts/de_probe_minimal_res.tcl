@@ -1,7 +1,7 @@
-set base {D:/001DIY/005lib/01AIEDA/learning/staging/de_15_26_20261019/minimal_res}
+set base {D:/005lib/01AIEDA/learning/staging/de_15_26_20261019/minimal_res}
 file mkdir $base
 set sess $::DboSession_s_pDboSession;set s [DboState]
-set lib [::DE::obj [$sess GetLib [::DE::cs {D:/001DIY/005lib/01AIEDA/learning/examples/de_15_26_20261019/library/de_training_baseline.olb}] $s] $s OpenLib]
+set lib [::DE::obj [$sess GetLib [::DE::cs {D:/005lib/01AIEDA/learning/examples/de_15_26_20261019/library/de_training_baseline.olb}] $s] $s OpenLib]
 lappend ::DE::libs $lib
 set pkg [::DE::obj [$lib GetPackage [::DE::cs DE_RES] $s] $s Package]
 set dev [::DE::obj [$pkg GetDevice 0 $s] $s Device]

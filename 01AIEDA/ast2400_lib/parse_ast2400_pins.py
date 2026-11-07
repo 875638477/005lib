@@ -395,7 +395,7 @@ def main() -> None:
 ## Capture steps (semi-auto)
 
 1. OrCAD Capture CIS 17.2 -> File -> New -> Library  
-   save as `D:\\001DIY\\005lib\\01captureLib\\AST2400.OLB`
+   save as `D:\\005lib\\01captureLib\\AST2400.OLB`
 2. New Part `AST2400`, create **8 heterogeneous sections**:
    A_POWER / B_DDR / C_PCIE_VGA / D_MAC / E_FLASH_SPI /
    F_UART_I2C_JTAG / G_USB_ADC_MISC / H_GPIO_SD_PWM

@@ -1,6 +1,6 @@
 from pathlib import Path
 import json
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power')
 p={'status':'DRAFT_ENGINEERING_CANDIDATE_NOT_NATIVE','batchId':'SPI_external_2L_engineered_v6','variant':'2L','sourceExpectedSHA256':'76ED85DA3999A7DAFBDF9EB99EEC425B480A5EAEB49843BF970F8664707DE0AF','operations':[],'assumptions':['SPI initial teaching <=1MHz; GPIO lowest adequate output speed, verify receiver waveform before increasing speed','0.20mm signals, normal 0.60mm grounded guard rails; no controlled impedance claim','No prefilter08 executed. Bottom LDO crossing deliberately uses same-layer GND guard, not fictitious TOP plane under power pads.']}
 def via(i,n,xy,purpose):p['operations'].append(dict(type='via',id=i,net=n,xy=xy,padstack='L28_VIA030_C060',purpose=purpose))
 def route(i,n,l,pts,w=.2,purpose='Manual topology preserving source resistor ordering'):

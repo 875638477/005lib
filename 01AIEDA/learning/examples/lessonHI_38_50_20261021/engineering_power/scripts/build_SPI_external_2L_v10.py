@@ -1,6 +1,6 @@
 from pathlib import Path
 import json
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power');p=json.loads((R/'SPI_external_2L_engineered_v9.json').read_text());p['batchId']='SPI_external_2L_engineered_v10';p['status']='FINAL_ENGINEERING_CANDIDATE_NEEDS_NATIVE_GLOBAL_INTEGRATION'
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power');p=json.loads((R/'SPI_external_2L_engineered_v9.json').read_text());p['batchId']='SPI_external_2L_engineered_v10';p['status']='FINAL_ENGINEERING_CANDIDATE_NEEDS_NATIVE_GLOBAL_INTEGRATION'
 u={'SPI_NSS_EAST':{'xy':[29.6,32.46]},'SPI_NSS_EAST_TOP':{'points':[[31.2236,33.02],[30.16,33.02],[29.6,32.46]]},'SPI_NSS_BOTTOM_BRIDGE':{'points':[[29.6,32.46],[29.44,32.3],[20.4,32.3],[20.3,32.4]]},'SPI_GUARD_MISO_NSS':{'points':[[29.9,31.55],[21,31.55]]}}
 for o in p['operations']:
  if o['id'] in u:o.update(u[o['id']])

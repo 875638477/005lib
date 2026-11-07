@@ -1,6 +1,6 @@
 from pathlib import Path
 import json
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
 p=R/'scripts/batchHI_exact_ripup_v2.il';s=p.read_text();s=s.replace('targets=cons(selected targets))','drain(f) targets=cons(selected targets))').replace('mark=axlDBTransactionStart()','drain(f) mark=axlDBTransactionStart()').replace('after=hiExactRipupInventory(nil)','fprintf(f "HI_EXACT_NATIVE_LIST_DELETE_RETURNED\\n") drain(f)\n    after=hiExactRipupInventory(nil)');p.write_text(s,encoding='ascii')
 m=json.loads((R/'scripts/source_service_2L_b015_guarded_try02_compiled.json').read_text());plan=json.loads((R/'batches/source_service_2L_b015_guarded_try02.json').read_text());ds=[]
 q=json.dumps

@@ -1,5 +1,5 @@
 $ErrorActionPreference = 'Stop'
-$repairRoot = 'D:\001DIY\005lib\01AIEDA\learning\staging\lga1700_pcb_repair_20261023'
+$repairRoot = 'D:\005lib\01AIEDA\learning\staging\lga1700_pcb_repair_20261023'
 $delivery = 'D:\001DIY\004computer\lga1700\04AD_original_repair_20261023'
 if (Test-Path -LiteralPath $delivery) { throw 'Delivery already exists; do not merge an unreviewed output.' }
 $dirs = @('sch','sch\netlist','pcb','libraries\psm','libraries\dra','libraries\pad','libraries\devices','pcbenv','verification\pcb','verification\source_manifest','verification\ad_native_gold','verification\xml_roundtrip')
@@ -15,7 +15,7 @@ foreach ($f in Get-ChildItem -LiteralPath "$repairRoot\library\pad" -Filter '*.p
 Copy-One "$repairRoot\library\psm\r0402_pp_2.psm" "$delivery\libraries\psm\r0402_pp_2.psm"
 Copy-One "$repairRoot\library\psm\r0402_pp_2.dra" "$delivery\libraries\dra\r0402_pp_2.dra"
 Copy-One "$repairRoot\repair_plan\pcb_recovery_candidate\recover_f_usb3.txt" "$delivery\libraries\devices\recover_f_usb3.txt"
-$cfg = 'D:\001DIY\005lib\01AIEDA\learning\examples\lga1700_capture_migration_20261022\netlist_ready\allegro.cfg'
+$cfg = 'D:\005lib\01AIEDA\learning\examples\lga1700_capture_migration_20261022\netlist_ready\allegro.cfg'
 Copy-One $cfg "$delivery\sch\allegro.cfg"
 foreach ($name in @('VALIDATION.json','source_ad_pcb_post_recovery_pads.csv','验证说明.md')) { Copy-One "$repairRoot\repair_plan\pcb_recovery_candidate\$name" "$delivery\verification\pcb\$name" }
 foreach ($f in Get-ChildItem -LiteralPath "$repairRoot\repair_plan\source_repaired_audit" -File) { Copy-One $f.FullName "$delivery\verification\source_manifest\$($f.Name)" }

@@ -2,7 +2,7 @@
 import argparse,pathlib,subprocess,os,json,datetime,hashlib
 P=argparse.ArgumentParser()
 P.add_argument('--new',action='store_true');P.add_argument('--symbol-package',action='store_true');P.add_argument('--board',required=True);P.add_argument('--script',required=True);P.add_argument('--log',required=True);P.add_argument('--readonly',action='store_true')
-a=P.parse_args();ROOT=pathlib.Path(r'D:\001DIY\005lib\01AIEDA').resolve()
+a=P.parse_args();ROOT=pathlib.Path(r'D:\005lib\01AIEDA').resolve()
 board=pathlib.Path(a.board).resolve();script=pathlib.Path(a.script).resolve();log=pathlib.Path(a.log).resolve()
 assert all(p.is_relative_to(ROOT) for p in [board,script,log])
 assert script.is_file(); assert not board.exists() if a.new else board.is_file()

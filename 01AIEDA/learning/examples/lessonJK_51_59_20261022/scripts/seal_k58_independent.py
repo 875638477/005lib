@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,hashlib,datetime
-R=Path(r'D:/001DIY/005lib/01AIEDA');J=R/'learning/examples/lessonJK_51_59_20261022';O=J/'review/independent_K58';p=O/'review.json';d=json.loads(p.read_text());assert d['status']=='PASS_INDEPENDENT_THIS_ROUND_ECO_REPLAY' and not d['failed'];N=R/'learning/notes/lessonJK_K58_independent_replay_20261023.md'
+R=Path(r'D:/005lib/01AIEDA');J=R/'learning/examples/lessonJK_51_59_20261022';O=J/'review/independent_K58';p=O/'review.json';d=json.loads(p.read_text());assert d['status']=='PASS_INDEPENDENT_THIS_ROUND_ECO_REPLAY' and not d['failed'];N=R/'learning/notes/lessonJK_K58_independent_replay_20261023.md'
 text='''# 第58课：本轮DE ECO原生重放的独立验证
 
 日期：2026-10-23；课目录按2026-10-22启动批次保存。所有文件仍在01AIEDA。独立复核人只读取本轮实际原生结果，未运行Cadence；f29是唯一native执行者。原已封存J51—54记录不修改。

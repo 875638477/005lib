@@ -1,6 +1,6 @@
 from pathlib import Path
 import sys,json,hashlib,math
-H=Path(r'D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021');O=H/'engineering_power'
+H=Path(r'D:/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021');O=H/'engineering_power'
 sys.path[:0]=[str(H/'scripts'),str(H/'tooling/packages')]
 from routing_geometry import *
 items=[('BOOT0',44,27.75,'R28.1'),('GPIO_PA15',38,24.75,'J13.4'),('GPIO_PB4',40,25.75,'J13.5'),('I2C_SCL',42,26.75,'R19.2')]

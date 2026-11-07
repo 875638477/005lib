@@ -1,11 +1,11 @@
 import pathlib,urllib.request,hashlib,json,sys
-R=pathlib.Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lesson29_constraints_20261019')
+R=pathlib.Path(r'D:\005lib\01AIEDA\learning\examples\lesson29_constraints_20261019')
 url='https://www.st.com/resource/en/application_note/an4879-introduction-to-usb-hardware-and-pcb-guidelines-using-stm32-mcus-stmicroelectronics.pdf'
 p=R/'source/AN4879_Rev12_202606.pdf'
 try:
  r=urllib.request.urlopen(urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0'}),timeout=35)
  b=r.read(); assert b.startswith(b'%PDF');p.write_bytes(b)
- sys.path.insert(0,r'D:\001DIY\005lib\01AIEDA\learning\tools\pymupdf_1_28_2')
+ sys.path.insert(0,r'D:\005lib\01AIEDA\learning\tools\pymupdf_1_28_2')
  import fitz
  doc=fitz.open(p); rows=[]
  for i,page in enumerate(doc):

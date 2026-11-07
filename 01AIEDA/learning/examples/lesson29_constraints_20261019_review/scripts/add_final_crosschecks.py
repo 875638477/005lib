@@ -1,5 +1,5 @@
 from pathlib import Path
-B=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lesson29_constraints_20261019_review')
+B=Path(r'D:\005lib\01AIEDA\learning\examples\lesson29_constraints_20261019_review')
 p=B/'scripts'/'review29.py';s=p.read_text()
 s=s.replace('import csv,json,re,hashlib,collections','import csv,json,re,hashlib,collections,math')
 add=r'''

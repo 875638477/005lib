@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,hashlib,copy
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
 src=R/'engineering_power/power_star_03c.json'
 d=json.loads(src.read_text())
 for v in ['4L','2L']:

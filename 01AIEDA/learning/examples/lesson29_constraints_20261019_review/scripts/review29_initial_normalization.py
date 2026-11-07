@@ -1,7 +1,7 @@
 from pathlib import Path
 import csv,json,re,hashlib,collections
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lesson29_constraints_20261019_review')
-A=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lesson29_constraints_20261019')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lesson29_constraints_20261019_review')
+A=Path(r'D:\005lib\01AIEDA\learning\examples\lesson29_constraints_20261019')
 F=A/'logs'/'read_final02'
 def table(p):return list(csv.DictReader(p.open(encoding='utf-8'),delimiter='\t',quoting=csv.QUOTE_NONE))
 def q(s):return s[1:-1] if s.startswith('"') and s.endswith('"') else s
@@ -82,11 +82,11 @@ for r in rules:
  if r['net']=='GND':ck('GND direct P_GND_PLANE override','(PHYSICAL_CONSTRAINT_SET "P_GND_PLANE")' in r['props'])
  if r['net']=='VDDA':ck('VDDA direct P_VDDA_030 override','(PHYSICAL_CONSTRAINT_SET "P_VDDA_030")' in r['props'])
 stack=table(F/'stackup_full.tsv')
-sourceStack=table(Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lesson28_stackup_20261019\logs\reopen4_02\cross_section.tsv'))
+sourceStack=table(Path(r'D:\005lib\01AIEDA\learning\examples\lesson28_stackup_20261019\logs\reopen4_02\cross_section.tsv'))
 key=['position','name','type','function','material','thickness','dk','loss','conductor','negative','mfg']
 eq('Full native 4-layer stackup preserved',[[r[k] for k in key] for r in stack],[[r[k] for k in key] for r in sourceStack])
 geo=table(F/'direct_geometry.tsv')
-sourceGeo=table(Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lesson28_stackup_20261019\logs\mech4_01\mechanical_direct.tsv'))
+sourceGeo=table(Path(r'D:\005lib\01AIEDA\learning\examples\lesson28_stackup_20261019\logs\mech4_01\mechanical_direct.tsv'))
 # The 29 direct export covers outline/keepin and route/height keepouts, not package placebounds.
 sg={(r['layer'],r['bbox'],r['vertices']) for r in sourceGeo if q(r['layer'])!='PACKAGE GEOMETRY/PLACE_BOUND_TOP'}
 ag={(r['layer'],r['bbox'],r['vertices']) for r in geo}

@@ -1,5 +1,5 @@
 ﻿param([Parameter(Mandatory=$true)][string]$DataFile,[Parameter(Mandatory=$true)][string]$OutputFile)
-$taskRoot=[IO.Path]::GetFullPath('D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
+$taskRoot=[IO.Path]::GetFullPath('D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
 $target=[IO.Path]::GetFullPath($OutputFile)
 if(-not $target.StartsWith($taskRoot+'\',[StringComparison]::OrdinalIgnoreCase)){throw 'Output outside task directory'}
 Add-Type -AssemblyName System.Drawing

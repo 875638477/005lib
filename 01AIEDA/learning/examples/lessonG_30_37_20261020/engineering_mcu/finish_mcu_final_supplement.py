@@ -1,6 +1,6 @@
 import pathlib,json
-R=pathlib.Path(r"D:\001DIY\005lib\01AIEDA\learning\examples\lessonG_30_37_20261020\engineering_mcu")
-note=pathlib.Path(r"D:\001DIY\005lib\01AIEDA\learning\notes\lessonG_mcu_20261020.md")
+R=pathlib.Path(r"D:\005lib\01AIEDA\learning\examples\lessonG_30_37_20261020\engineering_mcu")
+note=pathlib.Path(r"D:\005lib\01AIEDA\learning\notes\lessonG_mcu_20261020.md")
 t=note.read_text(encoding="utf-8-sig")
 marker="## 9. 最终入口实铜、局部例外与独立复核"
 if marker in t:t=t[:t.index(marker)].rstrip()+"\n\n"

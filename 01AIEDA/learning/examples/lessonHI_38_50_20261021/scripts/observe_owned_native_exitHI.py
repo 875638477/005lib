@@ -1,6 +1,6 @@
 ﻿from pathlib import Path
 import json,ctypes,ctypes.wintypes as w,datetime,time,hashlib,argparse
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021').resolve()
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021').resolve()
 P=argparse.ArgumentParser();P.add_argument('--log',required=True);P.add_argument('--seconds',type=int,default=1800);a=P.parse_args();B=Path(a.log).resolve();assert B.is_relative_to(R)
 L=json.loads((B/'launch.json').read_text());assert L['completed'] is False and L['exitCode'] is None
 K=ctypes.WinDLL('kernel32',use_last_error=True)

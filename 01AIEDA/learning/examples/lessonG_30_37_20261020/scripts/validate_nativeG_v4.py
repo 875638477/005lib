@@ -1,7 +1,7 @@
 from pathlib import Path
 import re,json,csv,hashlib,math
 from collections import Counter
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonG_30_37_20261020')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonG_30_37_20261020')
 V=R/'review';V.mkdir(exist_ok=True)
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest().upper()
 def sx(s):

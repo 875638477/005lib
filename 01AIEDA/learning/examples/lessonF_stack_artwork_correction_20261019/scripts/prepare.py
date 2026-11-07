@@ -1,6 +1,6 @@
 from pathlib import Path
 import shutil,json,hashlib,re
-A=Path(r'D:\001DIY\005lib\01AIEDA')
+A=Path(r'D:\005lib\01AIEDA')
 R=A/'learning/examples/lessonF_stack_artwork_correction_20261019'
 for x in ['backups','current','source','scripts','logs','exports']:(R/x).mkdir(parents=True,exist_ok=True)
 sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest().upper()
@@ -29,7 +29,7 @@ def calls(s):
  return res
 records=[]
 for n in [2,4]:
- src=Path(r'D:\001DIY\005lib\01env')/f'drill{n}.txt'
+ src=Path(r'D:\005lib\01env')/f'drill{n}.txt'
  dst=R/'source'/src.name
  shutil.copy2(src,dst)
  s=dst.read_text(encoding='utf8');forms=calls(s)

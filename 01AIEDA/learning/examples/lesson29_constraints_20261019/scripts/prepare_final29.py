@@ -1,5 +1,5 @@
 import pathlib,shutil
-R=pathlib.Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lesson29_constraints_20261019')
+R=pathlib.Path(r'D:\005lib\01AIEDA\learning\examples\lesson29_constraints_20261019')
 src=R/'native/F29_CONSTRAINTS_v2.brd';dst=R/'native/F29_CONSTRAINTS_v3.brd';assert not dst.exists();shutil.copy2(src,dst)
 il=r'''
 procedure(f29PatchGround(board out)
@@ -39,6 +39,6 @@ s=s.replace('  fprintf(f "FINAL_DRC=',r'''
 (R/'scripts/challenge04.scr').write_text(f'set NOCONFIRM\nskill errset(load("{p}/scripts/build29_v2.il") t)\nskill errset(load("{p}/scripts/challenges29_v4.il") t)\nskill errset(f29Challenges("{p}/logs/challenge04") t)\nquit\nfillin "yes"\n',encoding='ascii')
 # Final read scripts reuse independently loaded read helpers.
 for kind,board in [('final','F29_CONSTRAINTS_v3.brd'),('coupon','F29_PHASE_COUPON.brd')]:
- scr=f'set NOCONFIRM\nskill errset(load("D:/001DIY/005lib/01AIEDA/learning/scripts/de_board_read.il") t)\nskill errset(load("{p}/scripts/build29_v2.il") t)\nskill errset(load("{p}/scripts/read29.il") t)\nskill errset(load("{p}/scripts/extra_read29.il") t)\nskill errset(f29Read("{p}/logs/read_{kind}") t)\nskill errset(f29ExtraRead("{p}/logs/read_{kind}") t)\nquit\nfillin "yes"\n'
+ scr=f'set NOCONFIRM\nskill errset(load("D:/005lib/01AIEDA/learning/scripts/de_board_read.il") t)\nskill errset(load("{p}/scripts/build29_v2.il") t)\nskill errset(load("{p}/scripts/read29.il") t)\nskill errset(load("{p}/scripts/extra_read29.il") t)\nskill errset(f29Read("{p}/logs/read_{kind}") t)\nskill errset(f29ExtraRead("{p}/logs/read_{kind}") t)\nquit\nfillin "yes"\n'
  (R/f'scripts/read_{kind}.scr').write_text(scr,encoding='ascii')
 print('GROUND_PATCH_AND_FINAL_CHECKS_PREPARED')

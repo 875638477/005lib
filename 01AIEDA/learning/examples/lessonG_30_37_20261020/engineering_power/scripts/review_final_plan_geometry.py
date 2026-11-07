@@ -1,6 +1,6 @@
 from pathlib import Path
 import json, math, hashlib, sys
-B=Path(r'D:\001DIY\005lib\01AIEDA')
+B=Path(r'D:\005lib\01AIEDA')
 G=B/'learning/examples/lessonG_30_37_20261020'
 R=G/'engineering_power'
 inv=json.loads((G/'inventory/inventory_4L.json').read_text(encoding='utf-8'))

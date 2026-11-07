@@ -1,5 +1,5 @@
 $ErrorActionPreference='Stop'
-$repairRoot='D:\001DIY\005lib\01AIEDA\learning\staging\lga1700_pcb_repair_20261023'
+$repairRoot='D:\005lib\01AIEDA\learning\staging\lga1700_pcb_repair_20261023'
 $auditBase=Join-Path $repairRoot 'xml_equivalence_audit'
 if(Test-Path -LiteralPath $auditBase){throw 'Refuse existing audit directory'}
 New-Item -ItemType Directory -Path $auditBase | Out-Null

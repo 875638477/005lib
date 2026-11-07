@@ -1,5 +1,5 @@
 from pathlib import Path
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonF_stack_artwork_correction_20261019')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonF_stack_artwork_correction_20261019')
 base=R/'scripts'
 p=base/'correction.il'
 p.write_text(p.read_text()+r'''

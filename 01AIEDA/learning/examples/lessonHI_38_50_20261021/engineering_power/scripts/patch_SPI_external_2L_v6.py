@@ -1,6 +1,6 @@
 from pathlib import Path
 import json
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power');p=json.loads((R/'SPI_external_2L_engineered_v6.json').read_text())
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power');p=json.loads((R/'SPI_external_2L_engineered_v6.json').read_text())
 updates={
 'SPI_SCK_EAST':dict(xy=[31.25,30.45]),'SPI_SCK_WEST':dict(xy=[21.4,30.05]),
 'SPI_SCK_EAST_TOP':dict(points=[[32.0252,31],[31.8,31],[31.25,30.45]]),

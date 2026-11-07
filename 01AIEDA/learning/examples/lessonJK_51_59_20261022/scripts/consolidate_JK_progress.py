@@ -1,5 +1,5 @@
 import pathlib,json,shutil
-R=pathlib.Path(r'D:\001DIY\005lib\01AIEDA');J=R/'learning/examples/lessonJK_51_59_20261022'
+R=pathlib.Path(r'D:\005lib\01AIEDA');J=R/'learning/examples/lessonJK_51_59_20261022'
 d={"51":["审查实操已做；未接网/USB/整板DRC开放","lessonJK_51_54_20261022.md"],"52":["实际路径/参考审查已做；USB/返回待闭环","lessonJK_51_54_20261022.md"],"53":["供电域/回路审查已做；负载/热条件开放","lessonJK_51_54_20261022.md"],"54":["实际风险定位已做；整改/实测开放","lessonJK_51_54_20261022.md"],"55":["两板实例整改fresh1644项通过；DFM未释放","lessonJK_55_57_20261022.md"],"56":["原生实际输出+独立CAM/视觉已做；不可投产","lessonJK_independent56_20261022.md"],"57":["BOM/坐标训练输出通过；料号/工厂映射待定","lessonJK_55_57_20261022.md"],"58":["本轮隔离ECO1453项通过；完整两板未结课","lessonJK_K58_independent_replay_20261023.md"],"59":["测试方案/测点/空白表已备；实物NOT_RUN","lessonJK_59_bench_20261022.md"]}
 b=J/'backups/index_progress_before_consolidation_20261023';b.mkdir(exist_ok=True)
 for name in ['EDA.md','课程索引.md']:

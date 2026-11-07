@@ -1,5 +1,5 @@
 from pathlib import Path
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
 s=(R/'scripts/compile_batchHI_v4.py').read_text().replace('.read_text()',".read_text(encoding='utf8')")
 s=s.replace(" elif typ=='netClass':",'''  for layer,fields in op.get('layerValues',{}).items():
    for field,val in fields.items():statements.append(f'hiCSetLayerValue(f \\'{domain} {q(op["name"])} {q(layer)} \\'{field} {quotedValue(val)})')

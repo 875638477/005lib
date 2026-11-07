@@ -1,4 +1,4 @@
-set path {D:/001DIY/005lib/01AIEDA/learning/staging/de_15_26_20261019/minimal_factory/native/de_integrated_two_res.dsn}
+set path {D:/005lib/01AIEDA/learning/staging/de_15_26_20261019/minimal_factory/native/de_integrated_two_res.dsn}
 set sess $::DboSession_s_pDboSession;set s [DboState]
 set d [::DE::obj [$sess GetDesignAndSchematics [::DE::cs $path] $s] $s ReadDesign];lappend ::DE::designs $d
 set sch [::DE::obj [$d GetRootSchematic $s] $s Root]

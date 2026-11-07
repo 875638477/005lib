@@ -1,5 +1,5 @@
 ﻿import pathlib,json,sys,math
-R=pathlib.Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu');H=R.parent;P=R/'plans';sys.path.insert(0,str(H/'scripts'));from routing_geometry import *
+R=pathlib.Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu');H=R.parent;P=R/'plans';sys.path.insert(0,str(H/'scripts'));from routing_geometry import *
 q=load(P/'NSS_pullup_local_relayout_01.json')
 for v in ['4L','2L']:
  n=load(P/f'GPIO_future_{v}_13_snapshot.json');s=CopperScene(n,load(P/f'GPIO_future_{v}_13_networks.json'),load(P/f'GPIO_future_{v}_13_rules.json'),load(P/f'GPIO_future_{v}_13_policy.json'))

@@ -1,5 +1,5 @@
 ﻿from pathlib import Path
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
 s=(R/'scripts/prepare_stored_readbackHI_v3.py').read_text()
 needle="for op in d.get('operations',[]):\n if op['type']=='via':il+="
 insert="""if d.get('terminalContract'):

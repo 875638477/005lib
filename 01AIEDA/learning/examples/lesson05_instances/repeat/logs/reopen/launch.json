@@ -9,10 +9,10 @@
     "-nographic",
     "-readonly",
     "-s",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson05_instances\\repeat\\read.scr",
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lesson05_instances\\repeat\\read.scr",
     "-p",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson05_instances\\repeat\\logs\\reopen",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson05_instances\\repeat\\lesson05_instances.brd"
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lesson05_instances\\repeat\\logs\\reopen",
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lesson05_instances\\repeat\\lesson05_instances.brd"
   ],
   "completed": true,
   "exitCode": 0,

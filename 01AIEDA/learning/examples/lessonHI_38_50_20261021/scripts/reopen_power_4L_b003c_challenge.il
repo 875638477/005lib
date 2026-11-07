@@ -1,7 +1,7 @@
 
 procedure(hiStarNeckChallenge()
  let((f names count)
-  f=outfile("D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/logs/reopen_power_4L_b003c/hi_star_neck_challenge.txt")
+  f=outfile("D:/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/logs/reopen_power_4L_b003c/hi_star_neck_challenge.txt")
   names=list("HI_U1_INNER_LEFT_P_4L" "HI_U1_INNER_SOUTH_P_4L")
   foreach(name names
    unless(equal(axlCNSGetPhysical(name "TOP" 'necklength_max) 1.4) error("Unexpected normal star neck rule\n"))

@@ -1,7 +1,7 @@
 import sys
 sys.dont_write_bytecode=True
 import pathlib,json,copy,math,hashlib
-R=pathlib.Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');sys.path.insert(0,str(R/'review/b020_engineering'))
+R=pathlib.Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');sys.path.insert(0,str(R/'review/b020_engineering'))
 from audit_pb10_portal_v40 import build,apply,audit,load,CopperScene,Point,LineString,OUT
 from audit_pb10_portal_v41 import clear_all,route,via,riproute
 from shapely.ops import unary_union

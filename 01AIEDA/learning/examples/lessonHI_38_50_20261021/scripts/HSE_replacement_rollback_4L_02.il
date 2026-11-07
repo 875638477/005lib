@@ -1,6 +1,6 @@
 procedure(hiHSEReplacePilot()
  let((f mark before)
- f=outfile("D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/logs/HSE_replacement_rollback_4L_02/hi_hse_replace_rollback.txt")
+ f=outfile("D:/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/logs/HSE_replacement_rollback_4L_02/hi_hse_replace_rollback.txt")
  hiRegistry=nil
  before=hiUniqueExactShape("GND" "L2" list(list(45.1 28.5) list(45.8 28.5) list(45.8 31.25) list(45.1 31.95) list(45.3 31.95) list(45.3 33.2) list(47.5 33.2) list(47.5 39.4) list(37.2 39.4) list(37.2 36.8) list(40.0 36.8) list(40.0 32.8) list(40.6 32.8) list(40.6 31.95) list(44.4 31.95) list(45.1 31.25)) nil)
  fprintf(f "BEFORE quietShape=%L oldStemPoint=%L newStemPoint=%L storedDRCs=%d\n" before axlGeoPointInShape(list(45.45 29.5) before t) axlGeoPointInShape(list(46.35 30.5) before t) length(axlDBGetDesign()->drcs))

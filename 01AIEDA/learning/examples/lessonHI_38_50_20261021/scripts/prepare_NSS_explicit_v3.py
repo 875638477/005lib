@@ -1,6 +1,6 @@
 from pathlib import Path
 import json
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
 ops=[]
 def route(id,pts,layer='TOP'):
  ops.append({'type':'route','id':id,'net':'PA4_SPI_NSS','layer':layer,'points':pts,'width':.2,'purpose':'Explicit source-first NSS and pullup branch, preserves west SPI corridor; native/reference validation pending'})

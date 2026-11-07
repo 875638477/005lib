@@ -1,5 +1,5 @@
 import pathlib,json
-R=pathlib.Path(r'D:/001DIY/005lib/01AIEDA');B=R/'learning/examples/lesson10_connector_20261018';O=R/'learning/examples/lesson28_stackup_20261019_review'
+R=pathlib.Path(r'D:/005lib/01AIEDA');B=R/'learning/examples/lesson10_connector_20261018';O=R/'learning/examples/lesson28_stackup_20261019_review'
 exec((O/'review28.py').read_text().split("cs=[]")[0])
 B=R/'learning/examples/lesson10_connector_20261018'
 r=table(B/'logs/reopen_package/pins.tsv')

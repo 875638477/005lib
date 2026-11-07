@@ -1,5 +1,5 @@
 ﻿from pathlib import Path
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
 s=(R/'scripts/extract_checkpointHI_v7.py').read_text()
 s=s.replace("P.add_argument('--stored-state-only',action='store_true');a=P.parse_args()", "P.add_argument('--stored-state-only',action='store_true');P.add_argument('--no-alias-update',action='store_true');P.add_argument('--interactive-only',action='store_true');a=P.parse_args()\nassert not a.interactive_only or (a.stored_state_only and a.no_alias_update)")
 s=s.replace("d={'status':", "if a.interactive_only:summary['drcEvidenceScope']='INTERMEDIATE_WHOLE_BOARD_INTERACTIVE_NIL_ZERO; BATCH_T_PENDING; FRESH_STORED_STATE_ONLY'\nd={'status':")

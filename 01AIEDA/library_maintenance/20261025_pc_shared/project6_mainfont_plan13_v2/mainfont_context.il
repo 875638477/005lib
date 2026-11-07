@@ -2,7 +2,7 @@ procedure(pc13MainFontContextApply(s)
  let((f row rows p i expected a)
   unless(equal(axlDBGetDesignUnits() '("mils" 2)) error("Main font context requires exactmils2\n"))
   unless(null(axlDBGetDesign()->symdefs) && null(axlDBGetDesign()->padstacks) error("Font context may only be applied to an empty cold fixture\n"))
-  f=infile("D:/001DIY/005lib/01AIEDA/library_maintenance/20261025_pc_shared/project6_mainfont_plan13_v2/MAIN_SOURCE64_FONT_CONTEXT.ilist") rows=nil while(row=lineread(f) rows=cons(car(row) rows)) close(f) rows=reverse(rows)
+  f=infile("D:/005lib/01AIEDA/library_maintenance/20261025_pc_shared/project6_mainfont_plan13_v2/MAIN_SOURCE64_FONT_CONTEXT.ilist") rows=nil while(row=lineread(f) rows=cons(car(row) rows)) close(f) rows=reverse(rows)
   unless(length(rows)==64 error("Full unchanged source64 font context missing\n"))
   ; Allocate all missing slots first, before setting source user-defined names.
   for(i 1 64

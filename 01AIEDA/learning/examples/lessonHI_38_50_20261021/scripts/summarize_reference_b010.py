@@ -1,6 +1,6 @@
 ﻿from pathlib import Path
 import json,csv,hashlib,collections,math,re
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
 outputs={}
 for v in ['4L','2L']:
  log=R/f'logs/reopen_postcritical_{v}_b010';src=log/'hi_actual_reference_samples.tsv'

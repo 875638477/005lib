@@ -1,6 +1,6 @@
 from pathlib import Path
 import csv,json,re,hashlib,collections
-C=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonF_stack_artwork_correction_20261019')
+C=Path(r'D:\005lib\01AIEDA\learning\examples\lessonF_stack_artwork_correction_20261019')
 R=C/'review'
 checks=[]
 evidence={}

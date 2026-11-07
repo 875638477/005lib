@@ -1,4 +1,4 @@
-set root {D:/001DIY/005lib/01AIEDA/learning}
+set root {D:/005lib/01AIEDA/learning}
 set logRoot [file join $root logs capture_C_20261019]
 load {C:/Program0/Cadence/spb172/tools/bin/orDb_Dll_Tcl64.dll} DboTclWriteBasic
 set ::DboSession_s_pDboSession [DboTclHelper_sCreateSession]

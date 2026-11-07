@@ -1,5 +1,5 @@
 set s [DboState]
-set root {D:/001DIY/005lib/01AIEDA/learning/staging/a4_review_20261019}
+set root {D:/005lib/01AIEDA/learning/staging/a4_review_20261019}
 if {![info exists auditLabel]} {set auditLabel before}
 if {![info exists dsnPath]} {set dsnPath "$root/baseline_snapshot.dsn"}
 set d [::DE::obj [$::DboSession_s_pDboSession GetDesignAndSchematics [::DE::cs $dsnPath] $s] $s OpenSnapshot]

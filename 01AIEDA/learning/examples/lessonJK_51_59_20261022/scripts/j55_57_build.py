@@ -1,7 +1,7 @@
 """Read native exports only; write training assembly CSVs and explicit instance-correction contracts."""
 from pathlib import Path
 import json,csv,re,hashlib,math,collections,sys,xml.sax.saxutils as xml
-R=Path('D:/001DIY/005lib/01AIEDA'); J=R/'learning/examples/lessonJK_51_59_20261022'; H=R/'learning/examples/lessonHI_38_50_20261021'; D=R/'learning/examples/de_15_26_20261019'
+R=Path('D:/005lib/01AIEDA'); J=R/'learning/examples/lessonJK_51_59_20261022'; H=R/'learning/examples/lessonHI_38_50_20261021'; D=R/'learning/examples/de_15_26_20261019'
 STATUS='TRAINING_NOT_FOR_ASSEMBLY'
 def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest().upper()
 def load(p):return json.loads(Path(p).read_text(encoding='utf-8-sig'))

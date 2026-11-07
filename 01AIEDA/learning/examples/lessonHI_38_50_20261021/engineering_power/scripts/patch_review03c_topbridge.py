@@ -1,5 +1,5 @@
 from pathlib import Path
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power')
 p=R/'scripts/review_power03c.py';s=p.read_text()
 needle=" check(variant+'.VINandFBnotshorted'"
 where=s.index(needle)

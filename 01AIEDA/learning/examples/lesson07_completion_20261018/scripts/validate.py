@@ -1,6 +1,6 @@
 ﻿from pathlib import Path
 import re,json,math,hashlib
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lesson07_completion_20261018')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lesson07_completion_20261018')
 def sx(s):
  t=re.findall(r'"(?:\\.|[^"\\])*"|\(|\)|[^\s()]+',s); i=0
  def take():

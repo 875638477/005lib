@@ -1,5 +1,5 @@
 from pathlib import Path
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
 p=R/'scripts/normalize_HI_actual_v3.py';s=p.read_text()
 s=s.replace("role=ssrow(rr);k=route_key(role['net'],role['layer'],role['startEnd'],role['width'])","""role=ssrow(rr)
   parent_attrs=role.get('parentAttributes') or []

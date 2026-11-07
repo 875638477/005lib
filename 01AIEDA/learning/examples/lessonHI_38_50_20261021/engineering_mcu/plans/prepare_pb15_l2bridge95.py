@@ -1,5 +1,5 @@
 ﻿import pathlib,json,math,sys,hashlib
-P=pathlib.Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu\plans');H=P.parents[1];sys.path.insert(0,str(H/'scripts'));from routing_geometry import *
+P=pathlib.Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu\plans');H=P.parents[1];sys.path.insert(0,str(H/'scripts'));from routing_geometry import *
 v='4L';n=load(P/'PB15_attach_4L_87_snapshot.json');nw=load(P/'PB15_attach_4L_87_networks.json');rs=load(P/'PB15_attach_4L_87_rules.json');p=load(P/'PB15_attach_4L_87_policy.json');p.pop('routeWindows',None)
 ops=[]
 def via(net,xy,small=True):ops.append(dict(type='via',id=f'PB15_95_{net}_V{len(ops)}',net=net,xy=xy,padstack='HI_VIA026_C052_TENT' if small else 'L28_VIA030_C060',padDiameterMM=.52 if small else .6,drillDiameterMM=.26 if small else .3))

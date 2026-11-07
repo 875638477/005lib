@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,sys,math,copy
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');P=R/'engineering_power';sys.path.insert(0,str(R/'scripts'));from routing_geometry import CopperScene,load,Point,Polygon,LineString,LAYERS
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');P=R/'engineering_power';sys.path.insert(0,str(R/'scripts'));from routing_geometry import CopperScene,load,Point,Polygon,LineString,LAYERS
 sys.path.insert(0,str(P/'scripts'));from cadence_poly import conservative_plane
 allrows=[]
 for v in ['2L','4L']:

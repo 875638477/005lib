@@ -1,6 +1,6 @@
 ﻿from pathlib import Path
 import json,os,subprocess,datetime,hashlib
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lesson07_completion_20261018')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lesson07_completion_20261018')
 L=R/'logs/import_null';L.mkdir()
 env=os.environ.copy();env['ALLEGRO_PCBENV']=str(L/'pcbenv');(L/'pcbenv').mkdir()
 args=[r'C:\Program0\Cadence\SPB172\tools\bin\padstack_editor.exe','-x',str(R/'library/eda_l07c_npth_200_null.pxml')]

@@ -1,6 +1,6 @@
 ﻿from pathlib import Path
 import json,re,hashlib
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
 p=R/'scripts/compile_batchHI_v11.py';s=p.read_text();needle=" vals='list('+' '.join('list(\\''+k+' '+quotedValue(v)+')' for k,v in op['values'].items())+')'";replacement=" vals='list('+' '.join('list(\\''+k+' '+quotedValue(':'.join(v) if k=='vias' and isinstance(v,list) else v)+')' for k,v in op['values'].items())+')'";assert needle in s;s=s.replace(needle,replacement);(R/'scripts/compile_batchHI_v12.py').write_text(s,encoding='ascii')
 p=R/'scripts/prepare_stored_readbackHI.py';s=p.read_text().replace("'hiBranchAudit','hiReferenceCoverageRead'","'hiBranchAudit','hiMechanicalPinRead','hiReferenceCoverageRead'");(R/'scripts/prepare_stored_readbackHI_v2.py').write_text(s,encoding='utf8')
 p=R/'scripts/prepare_readbackHI_v11.py';s=p.read_text().replace("captures+='skill errset(hiBranchAudit(\"'+out+'\") t)\\n'", "captures+='skill errset(hiBranchAudit(\"'+out+'\") t)\\n'\ncaptures+='skill errset(hiMechanicalPinRead(\"'+out+'\") t)\\n'");(R/'scripts/prepare_readbackHI_v12.py').write_text(s,encoding='utf8')

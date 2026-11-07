@@ -1,5 +1,5 @@
 ﻿import pathlib,json,sys,math,hashlib
-P=pathlib.Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu\plans');H=P.parents[1];sys.path.insert(0,str(H/'scripts'));from routing_geometry import *
+P=pathlib.Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu\plans');H=P.parents[1];sys.path.insert(0,str(H/'scripts'));from routing_geometry import *
 source=H/'inventory/checkpoints/padentry_4L_b019_DRC_PENDING/normalized.json';n=load(source);d=load(P/'PB15_4L_short_L2_comparison_95.json');op=next(o for o in d['operations']if o.get('layer')=='L2');ln=LineString(op['points']);slot=ln.buffer(.4,quad_segs=20)
 l3=unary_union([plane_from_native(dict(z,holes=z.get('holes')or[]))for z in n['planes']if z['layer']=='ETCH/L3'and z.get('filled')and z['net']=='GND'])
 # Approximate intended new signal-PTH antipads using declared .52 copper and preserved .30 GND spacing; native dynamic fill remains authoritative.

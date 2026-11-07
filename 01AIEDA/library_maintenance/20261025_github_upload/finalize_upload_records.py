@@ -5,7 +5,7 @@ from pathlib import Path
 from datetime import datetime, timezone
 
 WORK = Path(__file__).resolve().parent
-ROOT = Path(r"D:\001DIY\005lib\01AIEDA")
+ROOT = Path(r"D:\005lib\01AIEDA")
 LOG = ROOT / "library_maintenance/20261025_github_upload"
 NAMES = ("sensitive_scan_report.json", "sensitive_env_rar_report.json", "sensitive_unquoted_config_report.json", "sensitive_test_zip_report.json")
 reports = {name: json.loads((WORK / name).read_text(encoding="utf-8-sig")) for name in NAMES}

@@ -1,5 +1,5 @@
 from pathlib import Path
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonG_30_37_20261020')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonG_30_37_20261020')
 il=(R/'scripts/local_copperG.il').read_text().replace('neighbors=append(car(neighbors) cadr(neighbors))','when(listp(car(neighbors)) neighbors=append(car(neighbors) cadr(neighbors)))')
 (R/'scripts/local_copperG_v2.il').write_text(il,encoding='ascii')
 il=(R/'scripts/local_loops02.il').read_text().replace('35.75:24.25','35.20:24.25').replace('35.75:24.75','35.20:24.75').replace('42.75:22.75','42.75:22.20').replace('42.25:22.75','42.25:22.20').replace('44.25:29.75','44.80:29.75').replace('44.25:29.25','44.80:29.25')

@@ -1,6 +1,6 @@
 """Official Cadence CLI only. All source, runtime and output stays in 01AIEDA."""
 import pathlib,os,subprocess,json,datetime,hashlib,sys,shutil
-B=pathlib.Path(r"D:\001DIY\005lib\01AIEDA\learning\examples\lesson10_connector_20261018")
+B=pathlib.Path(r"D:\005lib\01AIEDA\learning\examples\lesson10_connector_20261018")
 EXE=pathlib.Path(r"C:\Program0\Cadence\SPB172\tools\bin")
 mode=sys.argv[1]
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest().upper()

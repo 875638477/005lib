@@ -1,7 +1,7 @@
 import importlib.util,json,pathlib,shutil,sys
 P=pathlib.Path(r'D:/001DIY/004computer/lga1700/13shared_libraries_pc_20261025/w/pcb_migration')
 spec=importlib.util.spec_from_file_location('base_audit',P/'run_pc_native_audit.py');b=importlib.util.module_from_spec(spec);spec.loader.exec_module(b)
-R=pathlib.Path(r'D:/001DIY/005lib/01AIEDA/library_maintenance/20261025_pc_shared/native_audits/final13_4layer');R.mkdir(parents=True,exist_ok=False)
+R=pathlib.Path(r'D:/005lib/01AIEDA/library_maintenance/20261025_pc_shared/native_audits/final13_4layer');R.mkdir(parents=True,exist_ok=False)
 for n in ['output','units']: (R/n).mkdir()
 e=b.envfor(R)
 final=json.loads((P/'FINAL_REF_MAPPING.json').read_text(encoding='utf-8-sig'))
@@ -16,7 +16,7 @@ for name in names:
  p=b.PUBLIC/'01Psm_lib'/(name+'.psm');assert p.is_file(),p
  row=dict(mode='final_public',source_name=assets[name]['source_name'] if name in assets else name,stem=name,path=str(p),source_path=str(p),source_sha256=b.sha(p),alias_sha256=b.sha(p),audit_output=str(R/'output'/f'{len(rows):04}.sexp'))
  b.metadata(row,R,e,len(rows));rows.append(row)
-blank=R/'blank.brd';shutil.copyfile(pathlib.Path(r'D:/001DIY/005lib/01AIEDA/library_maintenance/20261025_pc_shared/fixture4/EMPTY4.brd'),blank)
+blank=R/'blank.brd';shutil.copyfile(pathlib.Path(r'D:/005lib/01AIEDA/library_maintenance/20261025_pc_shared/fixture4/EMPTY4.brd'),blank)
 jobs=[]
 for row in rows:
  box=row['original_extents'];lit='(('+ ' '.join(box[0])+') ('+' '.join(box[1])+'))'

@@ -1,7 +1,7 @@
 ﻿"""Two immutable main13 boards: native identity feedback for exact Gate remap only."""
 from pathlib import Path
 import hashlib,json,os,shutil,subprocess,time,argparse
-R=Path(r'D:\001DIY\004computer\lga1700\13shared_libraries_pc_20261025');M=Path(r'D:\001DIY\005lib\01AIEDA\library_maintenance\20261025_pc_shared');CAD=Path(r'C:\Program0\cadence\SPB172')
+R=Path(r'D:\001DIY\004computer\lga1700\13shared_libraries_pc_20261025');M=Path(r'D:\005lib\01AIEDA\library_maintenance\20261025_pc_shared');CAD=Path(r'C:\Program0\cadence\SPB172')
 ROWS=[('source49AF',R/'w/via_alt13/PC13_FINAL.brd','49AF5EE7252CA9E8C4C48D8F60AD4D1113DA559814585356B14F6150A195C063'),('candidateA965',R/'w/all81_full4/INPUT_COPY.brd','A9651E39CBD8DAC0B67566686AF3D2CA38B2AA517C5C1ADCD74E81336D563F51')]
 def need(v,m):
  if not v:raise ValueError(m)

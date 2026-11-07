@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,hashlib,shutil
-B=Path(r'D:\001DIY\005lib\01AIEDA')
+B=Path(r'D:\005lib\01AIEDA')
 G=B/'learning/examples/lessonG_30_37_20261020'
 R=B/'learning/examples/lessonHI_38_50_20261021/engineering_power'
 for x in ['scripts','source','readouts']:(R/x).mkdir(parents=True,exist_ok=True)

@@ -3,7 +3,7 @@ import csv,hashlib,json,os,shutil,time,zipfile
 from pathlib import Path,PurePosixPath
 
 B=Path(__file__).resolve().parent
-AI=Path(r'D:\001DIY\005lib\01AIEDA')
+AI=Path(r'D:\005lib\01AIEDA')
 DEST=AI/'library_maintenance/20261025_pad_psm_merge'
 ALLOWED_DOCS={str(AI/p).casefold() for p in ('EDA.md','AI接管cadence.md','study_records/README.md','learning/notes/record_location_rules.md')}
 

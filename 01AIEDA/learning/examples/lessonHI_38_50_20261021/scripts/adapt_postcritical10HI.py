@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,sys,copy,hashlib,math
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
 sys.dont_write_bytecode=True
 sys.path.insert(0,str(R/'tooling/packages'))
 from shapely.geometry import Polygon

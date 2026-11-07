@@ -1,6 +1,6 @@
 # Run by the documented Capture command-line Tcl entry point.
 # All work and requests remain in this isolated lesson directory.
-set ::C11Root {D:/001DIY/005lib/01AIEDA/learning}
+set ::C11Root {D:/005lib/01AIEDA/learning}
 set ::C11Runtime [file join $::C11Root logs capture_C_20261019 runtime]
 set ::C11Queue [file join $::C11Root staging capture_C_20261019 queue]
 file mkdir $::C11Runtime $::C11Queue

@@ -3,7 +3,7 @@
 # Official creation model: PwlORSymbolCreate.tcl in the installed PWL/OR example.
 # Only the root agent owns the Capture process and invokes these procedures.
 namespace eval ::C12 {
-    variable learningRoot {D:/001DIY/005lib/01AIEDA/learning}
+    variable learningRoot {D:/005lib/01AIEDA/learning}
     variable footprint {qmi8610_lga16_3d3_p0d5}
 }
 

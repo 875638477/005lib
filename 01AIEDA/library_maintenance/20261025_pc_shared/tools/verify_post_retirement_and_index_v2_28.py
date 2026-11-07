@@ -5,7 +5,7 @@ the approved3069 assets; never adopts a new scan as expected state.
 from pathlib import Path
 from collections import Counter
 import argparse,copy,hashlib,importlib.util,json
-M=Path(r'D:\001DIY\005lib\01AIEDA\library_maintenance\20261025_pc_shared')
+M=Path(r'D:\005lib\01AIEDA\library_maintenance\20261025_pc_shared')
 R=Path(r'D:\001DIY\004computer\lga1700\13shared_libraries_pc_20261025')
 GUARD_SHA='C2835B5651C473873A8664AC68520E32795B3D09E8BBF0134AE5BA13BA6DBBEC'
 CLOSURE_SHA='8EA5E5694F18B663FE2D32B30FCB6128F8C7FD8A6F6465F818FA91F9BBABCDEC'

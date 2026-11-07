@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,hashlib,shutil
-A=Path(r'D:\001DIY\005lib\01AIEDA');R=A/'learning/examples/lessonG_30_37_20261020'
+A=Path(r'D:\005lib\01AIEDA');R=A/'learning/examples/lessonG_30_37_20261020'
 for s in ['source','backups','native','logs','inventory','library']:(R/s).mkdir(parents=True,exist_ok=True)
 records=[]
 def cp(src,dst):

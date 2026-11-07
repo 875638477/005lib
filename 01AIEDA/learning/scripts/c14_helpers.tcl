@@ -6,7 +6,7 @@
 
 namespace eval ::C14Research {
     variable version 20261019.1
-    variable learningRoot {D:/001DIY/005lib/01AIEDA/learning}
+    variable learningRoot {D:/005lib/01AIEDA/learning}
 }
 
 proc ::C14Research::allowedPath {path} {

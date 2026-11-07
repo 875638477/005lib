@@ -1,5 +1,5 @@
 ﻿import pathlib,shutil,json,subprocess,sys
-R=pathlib.Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonJK_51_59_20261022')
+R=pathlib.Path(r'D:\005lib\01AIEDA\learning\examples\lessonJK_51_59_20261022')
 s=(R/'native/run_native56_v7.py').read_text();s=s.replace("'ncroute'],required=True)","'ncroute','skill'],required=True)").replace("P.add_argument('--outdir');a=P.parse_args()","P.add_argument('--outdir');P.add_argument('--script');a=P.parse_args()")
 s=s.replace("elif a.action=='list':", "elif a.action=='skill':\n assert a.script and pathlib.Path(a.script).resolve().is_relative_to(R.resolve())\n args=[str(C/'allegro.exe'),'-product','Allegro_performance','-safe','-nographic','-s',a.script,'-p',str(log),str(board)]\nelif a.action=='list':")
 (R/'native/run_native56_v8.py').write_text(s,encoding='utf8')

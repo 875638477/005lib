@@ -1,5 +1,5 @@
 ﻿import pathlib,json
-R=pathlib.Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu');P=R/'plans'
+R=pathlib.Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu');P=R/'plans'
 s=(P/'plan_gpio_future_local_07.py').read_text(encoding='utf-8-sig')
 s=s.replace("starts,viaMasks=scene.masks(net,width,step)",'''# A fine nominal mask is followed by exact continuous path_clear on every segment.
  oldMasks=scene.masks

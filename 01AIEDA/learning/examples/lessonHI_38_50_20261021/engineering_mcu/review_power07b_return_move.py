@@ -1,5 +1,5 @@
 import pathlib,json
-R=pathlib.Path(r"D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu");H=R.parent
+R=pathlib.Path(r"D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu");H=R.parent
 extra=[]
 for name in("STAR_reroute_07b.json","V3_peripheral_distribution_06b.json"):
  d=json.loads((H/"engineering_power"/name).read_text(encoding="utf-8"))

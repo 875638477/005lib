@@ -7,7 +7,7 @@ import re
 import shutil
 from pathlib import Path
 
-ROOT = Path(r"D:\001DIY\005lib")
+ROOT = Path(r"D:\005lib")
 WORK = ROOT / "AUTOlib" / "ul_AST2400" / "AllegroV17_2"
 PAD_LIB = ROOT / "01Pad_lib"
 PSM_LIB = ROOT / "01Psm_lib"
@@ -155,7 +155,7 @@ if not exist "builder.ile" (
 )
 if not exist "%FP%.xml" (
   echo ERROR: missing %FP%.xml
-  echo Run: python D:\\001DIY\\005lib\\01AIEDA\\ast2400_lib\\build_allegro_fp.py
+  echo Run: python D:\\005lib\\01AIEDA\\ast2400_lib\\build_allegro_fp.py
   goto FAIL
 )
 

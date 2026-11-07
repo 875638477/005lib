@@ -1,5 +1,5 @@
 import pathlib,datetime,json,hashlib,re,shutil
-R=pathlib.Path(r'D:\001DIY\005lib\01AIEDA');G=R/'learning/examples/lessonHI_38_50_20261021'
+R=pathlib.Path(r'D:\005lib\01AIEDA');G=R/'learning/examples/lessonHI_38_50_20261021'
 for q in ('plans','review','review_figures','source','staging'): (G/q).mkdir(parents=True,exist_ok=True)
 backup=R/'backups/before_HI_38_50_20261021';backup.mkdir(parents=True,exist_ok=True)
 for n in ('EDA.md','课程索引.md'):

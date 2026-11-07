@@ -4,7 +4,7 @@ import argparse,hashlib,json,os,shutil,subprocess,time
 M=Path(__file__).resolve().parent
 R=Path('D:/001DIY/004computer/lga1700/13shared_libraries_pc_20261025')
 CAD=Path('C:/Program0/cadence/SPB172')
-PUBLIC=Path('D:/001DIY/005lib/01brdlib/0010.brd')
+PUBLIC=Path('D:/005lib/01brdlib/0010.brd')
 OLD='680500B07BC97F2B9D47064F83A01D0376AE43ADD486171F9B46087109E1B898'
 sha=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest().upper()
 def need(v,m):

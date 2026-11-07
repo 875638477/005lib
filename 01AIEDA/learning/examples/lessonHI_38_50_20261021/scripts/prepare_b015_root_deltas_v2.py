@@ -1,6 +1,6 @@
 ﻿from pathlib import Path
 import json,copy,hashlib
-P=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
+P=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
 def read(p):return json.loads((P/p).read_text(encoding='utf8'))
 def write(p,q):
  o=P/p;assert not o.exists(),str(o);o.write_text(json.dumps(q,indent=2),encoding='utf8')

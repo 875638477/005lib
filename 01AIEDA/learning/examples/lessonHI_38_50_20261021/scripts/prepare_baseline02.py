@@ -1,5 +1,5 @@
 from pathlib import Path
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
 s=(R/'scripts/network_inventoryHI.il').read_text()
 needle='  foreach(net des->nets'
 rep='''  fprintf(sf "ALL_PIN_NET_OBJECT_TERMINALS=%d\\n" length(allpins))

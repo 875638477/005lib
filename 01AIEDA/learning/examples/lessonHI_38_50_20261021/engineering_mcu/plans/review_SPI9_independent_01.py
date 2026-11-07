@@ -1,5 +1,5 @@
 ﻿import pathlib,json,sys,math,hashlib
-R=pathlib.Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu');H=R.parent;sys.path.insert(0,str(H/'scripts'))
+R=pathlib.Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu');H=R.parent;sys.path.insert(0,str(H/'scripts'))
 from routing_geometry import *
 f=H/'inventory/checkpoints/postcritical_2L_b010';n=load(f/'normalized.json');p=load(H/'engineering_power/SPI_external_2L_engineered_v9.json');deleted=[]
 for o in p['operations']:

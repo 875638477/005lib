@@ -1,7 +1,7 @@
 ﻿from pathlib import Path
 from collections import Counter,defaultdict
 import json,re,hashlib
-M=Path(r'D:\001DIY\005lib\01AIEDA\library_maintenance\20261025_pc_shared');I=M/'global_nonpassive_inventory_v1';O=M/'global_nonpassive_plan_review_v1';O.mkdir(exist_ok=True)
+M=Path(r'D:\005lib\01AIEDA\library_maintenance\20261025_pc_shared');I=M/'global_nonpassive_inventory_v1';O=M/'global_nonpassive_plan_review_v1';O.mkdir(exist_ok=True)
 jr=lambda p:json.loads(Path(p).read_text(encoding='utf-8-sig'));sha=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest().upper()
 original=I/'PSM_NATIVE_AUDIT_PLAN.json';p=jr(original);rel=jr(I/'NAME_CANDIDATE_RELATIONS.json');full=jr(I/'ALL_PUBLIC_PSM_INVENTORY.json')['files'];prior=jr(M/'global_suffix_inventory_v1/PSM_NATIVE_AUDIT_PLAN.json');ext=M/'public_canonical_additions_run13/PUBLIC_OLD_PLUS_NEW_GUARD.json';assert ext.exists();guards=jr(ext)['files'];gh={x['path'].lower():x for x in guards}
 for r in p['representatives']:

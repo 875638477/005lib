@@ -1,5 +1,5 @@
 ﻿import pathlib,json,math
-P=pathlib.Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu\plans');q=json.loads((P/'NSS_pullup_local_relayout_02.json').read_text());q['batchId']='NSS_pullup_local_relayout_03';q['status']='ENGINEERED_MAINFEED_SOURCE_CANDIDATE_PENDING_FULL_REFERENCE_AND_NATIVE'
+P=pathlib.Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu\plans');q=json.loads((P/'NSS_pullup_local_relayout_02.json').read_text());q['batchId']='NSS_pullup_local_relayout_03';q['status']='ENGINEERED_MAINFEED_SOURCE_CANDIDATE_PENDING_FULL_REFERENCE_AND_NATIVE'
 keep=[]
 for o in q['operations']:
  if o['type']=='deleteSegment' and o['net']=='V3V3' and o['layer']=='TOP':continue

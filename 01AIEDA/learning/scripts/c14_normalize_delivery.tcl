@@ -1,6 +1,6 @@
-source {D:/001DIY/005lib/01AIEDA/learning/scripts/c12_helpers.tcl}
+source {D:/005lib/01AIEDA/learning/scripts/c12_helpers.tcl}
 set s [::C12::session];set st [DboState]
-set path {D:/001DIY/005lib/01AIEDA/learning/examples/lesson14_capture/final/library/c14_qmi8610_v2.olb}
+set path {D:/005lib/01AIEDA/learning/examples/lesson14_capture/final/library/c14_qmi8610_v2.olb}
 set lib [::C12::nonnull [$s GetLib [::C12::cstring $path] $st] $st GetDelivery]
 set pkg [::C12::nonnull [$lib GetPackage [::C12::cstring QMI8610_C12] $st] $st Package]
 set dev [::C12::nonnull [$pkg GetDevice 0 $st] $st Device]

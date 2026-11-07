@@ -2,7 +2,7 @@
 from pathlib import Path
 from collections import Counter
 import json,hashlib,re
-M=Path(r'D:\001DIY\005lib\01AIEDA\library_maintenance\20261025_pc_shared')
+M=Path(r'D:\005lib\01AIEDA\library_maintenance\20261025_pc_shared')
 def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest().upper()
 def parse(p):return Counter(line.strip() for line in p.read_text(encoding='utf-8-sig',errors='replace').splitlines() if re.search(r'\b(?:WARNING|ERROR)\(SPM[A-Z]+-\d+\):',line))
 out=M/'public_module_warning_baseline_review13';out.mkdir(exist_ok=False);reports=[]

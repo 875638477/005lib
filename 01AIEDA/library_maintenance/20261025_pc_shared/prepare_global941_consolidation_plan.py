@@ -1,7 +1,7 @@
 ﻿from pathlib import Path
 from collections import Counter
 import csv,json,hashlib,xml.etree.ElementTree as ET
-M=Path(r'D:\001DIY\005lib\01AIEDA\library_maintenance\20261025_pc_shared');R=Path(r'D:\001DIY\004computer\lga1700\13shared_libraries_pc_20261025');OUT=M/'global_canonical_publish_v1'
+M=Path(r'D:\005lib\01AIEDA\library_maintenance\20261025_pc_shared');R=Path(r'D:\001DIY\004computer\lga1700\13shared_libraries_pc_20261025');OUT=M/'global_canonical_publish_v1'
 sha=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest().upper();jr=lambda p:json.loads(Path(p).read_text(encoding='utf-8-sig'))
 plan=jr(M/'global_suffix_inventory_v1/PSM_NATIVE_AUDIT_PLAN.json');guard=jr(plan['public_guard_manifest'])['files'];g={x['path'].lower():x for x in guard};frozen={r['stem'].lower():r for r in plan['representatives']};rv={e['stem'].lower():e for p in (M/'global_suffix_native_review_v3').glob('e*_SCHEMA_GEOMETRY.json') for e in jr(p)}
 addition=jr(OUT/'CANONICAL_ADDITIONS_ONLY_PLAN.json');failed={r['stem']:r for r in addition['native_failed_retired_by_DRA_intent']};olb=jr(R/'verification/public_olb_footprint_audit13_v4/PUBLIC_OLB_FOOTPRINT_REFERENCE_AUDIT.json');oc=Counter()

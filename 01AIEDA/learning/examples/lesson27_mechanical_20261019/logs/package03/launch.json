@@ -8,10 +8,10 @@
     "-symbol",
     "package",
     "-s",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson27_mechanical_20261019\\scripts\\package.scr",
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lesson27_mechanical_20261019\\scripts\\package.scr",
     "-p",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson27_mechanical_20261019\\logs\\package03",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson27_mechanical_20261019\\library\\l27_npth_d200_mech.dra"
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lesson27_mechanical_20261019\\logs\\package03",
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lesson27_mechanical_20261019\\library\\l27_npth_d200_mech.dra"
   ],
   "startUTC": "2026-10-19T14:38:52.787335+00:00",
   "pid": 18996,

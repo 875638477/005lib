@@ -1,6 +1,6 @@
 锘縡rom pathlib import Path
 import json,hashlib,shutil
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');Q=json.dumps;v='2L';tag=f'nonUSB65_scoped_TOP_trial_{v}_b018_01';plan=json.loads((R/f'batches/TOP_trial_{v}_b018_PRE_NON_USB_65_DRC_PENDING_try06.json').read_text());m=json.loads((R/f'scripts/TOP_trial_{v}_b018_PRE_NON_USB_65_DRC_PENDING_try06_compiled.json').read_text());names=[n for n in plan['all69ScopedDeferredToIndependentReadonlyProcess'] if n not in ['USB_DP','USB_DM','PA11_SHARED','PA12_SHARED']];assert len(names)==len(set(names))==65
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');Q=json.dumps;v='2L';tag=f'nonUSB65_scoped_TOP_trial_{v}_b018_01';plan=json.loads((R/f'batches/TOP_trial_{v}_b018_PRE_NON_USB_65_DRC_PENDING_try06.json').read_text());m=json.loads((R/f'scripts/TOP_trial_{v}_b018_PRE_NON_USB_65_DRC_PENDING_try06_compiled.json').read_text());names=[n for n in plan['all69ScopedDeferredToIndependentReadonlyProcess'] if n not in ['USB_DP','USB_DM','PA11_SHARED','PA12_SHARED']];assert len(names)==len(set(names))==65
 out=R/'logs'/tag;pp=R/'scripts'/f'{tag}.il';code='''procedure(hiAll69ReadonlyScoped()
  let((f net count failures)
   f=outfile(OUTFILE) failures=0

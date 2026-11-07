@@ -1,6 +1,6 @@
 锘縡rom pathlib import Path
 import argparse,json,shutil,hashlib
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
 A=argparse.ArgumentParser();A.add_argument('--tag',required=True);A.add_argument('--plan',required=True);A.add_argument('--compiled',required=True);a=A.parse_args();planpath=Path(a.plan);d=json.loads(planpath.read_text());meta=json.loads(Path(a.compiled).read_text());assert meta['planSHA256']==hashlib.sha256(planpath.read_bytes()).hexdigest().upper()
 Q=json.dumps;out=(R/'logs'/a.tag).as_posix();pt=lambda xy:'list('+' '.join(str(float(x)) for x in xy)+')';defs='list('+' '.join('list('+Q(k)+' '+Q(v[0])+' '+Q(v[1])+' '+pt(v[2])+' '+Q(v[3])+')' for k,v in meta['endpointDefinitions'].items())+')'
 sdk=(R/'scripts/batchHI_shapes_v3.il').read_text();i=sdk.index('procedure(hiGroundPointCheck(');j=sdk.find('\nprocedure(',i+1);fn=sdk[i:j if j>0 else len(sdk)].replace('procedure(hiGroundPointCheck(', 'procedure(hiGroundPointCheckReadOnly(',1).replace('  axlShapeDynamicUpdate(nil t) axlDBRefreshId(nil)\n','',1)

@@ -1,7 +1,7 @@
 procedure(m2FixFinger(base out)
  let((f pin pins number name newpad result)
   unless(equal(axlDesignType(t) "PACKAGE") error("Not package editor\n"))
-  axlSetVariable("padpath" list(strcat(base "/candidate/pads") "D:/001DIY/005lib/01Pad_lib"))
+  axlSetVariable("padpath" list(strcat(base "/candidate/pads") "D:/005lib/01Pad_lib"))
   f=outfile(strcat(out "/changes.txt"))
   pins=axlDBGetDesign()->pins
   unless(equal(length(pins) 67) error("Expected 67 electrical fingers\n"))

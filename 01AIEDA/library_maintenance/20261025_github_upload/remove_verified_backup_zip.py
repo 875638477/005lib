@@ -12,8 +12,8 @@ from datetime import datetime, timezone
 import zipfile
 
 
-TASK = Path(r"D:\001DIY\005lib\01AIEDA\library_maintenance\20261025_github_upload")
-MAINT = Path(r"D:\001DIY\005lib\01AIEDA\library_maintenance")
+TASK = Path(r"D:\005lib\01AIEDA\library_maintenance\20261025_github_upload")
+MAINT = Path(r"D:\005lib\01AIEDA\library_maintenance")
 OLD = MAINT / "20261025_pad_psm_merge"
 ARCHIVE = OLD / "cadence_library_maintenance_20261025_full.zip"
 EXPECTED_ARCHIVE_SHA = "d544cd9d1c1facffd630b03cc915487bf2c5912165e441271be19ef48272d5eb"
@@ -25,9 +25,9 @@ EXPECTED_SOURCE_BYTES = 1955833097
 ROOTS = (
     Path(r"D:\001DIY\004computer\lga1700\cadence_library_cleanup_20261025"),
     Path(r"D:\001DIY\004computer\lga1700\cadence_geometry_merge_20261025"),
-    Path(r"D:\001DIY\005lib\_library_suffix_backup_20261025"),
-    Path(r"D:\001DIY\005lib\_library_merge_backup_20261025"),
-    Path(r"D:\001DIY\005lib\_library_geometry_backup_20261025"),
+    Path(r"D:\005lib\_library_suffix_backup_20261025"),
+    Path(r"D:\005lib\_library_merge_backup_20261025"),
+    Path(r"D:\005lib\_library_geometry_backup_20261025"),
 )
 
 
@@ -123,7 +123,7 @@ def plan_docs() -> dict[Path, tuple[bytes, bytes]]:
     new = old + eol + "说明：汇总备份ZIP已按用户指示删除，直接可读记录及原始恢复目录保留。" + eol + eol + "2026-10-25  GitHub上传准备：核验并删除重复汇总备份ZIP。" + eol + "入口：20261025_github_upload\\README_backup_removal.txt"
     result[p] = replace_once_bytes(p, old, new)
 
-    p = Path(r"D:\001DIY\005lib\01AIEDA\EDA.md")
+    p = Path(r"D:\005lib\01AIEDA\EDA.md")
     old = "数字0402/0603/0805带后缀封装的删除清单、兼容旧名映射、原生验证与恢复备份均在归档中。"
     new = "数字0402/0603/0805带后缀封装的删除清单、兼容旧名映射和原生验证可直接查看。2026-10-25按用户指示删除重复的汇总备份ZIP；删除前26476个原件的大小和SHA256重新核验全部一致，两轮原始记录树及三套原始恢复目录保留，详见[ZIP核验与删除记录](library_maintenance/20261025_github_upload/README_backup_removal.txt)。历史归档清单与验证文件仅代表删除前状态。"
     result[p] = replace_once_bytes(p, old, new)
@@ -133,7 +133,7 @@ def plan_docs() -> dict[Path, tuple[bytes, bytes]]:
 def main() -> None:
     started = datetime.now(timezone.utc).isoformat()
     # Never compute a deletion target from an input row or a glob.
-    exact = Path(r"D:\001DIY\005lib\01AIEDA\library_maintenance\20261025_pad_psm_merge\cadence_library_maintenance_20261025_full.zip")
+    exact = Path(r"D:\005lib\01AIEDA\library_maintenance\20261025_pad_psm_merge\cadence_library_maintenance_20261025_full.zip")
     if ARCHIVE.resolve(strict=True) != exact or ARCHIVE.is_symlink():
         raise ValueError("resolved archive target does not match the single explicitly authorized file")
     if not ARCHIVE.is_file() or ARCHIVE.stat().st_size != EXPECTED_SIZE:

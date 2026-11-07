@@ -14,7 +14,7 @@ from datetime import datetime
 from pathlib import Path
 from xml.sax.saxutils import escape
 
-ROOT = Path(r"D:\001DIY\005lib")
+ROOT = Path(r"D:\005lib")
 OUT = ROOT / "AUTOlib" / "ul_TMC6460"
 CAPTURE_OUT = ROOT / "01captureLib" / "TMC6460"
 SCRIPT_DIR = ROOT / "01script_file" / "TMC6460"

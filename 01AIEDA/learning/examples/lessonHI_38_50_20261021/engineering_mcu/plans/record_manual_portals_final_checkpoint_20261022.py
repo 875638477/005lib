@@ -1,6 +1,6 @@
 ﻿from pathlib import Path
 import hashlib,json
-R=Path(r'D:\001DIY\005lib\01AIEDA');H=R/'learning/examples/lessonHI_38_50_20261021';P=H/'engineering_mcu/plans';N=R/'learning/notes/lessonHI_mcu_20261021.md'
+R=Path(r'D:\005lib\01AIEDA');H=R/'learning/examples/lessonHI_38_50_20261021';P=H/'engineering_mcu/plans';N=R/'learning/notes/lessonHI_mcu_20261021.md'
 text='''
 
 ### 17.5 补充比较：保原北排针与避免去耦下方内层 slot

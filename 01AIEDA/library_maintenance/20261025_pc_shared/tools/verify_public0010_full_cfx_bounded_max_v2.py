@@ -28,7 +28,7 @@ def probe(d,board,value):
   need(q['script_sha256']==sha(helper),'Standalone MAX probe helper identity differs')
  else:
   need(Path(q['script']).name=='public0010_final_full_composite27.il' and q['script_sha256']=='7EEB571F143F09DDCCDCC5849F3D8933F77D299A39063D9B46C2B7FD73B9D07A','Only exact observed final0010 composite wrapper is accepted')
-  need('load("D:/001DIY/005lib/01AIEDA/library_maintenance/20261025_pc_shared/tools/public0010_body_max_readonly27.il")' in Path(q['script']).read_text('utf-8'),'Exact composite did not load frozen MAX helper')
+  need('load("D:/005lib/01AIEDA/library_maintenance/20261025_pc_shared/tools/public0010_body_max_readonly27.il")' in Path(q['script']).read_text('utf-8'),'Exact composite did not load frozen MAX helper')
   need((d/'FINAL_FULL_BODY_MAX_593_COMPOSITE_COMPLETE.txt').is_file() and (d/'MAX_PROPERTY_READONLY_COMPLETE.txt').is_file(),'Exact composite MAX completion markers missing')
  for prefix in ['BEFORE=','AFTER=']:
   rows=[s for s in lines if s.startswith(prefix)];need(len(rows)==1,'MAX full property probe missing');a=parse_many(rows[0].split('=',1)[1])[0];matches=[r for r in a if str(r[0])=='MAX_FILENAME_VALUE'];need(matches==[[Atom('MAX_FILENAME_VALUE'),value]],'MAX actual observed string differs frozen pair');fields.append(a)

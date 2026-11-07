@@ -4,10 +4,10 @@ setlocal ENABLEDELAYEDEXPANSION
 pushd "%~dp0"
 set "ALLEGRO_BIN=C:\Program0\Cadence\spb172\tools\bin"
 set "FP=PQFN24_4X5_P0D5_483BV"
-set "PAD_LIB=D:\001DIY\005lib\01Pad_lib"
-set "PSM_LIB=D:\001DIY\005lib\01Psm_lib"
-set "ARCHIVE_ALG=D:\001DIY\005lib\AUTOlib\NCP303345\01_成品库_ul_NCP303345\AllegroV17_2"
-set "CAPTURE_ALG=D:\001DIY\005lib\AUTOlib\NCP303345\03_captureLib_NCP303345\AllegroV17_2"
+set "PAD_LIB=D:\005lib\01Pad_lib"
+set "PSM_LIB=D:\005lib\01Psm_lib"
+set "ARCHIVE_ALG=D:\005lib\AUTOlib\NCP303345\01_成品库_ul_NCP303345\AllegroV17_2"
+set "CAPTURE_ALG=D:\005lib\AUTOlib\NCP303345\03_captureLib_NCP303345\AllegroV17_2"
 if not exist "%ALLEGRO_BIN%\allegro.exe" (echo ERROR: allegro.exe not found& goto FAIL)
 if not exist "%ALLEGRO_BIN%\padstack_editor.exe" (echo ERROR: padstack_editor.exe not found& goto FAIL)
 if not exist "%PAD_LIB%" mkdir "%PAD_LIB%"

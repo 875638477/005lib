@@ -1,7 +1,7 @@
 from pathlib import Path
 import json,hashlib,re,datetime
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lesson29_constraints_20261019')
-A=Path(r'D:\001DIY\005lib\01AIEDA')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lesson29_constraints_20261019')
+A=Path(r'D:\005lib\01AIEDA')
 note=A/'learning/notes/lesson29_constraints_20261019.md'
 sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest().upper()
 # Register every additional primary local API actually used after the initial inventory.

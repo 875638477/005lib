@@ -1,7 +1,7 @@
 # A* router for UART4_RX and UART4_TX on ETCH/BOTTOM (units: mils)
 import heapq, math
 
-REGION = "D:/001DIY/005lib/01AIcadence/routing/uart4_region.txt"
+REGION = "D:/005lib/01AIcadence/routing/uart4_region.txt"
 XMIN, XMAX = -704.0, -184.0
 YMIN, YMAX = -787.0, -232.0
 LINE_HALF = 2.25

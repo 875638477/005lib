@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,copy
-H=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');R=H/'engineering_power';s=json.loads((H/'plans/GPIO_south_joint_root_v8.json').read_text());remove=[]
+H=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');R=H/'engineering_power';s=json.loads((H/'plans/GPIO_south_joint_root_v8.json').read_text());remove=[]
 for o in s['operations']:
  if o['id']=='SOUTH_RETURN_SWDIO' or o['id'].startswith('SOUTH_RETURN_SWDIO_'):remove.append(o['id'])
 print('Groundids',[(o['id'],o.get('xy'),o.get('points')) for o in s['operations'] if o['net']=='GND']);s['operations']=[o for o in s['operations'] if o['id'] not in remove];(R/'source/GPIO_south_root_v8_groundtest01.json').write_text(json.dumps(s,indent=2),encoding='utf-8')

@@ -4,7 +4,7 @@ Inputs: {"2L":{"board":"...","log":"..."},"4L":...}. Logs use original HI raw TS
 """
 from pathlib import Path
 import sys,json,csv,hashlib,math,collections,argparse
-R=Path('D:/001DIY/005lib/01AIEDA');J=R/'learning/examples/lessonJK_51_59_20261022';H=R/'learning/examples/lessonHI_38_50_20261021'
+R=Path('D:/005lib/01AIEDA');J=R/'learning/examples/lessonJK_51_59_20261022';H=R/'learning/examples/lessonHI_38_50_20261021'
 ns={};src=(J/'scripts/j55_57_build.py').read_text(encoding='utf-8-sig');exec(src[:src.index("req=['REF DES")],ns);srows=ns['srows'];dump=ns['dump'];csvout=ns['csvout'];load=ns['load'];sha=ns['sha']
 a=argparse.ArgumentParser();a.add_argument('--inputs',required=True);a.add_argument('--variant',choices=['2L','4L']);a=a.parse_args();inputs=load(a.inputs);spec=load(R/'learning/examples/de_15_26_20261019/integrated_circuit.json');values={c['ref']:c['value'] for c in spec['components']};allChecks=[];prior=J/'audits/j55_corrected_independent_summary.json';result=load(prior).get('variants',{}) if prior.exists() else {}
 def pt(a,b):return math.dist(a,b)<.00011

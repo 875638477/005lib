@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,math,hashlib
-H=Path(r'D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021');O=H/'engineering_power'
+H=Path(r'D:/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021');O=H/'engineering_power'
 for v in ['2L','4L']:
  q=json.loads((O/f'GPIO_NORTH6_{v}_51.json').read_text());n=json.loads((H/f'inventory/checkpoints/clearance_{v}_b016_DRC_PENDING/normalized.json').read_text());nets={a['net'] for a in q['operations'] if a['type']=='route'};nets.discard('GND');deleted=[a for a in q['operations'] if a['type']=='deleteSegment'];retained={nn:0.0 for nn in nets};segments={nn:0 for nn in nets}
  for a in n['routes']:

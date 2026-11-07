@@ -1,5 +1,5 @@
 import pathlib,json,hashlib,datetime
-R=pathlib.Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lesson29_constraints_20261019')
+R=pathlib.Path(r'D:\005lib\01AIEDA\learning\examples\lesson29_constraints_20261019')
 for n in ['scripts','source','logs','native','exports','runtime']: (R/n).mkdir(parents=True,exist_ok=True)
 D=pathlib.Path(r'C:\Program0\Cadence\SPB172')
 files=[
@@ -30,7 +30,7 @@ for n in files:
  p=D/n
  items.append(dict(path=str(p),sha256=hashlib.sha256(p.read_bytes()).hexdigest(),bytes=p.stat().st_size,kind='installed_Cadence_17_2_primary_documentation'))
 (R/'source/official_local_sources.json').write_text(json.dumps(items,indent=2),encoding='utf8')
-S=pathlib.Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\de_15_26_20261019')
+S=pathlib.Path(r'D:\005lib\01AIEDA\learning\examples\de_15_26_20261019')
 d=json.loads((S/'integrated_circuit.json').read_text())
 members={}
 for c in d['components']:

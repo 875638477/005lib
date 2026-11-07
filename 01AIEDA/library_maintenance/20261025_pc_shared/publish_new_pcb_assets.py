@@ -1,5 +1,5 @@
 import json,hashlib,pathlib,shutil,datetime
-m=pathlib.Path(r'D:/001DIY/005lib/01AIEDA/library_maintenance/20261025_pc_shared')
+m=pathlib.Path(r'D:/005lib/01AIEDA/library_maintenance/20261025_pc_shared')
 plan=pathlib.Path(r'D:/001DIY/004computer/lga1700/13shared_libraries_pc_20261025/w/pcb_migration/PUBLIC_NEW_ASSETS.json')
 rows=json.loads(plan.read_text(encoding='utf-8-sig'))
 sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest().upper()
@@ -9,7 +9,7 @@ for r in rows:
   src=pathlib.Path(r[ext+'_source']);dst=pathlib.Path(r[ext+'_public']);expected=r[ext+'_sha256']
   assert sha(src)==expected,(src,'source sha changed')
   assert not dst.exists(),(dst,'refuse overwrite public')
-  assert dst.parent.resolve()==pathlib.Path(r'D:/001DIY/005lib/01Psm_lib').resolve()
+  assert dst.parent.resolve()==pathlib.Path(r'D:/005lib/01Psm_lib').resolve()
   jobs.append((src,dst,expected))
 receipt={'status':'NEW_ASSETS_COPIED_PENDING_FINAL_NATIVE_PUBLIC_LOAD','plan':str(plan),'plan_sha256':sha(plan),'created_local':datetime.datetime.now().astimezone().isoformat(),'files':[]}
 for src,dst,h in jobs:

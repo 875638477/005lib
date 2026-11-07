@@ -1,5 +1,5 @@
 from pathlib import Path
-p=Path(r'D:\001DIY\005lib\01AIEDA\learning\notes\lessonG_power_20261020.md')
+p=Path(r'D:\005lib\01AIEDA\learning\notes\lessonG_power_20261020.md')
 s=p.read_text(encoding='utf-8')
 pre="\u8303\u56f4\u8865\u5145\uff1a\u672c\u65873916\u9879\u53ea\u5ba1 native/G_*_PLACEMENT_v3.brd \u5e03\u5c40checkpoint\u3002\u540e\u7eed current/G_*_LAYOUT_v1.brd \u7684\u4e09\u7ec4MCU\u5c40\u90e8\u94dc\u4e0e\u5b9e\u9645\u53c2\u8003\u9762\uff0c\u4ee5[\u4e3b\u8bb0\u5f55\u7684\u4fdd\u5b58\u91cd\u5f00\u7ed3\u679c](lessonG_30_37_20261020.md)\u4e3a\u51c6\uff1b\u672c\u6587\u201c\u65e0\u5b9e\u9645\u94dc/\u53ea\u67091\u9897\u7ee7\u627fvia\u201d\u7684\u63cf\u8ff0\u4ec5\u5bf9\u5e94\u65e7checkpoint\uff0c\u4e0d\u5426\u5b9a\u540e\u7eed\u53e6\u5b58\u6f14\u793a\u3002buck\u3001LDO\u3001USB/ESD\u3001HSE\u53caADC\u5c1a\u65e0\u5b8c\u6574\u5df2\u9a8c\u94dc\u8def\u5f84\u7684\u8fb9\u754c\u4ecd\u7136\u4fdd\u7559\u3002\n\n"
 if pre not in s:

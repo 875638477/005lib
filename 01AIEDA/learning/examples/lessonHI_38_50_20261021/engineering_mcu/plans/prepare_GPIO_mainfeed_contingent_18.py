@@ -1,5 +1,5 @@
 ﻿import pathlib,json,math
-P=pathlib.Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu\plans')
+P=pathlib.Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu\plans')
 for v in ['4L','2L']:
  n=json.loads((P/f'GPIO_future_{v}_17_snapshot.json').read_text());removed=[]
  for a,b in [[[30.7,32],[37,25.7]],[[37,25.7],[37,24]]]:

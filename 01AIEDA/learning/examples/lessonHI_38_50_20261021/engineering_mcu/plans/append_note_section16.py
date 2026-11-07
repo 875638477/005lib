@@ -1,5 +1,5 @@
 ﻿import pathlib
-B=pathlib.Path(r'D:\001DIY\005lib\01AIEDA');p=B/'learning/notes/lessonHI_mcu_20261021.md'
+B=pathlib.Path(r'D:\005lib\01AIEDA');p=B/'learning/notes/lessonHI_mcu_20261021.md'
 addition=r'''
 
 ## 16. 普通 GPIO 之前先联合扇出与源端可接续性（2026-10-22，进行中）

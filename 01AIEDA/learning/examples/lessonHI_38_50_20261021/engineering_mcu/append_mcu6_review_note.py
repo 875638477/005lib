@@ -1,5 +1,5 @@
 import pathlib,json
-R=pathlib.Path(r"D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu");note=R.parents[2]/"notes/lessonHI_mcu_20261021.md"
+R=pathlib.Path(r"D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu");note=R.parents[2]/"notes/lessonHI_mcu_20261021.md"
 s=note.read_text(encoding="utf-8").replace('[USB v6](../examples/lessonHI_38_50_20261021/engineering_mcu/plans/usb_critical_routes_v6.json)','[USB v7](../examples/lessonHI_38_50_20261021/engineering_mcu/plans/usb_critical_routes_v7.json)')
 s=s.replace('v6只做对应最小修正，正式结果仍需新进程读回。USB/GPIO当下为已做实际铜几何预审、待原生验证方案。','v6只做对应最小修正，其原生新进程读回和独立82项专项检查已通过，详见第11节。USB/GPIO当下为已做实际铜几何预审、待原生验证方案。')
 s+="""

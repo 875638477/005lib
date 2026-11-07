@@ -1,5 +1,5 @@
 from pathlib import Path
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonG_30_37_20261020')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonG_30_37_20261020')
 p=R/'scripts/placementG.il'
 s=p.read_text()
 s=s.replace('  f29DumpDRC(df "G_SNAPSHOT")','  gCopperRead(out)\n  f29DumpDRC(df "G_SNAPSHOT")')

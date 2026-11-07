@@ -1,4 +1,4 @@
-load("D:/001DIY/005lib/01AIEDA/library_maintenance/20261025_pc_shared/tools/public_module_native_device_readonly_v2.il")
+load("D:/005lib/01AIEDA/library_maintenance/20261025_pc_shared/tools/public_module_native_device_readonly_v2.il")
 procedure(pub27BodyMaxReadonly(dir exportBodies)
  let((d p f before after)
   d=axlDBGetDesign() p=axlDBGetPropDictEntry("MAX_FILENAME_VALUE")

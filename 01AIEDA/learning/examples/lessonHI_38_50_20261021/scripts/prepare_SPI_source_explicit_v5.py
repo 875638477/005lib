@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,hashlib
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');d=json.loads((R/'plans/SPI_source_explicit_v4.json').read_text(encoding='utf8'))
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');d=json.loads((R/'plans/SPI_source_explicit_v4.json').read_text(encoding='utf8'))
 for o in d['operations']:
  if o['id']=='NSS_PULLUP_WEST_VIA':o['xy']=[32.2,22]
  if o['id']=='NSS_PULLUP_BOTTOM':o['points']=[[39,26.2],[39,21.3],[32.2,21.3],[32.2,22]]

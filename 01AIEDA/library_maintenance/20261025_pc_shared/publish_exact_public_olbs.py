@@ -6,7 +6,7 @@ the entire multi-file operation is journaled, not claimed to be a single transac
 """
 from pathlib import Path
 import argparse,copy,hashlib,json,os,zipfile
-ROOT=Path('D:/001DIY/005lib')
+ROOT=Path('D:/005lib')
 ROOTS=[ROOT/n for n in ('01Psm_lib','01brdlib','01Pad_lib','01captureLib','01script_file','01env')]
 sha=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest().upper()
 load=lambda p:json.loads(Path(p).read_text(encoding='utf-8-sig'))

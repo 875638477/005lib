@@ -10,10 +10,10 @@
     "-symbol",
     "package",
     "-s",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson07_completion_20261018\\scripts\\create_package04.scr",
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lesson07_completion_20261018\\scripts\\create_package04.scr",
     "-p",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson07_completion_20261018\\logs\\create_package04",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson07_completion_20261018\\library\\eda_l07c_null_npth_coupon.dra"
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lesson07_completion_20261018\\logs\\create_package04",
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lesson07_completion_20261018\\library\\eda_l07c_null_npth_coupon.dra"
   ],
   "completed": true,
   "exitCode": 0,

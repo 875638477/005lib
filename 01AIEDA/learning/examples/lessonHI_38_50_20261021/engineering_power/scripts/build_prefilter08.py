@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,math
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power')
 ops=[]
 old=[[[29.8,30.95],[28.4,32.35]],[[28.4,32.35],[22,32.35]],[[22,32.35],[22,37]]]
 for i,p in enumerate(old,1):ops.append(dict(type='deleteSegment',id='RIPUP_PRE_FILTER_OLD_'+str(i),net='V3V3',layer='TOP',points=p,width=.6,purpose='Uniqueactualoldprefiltersegmentdelete, preserveoriginalTOP22,37->R26.1row. No danglingx22stubunderSCK.'))

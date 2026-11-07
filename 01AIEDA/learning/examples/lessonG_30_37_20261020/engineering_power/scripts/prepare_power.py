@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,csv,shutil,hashlib,urllib.request,sys
-B=Path(r'D:\001DIY\005lib\01AIEDA')
+B=Path(r'D:\005lib\01AIEDA')
 R=B/'learning/examples/lessonG_30_37_20261020/engineering_power'
 for sub in ['scripts','sources','rendered','readouts']: (R/sub).mkdir(parents=True,exist_ok=True)
 c=json.loads((B/'learning/examples/de_15_26_20261019/integrated_circuit.json').read_text(encoding='utf-8'))

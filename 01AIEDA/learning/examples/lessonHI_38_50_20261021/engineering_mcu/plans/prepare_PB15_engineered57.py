@@ -1,5 +1,5 @@
 ﻿import pathlib,json,math,sys
-P=pathlib.Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu\plans');H=P.parents[1];sys.path.insert(0,str(H/'scripts'));from routing_geometry import *
+P=pathlib.Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu\plans');H=P.parents[1];sys.path.insert(0,str(H/'scripts'));from routing_geometry import *
 for v in ['2L','4L']:
  n=load(P/f'GPIO_N47_{v}_50_snapshot.json');nw=load(P/f'GPIO_N47_{v}_50_networks.json');rs=load(P/f'GPIO_N47_{v}_50_rules.json');pol=load(P/f'GPIO_N47_{v}_50_policy.json');y=20.7 if v=='2L' else 20.675;ops=[dict(type='deleteVia',id='PB15_MID_RETURN_RIP',net='GND',xy=[38,20])]
  for id,net,xy in [('PB15_MID_RETURN_NEW','GND',([34.28,20.45] if v=='2L' else [34.2,18.6])),('PB15_LOCAL_BRIDGE_VIA','GPIO_PB15',[37.7,19.5]),('PB15_WEST_BRIDGE_VIA','GPIO_PB15',[34.2,19.6])]:ops.append(dict(type='via',id=id,net=net,xy=xy,padstack='HI_VIA026_C052_TENT',padDiameterMM=.52,drillDiameterMM=.26))

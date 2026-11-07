@@ -16,7 +16,7 @@ procedure(pub0010Canonical6Context(dir)
 ("r0603_pc" "p0010_cold_r0603_pc")
 ("fb0805_pc" "p0010_cold_fb0805_pc")
 ("l0805_pc" "p0010_cold_l0805_pc")) exported=0
-  axlSetVariable("psmpath" "D:/001DIY/005lib/01AIEDA/library_maintenance/20261025_pc_shared/public0010_canonical6_context_bundle13_v1/aliases D:/001DIY/005lib/01Psm_lib") axlSetVariable("padpath" "D:/001DIY/005lib/01Pad_lib")
+  axlSetVariable("psmpath" "D:/005lib/01AIEDA/library_maintenance/20261025_pc_shared/public0010_canonical6_context_bundle13_v1/aliases D:/005lib/01Psm_lib") axlSetVariable("padpath" "D:/005lib/01Pad_lib")
   f=outfile(strcat(dir "/PACKAGE_SOURCE_AND_UNIQUE_ALIAS_MANIFEST.tsv")) fprintf(f "canonical\talias\tsourcecachefile\tpublicaliasfile\n")
   foreach(job jobs
    name=car(job) alias=cadr(job)

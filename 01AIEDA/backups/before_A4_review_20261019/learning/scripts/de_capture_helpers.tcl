@@ -1,6 +1,6 @@
 # All methods below have documented signatures and check NULL before use.
 namespace eval ::DE {
- variable root {D:/001DIY/005lib/01AIEDA/learning}
+ variable root {D:/005lib/01AIEDA/learning}
  variable base "$root/examples/de_15_26_20261019"
  variable logs "$root/logs/de_15_26_20261019"
  variable designs {}; variable libs {}

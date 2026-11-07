@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,hashlib,subprocess,sys,shutil
-R=Path(r'D:\001DIY\005lib\01AIEDA');L=R/'learning/examples/lesson60_20261023';S=R/'learning/skills/cadence17-learning';p=S/'scripts/preflight.py'
+R=Path(r'D:\005lib\01AIEDA');L=R/'learning/examples/lesson60_20261023';S=R/'learning/skills/cadence17-learning';p=S/'scripts/preflight.py'
 old=p.read_bytes();oldsha=hashlib.sha256(old).hexdigest().upper();backup=L/'backups/preflight_before_forward_fix.py';assert not backup.exists();backup.write_bytes(old)
 s=old.decode('utf8');needle='  out.parent.mkdir(parents=True,exist_ok=True);out.write_text(text,encoding="utf8")'
 replacement='  if out.suffix.lower()!=".json":ap.error("--out must name a new JSON report")\n  if out.exists():ap.error("--out already exists; refuse overwrite")\n  out.parent.mkdir(parents=True,exist_ok=True)\n  with out.open("x",encoding="utf8") as f:f.write(text)'

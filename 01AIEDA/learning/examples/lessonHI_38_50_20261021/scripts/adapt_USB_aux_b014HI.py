@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,hashlib,copy
-R=Path('D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021')
+R=Path('D:\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021')
 for v in ['2L','4L']:
  paths=[R/f'plans/aux_remote_{v}_v9.json',R/f'plans/CC_entry_{v}_v5.json',R/f'plans/VBUS_entry_{v}_v4.json',R/f'plans/USB_aux_returns_{v}_03.json'];plans=[json.loads(p.read_text(encoding='utf8')) for p in paths];ops=copy.deepcopy([o for d in plans for o in d['operations']]);assert len(ops)==len(set(o['id'] for o in ops))
  proofs=[p for d in plans for p in d.get('proofs',[])];proofs+=[{'from':o['id'],'to':'U1.23','connected':True} for o in ops if o['type']=='via' and o['net']=='GND']

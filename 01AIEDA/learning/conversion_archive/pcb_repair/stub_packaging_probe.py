@@ -1,6 +1,6 @@
 import csv, json, os, pathlib, shutil, subprocess, hashlib
 
-ROOT = pathlib.Path(r'D:\001DIY\005lib\01AIEDA\learning\staging\lga1700_pcb_repair_20261023')
+ROOT = pathlib.Path(r'D:\005lib\01AIEDA\learning\staging\lga1700_pcb_repair_20261023')
 OUT = ROOT / 'stub_packaging_probe'
 BASE = ROOT / 'ad_baseline_no_stubs'
 CAD = pathlib.Path(r'C:\Program0\Cadence\SPB172')
@@ -15,7 +15,7 @@ TCL = r'''
 load {C:/Program0/Cadence/spb172/tools/bin/orDb_Dll_Tcl64.dll} DboTclWriteBasic
 set ::DboSession_s_pDboSession [DboTclHelper_sCreateSession]
 DboSession -this $::DboSession_s_pDboSession
-source {D:/001DIY/005lib/01AIEDA/learning/scripts/de_capture_helpers.tcl}
+source {D:/005lib/01AIEDA/learning/scripts/de_capture_helpers.tcl}
 set root {@ROOT@}
 set code [catch {
 set s [DboState];set sess $::DboSession_s_pDboSession
@@ -52,7 +52,7 @@ proc audit {stage} {
  delete_DboSchematicPagesIter $pi
 }
 audit before
-source {D:/001DIY/005lib/01AIEDA/learning/staging/lga1700_pcb_repair_20261023/ad_baseline_no_stubs/zero_stubs.tcl}
+source {D:/005lib/01AIEDA/learning/staging/lga1700_pcb_repair_20261023/ad_baseline_no_stubs/zero_stubs.tcl}
 set count 0
 set pi [$top NewPagesIter $s]
 for {set page [$pi NextPage $s]} {$page ne "NULL"} {set page [$pi NextPage $s]} {

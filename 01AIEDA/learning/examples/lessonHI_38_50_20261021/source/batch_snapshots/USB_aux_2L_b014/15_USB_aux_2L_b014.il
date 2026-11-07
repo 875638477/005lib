@@ -1,6 +1,6 @@
 procedure(hiBatchProgram()
  let((f)
-  f=outfile("D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/logs/USB_aux_2L_b014/hi_batch_execution.txt")
+  f=outfile("D:/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/logs/USB_aux_2L_b014/hi_batch_execution.txt")
   fprintf(f "HI_BATCH_DRC_BEFORE=%L\n" axlDBControl('drcEnable))
   unwindProtect(
    progn(
@@ -43,12 +43,12 @@ procedure(hiBatchProgram()
     hiVia(f "APP_RETURN_HI_2L_USB_ATTACH_N_1_V2" "GND" list(47.0 13.45) "L28_VIA030_C060")
     hiVia(f "APP_RETURN_VBUS_LEFT_V" "GND" list(36.077 8.725) "L28_VIA030_C060")
     hiVia(f "APP_RETURN_VBUS_SENSE_V" "GND" list(46.907 6.675) "L28_VIA030_C060")
-    hiHSEIsolationChallengeGraph("D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/logs/USB_aux_2L_b014" list(45.45 28.85) "BOTTOM" list(list(42.2 39.8) list(44.2 39.8) list(47.8 33.5)))
-    hiCCSpacingChallenge("D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/logs/USB_aux_2L_b014")
+    hiHSEIsolationChallengeGraph("D:/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/logs/USB_aux_2L_b014" list(45.45 28.85) "BOTTOM" list(list(42.2 39.8) list(44.2 39.8) list(47.8 33.5)))
+    hiCCSpacingChallenge("D:/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/logs/USB_aux_2L_b014")
     t)
    progn(
     axlDBControl('drcEnable t)
     fprintf(f "HI_UNWIND_DRC_RESTORED=%L\n" axlDBControl('drcEnable))))
   unless(axlDBControl('drcEnable) error("Final DRC must be enabled\n"))
-  hiFinalize(f "D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/logs/USB_aux_2L_b014" "D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/native/HI_2L_USB_aux_2L_b014.brd" "D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/library" list(list("R11.1" "Q2.3" t) list("R7.2" "Q1.1" t) list("R8.1" "Q1.1" t) list("R9.2" "Q1.3" t) list("R10.2" "Q2.1" t) list("R18.1" "J4.3" t) list("R3.2" "U1.23" t) list("R4.2" "U1.23" t) list("J2.A5" "R3.1" t) list("J2.B5" "R4.1" t) list("J2.A4_B9" "C10.1" t) list("J2.B4_A9" "C10.1" t) list("R7.1" "C10.1" t) list("CC_R3_GND_V" "U1.23" t) list("USB_RETURN_LEFT_NEW" "U1.23" t) list("USB_RETURN_RIGHT_NEW" "U1.23" t) list("APP_RETURN_HI_2L_USB_ATTACH_N_1_V1" "U1.23" t) list("APP_RETURN_HI_2L_USB_ATTACH_N_1_V2" "U1.23" t) list("APP_RETURN_VBUS_LEFT_V" "U1.23" t) list("APP_RETURN_VBUS_SENSE_V" "U1.23" t)))
+  hiFinalize(f "D:/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/logs/USB_aux_2L_b014" "D:/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/native/HI_2L_USB_aux_2L_b014.brd" "D:/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/library" list(list("R11.1" "Q2.3" t) list("R7.2" "Q1.1" t) list("R8.1" "Q1.1" t) list("R9.2" "Q1.3" t) list("R10.2" "Q2.1" t) list("R18.1" "J4.3" t) list("R3.2" "U1.23" t) list("R4.2" "U1.23" t) list("J2.A5" "R3.1" t) list("J2.B5" "R4.1" t) list("J2.A4_B9" "C10.1" t) list("J2.B4_A9" "C10.1" t) list("R7.1" "C10.1" t) list("CC_R3_GND_V" "U1.23" t) list("USB_RETURN_LEFT_NEW" "U1.23" t) list("USB_RETURN_RIGHT_NEW" "U1.23" t) list("APP_RETURN_HI_2L_USB_ATTACH_N_1_V1" "U1.23" t) list("APP_RETURN_HI_2L_USB_ATTACH_N_1_V2" "U1.23" t) list("APP_RETURN_VBUS_LEFT_V" "U1.23" t) list("APP_RETURN_VBUS_SENSE_V" "U1.23" t)))
   t))

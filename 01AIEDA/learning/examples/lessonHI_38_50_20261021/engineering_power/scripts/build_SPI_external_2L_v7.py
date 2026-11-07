@@ -1,6 +1,6 @@
 from pathlib import Path
 import json
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power');p=json.loads((R/'SPI_external_2L_engineered_v6.json').read_text());p['batchId']='SPI_external_2L_engineered_v7';p['operations']=[]
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power');p=json.loads((R/'SPI_external_2L_engineered_v6.json').read_text());p['batchId']='SPI_external_2L_engineered_v7';p['operations']=[]
 def via(i,n,xy):p['operations'].append(dict(type='via',id=i,net=n,xy=xy,padstack='L28_VIA030_C060',purpose='Explicit signal/ground layer transition; verify native filled ground attachment'))
 def route(i,n,l,pts,w=.2,purpose='Manual source-ordered SPI route'):
  p['operations'].append(dict(type='route',id=i,net=n,layer=l,points=pts,width=w,purpose=purpose))

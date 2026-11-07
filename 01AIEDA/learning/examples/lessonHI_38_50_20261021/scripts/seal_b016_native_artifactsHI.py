@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,hashlib,shutil
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');records=R/'source/b016_frozen_records';records.mkdir(exist_ok=True)
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');records=R/'source/b016_frozen_records';records.mkdir(exist_ok=True)
 for p in [R/'native/b016_construction_notes.md',R/'native/README.md']:
  d=records/p.name;assert not d.exists();shutil.copyfile(p,d)
 paths=set()

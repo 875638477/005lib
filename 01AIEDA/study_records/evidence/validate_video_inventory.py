@@ -7,7 +7,7 @@ import json
 import re
 from datetime import datetime, timezone, timedelta
 
-root = Path(r"D:\001DIY\005lib\01AIEDA\study_records\evidence")
+root = Path(r"D:\005lib\01AIEDA\study_records\evidence")
 input_path = root / "video_inventory.json"
 raw = input_path.read_bytes()
 data = json.loads(raw.decode("utf-8", errors="strict"))

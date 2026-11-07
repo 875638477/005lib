@@ -2,7 +2,7 @@
 # Replaces manual typing of ai_run in the Allegro command line.
 # Keep this file ASCII only.
 
-$exch = "D:\001DIY\005lib\01AIcadence\ai_bridge\exchange"
+$exch = "D:\005lib\01AIcadence\ai_bridge\exchange"
 $wsh = New-Object -ComObject WScript.Shell
 
 Write-Host "AI auto-run watcher started. Press Ctrl+C to stop."

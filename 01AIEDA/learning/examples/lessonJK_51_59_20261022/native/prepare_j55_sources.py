@@ -1,5 +1,5 @@
 ﻿import pathlib,shutil,json,hashlib,re
-R=pathlib.Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonJK_51_59_20261022')
+R=pathlib.Path(r'D:\005lib\01AIEDA\learning\examples\lessonJK_51_59_20261022')
 HI=R.parent/'lessonHI_38_50_20261021'
 D=pathlib.Path(r'C:\Program0\Cadence\SPB172\share\pcb\examples\skill\DOC\FUNCS')
 S=R/'source/j55_readback_helpers';S.mkdir(parents=True,exist_ok=True)

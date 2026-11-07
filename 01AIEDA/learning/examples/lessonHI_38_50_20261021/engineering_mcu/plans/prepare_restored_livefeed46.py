@@ -1,5 +1,5 @@
 ﻿import pathlib,json,math
-P=pathlib.Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu\plans');H=P.parents[1]
+P=pathlib.Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu\plans');H=P.parents[1]
 def load(f):return json.loads(f.read_text(encoding='utf-8-sig'))
 for v in ['2L','4L']:
  n=load(P/f'GPIO_N37_{v}_45north_snapshot.json');nw=load(P/f'GPIO_N37_{v}_45north_networks.json');rs=load(P/f'GPIO_N37_{v}_45north_rules.json');pol=load(P/f'GPIO_N37_{v}_45north_policy.json')

@@ -1,6 +1,6 @@
 from pathlib import Path
 import csv,re,json
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
 # Use the audited parser without running its baseline writer.
 s=(R/'scripts/parse_baseline_HI_v2.py').read_text();exec(s[:s.index('summaries={}')])
 allrules={}

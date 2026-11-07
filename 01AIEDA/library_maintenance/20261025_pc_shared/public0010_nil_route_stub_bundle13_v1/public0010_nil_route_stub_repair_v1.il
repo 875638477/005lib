@@ -1,4 +1,4 @@
-load("D:/001DIY/005lib/01AIEDA/library_maintenance/20261025_pc_shared/public0010_route_net_diagnostic_bundle13_v1/public0010_route_net_diagnostic_v1.il")
+load("D:/005lib/01AIEDA/library_maintenance/20261025_pc_shared/public0010_route_net_diagnostic_bundle13_v1/public0010_route_net_diagnostic_v1.il")
 
 procedure(pub0010CollectRouteObjects()
  pub0010RouteSeen=makeTable('pub0010RouteSeen nil) pub0010ActualLines=makeTable('pub0010ActualLines nil)
@@ -24,7 +24,7 @@ procedure(pub0010NilSourcePrepare(dir)
   sstatus(fullPrecision t) pub403ReadUnits() pub403FullTypedGate(strcat(pub403Bundle "/SOURCE_FULL2698_WITH_NONLOGICAL_IDENTITIES.ilist"))
   pub403StateGate(strcat(pub403Bundle "/SOURCE_CONTROL_EXPECTED_ALL593_TEXT_PROPS.ilist"))
   pub0010CollectRouteObjects() pub0010OriginalNilProps=makeTable('pub0010OriginalNilProps nil) pub0010NilAllowed=makeTable('pub0010NilAllowed nil)
-  rows=pub403Rows("D:/001DIY/005lib/01AIEDA/library_maintenance/20261025_pc_shared/public0010_nil_route_stub_bundle13_v1/EXACT54_SOURCE_LINES_CURRENT_NET_NIL.ilist") unless(length(rows)==54 error("PUB0010 NIL allowance must be exact54 lines\n"))
+  rows=pub403Rows("D:/005lib/01AIEDA/library_maintenance/20261025_pc_shared/public0010_nil_route_stub_bundle13_v1/EXACT54_SOURCE_LINES_CURRENT_NET_NIL.ilist") unless(length(rows)==54 error("PUB0010 NIL allowance must be exact54 lines\n"))
   f=outfile(strcat(dir "/ORIGINAL54_LINE_AND_PARENT_PROPERTIES.ilist"))
   foreach(row rows
    key=pub0010RouteGeomKey(car(row) nth(2 row) nth(3 row) nth(4 row)) objects=pub0010ActualLines[key]
@@ -83,7 +83,7 @@ procedure(pub0010NilRouteRepair(dir)
   pub403FullTypedGate(strcat(pub403Bundle "/TARGET_FULL2698_WITH_NONLOGICAL_IDENTITIES.ilist"))
   pub403StateGate(strcat(pub403Bundle "/SOURCE_CONTROL_EXPECTED_ALL593_TEXT_PROPS.ilist")) pub403AllNameGate(nil)
   pub0010RepairDRC=axlDBControl('drcEnable) pub0010RepairFill=axlDBControl('dynamicFillMode)
-  pub0010CollectRouteObjects() rows=pub403Rows("D:/001DIY/005lib/01AIEDA/library_maintenance/20261025_pc_shared/public0010_nil_route_stub_bundle13_v1/EXACT54_SOURCE_LINES_CURRENT_NET_NIL.ilist")
+  pub0010CollectRouteObjects() rows=pub403Rows("D:/005lib/01AIEDA/library_maintenance/20261025_pc_shared/public0010_nil_route_stub_bundle13_v1/EXACT54_SOURCE_LINES_CURRENT_NET_NIL.ilist")
   foreach(row rows
    key=pub0010RouteGeomKey(car(row) nth(2 row) nth(3 row) nth(4 row)) objects=pub0010ActualLines[key]
    unless(length(objects)==1 error("PUB0010 allowed exact54 target line must remain unique\n")) o=car(objects)
@@ -92,10 +92,10 @@ procedure(pub0010NilRouteRepair(dir)
   pc13StubSeen=makeTable('pc13StubSeen nil) pc13StubSegments=nil
   foreach(n axlDBGetDesign()->nets foreach(b n->branches pc13SotStubWalk(b))) foreach(b axlDBGetLonelyBranches() pc13SotStubWalk(b))
   pub0010BuildCuIndex() pub0010FrozenKeys=makeTable('pub0010FrozenKeys nil) pub0010StrokeCached=makeTable('pub0010StrokeCached nil) pub0010StrokeCovered=makeTable('pub0010StrokeCovered nil)
-  frozenCount=0 f=infile("D:/001DIY/005lib/01AIEDA/library_maintenance/20261025_pc_shared/public0010_path_stubs_plan13_v1/SOURCE_FROZEN_REAL_SEGMENTS.ilist")
+  frozenCount=0 f=infile("D:/005lib/01AIEDA/library_maintenance/20261025_pc_shared/public0010_path_stubs_plan13_v1/SOURCE_FROZEN_REAL_SEGMENTS.ilist")
   while(row=lineread(f) row=car(row) frozenCount=frozenCount+1 pub0010FrozenKeys[pub0010SourceKey(car(row) nth(1 row) nth(2 row) nth(3 row) nth(4 row))]=t) close(f)
   unless(frozenCount==2068 error("PUB0010 whole-sourceCu frozen2068 ledger incomplete\n"))
-  groups=pub403Rows("D:/001DIY/005lib/01AIEDA/library_maintenance/20261025_pc_shared/public0010_path_stubs_plan13_v1/PUB0010_STUB_CANDIDATES.ilist") unless(length(groups)==877 error("PUB0010 frozen877 source branches incomplete\n"))
+  groups=pub403Rows("D:/005lib/01AIEDA/library_maintenance/20261025_pc_shared/public0010_path_stubs_plan13_v1/PUB0010_STUB_CANDIDATES.ilist") unless(length(groups)==877 error("PUB0010 frozen877 source branches incomplete\n"))
   statusPort=outfile(strcat(dir "/BOUNDED_NIL_ALL_BRANCH_CANDIDATE_STATUS.ilist")) pub0010NilTriggerPort=outfile(strcat(dir "/EXACT54_NIL_STROKE_ATTACHMENT_TRIGGERS.ilist"))
   f=outfile(strcat(dir "/PREFLIGHT_FAILED_BRANCH_GROUPS.ilist")) failed=0 fits=0 tested=0 selections=nil selectedKeys=nil
   foreach(group groups
@@ -124,7 +124,7 @@ procedure(pub0010NilRouteRepair(dir)
   unless(equal(pub0010OriginalVias pub0010ViasSnapshot(strcat(dir "/AFTER_ALL1739_TYPED_VIAS.ilist"))) error("PUB0010 full1739 original typed via XY/pad/net/properties not restored\n"))
   pub0010BuildCuIndex() pub0010StrokeCached=makeTable('pub0010StrokeCached nil) pub0010StrokeCovered=makeTable('pub0010StrokeCovered nil)
   f=outfile(strcat(dir "/FULL2068_SOURCE_OWN_NET_CU_COVERAGE.ilist")) missing=nil
-  foreach(source pub403Rows("D:/001DIY/005lib/01AIEDA/library_maintenance/20261025_pc_shared/public0010_path_stubs_plan13_v1/SOURCE_FROZEN_REAL_SEGMENTS.ilist")
+  foreach(source pub403Rows("D:/005lib/01AIEDA/library_maintenance/20261025_pc_shared/public0010_path_stubs_plan13_v1/SOURCE_FROZEN_REAL_SEGMENTS.ilist")
    row=list("FULL_SOURCE_CU" "" nth(1 source) nth(2 source) car(source) nth(3 source) nth(4 source))
    answer=errset(pub0010FrozenStrokeCovered(row) t)
    unless(answer && car(answer) missing=cons(source missing)) fprintf(f "%L\n" list(source answer)) drain(f)) close(f)

@@ -1,5 +1,5 @@
 from pathlib import Path
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonG_30_37_20261020')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonG_30_37_20261020')
 s=(R/'scripts/validate_nativeG_v3.py').read_text().replace("'outsidePhysicalNeckMM':1.0","'outsideRegionNeckLimitMM':1.0").replace("'spacingOnly4L':{'smdpin_line':.2,'line_line':.2}","'spacingOnly4L':({'smdpin_line':.2,'line_line':.2} if key=='4L' else None)")
 needle="check(f'{key}.manual_TOP_segments27',len(top)==27,len(top))"
 # Explicit scope checks apply after the board dictionary is built.

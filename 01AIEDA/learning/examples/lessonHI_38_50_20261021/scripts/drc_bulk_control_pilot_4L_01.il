@@ -1,7 +1,7 @@
 
 procedure(hiDrcControlPilot()
  let((f mark ret initial errors)
-  f=outfile("D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/logs/drc_bulk_control_pilot_4L_01/hi_drc_bulk_control_pilot.txt")
+  f=outfile("D:/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/logs/drc_bulk_control_pilot_4L_01/hi_drc_bulk_control_pilot.txt")
   initial=axlDBControl('drcEnable)
   fprintf(f "INITIAL_DRC_ENABLED=%L\n" initial)
   unless(initial error("Pilot expects source DRC enabled\n"))

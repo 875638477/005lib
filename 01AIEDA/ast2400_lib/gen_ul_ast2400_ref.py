@@ -10,7 +10,7 @@ from datetime import datetime
 from pathlib import Path
 from xml.sax.saxutils import escape
 
-ROOT = Path(r"D:\001DIY\005lib")
+ROOT = Path(r"D:\005lib")
 REF_TXT = ROOT / "01AIEDA" / "ast2400_lib" / "ref_design.txt"
 OUT = ROOT / "AUTOlib" / "ul_AST2400"
 CAPTURE_OUT = ROOT / "01captureLib" / "AST2400"

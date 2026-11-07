@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,hashlib,math
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power'); H=R.parent
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power'); H=R.parent
 note=H.parent.parent/'notes/lessonHI_power_20261021.md'
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest().upper()
 def length(op):return sum(math.dist(a,b) for a,b in zip(op['points'],op['points'][1:]))

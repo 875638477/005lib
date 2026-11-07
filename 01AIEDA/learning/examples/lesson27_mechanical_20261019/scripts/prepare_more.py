@@ -1,5 +1,5 @@
 from pathlib import Path
-B=Path(r'D:/001DIY/005lib/01AIEDA/learning/examples/lesson27_mechanical_20261019')
+B=Path(r'D:/005lib/01AIEDA/learning/examples/lesson27_mechanical_20261019')
 p=B/'scripts/lesson27.il';s=p.read_text();(B/'logs/create06/executed_source.il').write_text(s)
 s=s.replace('list("PACKAGE_HEIGHT_MIN" "2 MM" "PACKAGE_HEIGHT_MAX" "999 MM")','list("PACKAGE_HEIGHT_MIN" "2 MM")')
 p.write_text(s)
@@ -23,6 +23,6 @@ p=B/'scripts/read27.il';s=p.read_text();s+='''\nprocedure(l27More(out)
 '''
 p.write_text(s)
 p=B/'scripts/read.scr';s=p.read_text()
-s=s.replace('skill errset(load("D:/001DIY/005lib/01AIEDA/learning/examples/lesson27_mechanical_20261019/scripts/read27.il") t)','skill errset(load("D:/001DIY/005lib/01AIEDA/learning/examples/lesson27_mechanical_20261019/scripts/lesson27.il") t)\nskill errset(load("D:/001DIY/005lib/01AIEDA/learning/examples/lesson27_mechanical_20261019/scripts/read27.il") t)')
-s=s.replace('quit\n','skill errset(l27More("D:/001DIY/005lib/01AIEDA/learning/examples/lesson27_mechanical_20261019/readback") t)\nquit\n')
+s=s.replace('skill errset(load("D:/005lib/01AIEDA/learning/examples/lesson27_mechanical_20261019/scripts/read27.il") t)','skill errset(load("D:/005lib/01AIEDA/learning/examples/lesson27_mechanical_20261019/scripts/lesson27.il") t)\nskill errset(load("D:/005lib/01AIEDA/learning/examples/lesson27_mechanical_20261019/scripts/read27.il") t)')
+s=s.replace('quit\n','skill errset(l27More("D:/005lib/01AIEDA/learning/examples/lesson27_mechanical_20261019/readback") t)\nquit\n')
 p.write_text(s)

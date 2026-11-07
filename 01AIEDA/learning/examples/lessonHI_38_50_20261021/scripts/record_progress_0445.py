@@ -1,5 +1,5 @@
 import pathlib,base64,shutil,json
-R=pathlib.Path(r'D:\001DIY\005lib\01AIEDA');H=R/'learning/examples/lessonHI_38_50_20261021';b=H/'backups/notes_20261022_0445';b.mkdir(parents=True,exist_ok=True)
+R=pathlib.Path(r'D:\005lib\01AIEDA');H=R/'learning/examples/lessonHI_38_50_20261021';b=H/'backups/notes_20261022_0445';b.mkdir(parents=True,exist_ok=True)
 n=R/'learning/notes/lessonHI_38_50_20261021.md';e=R/'EDA.md'
 for p in [n,e]:
  q=b/p.name

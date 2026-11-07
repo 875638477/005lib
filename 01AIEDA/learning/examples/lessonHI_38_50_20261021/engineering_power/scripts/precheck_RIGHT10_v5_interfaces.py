@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,sys,math
-H=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');R=H/'engineering_power';sys.path.insert(0,str(H/'tooling/packages'))
+H=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');R=H/'engineering_power';sys.path.insert(0,str(H/'tooling/packages'))
 from shapely.geometry import Point,LineString,box,Polygon
 from shapely.ops import nearest_points
 p=json.loads((R/'RIGHT10_source_joint_v5.json').read_text());p['operations']+=json.loads((R/'RIGHT10_interface_corridors_v5.json').read_text())['operations'];variant=sys.argv[1] if len(sys.argv)>1 else '2L';b=json.loads((H/f'inventory/checkpoints/SPI_external_{variant}_b012/normalized.json').read_text());items=[];proof=[]

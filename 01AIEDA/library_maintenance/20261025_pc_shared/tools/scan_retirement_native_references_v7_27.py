@@ -2,7 +2,7 @@
 from pathlib import Path
 from collections import Counter
 import argparse,hashlib,json,re,xml.etree.ElementTree as E,importlib.util
-M=Path(r'D:\001DIY\005lib\01AIEDA\library_maintenance\20261025_pc_shared');R=Path(r'D:\001DIY\004computer\lga1700\13shared_libraries_pc_20261025');LIB=Path(r'D:\001DIY\005lib')
+M=Path(r'D:\005lib\01AIEDA\library_maintenance\20261025_pc_shared');R=Path(r'D:\001DIY\004computer\lga1700\13shared_libraries_pc_20261025');LIB=Path(r'D:\005lib')
 CATEGORIES=('project_capture','project_brd_declared','project_brd_placed','public_olb','public_dsn','public_brd_declared','public_brd_placed','active_device_map')
 s=importlib.util.spec_from_file_location('native_s_expression_complete_parser',R.parent/'cadence_geometry_merge_20261025/sexpr.py');SX=importlib.util.module_from_spec(s);s.loader.exec_module(SX)
 def need(v,m):

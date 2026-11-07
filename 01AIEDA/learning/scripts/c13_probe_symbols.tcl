@@ -1,4 +1,4 @@
-source {D:/001DIY/005lib/01AIEDA/learning/scripts/c13_helpers.tcl}
+source {D:/005lib/01AIEDA/learning/scripts/c13_helpers.tcl}
 namespace eval ::C13 {
 set cap [openLib "$root/examples/lesson13_capture/capsym_source.olb"]
 set result {}

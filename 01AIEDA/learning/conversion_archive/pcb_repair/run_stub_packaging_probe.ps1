@@ -1,5 +1,5 @@
 $ErrorActionPreference = 'Stop'
-$repairRoot = 'D:\001DIY\005lib\01AIEDA\learning\staging\lga1700_pcb_repair_20261023'
+$repairRoot = 'D:\005lib\01AIEDA\learning\staging\lga1700_pcb_repair_20261023'
 $probeRoot = Join-Path $repairRoot 'stub_packaging_probe_v8'
 if (Test-Path -LiteralPath $probeRoot) { throw 'Refuse existing experiment folder' }
 New-Item -ItemType Directory -Path $probeRoot | Out-Null

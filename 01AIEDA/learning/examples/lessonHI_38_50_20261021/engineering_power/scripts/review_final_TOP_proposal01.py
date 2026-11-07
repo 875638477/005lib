@@ -1,6 +1,6 @@
 from pathlib import Path
 import sys,json,hashlib
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');P=R/'engineering_power';sys.path.insert(0,str(R/'tooling/packages'));from shapely.geometry import Polygon,LineString,Point
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');P=R/'engineering_power';sys.path.insert(0,str(R/'tooling/packages'));from shapely.geometry import Polygon,LineString,Point
 rows=[]
 for v in ['2L','4L']:
  p=R/f'plans/final_TOP_GND_candidate_{v}_01.json';q=json.loads(p.read_text());op=q['operations'][0];assert op['dynamic']and op['net']=='GND'and op['layer']=='TOP';assert len(op['voids'])==1;void=Polygon(op['voids'][0]);assert void.is_valid;guards=[]

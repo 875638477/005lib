@@ -1,6 +1,6 @@
 ﻿from pathlib import Path
 import json,hashlib
-M=Path(r'D:\001DIY\005lib\01AIEDA\library_maintenance\20261025_pc_shared')
+M=Path(r'D:\005lib\01AIEDA\library_maintenance\20261025_pc_shared')
 p=json.loads((M/'global_suffix_inventory_v1/PSM_NATIVE_AUDIT_PLAN.json').read_text(encoding='utf-8'))
 idx={r['stem'].lower():r for r in p['representatives']}
 rows=[]

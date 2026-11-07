@@ -1,5 +1,5 @@
 import pathlib,json,math,sys
-H=pathlib.Path(r"D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021");R=H/"engineering_mcu"
+H=pathlib.Path(r"D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021");R=H/"engineering_mcu"
 sys.path.insert(0,str(H/"tooling/packages"))
 from shapely.geometry import Polygon
 def flatten(vs,err=.00002):

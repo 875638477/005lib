@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,copy,hashlib
-H=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');R=H/'engineering_power';right=json.loads((R/'RIGHT10_source_joint_v1.json').read_text());m={a['net']:a for a in right['anchors']}
+H=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');R=H/'engineering_power';right=json.loads((R/'RIGHT10_source_joint_v1.json').read_text());m={a['net']:a for a in right['anchors']}
 for v in ['2L','4L']:
  pol=json.loads((H/f'plans/ordinary_policy_{v}_v10.json').read_text());spi=json.loads((R/(f'SPI_external_{v}_engineered_v'+('10.json' if v=='2L' else '6.json'))).read_text());spiids={x['id'] for x in spi['operations']}
  pol['pendingOperations']=[x for x in pol['pendingOperations'] if x['id'] not in spiids];pol['pendingDeleteSegments']=[x for x in pol['pendingDeleteSegments'] if x['id'] not in spiids]
@@ -15,7 +15,7 @@ for v in ['2L','4L']:
  for l in ['TOP','BOTTOM']:pol['regionOverrides'].append(dict(id='RIGHT10_LOCAL_'+l,layer=l,polygon=right['rules'][0]['polygon'],nets=list(m),kinds=['line','smdpin','via'],gap=.16))
  (R/f'RIGHT10_long_policy_{v}_v1.json').write_text(json.dumps(pol,indent=2),encoding='utf-8')
  b=json.loads((H/f'inventory/checkpoints/SPI_external_{v}_b012/normalized.json').read_text());old=[q for q in b['planes'] if q['net']=='GND' and abs(q['area']-62.31)<.0001 and not q['generated']];assert len(old)==1;b['planes'].remove(old[0]);b['planningOnlyEdit']='Old quiet static shape removed solely from planning copy; newshape/keepout in policy. Actualnativeunchanged.';(R/f'source/RIGHT10_long_{v}_virtual_snapshot.json').write_text(json.dumps(b,indent=2),encoding='utf-8')
-base=(H/'scripts/plan_signal_paths.py').read_text();base=base.replace('from routing_geometry import',"sys.path.insert(0,r'D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\scripts')\nfrom routing_geometry import")
+base=(H/'scripts/plan_signal_paths.py').read_text();base=base.replace('from routing_geometry import',"sys.path.insert(0,r'D:\\005lib\\01AIEDA\\learning\\examples\\lessonHI_38_50_20261021\\scripts')\nfrom routing_geometry import")
 cut=base.index('start=time.time();nets=')
 tail='''start=time.time();proofs=[];operations=[];reviews=[];failures=[]
 pairs={'SWCLK':[('ANCHOR_SWCLK','J9.4')],'SWO':[('ANCHOR_SWO','J9.6')],'GPIO_PA15':[('ANCHOR_GPIO_PA15','J13.4')],'GPIO_PB4':[('ANCHOR_GPIO_PB4','J13.5')],'GPIO_PB5':[('ANCHOR_GPIO_PB5','J13.6')],'GPIO_PB8':[('ANCHOR_GPIO_PB8','J13.7')],'GPIO_PB9':[('ANCHOR_GPIO_PB9','J13.8')],'I2C_SCL':[('ANCHOR_I2C_SCL','R19.2')],'I2C_SDA':[('ANCHOR_I2C_SDA','R20.2')],'BOOT0':[('ANCHOR_BOOT0','R28.1'),('R28.1','J8.2')]}

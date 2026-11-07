@@ -1,5 +1,5 @@
 import pathlib,subprocess,hashlib,os,json,datetime
-R=pathlib.Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonG_30_37_20261020')
+R=pathlib.Path(r'D:\005lib\01AIEDA\learning\examples\lessonG_30_37_20261020')
 E=R/'exports';E.mkdir(exist_ok=True)
 sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest().upper()
 allrecords={}

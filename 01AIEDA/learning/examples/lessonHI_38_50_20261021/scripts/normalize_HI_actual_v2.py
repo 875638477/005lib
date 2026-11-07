@@ -1,6 +1,6 @@
 from pathlib import Path
 import re,json,csv,argparse,hashlib
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
 P=argparse.ArgumentParser();P.add_argument('--log',required=True);P.add_argument('--variant',choices=['4L','2L'],required=True);P.add_argument('--output')
 a=P.parse_args();B=Path(a.log);assert B.resolve().is_relative_to(R.resolve())
 def sx(s):

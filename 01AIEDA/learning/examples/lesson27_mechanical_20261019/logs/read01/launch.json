@@ -7,10 +7,10 @@
     "-nographic",
     "-readonly",
     "-s",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson27_mechanical_20261019\\scripts\\read.scr",
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lesson27_mechanical_20261019\\scripts\\read.scr",
     "-p",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson27_mechanical_20261019\\logs\\read01",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson27_mechanical_20261019\\F27_MECHANICAL.brd"
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lesson27_mechanical_20261019\\logs\\read01",
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lesson27_mechanical_20261019\\F27_MECHANICAL.brd"
   ],
   "startUTC": "2026-10-19T14:40:09.016371+00:00",
   "pid": 1584,

@@ -9,10 +9,10 @@
     "-nographic",
     "-readonly",
     "-s",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson07_completion_20261018\\scripts\\reopen_board.scr",
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lesson07_completion_20261018\\scripts\\reopen_board.scr",
     "-p",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson07_completion_20261018\\logs\\reopen_board",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson07_completion_20261018\\library\\eda_l07c_clearance_4layer.brd"
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lesson07_completion_20261018\\logs\\reopen_board",
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lesson07_completion_20261018\\library\\eda_l07c_clearance_4layer.brd"
   ],
   "completed": true,
   "exitCode": 0,

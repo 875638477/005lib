@@ -1,9 +1,9 @@
 import pathlib,json,hashlib,shutil
-m=pathlib.Path(r'D:/001DIY/005lib/01AIEDA/library_maintenance/20261025_pc_shared');r=json.loads((m/'via_reopen13/report.json').read_text(encoding='utf-8-sig'));assert r['status']=='PASS_FULL_XML_EXCEPT_PADSTACKNAME'
+m=pathlib.Path(r'D:/005lib/01AIEDA/library_maintenance/20261025_pc_shared');r=json.loads((m/'via_reopen13/report.json').read_text(encoding='utf-8-sig'));assert r['status']=='PASS_FULL_XML_EXCEPT_PADSTACKNAME'
 sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest().upper()
 files=[]
 for row in r['rows']:
- s=m/'via_reopen13'/(row['new_name']+'.pad');d=pathlib.Path(r'D:/001DIY/005lib/01Pad_lib')/s.name
+ s=m/'via_reopen13'/(row['new_name']+'.pad');d=pathlib.Path(r'D:/005lib/01Pad_lib')/s.name
  assert not d.exists() and sha(s)==row['sha256']
  files.append((s,d,row['sha256']))
 for s,d,h in files:

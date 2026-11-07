@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,hashlib,subprocess,sys,shutil
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest().upper()
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest().upper()
 s=(R/'scripts/compile_batchHI_v31.py').read_text().replace("['BEFORE_OPERATIONS','AFTER_INITIAL_DELETIONS']","['BEFORE_OPERATIONS','AFTER_INITIAL_DELETIONS','AFTER_SECOND_DELETIONS']")
 s=s.replace(" elif typ=='deferReference':",''' elif typ=='secondExactBatch':
   rows=[]

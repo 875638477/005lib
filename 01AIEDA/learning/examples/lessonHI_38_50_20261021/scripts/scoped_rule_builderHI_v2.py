@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,csv,re,itertools
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
 class ScopedRuleBuilder:
  """Build explicit finite rules from actual native baseline tables; no Cadence execution."""
  def __init__(self,variant,baseline_path=None,prefix="HI_JS"):

@@ -1,7 +1,7 @@
 import copy,xml.etree.ElementTree as E,pathlib,json,importlib.util
 p=pathlib.Path(r'D:/001DIY/004computer/lga1700/13shared_libraries_pc_20261025/w/pcb_migration')
 s=importlib.util.spec_from_file_location('b',p/'run_pc_native_audit.py');b=importlib.util.module_from_spec(s);s.loader.exec_module(b)
-m=pathlib.Path(r'D:/001DIY/005lib/01AIEDA/library_maintenance/20261025_pc_shared');out=m/'via_new_stage';out.mkdir(exist_ok=False)
+m=pathlib.Path(r'D:/005lib/01AIEDA/library_maintenance/20261025_pc_shared');out=m/'via_new_stage';out.mkdir(exist_ok=False)
 plan=json.loads((p/'VIA_PUBLIC_DEPENDENCY_DELTA.json').read_text(encoding='utf-8-sig'))
 root=E.Element('padstacks');source=E.parse(m/'native_audits/pd13/source/pad2xml.pxml').getroot();protected={};rows=[]
 for r in plan['rows']:

@@ -1,6 +1,6 @@
 from pathlib import Path
 import sys,json,math
-H=Path(r'D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021');O=H/'engineering_power';sys.path[:0]=[str(H/'scripts'),str(O/'scripts'),str(H/'tooling/packages')]
+H=Path(r'D:/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021');O=H/'engineering_power';sys.path[:0]=[str(H/'scripts'),str(O/'scripts'),str(H/'tooling/packages')]
 from routing_geometry import *
 cp=H/'inventory/checkpoints/padentry_2L_b019_DRC_PENDING';n=load(cp/'normalized.json');w=load(cp/'networks.json');r=load(cp/'base_net_rules.json');p=load(O/'N49_2L_policy.json');p['pendingOperations']=[];s=CopperScene(n,w,r,p);ground={l:[]for l in['TOP','BOTTOM']}
 for a in n['planes']:

@@ -1,5 +1,5 @@
 $ErrorActionPreference='Stop'
-$repairRoot='D:\001DIY\005lib\01AIEDA\learning\staging\lga1700_pcb_repair_20261023'
+$repairRoot='D:\005lib\01AIEDA\learning\staging\lga1700_pcb_repair_20261023'
 $delivery='D:\001DIY\004computer\lga1700\04AD_original_repair_20261023'
 $projectRoot='D:\001DIY\004computer\lga1700'
 $actualDsn="$delivery\sch\LGA1700.DSN"

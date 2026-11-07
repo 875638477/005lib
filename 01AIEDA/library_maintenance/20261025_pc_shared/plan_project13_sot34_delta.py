@@ -3,7 +3,7 @@ from pathlib import Path
 from collections import defaultdict
 from decimal import Decimal,localcontext
 import csv,json,hashlib,importlib.util,sys
-M=Path(r'D:\001DIY\005lib\01AIEDA\library_maintenance\20261025_pc_shared');R=Path(r'D:\001DIY\004computer\lga1700\13shared_libraries_pc_20261025');P=R/'w/final_alt13';OUT=M/'global_canonical_publish_v1';B=R.parent/'cadence_geometry_merge_20261025';sys.path.insert(0,str(B));from sexpr import parse_many,attrs,Atom
+M=Path(r'D:\005lib\01AIEDA\library_maintenance\20261025_pc_shared');R=Path(r'D:\001DIY\004computer\lga1700\13shared_libraries_pc_20261025');P=R/'w/final_alt13';OUT=M/'global_canonical_publish_v1';B=R.parent/'cadence_geometry_merge_20261025';sys.path.insert(0,str(B));from sexpr import parse_many,attrs,Atom
 D=Decimal;F=D('.0254');sha=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest().upper()
 def uq(x):return x[1:-1] if x.startswith('"') and x.endswith('"') else x
 def tab(p):

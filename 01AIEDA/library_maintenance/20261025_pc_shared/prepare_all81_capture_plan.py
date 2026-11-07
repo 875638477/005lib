@@ -23,7 +23,7 @@ for page in tree.findall('./Schematic/Page'):
 assert len(mapping)==1131
 sourcepath=O/'ALL81_LATEST_CN2_SOURCE_PLAN.json';mappath=O/'ALL81_LATEST_CN2_COMPLETE_INSTANCE_MAPPING.json';put(sourcepath,source);put(mappath,mapping)
 compiled=O/'compiled';assert not compiled.exists(),'Fresh compiler directory required'
-subprocess.run([r'C:\Users\Administrator\.local\bin\python3.15.exe',str(R/'tools/compile_capture13_native_plan.py'),'--source-plan',str(sourcepath),'--instance-map',str(mappath),'--out',str(compiled),'--new-source-identity',r'D:\001DIY\005LIB\01CAPTURELIB\COMMON_PC.OLB'],check=True)
+subprocess.run([r'C:\Users\Administrator\.local\bin\python3.15.exe',str(R/'tools/compile_capture13_native_plan.py'),'--source-plan',str(sourcepath),'--instance-map',str(mappath),'--out',str(compiled),'--new-source-identity',r'D:\005lib\01CAPTURELIB\COMMON_PC.OLB'],check=True)
 native=M/'capture_sot34_plan_v1/apply_capture13_footprints_only.tcl';dest=O/'apply_all81_capture_footprints_only.tcl';dest.write_bytes(native.read_bytes())
 plan=jr(compiled/'CAPTURE13_FROZEN_PLAN.json');assert all(r['old_source']==r['new_source'] for k in ('object_mappings','native_cache_selectors','instance_source_changes') for r in plan[k]);assert not plan['cache_default_pcb_footprint_changes']
 plan['native_script']=str(dest);plan['all81_decisions_binding']={'path':str(decision),'sha256':sha(decision)};plan['allowed_source_identity_mutations']=0;put(compiled/'CAPTURE13_FROZEN_PLAN.json',plan)

@@ -1,5 +1,5 @@
 import pathlib,json,sys,math,hashlib
-R=pathlib.Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu');H=R.parent;P=R/'plans';sys.path.insert(0,str(H/'scripts'));from routing_geometry import *
+R=pathlib.Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu');H=R.parent;P=R/'plans';sys.path.insert(0,str(H/'scripts'));from routing_geometry import *
 for v in ['4L','2L']:
  src=H/f'engineering_power/RIGHT10_FULL_{v}_v11.json';q=load(src);n=load(P/f'GPIO_future_{v}_17_snapshot.json');ore=q['oscillatorReference'];island=Polygon(ore['islandPolygon']);void=Polygon(ore['applicationGroundVoidPolygon']);anchor=[46.35,29.4]
  viaAudit=[]

@@ -5,7 +5,7 @@ import argparse,hashlib,json,re,shlex
 M=Path(__file__).resolve().parent
 sha=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest().upper()
 jr=lambda p:json.loads(Path(p).read_text('utf-8-sig'))
-ROOT=Path(r'D:\001DIY\005lib\01Psm_lib').resolve()
+ROOT=Path(r'D:\005lib\01Psm_lib').resolve()
 def validate_device(path,stem):
  text=path.read_text('utf-8-sig');declared=[]
  for line in text.splitlines():

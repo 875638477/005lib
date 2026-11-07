@@ -1,7 +1,7 @@
 from pathlib import Path
 import sys,html,json,hashlib
-B=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lesson28_stackup_20261019')
-sys.path.insert(0,r'D:\001DIY\005lib\01AIEDA\learning\tools\pymupdf_1_28_2')
+B=Path(r'D:\005lib\01AIEDA\learning\examples\lesson28_stackup_20261019')
+sys.path.insert(0,r'D:\005lib\01AIEDA\learning\tools\pymupdf_1_28_2')
 import pymupdf
 for name,pages in [('Kingboard_KB6167F.pdf',[0,1]),('TI_SCAA082A.pdf',[])]:
  doc=pymupdf.open(B/'source'/name)

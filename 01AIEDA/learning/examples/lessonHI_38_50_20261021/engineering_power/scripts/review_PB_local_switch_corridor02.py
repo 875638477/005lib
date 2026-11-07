@@ -1,6 +1,6 @@
 from pathlib import Path
 import sys,json,copy
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');P=R/'engineering_power';sys.path.insert(0,str(R/'scripts'));from routing_geometry import CopperScene,load,LineString,box,Polygon
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');P=R/'engineering_power';sys.path.insert(0,str(R/'scripts'));from routing_geometry import CopperScene,load,LineString,box,Polygon
 from shapely.ops import unary_union
 rows=[]
 for v in ['2L','4L']:

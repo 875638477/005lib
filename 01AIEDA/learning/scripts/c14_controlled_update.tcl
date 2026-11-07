@@ -1,7 +1,7 @@
 set ::C14DefinitionsOnly 1
-source {D:/001DIY/005lib/01AIEDA/learning/scripts/c14_propagation.tcl}
+source {D:/005lib/01AIEDA/learning/scripts/c14_propagation.tcl}
 proc ::C14Prop::controlled {} {
- set root {D:/001DIY/005lib/01AIEDA/learning}
+ set root {D:/005lib/01AIEDA/learning}
  set base "$root/examples/lesson14_capture/final"
  set log "$root/logs/lesson14_capture_20261019/final"
  file mkdir "$base/library";file mkdir $log

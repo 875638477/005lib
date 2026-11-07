@@ -9,10 +9,10 @@
     "-nographic",
     "-readonly",
     "-s",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonF_stack_artwork_correction_20261019\\scripts\\baseline_F28_4L.scr",
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lessonF_stack_artwork_correction_20261019\\scripts\\baseline_F28_4L.scr",
     "-p",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonF_stack_artwork_correction_20261019\\logs\\baseline_F28_4L",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonF_stack_artwork_correction_20261019\\backups\\F28_4L_ORIGINAL.brd"
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lessonF_stack_artwork_correction_20261019\\logs\\baseline_F28_4L",
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lessonF_stack_artwork_correction_20261019\\backups\\F28_4L_ORIGINAL.brd"
   ],
   "completed": true,
   "exitCode": 0,
@@ -21,8 +21,8 @@
   "readonly": true,
   "scriptSHA256": "722F40864A89E0BB269EB11DDE7325B1E046EC86DC8854F0DB4B88F53AAC3E26",
   "processEnvironmentOverrides": {
-    "TEMP": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonF_stack_artwork_correction_20261019\\logs\\baseline_F28_4L\\tmp",
-    "TMP": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonF_stack_artwork_correction_20261019\\logs\\baseline_F28_4L\\tmp",
-    "ALLEGRO_PCBENV": "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lessonF_stack_artwork_correction_20261019\\logs\\baseline_F28_4L\\pcbenv"
+    "TEMP": "D:\\005lib\\01AIEDA\\learning\\examples\\lessonF_stack_artwork_correction_20261019\\logs\\baseline_F28_4L\\tmp",
+    "TMP": "D:\\005lib\\01AIEDA\\learning\\examples\\lessonF_stack_artwork_correction_20261019\\logs\\baseline_F28_4L\\tmp",
+    "ALLEGRO_PCBENV": "D:\\005lib\\01AIEDA\\learning\\examples\\lessonF_stack_artwork_correction_20261019\\logs\\baseline_F28_4L\\pcbenv"
   }
 }

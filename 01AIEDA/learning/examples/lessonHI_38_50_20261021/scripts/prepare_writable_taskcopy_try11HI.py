@@ -1,6 +1,6 @@
 ﻿from pathlib import Path
 import json,hashlib,stat,subprocess,sys
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest().upper()
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest().upper()
 s=(R/'scripts/compile_batchHI_v27.py').read_text().replace("R/'scripts/batchHI_intermediate_drc_pending.il',il]", "R/'scripts/extraReadHI.il',R/'scripts/batchHI_intermediate_drc_pending.il',il]")
 s=s.replace("script.write_text(h+'skill errset(hiBatchProgram() t)\\nquit\\nfillin \"yes\"\\n',encoding='ascii')", "script.write_text(h+'skill errset(hiBatchProgram() t)\\nskill errset(axlKillDesign() t)\\nquit\\n',encoding='ascii')")
 assert 'axlKillDesign' in s;(R/'scripts/compile_batchHI_v28.py').write_text(s,encoding='utf8')

@@ -9,10 +9,10 @@
     "-nographic",
     "-readonly",
     "-s",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson09_qfn_qfp_20261018\\scripts\\l09_stm32f103c8_lqfp48_reopen02.scr",
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lesson09_qfn_qfp_20261018\\scripts\\l09_stm32f103c8_lqfp48_reopen02.scr",
     "-p",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson09_qfn_qfp_20261018\\logs\\l09_stm32f103c8_lqfp48_reopen02",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson09_qfn_qfp_20261018\\library\\l09_stm32f103c8_lqfp48.dra"
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lesson09_qfn_qfp_20261018\\logs\\l09_stm32f103c8_lqfp48_reopen02",
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lesson09_qfn_qfp_20261018\\library\\l09_stm32f103c8_lqfp48.dra"
   ],
   "completed": true,
   "exitCode": 0,

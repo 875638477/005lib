@@ -2,7 +2,7 @@
 # DRC-check each piece, keep good pieces, retry only the failed piece.
 import math, sys, time
 
-sys.path.insert(0, r"D:\001DIY\005lib\01AIEDA\routing")
+sys.path.insert(0, r"D:\005lib\01AIEDA\routing")
 import autoroute3d as ar
 
 L8 = 2                  # layer index of ETCH/L8 in ar.LAYER_NAMES

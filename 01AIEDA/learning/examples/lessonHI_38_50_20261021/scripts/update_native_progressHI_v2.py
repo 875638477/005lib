@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,re,hashlib
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
 attempts=[]
 for folder in sorted((R/'logs').iterdir()):
  if not folder.is_dir() or not (folder/'launch.json').is_file():continue

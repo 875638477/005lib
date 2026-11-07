@@ -3,7 +3,7 @@ Root owns native CAD scheduling; this runner starts only when explicitly invoked
 """
 from pathlib import Path
 import argparse,hashlib,json,os,subprocess,time
-M=Path(r'D:\001DIY\005lib\01AIEDA\library_maintenance\20261025_pc_shared');PUBLIC=Path(r'D:\001DIY\005lib\01brdlib');NAMES=('00012.brd','0010.brd','002.brd','004.brd','006.brd','008.brd','VCU16.brd')
+M=Path(r'D:\005lib\01AIEDA\library_maintenance\20261025_pc_shared');PUBLIC=Path(r'D:\005lib\01brdlib');NAMES=('00012.brd','0010.brd','002.brd','004.brd','006.brd','008.brd','VCU16.brd')
 def need(v,m):
  if not v:raise ValueError(m)
 def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest().upper()

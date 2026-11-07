@@ -2,7 +2,7 @@
 from pathlib import Path
 import hashlib,json,os,shutil
 M=Path(__file__).resolve().parent
-ROOT=Path(r'D:\001DIY\005lib\01Psm_lib').resolve()
+ROOT=Path(r'D:\005lib\01Psm_lib').resolve()
 def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest().upper()
 def load(p):return json.loads(Path(p).read_text(encoding='utf-8-sig'))
 def write(p,x):Path(p).write_text(json.dumps(x,ensure_ascii=False,indent=2),encoding='utf-8')

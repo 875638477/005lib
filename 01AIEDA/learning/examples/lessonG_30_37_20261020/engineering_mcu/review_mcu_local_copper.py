@@ -1,5 +1,5 @@
 import pathlib,csv,re,json,hashlib,math,collections,datetime,os
-R=pathlib.Path(r"D:\001DIY\005lib\01AIEDA\learning\examples\lessonG_30_37_20261020\engineering_mcu");G=R.parent
+R=pathlib.Path(r"D:\005lib\01AIEDA\learning\examples\lessonG_30_37_20261020\engineering_mcu");G=R.parent
 os.environ["TMP"]=os.environ["TEMP"]=str(R/"runtime")
 def h(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def rows(p):return list(csv.DictReader(p.open(encoding="utf-8-sig",newline=""),delimiter="\t"))

@@ -1,7 +1,7 @@
 ﻿import sys
 sys.dont_write_bytecode=True
 import pathlib,json,math,hashlib,copy,html
-R=pathlib.Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');O=R/'review/b020_engineering';sys.path.insert(0,str(R/'scripts'))
+R=pathlib.Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');O=R/'review/b020_engineering';sys.path.insert(0,str(R/'scripts'))
 from routing_geometry import CopperScene,load,Point,LineString,unary_union,plane_from_native
 
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest().upper()

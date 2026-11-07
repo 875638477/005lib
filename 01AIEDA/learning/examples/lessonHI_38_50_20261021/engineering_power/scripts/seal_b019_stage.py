@@ -1,6 +1,6 @@
 from pathlib import Path
 import hashlib,json,datetime
-O=Path(r'D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/engineering_power');H=O.parent;dest=O/'b019_stage_manifest.json';files=[]
+O=Path(r'D:/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/engineering_power');H=O.parent;dest=O/'b019_stage_manifest.json';files=[]
 def item(p):return dict(path=str(p),sha256=hashlib.sha256(p.read_bytes()).hexdigest().upper(),bytes=p.stat().st_size)
 for p in sorted(O.rglob('*')):
  if p.is_file()and p!=dest:

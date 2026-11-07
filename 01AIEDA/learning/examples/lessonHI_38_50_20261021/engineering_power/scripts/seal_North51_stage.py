@@ -1,6 +1,6 @@
 from pathlib import Path
 import hashlib,json,datetime
-O=Path(r'D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/engineering_power');dest=O/'artifact_manifest.json';old=O/'CAN07_returns02_manifest.json'
+O=Path(r'D:/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/engineering_power');dest=O/'artifact_manifest.json';old=O/'CAN07_returns02_manifest.json'
 files=[]
 for p in sorted(O.rglob('*')):
  if p.is_file() and p!=dest and p.name!='north51_stage_manifest.json':files.append(dict(path=str(p.relative_to(O)).replace('\\','/'),SHA256=hashlib.sha256(p.read_bytes()).hexdigest().upper(),bytes=p.stat().st_size))

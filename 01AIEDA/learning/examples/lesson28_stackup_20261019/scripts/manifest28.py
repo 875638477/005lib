@@ -1,7 +1,7 @@
 from pathlib import Path
 import json,hashlib
-B=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lesson28_stackup_20261019')
-N=Path(r'D:\001DIY\005lib\01AIEDA\learning\notes\lesson28_stackup_20261019.md')
+B=Path(r'D:\005lib\01AIEDA\learning\examples\lesson28_stackup_20261019')
+N=Path(r'D:\005lib\01AIEDA\learning\notes\lesson28_stackup_20261019.md')
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest().upper()
 readme="""# Lesson 28: native two- and four-layer stackups
 

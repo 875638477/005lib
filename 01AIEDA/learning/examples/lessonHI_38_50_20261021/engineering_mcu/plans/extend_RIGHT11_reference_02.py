@@ -1,5 +1,5 @@
 ﻿import pathlib
-P=pathlib.Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu\plans');s=(P/'review_RIGHT11_reference_01.py').read_text(encoding='utf-8-sig')
+P=pathlib.Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu\plans');s=(P/'review_RIGHT11_reference_01.py').read_text(encoding='utf-8-sig')
 s=s.replace("['U1.47','Y1.2','Y1.4','C22.2','C23.2']","['U1.47','Y1.2','Y1.4','C22.2','C23.2','C15.2','C16.2']")
 s=s.replace("return dict(localReachesApplication=find(local)==find(app),",'''guardResults={}
   for op in load(P/'mcu_critical_routes_v6.json')['operations']:

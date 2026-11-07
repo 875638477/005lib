@@ -1,5 +1,5 @@
 import pathlib,json,shutil,hashlib
-R=pathlib.Path(r"D:\001DIY\005lib\01AIEDA\learning\examples\lessonG_30_37_20261020\engineering_mcu");G=R.parent
+R=pathlib.Path(r"D:\005lib\01AIEDA\learning\examples\lessonG_30_37_20261020\engineering_mcu");G=R.parent
 f=R/"review_mcu_global_geometry.py"
 s=f.read_text(encoding="utf-8-sig")
 s=s.replace('f=G/f"inventory/normalized_actual_{variant}.json"','f=R/f"native_snapshot_{variant}_reconcile02.json"')
@@ -26,7 +26,7 @@ assert hashlib.sha256(preview.read_bytes()).hexdigest()==d["previewSHA256"]
 for x in d["routingOpenItems"]:
     x["rule"]=x["rule"].replace("inner routing layers presently disallowed","inner non-GND signal routing presently disallowed")
 review.write_text(json.dumps(d,ensure_ascii=False,indent=2),encoding="utf-8")
-note=pathlib.Path(r"D:\001DIY\005lib\01AIEDA\learning\notes\lessonG_mcu_20261020.md")
+note=pathlib.Path(r"D:\005lib\01AIEDA\learning\notes\lessonG_mcu_20261020.md")
 s=note.read_text(encoding="utf-8-sig")
 s=s.replace("R27/服务按键是现有电路选择","R27与J7复位跳帽是现有电路选择")
 s=s.replace("当前4层内部布线权限仍禁止","当前4层非GND信号的内部布线权限仍禁止")

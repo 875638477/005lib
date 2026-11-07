@@ -1,6 +1,6 @@
 import pathlib,csv,json,re,hashlib,math,sys,html
-B=pathlib.Path(r'D:/001DIY/005lib/01AIEDA/learning/examples/lesson27_mechanical_20261019')
-D=pathlib.Path(r'D:/001DIY/005lib/01AIEDA/learning/examples/de_15_26_20261019')
+B=pathlib.Path(r'D:/005lib/01AIEDA/learning/examples/lesson27_mechanical_20261019')
+D=pathlib.Path(r'D:/005lib/01AIEDA/learning/examples/de_15_26_20261019')
 checks=[]
 def check(name,ok,actual=None):
  checks.append({'name':name,'pass':bool(ok),'actual':actual})
@@ -95,7 +95,7 @@ if (rb/'all_texts.tsv').exists():
  k=(rb/'keepin_challenge.txt').read_text()
  check('route keepin crossing rejected then rollback zero','name "Line to Route Keepin Spacing"' in k and 'AFTER count=0 state=t' in k)
 else:check('extra readonly text and route keepin challenge pending',False)
-sources=[D/'native_flow_final/DE_BASELINE.brd',B/'source/DE_BASELINE.brd',B/'library/eda_l07c_npth_200_null.pad',pathlib.Path(r'D:/001DIY/005lib/01AIEDA/learning/examples/lesson10_connector_20261018/source/usb4105.pdf')]
+sources=[D/'native_flow_final/DE_BASELINE.brd',B/'source/DE_BASELINE.brd',B/'library/eda_l07c_npth_200_null.pad',pathlib.Path(r'D:/005lib/01AIEDA/learning/examples/lesson10_connector_20261018/source/usb4105.pdf')]
 sources+=sorted(p for p in (D/'library').iterdir() if p.suffix.lower() in ['.psm','.pad','.dra'])
 (B/'source/dependency_manifest.json').write_text(json.dumps([{'path':str(p),'SHA256':sha(p)} for p in sources],indent=2),encoding='utf8')
 result={'status':'PASS' if all(c['pass'] for c in checks) else 'PENDING_OR_FAIL','course':27,'board':str(B/'F27_MECHANICAL.brd'),'boardSHA256':sha(B/'F27_MECHANICAL.brd'),'checks':checks,'limitations':['Educational mechanical dimensions; not enclosure/manufacturing release.','79 logical components remain unplaced; no routing or board-level SI/PI/EMI acceptance.','2mm mounting holes and 5mm hardware clearance are engineering exercise assumptions.','Connector board thickness and slot fabrication process await lesson28 and assembly confirmation.']}
@@ -142,6 +142,6 @@ text(48,4,'J2 courtyard edge exception',1.1,'#c2a4ff')
 text(0,-64,'Gold: real copper | orange: hardware keepout | blue: route keepin | purple: package keepin',1.1)
 parts.append('</svg>')
 svg='\n'.join(parts);(B/'preview.svg').write_text(svg,encoding='utf8')
-sys.path.insert(0,r'D:/001DIY/005lib/01AIEDA/learning/tools/pymupdf_1_28_2')
+sys.path.insert(0,r'D:/005lib/01AIEDA/learning/tools/pymupdf_1_28_2')
 import fitz
 doc=fitz.open(stream=svg.encode(),filetype='svg');doc[0].get_pixmap(matrix=fitz.Matrix(1,1)).save(B/'preview.png')

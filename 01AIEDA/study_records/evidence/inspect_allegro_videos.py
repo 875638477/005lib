@@ -12,7 +12,7 @@ import struct
 from datetime import datetime, timezone, timedelta
 from ctypes import wintypes
 
-WORK = pathlib.Path(r"D:\001DIY\005lib\01AIEDA\study_records\evidence")
+WORK = pathlib.Path(r"D:\005lib\01AIEDA\study_records\evidence")
 SOURCE = pathlib.Path(r"D:\005study\72讲速成视频【Cadence Allegro16.6视频教程】完整版")
 ALTERNATE_SOURCE = pathlib.Path(r"D:\005study\72讲速成视频【Cadence Allegro16.6视频教程")
 

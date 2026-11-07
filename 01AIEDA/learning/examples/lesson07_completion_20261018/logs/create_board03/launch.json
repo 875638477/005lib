@@ -8,10 +8,10 @@
     "-safe",
     "-nographic",
     "-s",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson07_completion_20261018\\scripts\\create_board03.scr",
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lesson07_completion_20261018\\scripts\\create_board03.scr",
     "-p",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson07_completion_20261018\\logs\\create_board03",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson07_completion_20261018\\library\\eda_l07c_clearance_4layer_v2.brd"
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lesson07_completion_20261018\\logs\\create_board03",
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lesson07_completion_20261018\\library\\eda_l07c_clearance_4layer_v2.brd"
   ],
   "completed": true,
   "exitCode": 0,

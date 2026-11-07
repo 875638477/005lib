@@ -1,6 +1,6 @@
 ﻿param(
  [string]$SourceRoot='D:\001DIY\004computer\lga1700',
- [string]$Output='D:\001DIY\005lib\01AIEDA\learning\staging\lga1700_pcb_repair_20261023'
+ [string]$Output='D:\005lib\01AIEDA\learning\staging\lga1700_pcb_repair_20261023'
 )
 $ErrorActionPreference='Stop'
 $psmRoot=Join-Path $SourceRoot '02pcb\psm'

@@ -1,6 +1,6 @@
 ﻿from pathlib import Path
 import json,hashlib,shutil
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');Q=json.dumps;v='4L';tag=f'all69_scoped_TOP_trial_{v}_b018_01';plan=json.loads((R/f'batches/TOP_trial_{v}_b018_PRE_ALL69_DRC_PENDING_try04.json').read_text());m=json.loads((R/f'scripts/TOP_trial_{v}_b018_PRE_ALL69_DRC_PENDING_try04_compiled.json').read_text());names=plan['all69ScopedDeferredToIndependentReadonlyProcess'];assert len(names)==len(set(names))==69
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');Q=json.dumps;v='4L';tag=f'all69_scoped_TOP_trial_{v}_b018_01';plan=json.loads((R/f'batches/TOP_trial_{v}_b018_PRE_ALL69_DRC_PENDING_try04.json').read_text());m=json.loads((R/f'scripts/TOP_trial_{v}_b018_PRE_ALL69_DRC_PENDING_try04_compiled.json').read_text());names=plan['all69ScopedDeferredToIndependentReadonlyProcess'];assert len(names)==len(set(names))==69
 out=R/'logs'/tag;pp=R/'scripts'/f'{tag}.il';code='''procedure(hiAll69ReadonlyScoped()
  let((f net count failures)
   f=outfile(OUTFILE) failures=0

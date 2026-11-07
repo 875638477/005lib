@@ -7,7 +7,7 @@ import copy,json,hashlib,re
 M=Path(__file__).resolve().parent;O=M/'nonpassive_additional_aliases13';O.mkdir(exist_ok=True)
 jr=lambda p:json.loads(Path(p).read_text('utf-8-sig'));sha=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest().upper()
 put=lambda n,v:(O/n).write_text(json.dumps(v,ensure_ascii=False,indent=2),encoding='utf-8')
-root=Path(r'D:\001DIY\005lib\01Psm_lib');guard=M/'project81_exact_additions13/PUBLIC_GUARD_13425.json';guards={x['path'].lower():x for x in jr(guard)['files']}
+root=Path(r'D:\005lib\01Psm_lib');guard=M/'project81_exact_additions13/PUBLIC_GUARD_13425.json';guards={x['path'].lower():x for x in jr(guard)['files']}
 allrows=jr(M/'global_nonpassive_inventory_v1/ALL_PUBLIC_PSM_INVENTORY.json')['files'];files={r['stem'].lower():r for r in allrows}
 idx={};padxml={}
 for folder in ['global_suffix_native_review_v3','global_nonpassive_native_review13','global_nonpassive_increment_review13','global_canonical_targets_review13','project81_current_targets_review13','project81_exact_targets_review13']:

@@ -22,7 +22,7 @@ def main():
  s+='''
 procedure(pub0010FrozenInputViaGate(actual)
  let((rows expected)
-  rows=pub403Rows("D:/001DIY/005lib/01AIEDA/library_maintenance/20261025_pc_shared/public0010_route_net_diagnostic_run13_v1/ACTUAL_ALL1739_VIAS.ilist")
+  rows=pub403Rows("D:/005lib/01AIEDA/library_maintenance/20261025_pc_shared/public0010_route_net_diagnostic_run13_v1/ACTUAL_ALL1739_VIAS.ilist")
   expected=nil
   foreach(r rows expected=cons(sprintf(nil "%L" list(car(r) nth(1 r) nth(2 r) sort(nth(3 r) lambda((a b) alphalessp(sprintf(nil "%L" a) sprintf(nil "%L" b)))))) expected))
   expected=sort(expected 'alphalessp)

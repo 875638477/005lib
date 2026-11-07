@@ -20,7 +20,7 @@ import zlib
 
 
 WORK = Path(r"D:\001DIY\004computer\lga1700\git_upload_005lib_20261025")
-SOURCE = Path(r"D:\001DIY\005lib")
+SOURCE = Path(r"D:\005lib")
 REPOSITORY = WORK / "repository"
 RECORD_RELATIVE = Path("01AIEDA/library_maintenance/20261025_github_upload")
 RECORD = SOURCE / RECORD_RELATIVE
@@ -271,7 +271,7 @@ def verify_fixture_sources() -> None:
 def write_readme() -> None:
     text = """GitHub 005lib 上传快照记录（2026-10-25）
 
-源根目录：D:\\001DIY\\005lib
+源根目录：D:\\005lib
 目标仓库：https://github.com/875638477/005lib
 仓库根目录对应上述本机源根目录；9 个 01 开头目录直接放在仓库根目录，内部路径保持原样：
 01aeLib、01AIEDA、01brdlib、01captureLib、01env、01Pad_lib、01Psm_lib、01script_file、01_3d_step_lib。

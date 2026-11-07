@@ -1,5 +1,5 @@
 from pathlib import Path
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
 s=(R/'scripts/compile_batchHI_v6.py').read_text()
 s=s.replace(" if typ=='bindShape':", " if typ=='deleteSegment':statements.append(f'hiDeleteSegment(f {q(ident)} {q(net)} {q(op[\"layer\"])} {points(op[\"points\"])} {num(op[\"width\"])})')\n elif typ=='bindShape':")
 (R/'scripts/compile_batchHI_v7.py').write_text(s,encoding='ascii')

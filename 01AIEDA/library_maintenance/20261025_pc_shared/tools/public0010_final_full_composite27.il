@@ -1,7 +1,7 @@
 ; Root-owned independent final readonly reload evidence. No setter/create/save.
-load("D:/001DIY/005lib/01AIEDA/library_maintenance/20261025_pc_shared/tools/public_brd_noop_full_readonly_v3.il")
-load("D:/001DIY/005lib/01AIEDA/library_maintenance/20261025_pc_shared/tools/public0010_body_max_readonly27.il")
-load("D:/001DIY/005lib/01AIEDA/library_maintenance/20261025_pc_shared/tools/public0010_final593_readonly_v1.il")
+load("D:/005lib/01AIEDA/library_maintenance/20261025_pc_shared/tools/public_brd_noop_full_readonly_v3.il")
+load("D:/005lib/01AIEDA/library_maintenance/20261025_pc_shared/tools/public0010_body_max_readonly27.il")
+load("D:/005lib/01AIEDA/library_maintenance/20261025_pc_shared/tools/public0010_final593_readonly_v1.il")
 load("D:/001DIY/004computer/lga1700/cadence_geometry_merge_20261025/dra_audit/export.il")
 procedure(pub27FinalAllDefinitionGraph(dir)
  let((f seen n)

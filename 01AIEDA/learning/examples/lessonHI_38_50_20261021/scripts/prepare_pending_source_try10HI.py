@@ -1,6 +1,6 @@
 ﻿from pathlib import Path
 import json,hashlib,stat,subprocess,sys
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest().upper()
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest().upper()
 f=R/'logs/source_service_2L_b015_guarded_try09_interactive/owned_termination_evidence.json';d=json.loads(f.read_text());d['originalStatusLabel']=d['status'];d['status']='ROOT_AUTHORIZED_INTENTIONAL_STOP_OF_OWN_UNSAVED_INTERACTIVE_NIL_REPEAT_NOT_A_PASS';d['labelCorrection']='The first copied status string incorrectly said BATCH_T; this attempt called axlDRCUpdate(nil). Both modes triggered identical input SHA. Actual exit/SHA/CPU evidence unchanged.';f.write_text(json.dumps(d,indent=2),encoding='utf8')
 s=(R/'scripts/compile_batchHI_v26.py').read_text().replace("R/'scripts/batchHI_intermediate_interactive.il'","R/'scripts/batchHI_intermediate_drc_pending.il'");(R/'scripts/compile_batchHI_v27.py').write_text(s,encoding='utf8')
 for v in ['2L','4L']:

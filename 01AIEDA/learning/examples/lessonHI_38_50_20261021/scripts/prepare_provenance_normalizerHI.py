@@ -1,5 +1,5 @@
 from pathlib import Path
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
 s=(R/'scripts/normalize_HI_actual_v2.py').read_text().replace('.read_text()',".read_text(encoding='utf8')")
 s=s.replace("routes=[]\nfor x in rows",'''def route_key(net,layer,ends,width):
  return (net,layer,tuple(sorted(tuple(p) for p in ends)) if ends else None,width)

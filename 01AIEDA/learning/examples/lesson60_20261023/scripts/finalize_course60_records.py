@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,sys,runpy,hashlib,shutil
-R=Path(r'D:\001DIY\005lib\01AIEDA');L=R/'learning/examples/lesson60_20261023';S=R/'learning/skills/cadence17-learning'
+R=Path(r'D:\005lib\01AIEDA');L=R/'learning/examples/lesson60_20261023';S=R/'learning/skills/cadence17-learning'
 sys.path.insert(0,str(L/'tooling/pyyaml_6_0_3'));validator=Path(r'C:\Users\Administrator\.codex\skills\.system\skill-creator\scripts\quick_validate.py');module=runpy.run_path(str(validator));ok,msg=module['validate_skill'](S);assert ok,msg
 d={'status':'PASS_FINAL_SKILL_SOURCE_VALIDATION','validator':str(validator),'message':msg,'files':[{'path':str(p.relative_to(S)),'sha256':hashlib.sha256(p.read_bytes()).hexdigest().upper()}for p in sorted(S.rglob('*'))if p.is_file()and '__pycache__'not in p.parts],'preflightBehaviorReport':'preflight_forward_fix_validation.json','autoInstalled':False}
 (L/'review/skill_final_validation.json').write_text(json.dumps(d,indent=2),encoding='utf8')

@@ -1,6 +1,6 @@
 procedure(hiReadbackProofs()
  let((f)
-  f=outfile("D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/logs/reopen_usb_esd_2L_b008_bulk/hi_reopen_endpoint_proofs.txt")
+  f=outfile("D:/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/logs/reopen_usb_esd_2L_b008_bulk/hi_reopen_endpoint_proofs.txt")
   hiRegistry=nil
   unwindProtect(progn(
    axlDBControl('drcEnable nil)
@@ -48,6 +48,6 @@ procedure(hiReadbackProofs()
   hiProof(f "C10.2" "U1.47" t)
   hiProof(f "USB_RETURN_LEFT" "HI_USB_TOP_REFERENCE" t)
   hiProof(f "USB_RETURN_RIGHT" "HI_USB_TOP_REFERENCE" t)
-  hiHSEIsolationChallengeGraph("D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/logs/reopen_usb_esd_2L_b008_bulk" list(45.45 28.85) "BOTTOM" list(list(42.2 39.8) list(44.2 39.8) list(47.8 33.5)))
+  hiHSEIsolationChallengeGraph("D:/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021/logs/reopen_usb_esd_2L_b008_bulk" list(45.45 28.85) "BOTTOM" list(list(42.2 39.8) list(44.2 39.8) list(47.8 33.5)))
   t) progn(axlDBControl('drcEnable t) fprintf(f "HI_READBACK_UNWIND_DRC_RESTORED=%L\n" axlDBControl('drcEnable))))
   fprintf(f "HI_REOPEN_ALL_ENDPOINTS_COMPLETE\n") close(f) t))

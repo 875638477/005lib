@@ -1,5 +1,5 @@
 from pathlib import Path
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power')
 s=(R/'scripts/review_power02d.py').read_text().replace('import json,math,csv,hashlib,sys,shutil','import json,math,csv,hashlib,sys,shutil,re')
 s=s.replace("'power_paths_02d.json']]","'power_paths_02d.json','power_star_03c.json']]")
 s=s.replace("b002d","b003c").replace("native_power02d_","native_power03c_").replace("review_power02d","review_power03c").replace("evidence_power02d","evidence_power03c")

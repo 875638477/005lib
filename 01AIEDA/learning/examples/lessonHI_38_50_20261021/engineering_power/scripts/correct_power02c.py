@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,shutil
-R=Path(r'D:\001DIY\005lib\01AIEDA/learning/examples/lessonHI_38_50_20261021/engineering_power')
+R=Path(r'D:\005lib\01AIEDA/learning/examples/lessonHI_38_50_20261021/engineering_power')
 shutil.copy2(R/'readouts/power_geometry_precheck.json',R/'readouts/power_geometry_precheck_02b_failed.json')
 d=json.loads((R/'power_paths_02b.json').read_text())
 d['supersedes']='power_paths_02b.json: IN_D1_C2 first TOP horizontal y13 intersects already planned C2 GNDviaB at22.152,13.45. Independent geometry precheck found before native02 execution.'

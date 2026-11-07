@@ -1,7 +1,7 @@
 """Verify saved flat CSVs and write provenance, assembly contract, and read-only ECO replay reference."""
 from pathlib import Path
 import json,csv,hashlib,collections,math
-R=Path('D:/001DIY/005lib/01AIEDA');J=R/'learning/examples/lessonJK_51_59_20261022';H=R/'learning/examples/lessonHI_38_50_20261021';D=R/'learning/examples/de_15_26_20261019';sha=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest().upper();load=lambda p:json.loads(Path(p).read_text(encoding='utf-8-sig'))
+R=Path('D:/005lib/01AIEDA');J=R/'learning/examples/lessonJK_51_59_20261022';H=R/'learning/examples/lessonHI_38_50_20261021';D=R/'learning/examples/de_15_26_20261019';sha=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest().upper();load=lambda p:json.loads(Path(p).read_text(encoding='utf-8-sig'))
 def dump(p,x):Path(p).write_text(json.dumps(x,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 checks=[]
 for v in ['2L','4L']:

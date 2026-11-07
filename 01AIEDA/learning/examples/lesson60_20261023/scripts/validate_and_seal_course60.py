@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,hashlib,re,urllib.parse,datetime,zipfile
-R=Path(r'D:\001DIY\005lib\01AIEDA');L=R/'learning/examples/lesson60_20261023';S=R/'learning/skills/cadence17-learning'
+R=Path(r'D:\005lib\01AIEDA');L=R/'learning/examples/lesson60_20261023';S=R/'learning/skills/cadence17-learning'
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest().upper()
 def load(p):return json.loads(p.read_text(encoding='utf8'))
 errors=[];checks=[]

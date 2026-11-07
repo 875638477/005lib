@@ -1,5 +1,5 @@
 ﻿import pathlib,json,sys,math,html
-R=pathlib.Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu');H=R.parent;P=R/'plans';sys.path.insert(0,str(H/'scripts'));from routing_geometry import *
+R=pathlib.Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu');H=R.parent;P=R/'plans';sys.path.insert(0,str(H/'scripts'));from routing_geometry import *
 sys.path.insert(0,str(R.parents[2]/'tools/pymupdf_1_28_2'));import pymupdf as fitz
 n=load(P/'GPIO_actualB016_2L_59_snapshot.json');pol=load(P/'GPIO_actualB016_2L_59_policy.json');s=CopperScene(n,load(P/'GPIO_actualB016_2L_59_networks.json'),load(P/'GPIO_actualB016_2L_59_rules.json'),pol)
 parts=['<svg xmlns="http://www.w3.org/2000/svg" width="2140" height="1100"><rect width="2140" height="1100" fill="white"/>']

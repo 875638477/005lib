@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,sys,math,hashlib
-R=Path(r'D:/001DIY/005lib/01AIEDA');H=R/'learning/examples/lessonHI_38_50_20261021';J=R/'learning/examples/lessonJK_51_59_20261022';A=J/'audits'
+R=Path(r'D:/005lib/01AIEDA');H=R/'learning/examples/lessonHI_38_50_20261021';J=R/'learning/examples/lessonJK_51_59_20261022';A=J/'audits'
 sys.path[:0]=[str(H/'tooling/packages'),str(H/'engineering_power/scripts')]
 from shapely.geometry import LineString,box,Point
 from shapely.ops import unary_union,nearest_points

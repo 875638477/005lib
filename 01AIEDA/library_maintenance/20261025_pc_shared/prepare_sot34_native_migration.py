@@ -3,7 +3,7 @@ from pathlib import Path
 import csv,hashlib,json,re
 R=Path(r'D:\001DIY\004computer\lga1700\13shared_libraries_pc_20261025')
 W=R/'w/pcb_migration';D=W/'sot34_migration'
-M=Path(r'D:\001DIY\005lib\01AIEDA\library_maintenance\20261025_pc_shared')
+M=Path(r'D:\005lib\01AIEDA\library_maintenance\20261025_pc_shared')
 E=M/'sot34_superset_pst_and_pins_v1'
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest().upper()
 def sk(p):return json.dumps(str(p).replace('\\','/'))
@@ -47,10 +47,10 @@ procedure(pc13SotSourceGuard()
   unless(count==6521 error("SOT34 source6521 pin count failed\\n")) t))
 procedure(pc13Sot34Canary(dir)
  pc13SotSourceGuard()
- pc13Replace('''+sk(D/'CANARY4_REPLACEMENTS.tsv')+''' dir strcat(dir "/SOT34_CANARY4.brd") "D:/001DIY/005lib/01Psm_lib" "D:/001DIY/005lib/01Pad_lib" 0 '''+sk(D/'EXPECTED_PINS_CANARY4.ilist')+'''))
+ pc13Replace('''+sk(D/'CANARY4_REPLACEMENTS.tsv')+''' dir strcat(dir "/SOT34_CANARY4.brd") "D:/005lib/01Psm_lib" "D:/005lib/01Pad_lib" 0 '''+sk(D/'EXPECTED_PINS_CANARY4.ilist')+'''))
 procedure(pc13Sot34Apply(dir)
  pc13SotSourceGuard()
- pc13Replace('''+sk(D/'SOT34_REPLACEMENTS.tsv')+''' dir strcat(dir "/SOT34_ALT.brd") "D:/001DIY/005lib/01Psm_lib" "D:/001DIY/005lib/01Pad_lib" 0 '''+sk(D/'EXPECTED_PINS_SOT34.ilist')+'''))
+ pc13Replace('''+sk(D/'SOT34_REPLACEMENTS.tsv')+''' dir strcat(dir "/SOT34_ALT.brd") "D:/005lib/01Psm_lib" "D:/005lib/01Pad_lib" 0 '''+sk(D/'EXPECTED_PINS_SOT34.ilist')+'''))
 procedure(pc13SotFullExports(dir)
  sstatus(fullPrecision t)
  eco12CompositeRead(dir)

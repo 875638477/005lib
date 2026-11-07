@@ -9,10 +9,10 @@
     "-nographic",
     "-readonly",
     "-s",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson10_connector_20261018\\scripts\\read_board.scr",
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lesson10_connector_20261018\\scripts\\read_board.scr",
     "-p",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson10_connector_20261018\\logs\\reopen_board",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson10_connector_20261018\\lesson10_connector.brd"
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lesson10_connector_20261018\\logs\\reopen_board",
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lesson10_connector_20261018\\lesson10_connector.brd"
   ],
   "pid": 16340,
   "completed_normally": true,

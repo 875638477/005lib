@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,hashlib,datetime
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonG_30_37_20261020')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonG_30_37_20261020')
 p=R/'NATIVE_WORKFLOW.md'
 if p.exists():
  text=p.read_text();text=text.replace('(current/','(../current/').replace('(review/','(../review/')

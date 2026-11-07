@@ -1,7 +1,7 @@
 """Compile explicit J55 static plan and a non-saving native apply core. Does not launch Cadence."""
 from pathlib import Path
 import json,hashlib,shutil
-J=Path('D:/001DIY/005lib/01AIEDA/learning/examples/lessonJK_51_59_20261022');D=json.loads((J/'audits/j55_instance_correction_delta_b019.json').read_text());(J/'native').mkdir(exist_ok=True)
+J=Path('D:/005lib/01AIEDA/learning/examples/lessonJK_51_59_20261022');D=json.loads((J/'audits/j55_instance_correction_delta_b019.json').read_text());(J/'native').mkdir(exist_ok=True)
 def il(x):
  if x is None or x is False:return 'nil'
  if x is True:return 't'

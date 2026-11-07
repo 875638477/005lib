@@ -1,5 +1,5 @@
 from pathlib import Path
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
 s='''procedure(hiShape(f id net layer points dynamic voids)
  let((shape ret geometry)
   geometry=if(equal(points "ROUTE_KEEPIN") then car(axlPolyFromDB(axlDBGetDesign()->keepinRoute)) else hiClosedPath(points))

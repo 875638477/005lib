@@ -1,5 +1,5 @@
 import pathlib,json,sys,math,hashlib,datetime
-R=pathlib.Path(r"D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu");H=R.parent
+R=pathlib.Path(r"D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu");H=R.parent
 sys.path.insert(0,str(H/"tooling/packages"))
 from shapely.geometry import LineString,Point,box,Polygon
 from shapely import affinity

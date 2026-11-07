@@ -10,10 +10,10 @@
     "-symbol",
     "flash",
     "-s",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson07_completion_20261018\\scripts\\create_flash02.scr",
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lesson07_completion_20261018\\scripts\\create_flash02.scr",
     "-p",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson07_completion_20261018\\logs\\create_flash02",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson07_completion_20261018\\library\\eda_l07c_th4_200_160_w30_d80.dra"
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lesson07_completion_20261018\\logs\\create_flash02",
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lesson07_completion_20261018\\library\\eda_l07c_th4_200_160_w30_d80.dra"
   ],
   "completed": true,
   "exitCode": 0,

@@ -1,5 +1,5 @@
 import json,pathlib,shutil,importlib.util
-M=pathlib.Path('D:/001DIY/005lib/01AIEDA/library_maintenance/20261025_pc_shared')
+M=pathlib.Path('D:/005lib/01AIEDA/library_maintenance/20261025_pc_shared')
 R=M/'global_first_probe_v1';R.mkdir(exist_ok=False);(R/'output').mkdir()
 spec=importlib.util.spec_from_file_location('auditbase',pathlib.Path('D:/001DIY/004computer/lga1700/13shared_libraries_pc_20261025/w/pcb_migration/run_pc_native_audit.py'));b=importlib.util.module_from_spec(spec);spec.loader.exec_module(b)
 row=json.loads((M/'global_suffix_native_v1/c000/manifest.json').read_text())[0]

@@ -1,7 +1,7 @@
 """Snapshot selected J55/K57 evidence files and exact hashes; read existing source hashes, no CAD operation."""
 from pathlib import Path
 import json,hashlib,datetime,re
-R=Path('D:/001DIY/005lib/01AIEDA');J=R/'learning/examples/lessonJK_51_59_20261022';note=R/'learning/notes/lessonJK_55_57_20261022.md';sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest().upper()
+R=Path('D:/005lib/01AIEDA');J=R/'learning/examples/lessonJK_51_59_20261022';note=R/'learning/notes/lessonJK_55_57_20261022.md';sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest().upper()
 files=set(p for p in (J/'assembly').rglob('*') if p.is_file())
 for pattern in ['j55_*.json','j55_*.csv','j55_*.md','j57_*.json']:files.update(p for p in (J/'audits').glob(pattern) if p.name!='j55_57_artifact_manifest.json')
 files.update((J/'scripts').glob('j55*.py'));files.update([J/'native/j55_apply_core.il',J/'native/j55_plan_static.il',J/'eco/K58_DE_native_replay_reference.json',note]);files.update((J/'source/j55_official').glob('*'));files.update(p for p in [J/'native/j55_apply_core_v2.il',J/'native/j55_outer.il',J/'native/run_j55.py',J/'native/j55_source_manifest.json'] if p.exists())

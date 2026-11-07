@@ -1,7 +1,7 @@
 from pathlib import Path
 import re,json,csv,hashlib,shutil
 from collections import Counter
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
 G=R.parent/'lessonG_30_37_20261020'
 def sx(s):
  t=re.findall(r'"(?:\\.|[^"\\])*"|\(|\)|[^\s()]+',s);i=0

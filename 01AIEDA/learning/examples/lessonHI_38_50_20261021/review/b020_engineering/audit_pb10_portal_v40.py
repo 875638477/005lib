@@ -1,7 +1,7 @@
 ﻿import sys
 sys.dont_write_bytecode=True
 import pathlib,json,copy,math,hashlib
-R=pathlib.Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
+R=pathlib.Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
 sys.path.insert(0,str(R/'scripts'))
 from routing_geometry import CopperScene,load,Point,LineString,box,unary_union
 OUT=R/'review/b020_engineering'

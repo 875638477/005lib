@@ -1,8 +1,8 @@
 # diagnose blockage for UART2 routing region
 import importlib.util, math
-spec = importlib.util.spec_from_file_location("r2", "D:/001DIY/005lib/01AIEDA/routing/route_uart2.py")
+spec = importlib.util.spec_from_file_location("r2", "D:/005lib/01AIEDA/routing/route_uart2.py")
 # avoid running the routes on import: read file and exec only the setup part
-src = open("D:/001DIY/005lib/01AIEDA/routing/route_uart2.py").read()
+src = open("D:/005lib/01AIEDA/routing/route_uart2.py").read()
 src = src.split("rx = route(")[0]
 ns = {}
 exec(src, ns)

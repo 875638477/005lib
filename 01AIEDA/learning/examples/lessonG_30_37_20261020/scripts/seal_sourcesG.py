@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,hashlib,shutil
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonG_30_37_20261020')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonG_30_37_20261020')
 D=Path(r'C:\Program0\Cadence\SPB172\share\pcb\examples\skill\DOC\FUNCS')
 A=R/'source/official_api';A.mkdir(exist_ok=True)
 names=['axlDBCreateSymbol','axlLoadSymbol','axlDBGetSymbolBodyExtent','axlDBRefreshId','axlTransformObject','axlDBCreateGroup','axlDBTransactionStart','axlDBTransactionRollback','axlPathStart','axlPathLine','axlDBCreatePath','axlDBCreateVia','axlDBCreateShape','axlShapeChangeDynamicType','axlShapeDynamicUpdate','axlDBDynamicShapes','axlDBGetShapes','axlPolyFromDB','axlDBGetConnect','axlRegionCreate','axlRegionAdd','axlDBCreateRectangle','axlCnsClassTableCreate','axlCnsClassTableFind','axlCnsList','axlCNSCreate','axlCNSSetPhysical','axlCNSGetPhysical','axlCNSSetSpacing','axlCNSGetSpacing','axlNetClassCreate','axlNetClassAdd','axlNetClassRemove','axlNetClassGet','axlDBAddProp']

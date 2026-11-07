@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,sys,math
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');P=R/'engineering_power';sys.path.insert(0,str(R/'tooling/packages'));sys.path.insert(0,str(P/'scripts'))
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');P=R/'engineering_power';sys.path.insert(0,str(R/'tooling/packages'));sys.path.insert(0,str(P/'scripts'))
 from shapely.geometry import LineString,Point,box
 from cadence_poly import plane_from_native
 f=R/'review/PROVISIONAL_FAILED_BOOT_2L_GEOMETRY.json';s=json.loads(f.read_text(encoding='utf-8'));g=LineString([[52.8984,27.18],[47.27,27.18]]).buffer(.1);near=[];planes=[]

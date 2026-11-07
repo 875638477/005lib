@@ -1,5 +1,5 @@
 ﻿import pathlib,json,math
-P=pathlib.Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu\plans');q=json.loads((P/'GPIO_left_joint_fanout_06.json').read_text());q['batchId']='GPIO_left_joint_fanout_07'
+P=pathlib.Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu\plans');q=json.loads((P/'GPIO_left_joint_fanout_06.json').read_text());q['batchId']='GPIO_left_joint_fanout_07'
 for o in q['operations']:
  if o['net']=='GPIO_PB1':
   if o['type']=='via':o['xy']=[38.3,27.35]

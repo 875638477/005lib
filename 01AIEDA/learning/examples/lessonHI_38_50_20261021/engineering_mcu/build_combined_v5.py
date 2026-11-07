@@ -1,5 +1,5 @@
 import pathlib,json,math
-R=pathlib.Path(r"D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu");H=R.parent
+R=pathlib.Path(r"D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu");H=R.parent
 u=json.loads((R/"plans/usb_critical_routes_v4.json").read_text(encoding="utf-8"));u["status"]="CANDIDATE_V5_2L_WIDE_TO_SERIES_PAD_GEOMETRY_SCREEN"
 u["variantOperations"]["2L"]=[o for o in u["variantOperations"]["2L"] if o["id"] not in ("USB2L_DP_PORT2","USB2L_DM_PORT2")]
 for o in u["variantOperations"]["2L"]:

@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,sys
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power');H=R.parent;sys.path.insert(0,str(H/'tooling/packages'))
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power');H=R.parent;sys.path.insert(0,str(H/'tooling/packages'))
 from shapely.geometry import LineString
 m=json.loads((H/'engineering_mcu/plans/mcu_critical_routes_v6.json').read_text());areas=[]
 for o in m['operations']:

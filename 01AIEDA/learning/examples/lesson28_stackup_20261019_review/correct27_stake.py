@@ -1,6 +1,6 @@
 import pathlib,base64,shutil
-p=pathlib.Path(r'D:/001DIY/005lib/01AIEDA/learning/notes/lesson27_mechanical_20261019.md')
-o=pathlib.Path(r'D:/001DIY/005lib/01AIEDA/learning/examples/lesson28_stackup_20261019_review')
+p=pathlib.Path(r'D:/005lib/01AIEDA/learning/notes/lesson27_mechanical_20261019.md')
+o=pathlib.Path(r'D:/005lib/01AIEDA/learning/examples/lesson28_stackup_20261019_review')
 shutil.copy2(p,o/'lesson27_before_stake_length_erratum.md')
 s=p.read_text(encoding='utf8')
 old=base64.b64decode('5p2/5LiL5aOz6ISa5L615YWlMC44MOKApjEuMTBtbeS7jeS9nOS4uuijhemFjeajgOafpei+k+WFpe+8mw==').decode()

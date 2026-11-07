@@ -1,6 +1,6 @@
 ﻿from pathlib import Path
 import json,hashlib,subprocess,sys,copy
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');sha=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest().upper()
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');sha=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest().upper()
 h='''
 procedure(hiScopedPhysicalNeckChallenge(out name netName)
  let((f net before count hits strictCount result)

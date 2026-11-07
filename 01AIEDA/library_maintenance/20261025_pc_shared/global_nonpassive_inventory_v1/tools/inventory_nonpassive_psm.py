@@ -1,7 +1,7 @@
 from pathlib import Path
 from collections import defaultdict,Counter
 import hashlib,json,re
-M=Path(r'D:\001DIY\005lib\01AIEDA\library_maintenance\20261025_pc_shared');OUT=M/'global_nonpassive_inventory_v1';ROOT=Path(r'D:\001DIY\005lib\01Psm_lib')
+M=Path(r'D:\005lib\01AIEDA\library_maintenance\20261025_pc_shared');OUT=M/'global_nonpassive_inventory_v1';ROOT=Path(r'D:\005lib\01Psm_lib')
 def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest().upper()
 def dump(n,v):(OUT/n).write_text(json.dumps(v,ensure_ascii=False,indent=2),encoding='utf-8')
 def need(v,m):

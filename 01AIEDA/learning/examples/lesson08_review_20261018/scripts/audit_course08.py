@@ -1,5 +1,5 @@
 import pathlib,json,csv,hashlib
-R=pathlib.Path(r'D:\001DIY\005lib\01AIEDA')
+R=pathlib.Path(r'D:\005lib\01AIEDA')
 B=R/'learning/examples/lesson08_review_20261018'
 Q=R/'learning/examples/qmi8610'
 def J(p):return json.loads(p.read_text(encoding='utf-8-sig'))

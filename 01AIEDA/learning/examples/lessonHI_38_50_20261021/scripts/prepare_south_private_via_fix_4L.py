@@ -1,5 +1,5 @@
 ﻿import pathlib,json,copy,hashlib,math
-P=pathlib.Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021'); C=P/'inventory/checkpoints/source_4L_b015_DRC_PENDING';s=json.loads((C/'normalized.json').read_text(encoding='utf8'));ops=[]
+P=pathlib.Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021'); C=P/'inventory/checkpoints/source_4L_b015_DRC_PENDING';s=json.loads((C/'normalized.json').read_text(encoding='utf8'));ops=[]
 changes=[('GPIO_PB13',[37.5,20.75],[37.5,20.725]),('GPIO_PB15',[38.5,20.7],[38.5,20.675])]
 for net,old,new in changes:
  label=net.replace('GPIO_','')

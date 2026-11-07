@@ -1,6 +1,6 @@
 from pathlib import Path
 import json
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power');p=json.loads((R/'RIGHT10_source_joint_v6.json').read_text());m=json.loads((R/'RIGHT10_interface_corridors_v7.json').read_text());(R/'RIGHT10_interface_corridors_v7_failed01.json').write_bytes((R/'RIGHT10_interface_corridors_v7.json').read_bytes())
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power');p=json.loads((R/'RIGHT10_source_joint_v6.json').read_text());m=json.loads((R/'RIGHT10_interface_corridors_v7.json').read_text());(R/'RIGHT10_interface_corridors_v7_failed01.json').write_bytes((R/'RIGHT10_interface_corridors_v7.json').read_bytes())
 for o in p['operations']:
  if o['id']=='RIGHT_PC14_RETURN':o['xy']=[48.2,25.0]
 for o in m['operations']:

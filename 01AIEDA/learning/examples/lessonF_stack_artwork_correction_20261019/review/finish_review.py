@@ -1,5 +1,5 @@
 from pathlib import Path
-r=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonF_stack_artwork_correction_20261019\review')
+r=Path(r'D:\005lib\01AIEDA\learning\examples\lessonF_stack_artwork_correction_20261019\review')
 p=r/'independent_review.py';s=p.read_text(encoding='utf-8')
 s=s.replace("comps=table(after/'components.tsv');pins=table(after/'component_pins.tsv')","eq(key+' full native constraint class/pair props and all DRC modes preserved',norm(text(after/'constraint_summary.txt')),norm(text(before/'constraint_summary.txt')))\n comps=table(after/'components.tsv');pins=table(after/'component_pins.tsv')")
 s=s.replace("# Scope corrections are part", """ex=json.loads(text(C/'exports'/'export_result.json'))

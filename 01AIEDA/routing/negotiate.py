@@ -1,10 +1,10 @@
 # Negotiated routing for the last nets: rip AI routes, re-survey, retry orders
 import importlib, itertools, os, shutil, sys, time
 
-sys.path.insert(0, r"D:\001DIY\005lib\01AIEDA\routing")
+sys.path.insert(0, r"D:\005lib\01AIEDA\routing")
 import autoroute3d as ar
 
-FULL = r"D:\001DIY\005lib\01AIEDA\routing\full_region.txt"
+FULL = r"D:\005lib\01AIEDA\routing\full_region.txt"
 EXCH = ar.EXCH
 
 # original (user-made) vias per net -- never delete these
@@ -66,7 +66,7 @@ def rip(net):
         if ln.startswith("RIP"):
             print(ln)
 
-SURVEY = open(r"D:\001DIY\005lib\01AIEDA\routing\survey_full.il", encoding="ascii").read()
+SURVEY = open(r"D:\005lib\01AIEDA\routing\survey_full.il", encoding="ascii").read()
 
 def survey():
     ar.allegro(SURVEY)

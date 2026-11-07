@@ -1,5 +1,5 @@
 import pathlib,sys,json,csv,hashlib,math
-R=pathlib.Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');sys.path.insert(0,str(R/'scripts'));from routing_geometry import LineString,Polygon,load;from shapely.ops import unary_union;from native_sexpr_data import parse
+R=pathlib.Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');sys.path.insert(0,str(R/'scripts'));from routing_geometry import LineString,Polygon,load;from shapely.ops import unary_union;from native_sexpr_data import parse
 known=[[[37.7,37.7],[37,37.7],[37,39.8],[42.2,39.8]],[[47.1,35.5748],[47.8,35.5748],[47.8,39.8],[44.2,39.8]],[[47.8,35.5748],[47.8,33.5]]]
 for v in ['2L','4L']:
  cp=R/f'inventory/checkpoints/source_{v}_b015_DRC_PENDING';s=load(cp/'normalized.json');read=pathlib.Path(s['readbackDirectory']);rows=[]

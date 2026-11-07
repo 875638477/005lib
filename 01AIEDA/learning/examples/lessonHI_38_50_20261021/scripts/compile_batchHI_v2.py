@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,hashlib,argparse
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
 P=argparse.ArgumentParser();P.add_argument('--plan',required=True);P.add_argument('--variant',choices=['4L','2L'],required=True);P.add_argument('--tag',required=True)
 a=P.parse_args();planpath=Path(a.plan);data=json.loads(planpath.read_text());tag=a.tag
 assert planpath.resolve().is_relative_to(R.resolve())

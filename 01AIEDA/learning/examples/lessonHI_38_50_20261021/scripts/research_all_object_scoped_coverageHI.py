@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,hashlib,shutil
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');D=Path(r'C:\Program0\Cadence\SPB172\share\pcb\examples\skill\DOC\FUNCS');dst=R/'source/api_scoped_coverage';dst.mkdir(exist_ok=True);items=[]
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');D=Path(r'C:\Program0\Cadence\SPB172\share\pcb\examples\skill\DOC\FUNCS');dst=R/'source/api_scoped_coverage';dst.mkdir(exist_ok=True);items=[]
 for n in ['axlDRCItem','axlDRCUpdate','axlCNSDesignModeGet','axlCNSPhysicalModeGet','axlCNSSpacingModeGet','axlCNSEcsetModeGet','axlCNSSameNetModeGet','axlDRCGetCount','axlDBCheck','axlDRCWaiveGetCount']:
  p=D/(n+'.txt');assert p.is_file();out=dst/p.name;shutil.copyfile(p,out);items.append({'original':str(p),'copy':str(out),'sha256':hashlib.sha256(p.read_bytes()).hexdigest().upper()})
 (dst/'manifest.json').write_text(json.dumps(items,indent=2),encoding='utf8')

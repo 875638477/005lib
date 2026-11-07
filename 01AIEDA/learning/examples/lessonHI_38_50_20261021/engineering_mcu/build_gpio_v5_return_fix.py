@@ -1,5 +1,5 @@
 import pathlib,json
-R=pathlib.Path(r"D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu")
+R=pathlib.Path(r"D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu")
 g=json.loads((R/"plans/gpio_north_escape_v4.json").read_text(encoding="utf-8"));g["status"]="CANDIDATE_V5_PC14_STAR_AVOIDANCE_WITH_ACTUAL_GND_RETURN_PAD_CLEARANCE"
 for o in g["operations"]:
  if o["id"]=="GPIO_RETURN_WEST_STAR":o["xy"]=[34.7,30.5];o["purpose"]="ActualallcoppergridselectedGNDreturn .92195mm toPC14exit; minothernet~.32196; old34.0,30.5 hitR21.1 andwasrejectedbeforeexecution."

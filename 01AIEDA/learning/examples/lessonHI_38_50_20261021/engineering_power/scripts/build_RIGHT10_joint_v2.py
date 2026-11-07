@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,hashlib
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power');p=json.loads((R/'RIGHT10_source_joint_v1.json').read_text());p['batchId']='RIGHT10_source_joint_v2'
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power');p=json.loads((R/'RIGHT10_source_joint_v1.json').read_text());p['batchId']='RIGHT10_source_joint_v2'
 for a in p['anchors']:a['anchor'][0]=46.5
 for o in p['operations']:
  if o['id'].endswith('_BOTTOM_ANCHOR'):o['points'][-1][0]=46.5

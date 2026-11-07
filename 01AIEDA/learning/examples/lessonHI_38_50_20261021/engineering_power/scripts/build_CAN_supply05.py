@@ -1,6 +1,6 @@
 from pathlib import Path
 import json
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power')
 ops=[]
 def rt(i,n,p,f,t,purpose,w=.6):
  ops.append(dict(type='route',id=i,net=n,layer='TOP',points=p,widths=[w]*(len(p)-1),**{'from':f,'to':t,'purpose':purpose}))

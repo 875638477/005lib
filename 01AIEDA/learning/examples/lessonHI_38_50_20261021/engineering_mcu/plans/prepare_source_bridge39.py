@@ -1,5 +1,5 @@
 ﻿import pathlib,json,sys,math,copy
-P=pathlib.Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu\plans');H=P.parents[1];sys.path.insert(0,str(H/'scripts'));from routing_geometry import *
+P=pathlib.Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu\plans');H=P.parents[1];sys.path.insert(0,str(H/'scripts'));from routing_geometry import *
 ops=[]
 def rt(id,net,l,pts,w=.2):ops.append(dict(type='route',id=id,net=net,layer=l,points=pts,width=w,purpose='Short TOP normal-width bridge across existing BOTTOM PC15 source bar, preserving MCU power and analog geometry.'))
 def via(id,net,xy):ops.append(dict(type='via',id=id,net=net,xy=xy,padstack='HI_VIA026_C052_TENT',padDiameterMM=.52,drillDiameterMM=.26,purpose='Offpad private-via transition in explicit all-conductor approved-via-only permission region; normal spacing retained.'))

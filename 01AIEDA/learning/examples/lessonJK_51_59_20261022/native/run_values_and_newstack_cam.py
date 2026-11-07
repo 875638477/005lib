@@ -1,6 +1,6 @@
 ﻿from pathlib import Path
 import subprocess,sys,shutil,json
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonJK_51_59_20261022');d=json.loads((R/'audits/j55_instance_correction_delta_b019.json').read_text(encoding='utf8'));refs=[x['ref'] for x in d['variants']['2L']['instances']]
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonJK_51_59_20261022');d=json.loads((R/'audits/j55_instance_correction_delta_b019.json').read_text(encoding='utf8'));refs=[x['ref'] for x in d['variants']['2L']['instances']]
 for label,v,filename in [('J55_2L','2L','JK_2L_J55_text_height_review_NOT_RELEASED.brd'),('J55_4L','4L','JK_4L_J55_text_height_review_NOT_RELEASED.brd'),('newstack_4L','4L','JK_4L_L2_GND_L3_V3V3_STACK_TRAINING_NOT_RELEASED.brd')]:
  tag='values_'+label+'_01';L=R/'logs'/('native_'+tag);D=R/'exports'/('devicevalues_'+label+'_TRAINING');D.mkdir(exist_ok=False)
  for ref in refs:(D/ref).mkdir()

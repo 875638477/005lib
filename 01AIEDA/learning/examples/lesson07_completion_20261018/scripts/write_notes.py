@@ -1,6 +1,6 @@
 ﻿from pathlib import Path
 import json,hashlib,re
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lesson07_completion_20261018')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lesson07_completion_20261018')
 V=json.loads((R/'validation.json').read_text())
 assert V['status']=='PASS_CAD_LESSON07_COMPLETION' and V['allChecksPass']
 sha=lambda f:hashlib.sha256((R/f).read_bytes()).hexdigest().upper()
@@ -10,7 +10,7 @@ notes='''# 第7课补齐：纯无铜 NPTH、真正 thermal flash、keepout 与�
 
 **完成结论：本课规定的孔/各层焊盘/反焊盘/热焊盘定义、纯 NULL 非镀铜孔、机械 keepout、实际四层映射及保存重开，均已在原生 CAD 中实操并独立验收。** 本次补齐前次第7课遗留的纯无铜孔、有效避铜和真实四辐条 FLASH。完成状态为 `PASS_CAD_LESSON07_COMPLETION`，157 项独立检查全部通过。原始第7课的 PTH/带铜环 NPTH/槽孔与0°、90°几何记录保留，见 [原课笔记](lesson07_padstacks_20261018.md)。
 
-所有源码、PXML、练习库、试错、JSON、日志和预览均在 `D:\\001DIY\\005lib\\01AIEDA` 内。未修改公共库、用户打开的 Allegro PID 9136、全局 HOME、01env 模板或快捷方式。
+所有源码、PXML、练习库、试错、JSON、日志和预览均在 `D:\\005lib\\01AIEDA` 内。未修改公共库、用户打开的 Allegro PID 9136、全局 HOME、01env 模板或快捷方式。
 
 ## 1. 最终入口与规格
 

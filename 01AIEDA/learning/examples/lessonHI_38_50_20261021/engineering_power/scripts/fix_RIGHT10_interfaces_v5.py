@@ -1,6 +1,6 @@
 from pathlib import Path
 import json
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power');r=R/'readouts/RIGHT10_v5_interfaces_2L_precheck.json'
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power');r=R/'readouts/RIGHT10_v5_interfaces_2L_precheck.json'
 if r.exists():(R/'readouts/RIGHT10_v5_interfaces_2L_failed01.json').write_bytes(r.read_bytes())
 f=R/'RIGHT10_interface_corridors_v5.json';p=json.loads(f.read_text())
 for o in p['operations']:

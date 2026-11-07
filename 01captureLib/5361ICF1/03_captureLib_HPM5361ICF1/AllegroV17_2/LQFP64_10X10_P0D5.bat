@@ -5,8 +5,8 @@ pushd "%~dp0"
 
 set "ALLEGRO_BIN=C:\Program0\Cadence\spb172\tools\bin"
 set "FP=LQFP64_10X10_P0D5"
-set "PAD_LIB=D:\001DIY\005lib\01Pad_lib"
-set "PSM_LIB=D:\001DIY\005lib\01Psm_lib"
+set "PAD_LIB=D:\005lib\01Pad_lib"
+set "PSM_LIB=D:\005lib\01Psm_lib"
 
 echo ============================================
 echo Build footprint: %FP%

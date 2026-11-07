@@ -1,4 +1,4 @@
-set base {D:/001DIY/005lib/01AIEDA/learning/examples/de_15_26_20261019/native}
+set base {D:/005lib/01AIEDA/learning/examples/de_15_26_20261019/native}
 set source "$base/de_integrated_single.dsn"
 set target "$base/de_integrated_eco_final.dsn"
 if {[file exists $target]} {error "Refuse to overwrite ECO design"}

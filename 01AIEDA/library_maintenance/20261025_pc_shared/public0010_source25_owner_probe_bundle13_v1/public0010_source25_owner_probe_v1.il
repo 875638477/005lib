@@ -1,6 +1,6 @@
 ; Read-only actual source routing/owner versus old/new REGULAR pad polygons.
 ; Detached source polygons survive a ROOT TOP-LEVEL open, never a nested open.
-load("D:/001DIY/005lib/01AIEDA/library_maintenance/20261025_pc_shared/public0010_nil_route_stub_bundle13_v1/public0010_nil_route_stub_repair_v1.il")
+load("D:/005lib/01AIEDA/library_maintenance/20261025_pc_shared/public0010_nil_route_stub_bundle13_v1/public0010_nil_route_stub_repair_v1.il")
 procedure(pc25Step(message)
  fprintf(pc25StepPort "%s\n" message) drain(pc25StepPort))
 procedure(pc25Poly(f p)
@@ -66,7 +66,7 @@ procedure(pub0010Source25Prepare(dir)
   pc25OriginalVias=pub0010ViasSnapshot(strcat(dir "/SOURCE_ALL1739_TYPED_VIAS.ilist"))
   pc25Owned=makeTable('pc25Owned nil)
   foreach(s axlDBGetDesign()->symbols foreach(o s->children pc25OwnedWalk(o pub403Identity(s))))
-  rows=pub403Rows("D:/001DIY/005lib/01AIEDA/library_maintenance/20261025_pc_shared/public0010_source25_owner_probe_bundle13_v1/SOURCE25_ACTUAL_UNCOVERED_STROKES.ilist") unless(length(rows)==25 error("SOURCE25 exact source count differs\n"))
+  rows=pub403Rows("D:/005lib/01AIEDA/library_maintenance/20261025_pc_shared/public0010_source25_owner_probe_bundle13_v1/SOURCE25_ACTUAL_UNCOVERED_STROKES.ilist") unless(length(rows)==25 error("SOURCE25 exact source count differs\n"))
   f=outfile(strcat(dir "/SOURCE25_ACTUAL_OWNER_CHAIN.ilist")) ownf=outfile(strcat(dir "/SOURCE25_OLD_PAD_RELATIONS.ilist"))
   pc25PolyPort=outfile(strcat(dir "/SOURCE25_ACTUAL_POLYGONS.jsonl"))
   pc25Frozen=nil key=0

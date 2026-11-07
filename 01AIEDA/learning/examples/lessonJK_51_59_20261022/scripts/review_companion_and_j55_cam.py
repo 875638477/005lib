@@ -1,5 +1,5 @@
 import pathlib,sys,json,re,hashlib,dataclasses,collections,base64
-J=pathlib.Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonJK_51_59_20261022')
+J=pathlib.Path(r'D:\005lib\01AIEDA\learning\examples\lessonJK_51_59_20261022')
 sys.path[:0]=[str(J/'tooling/packages'),str(J.parents[2]/'learning/tools/pymupdf_1_28_2')]
 from gerbonara import GerberFile
 from gerbonara.utils import MM

@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,math
-H=Path(r"D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021");R=H/"engineering_power";p=json.loads((R/"RIGHT10_source_joint_v2.json").read_text())
+H=Path(r"D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021");R=H/"engineering_power";p=json.loads((R/"RIGHT10_source_joint_v2.json").read_text())
 b=json.loads((H/'inventory/checkpoints/SPI_external_2L_b012/normalized.json').read_text());g=[dict(id='OLD'+str(i),xy=v['xy']) for i,v in enumerate(b['vias']) if v['net']=='GND' and v['xy'] not in [[46.95,24.9],[45.45,28.85],[47.45,28.7252]]]+[dict(id=o['id'],xy=o['xy']) for o in p['operations'] if o['type']=='via' and o['net']=='GND']
 audit=[]
 for a in p['anchors']:

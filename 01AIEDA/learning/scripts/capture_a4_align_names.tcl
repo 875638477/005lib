@@ -1,6 +1,6 @@
 # Keep right-facing connector text clear of its arrow for long network names.
 set s [DboState]
-set d [::DE::obj [$::DboSession_s_pDboSession GetDesignAndSchematics [::DE::cs {D:/001DIY/005lib/01AIEDA/learning/examples/de_15_26_20261019/a4_review/native/de_integrated_a4.dsn}] $s] $s Open]
+set d [::DE::obj [$::DboSession_s_pDboSession GetDesignAndSchematics [::DE::cs {D:/005lib/01AIEDA/learning/examples/de_15_26_20261019/a4_review/native/de_integrated_a4.dsn}] $s] $s Open]
 lappend ::DE::designs $d
 ::DE::obj [$d GetRootOccurrence $s] $s Initialize
 set top [::DE::obj [$d GetRootSchematic $s] $s Root]

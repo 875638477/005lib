@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,math,hashlib,shutil
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power')
 def save(n,o):(R/n).write_text(json.dumps(o,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
 s=json.loads((R/'power_star_03.json').read_text())
 s['revision']='03b preserves original03 history; fixes ADC_INPUT crossing by rerouting low-current prefilter supply'
@@ -104,7 +104,7 @@ policy={'status':'ENGINEERING_POLICY_FOR_CONSTRAINED_GEOMETRY_PLANNING','units':
  'Longest .25powerneck, plane/thermal bottleneck, groundslotdetours reviewed separately; DRC0 is not electrical/EMI/USB certification.']}
 save('routing_policy_interfaces_04.json',policy)
 # Start durable lesson note; factual current state only, native latest checkpoints are referenced not assumed final.
-note=Path(r'D:\001DIY\005lib\01AIEDA\learning\notes\lessonHI_power_20261021.md')
+note=Path(r'D:\005lib\01AIEDA\learning\notes\lessonHI_power_20261021.md')
 text='''# HI38-50 power and ordinary-interface routing study, 2026-10-21
 
 Scope: engineering path planning and read-only copper review. f29 is sole Cadence executor. Root owns final combined records and final acceptance. All new scripts/sources/intermediate records are inside01AIEDA.

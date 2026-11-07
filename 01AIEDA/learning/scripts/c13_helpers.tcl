@@ -1,5 +1,5 @@
 namespace eval ::C13 {
- variable root {D:/001DIY/005lib/01AIEDA/learning}
+ variable root {D:/005lib/01AIEDA/learning}
  variable session $::DboSession_s_pDboSession
  variable s [DboState]
 }

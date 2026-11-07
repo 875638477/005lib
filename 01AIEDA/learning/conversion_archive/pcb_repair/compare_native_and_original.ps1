@@ -1,4 +1,4 @@
-﻿param([string]$Root='D:\001DIY\004computer\lga1700',[string]$Output='D:\001DIY\005lib\01AIEDA\learning\staging\lga1700_pcb_repair_20261023')
+﻿param([string]$Root='D:\001DIY\004computer\lga1700',[string]$Output='D:\005lib\01AIEDA\learning\staging\lga1700_pcb_repair_20261023')
 $ErrorActionPreference='Stop'
 $required=Import-Csv -LiteralPath (Join-Path $Output 'required_part_pin_comparison.csv')
 $chipPins=@{};foreach($r in $required){$chipPins[$r.Reference]=@($r.Pins -split ',' | Where-Object {$_})}

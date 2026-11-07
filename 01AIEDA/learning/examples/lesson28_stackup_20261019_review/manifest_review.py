@@ -1,6 +1,6 @@
 import pathlib,json,hashlib
-O=pathlib.Path(r'D:/001DIY/005lib/01AIEDA/learning/examples/lesson28_stackup_20261019_review')
-N=pathlib.Path(r'D:/001DIY/005lib/01AIEDA/learning/notes/lesson28_independent_review_20261019.md')
+O=pathlib.Path(r'D:/005lib/01AIEDA/learning/examples/lesson28_stackup_20261019_review')
+N=pathlib.Path(r'D:/005lib/01AIEDA/learning/notes/lesson28_independent_review_20261019.md')
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest().upper()
 r=json.loads((O/'review.json').read_text())
 assert all(x['pass'] for x in r['checks'])

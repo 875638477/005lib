@@ -1,6 +1,6 @@
 from pathlib import Path
 import json
-B=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lesson28_stackup_20261019')
+B=Path(r'D:\005lib\01AIEDA\learning\examples\lesson28_stackup_20261019')
 mapping=json.loads((B/'film_template_readonly.json').read_text())
 for n in (2,4):
  names=['TOP','BOTTOM'] if n==2 else ['TOP','L2','L3','BOTTOM']

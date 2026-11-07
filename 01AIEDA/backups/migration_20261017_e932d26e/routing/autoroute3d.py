@@ -1,8 +1,8 @@
 # 3D (TOP+BOTTOM) closed-loop autorouter with via jumps and DRC verdict
 import heapq, math, os, time
 
-EXCH = r"D:\001DIY\005lib\01AIcadence\ai_bridge\exchange"
-REGION = r"D:\001DIY\005lib\01AIcadence\routing\full_region.txt"
+EXCH = r"D:\005lib\01AIcadence\ai_bridge\exchange"
+REGION = r"D:\005lib\01AIcadence\routing\full_region.txt"
 XMIN, XMAX = -1000, 800
 YMIN, YMAX = -835, -100
 W = XMAX - XMIN + 1

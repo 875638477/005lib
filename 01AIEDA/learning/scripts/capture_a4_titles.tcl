@@ -1,5 +1,5 @@
 set s [DboState]
-set path {D:/001DIY/005lib/01AIEDA/learning/examples/de_15_26_20261019/a4_review/native/de_integrated_a4.dsn}
+set path {D:/005lib/01AIEDA/learning/examples/de_15_26_20261019/a4_review/native/de_integrated_a4.dsn}
 set d [::DE::obj [$::DboSession_s_pDboSession GetDesignAndSchematics [::DE::cs $path] $s] $s OpenA4]
 lappend ::DE::designs $d
 ::DE::obj [$d GetRootOccurrence $s] $s Initialize

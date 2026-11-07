@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,sys
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');sys.path.insert(0,str(R/'scripts'));from routing_geometry import load
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');sys.path.insert(0,str(R/'scripts'));from routing_geometry import load
 for v in ['2L','4L']:
  d=load(R/'plans'/('ordinary_policy_'+v+'_v2.json'))
  old=load(R/'engineering_mcu/plans/gpio_north_escape_v3.json')['operations'];oldids={o['id'] for o in old}

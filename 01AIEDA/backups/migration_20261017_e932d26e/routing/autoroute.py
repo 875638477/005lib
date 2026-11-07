@@ -1,8 +1,8 @@
 # Closed-loop autorouter: A* candidate -> place in Allegro -> DRC verdict -> retry
 import heapq, math, os, time
 
-EXCH = r"D:\001DIY\005lib\01AIcadence\ai_bridge\exchange"
-REGION = r"D:\001DIY\005lib\01AIcadence\routing\big_region5.txt"
+EXCH = r"D:\005lib\01AIcadence\ai_bridge\exchange"
+REGION = r"D:\005lib\01AIcadence\routing\big_region5.txt"
 LAYER = "ETCH/BOTTOM"
 XMIN, XMAX = -1000, 800
 YMIN, YMAX = -835, -100

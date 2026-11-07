@@ -1,5 +1,5 @@
-source {D:/001DIY/005lib/01AIEDA/learning/staging/de_15_26_20261019/integrated_spec.tcl}
-set ::DE::base {D:/001DIY/005lib/01AIEDA/learning/staging/de_15_26_20261019/minimal_factory}
+source {D:/005lib/01AIEDA/learning/staging/de_15_26_20261019/integrated_spec.tcl}
+set ::DE::base {D:/005lib/01AIEDA/learning/staging/de_15_26_20261019/minimal_factory}
 set ::DE::logs "$::DE::base/logs"
 set selected {}
 foreach comp [dict get $::DEspec components] {

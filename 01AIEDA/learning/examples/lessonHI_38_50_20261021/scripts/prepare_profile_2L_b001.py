@@ -1,6 +1,6 @@
 from pathlib import Path
 import json
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
 d=json.loads((R/'engineering_power/rules_profile_2L_69nets.json').read_text())
 def q(x):return json.dumps(x,ensure_ascii=True)
 def mm(v):return q(str(v)+' MM')

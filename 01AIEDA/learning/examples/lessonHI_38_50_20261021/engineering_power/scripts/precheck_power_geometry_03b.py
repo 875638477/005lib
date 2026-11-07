@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,math
-R=Path(r'D:\001DIY\005lib\01AIEDA/learning/examples/lessonHI_38_50_20261021/engineering_power')
+R=Path(r'D:\005lib\01AIEDA/learning/examples/lessonHI_38_50_20261021/engineering_power')
 base=json.loads((R/'source/normalized_actual_4L.json').read_text())
 files=['power_critical_paths_01.json','power_paths_02d.json','power_star_03b.json']
 plans=[json.loads((R/f).read_text()) for f in files]

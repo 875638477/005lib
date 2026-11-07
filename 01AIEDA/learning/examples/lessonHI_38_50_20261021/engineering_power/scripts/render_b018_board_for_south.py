@@ -1,7 +1,7 @@
 from pathlib import Path
 import sys,json,csv,hashlib,math,colorsys,html
-H=Path(r'D:/001DIY/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021');O=H/'engineering_power'
-sys.path[:0]=[str(H/'scripts'),str(O/'scripts'),str(H/'tooling/packages'),r'D:/001DIY/005lib/01AIEDA/learning/tools/pymupdf_1_28_2']
+H=Path(r'D:/005lib/01AIEDA/learning/examples/lessonHI_38_50_20261021');O=H/'engineering_power'
+sys.path[:0]=[str(H/'scripts'),str(O/'scripts'),str(H/'tooling/packages'),r'D:/005lib/01AIEDA/learning/tools/pymupdf_1_28_2']
 from cadence_poly import plane_from_native,polygon_from_vertices
 from native_sexpr_data import parse
 from shapely.geometry import Polygon,box,Point,LineString

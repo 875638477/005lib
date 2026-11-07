@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,copy,math
-H=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');R=H/'engineering_power'
+H=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');R=H/'engineering_power'
 for v in ['2L','4L']:
  p=json.loads((R/f'UART_RX_receiver_bridge_{v}_02.json').read_text());p['batchId']=f'UART_RX_receiver_bridge_{v}_03';p['status']='FULL_RECEIVER_DELTA_REBASE_AFTER_NATIVE_SOURCE_FREEZE';p['operations']=[];p['placementChanges']=[dict(ref='R17',xy=[50.12,23.361],rotation=90,purpose='Requiredreceiverexit geometry from rootservice19; only receiverref moves')]
  p['operations'].append(dict(type='deleteVia',id='UART_RX_REMOVE_REDUNDANT_PB4_RETURN',net='GND',xy=[61.8,24.95],padstack='L28_VIA030_C060',purpose='PB4signalthroughvia61.8,25.85 already has retainedcommonGND62.6,25.65 distance.824621mm; remove redundantvia blocking receiver, never remove both.'))

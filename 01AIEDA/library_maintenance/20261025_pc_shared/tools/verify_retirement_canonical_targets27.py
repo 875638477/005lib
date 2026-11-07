@@ -4,9 +4,9 @@ No native process, design, public library, or old evidence is modified.
 from pathlib import Path
 from collections import defaultdict
 import argparse,csv,hashlib,importlib.util,json,sys,xml.etree.ElementTree as E
-M=Path(r'D:\001DIY\005lib\01AIEDA\library_maintenance\20261025_pc_shared')
+M=Path(r'D:\005lib\01AIEDA\library_maintenance\20261025_pc_shared')
 B=Path(r'D:\001DIY\004computer\lga1700\cadence_geometry_merge_20261025')
-LIB=Path(r'D:\001DIY\005lib')
+LIB=Path(r'D:\005lib')
 def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest().upper()
 def load(p):return json.loads(Path(p).read_text(encoding='utf-8-sig'))
 def art(p):return {'path':str(Path(p)),'sha256':sha(p)}

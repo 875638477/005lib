@@ -1,6 +1,6 @@
 from pathlib import Path
 import hashlib,json
-r=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonF_stack_artwork_correction_20261019\review')
+r=Path(r'D:\005lib\01AIEDA\learning\examples\lessonF_stack_artwork_correction_20261019\review')
 sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest().upper()
 files=[{'path':str(p.relative_to(r)).replace('\\','/'),'sha256':sha(p),'bytes':p.stat().st_size} for p in sorted(r.rglob('*')) if p.is_file() and p.name!='artifact_manifest.json']
 manifest={'scope':'Independent read-only correction review files only; excludes this manifest and parent/native artifacts.','files':files}

@@ -1,5 +1,5 @@
 from pathlib import Path
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonG_30_37_20261020')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonG_30_37_20261020')
 s=(R/'scripts/local_loops04.il').read_text().replace("axlNetClassGet(net 'physical)","axlNetClassGet(net 'physical t)")
 (R/'scripts/local_loops05.il').write_text(s,encoding='ascii')
 for key in ['4L','2L']:

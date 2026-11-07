@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,math
-H=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');R=H/'engineering_power';f=R/'RIGHT10_source_joint_v1.json';p=json.loads(f.read_text());p['status']='FROZEN_SOURCE_ENGINEERING_CANDIDATE_NEEDS_PARENT_INTEGRATION_NATIVE'
+H=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');R=H/'engineering_power';f=R/'RIGHT10_source_joint_v1.json';p=json.loads(f.read_text());p['status']='FROZEN_SOURCE_ENGINEERING_CANDIDATE_NEEDS_PARENT_INTEGRATION_NATIVE'
 z=p['oscillatorReferenceRework'];q=dict(z['source']);q.update({k:z[k] for k in ['islandPolygon','applicationGroundVoidPolygon','localLayer','singleBridgeOperation']});q['negativeChallenge']=z['negativeChallenge'];q['allThroughViaPadChecks']=['HSE_LOCAL_C22','HSE_LOCAL_C23','HSE_SINGLE_ANCHOR_REWORK'];p['oscillatorReference']=q
 m=json.loads((H/'engineering_mcu/plans/mcu_critical_routes_v6.json').read_text());p['reservedAreas']=m['reservedAreas']
 for a in p['reservedAreas']:

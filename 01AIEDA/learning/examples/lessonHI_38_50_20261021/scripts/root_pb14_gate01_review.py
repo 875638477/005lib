@@ -1,6 +1,6 @@
 raise RuntimeError("RETIRED: gate01 radius formula invalid; read root_pb14_gate03_review.py and manual_source_portals_20261022.json. Candidate was already failed and never executed natively.")
 import json,pathlib,math,sys,copy
-H=pathlib.Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
+H=pathlib.Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
 sys.path.insert(0,str(H/'scripts'))
 from routing_geometry import *
 P=H/'engineering_mcu/plans';out=H/'review'

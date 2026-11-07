@@ -1,8 +1,8 @@
 from pathlib import Path
 import re
-B=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lesson28_stackup_20261019')
+B=Path(r'D:\005lib\01AIEDA\learning\examples\lesson28_stackup_20261019')
 for n in (2,4):
- src=Path(r'D:\001DIY\005lib\01env')/('drill%d.txt'%n)
+ src=Path(r'D:\005lib\01env')/('drill%d.txt'%n)
  s=src.read_text(encoding='utf-8',errors='replace');res=[]
  names=['TOP','BOTTOM'] if n==2 else ['TOP','L2','L3','BOTTOM']
  for m in re.finditer(r'axlFilmCreate\(\s*"([^"]+)"([\s\S]*?)(?=axlFilmCreate|\Z)',s):

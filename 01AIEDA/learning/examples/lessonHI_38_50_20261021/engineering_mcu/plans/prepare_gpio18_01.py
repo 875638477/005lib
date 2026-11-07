@@ -1,5 +1,5 @@
 ﻿import pathlib,json,hashlib,copy
-R=pathlib.Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu');H=R.parent;P=R/'plans';P.mkdir(exist_ok=True)
+R=pathlib.Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu');H=R.parent;P=R/'plans';P.mkdir(exist_ok=True)
 def load(p):return json.loads(p.read_text(encoding='utf-8-sig'))
 src=H/'scripts/plan_signal_paths.py';s=src.read_text(encoding='utf-8')
 s=s.replace("sys.path.insert(0,str(pathlib.Path(__file__).resolve().parent))", "sys.path.insert(0,str(pathlib.Path(__file__).resolve().parents[2]/'scripts'))")

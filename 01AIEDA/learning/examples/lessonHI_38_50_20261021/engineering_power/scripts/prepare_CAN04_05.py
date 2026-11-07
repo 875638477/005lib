@@ -1,5 +1,5 @@
 from pathlib import Path
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_power')
 s=(R/'scripts/precheck_power_geometry.py').read_text()
 s=s.replace("base=json.loads((R/'source/normalized_actual_4L.json').read_text())","base=json.loads((R.parent/'inventory/checkpoints/power_4L_b003c/normalized.json').read_text())")
 s=s.replace("files=['power_critical_paths_01.json','power_paths_02d.json','power_star_03.json']","files=['interface_CAN_routes_04.json','CAN_local_supply_05.json']")

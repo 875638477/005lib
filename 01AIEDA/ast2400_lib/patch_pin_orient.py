@@ -5,7 +5,7 @@ import re
 import runpy
 
 # Patch gen_ul_ast2400_ref.py pin_xml / body_w then exec main
-SRC = Path(r"D:\001DIY\005lib\01AIEDA\ast2400_lib\gen_ul_ast2400_ref.py")
+SRC = Path(r"D:\005lib\01AIEDA\ast2400_lib\gen_ul_ast2400_ref.py")
 text = SRC.read_bytes().decode("utf-8", errors="replace")
 if "hotpt_x, start_x, lp, rp = -30, 0, 0, 1" not in text and "lp, rp = -30" not in text:
     # try gbk
@@ -40,7 +40,7 @@ def pin_xml(name: str, position: int, elec: str, left: bool, y: int, body_w: int
 # Simpler approach: write a standalone regenerator that imports parse logic
 # Actually just write complete fixed script as ASCII-only file
 
-FIXED = Path(r"D:\001DIY\005lib\01AIEDA\ast2400_lib\gen_ul_ast2400_ref_fix.py")
+FIXED = Path(r"D:\005lib\01AIEDA\ast2400_lib\gen_ul_ast2400_ref_fix.py")
 # Copy original content by importing modules from existing by rewriting key parts only
 
 # Load original as module after normalizing newlines

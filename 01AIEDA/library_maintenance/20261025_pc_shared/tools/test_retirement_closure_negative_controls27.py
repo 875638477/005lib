@@ -2,7 +2,7 @@
 from pathlib import Path
 from collections import Counter
 import argparse,copy,hashlib,importlib.util,json
-M=Path(r'D:\001DIY\005lib\01AIEDA\library_maintenance\20261025_pc_shared')
+M=Path(r'D:\005lib\01AIEDA\library_maintenance\20261025_pc_shared')
 def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest().upper()
 def load(p):return json.loads(Path(p).read_text(encoding='utf-8-sig'))
 def mod(name,p):

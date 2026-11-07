@@ -10,10 +10,10 @@
     "-symbol",
     "package",
     "-s",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson09_qfn_qfp_20261018\\scripts\\l09_stm32f103c8_lqfp48_create.scr",
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lesson09_qfn_qfp_20261018\\scripts\\l09_stm32f103c8_lqfp48_create.scr",
     "-p",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson09_qfn_qfp_20261018\\logs\\l09_stm32f103c8_lqfp48_create",
-    "D:\\001DIY\\005lib\\01AIEDA\\learning\\examples\\lesson09_qfn_qfp_20261018\\library\\l09_stm32f103c8_lqfp48.dra"
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lesson09_qfn_qfp_20261018\\logs\\l09_stm32f103c8_lqfp48_create",
+    "D:\\005lib\\01AIEDA\\learning\\examples\\lesson09_qfn_qfp_20261018\\library\\l09_stm32f103c8_lqfp48.dra"
   ],
   "completed": true,
   "exitCode": 0,

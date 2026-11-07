@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,copy,hashlib
-H=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');R=H/'engineering_power'
+H=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021');R=H/'engineering_power'
 p=json.loads((R/'RIGHT10_source_joint_v5.json').read_text());p['batchId']='RIGHT10_source_joint_v6';p['operations']=[o for o in p['operations'] if o['id'] not in ['RIGHT_SWCLK_VIA','RIGHT_SWCLK_BOTTOM_ANCHOR']]
 for a in p['anchors']:
  if a['net']=='SWCLK':a['anchor']=[46.2,24.15];a['anchorLayer']='TOP';a.pop('via',None)

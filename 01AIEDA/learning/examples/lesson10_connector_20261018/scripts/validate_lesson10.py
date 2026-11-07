@@ -2,7 +2,7 @@
 No Cadence process launches. Input comes from fresh readonly native reopen.
 """
 import pathlib,csv,json,math,re,hashlib,sys,html
-B=pathlib.Path(r"D:\001DIY\005lib\01AIEDA\learning\examples\lesson10_connector_20261018")
+B=pathlib.Path(r"D:\005lib\01AIEDA\learning\examples\lesson10_connector_20261018")
 spec=json.loads((B/"spec.json").read_text(encoding="utf-8"))
 checks=[]
 def ok(label,cond,detail=None):
@@ -141,7 +141,7 @@ ok("teaching_board_total_thickness_0p8",len(th)==3 and close(sum(th),.8),th)
 result={"status":"PASS","checks_count":len(checks),"checks":checks,"smd_min_mask_web":min(webs),"native_artifacts":[{"path":str(p),"sha256":sh(p),"bytes":p.stat().st_size} for p in [*sorted((B/"library").glob("*.pad")),B/"library/l10_gct_usb4105_gf_a_12land.dra",B/"library/l10_gct_usb4105_gf_a_12land.psm",B/"lesson10_connector.brd"]],"scope":"software geometry, save/compile/reopen/placement. Not fabrication signoff, full SI/PI/EMI certification, or 3D verification."}
 (B/"verification/validation.json").write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding="utf-8")
 # SVG and PNG from actual reopened native pad rectangles and holes. Not a Cadence screenshot.
-sys.path.insert(0,r"D:\001DIY\005lib\01AIEDA\learning\tools\pymupdf_1_28_2");import pymupdf
+sys.path.insert(0,r"D:\005lib\01AIEDA\learning\tools\pymupdf_1_28_2");import pymupdf
 W=1300;H=1550;scale=55;cx=650;cy=450
 def XY(x,y):return cx+scale*x,cy-scale*y
 parts=[f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">','<rect width="100%" height="100%" fill="#111827"/>']

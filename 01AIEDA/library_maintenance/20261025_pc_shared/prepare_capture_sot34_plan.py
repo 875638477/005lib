@@ -1,7 +1,7 @@
 """Prepare the exact34FP Capture-only plan from protectedcn1/fully exportedxn1. No CAD."""
 from pathlib import Path
 import json,hashlib,xml.etree.ElementTree as E,subprocess
-M=Path(r'D:\001DIY\005lib\01AIEDA\library_maintenance\20261025_pc_shared');R=Path(r'D:\001DIY\004computer\lga1700\13shared_libraries_pc_20261025');O=M/'capture_sot34_plan_v1';O.mkdir(exist_ok=True)
+M=Path(r'D:\005lib\01AIEDA\library_maintenance\20261025_pc_shared');R=Path(r'D:\001DIY\004computer\lga1700\13shared_libraries_pc_20261025');O=M/'capture_sot34_plan_v1';O.mkdir(exist_ok=True)
 sha=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest().upper();jr=lambda p:json.loads(Path(p).read_text(encoding='utf-8-sig'))
 source=R/'w/cn1/LGA1700.DSN';xml=R/'w/xn1/native_design.xml';assert sha(source)=='0A8152BDF713C14269B0229B947CDB70A9896F87714E43DDC9E68A1A71F94C07'
 base=jr(R/'w/capture_reuse_final/CAPTURE_PUBLIC_SOURCE_PLAN.json');base['source_design_xml']=str(xml);base['source_xml_sha256']=base['source_design_xml_sha256']=sha(xml)

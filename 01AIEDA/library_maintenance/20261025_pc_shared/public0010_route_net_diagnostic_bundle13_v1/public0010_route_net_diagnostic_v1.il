@@ -1,4 +1,4 @@
-load("D:/001DIY/005lib/01AIEDA/library_maintenance/20261025_pc_shared/public0010_stub_preflight_bundle13_v1/public0010_stub_preflight_v1.il")
+load("D:/005lib/01AIEDA/library_maintenance/20261025_pc_shared/public0010_stub_preflight_bundle13_v1/public0010_stub_preflight_v1.il")
 
 procedure(pub0010RouteGeomKey(kind layer width ends)
  let((a b)
@@ -22,7 +22,7 @@ procedure(pub0010RouteNetDiagnostic(dir)
   pub0010RouteSeen=makeTable('pub0010RouteSeen nil) pub0010ActualLines=makeTable('pub0010ActualLines nil)
   foreach(n axlDBGetDesign()->nets foreach(b n->branches pub0010RouteObjectsWalk(b)))
   foreach(b axlDBGetLonelyBranches() pub0010RouteObjectsWalk(b))
-  rows=pub403Rows("D:/001DIY/005lib/01AIEDA/library_maintenance/20261025_pc_shared/public0010_path_stubs_plan13_v1/SOURCE_FROZEN_REAL_SEGMENTS.ilist") unless(length(rows)==2068 error("PUB0010 frozen2068 line ledger count differs\n"))
+  rows=pub403Rows("D:/005lib/01AIEDA/library_maintenance/20261025_pc_shared/public0010_path_stubs_plan13_v1/SOURCE_FROZEN_REAL_SEGMENTS.ilist") unless(length(rows)==2068 error("PUB0010 frozen2068 line ledger count differs\n"))
   f=outfile(strcat(dir "/ACTUAL2068_SOURCE_LINE_CURRENT_OBJECT_NETS.ilist")) count=0 missing=0 changed=0
   foreach(row rows
    unless(equal(car(row) "line") error("PUB0010 geometry-only exact matching restricted to actual2068 straight lines\n"))

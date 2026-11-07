@@ -1,4 +1,4 @@
-$exch = 'D:\001DIY\005lib\01AIEDA\ai_bridge\exchange'
+$exch = 'D:\005lib\01AIEDA\ai_bridge\exchange'
 $flag = Join-Path $exch 'result.flag'
 $res  = Join-Path $exch 'result.txt'
 $deadline = (Get-Date).AddMinutes(30)

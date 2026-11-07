@@ -2,7 +2,7 @@
 import json, re, subprocess
 from pathlib import Path, PureWindowsPath
 OUT=Path(r'D:\001DIY\004computer\lga1700\git_upload_005lib_20261025')
-ARCHIVE=Path(r'D:\001DIY\005lib\01env\01env.rar')
+ARCHIVE=Path(r'D:\005lib\01env\01env.rar')
 UNRAR=Path(r'C:\Program0\WinRAR\UnRAR.exe')
 DEST=OUT/'rar_env_isolated'
 listing=subprocess.run([str(UNRAR),'lt','-c-',str(ARCHIVE)],capture_output=True,timeout=10,check=True).stdout.decode('gb18030')

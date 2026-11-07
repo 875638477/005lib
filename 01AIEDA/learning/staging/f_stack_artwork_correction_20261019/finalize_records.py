@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,hashlib,datetime,re
-ROOT=Path(r'D:\001DIY\005lib\01AIEDA').resolve()
+ROOT=Path(r'D:\005lib\01AIEDA').resolve()
 BASE=ROOT/'learning/staging/f_stack_artwork_correction_20261019'
 cfg=json.loads((BASE/'integration_payload.json').read_text(encoding='utf-8'))
 completion=json.loads((BASE/'completion_payload.json').read_text(encoding='utf-8'))

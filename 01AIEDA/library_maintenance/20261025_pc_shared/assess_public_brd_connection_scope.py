@@ -1,7 +1,7 @@
 ﻿from pathlib import Path
 from collections import Counter,defaultdict
 import csv,hashlib,json
-M=Path(r'D:\001DIY\005lib\01AIEDA\library_maintenance\20261025_pc_shared')
+M=Path(r'D:\005lib\01AIEDA\library_maintenance\20261025_pc_shared')
 OUT=M/'global_suffix_reference_audit_v1'
 base=Path(r'D:\001DIY\004computer\lga1700\cadence_library_cleanup_20261025\usage_audit')
 info=json.loads((OUT/'PUBLIC_BRD_REFERENCE_AUDIT.json').read_text(encoding='utf-8'))

@@ -3,7 +3,7 @@
 from pathlib import Path
 import re
 
-TEXT = Path(r"D:\001DIY\005lib\01AIEDA\ast2400_lib\ref_design.txt").read_text(
+TEXT = Path(r"D:\005lib\01AIEDA\ast2400_lib\ref_design.txt").read_text(
     encoding="utf-8", errors="replace"
 )
 BALL_RE = re.compile(r"^[A-Z]{1,2}\d{1,2}$")
@@ -112,7 +112,7 @@ blocks = {
     "D": extract_block("U1D\n", ["AST2400 EVB - DDR3\n1.1\n\nVGA", "Title\n"]),
 }
 
-out_dir = Path(r"D:\001DIY\005lib\01AIEDA\ast2400_lib\ref_sections")
+out_dir = Path(r"D:\005lib\01AIEDA\ast2400_lib\ref_sections")
 out_dir.mkdir(exist_ok=True)
 all_maps = {}
 for sec, blk in blocks.items():

@@ -4,8 +4,8 @@ remain byte-for-byte equal as JSON values to the already reviewed manifest.
 """
 from pathlib import Path
 import argparse,copy,hashlib,json
-M=Path(r'D:\001DIY\005lib\01AIEDA\library_maintenance\20261025_pc_shared')
-PUBLIC=Path(r'D:\001DIY\005lib\01brdlib')
+M=Path(r'D:\005lib\01AIEDA\library_maintenance\20261025_pc_shared')
+PUBLIC=Path(r'D:\005lib\01brdlib')
 NAMES={'00012.brd','0010.brd','006.brd','008.brd'}
 BASE_GUARD_SHA='F9D19CC95DCEA9686967EF7CF954EE7E6858225E7F9C949A203C340E6A153D88'
 def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest().upper()

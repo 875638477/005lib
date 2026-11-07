@@ -1,5 +1,5 @@
 import pathlib,json
-R=pathlib.Path(r"D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu");note=R.parents[2]/"notes/lessonHI_mcu_20261021.md";s=note.read_text(encoding="utf-8")
+R=pathlib.Path(r"D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021\engineering_mcu");note=R.parents[2]/"notes/lessonHI_mcu_20261021.md";s=note.read_text(encoding="utf-8")
 s=s.replace('[USB v7](../examples/lessonHI_38_50_20261021/engineering_mcu/plans/usb_critical_routes_v7.json)','[USB v8](../examples/lessonHI_38_50_20261021/engineering_mcu/plans/usb_critical_routes_v8.json)',1).replace('[GPIO north v3](../examples/lessonHI_38_50_20261021/engineering_mcu/plans/gpio_north_escape_v3.json)','[GPIO north v6](../examples/lessonHI_38_50_20261021/engineering_mcu/plans/gpio_north_escape_v6.json)',1)
 s=s.replace('USB/GPIO当下为已做实际铜几何预审、待原生验证方案。','USB四层v8已原生保存重开且DRC0，专项实际路径/铜参考已开始独立复核；两层最终及GPIO6仍待原生，详见第12—14节。')
 s+="""

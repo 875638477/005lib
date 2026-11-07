@@ -1,6 +1,6 @@
 from pathlib import Path
 import json
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
 p=R/'scripts/review_candidate_paths.py';s=p.read_text(encoding='utf8')
 s=s.replace(" for op in plan.get('operations',[]):", " for op in plan.get('operations',[])+plan.get('commonOperations',[])+plan.get('variantOperations',{}).get(snapshot['variant'],[]):")
 s=s.replace("'otherKind':other['kind'],'actualCopperGapMM'", "'otherKind':other['kind'],'otherBounds':list(other['geometry'].bounds),'actualCopperGapMM'")

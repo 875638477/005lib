@@ -1,6 +1,6 @@
 from pathlib import Path
 import re,json,csv,math,hashlib
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lesson29_constraints_20261019')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lesson29_constraints_20261019')
 B=R/'logs/read_final02';C=R/'logs/read_coupon';L=R.parent/'lesson28_stackup_20261019'
 spec=json.loads((R/'constraint_spec.json').read_text())
 checks=[]

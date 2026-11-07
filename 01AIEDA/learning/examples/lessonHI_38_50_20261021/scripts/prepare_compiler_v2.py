@@ -1,6 +1,6 @@
 from pathlib import Path
 import shutil
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
 p=R/'scripts/compile_batchHI.py'
 shutil.copyfile(p,R/'source/compile_batchHI_v1.py')
 s=p.read_text()

@@ -1,5 +1,5 @@
 from pathlib import Path
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonG_30_37_20261020')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonG_30_37_20261020')
 p=R/'scripts/reconcileG.il'
 s=p.read_text().replace('  foreach(row list(list("V3V3"', '''  f29Must(axlCNSCreate('spacing "G2L_POWER_GND_SPACING" nil) "2L power ground spacing CSet")
   foreach(k axlCNSGetSpacing(nil nil nil)

@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,copy,hashlib,math
-R=Path(r'D:\001DIY\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
+R=Path(r'D:\005lib\01AIEDA\learning\examples\lessonHI_38_50_20261021')
 src=R/'engineering_mcu/plans/usb_critical_routes_v6.json';d=json.loads(src.read_text(encoding='utf8'))
 es=R/'engineering_power/ESD_ground_routes_04c.json';esd=json.loads(es.read_text(encoding='utf8'))
 components={x['ref'] for x in json.loads((R/'inventory/normalized_actual_4L.json').read_text(encoding='utf8'))['placements']}
