@@ -1,0 +1,172 @@
+[
+  {
+    "package": "Z690I_ATX_12V_2X4",
+    "model": "REF_ENVELOPE_Z690I_ATX_12V_2X4.step",
+    "kind": "detailed_connector_visual_reference",
+    "rotation": [
+      0,
+      0,
+      0
+    ],
+    "offset_mm": [
+      0,
+      0,
+      0
+    ],
+    "height_status": "reference_geometry_not_vendor_release",
+    "source_note": "Detailed EPS/ATX12V 2x4 visual reference. Each cavity and metal post aligned to actual numbered 4.2 mm pad coordinates; 12.8 mm reference housing height. Key details are illustrative, not vendor release."
+  },
+  {
+    "package": "Z690I_DDR4_SOCKET",
+    "model": "ddr4_dimm_288p_pc.step",
+    "kind": "matched_existing_step",
+    "rotation": [
+      0,
+      0,
+      0
+    ],
+    "offset_mm": [
+      0.0178,
+      -0.0013,
+      21.06
+    ],
+    "height_status": "existing_model",
+    "source_note": "Original detailed DDR4 source, solder tails down; housing underside z=-21.06 translated to board surface. Prior X=180 mapping was upside down."
+  },
+  {
+    "package": "PIN10_2D54MM_2X05",
+    "model": "REF_ENVELOPE_PIN10_2D54MM_2X05.step",
+    "kind": "detailed_connector_visual_reference",
+    "rotation": [
+      0,
+      0,
+      0
+    ],
+    "offset_mm": [
+      0,
+      0,
+      0
+    ],
+    "height_status": "reference_geometry_not_vendor_release",
+    "source_note": "Front-panel pin header with ten contacts aligned to actual native pads; 2.5 mm insulator / 8.3 mm post reference geometry. Fixes inherited 1 mm placeholder."
+  },
+  {
+    "package": "Z690I_PCIEX16",
+    "model": "REF_ENVELOPE_Z690I_PCIEX16.step",
+    "kind": "detailed_connector_visual_reference",
+    "rotation": [
+      0,
+      0,
+      0
+    ],
+    "offset_mm": [
+      0,
+      0,
+      0
+    ],
+    "height_status": "reference_geometry_not_vendor_release",
+    "source_note": "Detailed visual reference: numbered pad field determines 164 contact positions and key gap. Original PLACE_BOUND is displaced; 2D footprint deliberately unchanged. Nominal 10 mm vertical connector housing, reference latch."
+  },
+  {
+    "package": "LP380_G120_B0R01_SOCKET",
+    "model": "REF_ENVELOPE_LP380_G120_B0R01_SOCKET.step",
+    "kind": "detailed_connector_visual_reference",
+    "rotation": [
+      0,
+      0,
+      0
+    ],
+    "offset_mm": [
+      0,
+      0,
+      0
+    ],
+    "height_status": "reference_geometry_not_vendor_release",
+    "source_note": "LP380 visual reference: actual 120 SMT pads and locating holes, 8.23 mm library-declared height, keyed opening from native assembly outline. Not a vendor CAD release."
+  },
+  {
+    "package": "SMD-NGFF-75P-M2-H3-LOTES",
+    "model": "REF_ENVELOPE_SMD_NGFF_75P_M2_H3_LOTES.step",
+    "kind": "detailed_connector_visual_reference",
+    "rotation": [
+      0,
+      0,
+      0
+    ],
+    "offset_mm": [
+      0,
+      0,
+      0
+    ],
+    "height_status": "reference_geometry_not_vendor_release",
+    "source_note": "M.2 Key M 3 mm detailed visual reference derived from actual pin field and key gap; open card mouth toward negative local Y, retention holes excluded from connector body. No SSD or mounting-hole cover blocks."
+  },
+  {
+    "package": "SODIMM_DDR4_260P_H",
+    "model": "REF_ENVELOPE_SODIMM_DDR4_260P_H.step",
+    "kind": "detailed_connector_visual_reference",
+    "rotation": [
+      0,
+      0,
+      0
+    ],
+    "offset_mm": [
+      0,
+      0,
+      0
+    ],
+    "height_status": "reference_geometry_not_vendor_release",
+    "source_note": "Detailed visual reference matched to current custom 260-pad pattern (0.5 mm pitch, 8.2 mm row spacing, retention pads +/-41.75 mm), keyed slot and end retention. No manufacturer identity assigned; nominal 5.2 mm reference height."
+  },
+  {
+    "package": "HEADER10X2_2MM_USB3_A",
+    "model": "REF_ENVELOPE_HEADER10X2_2MM_USB3_A.step",
+    "kind": "detailed_connector_visual_reference",
+    "rotation": [
+      0,
+      0,
+      0
+    ],
+    "offset_mm": [
+      0,
+      0,
+      0
+    ],
+    "height_status": "reference_geometry_not_vendor_release",
+    "source_note": "USB3 internal header detailed visual reference, native 19 pins (missing 20), actual 2 mm positions, open shroud and polarizing wall notch. Nominal 9 mm reference housing height."
+  },
+  {
+    "package": "Z690I_USB20",
+    "model": "REF_ENVELOPE_Z690I_USB20.step",
+    "kind": "detailed_connector_visual_reference",
+    "rotation": [
+      0,
+      0,
+      0
+    ],
+    "offset_mm": [
+      0,
+      0,
+      0
+    ],
+    "height_status": "reference_geometry_not_vendor_release",
+    "source_note": "Dual stacked USB-A receptacle visual reference with two open metal shells, tongues and 8 signal / 4 shell pins aligned to native footprint. Opening toward local +X; dimensions reference only."
+  },
+  {
+    "package": "SMD-NGFF-75P-M2-H3-LOTES_2242_2230",
+    "model": "REF_ENVELOPE_SMD_NGFF_75P_M2_H3_LOTES_2242_2230.step",
+    "kind": "detailed_connector_visual_reference",
+    "rotation": [
+      0,
+      0,
+      0
+    ],
+    "offset_mm": [
+      0,
+      0,
+      0
+    ],
+    "height_status": "reference_geometry_not_vendor_release",
+    "source_note": "M.2 Key M 3 mm detailed visual reference derived from actual pin field and key gap; open card mouth toward negative local Y, retention holes excluded from connector body. No SSD or mounting-hole cover blocks."
+  }
+]

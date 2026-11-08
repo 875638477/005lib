@@ -1,0 +1,275 @@
+[
+  {
+    "source": "D:\\001DIY\\004computer\\lga1700\\32_z690i_connector_3d_fix_20261108\\libraries\\final\\z690i_atx_12v_2x4.dra",
+    "target": "D:\\005lib\\01Psm_lib\\z690i_atx_12v_2x4.dra",
+    "path": "01Psm_lib/z690i_atx_12v_2x4.dra",
+    "before": "241a2978704cd930f16d83b679d72d617ec522280499a7ae5ce6a617e7ad725d",
+    "after": "ee43e3f5d33c42db778b104ee866256d9a5453f91907f45a6fed64a587f8f59a"
+  },
+  {
+    "source": "D:\\001DIY\\004computer\\lga1700\\32_z690i_connector_3d_fix_20261108\\libraries\\final\\z690i_atx_12v_2x4.psm",
+    "target": "D:\\005lib\\01Psm_lib\\z690i_atx_12v_2x4.psm",
+    "path": "01Psm_lib/z690i_atx_12v_2x4.psm",
+    "before": "3a01f13a5ac1fb1e34b1c70852e3efc52496b83bd093bcaf01a3bfe2fb3ca7d6",
+    "after": "2e030dab9499af0218f4f753fe93efdda340566b94a67a9c6ed87f060bac88b5"
+  },
+  {
+    "source": "D:\\001DIY\\004computer\\lga1700\\32_z690i_connector_3d_fix_20261108\\libraries\\final\\z690i_ddr4_socket.dra",
+    "target": "D:\\005lib\\01Psm_lib\\z690i_ddr4_socket.dra",
+    "path": "01Psm_lib/z690i_ddr4_socket.dra",
+    "before": "b3c076764203cf5f3037707244ce06b1ea87e764ea7e18613bd802176592b9e5",
+    "after": "25709a253cdd3f1b6525bdc9a7a61374b25ba0d758b65b6c93d8e1912811faef"
+  },
+  {
+    "source": "D:\\001DIY\\004computer\\lga1700\\32_z690i_connector_3d_fix_20261108\\libraries\\final\\z690i_ddr4_socket.psm",
+    "target": "D:\\005lib\\01Psm_lib\\z690i_ddr4_socket.psm",
+    "path": "01Psm_lib/z690i_ddr4_socket.psm",
+    "before": "18b66edb393b345967ae1bf6495b8ec2fcfdf498b5c81a6ec9aced8eb06d8384",
+    "after": "601c08a85059ad979affd06165a792bb16dda50e3d551b4c550910919bb71c65"
+  },
+  {
+    "source": "D:\\001DIY\\004computer\\lga1700\\32_z690i_connector_3d_fix_20261108\\libraries\\final\\pin10_2d54mm_2x05.dra",
+    "target": "D:\\005lib\\01Psm_lib\\pin10_2d54mm_2x05.dra",
+    "path": "01Psm_lib/pin10_2d54mm_2x05.dra",
+    "before": "c9d63bbd7b2de9a910b8ea47f091796c48ef81b3b7fa317c1895534020f83327",
+    "after": "843b619f2f8c1be097b6c9f154d15f27a8a5b63e3d37cfac69064481eeb24009"
+  },
+  {
+    "source": "D:\\001DIY\\004computer\\lga1700\\32_z690i_connector_3d_fix_20261108\\libraries\\final\\pin10_2d54mm_2x05.psm",
+    "target": "D:\\005lib\\01Psm_lib\\pin10_2d54mm_2x05.psm",
+    "path": "01Psm_lib/pin10_2d54mm_2x05.psm",
+    "before": "343eebaba669616d6468ae952f28368eb4db60784a42286ae987f8cc5ef35d7e",
+    "after": "219c7998ef797990911f8c60ce0df8f81de9109c14daa17db7c65762fa4f4cb3"
+  },
+  {
+    "source": "D:\\001DIY\\004computer\\lga1700\\32_z690i_connector_3d_fix_20261108\\libraries\\final\\z690i_pciex16.dra",
+    "target": "D:\\005lib\\01Psm_lib\\z690i_pciex16.dra",
+    "path": "01Psm_lib/z690i_pciex16.dra",
+    "before": "03ec71753f0bc9dccedc3c49ccc0d5f0328228a890e0ca65182af27aa813f58c",
+    "after": "7a8c3d02b159343676e77992342b18d5b545d697fb6e9f790a6cc914b70fdde2"
+  },
+  {
+    "source": "D:\\001DIY\\004computer\\lga1700\\32_z690i_connector_3d_fix_20261108\\libraries\\final\\z690i_pciex16.psm",
+    "target": "D:\\005lib\\01Psm_lib\\z690i_pciex16.psm",
+    "path": "01Psm_lib/z690i_pciex16.psm",
+    "before": "3be261266dacaad107682a8c90652bae18ff6933eda17365b0c83c2634fe4481",
+    "after": "5120a0cc187ef88239e082383a8828e9e4fe05b0cab8549eaf6d11a19448d6f6"
+  },
+  {
+    "source": "D:\\001DIY\\004computer\\lga1700\\32_z690i_connector_3d_fix_20261108\\libraries\\final\\LGA1700_MOD26_20261106\\lp380_g120_b0r01_socket.dra",
+    "target": "D:\\005lib\\01Psm_lib\\LGA1700_MOD26_20261106\\lp380_g120_b0r01_socket.dra",
+    "path": "01Psm_lib/LGA1700_MOD26_20261106/lp380_g120_b0r01_socket.dra",
+    "before": "e4602941cf865d96d5d89f9422b2705aea9c343e64764bc2f0dcfc06dc306976",
+    "after": "db46174a80cdfda6a4f65442e3f40e2c397f4fbc94dcc348835398bc30fd588f"
+  },
+  {
+    "source": "D:\\001DIY\\004computer\\lga1700\\32_z690i_connector_3d_fix_20261108\\libraries\\final\\LGA1700_MOD26_20261106\\lp380_g120_b0r01_socket.psm",
+    "target": "D:\\005lib\\01Psm_lib\\LGA1700_MOD26_20261106\\lp380_g120_b0r01_socket.psm",
+    "path": "01Psm_lib/LGA1700_MOD26_20261106/lp380_g120_b0r01_socket.psm",
+    "before": "ac0b0fa337e14dda04f4953861a7646acd9b467914973861214ceedc5dbcad80",
+    "after": "9ab6e71f235ae3ef4524e426e4416349dd8f63b1876318d0ff388703c7397d91"
+  },
+  {
+    "source": "D:\\001DIY\\004computer\\lga1700\\32_z690i_connector_3d_fix_20261108\\libraries\\final\\smd-ngff-75p-m2-h3-lotes.dra",
+    "target": "D:\\005lib\\01Psm_lib\\smd-ngff-75p-m2-h3-lotes.dra",
+    "path": "01Psm_lib/smd-ngff-75p-m2-h3-lotes.dra",
+    "before": "80c2b770da0ebf482a05f34a7a71319f4dd41940bc040e52b156d59848e0f648",
+    "after": "29b5041e91d010cd226b4ff44e601f40b0d633850a01181c5206d9eecda94ff3"
+  },
+  {
+    "source": "D:\\001DIY\\004computer\\lga1700\\32_z690i_connector_3d_fix_20261108\\libraries\\final\\smd-ngff-75p-m2-h3-lotes.psm",
+    "target": "D:\\005lib\\01Psm_lib\\smd-ngff-75p-m2-h3-lotes.psm",
+    "path": "01Psm_lib/smd-ngff-75p-m2-h3-lotes.psm",
+    "before": "ae6f6d5dda386aca7223d1b1e442cdbd00783142080b691c2130cda0bbbbbf3f",
+    "after": "5d6502efa047a99a924dce888250373bda961304db17d3b7379566f1748ca10a"
+  },
+  {
+    "source": "D:\\001DIY\\004computer\\lga1700\\32_z690i_connector_3d_fix_20261108\\libraries\\final\\LGA1700_MOD26_20261106\\sodimm_ddr4_260p_h.dra",
+    "target": "D:\\005lib\\01Psm_lib\\LGA1700_MOD26_20261106\\sodimm_ddr4_260p_h.dra",
+    "path": "01Psm_lib/LGA1700_MOD26_20261106/sodimm_ddr4_260p_h.dra",
+    "before": "7fdd415bd1332461342030b3fc79f226795b3f62fd348ab98c3a61caa13a5696",
+    "after": "9acca03cf6fd0f7b36dd09fe81ecdb91a821ec8a7e630eb21bde998df3db8f35"
+  },
+  {
+    "source": "D:\\001DIY\\004computer\\lga1700\\32_z690i_connector_3d_fix_20261108\\libraries\\final\\LGA1700_MOD26_20261106\\sodimm_ddr4_260p_h.psm",
+    "target": "D:\\005lib\\01Psm_lib\\LGA1700_MOD26_20261106\\sodimm_ddr4_260p_h.psm",
+    "path": "01Psm_lib/LGA1700_MOD26_20261106/sodimm_ddr4_260p_h.psm",
+    "before": "a50992b8e74ba443375f1d3ebf685be69a91ec5706a1df97d581f3961b3b5e89",
+    "after": "d3afaeefecd6f8169d7fc1ead0966346b1ffb297f8c2eb359c06ced2d27759f2"
+  },
+  {
+    "source": "D:\\001DIY\\004computer\\lga1700\\32_z690i_connector_3d_fix_20261108\\libraries\\final\\header10x2_2mm_usb3_a.dra",
+    "target": "D:\\005lib\\01Psm_lib\\header10x2_2mm_usb3_a.dra",
+    "path": "01Psm_lib/header10x2_2mm_usb3_a.dra",
+    "before": "7ea0923dd164fe8770a313a3e65aaa333a5a1ae6b456eb489d90f041c39bf27b",
+    "after": "6618b78d64d7ad0340aa02156fdf33d77b6b07c4e12eeb6f580fcce93a19638b"
+  },
+  {
+    "source": "D:\\001DIY\\004computer\\lga1700\\32_z690i_connector_3d_fix_20261108\\libraries\\final\\header10x2_2mm_usb3_a.psm",
+    "target": "D:\\005lib\\01Psm_lib\\header10x2_2mm_usb3_a.psm",
+    "path": "01Psm_lib/header10x2_2mm_usb3_a.psm",
+    "before": "038d0e58bfe502343be49f85d10b55b69e9b9cbf1915cb3951e9a4b9d48f6787",
+    "after": "0f7512f6e337fe134b44b42f9d203635ae12614db15f3515d64fa92cf4f9ec6b"
+  },
+  {
+    "source": "D:\\001DIY\\004computer\\lga1700\\32_z690i_connector_3d_fix_20261108\\libraries\\final\\z690i_usb20.dra",
+    "target": "D:\\005lib\\01Psm_lib\\z690i_usb20.dra",
+    "path": "01Psm_lib/z690i_usb20.dra",
+    "before": "ce339439e0543ba439686eb5171590973aa6bfc2ced9140a021157240c2d1cbb",
+    "after": "f7a9a0f313e52828783db23ca65ac3f9db661b28c1f5bcae5c4b475fd624f865"
+  },
+  {
+    "source": "D:\\001DIY\\004computer\\lga1700\\32_z690i_connector_3d_fix_20261108\\libraries\\final\\z690i_usb20.psm",
+    "target": "D:\\005lib\\01Psm_lib\\z690i_usb20.psm",
+    "path": "01Psm_lib/z690i_usb20.psm",
+    "before": "9d682c46289020861dff3a68da3fc9adf3532e93e5fd22e5c1f2ff9f04d1a33c",
+    "after": "8e1cebdebe4d42092cfc30a04c61f77f000d02c1065ac4b9fe986a89021db9c8"
+  },
+  {
+    "source": "D:\\001DIY\\004computer\\lga1700\\32_z690i_connector_3d_fix_20261108\\libraries\\final\\smd-ngff-75p-m2-h3-lotes_2242_2230.dra",
+    "target": "D:\\005lib\\01Psm_lib\\smd-ngff-75p-m2-h3-lotes_2242_2230.dra",
+    "path": "01Psm_lib/smd-ngff-75p-m2-h3-lotes_2242_2230.dra",
+    "before": "23835236ae905daab9406fa10717f4e0325493f5eee147ddfb88fecbfe037edd",
+    "after": "ced7a76282dad38e9d62539441aaa708a25fa248004ce17cfc3bbae00e30c5ea"
+  },
+  {
+    "source": "D:\\001DIY\\004computer\\lga1700\\32_z690i_connector_3d_fix_20261108\\libraries\\final\\smd-ngff-75p-m2-h3-lotes_2242_2230.psm",
+    "target": "D:\\005lib\\01Psm_lib\\smd-ngff-75p-m2-h3-lotes_2242_2230.psm",
+    "path": "01Psm_lib/smd-ngff-75p-m2-h3-lotes_2242_2230.psm",
+    "before": "733d5bb148652034d0d22dad7247b9f556b150152310f9f6c99f2afda099ba71",
+    "after": "f10715359755e8e5fbfb660dcf6035da760500865baaa132d21800cc830320d6"
+  },
+  {
+    "source": "D:\\001DIY\\004computer\\lga1700\\32_z690i_connector_3d_fix_20261108\\models\\REF_ENVELOPE_HEADER10X2_2MM_USB3_A.step",
+    "target": "D:\\005lib\\01_3d_step_lib\\REF_ENVELOPE_HEADER10X2_2MM_USB3_A.step",
+    "path": "01_3d_step_lib/REF_ENVELOPE_HEADER10X2_2MM_USB3_A.step",
+    "before": "00fcfb12966acf344367997d1335f2d2adc77360c8ed7fc6031ab13b25f40a2e",
+    "after": "d9ae31ba92af905e77a5c58c73de26418746a417141a1d2914ca07ca7b7f167b"
+  },
+  {
+    "source": "D:\\001DIY\\004computer\\lga1700\\32_z690i_connector_3d_fix_20261108\\models\\REF_ENVELOPE_LP380_G120_B0R01_SOCKET.step",
+    "target": "D:\\005lib\\01_3d_step_lib\\REF_ENVELOPE_LP380_G120_B0R01_SOCKET.step",
+    "path": "01_3d_step_lib/REF_ENVELOPE_LP380_G120_B0R01_SOCKET.step",
+    "before": "300908a267ecedb9dcf33136fe52acd2abf66e2fe4ff027ba32c5e71e4c475fa",
+    "after": "46cf09f823773d8007904a7c068a627b7e55750aa6ce5f88721f778724b8b386"
+  },
+  {
+    "source": "D:\\001DIY\\004computer\\lga1700\\32_z690i_connector_3d_fix_20261108\\models\\REF_ENVELOPE_PIN10_2D54MM_2X05.step",
+    "target": "D:\\005lib\\01_3d_step_lib\\REF_ENVELOPE_PIN10_2D54MM_2X05.step",
+    "path": "01_3d_step_lib/REF_ENVELOPE_PIN10_2D54MM_2X05.step",
+    "before": "870ef881f1e4fb1d7eafb4be7fad6222ca34f4909086e8404a26bec60eb5397c",
+    "after": "4c303be9059a26385c7ec1a66d6ca365cfb3ca0d8dd29846c52ea72bcf3415b8"
+  },
+  {
+    "source": "D:\\001DIY\\004computer\\lga1700\\32_z690i_connector_3d_fix_20261108\\models\\REF_ENVELOPE_SMD_NGFF_75P_M2_H3_LOTES.step",
+    "target": "D:\\005lib\\01_3d_step_lib\\REF_ENVELOPE_SMD_NGFF_75P_M2_H3_LOTES.step",
+    "path": "01_3d_step_lib/REF_ENVELOPE_SMD_NGFF_75P_M2_H3_LOTES.step",
+    "before": "cc5450db00862d01a364cf98996386de080d1c01cf76c0941d614a9713dc923d",
+    "after": "5eae0edfd7e23c7fd67155718caecae013293d71b2fb30fbcc566a454ddc126a"
+  },
+  {
+    "source": "D:\\001DIY\\004computer\\lga1700\\32_z690i_connector_3d_fix_20261108\\models\\REF_ENVELOPE_SMD_NGFF_75P_M2_H3_LOTES_2242_2230.step",
+    "target": "D:\\005lib\\01_3d_step_lib\\REF_ENVELOPE_SMD_NGFF_75P_M2_H3_LOTES_2242_2230.step",
+    "path": "01_3d_step_lib/REF_ENVELOPE_SMD_NGFF_75P_M2_H3_LOTES_2242_2230.step",
+    "before": "5b96b61a8c5dd7e3179840f83b27c56688c5bea38b1af42c0f846750fafaf72b",
+    "after": "526c2e698c1cd2cd38555e04eee5a5ab3daa3826678b7fa583886ecd7d9df33b"
+  },
+  {
+    "source": "D:\\001DIY\\004computer\\lga1700\\32_z690i_connector_3d_fix_20261108\\models\\REF_ENVELOPE_SODIMM_DDR4_260P_H.step",
+    "target": "D:\\005lib\\01_3d_step_lib\\REF_ENVELOPE_SODIMM_DDR4_260P_H.step",
+    "path": "01_3d_step_lib/REF_ENVELOPE_SODIMM_DDR4_260P_H.step",
+    "before": "78977ac536c4ef321d0c3b3a4809ac88f6231f51ebfeb9c376c42e31155fd42f",
+    "after": "cbd12ee87235a9f2d7912ae77befcd517add0009a3573b28d265366db2d2d41d"
+  },
+  {
+    "source": "D:\\001DIY\\004computer\\lga1700\\32_z690i_connector_3d_fix_20261108\\models\\REF_ENVELOPE_Z690I_ATX_12V_2X4.step",
+    "target": "D:\\005lib\\01_3d_step_lib\\REF_ENVELOPE_Z690I_ATX_12V_2X4.step",
+    "path": "01_3d_step_lib/REF_ENVELOPE_Z690I_ATX_12V_2X4.step",
+    "before": "ab8317cb7f4a3218800dda576d4a0445d7f175c845835c2c0419d46ada447d0c",
+    "after": "cbf44abeb3677c62e3683f9f51192fe3f75dc68a74dc75804ae4354df1972522"
+  },
+  {
+    "source": "D:\\001DIY\\004computer\\lga1700\\32_z690i_connector_3d_fix_20261108\\models\\REF_ENVELOPE_Z690I_PCIEX16.step",
+    "target": "D:\\005lib\\01_3d_step_lib\\REF_ENVELOPE_Z690I_PCIEX16.step",
+    "path": "01_3d_step_lib/REF_ENVELOPE_Z690I_PCIEX16.step",
+    "before": "1d51b55b65d34c616bccb7addd20e26ac25d0b14607081f05e811f93355d417d",
+    "after": "71d39599a624b3525782761f825885bd809326ffde20f74ab9c7b735958e9843"
+  },
+  {
+    "source": "D:\\001DIY\\004computer\\lga1700\\32_z690i_connector_3d_fix_20261108\\models\\REF_ENVELOPE_Z690I_USB20.step",
+    "target": "D:\\005lib\\01_3d_step_lib\\REF_ENVELOPE_Z690I_USB20.step",
+    "path": "01_3d_step_lib/REF_ENVELOPE_Z690I_USB20.step",
+    "before": "682b71a9e6f924aa64644cfc7511a7d8fb4fd1ef7bb6db4328fd68a14f0bdc27",
+    "after": "a458f06854a5af43d8b9e7f6cd6a14c0621ae4bb8f0bdb29ceb2f71bc10e98fe"
+  },
+  {
+    "source": "D:\\001DIY\\004computer\\lga1700\\32_z690i_connector_3d_fix_20261108\\public\\01AIEDA\\library_maintenance\\20261108_connector_3d_correction\\build_connector_models.py",
+    "target": "D:\\005lib\\01AIEDA\\library_maintenance\\20261108_connector_3d_correction\\build_connector_models.py",
+    "path": "01AIEDA/library_maintenance/20261108_connector_3d_correction/build_connector_models.py",
+    "before": null,
+    "after": "d7668660a37cf7d24e5c4d8e2502d571535430f4bba3198874f694df98812c67"
+  },
+  {
+    "source": "D:\\001DIY\\004computer\\lga1700\\32_z690i_connector_3d_fix_20261108\\public\\01AIEDA\\library_maintenance\\20261108_connector_3d_correction\\CHANGED_PACKAGES.json",
+    "target": "D:\\005lib\\01AIEDA\\library_maintenance\\20261108_connector_3d_correction\\CHANGED_PACKAGES.json",
+    "path": "01AIEDA/library_maintenance/20261108_connector_3d_correction/CHANGED_PACKAGES.json",
+    "before": null,
+    "after": "c7cef6bcd92b5b471f4551eca18c974f33e69a0ea831d0d2719f4afe652997dc"
+  },
+  {
+    "source": "D:\\001DIY\\004computer\\lga1700\\32_z690i_connector_3d_fix_20261108\\public\\01AIEDA\\library_maintenance\\20261108_connector_3d_correction\\connectors.png",
+    "target": "D:\\005lib\\01AIEDA\\library_maintenance\\20261108_connector_3d_correction\\connectors.png",
+    "path": "01AIEDA/library_maintenance/20261108_connector_3d_correction/connectors.png",
+    "before": null,
+    "after": "c20ff95ec5f6ee5edfd1205a87d14dca508101334aa9872d72dab33fe9f7615d"
+  },
+  {
+    "source": "D:\\001DIY\\004computer\\lga1700\\32_z690i_connector_3d_fix_20261108\\public\\01AIEDA\\library_maintenance\\20261108_connector_3d_correction\\DDR4_CONTACT_REGISTRATION.json",
+    "target": "D:\\005lib\\01AIEDA\\library_maintenance\\20261108_connector_3d_correction\\DDR4_CONTACT_REGISTRATION.json",
+    "path": "01AIEDA/library_maintenance/20261108_connector_3d_correction/DDR4_CONTACT_REGISTRATION.json",
+    "before": null,
+    "after": "6ca50e14c4369caa63475de8ede5496c72c79623597f135126ca8013d5a55e24"
+  },
+  {
+    "source": "D:\\001DIY\\004computer\\lga1700\\32_z690i_connector_3d_fix_20261108\\public\\01AIEDA\\library_maintenance\\20261108_connector_3d_correction\\MODEL_PROVENANCE.json",
+    "target": "D:\\005lib\\01AIEDA\\library_maintenance\\20261108_connector_3d_correction\\MODEL_PROVENANCE.json",
+    "path": "01AIEDA/library_maintenance/20261108_connector_3d_correction/MODEL_PROVENANCE.json",
+    "before": null,
+    "after": "d8474b7cbb91c0e26899a9ddba64ae86c2e9b7c4af26703f19bcc358f176b4c3"
+  },
+  {
+    "source": "D:\\001DIY\\004computer\\lga1700\\32_z690i_connector_3d_fix_20261108\\public\\01AIEDA\\library_maintenance\\20261108_connector_3d_correction\\NEW_MODELS_VALIDATION.json",
+    "target": "D:\\005lib\\01AIEDA\\library_maintenance\\20261108_connector_3d_correction\\NEW_MODELS_VALIDATION.json",
+    "path": "01AIEDA/library_maintenance/20261108_connector_3d_correction/NEW_MODELS_VALIDATION.json",
+    "before": null,
+    "after": "f4e206b5894de8f67508a7a2d7f19ea213afa9abede609a5e769758945ac16de"
+  },
+  {
+    "source": "D:\\001DIY\\004computer\\lga1700\\32_z690i_connector_3d_fix_20261108\\public\\01AIEDA\\library_maintenance\\20261108_connector_3d_correction\\PACKAGE_3D_MANIFEST.csv",
+    "target": "D:\\005lib\\01AIEDA\\library_maintenance\\20261108_connector_3d_correction\\PACKAGE_3D_MANIFEST.csv",
+    "path": "01AIEDA/library_maintenance/20261108_connector_3d_correction/PACKAGE_3D_MANIFEST.csv",
+    "before": null,
+    "after": "49c936f52664fc5fc4fe2a384fe921d00e7c4b4a594de1d3c0b420fe12c3a430"
+  },
+  {
+    "source": "D:\\001DIY\\004computer\\lga1700\\32_z690i_connector_3d_fix_20261108\\public\\01AIEDA\\library_maintenance\\20261108_connector_3d_correction\\README.md",
+    "target": "D:\\005lib\\01AIEDA\\library_maintenance\\20261108_connector_3d_correction\\README.md",
+    "path": "01AIEDA/library_maintenance/20261108_connector_3d_correction/README.md",
+    "before": null,
+    "after": "3645896635acb3753d3f2c49c5f9b3c3a678dc89b676f1fb2edc6c7bef008089"
+  },
+  {
+    "source": "D:\\001DIY\\004computer\\lga1700\\32_z690i_connector_3d_fix_20261108\\public\\01AIEDA\\library_maintenance\\20261108_connector_3d_correction\\step_writer.py",
+    "target": "D:\\005lib\\01AIEDA\\library_maintenance\\20261108_connector_3d_correction\\step_writer.py",
+    "path": "01AIEDA/library_maintenance/20261108_connector_3d_correction/step_writer.py",
+    "before": null,
+    "after": "5579e452da325100882dae4a575577da055a6a65b17aded007b715d6974ddbbc"
+  },
+  {
+    "source": "D:\\001DIY\\004computer\\lga1700\\32_z690i_connector_3d_fix_20261108\\public\\01AIEDA\\learning\\notes\\allegro_step_model_persistence_and_portable_paths.md",
+    "target": "D:\\005lib\\01AIEDA\\learning\\notes\\allegro_step_model_persistence_and_portable_paths.md",
+    "path": "01AIEDA/learning/notes/allegro_step_model_persistence_and_portable_paths.md",
+    "before": "bd44551cce182f4ed0019642ccd7d3757d46d39a9bb4fa83a8e9259f3da7bf45",
+    "after": "7a39eb602a7f5df09a4e5e1e7f2f95d7373c745725a137ca266ad7a49e8fe465"
+  }
+]

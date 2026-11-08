@@ -34,3 +34,8 @@ PSM、PAD、STEP、脚本分别来自 `01Psm_lib`、`01Pad_lib`、`01_3d_step_li
 冻结 SHA 清单后构建提交；正常推送，不强制覆盖远端。独立读回远端文件树并核 Git blob SHA，目标子目录之外的文件保持不变。任务专用工程、PCB、日志和最终服务器回执保存在工程根，公共库的定义维护与必要备份保存在 `01AIEDA/library_maintenance`。
 
 本机接口依据：Cadence 17.2 `share/pcb/examples/skill/DOC/QIR/NEW/axlStepGet.txt`、`axlStepSet.txt`、`FUNCS/axlSaveDesign.txt`、`axlCompileSymbol.txt`，以及 `share/pcb/batchhelp/refresh_symbol.txt`。此教程说明通用操作，不代表任何具体 PCB 已完成机械或电气验收。
+
+
+## 2026-11-08 连接器显示纠正
+
+仅 axlStepGet 读到名称不代表模型正确。必须检查实际本体、插槽开口、针脚方向、贴板高度，以及模型接触端与编号焊盘的对位；机械孔/PLACE_BOUND 本身也可能错位，不能无条件按最大外框生成包络。没有外框时不得默认为 1x1 mm 还报告“模型完整”。DDR4 ddr4_dimm_288p_pc.step 原来负 Z 的脚朝下，需保留零旋转并按本体底面 +21.06 mm 校正高度，不可 X=180 度翻转。当前 10 个连接器更新及显示参考限制见 ../library_maintenance/20261108_connector_3d_correction/README.md（相对本学习笔记应使用 ../../library_maintenance/20261108_connector_3d_correction/README.md）。
