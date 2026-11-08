@@ -1,0 +1,1482 @@
+[
+  {
+    "file": "LGA1700_SOCKET_ILM_ZUP_REFERENCE.step",
+    "valid": true,
+    "meshes": 54,
+    "min": [
+      -46.72967348481305,
+      -30.4,
+      -3.948
+    ],
+    "max": [
+      37.725,
+      27.49198887766,
+      6.769581127696
+    ],
+    "size": [
+      84.45467348481304,
+      57.89198887766,
+      10.717581127696
+    ]
+  },
+  {
+    "file": "REF_ENVELOPE_8P4R_0402.step",
+    "valid": true,
+    "meshes": 2,
+    "min": [
+      -1.2,
+      -0.98,
+      0
+    ],
+    "max": [
+      1.2,
+      0.98,
+      0.615
+    ],
+    "size": [
+      2.4,
+      1.96,
+      0.615
+    ]
+  },
+  {
+    "file": "REF_ENVELOPE_DFN2510P10E.step",
+    "valid": true,
+    "meshes": 2,
+    "min": [
+      -1.25,
+      -0.5,
+      0
+    ],
+    "max": [
+      1.25,
+      0.5,
+      0.565
+    ],
+    "size": [
+      2.5,
+      1,
+      0.565
+    ]
+  },
+  {
+    "file": "REF_ENVELOPE_HEADER10X2_2MM_USB3_A.step",
+    "valid": true,
+    "meshes": 2,
+    "min": [
+      -0.5,
+      -0.5,
+      0
+    ],
+    "max": [
+      0.5,
+      0.5,
+      8.015
+    ],
+    "size": [
+      1,
+      1,
+      8.015
+    ]
+  },
+  {
+    "file": "REF_ENVELOPE_LP380_G120_B0R01_SOCKET.step",
+    "valid": true,
+    "meshes": 2,
+    "min": [
+      -28.4,
+      -4,
+      0
+    ],
+    "max": [
+      28.4,
+      4,
+      8.245
+    ],
+    "size": [
+      56.8,
+      8,
+      8.245
+    ]
+  },
+  {
+    "file": "REF_ENVELOPE_PIN02_2D54MM_1X2.step",
+    "valid": true,
+    "meshes": 1,
+    "min": [
+      -0.5,
+      -0.5,
+      0
+    ],
+    "max": [
+      0.5,
+      0.5,
+      8
+    ],
+    "size": [
+      1,
+      1,
+      8
+    ]
+  },
+  {
+    "file": "REF_ENVELOPE_PIN10_2D54MM_2X05.step",
+    "valid": true,
+    "meshes": 2,
+    "min": [
+      -0.5,
+      -0.5,
+      0
+    ],
+    "max": [
+      0.5,
+      0.5,
+      8.015
+    ],
+    "size": [
+      1,
+      1,
+      8.015
+    ]
+  },
+  {
+    "file": "REF_ENVELOPE_QFN08P_2X2_0_5.step",
+    "valid": true,
+    "meshes": 2,
+    "min": [
+      -1,
+      -1,
+      0
+    ],
+    "max": [
+      1,
+      1,
+      0.815
+    ],
+    "size": [
+      2,
+      2,
+      0.815
+    ]
+  },
+  {
+    "file": "REF_ENVELOPE_QFN28_4D0X4D0.step",
+    "valid": true,
+    "meshes": 2,
+    "min": [
+      -2,
+      -2,
+      0
+    ],
+    "max": [
+      2,
+      2,
+      0.815
+    ],
+    "size": [
+      4,
+      4,
+      0.815
+    ]
+  },
+  {
+    "file": "REF_ENVELOPE_RES_0603X4.step",
+    "valid": true,
+    "meshes": 2,
+    "min": [
+      -1.4291,
+      -1.3999,
+      0
+    ],
+    "max": [
+      1.4291,
+      1.3999,
+      0.523
+    ],
+    "size": [
+      2.8582,
+      2.7998,
+      0.523
+    ]
+  },
+  {
+    "file": "REF_ENVELOPE_SATA_D_AKL.step",
+    "valid": true,
+    "meshes": 2,
+    "min": [
+      -0.5,
+      -0.5,
+      0
+    ],
+    "max": [
+      0.5,
+      0.5,
+      8.015
+    ],
+    "size": [
+      1,
+      1,
+      8.015
+    ]
+  },
+  {
+    "file": "REF_ENVELOPE_SMD_NGFF_75P_M2_H3_LOTES.step",
+    "valid": true,
+    "meshes": 2,
+    "min": [
+      -0.5,
+      -0.5,
+      0
+    ],
+    "max": [
+      0.5,
+      0.5,
+      3.015
+    ],
+    "size": [
+      1,
+      1,
+      3.015
+    ]
+  },
+  {
+    "file": "REF_ENVELOPE_SMD_NGFF_75P_M2_H3_LOTES_2242_2230.step",
+    "valid": true,
+    "meshes": 2,
+    "min": [
+      -11.6,
+      -5.6,
+      0
+    ],
+    "max": [
+      11.6,
+      5.6,
+      3.015
+    ],
+    "size": [
+      23.2,
+      11.2,
+      3.015
+    ]
+  },
+  {
+    "file": "REF_ENVELOPE_SODIMM_DDR4_260P_H.step",
+    "valid": true,
+    "meshes": 1,
+    "min": [
+      -42.65,
+      -5.175,
+      0
+    ],
+    "max": [
+      42.65,
+      5.175,
+      5.2
+    ],
+    "size": [
+      85.3,
+      10.35,
+      5.2
+    ]
+  },
+  {
+    "file": "REF_ENVELOPE_VSSOP8_TMP75.step",
+    "valid": true,
+    "meshes": 2,
+    "min": [
+      -1.5,
+      -1.5,
+      0
+    ],
+    "max": [
+      1.5,
+      1.5,
+      1.115
+    ],
+    "size": [
+      3,
+      3,
+      1.115
+    ]
+  },
+  {
+    "file": "REF_ENVELOPE_Z690I_ATX_12V_2X4.step",
+    "valid": true,
+    "meshes": 2,
+    "min": [
+      -7.49365,
+      -4.0954,
+      0
+    ],
+    "max": [
+      7.49365,
+      4.0954,
+      8.015
+    ],
+    "size": [
+      14.9873,
+      8.1908,
+      8.015
+    ]
+  },
+  {
+    "file": "REF_ENVELOPE_Z690I_BAT.step",
+    "valid": true,
+    "meshes": 1,
+    "min": [
+      -0.4445,
+      -1.0693,
+      0
+    ],
+    "max": [
+      0.4445,
+      1.0693,
+      1
+    ],
+    "size": [
+      0.889,
+      2.1386,
+      1
+    ]
+  },
+  {
+    "file": "REF_ENVELOPE_Z690I_DA1_DL1.step",
+    "valid": true,
+    "meshes": 1,
+    "min": [
+      -1.7526,
+      -5.3975,
+      0
+    ],
+    "max": [
+      1.7526,
+      5.3975,
+      3
+    ],
+    "size": [
+      3.5052,
+      10.795,
+      3
+    ]
+  },
+  {
+    "file": "REF_ENVELOPE_Z690I_DA1_DU1.step",
+    "valid": true,
+    "meshes": 2,
+    "min": [
+      -2.5,
+      -3,
+      0
+    ],
+    "max": [
+      2.5,
+      3,
+      0.915
+    ],
+    "size": [
+      5,
+      6,
+      0.915
+    ]
+  },
+  {
+    "file": "REF_ENVELOPE_Z690I_DAEC16.step",
+    "valid": true,
+    "meshes": 1,
+    "min": [
+      -0.7366,
+      -2.0066,
+      0
+    ],
+    "max": [
+      0.7366,
+      2.0066,
+      6
+    ],
+    "size": [
+      1.4732,
+      4.0132,
+      6
+    ]
+  },
+  {
+    "file": "REF_ENVELOPE_Z690I_DAEC32.step",
+    "valid": true,
+    "meshes": 1,
+    "min": [
+      -0.7366,
+      -2.0066,
+      0
+    ],
+    "max": [
+      0.7366,
+      2.0066,
+      6
+    ],
+    "size": [
+      1.4732,
+      4.0132,
+      6
+    ]
+  },
+  {
+    "file": "REF_ENVELOPE_Z690I_DAEC33.step",
+    "valid": true,
+    "meshes": 1,
+    "min": [
+      -0.7366,
+      -2.0066,
+      0
+    ],
+    "max": [
+      0.7366,
+      2.0066,
+      6
+    ],
+    "size": [
+      1.4732,
+      4.0132,
+      6
+    ]
+  },
+  {
+    "file": "REF_ENVELOPE_Z690I_DB1_DL1.step",
+    "valid": true,
+    "meshes": 1,
+    "min": [
+      -1.7526,
+      -5.3975,
+      0
+    ],
+    "max": [
+      1.7526,
+      5.3975,
+      3
+    ],
+    "size": [
+      3.5052,
+      10.795,
+      3
+    ]
+  },
+  {
+    "file": "REF_ENVELOPE_Z690I_DB1_DU1.step",
+    "valid": true,
+    "meshes": 2,
+    "min": [
+      -2.5,
+      -3,
+      0
+    ],
+    "max": [
+      2.5,
+      3,
+      0.915
+    ],
+    "size": [
+      5,
+      6,
+      0.915
+    ]
+  },
+  {
+    "file": "REF_ENVELOPE_Z690I_DC1_DL1.step",
+    "valid": true,
+    "meshes": 1,
+    "min": [
+      -1.7526,
+      -5.3975,
+      0
+    ],
+    "max": [
+      1.7526,
+      5.3975,
+      3
+    ],
+    "size": [
+      3.5052,
+      10.795,
+      3
+    ]
+  },
+  {
+    "file": "REF_ENVELOPE_Z690I_DC1_DU1.step",
+    "valid": true,
+    "meshes": 2,
+    "min": [
+      -2.5,
+      -3,
+      0
+    ],
+    "max": [
+      2.5,
+      3,
+      0.915
+    ],
+    "size": [
+      5,
+      6,
+      0.915
+    ]
+  },
+  {
+    "file": "REF_ENVELOPE_Z690I_DC1_L1.step",
+    "valid": true,
+    "meshes": 1,
+    "min": [
+      -5.3975,
+      -1.7526,
+      0
+    ],
+    "max": [
+      5.3975,
+      1.7526,
+      3
+    ],
+    "size": [
+      10.795,
+      3.5052,
+      3
+    ]
+  },
+  {
+    "file": "REF_ENVELOPE_Z690I_DC1_U1.step",
+    "valid": true,
+    "meshes": 2,
+    "min": [
+      -3,
+      -2.5,
+      0
+    ],
+    "max": [
+      3,
+      2.5,
+      0.915
+    ],
+    "size": [
+      6,
+      5,
+      0.915
+    ]
+  },
+  {
+    "file": "REF_ENVELOPE_Z690I_DC2_L1.step",
+    "valid": true,
+    "meshes": 1,
+    "min": [
+      -5.3975,
+      -1.7526,
+      0
+    ],
+    "max": [
+      5.3975,
+      1.7526,
+      3
+    ],
+    "size": [
+      10.795,
+      3.5052,
+      3
+    ]
+  },
+  {
+    "file": "REF_ENVELOPE_Z690I_DC2_U1.step",
+    "valid": true,
+    "meshes": 2,
+    "min": [
+      -3,
+      -2.5,
+      0
+    ],
+    "max": [
+      3,
+      2.5,
+      0.915
+    ],
+    "size": [
+      6,
+      5,
+      0.915
+    ]
+  },
+  {
+    "file": "REF_ENVELOPE_Z690I_DCEC1.step",
+    "valid": true,
+    "meshes": 1,
+    "min": [
+      -0.7366,
+      -2.0066,
+      0
+    ],
+    "max": [
+      0.7366,
+      2.0066,
+      6
+    ],
+    "size": [
+      1.4732,
+      4.0132,
+      6
+    ]
+  },
+  {
+    "file": "REF_ENVELOPE_Z690I_DCEC2.step",
+    "valid": true,
+    "meshes": 1,
+    "min": [
+      -0.7366,
+      -2.0066,
+      0
+    ],
+    "max": [
+      0.7366,
+      2.0066,
+      6
+    ],
+    "size": [
+      1.4732,
+      4.0132,
+      6
+    ]
+  },
+  {
+    "file": "REF_ENVELOPE_Z690I_DD1_DL1.step",
+    "valid": true,
+    "meshes": 1,
+    "min": [
+      -1.7526,
+      -5.3975,
+      0
+    ],
+    "max": [
+      1.7526,
+      5.3975,
+      3
+    ],
+    "size": [
+      3.5052,
+      10.795,
+      3
+    ]
+  },
+  {
+    "file": "REF_ENVELOPE_Z690I_DD1_DU1.step",
+    "valid": true,
+    "meshes": 2,
+    "min": [
+      -2.5,
+      -3,
+      0
+    ],
+    "max": [
+      2.5,
+      3,
+      0.915
+    ],
+    "size": [
+      5,
+      6,
+      0.915
+    ]
+  },
+  {
+    "file": "REF_ENVELOPE_Z690I_DE1_DL1.step",
+    "valid": true,
+    "meshes": 1,
+    "min": [
+      -5.3975,
+      -1.7526,
+      0
+    ],
+    "max": [
+      5.3975,
+      1.7526,
+      3
+    ],
+    "size": [
+      10.795,
+      3.5052,
+      3
+    ]
+  },
+  {
+    "file": "REF_ENVELOPE_Z690I_DE1_DU1.step",
+    "valid": true,
+    "meshes": 2,
+    "min": [
+      -3,
+      -2.5,
+      0
+    ],
+    "max": [
+      3,
+      2.5,
+      0.915
+    ],
+    "size": [
+      6,
+      5,
+      0.915
+    ]
+  },
+  {
+    "file": "REF_ENVELOPE_Z690I_DF1_DL1.step",
+    "valid": true,
+    "meshes": 1,
+    "min": [
+      -5.3975,
+      -1.7526,
+      0
+    ],
+    "max": [
+      5.3975,
+      1.7526,
+      3
+    ],
+    "size": [
+      10.795,
+      3.5052,
+      3
+    ]
+  },
+  {
+    "file": "REF_ENVELOPE_Z690I_DF1_DU1.step",
+    "valid": true,
+    "meshes": 2,
+    "min": [
+      -3,
+      -2.5,
+      0
+    ],
+    "max": [
+      3,
+      2.5,
+      0.915
+    ],
+    "size": [
+      6,
+      5,
+      0.915
+    ]
+  },
+  {
+    "file": "REF_ENVELOPE_Z690I_DF_L1.step",
+    "valid": true,
+    "meshes": 1,
+    "min": [
+      -1.6002,
+      -3.99415,
+      0
+    ],
+    "max": [
+      1.6002,
+      3.99415,
+      3
+    ],
+    "size": [
+      3.2004,
+      7.9883,
+      3
+    ]
+  },
+  {
+    "file": "REF_ENVELOPE_Z690I_DG1_DL1.step",
+    "valid": true,
+    "meshes": 1,
+    "min": [
+      -5.3975,
+      -1.7526,
+      0
+    ],
+    "max": [
+      5.3975,
+      1.7526,
+      3
+    ],
+    "size": [
+      10.795,
+      3.5052,
+      3
+    ]
+  },
+  {
+    "file": "REF_ENVELOPE_Z690I_DG1_DU1.step",
+    "valid": true,
+    "meshes": 2,
+    "min": [
+      -3,
+      -2.5,
+      0
+    ],
+    "max": [
+      3,
+      2.5,
+      0.915
+    ],
+    "size": [
+      6,
+      5,
+      0.915
+    ]
+  },
+  {
+    "file": "REF_ENVELOPE_Z690I_DH1_DL1.step",
+    "valid": true,
+    "meshes": 1,
+    "min": [
+      -5.3975,
+      -1.7526,
+      0
+    ],
+    "max": [
+      5.3975,
+      1.7526,
+      3
+    ],
+    "size": [
+      10.795,
+      3.5052,
+      3
+    ]
+  },
+  {
+    "file": "REF_ENVELOPE_Z690I_DH1_DU1.step",
+    "valid": true,
+    "meshes": 2,
+    "min": [
+      -3,
+      -2.5,
+      0
+    ],
+    "max": [
+      3,
+      2.5,
+      0.915
+    ],
+    "size": [
+      6,
+      5,
+      0.915
+    ]
+  },
+  {
+    "file": "REF_ENVELOPE_Z690I_DH_U1.step",
+    "valid": true,
+    "meshes": 2,
+    "min": [
+      -2.45,
+      -1.95,
+      0
+    ],
+    "max": [
+      2.45,
+      1.95,
+      1.765
+    ],
+    "size": [
+      4.9,
+      3.9,
+      1.765
+    ]
+  },
+  {
+    "file": "REF_ENVELOPE_Z690I_DI1_DL1.step",
+    "valid": true,
+    "meshes": 1,
+    "min": [
+      -5.3975,
+      -1.7526,
+      0
+    ],
+    "max": [
+      5.3975,
+      1.7526,
+      3
+    ],
+    "size": [
+      10.795,
+      3.5052,
+      3
+    ]
+  },
+  {
+    "file": "REF_ENVELOPE_Z690I_DI1_DU1.step",
+    "valid": true,
+    "meshes": 2,
+    "min": [
+      -3,
+      -2.5,
+      0
+    ],
+    "max": [
+      3,
+      2.5,
+      0.915
+    ],
+    "size": [
+      6,
+      5,
+      0.915
+    ]
+  },
+  {
+    "file": "REF_ENVELOPE_Z690I_DJ1_DL1.step",
+    "valid": true,
+    "meshes": 1,
+    "min": [
+      -5.3975,
+      -1.7526,
+      0
+    ],
+    "max": [
+      5.3975,
+      1.7526,
+      3
+    ],
+    "size": [
+      10.795,
+      3.5052,
+      3
+    ]
+  },
+  {
+    "file": "REF_ENVELOPE_Z690I_DJ1_DU1.step",
+    "valid": true,
+    "meshes": 2,
+    "min": [
+      -3,
+      -2.5,
+      0
+    ],
+    "max": [
+      3,
+      2.5,
+      0.915
+    ],
+    "size": [
+      6,
+      5,
+      0.915
+    ]
+  },
+  {
+    "file": "REF_ENVELOPE_Z690I_DP_HDMI20.step",
+    "valid": true,
+    "meshes": 2,
+    "min": [
+      -8.2296,
+      -9.0932,
+      0
+    ],
+    "max": [
+      8.2296,
+      9.0932,
+      8.015
+    ],
+    "size": [
+      16.4592,
+      18.1864,
+      8.015
+    ]
+  },
+  {
+    "file": "REF_ENVELOPE_Z690I_DX_DL1.step",
+    "valid": true,
+    "meshes": 1,
+    "min": [
+      -1.7526,
+      -5.3975,
+      0
+    ],
+    "max": [
+      1.7526,
+      5.3975,
+      3
+    ],
+    "size": [
+      3.5052,
+      10.795,
+      3
+    ]
+  },
+  {
+    "file": "REF_ENVELOPE_Z690I_DX_DU1.step",
+    "valid": true,
+    "meshes": 2,
+    "min": [
+      -2.8128,
+      -3.3129,
+      0
+    ],
+    "max": [
+      2.8128,
+      3.3129,
+      1.015
+    ],
+    "size": [
+      5.6256,
+      6.6258,
+      1.015
+    ]
+  },
+  {
+    "file": "REF_ENVELOPE_Z690I_HHAU1.step",
+    "valid": true,
+    "meshes": 2,
+    "min": [
+      -1.75,
+      -4.5,
+      0
+    ],
+    "max": [
+      1.75,
+      4.5,
+      0.815
+    ],
+    "size": [
+      3.5,
+      9,
+      0.815
+    ]
+  },
+  {
+    "file": "REF_ENVELOPE_Z690I_HHA_Q5.step",
+    "valid": true,
+    "meshes": 2,
+    "min": [
+      -1.95135,
+      -1.73,
+      0
+    ],
+    "max": [
+      1.95135,
+      1.73,
+      1.015
+    ],
+    "size": [
+      3.9027,
+      3.46,
+      1.015
+    ]
+  },
+  {
+    "file": "REF_ENVELOPE_Z690I_MAEC1.step",
+    "valid": true,
+    "meshes": 1,
+    "min": [
+      -4.2545,
+      -1.3335,
+      0
+    ],
+    "max": [
+      4.2545,
+      1.3335,
+      6
+    ],
+    "size": [
+      8.509,
+      2.667,
+      6
+    ]
+  },
+  {
+    "file": "REF_ENVELOPE_Z690I_MAU1.step",
+    "valid": true,
+    "meshes": 2,
+    "min": [
+      -1.95,
+      -2.45,
+      0
+    ],
+    "max": [
+      1.95,
+      2.45,
+      1.765
+    ],
+    "size": [
+      3.9,
+      4.9,
+      1.765
+    ]
+  },
+  {
+    "file": "REF_ENVELOPE_Z690I_MA_DQ1.step",
+    "valid": true,
+    "meshes": 2,
+    "min": [
+      -1.95135,
+      -1.73,
+      0
+    ],
+    "max": [
+      1.95135,
+      1.73,
+      1.015
+    ],
+    "size": [
+      3.9027,
+      3.46,
+      1.015
+    ]
+  },
+  {
+    "file": "REF_ENVELOPE_Z690I_MA_DQ2.step",
+    "valid": true,
+    "meshes": 2,
+    "min": [
+      -1.95135,
+      -1.73,
+      0
+    ],
+    "max": [
+      1.95135,
+      1.73,
+      1.015
+    ],
+    "size": [
+      3.9027,
+      3.46,
+      1.015
+    ]
+  },
+  {
+    "file": "REF_ENVELOPE_Z690I_MA_L1.step",
+    "valid": true,
+    "meshes": 1,
+    "min": [
+      -3.6957,
+      -3.5941,
+      0
+    ],
+    "max": [
+      3.6957,
+      3.5941,
+      3
+    ],
+    "size": [
+      7.3914,
+      7.1882,
+      3
+    ]
+  },
+  {
+    "file": "REF_ENVELOPE_Z690I_MA_L2.step",
+    "valid": true,
+    "meshes": 1,
+    "min": [
+      -2.8575,
+      -0.7493,
+      0
+    ],
+    "max": [
+      2.8575,
+      0.7493,
+      3
+    ],
+    "size": [
+      5.715,
+      1.4986,
+      3
+    ]
+  },
+  {
+    "file": "REF_ENVELOPE_Z690I_MA_L3.step",
+    "valid": true,
+    "meshes": 1,
+    "min": [
+      -1.6002,
+      -3.99415,
+      0
+    ],
+    "max": [
+      1.6002,
+      3.99415,
+      3
+    ],
+    "size": [
+      3.2004,
+      7.9883,
+      3
+    ]
+  },
+  {
+    "file": "REF_ENVELOPE_Z690I_ND_L1.step",
+    "valid": true,
+    "meshes": 1,
+    "min": [
+      -1.6002,
+      -3.99415,
+      0
+    ],
+    "max": [
+      1.6002,
+      3.99415,
+      3
+    ],
+    "size": [
+      3.2004,
+      7.9883,
+      3
+    ]
+  },
+  {
+    "file": "REF_ENVELOPE_Z690I_NPA_DQ1.step",
+    "valid": true,
+    "meshes": 2,
+    "min": [
+      -1.95135,
+      -1.73,
+      0
+    ],
+    "max": [
+      1.95135,
+      1.73,
+      1.015
+    ],
+    "size": [
+      3.9027,
+      3.46,
+      1.015
+    ]
+  },
+  {
+    "file": "REF_ENVELOPE_Z690I_NPA_DQ2.step",
+    "valid": true,
+    "meshes": 2,
+    "min": [
+      -1.95135,
+      -1.73,
+      0
+    ],
+    "max": [
+      1.95135,
+      1.73,
+      1.015
+    ],
+    "size": [
+      3.9027,
+      3.46,
+      1.015
+    ]
+  },
+  {
+    "file": "REF_ENVELOPE_Z690I_NPA_DQ3.step",
+    "valid": true,
+    "meshes": 2,
+    "min": [
+      -1.95135,
+      -1.73,
+      0
+    ],
+    "max": [
+      1.95135,
+      1.73,
+      1.015
+    ],
+    "size": [
+      3.9027,
+      3.46,
+      1.015
+    ]
+  },
+  {
+    "file": "REF_ENVELOPE_Z690I_NPA_EC1.step",
+    "valid": true,
+    "meshes": 1,
+    "min": [
+      -4.2545,
+      -1.3335,
+      0
+    ],
+    "max": [
+      4.2545,
+      1.3335,
+      6
+    ],
+    "size": [
+      8.509,
+      2.667,
+      6
+    ]
+  },
+  {
+    "file": "REF_ENVELOPE_Z690I_NPA_L1.step",
+    "valid": true,
+    "meshes": 1,
+    "min": [
+      -3.5941,
+      -3.6957,
+      0
+    ],
+    "max": [
+      3.5941,
+      3.6957,
+      3
+    ],
+    "size": [
+      7.1882,
+      7.3914,
+      3
+    ]
+  },
+  {
+    "file": "REF_ENVELOPE_Z690I_NPA_L2.step",
+    "valid": true,
+    "meshes": 1,
+    "min": [
+      -2.8575,
+      -0.7493,
+      0
+    ],
+    "max": [
+      2.8575,
+      0.7493,
+      3
+    ],
+    "size": [
+      5.715,
+      1.4986,
+      3
+    ]
+  },
+  {
+    "file": "REF_ENVELOPE_Z690I_NPB_L1.step",
+    "valid": true,
+    "meshes": 1,
+    "min": [
+      -1.6002,
+      -3.99415,
+      0
+    ],
+    "max": [
+      1.6002,
+      3.99415,
+      3
+    ],
+    "size": [
+      3.2004,
+      7.9883,
+      3
+    ]
+  },
+  {
+    "file": "REF_ENVELOPE_Z690I_PCIEX16.step",
+    "valid": true,
+    "meshes": 1,
+    "min": [
+      -43.0276,
+      -5.30455,
+      0
+    ],
+    "max": [
+      43.0276,
+      5.30455,
+      8
+    ],
+    "size": [
+      86.0552,
+      10.6091,
+      8
+    ]
+  },
+  {
+    "file": "REF_ENVELOPE_Z690I_Q30.step",
+    "valid": true,
+    "meshes": 2,
+    "min": [
+      -2.69875,
+      -3.4925,
+      0
+    ],
+    "max": [
+      2.69875,
+      3.4925,
+      1.015
+    ],
+    "size": [
+      5.3975,
+      6.985,
+      1.015
+    ]
+  },
+  {
+    "file": "REF_ENVELOPE_Z690I_Q4.step",
+    "valid": true,
+    "meshes": 2,
+    "min": [
+      -3.1115,
+      -5.34035,
+      0
+    ],
+    "max": [
+      3.1115,
+      5.34035,
+      1.015
+    ],
+    "size": [
+      6.223,
+      10.6807,
+      1.015
+    ]
+  },
+  {
+    "file": "REF_ENVELOPE_Z690I_U1.step",
+    "valid": true,
+    "meshes": 2,
+    "min": [
+      -4,
+      -4,
+      0
+    ],
+    "max": [
+      4,
+      4,
+      0.915
+    ],
+    "size": [
+      8,
+      8,
+      0.915
+    ]
+  },
+  {
+    "file": "REF_ENVELOPE_Z690I_USB20.step",
+    "valid": true,
+    "meshes": 2,
+    "min": [
+      -4.3688,
+      -8.0899,
+      0
+    ],
+    "max": [
+      4.3688,
+      8.0899,
+      8.015
+    ],
+    "size": [
+      8.7376,
+      16.1798,
+      8.015
+    ]
+  },
+  {
+    "file": "REF_ENVELOPE_Z690N_0BE6344CD2.step",
+    "valid": true,
+    "meshes": 2,
+    "min": [
+      -0.5,
+      -0.5,
+      0
+    ],
+    "max": [
+      0.5,
+      0.5,
+      1.015
+    ],
+    "size": [
+      1,
+      1,
+      1.015
+    ]
+  }
+]

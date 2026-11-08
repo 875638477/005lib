@@ -1,12 +1,10 @@
+> 2026-11-08 GitHub现用位置已从服务器核实为 **[875638477/005lib 仓库根](https://github.com/875638477/005lib)**，九个01目录直接位于根。以下旧位置登记属于历史，不能沿用旧的 001Diy/005lib 子目录目标。
+
+> 2026-11-08 当前库根已迁至 **D:/005lib**；历史记录中的旧绝对路径不代表当前配置。新增[封装 3D 保存、重编与跨电脑复用教程](learning/notes/allegro_step_model_persistence_and_portable_paths.md)。环境、脚本及快捷方式迁移见 library_maintenance/20261108_library_root_migration；115 种封装维护见 library_maintenance/20261108_3d_package_models。
+
 # AI 辅助 EDA 设计协作记录
 
 > 2026-11-02 新增[清晰排版与简洁连接方案](learning/notes/capture_compact_schematic_layout_method.md)及[复用技能](learning/skills/cadence-schematic-layout/SKILL.md)：位号左、Value右，与器件同行稍偏上；按实际字形避让网络/引脚，保持短连线，原生重开后分别验收显示和电气。九个01库同步记录见[library_maintenance](library_maintenance/20261102_layout_reuse_and_sync/README.txt)。
-
-**L3 电源铺铜要求更新（2026-11-02）：** [四层电机板分层规范](learning/notes/pcb_layer_motor_routing_rules.md)：第三层尽量不走线，按电源分区铺铜；普通信号迁 TOP/BOTTOM，晶振等敏感短路径单独核对，尚未迁出的具体位置列待办。
-
-**表层铜皮与转角新增规范（2026-11-01）：** [TOP/BOTTOM 优先静态铜、铜皮不留直角](learning/notes/pcb_outer_static_copper_and_corners.md)。铜皮优先圆弧或 135° 倒角，检查实际生成铜的外露轮廓、连接和承流截面；保存后独立重开复核，不以 DRC=0 代替轮廓检查。
-
-**2026-10-31 3D 模型添加与显示闭环：** [完整 STEP Mapping / Save / 3D Canvas 方法](learning/notes/allegro_step_model_mapping_and_3d_canvas.md)。用户已验证：数字键 4 打开映射界面，左下角点 Save，再用数字键 3 查看，真实模型正常；即使程序已写入关联也补做此界面保存。参数和键位按当前环境核对，不把 STEP 导出成功当作 GUI 已验。
 
 
 > 2026-10-30 阻容排版规范：[水平放置、位号左侧、Value右侧及连接验收](learning/notes/capture_rc_horizontal_ref_value_layout_spec.md)。文字按实际空间避让网络和导线，不统一套用上方两格偏移。
@@ -59,11 +57,11 @@ CADENCE 17.2电路设计与仿真 从入门到精通 云课版 (李鹏) (z-libra
 
 
 
-`D:/005lib/01AIEDA` 是全部公共库维护的统一工作与记录入口。公共库的创建、修改、尺寸/几何合并、删除、检查及恢复记录，统一放在 `library_maintenance/`，按日期和任务分目录；维护过程中产生的脚本、中间物、清单、日志、验证证据和备份同步归档，并更新本入口。
+`D:/001DIY/005lib/01AIEDA` 是全部公共库维护的统一工作与记录入口。公共库的创建、修改、尺寸/几何合并、删除、检查及恢复记录，统一放在 `library_maintenance/`，按日期和任务分目录；维护过程中产生的脚本、中间物、清单、日志、验证证据和备份同步归档，并更新本入口。
 
 
 
-本次两轮焊盘/封装库整理已统一归档，见[2026-10-25焊盘与封装维护记录](library_maintenance/20261025_pad_psm_merge/README.txt)及[库维护总索引](library_maintenance/INDEX.txt)。按实际尺寸和完整几何合并，C/R/L开头封装保持；数字0402/0603/0805带后缀封装的删除清单、兼容旧名映射和原生验证可直接查看。2026-10-25按用户指示删除重复的汇总备份ZIP；删除前26476个原件的大小和SHA256重新核验全部一致，两轮原始记录树及三套原始恢复目录保留，详见[ZIP核验与删除记录](library_maintenance/20261025_github_upload/README_backup_removal.txt)。历史归档清单与验证文件仅代表删除前状态。 GitHub当前正确位置为[001Diy/005lib](https://github.com/875638477/005lib/tree/main)：D:/001DIY对应001Diy仓库根，D:/001DIY/005lib对应仓库内005lib子目录，9个01目录位于005lib下。以本机最新目录为准更新此子目录并清理旧项，仓库外层文件保留；见[路径纠正记录](library_maintenance/20261025_github_destination_fix/README.txt)。此前[上传记录](library_maintenance/20261025_github_upload/README.txt)中的独立005lib仓库地址属于历史错误位置。
+本次两轮焊盘/封装库整理已统一归档，见[2026-10-25焊盘与封装维护记录](library_maintenance/20261025_pad_psm_merge/README.txt)及[库维护总索引](library_maintenance/INDEX.txt)。按实际尺寸和完整几何合并，C/R/L开头封装保持；数字0402/0603/0805带后缀封装的删除清单、兼容旧名映射和原生验证可直接查看。2026-10-25按用户指示删除重复的汇总备份ZIP；删除前26476个原件的大小和SHA256重新核验全部一致，两轮原始记录树及三套原始恢复目录保留，详见[ZIP核验与删除记录](library_maintenance/20261025_github_upload/README_backup_removal.txt)。历史归档清单与验证文件仅代表删除前状态。 GitHub当前正确位置为[001Diy/005lib](https://github.com/875638477/001Diy/tree/main/005lib)：D:/001DIY对应001Diy仓库根，D:/001DIY/005lib对应仓库内005lib子目录，9个01目录位于005lib下。以本机最新目录为准更新此子目录并清理旧项，仓库外层文件保留；见[路径纠正记录](library_maintenance/20261025_github_destination_fix/README.txt)。此前[上传记录](library_maintenance/20261025_github_upload/README.txt)中的独立005lib仓库地址属于历史错误位置。
 
 
 
@@ -144,7 +142,7 @@ CADENCE 17.2电路设计与仿真 从入门到精通 云课版 (李鹏) (z-libra
 
 
 
-**统一学习目录：D:\005lib\01AIEDA。** 学习计划放在本文开头，本库保留通用学习内容、工具和既有课程练习及证据。实际工程的所有工作材料均按对应工程根保存；本轮目录分离不改变无关课程进度与开放项。
+**统一学习目录：D:\001Diy\005lib\01AIEDA。** 学习计划放在本文开头，本库保留通用学习内容、工具和既有课程练习及证据。实际工程的所有工作材料均按对应工程根保存；本轮目录分离不改变无关课程进度与开放项。
 
 
 
@@ -644,7 +642,7 @@ Cadence 支持自动化。不能将其原生工程不便直接按文本修改，
 
 - 本次工作目录：D:\001DIY\023USB\08UsbIPDapLink。
 
-- 用户指定的记录文件：D:\005lib\01AIEDA\EDA.md。
+- 用户指定的记录文件：D:\001Diy\005lib\01AIEDA\EDA.md。
 
 - 环境信息只作为本次会话快照，后续操作应重新确认当前软件与工程状态。
 
@@ -938,7 +936,7 @@ Codex 技能由 SKILL.md 及可选 references、scripts、assets 等资源组成
 
 
 
-推荐以 D:\005lib\01AIEDA 作为资料的统一整理目录，按需要设置操作手册、脚本、关键截图、示例工程及技能等子目录。**这是讨论中的建议，目前没有创建这些子目录或新增技能。**
+推荐以 D:\001Diy\005lib\01AIEDA 作为资料的统一整理目录，按需要设置操作手册、脚本、关键截图、示例工程及技能等子目录。**这是讨论中的建议，目前没有创建这些子目录或新增技能。**
 
 
 
@@ -1038,7 +1036,7 @@ Codex 技能由 SKILL.md 及可选 references、scripts、assets 等资源组成
 
 - 将当前学习计划放在 EDA.md 开头。
 
-- 将学习资料、记录、脚本和练习成果统一到 D:\005lib\01AIEDA。
+- 将学习资料、记录、脚本和练习成果统一到 D:\001Diy\005lib\01AIEDA。
 
 - 用户询问 native pipe 找不到的含义：它是 Codex Windows 桌面控制工具与本机控制服务的通信通道未连接，不是已确认的 Cadence 程序或工程文件缺失；具体原因未确定。
 
@@ -1110,7 +1108,7 @@ Codex 技能由 SKILL.md 及可选 references、scripts、assets 等资源组成
 
 
 
-- 旧 D:\005lib\01AIcadence 目录的桥接、watcher 和 exchange 关键路径均不存在，现有资料实际位于 01AIEDA。
+- 旧 D:\001DIY\005lib\01AIcadence 目录的桥接、watcher 和 exchange 关键路径均不存在，现有资料实际位于 01AIEDA。
 
 - 本轮发现 31 个文本脚本/操作文档含旧目录引用，采用完整 ASCII 目录段替换为 01AIEDA；迁移前原字节保存在 backups 下，逐文件变更及哈希见迁移清单。
 
@@ -1384,7 +1382,7 @@ eda_l04_smd_1000x1500.pad（3648 字节）、eda_l04_two_pin_training.dra（6555
 
 
 
-用户要求补全将要学习的全部课程，并将索引从 learning 移到 01AIEDA 根目录。本轮确认实际文件为 D:\005lib\01AIEDA\课程索引.md，原 learning 下同名文件不存在。已在根目录补全 60 课主线、5 个按需进阶专题、每课主要内容/验收/状态及已有记录链接。覆盖库与 Capture、MCU/电源/滤波/接口原理图、布局、两层/四层逐段走线、SI/PI/EMI 基本设计要求、生产输出、综合工程、实物闭环及资料迁移。三文字层原点和默认高度 1 mm 已纳入封装验收。第 5 课及以后仍为计划，本轮没有执行这些后续课程。
+用户要求补全将要学习的全部课程，并将索引从 learning 移到 01AIEDA 根目录。本轮确认实际文件为 D:\001DIY\005lib\01AIEDA\课程索引.md，原 learning 下同名文件不存在。已在根目录补全 60 课主线、5 个按需进阶专题、每课主要内容/验收/状态及已有记录链接。覆盖库与 Capture、MCU/电源/滤波/接口原理图、布局、两层/四层逐段走线、SI/PI/EMI 基本设计要求、生产输出、综合工程、实物闭环及资料迁移。三文字层原点和默认高度 1 mm 已纳入封装验收。第 5 课及以后仍为计划，本轮没有执行这些后续课程。
 
 
 
@@ -1472,7 +1470,7 @@ eda_l04_smd_1000x1500.pad（3648 字节）、eda_l04_two_pin_training.dra（6555
 
 
 
-D:\005lib\01env\drill*.txt 是对应光绘层信息/脚本。本轮只读盘点13份并保存各文件原始SHA、铜Film/ETCH映射；未执行、未改模板或快捷方式。第7四层练习实际读回TOP-L2-L3-BOTTOM。
+D:\001DIY\005lib\01env\drill*.txt 是对应光绘层信息/脚本。本轮只读盘点13份并保存各文件原始SHA、铜Film/ETCH映射；未执行、未改模板或快捷方式。第7四层练习实际读回TOP-L2-L3-BOTTOM。
 
 
 
@@ -1500,7 +1498,7 @@ D:\005lib\01env\drill*.txt 是对应光绘层信息/脚本。本轮只读盘点1
 
 
 
-用户已要求所有学习资料集中于 D:\005lib\01AIEDA。本次仍在 C:\Users\Administrator\AppData\Local\Temp 创建了中转脚本、JSON输入包、笔记草稿和子任务审查文件；工具变更列表显示其中6个文件，用户据此指出目录不一致。
+用户已要求所有学习资料集中于 D:\001DIY\005lib\01AIEDA。本次仍在 C:\Users\Administrator\AppData\Local\Temp 创建了中转脚本、JSON输入包、笔记草稿和子任务审查文件；工具变更列表显示其中6个文件，用户据此指出目录不一致。
 
 
 
@@ -1774,4 +1772,7 @@ ECO明确只有R19/R20上拉2.2k→3.3k和J13.7/J13.8的PB8/PB9互换，MCU45/46
 2026-11-02 技嘉 Z690I 最终核对：103 个 TVW 补建封装、3 个安装焊盘适配版本、3 个编号适配版本归入公共库；网表和 Allegro 导入通过，2114 器件放置参考完成。制造审核限制见 library_maintenance/20261102_z690i_native_packages/README.txt。
 
 
+
+
 2026-11-07 强制网络规则：页内网络使用原生 Net Alias，跨页两端使用真实翻页符，禁止文本式 OffPage/Global 代替标签。格式修改后逐针核对分组和网名，新增跨页连接必须同步源页。见 learning/notes/capture_alias_offpage_mandatory.md。
+

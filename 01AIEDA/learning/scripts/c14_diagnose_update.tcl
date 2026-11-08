@@ -11,8 +11,8 @@ foreach {C14branch C14kind} {diag_pkg02 31 diag_part02 24 diag_replace02 0 diag_
  set C14target "$C14base/$C14branch.dsn"
  file copy "$C14base/c14_baseline.dsn" $C14target
  set C14des [$C14s GetDesignAndSchematics [::C12::cstring $C14target] $C14st]
- set C14old {D:\005lib\01AIEDA\LEARNING\EXAMPLES\LESSON14_CAPTURE\RUN04\C14_SOURCE_V1.OLB}
- set C14new {D:\005lib\01AIEDA\LEARNING\EXAMPLES\LESSON14_CAPTURE\RUN04\C14_RELOCATED_V2.OLB}
+ set C14old {D:\001DIY\005LIB\01AIEDA\LEARNING\EXAMPLES\LESSON14_CAPTURE\RUN04\C14_SOURCE_V1.OLB}
+ set C14new {D:\001DIY\005LIB\01AIEDA\LEARNING\EXAMPLES\LESSON14_CAPTURE\RUN04\C14_RELOCATED_V2.OLB}
  if {[string match *replace* $C14branch]} {
   set C14r [$C14des ReplaceCache [::C12::cstring QMI8610_C12] [::C12::cstring $C14old] [::C12::cstring QMI8610_C12] [::C12::cstring $C14new] $C14kind 1]
  } else {

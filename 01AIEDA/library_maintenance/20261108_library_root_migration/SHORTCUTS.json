@@ -1,0 +1,12 @@
+﻿[
+    {
+        "path":  "D:\\005lib\\01env\\005lib -D.lnk",
+        "before":  "D:\\001DIY\\005lib",
+        "after":  "D:\\005lib"
+    },
+    {
+        "path":  "D:\\005lib\\01env\\005lib D.lnk",
+        "before":  "D:\\001DIY\\005lib",
+        "after":  "D:\\005lib"
+    }
+]

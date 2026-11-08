@@ -1,0 +1,31 @@
+{
+  "reason": "Anonymous mechanical-pin enumeration false positive; all pin multisets match",
+  "removed": [
+    "01Psm_lib/LGA1700_MOD31_3D_20261108/z690i_atx_12v_2x4.dra",
+    "01Psm_lib/LGA1700_MOD31_3D_20261108/z690i_atx_12v_2x4.psm",
+    "01Psm_lib/LGA1700_MOD31_3D_20261108/z690i_ddr4_socket.dra",
+    "01Psm_lib/LGA1700_MOD31_3D_20261108/z690i_ddr4_socket.psm",
+    "01Psm_lib/LGA1700_MOD31_3D_20261108/z690i_dp_hdmi20.dra",
+    "01Psm_lib/LGA1700_MOD31_3D_20261108/z690i_dp_hdmi20.psm",
+    "01Psm_lib/LGA1700_MOD31_3D_20261108/lga1700-hs.dra",
+    "01Psm_lib/LGA1700_MOD31_3D_20261108/lga1700-hs.psm",
+    "01Psm_lib/LGA1700_MOD31_3D_20261108/z690i_mh1.dra",
+    "01Psm_lib/LGA1700_MOD31_3D_20261108/z690i_mh1.psm",
+    "01Psm_lib/LGA1700_MOD31_3D_20261108/z690i_mh2.dra",
+    "01Psm_lib/LGA1700_MOD31_3D_20261108/z690i_mh2.psm",
+    "01Psm_lib/LGA1700_MOD31_3D_20261108/z690i_mh3.dra",
+    "01Psm_lib/LGA1700_MOD31_3D_20261108/z690i_mh3.psm",
+    "01Psm_lib/LGA1700_MOD31_3D_20261108/z690i_mh4.dra",
+    "01Psm_lib/LGA1700_MOD31_3D_20261108/z690i_mh4.psm",
+    "01Psm_lib/LGA1700_MOD31_3D_20261108/z690i_pciex16.dra",
+    "01Psm_lib/LGA1700_MOD31_3D_20261108/z690i_pciex16.psm",
+    "01Psm_lib/LGA1700_MOD31_3D_20261108/smd-ngff-75p-m2-h3-lotes.dra",
+    "01Psm_lib/LGA1700_MOD31_3D_20261108/smd-ngff-75p-m2-h3-lotes.psm",
+    "01Psm_lib/LGA1700_MOD31_3D_20261108/z690i_pch_bga1045.dra",
+    "01Psm_lib/LGA1700_MOD31_3D_20261108/z690i_pch_bga1045.psm",
+    "01Psm_lib/LGA1700_MOD31_3D_20261108/smd-ngff-75p-m2-h3-lotes_2242_2230.dra",
+    "01Psm_lib/LGA1700_MOD31_3D_20261108/smd-ngff-75p-m2-h3-lotes_2242_2230.psm",
+    "01Psm_lib/LGA1700_MOD31_3D_20261108/m_2-67pin-key-a_2230_2242_mount.dra",
+    "01Psm_lib/LGA1700_MOD31_3D_20261108/m_2-67pin-key-a_2230_2242_mount.psm"
+  ]
+}

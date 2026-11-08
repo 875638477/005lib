@@ -1,0 +1,320 @@
+[
+  {
+    "target": "D:\\005lib\\01env\\env",
+    "staged": "D:\\001DIY\\004computer\\lga1700\\31_z690i_3d_library_20261108\\environment\\staged\\01env\\env",
+    "before_sha256": "6556fe08ea68ae403673f79ba5f3802a275aa87e832e055e33caa674c81b2bcd",
+    "after_sha256": "34df1fe4005aec4964c8f7b518fe9f0991816bfd7cca07f55a3aed80e6ef9784"
+  },
+  {
+    "target": "D:\\005lib\\01env\\env.bat",
+    "staged": "D:\\001DIY\\004computer\\lga1700\\31_z690i_3d_library_20261108\\environment\\staged\\01env\\env.bat",
+    "before_sha256": "8715cd45483dfae8726a482732506816d1c7e814707497f6930417a0c70034c1",
+    "after_sha256": "3ef76aa8faa421a20b4cd7c2c19db837ca979d9fc21b7810563c5fe018315dde"
+  },
+  {
+    "target": "D:\\005lib\\01script_file\\00脚本使用.md",
+    "staged": "D:\\001DIY\\004computer\\lga1700\\31_z690i_3d_library_20261108\\environment\\staged\\01script_file\\00脚本使用.md",
+    "before_sha256": "b59f2c89709c134afa79080e8feb2a83aa369eec9b760f7e30a58c6a402ab971",
+    "after_sha256": "9b8d859e833b164f38b7797bdf427b8a6b67f1e42764a3131fa50af0ff03a626"
+  },
+  {
+    "target": "D:\\005lib\\01script_file\\add_ref_silkscreen_top.scr",
+    "staged": "D:\\001DIY\\004computer\\lga1700\\31_z690i_3d_library_20261108\\environment\\staged\\01script_file\\add_ref_silkscreen_top.scr",
+    "before_sha256": "3e6375bd9757c3bd8d85ee85ac57c58c32a01aec82e71df69982e5076a49c038",
+    "after_sha256": "7eba29de6776ac62ba19db243dd22473596d4c003484c8f7280fa43216c4a8fc"
+  },
+  {
+    "target": "D:\\005lib\\01script_file\\add_ref_silkscreen_top3.scr",
+    "staged": "D:\\001DIY\\004computer\\lga1700\\31_z690i_3d_library_20261108\\environment\\staged\\01script_file\\add_ref_silkscreen_top3.scr",
+    "before_sha256": "c6116081d086d99a42267313221515f577f2fbf598c18ff784a490d5e6c614c6",
+    "after_sha256": "f8f72a6f2f9025b16003bf85df472bd431e9f16bc605112676b863eb9289d55b"
+  },
+  {
+    "target": "D:\\005lib\\01script_file\\assign_net_to_via.scr",
+    "staged": "D:\\001DIY\\004computer\\lga1700\\31_z690i_3d_library_20261108\\environment\\staged\\01script_file\\assign_net_to_via.scr",
+    "before_sha256": "8ed5dbab0c759965140aa25377c5759b88936b5da00fedb07338ba5147560ac2",
+    "after_sha256": "acc48c94bd1ddfb361b66b80d38a79fbfeada956791f9222760bce3bd83c2df8"
+  },
+  {
+    "target": "D:\\005lib\\01script_file\\Board_Geometry_Silkcreen_Bottom.scr",
+    "staged": "D:\\001DIY\\004computer\\lga1700\\31_z690i_3d_library_20261108\\environment\\staged\\01script_file\\Board_Geometry_Silkcreen_Bottom.scr",
+    "before_sha256": "7a0320a717d65cf9f832a45fbd73ec6b86249a82a12fb5e271590dfb6de2c2ab",
+    "after_sha256": "169d93192761c7ec68bb2157fa0551058df648e065e1ee784b4b0a1252cb85a1"
+  },
+  {
+    "target": "D:\\005lib\\01script_file\\Board_Geometry_Silkcreen_Top.scr",
+    "staged": "D:\\001DIY\\004computer\\lga1700\\31_z690i_3d_library_20261108\\environment\\staged\\01script_file\\Board_Geometry_Silkcreen_Top.scr",
+    "before_sha256": "e87622521a33855f415669d2ed698234300df27292a044aaead8162e40cf5fab",
+    "after_sha256": "71c8a21095feed911fe0ecc2525e1bc3e2616b3670d379c8f89976fa69f4b815"
+  },
+  {
+    "target": "D:\\005lib\\01script_file\\Dimension_Environment.scr",
+    "staged": "D:\\001DIY\\004computer\\lga1700\\31_z690i_3d_library_20261108\\environment\\staged\\01script_file\\Dimension_Environment.scr",
+    "before_sha256": "edc61992b234d715d6dbe8153fd829c4d50c0eac0fdba13659d87dde7e1c1767",
+    "after_sha256": "89d58b26843f30415e28d350781f484fa466a03867c708206eb74a663ad00eef"
+  },
+  {
+    "target": "D:\\005lib\\01script_file\\fill_empty_pin_numbers.tcl",
+    "staged": "D:\\001DIY\\004computer\\lga1700\\31_z690i_3d_library_20261108\\environment\\staged\\01script_file\\fill_empty_pin_numbers.tcl",
+    "before_sha256": "9ae3c4e553169fc1b28da0964ae50c85c84a26c9a8a1337f20565500b3a95087",
+    "after_sha256": "0b2a27279d0a661357996971be552f258c2122aac85ac112c37bd43ec9eac2e5"
+  },
+  {
+    "target": "D:\\005lib\\01script_file\\fix_pin_name_spaces.tcl",
+    "staged": "D:\\001DIY\\004computer\\lga1700\\31_z690i_3d_library_20261108\\environment\\staged\\01script_file\\fix_pin_name_spaces.tcl",
+    "before_sha256": "488f1c9f2d7289d934629c50a10452cdc2ac37cad50018726587882fd68cebc0",
+    "after_sha256": "c892ff8a5294e6c0f21c8fa6b5df996fb333db1bd7f1732fd0febbcb1178eee3"
+  },
+  {
+    "target": "D:\\005lib\\01script_file\\grid-0d0001.scr",
+    "staged": "D:\\001DIY\\004computer\\lga1700\\31_z690i_3d_library_20261108\\environment\\staged\\01script_file\\grid-0d0001.scr",
+    "before_sha256": "1d3bd7637e7f143e8072037304b39ae045d91135efe1324d8a11e01ce539506c",
+    "after_sha256": "65fdf3c4f63d664cdd69786041914751a518c55406d65865ca38e241f63bc7c4"
+  },
+  {
+    "target": "D:\\005lib\\01script_file\\grid-0d01.scr",
+    "staged": "D:\\001DIY\\004computer\\lga1700\\31_z690i_3d_library_20261108\\environment\\staged\\01script_file\\grid-0d01.scr",
+    "before_sha256": "d6f7409e154ad807facce20e4e60176a871f76160517784536bf9aeca332c324",
+    "after_sha256": "e056c9b02384783023bb07ed8eadc3293e49c28e4baca31e35685d150ac79f6b"
+  },
+  {
+    "target": "D:\\005lib\\01script_file\\grid-0d05.scr",
+    "staged": "D:\\001DIY\\004computer\\lga1700\\31_z690i_3d_library_20261108\\environment\\staged\\01script_file\\grid-0d05.scr",
+    "before_sha256": "8035a1008ab29415b0266e6f4328b3b1f0a0c4d937644f500d6cc3b50bc45b6e",
+    "after_sha256": "4ff8757e4e78988c5a6dac3b024c7e64a4311186903cd36a1204957cd9dd5a43"
+  },
+  {
+    "target": "D:\\005lib\\01script_file\\grid-0d5.scr",
+    "staged": "D:\\001DIY\\004computer\\lga1700\\31_z690i_3d_library_20261108\\environment\\staged\\01script_file\\grid-0d5.scr",
+    "before_sha256": "1d036359d680e67ef2ec9ae390a12a7ac914d2693a3a92195d14543a07dca214",
+    "after_sha256": "53777bc148b6674cd6e4982241d2644126482ffdf0f76de519e0fe855c3f31f3"
+  },
+  {
+    "target": "D:\\005lib\\01script_file\\grid-1d0.scr",
+    "staged": "D:\\001DIY\\004computer\\lga1700\\31_z690i_3d_library_20261108\\environment\\staged\\01script_file\\grid-1d0.scr",
+    "before_sha256": "5d15ed0c9cd6b16710c547db91b507ecc13af3907070803f76c4abcdcfe4665b",
+    "after_sha256": "81fbd712aba6d989e33adb9067c29b5c67ea5410337fe8c93628e41110890008"
+  },
+  {
+    "target": "D:\\005lib\\01script_file\\import_netlist.scr",
+    "staged": "D:\\001DIY\\004computer\\lga1700\\31_z690i_3d_library_20261108\\environment\\staged\\01script_file\\import_netlist.scr",
+    "before_sha256": "73b77280fda45e13e22bce88a192b32df599be4d4277a1fc1ef756e89222c383",
+    "after_sha256": "c2290d643efec7cb912364892b725cf3748b3569bd4b56edaf7423ea352e6c4a"
+  },
+  {
+    "target": "D:\\005lib\\01script_file\\iso_etch_0.scr",
+    "staged": "D:\\001DIY\\004computer\\lga1700\\31_z690i_3d_library_20261108\\environment\\staged\\01script_file\\iso_etch_0.scr",
+    "before_sha256": "ee9e1906cad698af113b2873385612ed7d69051124ab30f1f828328d54536cb2",
+    "after_sha256": "c2940d7915422470c8e7e5b44e510f3ba5397c705c407b8d58e4f28eee76d8fb"
+  },
+  {
+    "target": "D:\\005lib\\01script_file\\iso_etch_2.scr",
+    "staged": "D:\\001DIY\\004computer\\lga1700\\31_z690i_3d_library_20261108\\environment\\staged\\01script_file\\iso_etch_2.scr",
+    "before_sha256": "19e6fb4a4e0f4912f79015649753b9c7dce4b7a478cd840bb3a0196272ad46f0",
+    "after_sha256": "619b160eccd7a5f1fc505d71edfae26382129eb9f867f876378d0bd9e92abac5"
+  },
+  {
+    "target": "D:\\005lib\\01script_file\\iso_etch_3.scr",
+    "staged": "D:\\001DIY\\004computer\\lga1700\\31_z690i_3d_library_20261108\\environment\\staged\\01script_file\\iso_etch_3.scr",
+    "before_sha256": "8a7b7d85d990a573fdba930f680d6aa5a0eb8969b8974989d0f62d7d0689faee",
+    "after_sha256": "892ad5f5fa2d648666d3906b504354c65c825b79ceb125d04541f4b14c982d8d"
+  },
+  {
+    "target": "D:\\005lib\\01script_file\\iso_etch_4.scr",
+    "staged": "D:\\001DIY\\004computer\\lga1700\\31_z690i_3d_library_20261108\\environment\\staged\\01script_file\\iso_etch_4.scr",
+    "before_sha256": "7ca2e6f534ef8cea38e6e225f69510eaac1a2aea4d0db5cbc19039ed196f52af",
+    "after_sha256": "57c440ddbbcf694e85b2137b05f2aa42a983bf369c28027ae8ea11851317a139"
+  },
+  {
+    "target": "D:\\005lib\\01script_file\\iso_etch_5.scr",
+    "staged": "D:\\001DIY\\004computer\\lga1700\\31_z690i_3d_library_20261108\\environment\\staged\\01script_file\\iso_etch_5.scr",
+    "before_sha256": "8cb31227d6907991449dbb4e382973bdb8228790b0c1f541e3d4cbf3f14e2cbe",
+    "after_sha256": "ec4c06b067d87205681441311c5ae3bb8a446ea191913615bb00cdd6519eb25f"
+  },
+  {
+    "target": "D:\\005lib\\01script_file\\iso_etch_6.scr",
+    "staged": "D:\\001DIY\\004computer\\lga1700\\31_z690i_3d_library_20261108\\environment\\staged\\01script_file\\iso_etch_6.scr",
+    "before_sha256": "86b0f35218663cdd108fb5182475f36c15df6f03b6955de7042083c801529c6c",
+    "after_sha256": "3dd032ac71a1510d34d3481a53e9b986d798e31c16c923b03b7ee4cc6a89c6d4"
+  },
+  {
+    "target": "D:\\005lib\\01script_file\\iso_etch_7.scr",
+    "staged": "D:\\001DIY\\004computer\\lga1700\\31_z690i_3d_library_20261108\\environment\\staged\\01script_file\\iso_etch_7.scr",
+    "before_sha256": "a4de63c41ea0e604acec7f73722a3cd56bacf04edf003b37459d522f462d452d",
+    "after_sha256": "11ab1e92adb2bd3339e23fe78fccb7646a265633b192f5e9289a7cc421d82524"
+  },
+  {
+    "target": "D:\\005lib\\01script_file\\iso_etch_8.scr",
+    "staged": "D:\\001DIY\\004computer\\lga1700\\31_z690i_3d_library_20261108\\environment\\staged\\01script_file\\iso_etch_8.scr",
+    "before_sha256": "119e738c1b72a254332ef84cb2c77f141f157fa7c8db9c74366899fa95bc12b3",
+    "after_sha256": "5db7e1c8be5403c49e06780f1c75450b7503ea125b58c043550b3c8f289e8d70"
+  },
+  {
+    "target": "D:\\005lib\\01script_file\\iso_etch_9.scr",
+    "staged": "D:\\001DIY\\004computer\\lga1700\\31_z690i_3d_library_20261108\\environment\\staged\\01script_file\\iso_etch_9.scr",
+    "before_sha256": "310c24cbf7f13ff4196d16f77509c3c6cf3621540b019e65ead6bfd8985d6228",
+    "after_sha256": "d733d520913236475d5ca47a06a4223d3e706a33cb1ec2cc1a2c00f7d154f354"
+  },
+  {
+    "target": "D:\\005lib\\01script_file\\iso_etch_bottom.scr",
+    "staged": "D:\\001DIY\\004computer\\lga1700\\31_z690i_3d_library_20261108\\environment\\staged\\01script_file\\iso_etch_bottom.scr",
+    "before_sha256": "888a0f5e4242aa192c469905f552ba39990429668c2006144690558386d3eff2",
+    "after_sha256": "632d0b79d8890b44221e3a7e001fb6661cb79e7610ee3f47104c254fb1267eb4"
+  },
+  {
+    "target": "D:\\005lib\\01script_file\\iso_etch_prefix.scr",
+    "staged": "D:\\001DIY\\004computer\\lga1700\\31_z690i_3d_library_20261108\\environment\\staged\\01script_file\\iso_etch_prefix.scr",
+    "before_sha256": "6589d3930d092e30ee7fdc3e2ac2e14edf87c9bca40d9457d701d4bd699cb64f",
+    "after_sha256": "ffbf97252651fca428c480f51b3475500c0b0ad669d3774477785ccc8b51e15d"
+  },
+  {
+    "target": "D:\\005lib\\01script_file\\iso_etch_top.scr",
+    "staged": "D:\\001DIY\\004computer\\lga1700\\31_z690i_3d_library_20261108\\environment\\staged\\01script_file\\iso_etch_top.scr",
+    "before_sha256": "80685a032df8f9914cf973afea254abd20193c50e2e267efc1c024a259f69478",
+    "after_sha256": "1e5cdf3d0e2906d710356b94eef19a16efdb9799f34f4bf413e1ea66502cc004"
+  },
+  {
+    "target": "D:\\005lib\\01script_file\\Manufacture_Drafting_Chamfer.scr",
+    "staged": "D:\\001DIY\\004computer\\lga1700\\31_z690i_3d_library_20261108\\environment\\staged\\01script_file\\Manufacture_Drafting_Chamfer.scr",
+    "before_sha256": "19cc936fe06cf713593f7abcc0ccec386ecb53936198eb778f4c44a356851c7d",
+    "after_sha256": "8e26ce66cd3ed3f5086cad141c2886d30179ff9ac795812f72793df1e7d827b0"
+  },
+  {
+    "target": "D:\\005lib\\01script_file\\Manufacture_Fillet.scr",
+    "staged": "D:\\001DIY\\004computer\\lga1700\\31_z690i_3d_library_20261108\\environment\\staged\\01script_file\\Manufacture_Fillet.scr",
+    "before_sha256": "f77baba188fc0911f148058df2f0f17bb8069e8767eff20919b206d76230b188",
+    "after_sha256": "3cb8765aba61c7e5b113248f00aae7629a3c4bda2b56a7b3ab39a636c94620a8"
+  },
+  {
+    "target": "D:\\005lib\\01script_file\\Merge_shape.scr",
+    "staged": "D:\\001DIY\\004computer\\lga1700\\31_z690i_3d_library_20261108\\environment\\staged\\01script_file\\Merge_shape.scr",
+    "before_sha256": "bada8c2177aa6b018896f041f108268aa800d0fda1db40bc637807a0fd72ad0b",
+    "after_sha256": "a1b87fefaa3620326bd4457150271a00804b446dffa3d49b0c0e797bb0d4ef7c"
+  },
+  {
+    "target": "D:\\005lib\\01script_file\\move-txt-value-ref2.scr",
+    "staged": "D:\\001DIY\\004computer\\lga1700\\31_z690i_3d_library_20261108\\environment\\staged\\01script_file\\move-txt-value-ref2.scr",
+    "before_sha256": "e3dd41d090c41d1e4121b9d042646ec65fbf99c325f8e98811388893dcf80a8f",
+    "after_sha256": "eaedf5eae669d32d030a50188368159e974842d981a173e334389bac3857f8c8"
+  },
+  {
+    "target": "D:\\005lib\\01script_file\\pdf.scr",
+    "staged": "D:\\001DIY\\004computer\\lga1700\\31_z690i_3d_library_20261108\\environment\\staged\\01script_file\\pdf.scr",
+    "before_sha256": "0b1c0af0a9c09b236d2cb7b73444e05ac2f6fe6f7ce24f706eea953167ae47b2",
+    "after_sha256": "a67c6924b4198050f92f70122b26f2258d6b88d91288e9981813a707c5a49055"
+  },
+  {
+    "target": "D:\\005lib\\01script_file\\place_updata_3d.scr",
+    "staged": "D:\\001DIY\\004computer\\lga1700\\31_z690i_3d_library_20261108\\environment\\staged\\01script_file\\place_updata_3d.scr",
+    "before_sha256": "8ab127bcce6299cc793b8d4f25b5b7994d410fa36e9a83622160c4e9b96f8f3d",
+    "after_sha256": "751ce17e84caf08d0a17ffa3628e66c65ccb0542eaa08d7fe91620f5cd4b52a7"
+  },
+  {
+    "target": "D:\\005lib\\01script_file\\place_updata_symbols.scr",
+    "staged": "D:\\001DIY\\004computer\\lga1700\\31_z690i_3d_library_20261108\\environment\\staged\\01script_file\\place_updata_symbols.scr",
+    "before_sha256": "e564e5b84d0b33b00c968086f610a4758da0e8be1463fe720936512b13826efc",
+    "after_sha256": "8fa83b4c9c79565c11defacda432c1f025dab69779bb09cb591affd33a73f015"
+  },
+  {
+    "target": "D:\\005lib\\01script_file\\place_via.scr",
+    "staged": "D:\\001DIY\\004computer\\lga1700\\31_z690i_3d_library_20261108\\environment\\staged\\01script_file\\place_via.scr",
+    "before_sha256": "7a06f82ab36a96e6cb94314ae61fced51f3a65d701c37d1af91585fe132a7077",
+    "after_sha256": "f25b318aabe6265a1d164d85691397aa9654b26de7dd222a13f10c24dd0f2e63"
+  },
+  {
+    "target": "D:\\005lib\\01script_file\\polygon_shape.scr",
+    "staged": "D:\\001DIY\\004computer\\lga1700\\31_z690i_3d_library_20261108\\environment\\staged\\01script_file\\polygon_shape.scr",
+    "before_sha256": "df9f8f997c3cabe262be73d55ded010c11a6f86b88d6ff391c247cd0f6a48f84",
+    "after_sha256": "67d5663a0254e7ded69b4fa7196f0c51ec909d638cd89e96205ca16d878b5665"
+  },
+  {
+    "target": "D:\\005lib\\01script_file\\reports.scr",
+    "staged": "D:\\001DIY\\004computer\\lga1700\\31_z690i_3d_library_20261108\\environment\\staged\\01script_file\\reports.scr",
+    "before_sha256": "e6844b00c63298fa1f2d257266f5f16e5a02db44971d4cbc18a4f747c86c5b47",
+    "after_sha256": "b6382b3ccae203a7909e9d16629920b3224f09793b863bb54b5868b01ec20473"
+  },
+  {
+    "target": "D:\\005lib\\01script_file\\route_gloss_parameters.scr",
+    "staged": "D:\\001DIY\\004computer\\lga1700\\31_z690i_3d_library_20261108\\environment\\staged\\01script_file\\route_gloss_parameters.scr",
+    "before_sha256": "5f7c95b04dc982a44bd0d63685c3fb8370ea2ae7da78596f55850e62cd6d1507",
+    "after_sha256": "35bcc1f3f22ff7d66987238718a348ce10bb846e5266b607831fcc03b1ec4a51"
+  },
+  {
+    "target": "D:\\005lib\\01script_file\\select_shape.scr",
+    "staged": "D:\\001DIY\\004computer\\lga1700\\31_z690i_3d_library_20261108\\environment\\staged\\01script_file\\select_shape.scr",
+    "before_sha256": "abd534c3affbceda2b46aec675f8d6fd8d1fc56f9262946a6837c8f30742e75a",
+    "after_sha256": "15c00bc2d38039a6daa8255b32a75cb9c71e2f6ae0fe59d55a4d5280a18303b6"
+  },
+  {
+    "target": "D:\\005lib\\01script_file\\setup_step_package_mapping.scr",
+    "staged": "D:\\001DIY\\004computer\\lga1700\\31_z690i_3d_library_20261108\\environment\\staged\\01script_file\\setup_step_package_mapping.scr",
+    "before_sha256": "0da337466b2fa89db2e58718baeae8f45052dccfc3f5c31dd152f70fb0ae041d",
+    "after_sha256": "a2a95dbd8ab98de812597f7a8ded428893b478e2986f3ca43326f9516f89fb88"
+  },
+  {
+    "target": "D:\\005lib\\01script_file\\Shape_Compuse_Shape.scr",
+    "staged": "D:\\001DIY\\004computer\\lga1700\\31_z690i_3d_library_20261108\\environment\\staged\\01script_file\\Shape_Compuse_Shape.scr",
+    "before_sha256": "c52a8540e1605c5578de191db9f27e0f394cb5e46c48341a94c3d58a5c0b866c",
+    "after_sha256": "d68f4ecde675643abeeeb809215cd212fc3b8d873c087c73d7962418d5e75022"
+  },
+  {
+    "target": "D:\\005lib\\01script_file\\view_3d.scr",
+    "staged": "D:\\001DIY\\004computer\\lga1700\\31_z690i_3d_library_20261108\\environment\\staged\\01script_file\\view_3d.scr",
+    "before_sha256": "32a65e44fa34e85f84d5c91593d71a7bb97e39dfb207a6f7e69f7ffb932a74fb",
+    "after_sha256": "a8047984d64fdbd2104fb2a9258a46ba49e849d8d2ebc439ddda667291c18bc4"
+  },
+  {
+    "target": "D:\\005lib\\01script_file\\Z_copy_Route_Keepin.scr",
+    "staged": "D:\\001DIY\\004computer\\lga1700\\31_z690i_3d_library_20261108\\environment\\staged\\01script_file\\Z_copy_Route_Keepin.scr",
+    "before_sha256": "a41df11923ad23a964004c3e867432d6e8c5ad44c1e2e2f655698f102fa18327",
+    "after_sha256": "60610017a35ba1b29c62787e26952ea4a7d82e9ea838b5ccc527aa86057713c3"
+  },
+  {
+    "target": "D:\\005lib\\01script_file\\Z_copy_Route_Keepout.scr",
+    "staged": "D:\\001DIY\\004computer\\lga1700\\31_z690i_3d_library_20261108\\environment\\staged\\01script_file\\Z_copy_Route_Keepout.scr",
+    "before_sha256": "553b6b1c1bfbfdaf64f66a367a0678dc1f8aea164686b23ce453174d784f30d8",
+    "after_sha256": "c983077510ff59aa155d34431323f2454787da554175ce2b6ffd3c76ba292133"
+  },
+  {
+    "target": "D:\\005lib\\01script_file\\AST2400\\AST2400_library_readme.md",
+    "staged": "D:\\001DIY\\004computer\\lga1700\\31_z690i_3d_library_20261108\\environment\\staged\\01script_file\\AST2400\\AST2400_library_readme.md",
+    "before_sha256": "f289590d41f8c3c41b1492c9bb9f00830d18cd92621b15d32d828fb41e1e0c71",
+    "after_sha256": "89d8b5605cf02c60fc55527c9fbaa5a65dbb2e5b6837e149fe209b90848b8ff6"
+  },
+  {
+    "target": "D:\\005lib\\01script_file\\AST2400\\LFBGA408_19X19.bat",
+    "staged": "D:\\001DIY\\004computer\\lga1700\\31_z690i_3d_library_20261108\\environment\\staged\\01script_file\\AST2400\\LFBGA408_19X19.bat",
+    "before_sha256": "68cbe3e9eac791981826e07560b45505231706eb52912be95999f084a1c3effc",
+    "after_sha256": "2fda8cac6162b308b589091e4da005e967015ed8ca13adce08eada0730f02344"
+  },
+  {
+    "target": "D:\\005lib\\01script_file\\HPM5361ICF1\\LQFP64_10X10_P0D5.bat",
+    "staged": "D:\\001DIY\\004computer\\lga1700\\31_z690i_3d_library_20261108\\environment\\staged\\01script_file\\HPM5361ICF1\\LQFP64_10X10_P0D5.bat",
+    "before_sha256": "c7bf08eb67da9f0501780ccd82fc9fc33b5487f876a4b6a2732128cfbfae7e4f",
+    "after_sha256": "7fdc360ef1657fac425438ea273deb5f314d9c2084d8c09c6d30ddb2341f90cd"
+  },
+  {
+    "target": "D:\\005lib\\01script_file\\HPM5361IEG1\\QFN48_6X6_P0D4.bat",
+    "staged": "D:\\001DIY\\004computer\\lga1700\\31_z690i_3d_library_20261108\\environment\\staged\\01script_file\\HPM5361IEG1\\QFN48_6X6_P0D4.bat",
+    "before_sha256": "355e38eb14b68ddbfa3809ac5d92d16356f1b18abd0a7db680fdd2f43a0d7fbc",
+    "after_sha256": "dc80d1fb668a53148d30c7447b8185e4d772dc3cbc7823fc476cac1589e5ec50"
+  },
+  {
+    "target": "D:\\005lib\\01script_file\\NCP303345\\PQFN24_4X5_P0D5_483BV.bat",
+    "staged": "D:\\001DIY\\004computer\\lga1700\\31_z690i_3d_library_20261108\\environment\\staged\\01script_file\\NCP303345\\PQFN24_4X5_P0D5_483BV.bat",
+    "before_sha256": "c1f65c269851734669a955e8aecef973dc919f4ae50b4f2cd595179ad6be549e",
+    "after_sha256": "733cb5185a5abdefb2b8a736650417c1ccde1ea5b62e7f257698a99b9412f909"
+  },
+  {
+    "target": "D:\\005lib\\01script_file\\TMC6460\\TQFN38_5X7.bat",
+    "staged": "D:\\001DIY\\004computer\\lga1700\\31_z690i_3d_library_20261108\\environment\\staged\\01script_file\\TMC6460\\TQFN38_5X7.bat",
+    "before_sha256": "447718433be0a60772102e0661320f443a049458132798e428e2b0298a840e9c",
+    "after_sha256": "012e155facb3109fa9d31853407c01123151e09acc70e2c54ea50a62319c5de7"
+  },
+  {
+    "target": "C:\\Program0\\Cadence\\SPB_Data\\pcbenv\\env",
+    "staged": "D:\\001DIY\\004computer\\lga1700\\31_z690i_3d_library_20261108\\environment\\staged\\global_env",
+    "before_sha256": "6556fe08ea68ae403673f79ba5f3802a275aa87e832e055e33caa674c81b2bcd",
+    "after_sha256": "34df1fe4005aec4964c8f7b518fe9f0991816bfd7cca07f55a3aed80e6ef9784"
+  }
+]

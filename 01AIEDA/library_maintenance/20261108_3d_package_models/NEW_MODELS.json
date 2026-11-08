@@ -1,0 +1,816 @@
+[
+  {
+    "model": "LGA1700_SOCKET_ILM_ZUP_REFERENCE.step",
+    "sha256": "9565b08956c9df2be4264e0335e0f07b7ff4d99b4eb9a3b3c2e1965c25e0a8b2",
+    "bytes": 4444716,
+    "solid_meshes": 54,
+    "size_mm": [
+      84.45467348481304,
+      57.89198887766,
+      10.717581127696
+    ]
+  },
+  {
+    "model": "REF_ENVELOPE_8P4R_0402.step",
+    "sha256": "17b5c2a8210e344db5d420710402023fe7a0da98ceeba50e89510799f50a99e3",
+    "bytes": 5606,
+    "solid_meshes": 2,
+    "size_mm": [
+      2.4,
+      1.96,
+      0.615
+    ]
+  },
+  {
+    "model": "REF_ENVELOPE_DFN2510P10E.step",
+    "sha256": "270c731485a7a38566aeaee0dc2abd8ee1aec9e8d075f6b80b1b14e2bed5d641",
+    "bytes": 5588,
+    "solid_meshes": 2,
+    "size_mm": [
+      2.5,
+      1,
+      0.565
+    ]
+  },
+  {
+    "model": "REF_ENVELOPE_HEADER10X2_2MM_USB3_A.step",
+    "sha256": "89ebe48707a04d0355cec242a6e7e568329461b01d5d23bb08aa90493b0de608",
+    "bytes": 5586,
+    "solid_meshes": 2,
+    "size_mm": [
+      1,
+      1,
+      8.015
+    ]
+  },
+  {
+    "model": "REF_ENVELOPE_LP380_G120_B0R01_SOCKET.step",
+    "sha256": "5751ccbd2169f547b0837515753e5dec3fbb5ef90bc3a3997c26428dbbd0d990",
+    "bytes": 5616,
+    "solid_meshes": 2,
+    "size_mm": [
+      56.8,
+      8,
+      8.245
+    ]
+  },
+  {
+    "model": "REF_ENVELOPE_PIN02_2D54MM_1X2.step",
+    "sha256": "5075e5c42758f74db69d5d4eb1626c330dd0fb8a38443daaf2578ab5da0ff21b",
+    "bytes": 3404,
+    "solid_meshes": 1,
+    "size_mm": [
+      1,
+      1,
+      8
+    ]
+  },
+  {
+    "model": "REF_ENVELOPE_PIN10_2D54MM_2X05.step",
+    "sha256": "1750a9ba9df459ec57a34a2a5e657297418101aca67cf15e7df86a26569f2d7e",
+    "bytes": 5574,
+    "solid_meshes": 2,
+    "size_mm": [
+      1,
+      1,
+      8.015
+    ]
+  },
+  {
+    "model": "REF_ENVELOPE_QFN08P_2X2_0_5.step",
+    "sha256": "f632603003196b8cb193cde287f03c5397313161dfe07fcfa9e02ada57cea2ac",
+    "bytes": 5549,
+    "solid_meshes": 2,
+    "size_mm": [
+      2,
+      2,
+      0.815
+    ]
+  },
+  {
+    "model": "REF_ENVELOPE_QFN28_4D0X4D0.step",
+    "sha256": "5aa14c3b8072bf5fe831897cfae4b43677a6e7c65dc4b453a338d8b001ce6a2b",
+    "bytes": 5546,
+    "solid_meshes": 2,
+    "size_mm": [
+      4,
+      4,
+      0.815
+    ]
+  },
+  {
+    "model": "REF_ENVELOPE_RES_0603X4.step",
+    "sha256": "dff59a6633655a772a010509f68d9a757bbd60a95d1cdbfde9e512168046b12c",
+    "bytes": 5697,
+    "solid_meshes": 2,
+    "size_mm": [
+      2.8582,
+      2.7998,
+      0.523
+    ]
+  },
+  {
+    "model": "REF_ENVELOPE_SATA_D_AKL.step",
+    "sha256": "666eaecb82acf67bf5a030928648096e7eaf036fa0cb993667b658315cc2628d",
+    "bytes": 5553,
+    "solid_meshes": 2,
+    "size_mm": [
+      1,
+      1,
+      8.015
+    ]
+  },
+  {
+    "model": "REF_ENVELOPE_SMD_NGFF_75P_M2_H3_LOTES.step",
+    "sha256": "48c2089e5ee3d4671239f5ce3a7b8d2e88da00be1d0fc9591644236fdac26016",
+    "bytes": 5715,
+    "solid_meshes": 2,
+    "size_mm": [
+      23.114,
+      87.5119,
+      3.015
+    ]
+  },
+  {
+    "model": "REF_ENVELOPE_SMD_NGFF_75P_M2_H3_LOTES_2242_2230.step",
+    "sha256": "ba5c32c8d5d04705ab0c4e62d669c1dcca41a1c619ad853fde2254227e32838a",
+    "bytes": 5653,
+    "solid_meshes": 2,
+    "size_mm": [
+      23.2,
+      11.2,
+      3.015
+    ]
+  },
+  {
+    "model": "REF_ENVELOPE_SODIMM_DDR4_260P_H.step",
+    "sha256": "0547891e1edccf6f84d17ba9fa9cfb3ffed0844221169aa2bc6d4233ddfc0593",
+    "bytes": 3450,
+    "solid_meshes": 1,
+    "size_mm": [
+      85.3,
+      10.35,
+      5.2
+    ]
+  },
+  {
+    "model": "REF_ENVELOPE_VSSOP8_TMP75.step",
+    "sha256": "b7824cac49b171ce5de18ced8fad3fd9762f9bbcfe8a8e67e4b82fbb9e4f290a",
+    "bytes": 5575,
+    "solid_meshes": 2,
+    "size_mm": [
+      3,
+      3,
+      1.115
+    ]
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_ATX_12V_2X4.step",
+    "sha256": "4cc9d2d0cfdb7a23f48be3ed2ba23de45e9be7bea87a5a9892888b34d30735cd",
+    "bytes": 5694,
+    "solid_meshes": 2,
+    "size_mm": [
+      14.9873,
+      8.1908,
+      8.015
+    ]
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_BAT.step",
+    "sha256": "bed955a41fd6465074a2eca5d84e3be78966b5bddc67f1a6d5e7c06f5a6e3f26",
+    "bytes": 3431,
+    "solid_meshes": 1,
+    "size_mm": [
+      0.889,
+      2.1386,
+      1
+    ]
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_DA1_DL1.step",
+    "sha256": "291d21a56aafae21020d2196c4a14922beff99db0882928f4a9b703af36cefe4",
+    "bytes": 3443,
+    "solid_meshes": 1,
+    "size_mm": [
+      3.5052,
+      10.795,
+      3
+    ]
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_DA1_DU1.step",
+    "sha256": "ded55e1f89622edf7286faf68ac49527f89f645d56304408b12b8e76d196b9d1",
+    "bytes": 5546,
+    "solid_meshes": 2,
+    "size_mm": [
+      5,
+      6,
+      0.915
+    ]
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_DAEC16.step",
+    "sha256": "4450f7eb13c9c285042804ce8e30a318b5a658fe66d58ae61b9790a933fcc6e6",
+    "bytes": 3440,
+    "solid_meshes": 1,
+    "size_mm": [
+      1.4732,
+      4.0132,
+      6
+    ]
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_DAEC32.step",
+    "sha256": "1a162f212bf512ee4a0808b35673fe5d10d83b204ed64976392b2f91b2b8c6f1",
+    "bytes": 3440,
+    "solid_meshes": 1,
+    "size_mm": [
+      1.4732,
+      4.0132,
+      6
+    ]
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_DAEC33.step",
+    "sha256": "70213c3b972a0ad3956be18083ce003ae3270c28dcaa2f72afd3e5ea9b5fc847",
+    "bytes": 3440,
+    "solid_meshes": 1,
+    "size_mm": [
+      1.4732,
+      4.0132,
+      6
+    ]
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_DB1_DL1.step",
+    "sha256": "ef25c7ec6cb3475f851a5059e94c7513cd11e5424af1ac42a1dae029487542fd",
+    "bytes": 3443,
+    "solid_meshes": 1,
+    "size_mm": [
+      3.5052,
+      10.795,
+      3
+    ]
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_DB1_DU1.step",
+    "sha256": "93aebf3d2425632aaea2a7c8996df07d516be8dbbe134b14bb264b12dafd1750",
+    "bytes": 5546,
+    "solid_meshes": 2,
+    "size_mm": [
+      5,
+      6,
+      0.915
+    ]
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_DC1_DL1.step",
+    "sha256": "36694d0dc9fa554188bc2ad803e48f820174eb311b7b17577d025cfb5683b531",
+    "bytes": 3443,
+    "solid_meshes": 1,
+    "size_mm": [
+      3.5052,
+      10.795,
+      3
+    ]
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_DC1_DU1.step",
+    "sha256": "fe0189d0f151777acf924a66c8ec95c7431df7c48f620163da8a90b208d1bafd",
+    "bytes": 5546,
+    "solid_meshes": 2,
+    "size_mm": [
+      5,
+      6,
+      0.915
+    ]
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_DC1_L1.step",
+    "sha256": "874b7e423f123282471d271beb9714ac94ab97cdab1f30fb59ea7c4b97c86400",
+    "bytes": 3440,
+    "solid_meshes": 1,
+    "size_mm": [
+      10.795,
+      3.5052,
+      3
+    ]
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_DC1_U1.step",
+    "sha256": "fa457e623d482bc2ac63f5071ff57afd16fdf4ab7722e164a919b5f79e7b3d10",
+    "bytes": 5543,
+    "solid_meshes": 2,
+    "size_mm": [
+      6,
+      5,
+      0.915
+    ]
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_DC2_L1.step",
+    "sha256": "7a923ed37e6e1d4662856f78194b8d1dff689731a588444b2c95c70227920b09",
+    "bytes": 3440,
+    "solid_meshes": 1,
+    "size_mm": [
+      10.795,
+      3.5052,
+      3
+    ]
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_DC2_U1.step",
+    "sha256": "c28251286b877a547def940e643110ab04f04a802a4a23c251e0b4814a34134b",
+    "bytes": 5543,
+    "solid_meshes": 2,
+    "size_mm": [
+      6,
+      5,
+      0.915
+    ]
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_DCEC1.step",
+    "sha256": "499e2f8611ef6dc3bc36359dfa68630ad965fefaf0406f0c398ec65df975797a",
+    "bytes": 3437,
+    "solid_meshes": 1,
+    "size_mm": [
+      1.4732,
+      4.0132,
+      6
+    ]
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_DCEC2.step",
+    "sha256": "f4c716277f111cc3161f2a9d7a954302f6ae5f935e40c4b478f4a564bff554ba",
+    "bytes": 3437,
+    "solid_meshes": 1,
+    "size_mm": [
+      1.4732,
+      4.0132,
+      6
+    ]
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_DD1_DL1.step",
+    "sha256": "3fb6414489235d472f42b879883871472d638d9ec67f6b9b3abf1d6796f88503",
+    "bytes": 3443,
+    "solid_meshes": 1,
+    "size_mm": [
+      3.5052,
+      10.795,
+      3
+    ]
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_DD1_DU1.step",
+    "sha256": "7d674768714fe7a9df9421399eefcc7479a86a823322c14298acace0f60d4158",
+    "bytes": 5546,
+    "solid_meshes": 2,
+    "size_mm": [
+      5,
+      6,
+      0.915
+    ]
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_DE1_DL1.step",
+    "sha256": "4313767fb3ee12e1895b4d0a6411bcc3ece83c96e2ee4095dd23c52d5a3dca19",
+    "bytes": 3443,
+    "solid_meshes": 1,
+    "size_mm": [
+      10.795,
+      3.5052,
+      3
+    ]
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_DE1_DU1.step",
+    "sha256": "fd7edd4503f3585152cce1df7169fc9304b2c4d6b6d258da99f0db887b6ac738",
+    "bytes": 5546,
+    "solid_meshes": 2,
+    "size_mm": [
+      6,
+      5,
+      0.915
+    ]
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_DF1_DL1.step",
+    "sha256": "71f3f45d6b6147202a93491b8e82ed020f1741a20388278ad0fa64c97e343809",
+    "bytes": 3443,
+    "solid_meshes": 1,
+    "size_mm": [
+      10.795,
+      3.5052,
+      3
+    ]
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_DF1_DU1.step",
+    "sha256": "77fbec93a7ec92db39f3f52cfac7989a2e90183b19c6e309b1ee4a5433db2d4d",
+    "bytes": 5546,
+    "solid_meshes": 2,
+    "size_mm": [
+      6,
+      5,
+      0.915
+    ]
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_DF_L1.step",
+    "sha256": "b7a383085d860d3957ecf9b8f561a507e603ff4decffef2a80f364c8c8c08b90",
+    "bytes": 3445,
+    "solid_meshes": 1,
+    "size_mm": [
+      3.2004,
+      7.9883,
+      3
+    ]
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_DG1_DL1.step",
+    "sha256": "5159a84402878472575c0c47d0b5392cea1fbadf92d523eba0828edc95e5e08c",
+    "bytes": 3443,
+    "solid_meshes": 1,
+    "size_mm": [
+      10.795,
+      3.5052,
+      3
+    ]
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_DG1_DU1.step",
+    "sha256": "e566b44ea8b50a00cb4bfb818d8bc3c7e0c236f159f36796b69c79557a5b13e0",
+    "bytes": 5546,
+    "solid_meshes": 2,
+    "size_mm": [
+      6,
+      5,
+      0.915
+    ]
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_DH1_DL1.step",
+    "sha256": "bbba09d9b148ce3d2f9b23eef341f11536fde65083ee7bc252524882d2cbdf20",
+    "bytes": 3443,
+    "solid_meshes": 1,
+    "size_mm": [
+      10.795,
+      3.5052,
+      3
+    ]
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_DH1_DU1.step",
+    "sha256": "11bb20bdbcc7e551acad34244f4d7cd57f3d2c9019c7c3fdb6a48b62df0a7cc3",
+    "bytes": 5546,
+    "solid_meshes": 2,
+    "size_mm": [
+      6,
+      5,
+      0.915
+    ]
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_DH_U1.step",
+    "sha256": "822469166da16c4113625a5924cc986fead87e99dca7de4c82df8e5d660552f7",
+    "bytes": 5612,
+    "solid_meshes": 2,
+    "size_mm": [
+      4.9,
+      3.9,
+      1.765
+    ]
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_DI1_DL1.step",
+    "sha256": "e7cad0650637dbcb8e6725f3e7e46bf88e39afcbe43e36106ef456c7d40b119e",
+    "bytes": 3443,
+    "solid_meshes": 1,
+    "size_mm": [
+      10.795,
+      3.5052,
+      3
+    ]
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_DI1_DU1.step",
+    "sha256": "a75e26b16e2f3b868f2e434bc13c2a4e46e2a51c8fba1cb95c216b44fa1316b6",
+    "bytes": 5546,
+    "solid_meshes": 2,
+    "size_mm": [
+      6,
+      5,
+      0.915
+    ]
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_DJ1_DL1.step",
+    "sha256": "7122a76abafe172a8d90f1df3e60aaf0845fd176358e2f06d5687b243cda6b41",
+    "bytes": 3443,
+    "solid_meshes": 1,
+    "size_mm": [
+      10.795,
+      3.5052,
+      3
+    ]
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_DJ1_DU1.step",
+    "sha256": "71e673a41bb7ba06b3734a2ddadf019a5e012a8960c96638008caccbb9de91e7",
+    "bytes": 5546,
+    "solid_meshes": 2,
+    "size_mm": [
+      6,
+      5,
+      0.915
+    ]
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_DP_HDMI20.step",
+    "sha256": "ac52a5fbcfd4cfeade825355c98e1e8e9106434550d364fac39193eb74af8f6c",
+    "bytes": 5680,
+    "solid_meshes": 2,
+    "size_mm": [
+      16.4592,
+      18.1864,
+      8.015
+    ]
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_DX_DL1.step",
+    "sha256": "2f06ff596844a7d971b8d367cd1ab8ca5216e9d6e7d3976a2752bed678242688",
+    "bytes": 3440,
+    "solid_meshes": 1,
+    "size_mm": [
+      3.5052,
+      10.795,
+      3
+    ]
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_DX_DU1.step",
+    "sha256": "4449b5680b860a3902dc3cc24b0428ef680937c7f76e8c3b3b71ae64345a087a",
+    "bytes": 5671,
+    "solid_meshes": 2,
+    "size_mm": [
+      5.6256,
+      6.6258,
+      1.015
+    ]
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_HHAU1.step",
+    "sha256": "6b7581d8d4bfca2ea0907d89707765fcc7b4d65e29523c74beacda390d237c05",
+    "bytes": 5580,
+    "solid_meshes": 2,
+    "size_mm": [
+      3.5,
+      9,
+      0.815
+    ]
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_HHA_Q5.step",
+    "sha256": "725b754a5040643a3fdb7b107e0f6d806142dc31d4b1185326ab7df1dbb9ec51",
+    "bytes": 5639,
+    "solid_meshes": 2,
+    "size_mm": [
+      3.9027,
+      3.46,
+      1.015
+    ]
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_MAEC1.step",
+    "sha256": "262fa72bd1b0032d194fb2662860440500bd07201ce31d199efae118a79a8e3e",
+    "bytes": 3437,
+    "solid_meshes": 1,
+    "size_mm": [
+      8.509,
+      2.667,
+      6
+    ]
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_MAU1.step",
+    "sha256": "2c52e1fffc42397a37853958565b2f26717cde3826038c6210bcd2ce5269f218",
+    "bytes": 5609,
+    "solid_meshes": 2,
+    "size_mm": [
+      3.9,
+      4.9,
+      1.765
+    ]
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_MA_DQ1.step",
+    "sha256": "160f20ab364608069afd28778f642496aa46c31ee06517a3c06fb2b0c9a91802",
+    "bytes": 5639,
+    "solid_meshes": 2,
+    "size_mm": [
+      3.9027,
+      3.46,
+      1.015
+    ]
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_MA_DQ2.step",
+    "sha256": "bae79189872a2a9ff1bd0f3e0a8e1ea5de4645e2c39b4f405122632e2b1e505c",
+    "bytes": 5639,
+    "solid_meshes": 2,
+    "size_mm": [
+      3.9027,
+      3.46,
+      1.015
+    ]
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_MA_L1.step",
+    "sha256": "4e190be9aa86371d87616757ed1f20ab38239dafea96e50ec35e69023880282d",
+    "bytes": 3437,
+    "solid_meshes": 1,
+    "size_mm": [
+      7.3914,
+      7.1882,
+      3
+    ]
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_MA_L2.step",
+    "sha256": "1f49f189c931c71e21e4ebd2929b38514e83409d00661e310885c8304d1565ef",
+    "bytes": 3437,
+    "solid_meshes": 1,
+    "size_mm": [
+      5.715,
+      1.4986,
+      3
+    ]
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_MA_L3.step",
+    "sha256": "49af97df43ec339befb9281074453ee58269a247746937bdffd33cfb8db9c63d",
+    "bytes": 3445,
+    "solid_meshes": 1,
+    "size_mm": [
+      3.2004,
+      7.9883,
+      3
+    ]
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_ND_L1.step",
+    "sha256": "4551734f04fab695f680f8e734b70bc8296175cbfe63f26e99f27b5fb49e8a52",
+    "bytes": 3445,
+    "solid_meshes": 1,
+    "size_mm": [
+      3.2004,
+      7.9883,
+      3
+    ]
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_NPA_DQ1.step",
+    "sha256": "3d63d4cd7117dff3276c26cbaba3e877f6fcdaffd02d6d5c746d784ab431235d",
+    "bytes": 5642,
+    "solid_meshes": 2,
+    "size_mm": [
+      3.9027,
+      3.46,
+      1.015
+    ]
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_NPA_DQ2.step",
+    "sha256": "bf8c28c360fb9344f7a8192148f173297fcea48f3c932020ac1635ca696fa11f",
+    "bytes": 5642,
+    "solid_meshes": 2,
+    "size_mm": [
+      3.9027,
+      3.46,
+      1.015
+    ]
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_NPA_DQ3.step",
+    "sha256": "008972cf4c3ee0d31208f47c65936e3fcbbf34809ef1d229e21dae7055470218",
+    "bytes": 5642,
+    "solid_meshes": 2,
+    "size_mm": [
+      3.9027,
+      3.46,
+      1.015
+    ]
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_NPA_EC1.step",
+    "sha256": "3eed502d969bbfac7164a7ccd7ff9851c6b4d4c9661180030fb8afb1514fc428",
+    "bytes": 3443,
+    "solid_meshes": 1,
+    "size_mm": [
+      8.509,
+      2.667,
+      6
+    ]
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_NPA_L1.step",
+    "sha256": "c774ddc7773be20e53fd92e755ea2975db193cf51228ff10ad9c6ec370fff172",
+    "bytes": 3440,
+    "solid_meshes": 1,
+    "size_mm": [
+      7.1882,
+      7.3914,
+      3
+    ]
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_NPA_L2.step",
+    "sha256": "7079ac40710564e38febaefc133b75b4d1d12ca2baffd31f59c512a27a26f784",
+    "bytes": 3440,
+    "solid_meshes": 1,
+    "size_mm": [
+      5.715,
+      1.4986,
+      3
+    ]
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_NPB_L1.step",
+    "sha256": "06482f9d69728e3f6b277ae55e18a363565e7fb765b068eb5d4c8fe28cb8ba3a",
+    "bytes": 3448,
+    "solid_meshes": 1,
+    "size_mm": [
+      3.2004,
+      7.9883,
+      3
+    ]
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_PCIEX16.step",
+    "sha256": "21d8620ff6982dbb8b16db8551e165ae4ef84480ec05743687c0367c7f87fcde",
+    "bytes": 3459,
+    "solid_meshes": 1,
+    "size_mm": [
+      86.0552,
+      10.6091,
+      8
+    ]
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_Q30.step",
+    "sha256": "b1f11bb2317bd82dd4d793f5e8ddc4c94c66e28e9258efe5346ca6935a3c19f7",
+    "bytes": 5646,
+    "solid_meshes": 2,
+    "size_mm": [
+      5.3975,
+      6.985,
+      1.015
+    ]
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_Q4.step",
+    "sha256": "7c5eac078f3c3f08e0936b209ebf0dbab78b4b30ac94d52b3842d581b97dcc22",
+    "bytes": 5651,
+    "solid_meshes": 2,
+    "size_mm": [
+      6.223,
+      10.6807,
+      1.015
+    ]
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_U1.step",
+    "sha256": "f1b377912c03846610f286f08fb8748743629e2c6321276579d6217b3e47a028",
+    "bytes": 5531,
+    "solid_meshes": 2,
+    "size_mm": [
+      8,
+      8,
+      0.915
+    ]
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_USB20.step",
+    "sha256": "3942612c2a0d869ecad4d7f004c1cd90a3ec3e649ddd6757254dc5f50506b1d7",
+    "bytes": 5668,
+    "solid_meshes": 2,
+    "size_mm": [
+      8.7376,
+      16.1798,
+      8.015
+    ]
+  },
+  {
+    "model": "REF_ENVELOPE_Z690N_0BE6344CD2.step",
+    "sha256": "48ff22f718c738e76b50b7336d18ac3d122f1e5e056947c756e1e9cdda6f338b",
+    "bytes": 5571,
+    "solid_meshes": 2,
+    "size_mm": [
+      1,
+      1,
+      1.015
+    ]
+  }
+]

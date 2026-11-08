@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF8'?>
+<!DOCTYPE padstack>
+<padstack version="1.0">
+  <padstackname>via020c045_hq</padstackname>
+  <padstackusage>VIA</padstackusage>
+  <units>Mm</units><accuracy>3</accuracy>
+  <drillinfo>
+    <slothole><holetype>CIRCLE</holetype><plating>Y</plating><width>0.200</width><height>0.200</height><offset>(0;0)</offset><drillmethod>STANDARD</drillmethod></slothole>
+    <drillsymbol><figure>CIRCLE</figure><characters>P</characters><width>0.200</width><height>0.200</height></drillsymbol>
+  </drillinfo>
+  <pad><type>REGULAR_PAD</type><layer>BEGIN_LAYER</layer><figure>CIRCLE</figure><offset>(0;0)</offset><width>0.450</width><height>0.450</height></pad>
+  <pad><type>THERMAL_PAD</type><layer>BEGIN_LAYER</layer><figure>CIRCLE</figure><offset>(0;0)</offset><width>0.700</width><height>0.700</height></pad>
+  <pad><type>ANTIPAD_PAD</type><layer>BEGIN_LAYER</layer><figure>CIRCLE</figure><offset>(0;0)</offset><width>0.700</width><height>0.700</height></pad>
+  <pad><type>REGULAR_PAD</type><layer>DEFAULT_INTERNAL</layer><figure>CIRCLE</figure><offset>(0;0)</offset><width>0.450</width><height>0.450</height></pad>
+  <pad><type>THERMAL_PAD</type><layer>DEFAULT_INTERNAL</layer><figure>CIRCLE</figure><offset>(0;0)</offset><width>0.700</width><height>0.700</height></pad>
+  <pad><type>ANTIPAD_PAD</type><layer>DEFAULT_INTERNAL</layer><figure>CIRCLE</figure><offset>(0;0)</offset><width>0.700</width><height>0.700</height></pad>
+  <pad><type>REGULAR_PAD</type><layer>END_LAYER</layer><figure>CIRCLE</figure><offset>(0;0)</offset><width>0.450</width><height>0.450</height></pad>
+  <pad><type>THERMAL_PAD</type><layer>END_LAYER</layer><figure>CIRCLE</figure><offset>(0;0)</offset><width>0.700</width><height>0.700</height></pad>
+  <pad><type>ANTIPAD_PAD</type><layer>END_LAYER</layer><figure>CIRCLE</figure><offset>(0;0)</offset><width>0.700</width><height>0.700</height></pad>
+  <pad><type>REGULAR_PAD</type><layer>TOP_SOLDER_MASK_PAD</layer><figure>NONE</figure><offset>(0;0)</offset><width>0.000</width><height>0.000</height></pad>
+  <pad><type>REGULAR_PAD</type><layer>BOTTOM_SOLDER_MASK_PAD</layer><figure>NONE</figure><offset>(0;0)</offset><width>0.000</width><height>0.000</height></pad>
+</padstack>

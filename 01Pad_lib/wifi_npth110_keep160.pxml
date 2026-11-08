@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF8'?>
+<!DOCTYPE padstack>
+<padstack version="1.0">
+  <padstackname>wifi_npth110_keep160</padstackname>
+  <padstackusage>MECH_HOLE</padstackusage>
+  <units>Mm</units><accuracy>3</accuracy>
+  <drillinfo>
+    <slothole><holetype>CIRCLE</holetype><plating>N</plating><width>1.100</width><height>1.100</height><offset>(0;0)</offset><drillmethod>STANDARD</drillmethod></slothole>
+    <drillsymbol><figure>CIRCLE</figure><characters>N</characters><width>1.100</width><height>1.100</height></drillsymbol>
+  </drillinfo>
+  <pad><type>REGULAR_PAD</type><layer>BEGIN_LAYER</layer><figure>CIRCLE</figure><offset>(0;0)</offset><width>1.900</width><height>1.900</height></pad>
+  <pad><type>KEEPOUT</type><layer>BEGIN_LAYER</layer><figure>CIRCLE</figure><offset>(0;0)</offset><width>1.600</width><height>1.600</height></pad>
+  <pad><type>REGULAR_PAD</type><layer>DEFAULT_INTERNAL</layer><figure>CIRCLE</figure><offset>(0;0)</offset><width>1.900</width><height>1.900</height></pad>
+  <pad><type>KEEPOUT</type><layer>DEFAULT_INTERNAL</layer><figure>CIRCLE</figure><offset>(0;0)</offset><width>1.600</width><height>1.600</height></pad>
+  <pad><type>REGULAR_PAD</type><layer>END_LAYER</layer><figure>CIRCLE</figure><offset>(0;0)</offset><width>1.900</width><height>1.900</height></pad>
+  <pad><type>KEEPOUT</type><layer>END_LAYER</layer><figure>CIRCLE</figure><offset>(0;0)</offset><width>1.600</width><height>1.600</height></pad>
+  <pad><type>REGULAR_PAD</type><layer>TOP_SOLDER_MASK_PAD</layer><figure>CIRCLE</figure><offset>(0;0)</offset><width>1.300</width><height>1.300</height></pad>
+  <pad><type>REGULAR_PAD</type><layer>BOTTOM_SOLDER_MASK_PAD</layer><figure>CIRCLE</figure><offset>(0;0)</offset><width>1.300</width><height>1.300</height></pad>
+</padstack>

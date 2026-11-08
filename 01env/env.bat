@@ -1,4 +1,3 @@
-del C:\Program0\Cadence\spbdata172\pcbenv\env /s
-copy env C:\Program0\Cadence\spbdata172\pcbenv\env
-del C:\Program0\Cadence\SPB_Data\pcbenv\env  /s
-copy env C:\Program0\Cadence\SPB_Data\pcbenv\env
+@echo off
+call "%~dp0setup_library_paths.cmd" %*
+exit /b %errorlevel%

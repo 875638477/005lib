@@ -1,0 +1,298 @@
+[
+  {
+    "model": "LGA1700_SOCKET_ILM_ZUP_REFERENCE.step",
+    "sha256": "9565b08956c9df2be4264e0335e0f07b7ff4d99b4eb9a3b3c2e1965c25e0a8b2"
+  },
+  {
+    "model": "REF_ENVELOPE_8P4R_0402.step",
+    "sha256": "32fa946f6a57ec7a60529d3cc20539a43e1c488f9d628f3e3b980dd769cc3498"
+  },
+  {
+    "model": "REF_ENVELOPE_DFN2510P10E.step",
+    "sha256": "098963cb9fddf120039f4b445d83b92dc5313e193201bf6dd78e087b57b48abc"
+  },
+  {
+    "model": "REF_ENVELOPE_HEADER10X2_2MM_USB3_A.step",
+    "sha256": "00fcfb12966acf344367997d1335f2d2adc77360c8ed7fc6031ab13b25f40a2e"
+  },
+  {
+    "model": "REF_ENVELOPE_LP380_G120_B0R01_SOCKET.step",
+    "sha256": "300908a267ecedb9dcf33136fe52acd2abf66e2fe4ff027ba32c5e71e4c475fa"
+  },
+  {
+    "model": "REF_ENVELOPE_PIN02_2D54MM_1X2.step",
+    "sha256": "fd2f7b541751413ff4ed0e57c2df640854a03bd12fe1b7ecc71a33ac7dae6125"
+  },
+  {
+    "model": "REF_ENVELOPE_PIN10_2D54MM_2X05.step",
+    "sha256": "870ef881f1e4fb1d7eafb4be7fad6222ca34f4909086e8404a26bec60eb5397c"
+  },
+  {
+    "model": "REF_ENVELOPE_QFN08P_2X2_0_5.step",
+    "sha256": "bee86c0f6f32ffdbb61154ca646173e6822b0c346e2fd5b3552bb46ae07bd742"
+  },
+  {
+    "model": "REF_ENVELOPE_QFN28_4D0X4D0.step",
+    "sha256": "cc5ddbd37c146a183386ac8b08f4375398a5fd010554baeb57d848d50c3f8f10"
+  },
+  {
+    "model": "REF_ENVELOPE_RES_0603X4.step",
+    "sha256": "8909f3c65cca7acc6c433e2e8749971cc8295741030b7ac322bfad7c6ec44dcd"
+  },
+  {
+    "model": "REF_ENVELOPE_SATA_D_AKL.step",
+    "sha256": "f48bcd249b6d3bff5c34eef0eb8ae43c030633e821dc63c510e84f5ba37606e6"
+  },
+  {
+    "model": "REF_ENVELOPE_SMD_NGFF_75P_M2_H3_LOTES.step",
+    "sha256": "cc5450db00862d01a364cf98996386de080d1c01cf76c0941d614a9713dc923d"
+  },
+  {
+    "model": "REF_ENVELOPE_SMD_NGFF_75P_M2_H3_LOTES_2242_2230.step",
+    "sha256": "5b96b61a8c5dd7e3179840f83b27c56688c5bea38b1af42c0f846750fafaf72b"
+  },
+  {
+    "model": "REF_ENVELOPE_SODIMM_DDR4_260P_H.step",
+    "sha256": "78977ac536c4ef321d0c3b3a4809ac88f6231f51ebfeb9c376c42e31155fd42f"
+  },
+  {
+    "model": "REF_ENVELOPE_VSSOP8_TMP75.step",
+    "sha256": "2b49a00088d03e495cb56e1c9bd7c6a515cb734930473d83bb92450363173251"
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_ATX_12V_2X4.step",
+    "sha256": "ab8317cb7f4a3218800dda576d4a0445d7f175c845835c2c0419d46ada447d0c"
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_BAT.step",
+    "sha256": "1c8a7f93f85f78ddf2c4f7f38fc9574ef433f547a917af58e4aad1f98aba0ff4"
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_DA1_DL1.step",
+    "sha256": "46ea60be5639e8a559b821f19c2b4ea423d4b6766a14e72da24b0f9a28754cff"
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_DA1_DU1.step",
+    "sha256": "8eb59347e435c65c35b62eb4cdda7a59a7a3d2eca3619524fb68434e0fbea00a"
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_DAEC16.step",
+    "sha256": "62d044cd3dab055f1b341305ef97a3f5fb114feafffc7b77901f27a7cdcffb7c"
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_DAEC32.step",
+    "sha256": "c12f7f18ab23cdf466e01b5fc2534f6c6e590b2e275c671e8bfefe16f28e8df6"
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_DAEC33.step",
+    "sha256": "a9c7f7dc5b1440cd76e0abad03633f7180f625bbffd46095b243002dcd0b186a"
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_DB1_DL1.step",
+    "sha256": "df789c340100647c4f412449b691d6baaee74be9966aac1c2299b4022d39f0b4"
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_DB1_DU1.step",
+    "sha256": "0e67c8c769df65ffdfc905f3d0da059db5a68bc7109f4f3e1f3ba3485baf3b52"
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_DC1_DL1.step",
+    "sha256": "86a4dd88720c22eeff2623430d7485ca21a41799a123ee5d79941d75da71994a"
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_DC1_DU1.step",
+    "sha256": "b34141e1c0677013dc1679be880f8c25d2ca6a5e679525ba24d25b89381bff7e"
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_DC1_L1.step",
+    "sha256": "07d2c14be9b0ea99c8f6f2d8955fbf67b3fa22eb5768bff668c5f7ccac5f1707"
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_DC1_U1.step",
+    "sha256": "370b25098f6ace38b6d37f40fffb31784e2a0827e2bb46edeab02af43ffb05b2"
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_DC2_L1.step",
+    "sha256": "bc5b1b9259d09c98858557b328a7a4165eb82dcbc3bcc53e08ed1cd55f4f0984"
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_DC2_U1.step",
+    "sha256": "b4f0bf1dcf79afe31f71d7a1eaf87cf537e280777b0d72f6f92d7abd479f0201"
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_DCEC1.step",
+    "sha256": "492d41f389a004a47232896d8b8be61cd71cc21c2bcbfd16f3e54d0f82171d29"
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_DCEC2.step",
+    "sha256": "754d822e47769004bf257315c1f7b8c0a2baaacb26c4ae99084ba34c80457abc"
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_DD1_DL1.step",
+    "sha256": "b413086005bdcf13d7a4dce421e82fb963711afa20cc840f355acd59ed6d8fc8"
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_DD1_DU1.step",
+    "sha256": "c8145852122eac7332778ad6ccf38aae39d1a8353df34d85e6732cb2a937fe68"
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_DE1_DL1.step",
+    "sha256": "e7701a44e4169d013f439a5e6f9d0f3eb7cf9de483372000fab81bf8dcbf4822"
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_DE1_DU1.step",
+    "sha256": "5da16ac727b30ed970f3403a86bfc44dafadd7aef9ed5e3d92f120937b2e463e"
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_DF1_DL1.step",
+    "sha256": "74a9a672aa6fe49ba4ecbf692953254aae5ff14a730d0f6126b6e87d5f437fe5"
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_DF1_DU1.step",
+    "sha256": "67d1d83855ddee9a6eea1d8b3bf41eacaa765d476a88f3307e0c8b47a1c935b3"
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_DF_L1.step",
+    "sha256": "d35394cad370daa750f71c837b2acf5e8aea7c11233dcc3de6fc6cd210e49f3b"
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_DG1_DL1.step",
+    "sha256": "960236f11924fa4786004e9c70ae1e16b5b2b10f3474decae0e5973c512eb302"
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_DG1_DU1.step",
+    "sha256": "0140668e2c64b6815ff1e3087b61cb035cf424873d88ff7ee4b5ad82aa4f1cd8"
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_DH1_DL1.step",
+    "sha256": "2057e62952d06162b31755616b2d1d457c79dbe5b02d082beedd56c796151625"
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_DH1_DU1.step",
+    "sha256": "3814e0aa493f6ab26112b8c0ce0046f76d0f7b56e74665fe1f15b2accd4c2020"
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_DH_U1.step",
+    "sha256": "5850fa2d954b797d09723367b6f2be2f0f29e845dbf66283f8cf54b71e92f912"
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_DI1_DL1.step",
+    "sha256": "ec63abdb6c0707bfecd53d4a404de19fca2f9ce2d90456c315c7bde4f4cf1846"
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_DI1_DU1.step",
+    "sha256": "7af3fa162ecf8b17eda58f4586d13a256560200f51cd1996eb6ecd7e78831447"
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_DJ1_DL1.step",
+    "sha256": "932e50df3465acb2bbd823b4e3713d81cb8816a8200ba3fe8c3e04aabcd536d8"
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_DJ1_DU1.step",
+    "sha256": "20934bf646bd492011dec255bb3e0fce362ce425785b7cbb0972c299c3aa0fe2"
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_DP_HDMI20.step",
+    "sha256": "423ae524dd15e3879c39589fd7f8ac313238262404f9820c3ce7595079e43409"
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_DX_DL1.step",
+    "sha256": "82f3eb097f4ae3e2b4a7b67bc2ceb5e56297c3a31c9b4e416bbf3d617c93ed14"
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_DX_DU1.step",
+    "sha256": "a486e7bd1ea9a1098b1c63ae19b70efe45bd7309455515eae09ec33342fca985"
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_HHAU1.step",
+    "sha256": "05ad30d11f0ab555ac4aeb19864b5f2ce4267c18b6ef0dc38859b591685c05db"
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_HHA_Q5.step",
+    "sha256": "08def80879c647a5f81bbb64a352c7430d1396043f63007cd0b27885e22bdc37"
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_MAEC1.step",
+    "sha256": "d8f132c00d07392fd6c3f79ce0c634991dbe24fc31a5c48e61d4187accac523f"
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_MAU1.step",
+    "sha256": "5868610268d7fdde5690238c1a12c877698f4775f5748b581726f401cf183666"
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_MA_DQ1.step",
+    "sha256": "6fbeaaf6468c321f4292a2cc900d02f049d8b4971e2c902723f706cb81dfe06c"
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_MA_DQ2.step",
+    "sha256": "b44ebb301cbc96fc99896c0c4529c0e02a33286888c42d210e2fa6eb3d776148"
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_MA_L1.step",
+    "sha256": "0096bcf2b7435d00373df80b5d0758060c8b443ba8d8be1c7ed4b9c065f41da4"
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_MA_L2.step",
+    "sha256": "a47d41d890372c6ff00beaf5f054d9208a8edc3293fae1ff5b1d4f329b7b971f"
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_MA_L3.step",
+    "sha256": "519bb59b3d70550256e3e5660dd65324816ed84d8e7067f38e87d29ef1f1586a"
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_ND_L1.step",
+    "sha256": "41ff8fca25cb7560a9db3a2753a7ec6f3b3ade5204c16aa8747a4d0910c40e6b"
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_NPA_DQ1.step",
+    "sha256": "947ca1e70c6002084b55e86da5db3aa5694a4e40807e46c7a33926787ab32446"
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_NPA_DQ2.step",
+    "sha256": "265fe3ac28b40261df92c08e634f335b5f1047c181424ac5568f3a8378f450c1"
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_NPA_DQ3.step",
+    "sha256": "65ccf1d90930437b05b8d5ca087c241b9bc8925904f8c6a4af0245fbf8788570"
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_NPA_EC1.step",
+    "sha256": "059a59ce8fd73420f0b7e3b9a22a4867f438f6567dcb3f53fe55eb3fa567cb33"
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_NPA_L1.step",
+    "sha256": "c3760e2ab741eb441828ca312d2da99a7fef06450e0aeea4ffa6ff2c2ab8dbe7"
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_NPA_L2.step",
+    "sha256": "fd505e32524d4927d0c142dc51afc3ac50be566dfcd3ebaf50e62adba03c27a9"
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_NPB_L1.step",
+    "sha256": "085f00feed10ebeb67e42541e507bc15a2b2aa50c9bb7b4d15f56c2e71627798"
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_PCIEX16.step",
+    "sha256": "1d51b55b65d34c616bccb7addd20e26ac25d0b14607081f05e811f93355d417d"
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_Q30.step",
+    "sha256": "41924b006919ae284e21a83ede92ea5ef8c013f3d71b3f6a4d8f074c8c2dae59"
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_Q4.step",
+    "sha256": "2235cd2c1c210924bcaf48a3ff82a3e8616aac2e6bae9a0a49cf908ac93f2bdb"
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_U1.step",
+    "sha256": "434c18cf71dee24eccbb5166acb8fb2e8e39fe16e46c3981271f3073e1d5e651"
+  },
+  {
+    "model": "REF_ENVELOPE_Z690I_USB20.step",
+    "sha256": "682b71a9e6f924aa64644cfc7511a7d8fb4fd1ef7bb6db4328fd68a14f0bdc27"
+  },
+  {
+    "model": "REF_ENVELOPE_Z690N_0BE6344CD2.step",
+    "sha256": "2c13270a9de80c0cb6a15c8041938fa2a73c1b176b2d59e63b5e5ef2c67af47e"
+  }
+]

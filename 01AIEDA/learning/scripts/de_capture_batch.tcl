@@ -1,7 +1,7 @@
 if {$argc!=2} {error "Usage: de_capture_batch.tcl job.tcl result.tcldict"}
 set job [file normalize [lindex $argv 0]];set output [file normalize [lindex $argv 1]]
 foreach path [list $job $output] {
- if {![string match {D:/005lib/01aieda/learning/*} [string tolower [string map {\\ /} $path]]]} {error "Path outside learning"}
+ if {![string match {d:/001diy/005lib/01aieda/learning/*} [string tolower [string map {\\ /} $path]]]} {error "Path outside learning"}
 }
 load {C:/Program0/Cadence/spb172/tools/bin/orDb_Dll_Tcl64.dll} DboTclWriteBasic
 set ::DboSession_s_pDboSession [DboTclHelper_sCreateSession]

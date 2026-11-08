@@ -1,0 +1,27 @@
+{
+  "repo": "875638477/005lib",
+  "mode": "repository_root",
+  "verified_base": "9dfabc5b99f0cabdfa51baf4dcd9f35530595040",
+  "changes": [
+    {
+      "path": "01AIEDA/GITHUB_LOCATION.txt",
+      "before": "30957551a2391b27a6fec47e367bccd8c7eb68c5aae785e3d7425f67abccd26f",
+      "after": "47ee2b1c1ea04a19cbbaf6d34c8e608a049f93a834d59864cbbe02c794519daa"
+    },
+    {
+      "path": "01AIEDA/EDA.md",
+      "before": "e123143642df7cab43624c85d1d866dc978679f2980d48c2340dc3cc97d9ff58",
+      "after": "dcfca0cc18f6019cb373f3c5b9b4ad9afb55b5e738875af942a380724243233b"
+    },
+    {
+      "path": "01AIEDA/learning/notes/allegro_step_model_persistence_and_portable_paths.md",
+      "before": "042b2f22cdc8d5ca03507f92597eedef8f084b952d5bae8d640989437257144a",
+      "after": "bd44551cce182f4ed0019642ccd7d3757d46d39a9bb4fa83a8e9259f3da7bf45"
+    },
+    {
+      "path": "01AIEDA/library_maintenance/20261108_3d_package_models/README.md",
+      "before": "d1ef899e40f636fec7a7688ef504def08d41d6f9f73872025b3dbc73ae5113be",
+      "after": "cd723bad55f8372d01cb095676b9d9aa229a78ed0b9da9e30037d8f11027b820"
+    }
+  ]
+}
