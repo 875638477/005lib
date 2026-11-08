@@ -16,13 +16,14 @@ def begin(pkg):return Step('DETAILED_VISUAL_REFERENCE_'+pkg)
 def finish(pkg,s,note):
     r=by[pkg];name=r['model'];p=Q/'models'/name;s.finish(p)
     r.update(rotation=[0,0,0],offset_mm=[0,0,0],kind='detailed_connector_visual_reference',height_status='reference_geometry_not_vendor_release',source_note=note,staged_model=str(p))
+    r['height_mm']={'Z690I_PCIEX16':12.,'SODIMM_DDR4_260P_H':6.5,'LP380_G120_B0R01_SOCKET':8.23,'Z690I_ATX_12V_2X4':12.8,'HEADER10X2_2MM_USB3_A':9.,'PIN10_2D54MM_2X05':8.3,'Z690I_USB20':15.6,'SMD-NGFF-75P-M2-H3-LOTES':3.,'SMD-NGFF-75P-M2-H3-LOTES_2242_2230':3.}[pkg]
     changes.append(pkg)
 def b(s,x1,y1,z1,x2,y2,z2,c=black):s.box(x1,y1,z1,x2,y2,z2,c)
 def terminal(s,p,width=.25,z0=-.05,z1=.25):b(s,p['x']-width/2,p['y']-.55,z0,p['x']+width/2,p['y']+.55,z1,gold)
 
 # This source already points its solder tails down. Its housing bottom is
 # z=-21.06 mm, so translate upward; never turn it upside down about X.
-r=by['Z690I_DDR4_SOCKET'];r.update(rotation=[0,0,0],offset_mm=[.0178,-.0013,21.06],source_note='Original detailed DDR4 source, solder tails down; housing underside z=-21.06 translated to board surface. Prior X=180 mapping was upside down.')
+r=by['Z690I_DDR4_SOCKET'];r.update(rotation=[0,0,0],offset_mm=[.0178,-.0013,21.06],height_mm=21.06,source_note='Original detailed DDR4 source, solder tails down; housing underside z=-21.06 translated to board surface. Prior X=180 mapping was upside down.')
 changes.append(r['package'])
 
 # x16: use actual numbered pad field, NOT the stale PLACE_BOUND which is

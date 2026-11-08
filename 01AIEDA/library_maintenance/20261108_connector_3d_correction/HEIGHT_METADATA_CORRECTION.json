@@ -1,0 +1,66 @@
+{
+  "reason": "height_mm now records actual maximum model height above the PCB, including latches; previous nominal envelope-height fields were stale. STEP geometry and native PCB mappings unchanged.",
+  "corrections": [
+    {
+      "package": "Z690I_ATX_12V_2X4",
+      "before": "8.0",
+      "after": "12.8"
+    },
+    {
+      "package": "Z690I_DDR4_SOCKET",
+      "before": "",
+      "after": "21.06"
+    },
+    {
+      "package": "PIN10_2D54MM_2X05",
+      "before": "8.0",
+      "after": "8.3"
+    },
+    {
+      "package": "Z690I_PCIEX16",
+      "before": "8.0",
+      "after": "12.0"
+    },
+    {
+      "package": "LP380_G120_B0R01_SOCKET",
+      "before": "8.23",
+      "after": "8.23"
+    },
+    {
+      "package": "SMD-NGFF-75P-M2-H3-LOTES",
+      "before": "3.0",
+      "after": "3.0"
+    },
+    {
+      "package": "SODIMM_DDR4_260P_H",
+      "before": "5.2",
+      "after": "6.5"
+    },
+    {
+      "package": "HEADER10X2_2MM_USB3_A",
+      "before": "8.0",
+      "after": "9.0"
+    },
+    {
+      "package": "Z690I_USB20",
+      "before": "8.0",
+      "after": "15.6"
+    },
+    {
+      "package": "SMD-NGFF-75P-M2-H3-LOTES_2242_2230",
+      "before": "3.0",
+      "after": "3.0"
+    }
+  ],
+  "model_geometry_sha256": {
+    "REF_ENVELOPE_HEADER10X2_2MM_USB3_A.step": "d9ae31ba92af905e77a5c58c73de26418746a417141a1d2914ca07ca7b7f167b",
+    "REF_ENVELOPE_LP380_G120_B0R01_SOCKET.step": "46cf09f823773d8007904a7c068a627b7e55750aa6ce5f88721f778724b8b386",
+    "REF_ENVELOPE_PIN10_2D54MM_2X05.step": "4c303be9059a26385c7ec1a66d6ca365cfb3ca0d8dd29846c52ea72bcf3415b8",
+    "REF_ENVELOPE_SMD_NGFF_75P_M2_H3_LOTES.step": "5eae0edfd7e23c7fd67155718caecae013293d71b2fb30fbcc566a454ddc126a",
+    "REF_ENVELOPE_SMD_NGFF_75P_M2_H3_LOTES_2242_2230.step": "526c2e698c1cd2cd38555e04eee5a5ab3daa3826678b7fa583886ecd7d9df33b",
+    "REF_ENVELOPE_SODIMM_DDR4_260P_H.step": "cbd12ee87235a9f2d7912ae77befcd517add0009a3573b28d265366db2d2d41d",
+    "REF_ENVELOPE_Z690I_ATX_12V_2X4.step": "cbf44abeb3677c62e3683f9f51192fe3f75dc68a74dc75804ae4354df1972522",
+    "REF_ENVELOPE_Z690I_PCIEX16.step": "71d39599a624b3525782761f825885bd809326ffde20f74ab9c7b735958e9843",
+    "REF_ENVELOPE_Z690I_USB20.step": "a458f06854a5af43d8b9e7f6cd6a14c0621ae4bb8f0bdb29ceb2f71bc10e98fe"
+  }
+}
