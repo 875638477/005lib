@@ -22,7 +22,7 @@ CADENCE 17.2电路设计与仿真 从入门到精通 云课版 (李鹏) (z-libra
 
 `D:/001DIY/005lib/01AIEDA` 是全部公共库维护的统一工作与记录入口。公共库的创建、修改、尺寸/几何合并、删除、检查及恢复记录，统一放在 `library_maintenance/`，按日期和任务分目录；维护过程中产生的脚本、中间物、清单、日志、验证证据和备份同步归档，并更新本入口。
 
-本次两轮焊盘/封装库整理已统一归档，见[2026-10-25焊盘与封装维护记录](library_maintenance/20261025_pad_psm_merge/README.txt)及[库维护总索引](library_maintenance/INDEX.txt)。按实际尺寸和完整几何合并，C/R/L开头封装保持；数字0402/0603/0805带后缀封装的删除清单、兼容旧名映射和原生验证可直接查看。2026-10-25按用户指示删除重复的汇总备份ZIP；删除前26476个原件的大小和SHA256重新核验全部一致，两轮原始记录树及三套原始恢复目录保留，详见[ZIP核验与删除记录](library_maintenance/20261025_github_upload/README_backup_removal.txt)。历史归档清单与验证文件仅代表删除前状态。
+本次两轮焊盘/封装库整理已统一归档，见[2026-10-25焊盘与封装维护记录](library_maintenance/20261025_pad_psm_merge/README.md)及[库维护总索引](library_maintenance/INDEX.md)。按实际尺寸和完整几何合并，C/R/L开头封装保持；数字0402/0603/0805带后缀封装的删除清单、兼容旧名映射和原生验证可直接查看。2026-10-25按用户指示删除重复的汇总备份ZIP；删除前26476个原件的大小和SHA256重新核验全部一致，两轮原始记录树及三套原始恢复目录保留，详见[ZIP核验与删除记录](library_maintenance/20261025_github_upload/README_backup_removal.md)。历史归档清单与验证文件仅代表删除前状态。
 
 本条适用于公共库维护；具体PCB/原理图工程继续按其工程根保存。公共库文件继续使用用户指定的 `01Pad_lib`、`01Psm_lib`、`01captureLib` 等路径。
 

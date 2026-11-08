@@ -1,101 +1,20 @@
-del *.pcbdoc_viewstate /s
-del *.PCBDOCPreview /s
-del *.PrjGrp /s
-del *.SchDocPreview /s
-del *.PcbLib.Zip /s
-del *.PrjPCBStructure /s
-del *.PcbDoc.Zip /s
-del *.OutJob /s
-del *.PrjPCB.Zip /s
-del *.PCBDOCPreview /s
-del *.SchDocPreview /s
-del *.SchDocPreview /s
-
-del *.bak /s
-del *.ddk /s
-del *.edk /s
-del *.lst /s
-del *.lnp /s
-del *.mpf /s
-del *.mpj /s
-del *.obj /s
-del *.omf /s
-::del *.opt /s  ::不允许删除JLINK的设置
-del *.plg /s
-del *.rpt /s
-del *.tmp /s
-del *.__i /s
-del *.crf /s
-del *.o /s
-del *.d /s
-del *.axf /s
-del *.tra /s
-del *.dep /s           
-del JLinkLog.txt /s
-
-
-::del *.IntLib /s
-::del *.PCBDOC /s  ::
-::del *.PcbDoc /s
-::del *.PcbLib /s  ::
-::del *.PRJPCB /s  ::
-::del *.SchDoc /s  ::
-del *.iex /s
-del *.sct /s
-del *.map /s
-del *.BOM /s
-del *.htm /s
-del *.iml /s
-del *.iml","1 /s
-
-del *.log /s
-
-del *.log","1 /s
-
-del *.log","2 /s
-del *.log","3 /s
-
-
-del *.edf /s
-del *.opj /s
-del *.dbk /s
-
-del *.cfg /s
-del *.cfg","1 /s
-
-del *.jrl /s
-del *.jrl","1 /s
-del *.jrl","2 /s
-del *.jrl","3 /s
-
-del *.dmp /s
-del *.baf /s
-del *.ctl /s
-del *.sav /s
-del *.DRC /s
-del *.dml /s
-del *.tag /s
-del *.csv /s
-del *.cnv /s
-
-del *.txt /s
-del *.txt","1 /s
-
-del *.dat /s
-del *.dat","1 /s
-del *.dat","2 /s
-del *.dat","3 /s
-
-del *.dml"," /s
-del *.dml","1 /s
-del *.dml","2 /s
-
-del *.dcf /s
-del *.pro /s
-del *.OBK /s
-
-::del *.psm /s
-::del *.dra /s
-::del *.pad /s
-
-exit
+@echo off
+setlocal DisableDelayedExpansion
+rem Safe cleanup: preview by default, /apply to remove disposable outputs.
+rem The script directory is the target. No archive extraction or shared settings changes.
+set "EDA_CLEAN_LOOK=%~dp0"
+:EDA_CLEAN_FIND
+if exist "%EDA_CLEAN_LOOK%01script_file\Clean-EDA.ps1" goto EDA_CLEAN_RUN
+for %%I in ("%EDA_CLEAN_LOOK%..") do set "EDA_CLEAN_PARENT=%%~fI\"
+if /i "%EDA_CLEAN_PARENT%"=="%EDA_CLEAN_LOOK%" goto EDA_CLEAN_MISSING
+set "EDA_CLEAN_LOOK=%EDA_CLEAN_PARENT%"
+goto EDA_CLEAN_FIND
+:EDA_CLEAN_RUN
+"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoLogo -NoProfile -ExecutionPolicy Bypass -File "%EDA_CLEAN_LOOK%01script_file\Clean-EDA.ps1" -Root "%~dp0."  %*
+set "EDA_CLEAN_RESULT=%errorlevel%"
+if "%~1"=="" pause
+exit /b %EDA_CLEAN_RESULT%
+:EDA_CLEAN_MISSING
+echo Safe cleanup engine not found. No files were changed.
+if "%~1"=="" pause
+exit /b 2

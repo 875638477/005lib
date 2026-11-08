@@ -4,7 +4,7 @@
 
 # AI 辅助 EDA 设计协作记录
 
-> 2026-11-02 新增[清晰排版与简洁连接方案](learning/notes/capture_compact_schematic_layout_method.md)及[复用技能](learning/skills/cadence-schematic-layout/SKILL.md)：位号左、Value右，与器件同行稍偏上；按实际字形避让网络/引脚，保持短连线，原生重开后分别验收显示和电气。九个01库同步记录见[library_maintenance](library_maintenance/20261102_layout_reuse_and_sync/README.txt)。
+> 2026-11-02 新增[清晰排版与简洁连接方案](learning/notes/capture_compact_schematic_layout_method.md)及[复用技能](learning/skills/cadence-schematic-layout/SKILL.md)：位号左、Value右，与器件同行稍偏上；按实际字形避让网络/引脚，保持短连线，原生重开后分别验收显示和电气。九个01库同步记录见[library_maintenance](library_maintenance/20261102_layout_reuse_and_sync/README.md)。
 
 
 > 2026-10-30 阻容排版规范：[水平放置、位号左侧、Value右侧及连接验收](learning/notes/capture_rc_horizontal_ref_value_layout_spec.md)。文字按实际空间避让网络和导线，不统一套用上方两格偏移。
@@ -61,7 +61,7 @@ CADENCE 17.2电路设计与仿真 从入门到精通 云课版 (李鹏) (z-libra
 
 
 
-本次两轮焊盘/封装库整理已统一归档，见[2026-10-25焊盘与封装维护记录](library_maintenance/20261025_pad_psm_merge/README.txt)及[库维护总索引](library_maintenance/INDEX.txt)。按实际尺寸和完整几何合并，C/R/L开头封装保持；数字0402/0603/0805带后缀封装的删除清单、兼容旧名映射和原生验证可直接查看。2026-10-25按用户指示删除重复的汇总备份ZIP；删除前26476个原件的大小和SHA256重新核验全部一致，两轮原始记录树及三套原始恢复目录保留，详见[ZIP核验与删除记录](library_maintenance/20261025_github_upload/README_backup_removal.txt)。历史归档清单与验证文件仅代表删除前状态。 GitHub当前正确位置为[001Diy/005lib](https://github.com/875638477/001Diy/tree/main/005lib)：D:/001DIY对应001Diy仓库根，D:/001DIY/005lib对应仓库内005lib子目录，9个01目录位于005lib下。以本机最新目录为准更新此子目录并清理旧项，仓库外层文件保留；见[路径纠正记录](library_maintenance/20261025_github_destination_fix/README.txt)。此前[上传记录](library_maintenance/20261025_github_upload/README.txt)中的独立005lib仓库地址属于历史错误位置。
+本次两轮焊盘/封装库整理已统一归档，见[2026-10-25焊盘与封装维护记录](library_maintenance/20261025_pad_psm_merge/README.md)及[库维护总索引](library_maintenance/INDEX.md)。按实际尺寸和完整几何合并，C/R/L开头封装保持；数字0402/0603/0805带后缀封装的删除清单、兼容旧名映射和原生验证可直接查看。2026-10-25按用户指示删除重复的汇总备份ZIP；删除前26476个原件的大小和SHA256重新核验全部一致，两轮原始记录树及三套原始恢复目录保留，详见[ZIP核验与删除记录](library_maintenance/20261025_github_upload/README_backup_removal.md)。历史归档清单与验证文件仅代表删除前状态。 GitHub当前正确位置为[001Diy/005lib](https://github.com/875638477/001Diy/tree/main/005lib)：D:/001DIY对应001Diy仓库根，D:/001DIY/005lib对应仓库内005lib子目录，9个01目录位于005lib下。以本机最新目录为准更新此子目录并清理旧项，仓库外层文件保留；见[路径纠正记录](library_maintenance/20261025_github_destination_fix/README.md)。此前[上传记录](library_maintenance/20261025_github_upload/README.md)中的独立005lib仓库地址属于历史错误位置。
 
 
 
@@ -1767,9 +1767,9 @@ ECO明确只有R19/R20上拉2.2k→3.3k和J13.7/J13.8的PB8/PB9互换，MCU45/46
 - [公共被动器件后缀合并为唯一 _pc：原生证据、公共模块引用与连接验收](learning/notes/public_passive_suffix_consolidation_pc.md)
 
 
-2026-11-02 技嘉 Z690I 封装补建：65 个原生封装、22 个异形形状、82 个焊盘已登记到公共库；制造审核限制与验证记录见 library_maintenance/20261102_z690i_native_packages/README.txt。
+2026-11-02 技嘉 Z690I 封装补建：65 个原生封装、22 个异形形状、82 个焊盘已登记到公共库；制造审核限制与验证记录见 library_maintenance/20261102_z690i_native_packages/README.md。
 
-2026-11-02 技嘉 Z690I 最终核对：103 个 TVW 补建封装、3 个安装焊盘适配版本、3 个编号适配版本归入公共库；网表和 Allegro 导入通过，2114 器件放置参考完成。制造审核限制见 library_maintenance/20261102_z690i_native_packages/README.txt。
+2026-11-02 技嘉 Z690I 最终核对：103 个 TVW 补建封装、3 个安装焊盘适配版本、3 个编号适配版本归入公共库；网表和 Allegro 导入通过，2114 器件放置参考完成。制造审核限制见 library_maintenance/20261102_z690i_native_packages/README.md。
 
 
 

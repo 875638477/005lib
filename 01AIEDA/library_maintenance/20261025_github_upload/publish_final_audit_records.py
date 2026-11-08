@@ -1,7 +1,7 @@
 """Publish the completed upload's maintenance records as a second small commit.
 
 The workspace copy runs only after the first content push is verified. It writes
-this script and README_completion.txt to the source task folder before committing.
+this script and README_completion.md to the source task folder before committing.
 It never updates source upload_result.json or any source record after the commit.
 Final publication evidence is written only to workspace/final_publication_result.json;
 the final metadata commit is discoverable from GitHub history, avoiding self-reference.
@@ -30,7 +30,7 @@ POSTCOMMIT_RECORDS = {
     "fast_import_object_check.stderr.log", "fast_import_tree.stdout.log", "fast_import_tree.stderr.log",
     "fast_import.marks", "git_import_verification.json", "commit_preparation.json", "upload_result.json",
 }
-ALLOWED_METADATA_CHANGES = POSTCOMMIT_RECORDS | {Path(__file__).name, "README_completion.txt"}
+ALLOWED_METADATA_CHANGES = POSTCOMMIT_RECORDS | {Path(__file__).name, "README_completion.md"}
 BLOCK = 1024 * 1024
 
 
@@ -205,7 +205,7 @@ def main() -> None:
         "最终发布验证结果仅保存于本地工作目录final_publication_result.json并输出到控制台，"
         "不会再写入源01AIEDA或追加另一轮提交。\n"
     ).encode("utf-8")
-    write_new_source_record("README_completion.txt", completion)
+    write_new_source_record("README_completion.md", completion)
     source_files = task_files(SOURCE_LOG)
     require(POSTCOMMIT_RECORDS <= set(source_files), "One of the ten completed upload records is missing")
     repository_files = task_files(REPO / REL_LOG)

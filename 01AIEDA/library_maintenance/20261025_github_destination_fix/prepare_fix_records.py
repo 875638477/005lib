@@ -74,19 +74,19 @@ def main():
     inventory = json.loads((WORK / "target_inventory.json").read_text(encoding="utf-8"))
     require(inventory["observed_main_commit"] == "30fbcf36722b39852fb24b254f3bc3f995149afb", "Target inventory changed")
     originals = {}
-    for name in ("01AIEDA/EDA.md", "01AIEDA/library_maintenance/INDEX.txt"):
+    for name in ("01AIEDA/EDA.md", "01AIEDA/library_maintenance/INDEX.md"):
         data = (SOURCE / name).read_bytes()
         require(data == git("show", BASE + ":" + name), "Source documentation changed: " + name)
         originals[name] = data
-    old = "GitHub同步按本机目录层级进行：仓库根对应D:/001DIY/005lib，9个01目录直接位于仓库根；上传清单、扫描、Git校验和兼容归档见[GitHub上传记录](library_maintenance/20261025_github_upload/README.txt)。"
-    new = "GitHub当前正确位置为[001Diy/005lib](https://github.com/875638477/001Diy/tree/main/005lib)：D:/001DIY对应001Diy仓库根，D:/001DIY/005lib对应仓库内005lib子目录，9个01目录位于005lib下。以本机最新目录为准更新此子目录并清理旧项，仓库外层文件保留；见[路径纠正记录](library_maintenance/20261025_github_destination_fix/README.txt)。此前[上传记录](library_maintenance/20261025_github_upload/README.txt)中的独立005lib仓库地址属于历史错误位置。"
+    old = "GitHub同步按本机目录层级进行：仓库根对应D:/001DIY/005lib，9个01目录直接位于仓库根；上传清单、扫描、Git校验和兼容归档见[GitHub上传记录](library_maintenance/20261025_github_upload/README.md)。"
+    new = "GitHub当前正确位置为[001Diy/005lib](https://github.com/875638477/001Diy/tree/main/005lib)：D:/001DIY对应001Diy仓库根，D:/001DIY/005lib对应仓库内005lib子目录，9个01目录位于005lib下。以本机最新目录为准更新此子目录并清理旧项，仓库外层文件保留；见[路径纠正记录](library_maintenance/20261025_github_destination_fix/README.md)。此前[上传记录](library_maintenance/20261025_github_upload/README.md)中的独立005lib仓库地址属于历史错误位置。"
     eda = originals["01AIEDA/EDA.md"].decode("utf-8")
     require(eda.count(old) == 1, "Expected one current GitHub mapping paragraph")
     modified = {"01AIEDA/EDA.md": eda.replace(old, new).encode("utf-8")}
-    index = originals["01AIEDA/library_maintenance/INDEX.txt"]
-    modified["01AIEDA/library_maintenance/INDEX.txt"] = index + (
+    index = originals["01AIEDA/library_maintenance/INDEX.md"]
+    modified["01AIEDA/library_maintenance/INDEX.md"] = index + (
         "\r\n2026-10-25  GitHub位置纠正：迁移至001Diy仓库的005lib子目录，核验后删除独立005lib误建仓库。\r\n"
-        "入口：20261025_github_destination_fix\\README.txt\r\n"
+        "入口：20261025_github_destination_fix\\README.md\r\n"
         "当前地址：https://github.com/875638477/001Diy/tree/main/005lib\r\n").encode("utf-8")
     LOG.mkdir(parents=True)
     for name, data in originals.items():
@@ -95,13 +95,13 @@ def main():
         target.write_bytes(data)
     for name, data in modified.items():
         (SOURCE / name).write_bytes(data)
-    (SOURCE / "01AIEDA/GITHUB_LOCATION.txt").write_text(
+    (SOURCE / "01AIEDA/GITHUB_LOCATION.md").write_text(
         "当前GitHub库位置（2026-10-25按用户纠正）\n"
         "https://github.com/875638477/001Diy/tree/main/005lib\n"
         "本机 D:\\005lib 对应 001Diy 仓库内的 005lib 子目录。\n"
         "9个01目录继续保持本机内部层级。旧独立仓库875638477/005lib为错误位置，迁移核验后删除。\n"
-        "维护记录：library_maintenance/20261025_github_destination_fix/README.txt\n", encoding="utf-8")
-    (LOG / "README.txt").write_text(
+        "维护记录：library_maintenance/20261025_github_destination_fix/README.md\n", encoding="utf-8")
+    (LOG / "README.md").write_text(
         "GitHub库目录纠正记录\n\n"
         "用户明确要求：删除错误的独立仓库875638477/005lib；正确位置是875638477/001Diy仓库中的005lib目录。\n"
         "正确浏览地址：https://github.com/875638477/001Diy/tree/main/005lib\n"
@@ -113,11 +113,11 @@ def main():
         "方法：在正确仓库创建一次性辅助分支运行GitHub Actions，从公开的错误仓库读取固定提交，在云端挂接为005lib；临时分支含少量本次说明，main只包含正确目录及原外层文件。无用户令牌写入脚本、日志或仓库，任务使用GitHub短期令牌。\n"
         "发布前将本次文件逐字节计算Git对象与SHA256；云端对完整005lib树SHA、原始快照树、目标父提交及外层条目逐项断言；发布后通过GitHub API再次核对。\n"
         "只有正确位置核验通过后才删除错误独立仓库，并清理临时分支。完成证据在后续verification_result.json及completion记录；本说明不包含其所在提交SHA，避免自引用。\n"
-        "历史20261025_github_upload记录保留原始内容，表示当时错误位置的操作证据；当前入口以本任务和GITHUB_LOCATION.txt为准。\n", encoding="utf-8")
+        "历史20261025_github_upload记录保留原始内容，表示当时错误位置的操作证据；当前入口以本任务和GITHUB_LOCATION.md为准。\n", encoding="utf-8")
     (LOG / "target_inventory.json").write_bytes((WORK / "target_inventory.json").read_bytes())
     (LOG / "prepare_fix_records.py").write_bytes(Path(__file__).read_bytes())
     changes = {**{name: SOURCE / name for name in modified},
-               "01AIEDA/GITHUB_LOCATION.txt": SOURCE / "01AIEDA/GITHUB_LOCATION.txt"}
+               "01AIEDA/GITHUB_LOCATION.md": SOURCE / "01AIEDA/GITHUB_LOCATION.md"}
     for file in LOG.rglob("*"):
         require(not file.is_symlink(), "Unexpected link")
         if file.is_file():

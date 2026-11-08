@@ -34,3 +34,12 @@ GitHub 目录树及全部 5,646 个独立 LFS 对象均已核对。
 | 01script_file | Allegro 脚本 |
 | 004Document |  规格书 局部驱动 |
 
+
+
+## 2026-11-08 学习库整理
+
+[学习库入口](01AIEDA/README.md) · [清理与同步报告](01AIEDA/library_maintenance/20261108_cleanup/REPORT.md) · [安全清理脚本](01script_file/Clean-EDA.ps1)
+
+学习笔记、方法、源脚本及最终示例保留；历次制库暂存、备份和已核实的重复库副本已移出工作树。正式焊盘、封装和 STEP 库仍分别位于 `01Pad_lib`、`01Psm_lib`、`01_3d_step_lib`。
+
+说明类 TXT 已改为 Markdown。器件定义 TXT、BOM/Extract 模板、引脚数据、CSV/XML 及 Capture 项目 OPJ 按用途保留。`0000Ad_Keil_Cadence...bat` 默认预览，显式 `/apply` 才清理；整个学习库和正式库受保护。本地恢复备份不上传 GitHub。

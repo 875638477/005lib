@@ -18,7 +18,7 @@ def main():
     files=json.loads((B/'archive_manifest.json').read_text(encoding='utf-8'))
     assert str(DEST)==plan['destination'] and not DEST.exists()
     assert len(files)==plan['file_count'] and sha(B/'archive_manifest.json')==plan['manifest_sha256']
-    index=DEST.parent/'INDEX.txt'
+    index=DEST.parent/'INDEX.md'
     assert not index.exists(),'Existing library-maintenance index requires reconciliation'
     for d in plan['docs']:
         assert d['target'].casefold() in ALLOWED_DOCS
@@ -54,7 +54,7 @@ def main():
         assert hashlib.sha256(z.read('archive_manifest.json')).hexdigest()==plan['manifest_sha256']
     # Publish readable summaries and exact original/prepared document snapshots.
     shutil.copytree(B/'readable',DEST/'readable')
-    for name in ('README.txt','archive_manifest.csv','archive_manifest.json','publish_plan.json','prepare_archive.py','publish_archive.py','refresh_prepared_docs.py'):
+    for name in ('README.md','archive_manifest.csv','archive_manifest.json','publish_plan.json','prepare_archive.py','publish_archive.py','refresh_prepared_docs.py'):
         shutil.copyfile(B/name,DEST/name)
     shutil.copytree(B/'docs_before',DEST/'metadata_before')
     shutil.copytree(B/'docs_after',DEST/'metadata_after')
@@ -73,7 +73,7 @@ def main():
             shutil.copyfile(d['after'],pending);assert sha(pending)==d['after_sha256']
             os.replace(pending,target);applied.append(d)
             assert sha(target)==d['after_sha256']
-        shutil.copyfile(B/'INDEX.txt',index)
+        shutil.copyfile(B/'INDEX.md',index)
     except Exception:
         for d in applied:
             if sha(d['target'])==d['after_sha256']:shutil.copyfile(d['before'],d['target'])

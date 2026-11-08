@@ -26,19 +26,19 @@ review = {
 raw = (json.dumps(review, ensure_ascii=False, indent=2) + "\n").encode("utf-8")
 (WORK / "sensitive_scan_review.json").write_bytes(raw)
 (LOG / "sensitive_scan_review.json").write_bytes(raw)
-index = ROOT / "library_maintenance/INDEX.txt"
+index = ROOT / "library_maintenance/INDEX.md"
 data = index.read_bytes()
 before = data
 data = data.replace("GitHub上传准备：核验并删除重复汇总备份ZIP。".encode(), "GitHub上传准备：按本机层级同步9个01目录，并核验删除重复汇总备份ZIP。".encode())
-data = data.replace("入口：20261025_github_upload\\README_backup_removal.txt".encode(), "入口：20261025_github_upload\\README.txt（含备份删除记录入口）".encode())
+data = data.replace("入口：20261025_github_upload\\README_backup_removal.md".encode(), "入口：20261025_github_upload\\README.md（含备份删除记录入口）".encode())
 assert data != before
-(LOG / "INDEX_before_upload.txt").write_bytes(before)
+(LOG / "INDEX_before_upload.md").write_bytes(before)
 index.write_bytes(data)
 eda = ROOT / "EDA.md"
 before = eda.read_bytes()
 anchor = "历史归档清单与验证文件仅代表删除前状态。".encode()
 assert before.count(anchor) == 1
-extra = " GitHub同步按本机目录层级进行：仓库根对应D:/001DIY/005lib，9个01目录直接位于仓库根；上传清单、扫描、Git校验和兼容归档见[GitHub上传记录](library_maintenance/20261025_github_upload/README.txt)。".encode()
+extra = " GitHub同步按本机目录层级进行：仓库根对应D:/001DIY/005lib，9个01目录直接位于仓库根；上传清单、扫描、Git校验和兼容归档见[GitHub上传记录](library_maintenance/20261025_github_upload/README.md)。".encode()
 (LOG / "EDA_before_upload.md").write_bytes(before)
 eda.write_bytes(before.replace(anchor, anchor + extra))
 print(json.dumps({"status": review["status"], "record": str(LOG / "sensitive_scan_review.json")}), flush=True)

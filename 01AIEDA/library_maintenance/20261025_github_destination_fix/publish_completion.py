@@ -41,7 +41,7 @@ def main():
     (LOG / "source_verification_before_completion.json").write_bytes((WORK / "exact_source_verification.json").read_bytes())
     (LOG / "source_file_hashes_before_completion.json.gz").write_bytes(
         gzip.compress((WORK / "exact_source_file_hashes.json").read_bytes(), mtime=0))
-    (LOG / "README_completion.txt").write_text(
+    (LOG / "README_completion.md").write_text(
         "GitHub正确目录同步完成\n\n"
         "浏览：https://github.com/875638477/001Diy/tree/main/005lib\n"
         "本机D:/001DIY/005lib的9个01目录位于001Diy仓库的005lib下，名称和内部相对文件路径保持一致。\n"
@@ -53,13 +53,13 @@ def main():
         "原始阶段证据中的PENDING表示该阶段状态；最终删除结果以repository_deletion_result.json为准。\n"
         "本次完成记录在发布前已写定，最终提交、树和最终文件数由工作目录final_destination_result.json及GitHub历史给出，不再回写源目录以避免自引用。\n",
         encoding="utf-8")
-    location = SOURCE / "01AIEDA/GITHUB_LOCATION.txt"
+    location = SOURCE / "01AIEDA/GITHUB_LOCATION.md"
     text = location.read_text(encoding="utf-8")
     text = text.replace("旧独立仓库875638477/005lib为错误位置，迁移核验后删除。", "旧独立仓库875638477/005lib为错误位置，已完成迁移核验并删除。")
     location.write_text(text, encoding="utf-8")
     # Build exact immutable blob replacements from the finalized source records.
     paths = {p.relative_to(SOURCE).as_posix(): p for p in LOG.rglob("*") if p.is_file()}
-    paths["01AIEDA/GITHUB_LOCATION.txt"] = location
+    paths["01AIEDA/GITHUB_LOCATION.md"] = location
     changes = {}
     raw_files = {}
     for name, path in sorted(paths.items()):

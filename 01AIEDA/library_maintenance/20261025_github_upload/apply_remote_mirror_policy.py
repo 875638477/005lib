@@ -166,7 +166,7 @@ def main() -> None:
     old_remote_readme = read_stable(readme_to_delete)
     if len(old_remote_readme) != 9 or content_info(old_remote_readme)["git_blob_sha1"] != OLD_README_BLOB:
         raise ValueError("Worktree README.md size/blob differs; do not delete")
-    source_readme = SOURCE_LOG / "README.txt"
+    source_readme = SOURCE_LOG / "README.md"
     source_prepare = SOURCE_LOG / "prepare_repository_snapshot.py"
     baseline_record_bytes = {}
     for path in (source_readme, source_prepare):
@@ -191,7 +191,7 @@ def main() -> None:
     timestamp = datetime.now(timezone.utc).isoformat()
     previous_proof_sha256 = content_info(old_proof_raw)["sha256"]
     changed = {
-        source_readme.relative_to(SOURCE).as_posix(): replace_policy(baseline_record_bytes[source_readme.relative_to(SOURCE).as_posix()], "source README.txt"),
+        source_readme.relative_to(SOURCE).as_posix(): replace_policy(baseline_record_bytes[source_readme.relative_to(SOURCE).as_posix()], "source README.md"),
         source_prepare.relative_to(SOURCE).as_posix(): replace_policy(prepare_raw, "workspace snapshot script"),
         (REL_LOG / Path(__file__).name).as_posix(): script_raw,
     }

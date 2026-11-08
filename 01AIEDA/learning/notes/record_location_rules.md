@@ -6,7 +6,7 @@
 
 此条优先于下列将库维护记录随具体工程保存的旧表述；普通实际PCB/原理图工程继续在自己的工程根。公共库实体按用户既定的01Pad_lib、01Psm_lib等路径使用。
 
-本次入口：[2026-10-25公共焊盘/封装维护归档](../../library_maintenance/20261025_pad_psm_merge/README.txt)；[全部库维护索引](../../library_maintenance/INDEX.txt)。旧记录中的绝对路径保留取证，归档清单保存新旧位置和校验值。
+本次入口：[2026-10-25公共焊盘/封装维护归档](../../library_maintenance/20261025_pad_psm_merge/README.md)；[全部库维护索引](../../library_maintenance/INDEX.md)。旧记录中的绝对路径保留取证，归档清单保存新旧位置和校验值。
 
 更新日期：2026-10-23（Asia/Shanghai）。本节最新用户政策覆盖此前“全部产物统一存入01AIEDA”的目录表述。
 

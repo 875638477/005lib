@@ -73,7 +73,7 @@ def replace_once_bytes(path: Path, old: str, new: str) -> tuple[bytes, bytes]:
 
 
 def plan_docs() -> dict[Path, tuple[bytes, bytes]]:
-    p = OLD / "README.txt"
+    p = OLD / "README.md"
     before = p.read_bytes()
     after = before
     replacements = (
@@ -116,16 +116,16 @@ def plan_docs() -> dict[Path, tuple[bytes, bytes]]:
     )
     result[p] = (before, after)
 
-    p = MAINT / "INDEX.txt"
+    p = MAINT / "INDEX.md"
     before = p.read_bytes()
     eol = "\r\n" if b"\r\n" in before else "\n"
-    old = "入口：20261025_pad_psm_merge\\README.txt"
-    new = old + eol + "说明：汇总备份ZIP已按用户指示删除，直接可读记录及原始恢复目录保留。" + eol + eol + "2026-10-25  GitHub上传准备：核验并删除重复汇总备份ZIP。" + eol + "入口：20261025_github_upload\\README_backup_removal.txt"
+    old = "入口：20261025_pad_psm_merge\\README.md"
+    new = old + eol + "说明：汇总备份ZIP已按用户指示删除，直接可读记录及原始恢复目录保留。" + eol + eol + "2026-10-25  GitHub上传准备：核验并删除重复汇总备份ZIP。" + eol + "入口：20261025_github_upload\\README_backup_removal.md"
     result[p] = replace_once_bytes(p, old, new)
 
     p = Path(r"D:\005lib\01AIEDA\EDA.md")
     old = "数字0402/0603/0805带后缀封装的删除清单、兼容旧名映射、原生验证与恢复备份均在归档中。"
-    new = "数字0402/0603/0805带后缀封装的删除清单、兼容旧名映射和原生验证可直接查看。2026-10-25按用户指示删除重复的汇总备份ZIP；删除前26476个原件的大小和SHA256重新核验全部一致，两轮原始记录树及三套原始恢复目录保留，详见[ZIP核验与删除记录](library_maintenance/20261025_github_upload/README_backup_removal.txt)。历史归档清单与验证文件仅代表删除前状态。"
+    new = "数字0402/0603/0805带后缀封装的删除清单、兼容旧名映射和原生验证可直接查看。2026-10-25按用户指示删除重复的汇总备份ZIP；删除前26476个原件的大小和SHA256重新核验全部一致，两轮原始记录树及三套原始恢复目录保留，详见[ZIP核验与删除记录](library_maintenance/20261025_github_upload/README_backup_removal.md)。历史归档清单与验证文件仅代表删除前状态。"
     result[p] = replace_once_bytes(p, old, new)
     return result
 
@@ -258,7 +258,7 @@ def main() -> None:
         "本次执行脚本：remove_verified_backup_zip.py（历史脚本，不自动执行）\n\n"
         "保留的原件目录：\n" + "\n".join(str(r) for r in ROOTS) + "\n"
     )
-    (TASK / "README_backup_removal.txt").write_text(text, encoding="utf-8")
+    (TASK / "README_backup_removal.md").write_text(text, encoding="utf-8")
     script = Path(__file__).resolve()
     if script != TASK / script.name:
         shutil.copy2(script, TASK / script.name)

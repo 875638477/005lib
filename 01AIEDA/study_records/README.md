@@ -14,7 +14,7 @@
 
 | 记录 | 内容 |
 | --- | --- |
-| [公共焊盘/封装库维护记录](../library_maintenance/20261025_pad_psm_merge/README.txt) | 两轮合并/删除清单、原生验证、完整证据与恢复备份 |
+| [公共焊盘/封装库维护记录](../library_maintenance/20261025_pad_psm_merge/README.md) | 两轮合并/删除清单、原生验证、完整证据与恢复备份 |
 | [接续入口](CONTINUE_HERE.md) | 当前要求、准确断点、下一批学习任务 |
 | [学习日志](learning_log.md) | 本轮工作、交流、范围调整和完成结果 |
 | [学习路线](roadmap.md) | 先元件库，再 PCB 流程与仿真 |

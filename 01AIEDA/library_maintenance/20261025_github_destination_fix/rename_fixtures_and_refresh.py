@@ -55,7 +55,7 @@ def main():
     (LOG / "fixture_directory_renames.json").write_bytes(json_bytes(proof))
     (LOG / "rename_fixtures_and_refresh.py").write_bytes(Path(__file__).read_bytes())
     (LOG / "verify_source_exact.py").write_bytes((WORK / "verify_source_exact.py").read_bytes())
-    readme = LOG / "README.txt"
+    readme = LOG / "README.md"
     content = readme.read_text(encoding="utf-8")
     content = content.replace("基准39139个已上传文件，13个Git测试样例目录仍按此前兼容方案无损打包；已核验删除的大备份ZIP不恢复。",
         "基准39139个已上传文件。为满足用户逐文件名称和数量一致的要求，经用户明确同意，将13个历史测试.git目录改名git_fixture，并新增同步其28个原始文件，全部字节不变；旧ZIP作为历史备份保留且两端同名同数。已核验删除的大备份ZIP不恢复。")

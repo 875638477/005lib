@@ -1,0 +1,122 @@
+[
+  {
+    "old": "004Document/011MCU/00通用微控制器/G-XIN(感芯科技)/MC3172资料合集_V1.03/IDE环境www.mounriver.com下载.txt",
+    "new": "004Document/011MCU/00通用微控制器/G-XIN(感芯科技)/MC3172资料合集_V1.03/IDE环境www.mounriver.com下载.md"
+  },
+  {
+    "old": "004Document/011MCU/00通用微控制器/G-XIN(感芯科技)/MC3172资料合集_V1.03/开发板板载48M晶振.txt",
+    "new": "004Document/011MCU/00通用微控制器/G-XIN(感芯科技)/MC3172资料合集_V1.03/开发板板载48M晶振.md"
+  },
+  {
+    "old": "004Document/011MCU/01微处理器与AI_SoC/Rockchip(瑞芯微)/03RK3566_Official Release/01_Common Document/Readme.txt",
+    "new": "004Document/011MCU/01微处理器与AI_SoC/Rockchip(瑞芯微)/03RK3566_Official Release/01_Common Document/Readme.md"
+  },
+  {
+    "old": "004Document/011MCU/01微处理器与AI_SoC/Rockchip(瑞芯微)/03RK3566_Official Release/01_Common Document/历史文件/Readme.txt",
+    "new": "004Document/011MCU/01微处理器与AI_SoC/Rockchip(瑞芯微)/03RK3566_Official Release/01_Common Document/历史文件/Readme.md"
+  },
+  {
+    "old": "01AIEDA/GITHUB_LOCATION.txt",
+    "new": "01AIEDA/GITHUB_LOCATION.md"
+  },
+  {
+    "old": "01AIEDA/learning/conversion_archive/pcb_repair/ad18_native_research/README.txt",
+    "new": "01AIEDA/learning/conversion_archive/pcb_repair/ad18_native_research/README.md"
+  },
+  {
+    "old": "01AIEDA/learning/examples/lessonJK_51_59_20261022/audits/newstack4L_identity_build_history/README_try03_encoding_FAILED.txt",
+    "new": "01AIEDA/learning/examples/lessonJK_51_59_20261022/audits/newstack4L_identity_build_history/README_try03_encoding_FAILED.md"
+  },
+  {
+    "old": "01AIEDA/library_maintenance/20261025_github_destination_fix/documentation_before/INDEX.txt",
+    "new": "01AIEDA/library_maintenance/20261025_github_destination_fix/documentation_before/INDEX.md"
+  },
+  {
+    "old": "01AIEDA/library_maintenance/20261025_github_destination_fix/README.txt",
+    "new": "01AIEDA/library_maintenance/20261025_github_destination_fix/README.md"
+  },
+  {
+    "old": "01AIEDA/library_maintenance/20261025_github_destination_fix/README_completion.txt",
+    "new": "01AIEDA/library_maintenance/20261025_github_destination_fix/README_completion.md"
+  },
+  {
+    "old": "01AIEDA/library_maintenance/20261025_github_upload/backup_zip_removal_metadata_after/INDEX.txt",
+    "new": "01AIEDA/library_maintenance/20261025_github_upload/backup_zip_removal_metadata_after/INDEX.md"
+  },
+  {
+    "old": "01AIEDA/library_maintenance/20261025_github_upload/backup_zip_removal_metadata_after/README.txt",
+    "new": "01AIEDA/library_maintenance/20261025_github_upload/backup_zip_removal_metadata_after/README.md"
+  },
+  {
+    "old": "01AIEDA/library_maintenance/20261025_github_upload/backup_zip_removal_metadata_before/INDEX.txt",
+    "new": "01AIEDA/library_maintenance/20261025_github_upload/backup_zip_removal_metadata_before/INDEX.md"
+  },
+  {
+    "old": "01AIEDA/library_maintenance/20261025_github_upload/backup_zip_removal_metadata_before/README.txt",
+    "new": "01AIEDA/library_maintenance/20261025_github_upload/backup_zip_removal_metadata_before/README.md"
+  },
+  {
+    "old": "01AIEDA/library_maintenance/20261025_github_upload/INDEX_before_upload.txt",
+    "new": "01AIEDA/library_maintenance/20261025_github_upload/INDEX_before_upload.md"
+  },
+  {
+    "old": "01AIEDA/library_maintenance/20261025_github_upload/README.txt",
+    "new": "01AIEDA/library_maintenance/20261025_github_upload/README.md"
+  },
+  {
+    "old": "01AIEDA/library_maintenance/20261025_github_upload/README_backup_removal.txt",
+    "new": "01AIEDA/library_maintenance/20261025_github_upload/README_backup_removal.md"
+  },
+  {
+    "old": "01AIEDA/library_maintenance/20261025_github_upload/README_completion.txt",
+    "new": "01AIEDA/library_maintenance/20261025_github_upload/README_completion.md"
+  },
+  {
+    "old": "01AIEDA/library_maintenance/20261025_pad_psm_merge/README.txt",
+    "new": "01AIEDA/library_maintenance/20261025_pad_psm_merge/README.md"
+  },
+  {
+    "old": "01AIEDA/library_maintenance/20261025_pc_shared/capture_methods/README.txt",
+    "new": "01AIEDA/library_maintenance/20261025_pc_shared/capture_methods/README.md"
+  },
+  {
+    "old": "01AIEDA/library_maintenance/20261031_m2_key_m_finger_fix/before/INDEX.txt",
+    "new": "01AIEDA/library_maintenance/20261031_m2_key_m_finger_fix/before/INDEX.md"
+  },
+  {
+    "old": "01AIEDA/library_maintenance/20261031_m2_key_m_finger_fix/README.txt",
+    "new": "01AIEDA/library_maintenance/20261031_m2_key_m_finger_fix/README.md"
+  },
+  {
+    "old": "01AIEDA/library_maintenance/20261031_step_mapping_gui_save/README.txt",
+    "new": "01AIEDA/library_maintenance/20261031_step_mapping_gui_save/README.md"
+  },
+  {
+    "old": "01AIEDA/library_maintenance/20261102_layout_reuse_and_sync/README.txt",
+    "new": "01AIEDA/library_maintenance/20261102_layout_reuse_and_sync/README.md"
+  },
+  {
+    "old": "01AIEDA/library_maintenance/20261102_z690i_native_packages/README.txt",
+    "new": "01AIEDA/library_maintenance/20261102_z690i_native_packages/README.md"
+  },
+  {
+    "old": "01AIEDA/library_maintenance/INDEX.txt",
+    "new": "01AIEDA/library_maintenance/INDEX.md"
+  },
+  {
+    "old": "AUTOlib/LP380-G120-B0R01/README.txt",
+    "new": "AUTOlib/LP380-G120-B0R01/README.md"
+  },
+  {
+    "old": "AUTOlib/LXWBB0009_10_60_COMPACT/README.txt",
+    "new": "AUTOlib/LXWBB0009_10_60_COMPACT/README.md"
+  },
+  {
+    "old": "AUTOlib/LXWBB0009_50_60/README.txt",
+    "new": "AUTOlib/LXWBB0009_50_60/README.md"
+  },
+  {
+    "old": "History/20261105_LXWBB0009_DXFTOP_origin/backup/AUTOlib/LXWBB0009_10_60_COMPACT/README.txt",
+    "new": "History/20261105_LXWBB0009_DXFTOP_origin/backup/AUTOlib/LXWBB0009_10_60_COMPACT/README.md"
+  }
+]

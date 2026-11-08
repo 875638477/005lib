@@ -297,10 +297,10 @@ Git blob SHA1 是文件原始字节的哈希；后续 Git 应关闭换行转换�
 
 upload_inventory.json/csv 是准备开始时的原始盘点，可能包含后来按用户指示删除的重复备份 ZIP，
 当前快照以 upload_manifest.csv 和 snapshot_verification.json 为准。
-备份 ZIP 核验及删除记录见 README_backup_removal.txt、backup_zip_removal.json。
+备份 ZIP 核验及删除记录见 README_backup_removal.md、backup_zip_removal.json。
 敏感内容扫描报告及复核记录保留在本目录；执行前必须完成上层人工复核。
 """
-    path = RECORD / "README.txt"
+    path = RECORD / "README.md"
     begin = b"\n\n--- BEGIN 20261025_GITHUB_UPLOAD_SNAPSHOT ---\n"
     end = b"--- END 20261025_GITHUB_UPLOAD_SNAPSHOT ---\n"
     section = begin + text.encode("utf-8") + end
