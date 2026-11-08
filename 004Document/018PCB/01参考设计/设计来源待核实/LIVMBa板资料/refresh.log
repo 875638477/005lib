@@ -1,0 +1,116 @@
+Thu Nov 03 21:55:29 2022				Page     1
+
+
+ 
+Update Symbols/Modules Logfile
+	Thu Nov 03 21:55:29 2022
+
+------ Module Refresh Messages ------
+
+SUMMARY:    Updated 0 out of 0 modules
+
+------ End Module Messages     ------
+
+
+
+(---------------------------------------------------------------------)
+(                                                                     )
+(    Refresh Symbol                                                   )
+(                                                                     )
+(    Drawing          : 04MK-II-V1_05_04.brd                          )
+(    Software Version : 17.2S045                                      )
+(    Date/Time        : Thu Nov 03 21:55:30 2022                      )
+(                                                                     )
+(---------------------------------------------------------------------)
+
+
+Thu Nov 03 21:55:30 2022				Page     1
+
+
+------ Symbol Refresh Directives ------
+
+Input design  = 'D:/004Document/data/04MK-II-V1_05_04.brd'
+Output design = ''
+
+Update mechanical symbols              = 'NO'
+Update format symbols                  = 'NO'
+Update package symbols                 = 'YES'
+Update shape/flash symbols             = 'NO'
+Update symbol padstacks                = 'NO'
+Preserve padstacks replaced on pins    = 'NO'
+Reset symbol text and size locations   = 'NO'
+Reset Pin Escapes (fanouts)            = 'NO'
+Ripup Etch                             = 'NO'
+Reset custom drill data                = 'NO'
+
+
+------ Library Paths ------
+PSMPATH =  D:/001DIY/005lib/01Psm_lib/ 
+
+PADPATH =  D:/001DIY/005lib/01Pad_lib/ 
+
+
+------ Symbol Refresh Messages ------
+
+'RELAY_4P_20X5X12D5'  symbol refreshed successfully.
+
+'SW-4P_D22IP67SUS304'  symbol starting to refresh:
+     ERROR(SPMHDB-243): Cannot modify element; the object or a parent has the FIXED property. [help]
+     ERROR(SPMHNI-254): Unable to load symbol, 'SW-4P_D22IP67SUS304': 'Cannot modify element; the object or a parent has the FIXED~
+      property. [help]'.
+     
+'KBPC-25'  symbol refreshed successfully.
+'DFN3X3-5'  symbol refreshed successfully.
+'C0603'  symbol refreshed successfully.
+'CH_5D08_02P-H'  symbol refreshed successfully.
+'TPS1D0M1D2'  symbol refreshed successfully.
+'R0603'  symbol refreshed successfully.
+'DO-214AC_SMA'  symbol refreshed successfully.
+'E6312SMT'  symbol refreshed successfully.
+'L444212'  symbol refreshed successfully.
+'L7050'  symbol refreshed successfully.
+'DO-214AA_SMB'  symbol refreshed successfully.
+'R0805'  symbol refreshed successfully.
+'SOT23-3'  symbol refreshed successfully.
+'PS2701-1'  symbol refreshed successfully.
+'SOP-8-E'  symbol refreshed successfully.
+'C0805'  symbol refreshed successfully.
+'SOT23-6L'  symbol refreshed successfully.
+'QFN48P-5X5-0_35'  symbol refreshed successfully.
+'MH-6P-1D25-W'  symbol refreshed successfully.
+'SW-PB4_3X3X1D5'  symbol refreshed successfully.
+'CML4532-4P'  symbol refreshed successfully.
+'STD-202'  symbol refreshed successfully.
+'OSC_SMD_3225'  symbol refreshed successfully.
+'C0402'  symbol refreshed successfully.
+'LED0805'  symbol refreshed successfully.
+'R0402'  symbol refreshed successfully.
+'L0805'  symbol refreshed successfully.
+'L1206'  symbol refreshed successfully.
+'E1012X5SMT'  symbol refreshed successfully.
+'OSC_SMD_3215'  symbol refreshed successfully.
+'C1206'  symbol refreshed successfully.
+
+'TPS_VIA_1D5_2D5'  symbol starting to refresh:
+     ERROR(SPMHDB-243): Cannot modify element; the object or a parent has the FIXED property. [help]
+     ERROR(SPMHNI-254): Unable to load symbol, 'TPS_VIA_1D5_2D5': 'Cannot modify element; the object or a parent has the FIXED pro~
+     perty. [help]'.
+     
+'FIX_2D6_5D5-9P'  symbol refreshed successfully.
+'MSOP-8'  symbol refreshed successfully.
+Thu Nov 03 21:55:30 2022				Page     2
+
+
+'SOP-8'  symbol refreshed successfully.
+'SC-3D8X1D55'  symbol refreshed successfully.
+'SOD-323F'  symbol refreshed successfully.
+'CH_5D08_03P-H'  symbol refreshed successfully.
+'CR1220-W'  symbol refreshed successfully.
+'CH_5D08_08P-H'  symbol refreshed successfully.
+
+
+----- Symbol Update Summary ----
+
+Updated symbols: 40 out 42
+    Design updated.
+

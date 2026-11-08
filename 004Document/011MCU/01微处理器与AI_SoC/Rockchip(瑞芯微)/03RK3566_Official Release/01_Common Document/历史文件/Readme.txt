@@ -1,0 +1,1 @@
+RK3566_PinOut_V10_20210121.xlsx sheet covers the pinout details, iolist, pinlength of package(pin_delay), usage of unused pins, IO strength level, and more.

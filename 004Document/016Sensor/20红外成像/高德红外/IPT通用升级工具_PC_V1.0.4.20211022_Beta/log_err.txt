@@ -1,0 +1,12 @@
+[ 2022-04-02 16:25:47:583 ]: Debug:	send get_ip error: 0 
+ (file:iptdevicemanagewidget.cpp, line:291, func: void __cdecl IptDeviceManageWidget::onSearch(void))
+[ 2022-04-02 16:25:53:608 ]: Debug:	bind recv_socket failed: 0 
+ (file:iptdevicemanagewidget.cpp, line:250, func: void __cdecl IptDeviceManageWidget::onSearch(void))
+[ 2022-04-02 16:27:54:250 ]: Debug:	bind recv_socket failed: 0 
+ (file:iptdevicemanagewidget.cpp, line:250, func: void __cdecl IptDeviceManageWidget::onSearch(void))
+[ 2022-04-02 16:27:55:326 ]: Debug:	bind recv_socket failed: 0 
+ (file:iptdevicemanagewidget.cpp, line:250, func: void __cdecl IptDeviceManageWidget::onSearch(void))
+[ 2022-04-02 16:28:02:143 ]: Debug:	bind recv_socket failed: 0 
+ (file:iptdevicemanagewidget.cpp, line:250, func: void __cdecl IptDeviceManageWidget::onSearch(void))
+[ 2022-04-02 16:28:21:260 ]: Debug:	bind recv_socket failed: 0 
+ (file:iptdevicemanagewidget.cpp, line:250, func: void __cdecl IptDeviceManageWidget::onSearch(void))

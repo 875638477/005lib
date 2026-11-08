@@ -1,0 +1,290 @@
+\t (00:00:00) allegro 17.2 S045 Windows SPB 64-bit Edition
+\t (00:00:00)     Journal start - Sat Oct 30 14:09:12 2021
+\t (00:00:00)         Host=HOST00 User=Administrator Pid=1368 CPUs=16
+\t (00:00:00) CmdLine= c:\program0\cadence\spb172\tools\bin\allegro.exe D:\004Document\013Power\02PMU\Rockchip\RK809\RK809 Component Library-Allegro.dra
+\t (00:00:00) 
+   (00:00:00) Loading axlcore.cxt 
+\t (00:00:00) Opening existing design...
+\e (00:00:00) ERROR(SPMHA1-161): Cannot open the design because of database problems. Run the dbdoctor command on the design and try to open again.
+\i (00:00:01) fillin confirm
+\t (00:00:01) Starting new design...
+\w (00:00:01) Autosave time limits are: 5 to 300 minutes
+\i (00:00:01) trapsize 29310
+\i (00:00:02) placementedit 
+\i (00:00:15) xhilite 
+\i (00:00:15) xname_flush 
+\i (00:00:15) done 
+\i (00:00:15) placementedit 
+\i (00:01:49) xhilite 
+\i (00:01:49) xname_flush 
+\i (00:01:49) done 
+\i (00:01:49) placementedit 
+\i (00:02:35) xhilite 
+\i (00:02:35) xname_flush 
+\i (00:02:35) done 
+\i (00:02:35) placementedit 
+\t (00:05:01) Performing autosave...
+\t (00:05:01) Autosave successful
+\w (00:05:01) Autosave time limits are: 5 to 300 minutes
+\w (00:10:01) Autosave time limits are: 5 to 300 minutes
+\w (00:15:01) Autosave time limits are: 5 to 300 minutes
+\w (00:20:01) Autosave time limits are: 5 to 300 minutes
+\i (00:22:52) xhilite 
+\i (00:22:52) xname_flush 
+\i (00:22:52) done 
+\i (00:22:52) placementedit 
+\t (00:25:01) Performing autosave...
+\t (00:25:01) Autosave successful
+\w (00:25:01) Autosave time limits are: 5 to 300 minutes
+\w (00:30:01) Autosave time limits are: 5 to 300 minutes
+\w (00:35:01) Autosave time limits are: 5 to 300 minutes
+\w (00:40:01) Autosave time limits are: 5 to 300 minutes
+\i (00:41:20) xdehilite 
+\i (00:41:20) xname_flush 
+\i (00:41:20) done 
+\i (00:41:20) placementedit 
+\t (00:45:01) Performing autosave...
+\t (00:45:02) Autosave successful
+\w (00:45:02) Autosave time limits are: 5 to 300 minutes
+\w (00:50:02) Autosave time limits are: 5 to 300 minutes
+\w (00:55:01) Autosave time limits are: 5 to 300 minutes
+\i (00:58:15) xname_flush 
+\i (00:58:17) xdehilite 
+\i (00:58:17) xname_flush 
+\i (00:58:17) done 
+\i (00:58:17) placementedit 
+\i (00:58:21) xname_flush 
+\i (00:58:24) xdehilite 
+\i (00:58:24) xname_flush 
+\i (00:58:24) done 
+\i (00:58:24) placementedit 
+\i (00:58:26) xname_flush 
+\i (00:58:29) xdehilite 
+\i (00:58:29) xname_flush 
+\i (00:58:29) done 
+\i (00:58:29) placementedit 
+\i (00:58:37) xname_flush 
+\i (00:58:38) xdehilite 
+\i (00:58:38) xname_flush 
+\i (00:58:38) done 
+\i (00:58:38) xhilite 
+\i (00:58:38) xname_flush 
+\i (00:58:38) done 
+\i (00:58:38) placementedit 
+\i (00:58:39) xdehilite 
+\i (00:58:39) xname_flush 
+\i (00:58:39) done 
+\i (00:58:39) placementedit 
+\i (00:58:40) xdehilite 
+\i (00:58:40) xname_flush 
+\i (00:58:40) done 
+\i (00:58:40) placementedit 
+\i (00:58:56) xname_flush 
+\i (00:58:58) xdehilite 
+\i (00:58:58) xname_flush 
+\i (00:58:58) done 
+\i (00:58:58) placementedit 
+\i (00:58:58) xname_flush 
+\i (00:59:00) xdehilite 
+\i (00:59:00) xname_flush 
+\i (00:59:00) done 
+\i (00:59:00) placementedit 
+\i (00:59:05) xname_flush 
+\i (00:59:07) xdehilite 
+\i (00:59:07) xname_flush 
+\i (00:59:07) done 
+\i (00:59:07) placementedit 
+\t (01:00:02) Performing autosave...
+\t (01:00:02) Autosave successful
+\w (01:00:02) Autosave time limits are: 5 to 300 minutes
+\w (01:05:02) Autosave time limits are: 5 to 300 minutes
+\w (01:10:02) Autosave time limits are: 5 to 300 minutes
+\w (01:15:02) Autosave time limits are: 5 to 300 minutes
+\i (01:19:12) xname_flush 
+\i (01:19:21) xdehilite 
+\i (01:19:21) xname_flush 
+\i (01:19:21) done 
+\i (01:19:21) placementedit 
+\t (01:20:02) Performing autosave...
+\t (01:20:02) Autosave successful
+\w (01:20:02) Autosave time limits are: 5 to 300 minutes
+\w (01:25:02) Autosave time limits are: 5 to 300 minutes
+\w (01:30:02) Autosave time limits are: 5 to 300 minutes
+\w (01:35:02) Autosave time limits are: 5 to 300 minutes
+\w (01:40:02) Autosave time limits are: 5 to 300 minutes
+\w (01:45:02) Autosave time limits are: 5 to 300 minutes
+\w (01:50:02) Autosave time limits are: 5 to 300 minutes
+\w (01:55:02) Autosave time limits are: 5 to 300 minutes
+\w (02:00:02) Autosave time limits are: 5 to 300 minutes
+\w (02:05:02) Autosave time limits are: 5 to 300 minutes
+\w (02:10:02) Autosave time limits are: 5 to 300 minutes
+\w (02:15:02) Autosave time limits are: 5 to 300 minutes
+\i (02:20:00) xname_flush 
+\w (02:20:02) Autosave time limits are: 5 to 300 minutes
+\i (02:20:05) xdehilite 
+\i (02:20:05) xname_flush 
+\i (02:20:05) done 
+\i (02:20:05) placementedit 
+\i (02:20:24) xname_flush 
+\i (02:20:27) xdehilite 
+\i (02:20:27) xname_flush 
+\i (02:20:27) done 
+\i (02:20:27) placementedit 
+\i (02:20:45) xname_flush 
+\i (02:20:49) xname_flush 
+\i (02:20:49) xdehilite 
+\i (02:20:49) xname_flush 
+\i (02:20:49) done 
+\i (02:20:49) placementedit 
+\i (02:20:53) xname_flush 
+\i (02:20:55) xdehilite 
+\i (02:20:55) xname_flush 
+\i (02:20:55) done 
+\i (02:20:55) placementedit 
+\i (02:21:23) xdehilite 
+\i (02:21:23) xname_flush 
+\i (02:21:23) done 
+\i (02:21:23) placementedit 
+\t (02:25:02) Performing autosave...
+\t (02:25:02) Autosave successful
+\w (02:25:02) Autosave time limits are: 5 to 300 minutes
+\w (02:30:02) Autosave time limits are: 5 to 300 minutes
+\w (02:35:02) Autosave time limits are: 5 to 300 minutes
+\w (02:40:02) Autosave time limits are: 5 to 300 minutes
+\w (02:45:02) Autosave time limits are: 5 to 300 minutes
+\w (02:50:02) Autosave time limits are: 5 to 300 minutes
+\w (02:55:02) Autosave time limits are: 5 to 300 minutes
+\i (02:58:26) xname_flush 
+\i (02:58:27) xdehilite 
+\i (02:58:28) xname_flush 
+\i (02:58:28) done 
+\i (02:58:28) placementedit 
+\i (02:58:32) xdehilite 
+\i (02:58:32) xname_flush 
+\i (02:58:32) done 
+\i (02:58:32) placementedit 
+\i (02:58:37) xname_flush 
+\i (02:58:38) xdehilite 
+\i (02:58:38) xname_flush 
+\i (02:58:38) done 
+\i (02:58:38) xhilite 
+\i (02:58:38) xname_flush 
+\i (02:58:38) done 
+\i (02:58:38) placementedit 
+\i (02:58:38) xdehilite 
+\i (02:58:38) xname_flush 
+\i (02:58:38) done 
+\i (02:58:38) xhilite 
+\i (02:58:38) xname_flush 
+\i (02:58:38) done 
+\i (02:58:38) placementedit 
+\i (02:58:43) xdehilite 
+\i (02:58:43) xname_flush 
+\i (02:58:43) done 
+\i (02:58:43) xhilite 
+\i (02:58:43) xname_flush 
+\i (02:58:43) done 
+\i (02:58:43) placementedit 
+\i (02:58:46) xname_flush 
+\i (02:58:47) xdehilite 
+\i (02:58:47) xname_flush 
+\i (02:58:47) done 
+\i (02:58:47) placementedit 
+\i (02:58:50) xdehilite 
+\i (02:58:50) xname_flush 
+\i (02:58:50) done 
+\i (02:58:50) placementedit 
+\i (02:58:52) xname_flush 
+\i (02:58:54) xname_flush 
+\i (02:58:57) xdehilite 
+\i (02:58:57) xname_flush 
+\i (02:58:57) done 
+\i (02:58:57) placementedit 
+\i (02:58:57) xname_flush 
+\i (02:59:00) xdehilite 
+\i (02:59:00) xname_flush 
+\i (02:59:00) done 
+\i (02:59:00) placementedit 
+\i (02:59:01) xname_flush 
+\i (02:59:03) xdehilite 
+\i (02:59:03) xname_flush 
+\i (02:59:03) done 
+\i (02:59:03) placementedit 
+\i (02:59:05) xname_flush 
+\i (02:59:08) xdehilite 
+\i (02:59:08) xname_flush 
+\i (02:59:08) done 
+\i (02:59:08) xhilite 
+\i (02:59:08) xname_flush 
+\i (02:59:08) done 
+\i (02:59:08) placementedit 
+\i (02:59:11) xdehilite 
+\i (02:59:11) xname_flush 
+\i (02:59:11) done 
+\i (02:59:11) placementedit 
+\t (03:00:02) Performing autosave...
+\t (03:00:02) Autosave successful
+\w (03:00:02) Autosave time limits are: 5 to 300 minutes
+\i (03:01:32) xname_flush 
+\i (03:01:35) xdehilite 
+\i (03:01:35) xname_flush 
+\i (03:01:35) done 
+\i (03:01:35) placementedit 
+\i (03:01:35) xname_flush 
+\i (03:01:38) xdehilite 
+\i (03:01:38) xname_flush 
+\i (03:01:38) done 
+\i (03:01:38) placementedit 
+\i (03:01:38) xname_flush 
+\i (03:01:40) xdehilite 
+\i (03:01:41) xname_flush 
+\i (03:01:41) done 
+\i (03:01:41) placementedit 
+\i (03:01:43) xname_flush 
+\i (03:01:45) xdehilite 
+\i (03:01:45) xname_flush 
+\i (03:01:45) done 
+\i (03:01:45) placementedit 
+\i (03:01:48) xname_flush 
+\i (03:01:50) xdehilite 
+\i (03:01:50) xname_flush 
+\i (03:01:50) done 
+\i (03:01:50) placementedit 
+\i (03:01:56) xname_flush 
+\i (03:01:58) xdehilite 
+\i (03:01:58) xname_flush 
+\i (03:01:58) done 
+\i (03:01:58) xhilite 
+\i (03:01:59) xname_flush 
+\i (03:01:59) done 
+\i (03:01:59) placementedit 
+\i (03:02:00) xdehilite 
+\i (03:02:00) xname_flush 
+\i (03:02:00) done 
+\i (03:02:00) placementedit 
+\i (03:02:03) xname_flush 
+\i (03:02:05) xdehilite 
+\i (03:02:05) xname_flush 
+\i (03:02:05) done 
+\i (03:02:05) placementedit 
+\i (03:02:05) xname_flush 
+\i (03:02:07) xdehilite 
+\i (03:02:07) xname_flush 
+\i (03:02:07) done 
+\i (03:02:07) placementedit 
+\i (03:02:29) xname_flush 
+\i (03:02:31) xdehilite 
+\i (03:02:31) xname_flush 
+\i (03:02:31) done 
+\i (03:02:31) placementedit 
+\t (03:05:02) Performing autosave...
+\t (03:05:02) Autosave successful
+\w (03:05:02) Autosave time limits are: 5 to 300 minutes
+\i (03:05:05) xhilite 
+\i (03:05:05) xname_flush 
+\i (03:05:05) done 
+\i (03:05:05) placementedit 
+\i (03:07:18) exit 
+\e (03:07:18) Do you want to save the changes you made to unnamed?
+\i (03:07:19) fillin no 
+\t (03:07:19)     Journal end - Sat Oct 30 17:16:31 2021

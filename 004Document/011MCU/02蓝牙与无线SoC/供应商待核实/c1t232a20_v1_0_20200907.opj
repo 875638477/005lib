@@ -1,0 +1,36 @@
+(ExpressProject ""
+  (ProjectVersion "19981106")
+  (ProjectType "PCB")
+  (Folder "Design Resources"
+    (Folder "Library")
+    (File ".\c1t232a20_v1_0_20200907.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (NoModify))
+  (Folder "Outputs")
+  (Folder "Referenced Projects")
+  (PartMRUSelector)
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources" ".\c1t232a20_v1_0_20200907.dsn")
+      (Path "Design Resources" ".\c1t232a20_v1_0_20200907.dsn" "SCHEMATIC1")
+      (Select "Design Resources" ".\c1t232a20_v1_0_20200907.dsn" "SCHEMATIC1"
+         "001_MAIN"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -31 0 200 0 610"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 78 1339 78 727")
+        (Scroll "0 0")
+        (Zoom "76")
+        (Occurrence "/"))
+      (Path "D:\004DOCUMENT\011MCU\02-2.4G\C1T232A20_V1_0_20200907.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "001_MAIN"))))

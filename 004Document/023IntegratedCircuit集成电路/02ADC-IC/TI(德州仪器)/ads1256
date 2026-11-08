@@ -1,0 +1,939 @@
+<!DOCTYPE html> <html class="folder product analog cn"> <head> <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> <meta content="IE=8;IE=9;IE=edge" http-equiv="x-ua-compatible"> <meta content='width=device-width, initial-scale=1.0' name='viewport'> <link rel="stylesheet" type="text/css" href="/assets/css/folderProduct.css?versionNumber=1.1" /> <!--[if lt IE 9]> <script src="http://www.ti.com/assets/js/common/html5shiv.js"> </script> <![endif]--> <title> ADS1256 | 精密 ADC (<=10MSPS) | 模数转换器 | 描述与参数</title> <meta name="description" content="从模拟和数字产品文件夹中的零漂移精密放大器资料中下载TI ADS1256模数转换器 的数据表或文档。" /> <meta name="keywords" content="模数转换器, 精密 ADC (<=10MSPS), 数据转换器, 数据转换器, semiconductors, analog" /> <meta name="PartNumber" content="ADS1256,ADS1256IDBT,ADS1256IDBR,ADS1256IDBRG4,ADS1256IDBTG4" /> <meta name="gpnFamily" content="2019_精密 ADC (<=10MSPS)" /> <meta name="status" content="正在供货" /> <link rel="canonical" href="http://www.ti.com.cn/product/cn/ADS1256"/>
+		<link rel="alternate" hreflang="ja-jp" href="http://www.tij.co.jp/product/jp/ADS1256"/>
+		<link rel="alternate" hreflang="en" href="http://www.ti.com/product/ADS1256"/>	
+		<link rel="alternate" hreflang="zh-Hans-cn" href="http://www.ti.com.cn/product/cn/ADS1256"/>	
+		<!-- END!--> </head> <!--[if lt IE 7]> <body class="lt-ie10 lt-ie9 lt-ie8 lt-ie7"> <![endif]--> <!--[if IE 7]> <body class="lt-ie10 lt-ie9 lt-ie8"> <![endif]--> <!--[if IE 8]> <body class="lt-ie10 lt-ie9"> <![endif]--> <!--[if IE 9]> <body class="lt-ie10"> <![endif]--> <!--[if gt IE 9]> <!--> <body> <!--<![endif]--> <script type="text/javascript" language="JavaScript" src="http://www.ti.com/js/esapi/esapi4js/lib/log4js.js" charset="utf-8"></script>
+<script type="text/javascript" language="JavaScript" src="http://www.ti.com/js/esapi/esapi4js/esapi.js" charset="utf-8"></script>
+<script type="text/javascript" language="JavaScript" src="http://www.ti.com/js/esapi/esapi4js/resources/i18n/ESAPI_Standard_en_US.properties.js" charset="utf-8"></script>
+<script type="text/javascript" language="JavaScript" src="http://www.ti.com/js/esapi/esapi4js/resources/Base.esapi.properties.js" charset="utf-8"></script>
+<script type="text/javascript" src='/assets/cn/js/homepage/jquery-1.7.2.min.js'> </script> <script type="text/javascript" src="/js/shared/jquery.tablesorter.min.js"> </script> <script type="text/javascript" src='/js/shared/selectiontool/lib/jquery/jquery-ui-1.8.9.custom.min.js'> </script> <script type="text/javascript" src="/cn/js/shared/pf-min.js"> </script> <script language="javascript" src='/js/shared/enableasync.js' type="text/javascript"> </script> <script type="text/javascript" src="/assets/js/headerfooter/personalization.js" ></script>
+	<!--[if lt IE 9]><script src="http://www.ti.com/assets/js/common/html5shiv.js"></script><![endif]-->
+	<link type="text/css" href="http://www.ti.com.cn/assets/cn/css/header.css" rel="stylesheet"/>
+<header id="tiHeader">
+
+<link rel="stylesheet" type="text/css"
+	href="/assets/css/com.ti.webench.panel.css?versionNumber=1.1" />
+	
+
+
+
+<script type="text/javascript"
+	src="http://www.ti.com.cn/assets/cn/js/headerfooter/com.TI.header.js?versionNumber=1.1"
+	charset="utf-8"></script>
+
+<script type="text/javascript"
+	src="http://www.ti.com.cn/assets/cn/js/homepage/jquery.hoverIntent.min.js"
+	charset="utf-8"></script>
+<script type="text/javascript"
+	src="http://www.ti.com.cn/assets/cn/js/homepage/com.ti.webench.panel.main-min.js"
+	charset="utf-8"></script>
+	
+<script type="text/javascript"
+	src="http://www.ti.com.cn/assets/cn/js/headerfooter/header.js?versionNumber=1.1"></script>
+<script type="text/javascript" src="/cn/js/shared/cartpreview.js?versionNumber=1.1"></script>
+<script type="text/javascript" src="/cn/js/shared/commonjsproperties.js?versionNumber=1.2"></script>
+<script type="text/javascript" src="/js/shared/activitybar.js?versionNumber=1.2"></script>	
+
+<br />
+</header><script> 
+        var acctNo = 'DM5210172AWA;';
+    
+
+        var tempcontentStr='/data converters/analog to digital converter/precision adc (<=10msps)';
+        var partNum    ='ADS1256';
+        var contentStr = replaceSplChars( tempcontentStr )+ "/"+ partNum;
+        var tiContentGroup = contentStr.replace("'","");
+
+
+        function replaceSplChars(content){
+            var myRegExp=new RegExp("&#153;|&#174;|&#8482;","gi");
+            content=content.replace(myRegExp,"");
+            return content;
+        }
+	
+	    var tiProductPathID='/82/390/2019/';
+	   
+        var tiPageName;
+        tiPageName = "Product Folder-ADS1256-Description & parametrics-cn";
+    
+    	var generic_part_sbe;
+    	generic_part_sbe = "HPA_PA_ADC DELTA-SIGMA";
+    </script> <script type="text/javascript" language="javascript" src="/assets/js/headerfooter/ci_analytics.js"> </script> <script type="text/javascript" language="javascript" src="/js/shared/useractivitytracker-min.js?versionNumber=1.1"> </script> <script>  
+
+    var mywin;
+    function popWin(theURL,winName,features) {
+       if(mywin == "undefined" || mywin == null) {
+             mywin = window.open(theURL,winName,features);
+       }else if(mywin.closed){
+             mywin = window.open(theURL,winName,features);
+       }
+       mywin.location.href=theURL;
+       mywin.focus();
+
+    }
+       
+    function locateAnchorLink(anchorRef, linkId) {
+        _hbLink('zh_cn_folder_p_'+linkId);
+        parent.location=anchorRef;
+    }
+            
+    function popUp(baseurl, imageurl, imagewidth, imageheight, diagramId, pnumber, isFunctional) {
+
+    URL = baseurl + '?diagramId='+ diagramId +'&genericPartNumber=' + pnumber + '&isFunctional=' + isFunctional;
+    day = new Date();
+    id = day.getTime();
+    if(isFunctional != '') {
+        URL = URL + '&isFunctional=' + isFunctional;
+    }
+
+    if(imagewidth <= 800 && imageheight <= 600) {
+    var popupwidth = 15;
+    var popupheight = 125;
+
+    popupwidth = popupwidth + parseInt(imagewidth);
+    popupheight = popupheight + parseInt(imageheight);
+    eval("page" + id + " = window.open(URL, '" + id + "', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=1,width=' + popupwidth + ',height='+ popupheight);");
+    }
+    else {
+    eval("page" + id + " = window.open(URL, '" + id + "', 'toolbar=0,scrollbars=1,location=0,statusbar=0,menubar=0,resizable=1,width=800,height=600');");
+    }
+    }
+    
+        
+    
+    
+    var genericPartNumber;
+	genericPartNumber = "ADS1256";
+	var description;
+	description = "具有多路复用器的 24 位 30kSPS 极低噪声 Δ-Σ ADC";
+   
+    
+    
+    function goToEPitchPak(reqURL){
+		   if (reqURL != "") {
+		        var distWindow = window.open(reqURL, "_blank");
+		        distWindow.focus();
+		    }
+	}
+    function fnClose(current){
+    	$(current).closest('div').hide();
+    }
+    var htmlString="";
+	function productAlert(){
+			$.ajax({
+			  type: 'GET',
+				contentType: "application/json; charset=utf-8",					
+				url: 'https://www.ti.com/myti/docs/productalert.tsp?isFolder=true&actionPerformed=showAlert&folderId=1&itemNumber='+genericPartNumber,
+				dataType: 'jsonp',
+				success: function (response) {
+					//alert(response.permId);
+					//alert(response.emailId);
+					//alert(response.firstName);
+					//alert(response.itemNumber);
+					//alert(response.itemName);
+					//alert(response.mode);
+					
+					
+					if(response.mode!=null){
+						if(response.mode == 'productalertsexist'){
+							htmlString='<div class="modalAlert-bg"> </div>';
+							htmlString +='<div class="modalAlert">';
+							htmlString +='<div class="modalWindow">';
+							htmlString +='<a class="close" onclick="closeAlert();"> </a>';
+							htmlString +='<h2> 通知我</h2>';
+							htmlString +='<p> 您已有针对 的通知<strong>'+response.itemNumber+': ' +response.itemName+'.</strong> </p>';      
+							htmlString +='<a class="button btnA lrg" onclick="closeAlert();"> 关闭</a> <a class="button btnA lrg" href="https://www.ti.com/myti/docs/maintainalert.tsp?sectionId=710&tabId=20357"> 管理我的通知</a>';
+							htmlString +='</div>';
+							htmlString +='</div>';
+									//alert("productalertsexist div "+htmlString);
+									$("#targetId").html(htmlString);
+									$("#targetId").show();
+						}
+						if(response.mode == 'addproductalerts'){
+							htmlString='<div class="modalAlert-bg"> </div>';
+							htmlString +='<div class="modalAlert">';
+							htmlString +='<div class="modalWindow">';
+							htmlString +='<a class="close" onclick="closeAlert();"> </a>';
+							htmlString +='<h2> 通知我</h2>';
+							htmlString +='<h3>'+response.itemNumber+': ' +response.itemName+'</h3>';
+							htmlString +='<p> 该产品的以下内容发生更改时将发送通知：</p>';      
+							htmlString +='<ul>';
+							htmlString +='<li> 数据表 </li>';
+							htmlString +='<li> 勘误表</li>';
+							htmlString +='<li> 应用手册</li>';
+							htmlString +='<li> 定价/供应情况</li>';
+							htmlString +='<li> 方框图</li>';
+							htmlString +='<li> 模型</li>';
+							htmlString +='<li> 白皮书</li>';
+							htmlString +='<li> 用户指南</li>';
+							htmlString +='</ul>';
+							htmlString +='<hr> <a class="button btnA lrg" onclick="addalert(\'';
+							htmlString +=''+response.itemNumber+'';
+							htmlString +='\');"> 添加通知</a> <div class="userInfo">';
+							htmlString +='<p> 发送邮件至： '+response.emailId;
+							if(response.accessLevel!=null && response.accessLevel==0){
+								htmlString +=' | <a href="https://www.ti.com/myti/docs/loginpwd.tsp?sectionId=710&tabId=20365"> 编辑</a>'
+							}								
+							htmlString +='<br> 不是 '+ response.firstName +' ? ';
+							//htmlString +='<a href="https://<<ti-pass.ext.ti.com>>/cgi-bin/login/logout.pl?lt=myti&dpi=1&drm=1&returnto=https%3A%2F%2Fwww.ti.com%2Fmyti%2Fdocs%2Fhomepage.tsp%3FsectionId%3D710%26partNumber%3D'+response.itemNumber+'%26productType%3DProduct  "> 以其他用户身份登录。</a> </p>';
+							htmlString +='<a href="https://ti-pass-api.ext.ti.com/cgi-bin/login/logout.pl?lt=myti&dpi=1&drm=1&returnto=https%3A%2F%2Fwww.ti.com%2Fmyti%2Fdocs%2Fhomepage.tsp%3FsectionId%3D710%26partNumber%3D'+response.itemNumber+'%26productType%3DProduct"> 以其他用户身份登录。</a> </p>';
+							htmlString +='</div>';
+							htmlString +='</div>';
+							htmlString +='</div>';
+							//alert(htmlString);
+							$("#targetId").html(htmlString);
+							$("#targetId").show();
+						}
+					}
+				},
+				error: function (request, ajaxOptions, thrownError) {
+					htmlString='<div class="modalAlert-bg"> </div>';
+					htmlString+='<div class="modalAlert">';
+					htmlString+='<div class="modalWindow">';
+					htmlString+='<a class="close" onclick="closeAlert();"> </a>';
+					htmlString+='<h2> 通知我</h2>';
+					htmlString+='<h3>'+genericPartNumber+': '+ description+'</h3>';
+					htmlString+='<p> 该产品的以下内容发生更改时将发送通知：</p> ';     
+					htmlString+='<ul>';
+					htmlString +='<li> 数据表 </li>';
+					htmlString +='<li> 勘误表</li>';
+					htmlString +='<li> 应用手册</li>';
+					htmlString +='<li> 定价/供应情况</li>';
+					htmlString +='<li> 方框图</li>';
+					htmlString +='<li> 模型</li>';
+					htmlString +='<li> 白皮书</li>';
+					htmlString +='<li> 用户指南</li>';
+					htmlString +='</ul>';
+					htmlString+='<hr>';
+					htmlString+='<a href="https://ti-pass-api.ext.ti.com/cgi-bin/login/logout.pl?lt=myti&dpi=1&drm=1&returnto=https%3A%2F%2Fwww.ti.com%2Fmyti%2Fdocs%2Fhomepage.tsp%3FsectionId%3D710%26partNumber%3D'+genericPartNumber+'%26productType%3DProduct" class="button btnA lrg"> 立即登录或注册</a>';
+					htmlString+='<div class="userInfo">';
+					htmlString+='<p> 要接收通知，您必须有 My TI 帐户。</p>';
+					htmlString+='</div>';
+					htmlString+='</div>';
+					htmlString+='</div>';
+									//alert("not logged in"+htmlString);
+									$("#targetId").html(htmlString);
+									$("#targetId").show();
+				}
+			});	
+		}	
+	function addalert(partNumber){
+		//alert("partNumber-->"+partNumber);
+		$.ajax({
+			url: 'https://www.ti.com/myti/docs/productalert.tsp?isFolder=true&actionPerformed=addAlert&folderId=1&itemNumber='+partNumber,
+			//data: {orderNumber:orderNum, orderType:orderType},
+			context: document.body,
+			type: "GET",	
+			contentType: "application/json; charset=utf-8",		
+			dataType: "jsonp",
+			success: function(response) {
+				    //alert(response.permId);
+					//alert(response.emailId);
+					//alert(response.firstName);
+					//alert(response.itemNumber);
+					//alert(response.itemName);
+					//alert(response.mode);
+				    htmlString='<div class="modalAlert-bg"> </div>';
+					htmlString+='<div class="modalAlert">';
+					htmlString+='<div class="modalWindow">';
+					htmlString+='<a class="close"  onclick="closeAlert();"> </a>';
+		            htmlString+='<h2> 通知确认</h2>';
+		            htmlString+='<p> 针对 '+response.itemNumber+': ' +response.itemName+ ' 的通知将发送至 '+response.emailId+'.</p>';      
+		            htmlString+='<a class="button btnA lrg" onclick="closeAlert();"> 关闭</a> <a class="button btnA lrg" href="https://www.ti.com/myti/docs/maintainalert.tsp?sectionId=710&tabId=20357"> 管理我的通知</a>';
+					htmlString+='</div> </div>';
+									//alert("confirm div "+htmlString);
+									$("#targetId").html(htmlString);
+									$("#targetId").show();
+			},
+			error: function(request, textStatus, errorThrown) {				
+				htmlString='<div class="modalAlert-bg"> </div>';
+				htmlString+='<div class="modalAlert">';
+				htmlString+='<div class="modalWindow">';
+				htmlString+='<a class="close" onclick="closeAlert();"> </a>';
+				htmlString+='<h2> 通知我</h2>';
+				htmlString+='<h3>'+genericPartNumber+': '+ description+'</h3>';
+				htmlString+='<p> 该产品的以下内容发生更改时将发送通知：</p> ';     
+				htmlString+='<ul>';
+				htmlString +='<li> 数据表 </li>';
+				htmlString +='<li> 勘误表</li>';
+				htmlString +='<li> 应用手册</li>';
+				htmlString +='<li> 定价/供应情况</li>';
+				htmlString +='<li> 方框图</li>';
+				htmlString +='<li> 模型</li>';
+				htmlString +='<li> 白皮书</li>';
+				htmlString +='<li> 用户指南</li>';
+				htmlString +='</ul>';
+				htmlString+='<hr>';
+				htmlString+='<a href="https://ti-pass-api.ext.ti.com/cgi-bin/login/logout.pl?lt=myti&dpi=1&drm=1&returnto=https%3A%2F%2Fwww.ti.com%2Fmyti%2Fdocs%2Fhomepage.tsp%3FsectionId%3D710%26partNumber%3D'+genericPartNumber+'%26productType%3DProduct" class="button btnA lrg"> 立即登录或注册</a>';
+				htmlString+='<div class="userInfo">';
+				htmlString+='<p> 要接收通知，您必须有 My TI 帐户。</p>';
+				htmlString+='</div>';
+				htmlString+='</div>';
+				htmlString+='</div>';
+								//alert("not logged in"+htmlString);
+								$("#targetId").html(htmlString);
+								$("#targetId").show();
+			}
+		});	
+	}
+	
+	function closeAlert(){
+	  $("#targetId").hide(); 
+	}
+    
+</script> <div class="pageTitle clear"> <div class="pageTitle1"> <div class="image"> <img  src="http://www.ti.com/graphics/folders/partimages/ADS1256.jpg" alt="具有多路复用器的 24 位 30kSPS 极低噪声 Δ-Σ ADC - ADS1256" border="0" title="图片仅供参考。 可能提供其他引脚/封装组合。"> 
+
+</div>
+
+</div> <div class="pageTitle2"> <div id="2019-ADS1256" name="primary" style="display: none;">   
+	    <div class="breadcrumb">	
+	    	&nbsp;
+									<a href='http://www.ti.com.cn'>
+									TI 主页</a>&nbsp;&gt;
+								&nbsp;
+									<a href='http://www.ti.com.cn'>
+									半导体</a>&nbsp;&gt;
+								&nbsp;
+									<a href='http://www.ti.com.cn/lsds/ti_zh/analog/dataconverters/data_converter.page'>
+									数据转换器</a>&nbsp;&gt;
+								&nbsp;
+									<a href='http://www.ti.com.cn/lsds/ti_zh/data-converters/analog-to-digital-converter-overview.page'>
+									模数转换器</a>&nbsp;&gt;
+								&nbsp;
+									<a href='http://www.ti.com.cn/lsds/ti_zh/data-converters/precision-adc-less-10msps-overview.page'>
+									精密 ADC (<=10MSPS)</a>&nbsp;&gt;
+								</div>
+    </div>
+  
+  <div id="3259-ADS1256" name="secondary0" style="display: none;">   
+	     <div class="breadcrumb">	
+	    	&nbsp;
+									<a href='http://www.ti.com.cn'>
+									TI 主页</a>&nbsp;&gt;
+								&nbsp;
+									<a href='http://www.ti.com.cn'>
+									半导体</a>&nbsp;&gt;
+								&nbsp;
+									<a href='http://www.ti.com.cn/lsds/ti_zh/analog/sensors/overview.page'>
+									传感器产品</a>&nbsp;&gt;
+								&nbsp;
+									<a href='http://www.ti.com.cn/lsds/ti_zh/sensors/pressure-sensing-products.page'>
+									压力感应</a>&nbsp;&gt;
+								&nbsp;
+									<a href='http://www.ti.com.cn/lsds/ti_zh/sensors/temperature-pressure-signal-conditioning-products.page'>
+									温度 & 压力信号调节</a>&nbsp;&gt;
+								&nbsp;
+									<a href='http://www.ti.com.cn/lsds/ti_zh/sensors/temperature-and-pressure-analog-front-end-products.page'>
+									温度 & 压力模拟前端</a>&nbsp;&gt;
+								</div>
+      </div>  
+<script type="text/javascript">
+enableBreadcrumb();
+
+function enableBreadcrumb() {
+	  //alert("enableBreadcrumb-->");	
+	  var gpnPrimaryFamily = "2019-ADS1256";
+  	  var sessionStorageVal = sessionStorage.getItem('BCrumb');
+	  //alert("sessionStorageVal--"+sessionStorageVal);
+	 // alert("gpnPrimaryFamily--"+gpnPrimaryFamily);
+	  var value = document.getElementById(sessionStorageVal);
+      if(value != null && sessionStorageVal != null){
+         //alert("inside if");
+         //alert("sessionStorageVal if --"+sessionStorageVal);
+         document.getElementById(sessionStorageVal).style.display= "block"; 
+      }else{
+         document.getElementById(gpnPrimaryFamily).style.display= "block";
+      }
+
+}
+
+</script><h1>ADS1256<font title="在新型设计中推荐采用的器件、工具或软件。   ">		
+		     	 
+					(正在供货)
+				 </font>
+		</h1>
+			
+			<h1 class="productTitle">
+				 具有多路复用器的 24 位 30kSPS 极低噪声 Δ-Σ ADC</h1>
+		<div class="keyDocument showMore clear">
+
+<script type="text/javascript">
+                    		$("#ab_product_datasheet").html("1");
+                    	</script>
+                        <ul>
+                                       <li class ="datasheet"><a class= "local" href='http://www.ti.com/cn/lit/gpn/ads1256' target="_blank" name="&lid=zh_CN_folder_p_ads1256_datasheet_action_link">Very Low Noise, 24-Bit Analog-to-Digital Converter</a>&nbsp;                                                
+                                                <!- Changed for ChinaSite - PF/TF Display of English Content -->
+                                                  
+                                                          &nbsp;(英文內容)<!- Display of English Content -->
+                                                   </li>
+                        </div>
+		
+</div> <div class="pageTitle3"> <select id="toggleFoldersDropDown">
+						<option value="http://www.ti.com/product/ADS1256/description">In English</option>
+						<option selected value="http://www.ti.com.cn/product/cn/ADS1256/description">中文内容</option>
+						<option value="http://www.tij.co.jp/product/jp/ADS1256/description">日本語表示</option>
+			
+						 </select>
+						<script type="text/javascript">
+						var toggle = document.getElementById( 'toggleFoldersDropDown' );
+						toggle.onchange = function() {
+						window.open( this.options[ this.selectedIndex ].value ,"_self");
+							};
+					</script> 
+<input class="button btnC"  id="productAlert" type="button" value="通知我"  onclick="productAlert()"/> <div id="targetId"> </div> <div class="share"> <script type="text/javascript" src='/js/shared/com.TI.IMSDS.AddThis.TIComFolderPages.js'> </script> </div> </div> </div>
+	      &nbsp;
+            <div class="tab">
+<ul>
+	<li class = "active"><a href='http://www.ti.com.cn/product/cn/ADS1256/description'> 描述与参数</a></li>
+					<li><a href='http://www.ti.com.cn/product/cn/ADS1256/technicaldocuments'> 技术文档</a></li>
+					<li><a href='http://www.ti.com.cn/product/cn/ADS1256/toolssoftware'> 工具与软件</a></li>
+					<script type="text/javascript">
+							$("#ab_product_toolsw").html("1");
+						</script>
+					<li id = "sampleBuy" ><a href='http://www.ti.com.cn/product/cn/ADS1256/samplebuy'> 样片与购买</a></li>
+					<li><a href='http://www.ti.com.cn/product/cn/ADS1256/compare'> 比较</a></li>
+					<script type="text/javascript">
+							$("#ab_product_compare").html("C1");
+						</script>
+					<li><a href='http://www.ti.com.cn/product/cn/ADS1256/quality'> 质量与封装</a></li>
+					<li><a href='http://www.ti.com.cn/product/cn/ADS1256/support'> 支持与社区</a></li>
+					</ul>
+	<div class="clear"></div>
+</div>
+
+<div class="anchor clear">
+			 <ul>		  
+				<li> <span id='description'>描述</span></li>	   	 		
+				   	 <li> <span id='feature'>特性</span></li>	   	 		
+				   	 <li> <span id='parametric'>参数</span></li>	   	 		
+				   	 <li> <span id='diagram'>方框图</span></li>	   	 		
+				   	 <li> <span id='relEnd'>相关终端应用</span></li>	   	 		
+				   	 <li> <span id='relProd'>伴随产品</span></li>	   	 		
+				   	 </ul>
+		</div>
+<script type="text/javascript">
+						$("#ab_product_evms").html("1");
+					</script>
+				<script type="text/javascript">
+						$("#ab_product_samples").html("1");
+					</script>
+				<script type="text/javascript">
+						$("#ab_product_buy").html("1");
+					</script>
+				<div class="pageContent"> <div class="pageContent1"> <div class="seeAlso clear"> </div> <script language="JavaScript">
+           	    var link = "zh_CN_folder_p_quick_link_description_features_features";
+           	    com.TI.Product.handleQuickLinks('feature','特性','#features',link);
+           	</script>
+               <script language="JavaScript">
+           	    var link = "zh_CN_folder_p_quick_link_description_features_description";
+           	    com.TI.Product.handleQuickLinks('description','描述','#descriptions',link);
+           		</script>
+               <div class="descriptionFeature showMore clear">
+					<div class="showContent">
+                    <div class="description" id="descriptions">   
+	      
+               <h2> 描述</h2>
+                      
+                <div class="desc" >        
+       				<p> <p>The ADS1255 and ADS1256 are extremely low-noise, 24-bit analog-to-digital (A/D) converters. They provide complete high-resolution measurement solutions for the most demanding applications.</p> <p>The converter is comprised of a 4th-order, delta-sigma (&#x394;&#x3A3;) modulator followed by a programmable digital filter. A flexible input multiplexer handles differential or single-ended signals and includes circuitry to verify the integrity of the external sensor connected to the inputs. The selectable input buffer greatly increases the input impedance and the low-noise programmable gain amplifier (PGA) provides gains from 1 to 64 in binary steps. The programmable filter allows the user to optimize between resolution of up to 23 bits noise-free and data rate of up to 30k samples per second (SPS). The converters offer fast channel cycling for measuring multiplexed inputs and can also perform one-shot conversions that settle in just a single cycle.</p>  <p>Communication is handled over an SPI-compatible serial interface that can operate with a 2-wire connection. Onboard calibration supports both self and system correction of offset and gain errors for all the PGA settings. Bidirectional digital I/Os and a programmable clock output driver are provided for general use. The ADS1255 is packaged in an SSOP-20, and the ADS1256 in an SSOP-28.</p>  </p>
+     		 	</div>
+                       
+     </div>
+<div class="feature" id="features">	
+            <h2>特性</h2>
+           <div class="feat">
+        	   <p><ul><li>24 Bits, No Missing Codes <ul><li>All Data Rates and PGA Settings</li></ul></li> <li>Up to 23 Bits Noise-Free Resolution</li> <li>&plusmn;0.0010% Nonlinearity (max)</li> <li>Data Output Rates to 30kSPS</li> <li>Fast Channel Cycling <ul><li>18.6 Bits Noise-Free (21.3 Effective Bits) at 1.45kHz</li></ul></li> <li>One-Shot Conversions with Single-Cycle Settling</li> <li>Flexible Input Multiplexer with Sensor Detect <ul><li>Four Differential Inputs (ADS1256 only)</li> <li>Eight Single-Ended Inputs (ADS1256 only)</li></ul></li> <li>Chopper-Stabilized Input Buffer</li> <li>Low-Noise PGA: 27nV Input-Referred Noise</li> <li>Self and System Calibration for All PGA Settings</li> <li>5V Tolerant SPI&#153;-Compatible Serial Interface</li> <li>Analog Supply: 5V</li> <li>Digital Supply: 1.8V to 3.6V</li> <li>Power Dissipation <ul><li>As Low as 38mW in Normal Mode</li> <li>0.4mW in Standby Mode</li></ul></li></ul>  </p>
+		   </div>
+           </div>
+</div>
+				<div class="showButton"><span>查看更多内容</span></div>
+    			</div>
+					
+					
+           			           
+          <div class="parametric clear" id="parametrics"> <h2> 参数<a href='http://www.ti.com.cn/product/cn/ADS1256/compare'> 与其它产品相比&nbsp;精密 ADC (&lt;=10MSPS)</a> </h2> <div class="paramName"> <table id="paramsName" class="tblstandard"> <tr id="para_0"> <th>&nbsp;</th> </tr> <tr id="para_1"> <td> Resolution
+                       (Bits)
+                   </td> </tr> <tr id="para_2"> <td> Sample Rate (max)
+                       (SPS)
+                   </td> </tr> <tr id="para_3"> <td> # Input Channels</td> </tr> <tr id="para_4"> <td> Input Type</td> </tr> <tr id="para_5"> <td> Power Consumption
+                       (Typ)
+                   
+                       (mW)
+                   </td> </tr> <tr id="para_6"> <td> Input Range
+                       (Min)
+                   
+                       (V)
+                   </td> </tr> <tr id="para_7"> <td> Input Range
+                       (Max)
+                   
+                       (V)
+                   </td> </tr> <tr id="para_8"> <td> Interface</td> </tr> <tr id="para_9"> <td> Integrated Features</td> </tr> <tr id="para_10"> <td> Analog Voltage AVDD
+                       (Min)
+                   
+                       (V)
+                   </td> </tr> <tr id="para_11"> <td> Analog Voltage AVDD
+                       (Max)
+                   
+                       (V)
+                   </td> </tr> <tr id="para_12"> <td> Architecture</td> </tr> <tr id="para_13"> <td> Operating Temperature Range
+                       (C)
+                   </td> </tr> <tr id="para_14"> <td> Pin/Package</td> </tr> <tr id="para_15"> <td> Approx. Price (US$)</td> </tr> <tr id="para_16"> <td> Reference Mode</td> </tr> <tr> <td id="samplelink">&nbsp;</td> </tr> </table> </div> <div class="paramData"> <table id="parametricdata" class="tblstandard"> <script language="JavaScript">
+                   var link = "zh_CN_folder_p_quick_link_description_features_parametrics";
+                com.TI.Product.handleQuickLinks('parametric','参数变化','#parametrics',link);
+
+                </script> <tr> <th class="on"> ADS1256</th> <th> <a href='http://www.ti.com.cn/product/cn/ads1248/description' name="&lid=zh_CN_folder_p_params_part_number_ADS1248_src_ADS1256" class="tbl1a"> ADS1248</a> </th> <th> <a href='http://www.ti.com.cn/product/cn/ads1255/description' name="&lid=zh_CN_folder_p_params_part_number_ADS1255_src_ADS1256" class="tbl1a"> ADS1255</a> </th> <th> <a href='http://www.ti.com.cn/product/cn/ads1257/description' name="&lid=zh_CN_folder_p_params_part_number_ADS1257_src_ADS1256" class="tbl1a"> ADS1257</a> </th> <th> <a href='http://www.ti.com.cn/product/cn/ads1262/description' name="&lid=zh_CN_folder_p_params_part_number_ADS1262_src_ADS1256" class="tbl1a"> ADS1262</a> </th> <th> <a href='http://www.ti.com.cn/product/cn/ads1263/description' name="&lid=zh_CN_folder_p_params_part_number_ADS1263_src_ADS1256" class="tbl1a"> ADS1263</a> </th> </tr> <tr> <td class="on" nowrap> 24&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> 24&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> 24&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> 24&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> 32&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> 32&nbsp;
+                                                                                
+                                        &nbsp;</td> </tr> <tr> <td class="on" nowrap> 30kSPS&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> 2kSPS&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> 30kSPS&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> 30kSPS&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> 38kSPS&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> 38kSPS&nbsp;
+                                                                                
+                                        &nbsp;</td> </tr> <tr> <td class="on" nowrap> 8&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> 8&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> 2&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> 4&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> 10&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> 10&nbsp;
+                                                                                
+                                        &nbsp;</td> </tr> <tr> <td class="on" nowrap> Differential<br/> Single-Ended&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> Differential<br/> Single-Ended&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> Differential<br/> Single-Ended&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> Differential<br/> Single-Ended&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> Differential<br/> Single-Ended&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> Differential<br/> Single-Ended&nbsp;
+                                                                                
+                                        &nbsp;</td> </tr> <tr> <td class="on" nowrap> 36&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> 2.3&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> 36&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> 38&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> 27&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> 27&nbsp;
+                                                                                
+                                        &nbsp;</td> </tr> <tr> <td class="on" nowrap> 0&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> -2.125<br/>  0&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> 0&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> 0&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> -2.5<br/> 0&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> -2.5<br/> 0&nbsp;
+                                                                                
+                                        &nbsp;</td> </tr> <tr> <td class="on" nowrap> 5.25&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> 2.125<br/>  4.25&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> 5.25&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> 5.25&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> 2.5<br/> 5&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> 2.5<br/> 5&nbsp;
+                                                                                
+                                        &nbsp;</td> </tr> <tr> <td class="on" nowrap> Serial SPI&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> Serial SPI&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> Serial SPI&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> Serial SPI&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> Serial SPI&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> Serial SPI&nbsp;
+                                                                                
+                                        &nbsp;</td> </tr> <tr> <td class="on" nowrap> 50/60 Hz Rejection<br/> GPIO<br/> PGA&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> 50/60 Hz Rejection<br/> Excitation Current Sources (iDACs)<br/> GPIO<br/> Oscillator<br/> PGA<br/> Temp Sensor&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> 50/60 Hz Rejection<br/> GPIO<br/> PGA&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> 50/60 Hz Rejection<br/> GPIO<br/> PGA&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> 50/60 Hz Rejection<br/> Excitation Current Sources (iDACs)<br/> GPIO<br/> Oscillator<br/> PGA<br/> Temp Sensor&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> 50/60 Hz Rejection<br/> Excitation Current Sources (iDACs)<br/> GPIO<br/> Oscillator<br/> PGA<br/> Temp Sensor&nbsp;
+                                                                                
+                                        &nbsp;</td> </tr> <tr> <td class="on" nowrap> 4.75&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> 2.7&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> 4.75&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> 4.75&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> 4.75&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> 4.75&nbsp;
+                                                                                
+                                        &nbsp;</td> </tr> <tr> <td class="on" nowrap> 5.25&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> 5.25&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> 5.25&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> 5.25&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> 5.25&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> 5.25&nbsp;
+                                                                                
+                                        &nbsp;</td> </tr> <tr> <td class="on" nowrap> Delta-Sigma&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> Delta-Sigma&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> Delta-Sigma&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> Delta-Sigma&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> Delta-Sigma&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> Delta-Sigma&nbsp;
+                                                                                
+                                        &nbsp;</td> </tr> <tr> <td class="on" nowrap> -40 to 85&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> -40 to 105&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> -40 to 85&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> -40 to 85&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> -40 to 125&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> -40 to 125&nbsp;
+                                                                                
+                                        &nbsp;</td> </tr> <tr> <td class="on" nowrap> 28SSOP&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> 28TSSOP&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> 20SSOP&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> 20VQFN&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> 28TSSOP&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> 28TSSOP&nbsp;
+                                                                                
+                                        &nbsp;</td> </tr> <tr> <td class="on" nowrap>      7.81 | 1ku&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap>      4.95 | 1ku&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap>      6.96 | 1ku&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap>      7.65 | 1ku&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap>      9.10 | 1ku&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap>     12.65 | 1ku&nbsp;
+                                                                                
+                                        &nbsp;</td> </tr> <tr> <td class="on" nowrap> Ext&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> Ext<br/> Int&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> Ext&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> Ext&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> Ext<br/> Int&nbsp;
+                                                                                
+                                        &nbsp;</td> <td nowrap> Ext<br/> Int&nbsp;
+                                                                                
+                                        &nbsp;</td> </tr> <tr> <td class="on" id="samplelink"> <a href='http://www.ti.com.cn/product/cn/ads1256/samplebuy' name="&lid=zh_CN_folder_p_params_ADS1256_sample_buy_now_link"> 样片</a> </td> <td id="samplelink"> <a href='http://www.ti.com.cn/product/cn/ads1248/samplebuy' name="&lid=zh_CN_folder_p_params_ADS1256_alt_ADS1248_sample_buy_now_link"> 样片</a> </td> <td id="samplelink"> <a href='http://www.ti.com.cn/product/cn/ads1255/samplebuy' name="&lid=zh_CN_folder_p_params_ADS1256_alt_ADS1255_sample_buy_now_link"> 样片</a> </td> <td id="samplelink"> <a href='http://www.ti.com.cn/product/cn/ads1257/samplebuy' name="&lid=zh_CN_folder_p_params_ADS1256_alt_ADS1257_sample_buy_now_link"> 样片</a> </td> <td id="samplelink"> <a href='http://www.ti.com.cn/product/cn/ads1262/samplebuy' name="&lid=zh_CN_folder_p_params_ADS1256_alt_ADS1262_sample_buy_now_link"> 样片</a> </td> <td id="samplelink"> <a href='http://www.ti.com.cn/product/cn/ads1263/samplebuy' name="&lid=zh_CN_folder_p_params_ADS1256_alt_ADS1263_sample_buy_now_link"> 样片</a> </td> </tr> </table> </div> </div> <script type="text/javascript" src="http://www.ti.com.cn/js/dojo/dojo_v1_3.js">
+</script>
+<script type="text/javascript">
+		function ajaxCall(urlComp,divId){
+			dojo.xhrGet( {
+		    	url: urlComp,
+		    	handleAs: "text",
+		    	// The LOAD function will be called on a successful response.
+		    	timeout: 75000,
+		    	load: function(response, ioArgs) {
+		    		sethtml(divId,response);
+					return response;
+		    	},
+		    	// The ERROR function will be called in an error case.
+		    	error: function(response, ioArgs) { // ?
+		    		console.error("HTTP status code: ", ioArgs.xhr.status); // ?
+		    		return response; // ?
+		    	}
+		    	});
+		    	
+		    	 function sethtml(div,content) {
+				    var search = content;
+				    var script;
+				    while( script = search.match(/(<script[^>]+javascript[^>]+>\s*(<!--)?)/i)) {
+				    	search = search.substr(search.indexOf(RegExp.$1) + RegExp.$1.length);
+					    if (!(endscript = search.match(/((-->)?\s*<\/script>)/))) break;
+					    block = search.substr(0, search.indexOf(RegExp.$1));
+				        search = search.substring(block.length + RegExp.$1.length);
+				        var oScript = document.createElement('script');
+				        oScript.text = block;
+				        document.getElementsByTagName("head").item(0).appendChild(oScript);
+				    }
+				    document.getElementById(div).innerHTML=content;
+			}
+		}
+</script>
+
+
+<script type="text/javascript">			
+             var string4, string5, string6,stringConcatenated1;
+             string4 = '/foldercomponents/cn'; // first string
+			 string5 = '/docs/getproductdiagrampreview.tsp?compVariationId=8482&genericPartNumber=';
+			 string6 = 'ADS1256&random=' + Math.random()*99999;
+			 stringConcatenated1 = string4 + string5 + string6;
+			 ajaxCall(stringConcatenated1,'diagrampreview');
+        </script>
+
+<span id = "diagrampreview"></span>
+
+<script language="javascript">          
+
+	function displayGenContent(eeqId){
+		if (document.getElementById("appgencontent")){
+			document.getElementById("appgencontent").innerHTML = '';
+		}
+		
+	}
+	
+	function displayContent(reqUrl, targetId) {		
+		$.ajax({
+	  		  url: reqUrl,
+	  		  context: document.body,
+	  		  timeout: 75000,
+	  		  success: function(data){
+	  			 $('#'+targetId).html(data);
+	  		  },
+	  		  error:function (xhr, ajaxOptions, thrownError){
+	  		     
+	          } 	
+	 	}); 
+	        
+   }
+    </script>
+<script language="JavaScript">
+	     var link = "zh_CN_folder_p_quick_link_description_features_related_end_equipment"; 
+	     com.TI.Product.handleQuickLinks('relEnd','相关应用产品','#relEnds',link);
+    </script>
+     <div id="relEnds" class="relEnd clear">                
+      <h2 id="Related End Equipments">相关终端应用</h2>
+      <div class="list">
+      	<ul class="eeqlist">
+					<li class="" value="412" blockId="6152">
+			                        <a href="/solution/cn/docs/redirect.tsp?appId=412" target="_blank" value="412" blockId="6152" class="eeqlink" name="&lid=zh_CN_folder_p_end_equipment_name">
+			                                 现场发送器：压力传感器</a>
+			                            </li>
+			                <li value="6075" blockId="6075">
+			                        <a href="/solution/cn/docs/redirect.tsp?appId=6075" target="_blank" value="6075" blockId="6075" class="eeqlink" name="&lid=zh_CN_folder_p_end_equipment_name">
+			                                 血气分析仪：便携式</a>
+			                            </li>
+			                </ul>
+      		</div> 
+    </div>
+</div> <div class="pageContent2"> <link rel="stylesheet" type="text/css" href="/assets/css/folderSharedGS.css">
+<div class="featuredToolSW clear">         
+  <h2>﻿特色工具和软件</h2>
+      <ul>          		            
+	    <li>				                    		                  		                   
+	           		<a href='http://www.ti.com.cn/tool/cn/adcpro' name="&lid=en_US_folder_p_tools_software_name">ADCPro™ 模数转换器评估软件</a>
+	           				           		
+	           		(软件开发套件 (SDK))	
+	           		</li>	                   		                    
+	           	<li>				                    		                  		                   
+	           		<a href='http://www.ti.com/cn/lit/zip/sbam113' name="&lid=en_US_folder_p_tools_software_name">ADS1256 IBIS Model</a>
+	           				           		
+	           		(模拟模型)	
+	           		</li>	                   		                    
+	           	<li>				                    		                  		                   
+	           		<a href='http://www.ti.com.cn/tool/cn/ads1256evm-pdk' name="&lid=en_US_folder_p_tools_software_name">ADS1256 性能演示套件</a>
+	           				           		
+	           		(评估模块和开发板)	
+	           		</li>	                   		                    
+	           	<li class="viewAll"><a href='http://www.ti.com.cn/product/cn/ADS1256/toolssoftware'>查看所有 工具和软件 ADS1256</a></li>                 	        
+	    </ul>	
+  </div>
+<!-- added to test --> <script language="JavaScript"> 
+      	    var link = "zh_CN_folder_p_quick_link_tools_software_circuit_design_simulation";          		   	
+      	    com.TI.Product.handleQuickLinks('maintoolsw','工具与软件','#toolssoftware','');
+      	    com.TI.Product.handleQuickLinks('subcircuit','电路设计与仿真','#toolssoftware',link);      	    
+   		</script>
+         
+
+
+<script>
+
+function checkWB5form(form) {
+
+	if(linkCode) {
+		
+		var param1="ADS1256";
+		var param3="http://www.ti.com/product/ADS1256";
+		linkCode(param1, "Webench Submit", param3, form);		
+	}
+
+	var server="https://webench.ti.com";
+	if (location.port != "") {
+		server = "https://webenchv1.ext.ti.com" + ":" + location.port;
+	}	
+	
+	var dest = server + "/webench5/voltagereference/#adc=ADS1256?origin=pf_panel";
+	openWindow(dest);
+}
+
+
+function openWindow(url) {
+	var width = window.screen.availWidth - 20;
+	var height = window.screen.availHeight - 30;
+	
+	var windowReference = window.open(url, '_blank', 'directories=no,left=0,top=0,height=' +
+	height + ',width=' + width + ',location=no,menubar=no,status=no,scrollbars=yes,resizable=yes');
+	
+	if (navigator.appName.indexOf("Microsoft") == -1) {
+		if (navigator.appVersion.charAt(0) >= '3') {
+			windowReference.focus();
+		}
+	}
+	if (windowReference.opener == null) {
+		windowReference.opener = self;
+	}
+	return false;
+}
+</script>
+
+
+<!-- webbench display Content - Starts -->
+<div id="wbpanel" class="row folder">
+<div class="wbpanel">
+	<h3>WEBENCH<sup>&reg;</sup> Designer ADS1256</h3>
+<div class="wbpanel-inner">
+<form method="GET" action="https://webench.ti.com/webench5/power/webench5.cgi" onSubmit="return false;" target="_blank">
+	<table class="wbpanel-table">
+		<tr>
+			<td><br><img src="https://webench.ti.com/webench5/pf/images/BlockDiag_DeltaSigma.png" width="100%" title="Voltage Reference Selector" /></td>
+		</tr>
+		<tr>
+			<td><br>
+				<input id="btnWB5Submit" name="wbsubmit" class="button btnA" type="submit" value="Find Solutions" onClick="return checkWB5form(this.form);"/>
+			</td>
+		</tr>
+	</table>
+</form>
+</div>
+<div class="wbtools"> <a target="_blank" href="http://www.ti.com/lsds/ti/analog/webench/webench_vref_user_manual.page">Series Voltage Reference Selector</a> </div>
+</div>
+</div>
+<form name="lastViewedEntities"> <input type="hidden" name="Locale" value='cn'/> <script type="text/javascript">
+              var partNumber = 'ADS1256';
+              var url_start  = '/foldercomponents/cn/docs/useractivitytracker.tsp?entityType=';
+              var param_entityid = '&entityId=';
+              var param_webpagname = '&webPageName=';
+              var param_activitytype = '&activityType=';
+              var param_regionalsite = '&regionalSite=';
+              var url = url_start+"PR"+param_entityid+partNumber+param_webpagname+"PF"+param_activitytype+"VI"+param_regionalsite+document.lastViewedEntities.Locale.value;
+              var myDate= new Date().getTime();
+              url=url + "&ts=" + myDate;
+              processPFMetrics(partNumber,document.lastViewedEntities.Locale.value,url);
+           	// Added for Tabbed product Issue fix			
+              
+           </script> </form> <script type="text/javascript" src="http://www.ti.com.cn/js/dojo/dojo_v1_3.js">
+</script>
+<script type="text/javascript">
+		function ajaxCall(urlComp,divId){
+			dojo.xhrGet( {
+		    	url: urlComp,
+		    	handleAs: "text",
+		    	// The LOAD function will be called on a successful response.
+		    	timeout: 75000,
+		    	load: function(response, ioArgs) {
+		    		sethtml(divId,response);
+					return response;
+		    	},
+		    	// The ERROR function will be called in an error case.
+		    	error: function(response, ioArgs) { // ?
+		    		console.error("HTTP status code: ", ioArgs.xhr.status); // ?
+		    		return response; // ?
+		    	}
+		    	});
+		    	
+		    	 function sethtml(div,content) {
+				    var search = content;
+				    var script;
+				    while( script = search.match(/(<script[^>]+javascript[^>]+>\s*(<!--)?)/i)) {
+				    	search = search.substr(search.indexOf(RegExp.$1) + RegExp.$1.length);
+					    if (!(endscript = search.match(/((-->)?\s*<\/script>)/))) break;
+					    block = search.substr(0, search.indexOf(RegExp.$1));
+				        search = search.substring(block.length + RegExp.$1.length);
+				        var oScript = document.createElement('script');
+				        oScript.text = block;
+				        document.getElementsByTagName("head").item(0).appendChild(oScript);
+				    }
+				    document.getElementById(div).innerHTML=content;
+			}
+		}
+</script>
+
+
+<script type="text/javascript">			
+             var string4, string5, string6,stringConcatenated1;
+             string4 = '/foldercomponents/cn'; // first string
+			 string5 = '/docs/getproductpromotion.tsp?compVariationId=8574&genericPartNumber=';
+			 string6 = 'ADS1256&random=' + Math.random()*99999;
+			 stringConcatenated1 = string4 + string5 + string6;
+			 ajaxCall(stringConcatenated1,'promotion');
+        </script>
+
+<span id = "promotion"></span>
+
+</div> <script src="/js/shared/companionProductsConfig-min.js" charset="utf-8" type="text/javascript"> </script> <script src="/js/shared/companionProducts-min.js" charset="utf-8" type="text/javascript"> </script> <script>
+setProductConfigValues('ADS1256','cn','zh_CN', 'folder_p','相关产品','伴随产品','folder_p','zh_CN')
+</script> <div id="relProds" class="relProd clear"> <div class="relProdData" id = "relProdData"> </div> <script type="text/javascript" src="http://www.ti.com/assets/js/collapsible/collapsible.js?versionNumber=1"> </script> </div> <script type="text/javascript">
+	                          requestDetails = [ ['get','http://www.ti.com.cn/general/cn/docs/geoselection.tsp','geoselect']
+	                                           ];
+	                          getAsyncData();
+	  </script> </div> </div> <script language="JavaScript">
+
+    var tiFunnel = "(3184,2c)|(7086,1)|(7087,2c)|(8267,2c)|(8268,2c)|(8269,2c)|(10004,4)|(10005,3)|(10006,2c)|(10007,3c)|(10944,3)|(11650,2)|(9366,3)|(16777,3)|(16776,3)|(25286,3)|(25287,4)|(25970,3c)|(25969,3)|(25971,3c)|(40453,2c)|(40454,1)";
+
+</script> <!--/* Copyright 24/7 Real Media Inc. 2002-2007 *//* This code is used to measure the efficiency of search engine listings*//* Event Name: Product Folder. Category: Conversion *//* No private data is held. See our privacy policy:  http://www.247realmedia.com/privacy.html *//* Do not change the following line. */--><!-- Google Code for Product Folder Conversion Page --><script language="JavaScript" type="text/javascript"><!--var google_conversion_id = 1034601471;var google_conversion_language = "en_US";var google_conversion_format = "3";var google_conversion_color = "ffffff";var google_conversion_label = "2vNmCIGPogEQ_4er7QM";if (1.0) {  var google_conversion_value = 1.0;}//--></script><script language="JavaScript" src="http://www.googleadservices.com/pagead/conversion.js"></script><noscript><img height="1" width="1" border="0" src="http://www.googleadservices.com/pagead/conversion/1034601471/?value=1.0&amp;label=2vNmCIGPogEQ_4er7QM&amp;guid=ON&amp;script=0"/></noscript><!-- Google Code for Product Folder Conversion Page --><script language="JavaScript" type="text/javascript"><!--var google_conversion_id = 1035686712;var google_conversion_language = "en_US";var google_conversion_format = "3";var google_conversion_color = "ffffff";var google_conversion_label = "vxg-CI6SqgEQuKbt7QM";//--></script><script language="JavaScript" src="http://www.googleadservices.com/pagead/conversion.js"></script><noscript><img height="1" width="1" border="0" src="http://www.googleadservices.com/pagead/conversion/1035686712/?label=vxg-CI6SqgEQuKbt7QM&amp;guid=ON&amp;script=0"/></noscript><div id="tiFooter"></div>
+<script src="http://www.ti.com.cn/assets/cn/js/headerfooter/footer.js?versionNumber=1.1" type="text/javascript"></script>
+<script src="http://www.ti.com.cn/assets/js/headerfooter/analytics.js" type="text/javascript" charset="utf-8"></script>
+<script src="http://www.ti.com.cn/assets/cn/js/homepage/sitesearch-header-min.js?versionNumber=1.2" type="text/javascript" charset="utf-8"></script>
+
+<script type="text/javascript" language="JavaScript" src="http://www.ti.com.cn/js/shared/sv-min-v1.js" charset="utf-8"></script>
+<script src="/assets/js/samplebuybtn/samplebuybtn.js" type="text/javascript" charset="utf-8"> </script> <input type="hidden" value="cn" id="websiteName"> </body> </html>
+
