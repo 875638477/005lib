@@ -54,3 +54,8 @@ D:\001DIY\005lib\01env\drill*.txt 是用户已有的对应光绘层信息/脚本
 [新四层板](../examples/lessonJK_51_59_20261022/native/4L/JK_4L_L2_GND_L3_V3V3_STACK_TRAINING_NOT_RELEASED.brd)实际L2公共GND、L3单V3V3电源；层名仍TOP-L2-L3-BOTTOM，未改01env或17Film映射。旧b019/J55旧栈仍保留作为历史对照，不能改写为一直符合新增规则。
 
 移除旧HSE地岛/永久分隔，保留正常孔/反焊盘与机械避让。GND/电源端点分别到对应面，750段手工走线保持，实际新CAM只改变L2/L3。BOTTOM参考电源时须检查电源—地去耦的实际返回，不能以最近地via或平面共通直接判SI/PI通过。参考缺口、66个换层信号via、USB/整板DRC及生产条件继续审查。详细证据见[J/K主记录](lessonJK_51_59_20261022.md)与[新栈独立审查](lessonJK_newstack_independent_20261023.md)。
+
+
+## 2026-11-09 布线执行边界补充
+
+用户再次确认四层TOP-L2-L3-BOTTOM，L2连续公共GND、L3电源；不以占用平面逃信号提高布通率。45°倒角、>=120°内角、电源铜皮、via全连接/孤岛、反焊盘铜桥以及细线/小孔局部例外，按[布线与实际验收规范](pcb_routing_baseline_and_acceptance.md)及[机器规则](pcb_routing_baseline_rules.json)执行。两层仍按TOP-BOTTOM另行规划地返回。

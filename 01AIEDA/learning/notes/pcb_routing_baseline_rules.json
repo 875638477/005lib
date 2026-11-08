@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "updated": "2026-11-09",
+  "origin": "User routing preferences plus cited manufacturer guidance; not a universal IPC/Intel standard",
+  "corners": {
+    "preferred_direction_change_deg": 45,
+    "preferred_interior_angle_deg": 135,
+    "minimum_interior_angle_deg": 130,
+    "allow_90_deg_trace_corners": false,
+    "minimum_is_strict": true,
+    "explicit_current_project_override_minimum_deg": 120
+  },
+  "geometry": {
+    "preferred_width_mil": 4,
+    "preferred_clearance_mil": 4,
+    "last_resort_width_mil": 3,
+    "last_resort_width_mm": 0.0762,
+    "last_resort_clearance_relaxation_authorized": false,
+    "last_resort_scope": "Only unavoidable local breakout; per-segment exception ledger; recover nominal width after breakout",
+    "preferred_via_drill_mil": 10,
+    "preferred_via_pad_mil": 18,
+    "last_resort_via_drill_mil": 8,
+    "last_resort_via_pad_mil": 16
+  },
+  "four_layer": {
+    "order": [
+      "TOP",
+      "L2",
+      "L3",
+      "BOTTOM"
+    ],
+    "functions": [
+      "SIGNAL_COMPONENT",
+      "CONTINUOUS_GND",
+      "POWER_DOMAINS",
+      "SIGNAL"
+    ],
+    "signal_routing_allowed": [
+      "TOP",
+      "BOTTOM"
+    ],
+    "reference_plane_or_power_layer_signal_escape_allowed": false
+  },
+  "two_layer": {
+    "order": [
+      "TOP",
+      "BOTTOM"
+    ],
+    "retain_ground_return": true
+  },
+  "power": {
+    "prefer_same_net_copper": true,
+    "current_and_drop_budget_required": true,
+    "expand_switch_node_copper": false
+  },
+  "copper": {
+    "floating_via_or_required_endpoint_island_allowed": false,
+    "short_signal_via_to_other_net_copper": false,
+    "check_antipad_copper_web": true,
+    "full_contact_does_not_prove_source_reachability": true,
+    "prefer_outer_static_copper": true,
+    "allow_outer_dynamic_only_with_recorded_reason": true,
+    "check_actual_copper_outline_corners": true,
+    "check_cross_path_junctions_and_exposed_branch_sectors": true
+  },
+  "acceptance": {
+    "separate_rule_definition_connectivity_drc_si_post": true,
+    "unexecuted_checks_must_not_be_passed": true
+  }
+}

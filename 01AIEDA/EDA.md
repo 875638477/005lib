@@ -1,3 +1,7 @@
+
+
+> 2026-11-09 布线长期规范：[转角、线孔尺寸、完整地/电源铜、过孔返回与实际验收](learning/notes/pcb_routing_baseline_and_acceptance.md)，含[机器可读规则](learning/notes/pcb_routing_baseline_rules.json)。45°转向对应135°内角，极限细线仅限局部；四层L2连续GND、L3电源。
+
 > 2026-11-08 GitHub现用位置已从服务器核实为 **[875638477/005lib 仓库根](https://github.com/875638477/005lib)**，九个01目录直接位于根。以下旧位置登记属于历史，不能沿用旧的 001Diy/005lib 子目录目标。
 
 > 2026-11-08 当前库根已迁至 **D:/005lib**；历史记录中的旧绝对路径不代表当前配置。新增[封装 3D 保存、重编与跨电脑复用教程](learning/notes/allegro_step_model_persistence_and_portable_paths.md)。环境、脚本及快捷方式迁移见 library_maintenance/20261108_library_root_migration；115 种封装维护见 library_maintenance/20261108_3d_package_models。
