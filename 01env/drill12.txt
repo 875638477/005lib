@@ -141,13 +141,13 @@ axlFilmCreate( "DisTOP" ?negative nil ?undefineLineWidth 0.0025 ?sequence 1
 	?suppressUnconnectPads nil ?drawMissingPadApertures nil ?useApertureRotation nil 
 	?suppressShapeFill nil ?vectorBasedPad t ?drawHolesOnly nil 
 	?domains '(ipc2581 pdf artwork visibility ) ?ipc2581 '() 
-	?layers '("PACKAGE GEOMETRY/SILKSCREEN_TOP" "ROUTE KEEPOUT/ALL" "ROUTE KEEPOUT/TOP" "DRAWING FORMAT/DRAWING_ORIGIN" "MANUFACTURING/PHOTOPLOT_OUTLINE" "PACKAGE KEEPIN/ALL" "ROUTE KEEPIN/ALL" "BOARD GEOMETRY/OUTLINE" "BOARD GEOMETRY/DXFTOP" "PIN/TOP" "MANUFACTURING/PHOTOPLOT_OUTLINE" ))
+	?layers '("PACKAGE GEOMETRY/SILKSCREEN_TOP" "ROUTE KEEPOUT/ALL" "ROUTE KEEPOUT/TOP" "VIA KEEPOUT/TOP" "DRAWING FORMAT/DRAWING_ORIGIN" "MANUFACTURING/PHOTOPLOT_OUTLINE" "PACKAGE KEEPIN/ALL" "ROUTE KEEPIN/ALL" "BOARD GEOMETRY/OUTLINE" "BOARD GEOMETRY/DXFTOP" "PIN/TOP" "MANUFACTURING/PHOTOPLOT_OUTLINE" ))
 axlFilmCreate( "DisBOTTOM" ?negative nil ?undefineLineWidth 0.0025 ?sequence 1 
 	?rotation 0 ?xOffset 0.0000 ?yOffset 0.0000 ?shapeBoundingBox 2.5400 ?mirrored nil ?fullContact nil 
 	?suppressUnconnectPads nil ?drawMissingPadApertures nil ?useApertureRotation nil 
 	?suppressShapeFill nil ?vectorBasedPad t ?drawHolesOnly nil 
 	?domains '(ipc2581 pdf artwork visibility ) ?ipc2581 '() 
-	?layers '("PACKAGE GEOMETRY/SILKSCREEN_BOTTOM" "ROUTE KEEPOUT/ALL" "ROUTE KEEPOUT/BOTTOM" "DRAWING FORMAT/DRAWING_ORIGIN" "MANUFACTURING/PHOTOPLOT_OUTLINE" "PACKAGE KEEPIN/ALL" "ROUTE KEEPIN/ALL" "BOARD GEOMETRY/OUTLINE" "BOARD GEOMETRY/DXFBOTTOM" "BOARD GEOMETRY/DXFBOTTOM" "PIN/BOTTOM" "MANUFACTURING/PHOTOPLOT_OUTLINE" ))
+	?layers '("PACKAGE GEOMETRY/SILKSCREEN_BOTTOM" "ROUTE KEEPOUT/ALL" "ROUTE KEEPOUT/BOTTOM" "VIA KEEPOUT/BOTTOM" "DRAWING FORMAT/DRAWING_ORIGIN" "MANUFACTURING/PHOTOPLOT_OUTLINE" "PACKAGE KEEPIN/ALL" "ROUTE KEEPIN/ALL" "BOARD GEOMETRY/OUTLINE" "BOARD GEOMETRY/DXFBOTTOM" "BOARD GEOMETRY/DXFBOTTOM" "PIN/BOTTOM" "MANUFACTURING/PHOTOPLOT_OUTLINE" ))
 axlFilmCreate( "DisAll" ?negative nil ?undefineLineWidth 0.0025 ?sequence 1 
 	?rotation 0 ?xOffset 0.0000 ?yOffset 0.0000 ?shapeBoundingBox 2.5400 ?mirrored nil ?fullContact nil 
 	?suppressUnconnectPads nil ?drawMissingPadApertures nil ?useApertureRotation nil 
