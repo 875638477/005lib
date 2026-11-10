@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="430" viewBox="0 0 1200 430" role="img" aria-labelledby="title desc">
+<title id="title">阻容横放：1脚左、2脚右，位号和Value贴近引线上方，网络名在外侧</title>
+<desc id="desc">通用相对布局示意，不是原理图截图，不规定固定坐标。修改时按实际热点、字体与连接检查。</desc>
+<rect width="1200" height="430" fill="#f8fafc"/>
+<g font-family="Microsoft YaHei,Arial,sans-serif" fill="#172554">
+<text x="40" y="45" font-size="25">阻容默认布局：贴近引线、文字归属清楚、网名排在外侧</text>
+<text x="40" y="80" font-size="17" fill="#475569">左网名 → 位号 → 1脚—器件—2脚 → Value → 右网名</text>
+<g stroke="#334155" stroke-width="2" fill="none">
+<path d="M90 175H520 M580 175H1110 M520 175l5 -8 8 16 8 -16 8 16 8 -16 8 16 8 -16 7 8"/>
+<path d="M90 300H540 M560 300H1110 M540 283V317 M560 283V317"/>
+</g>
+<g font-size="21"><text x="90" y="167" fill="#0369a1">NET_IN</text><text x="490" y="167" text-anchor="end">R123</text><text x="610" y="167">1K/0402/1%</text><text x="950" y="167" fill="#0369a1">NET_OUT</text>
+<text x="90" y="292" fill="#0369a1">NET_A</text><text x="490" y="292" text-anchor="end">C123</text><text x="610" y="292">100nF/0402/25V/10%</text><text x="1020" y="292" fill="#0369a1">NET_B</text></g>
+<g font-size="15" fill="#64748b"><text x="500" y="198" text-anchor="middle">1</text><text x="600" y="198" text-anchor="middle">2</text><text x="500" y="323" text-anchor="middle">1</text><text x="600" y="323" text-anchor="middle">2</text></g>
+<text x="40" y="375" font-size="17">文字放在各自引线上方并靠近引脚；长文字按实际字形留间距，不固定上移两格。</text>
+<text x="40" y="405" font-size="17" fill="#475569">网络名的电气锚点仍在所属导线上；本图仅表达相对关系，不是GUI或电气验收证据。</text>
+</g></svg>

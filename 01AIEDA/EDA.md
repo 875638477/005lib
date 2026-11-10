@@ -1,3 +1,5 @@
+> 2026-11-10 用户确认的阻容默认样式：**横放，实际1脚左/2脚右；位号紧挨1脚侧引线上方，Value紧挨2脚侧引线上方，网名排在两者外侧**。以 R332/R333 的相对布局为参考，换符号重测；见[布局细则与SVG](learning/notes/capture_rc_horizontal_ref_value_layout_spec.md)。本次仅更新方法，不改变课程完成状态。
+
 
 
 > 2026-11-09 布线长期规范：[转角、线孔尺寸、完整地/电源铜、过孔返回与实际验收](learning/notes/pcb_routing_baseline_and_acceptance.md)，含[机器可读规则](learning/notes/pcb_routing_baseline_rules.json)。45°转向对应135°内角，极限细线仅限局部；四层L2连续GND、L3电源。
