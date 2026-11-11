@@ -95,3 +95,7 @@ PDF 重建时，一张原图页原则上对应一张工程页，沿用原图分�
 - [场景提取工具](../scripts/capture_layout_tools/capture_layout_scene.py)、[候选位置工具](../scripts/capture_layout_tools/capture_layout_candidates.py)、[导线覆盖比较](../scripts/compare_capture_wire_coverage.py)。先读脚本 `--help` 与几何笔记，提供当前工程路径和原生数据；这些工具不等于已执行 CAD 修改或整板验证。
 
 后续调用入口：[cadence-schematic-layout 技能](../skills/cadence-schematic-layout/SKILL.md)。
+
+## 同组紧凑行列规则（全部页码）
+
+同功能阻容成组，各组本体、位号、完整Value和两侧网名成列对齐，行距按实际字形及符号统一且紧凑，电容/电阻组间留白。不要只整理新增MCU页，全部旧页/功率页同样适用。按[新增规则与用户图片](capture_rc_horizontal_ref_value_layout_spec.md#2026-11-11-新增阻容按功能分组紧凑成行整齐成列所有页码)执行；保持脚号和连接，不新增偏置或改动电路。规则保存不等于既有原理图已批量改好。

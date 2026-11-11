@@ -20,3 +20,5 @@ description: Arrange Cadence Capture reference designators, values, net names an
 阻容细则见[既有规范](../../notes/capture_rc_horizontal_ref_value_layout_spec.md)；原生变换、GDI 文字边界及现有参数化工具见[几何与可读性](../../notes/capture_text_geometry_and_readability.md)。A3 等纸张要求由本次任务决定，不硬编码为所有工程的默认值。
 
 此技能保存在用户 AI 学习库，供后续读取复用；保存文档不等于模型权重训练或新会话自动加载。
+
+- 2026-11-11 全页码阻容规则：同功能分组、同组紧凑等行距；本体/位号/完整Value/两侧网名分别成列，电容组与电阻组间留白。全部旧页和新页适用；保留实际脚号与连接，不因示例图加回CS/nSLEEP偏置。详见[规则与图片](../../notes/capture_rc_horizontal_ref_value_layout_spec.md#2026-11-11-新增阻容按功能分组紧凑成行整齐成列所有页码)；不将规则同步写成批量改图验收。
