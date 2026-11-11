@@ -7,6 +7,12 @@
 
 相关入口：[人工转换教程](ad_to_cadence_gui_workflow.md)、[通用转换方法与验收](ad_to_cadence_conversion_workflow.md)、[网表导出与导入排错](capture_allegro_netlist_troubleshooting.md)。
 
+## 2026-11-11 用户确认的非翻页网名规则（优先执行）
+
+所有普通非翻页网络标识采用[导线网络别名标准（Net Alias）](capture_wire_net_alias_standard.md)：使用真正的 `WireScalar/Alias`，锚点在线上，完整文字紧挨导线上方。不得用普通文本、悬空 Name 或无图形 OffPage/Global 代替；原有真实跨页、层次和电源符号保留其作用域。需要连接范围时使用真实、可见的相应符号，不能把页内别名隐式改造成空白端口。
+
+下文关于 Port Name 的移动和近端重复显示归并仅适用于确有 Port 的位置，不能据此把普通导线 Alias 批量改成 Port，也不能删除有阅读意义的导线网名。
+
 ## 1. 先分清电气对象与显示对象
 
 同一个网络附近可能同时显示 Port 名称和 Net Alias。它们可能来自源图原本就存在的两个对象，不能一概认为转换器错误复制。
