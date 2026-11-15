@@ -1,5 +1,8 @@
 # Capture 文字几何与可读性检查
 
+> **2026-11-15现行修正**：保留用户优化参考图的功能拓扑和直接连线，阻容横竖均允许，位号左/完整Value右并落工程网格；MOS显示内部结构，电源/GND/翻页符沿末段平接、名称外置、翻页尖头朝向电路。旧文中一律横放等冲突表述已被本条覆盖。实施前读[完整现行规则](capture_topology_preservation_and_grid.md)。
+
+
 此方法处理网络标签、跨页端口、电源名、器件位号和器件值的显示位置。先完成库去重、网格和符号原点调整，再从同一个已保存并重新打开的设计导出官方 XML、原生坐标表与文字表。保存后数据库 ID 可能重建，旧计划不能直接套到新设计。
 
 与[库、网格和文字清理总流程](capture_cache_grid_text_cleanup.md)配合使用。有关原理图和 PCB 的电气验收，另见[网络文字布局规则](capture_netlabel_layout_rules.md)与[网表问题排查](capture_allegro_netlist_troubleshooting.md)。

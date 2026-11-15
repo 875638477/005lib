@@ -1,24 +1,21 @@
 ---
 name: cadence-schematic-layout
-description: Arrange Cadence Capture reference designators, values, net names and off-page connectors without text overlap or unnecessary wire detours. Use for schematic reconstruction or cleanup with existing local symbols, native save/reopen and connectivity verification.
+description: Preserve readable circuit topology while arranging Cadence Capture parts, grids, reference designators, values, net aliases, power symbols and off-page connectors. Use for reference-module integration or schematic cleanup with local real symbols and native save/reopen plus connectivity verification.
 ---
 
-# Capture 清晰排版与简洁连线
+# Capture 原理图可读性、功能拓扑与网格
 
-先读[完整方案](../../notes/capture_compact_schematic_layout_method.md)及[用户确认的同行示例与验收更正](../../notes/capture_rc_horizontal_ref_value_layout_spec.md#2026-11-11-用户确认的同行示例与排版验收)，再按当前工程范围实施。用户当前约束优先。
+实施前读[用户2026-11-15现行规则与正反例](../../notes/capture_topology_preservation_and_grid.md)。当前用户约束优先；旧笔记中“一律横放”不再适用。
 
-1. 确定工程源、原图、纸张、库路径和可移动范围；保存来源身份及副本。实际工程记录、计划和输出放工程根，学习库保存通用方法。
-2. 优先用本地真实基本器件符号。普通二端阻容水平放置，新建或确需竖转横时默认 1 左/2 右；原本已横放者可保留 1 在右的脚序，不能只为交换左右位置而改线。位号紧挨左侧引线上方，Value 紧挨右侧引线上方，网络名排在位号和 Value 的外侧。依据实际字形避让，不固定上方两格，不改变规格或极性。
-3. 先调整显示文字的偏移与对齐，再考虑必要的局部导线。网名、翻页符文字和引脚名/号保持独立可读，位号/Value 靠近所属引脚侧，不能挪远；阅读顺序为左网名 → 位号 → 按当前保留脚序绘制的器件 → Value → 右网名。以用户指定 R332/R333 的相对样式为参考，换符号重新测量，不硬编码示例偏移。
-4. 已经清楚的器件与连接优先保留，不先挪走全部阻容再用全页寻路追回端点。保持短直连线和原图分组；独立信号就近接器件、测试点及端口。不要为了文字位置制造长 U 形折返或把无关信号汇成很长的线束。
-5. 所有普通非翻页网络标识执行[导线 Net Alias 标准](../../notes/capture_wire_net_alias_standard.md)：原生 `WireScalar/Alias`，锚点落在承载导线上、完整文字紧挨上方。禁止用普通注释、悬空 Name、空白/无图形 OffPage 或 Global 冒充。真实翻页、层次及电源符号保持作用域；移动文字不等于移动电气热点，同名文字不能代替连接校验。
-6. 用原生引脚热点、旋转/镜像变换、实际字体范围及网格生成局部计划。候选位置限制在器件附近；未解决项显式记录，不遮盖、截短或无限缩小文字。
-7. 在副本应用后原生保存、重开、重新导出。对实际交付源逐页检查显示，逐 RefDes.Pin 比较网络分区、名称、NC、属性和封装。有 PCB 交接要求时验证真实主工程网表及严格 Allegro 导入。
-8. 分别报告原生重开、几何/排版、GUI 阅读、网表与 PCB 导入的证据和未验项。长回折、跨功能块穿表、文字重叠或关键显示对象漏验时，不能以“排版完成”回写正式版本；网表等价不能替代排版验收。不能用临时测试设计、旧日志或器件排除项冒充主工程通过。
-9. 用户要求后台时，不为核查而启动或激活前台窗口。工程快照、脚本、临时文件、运行日志及验证结果全部放在用户指定的工程根；学习库只保存通用方法与示例。
+1. 固定最新源件、参考图、库、PinToPin/捕捉网格、可移动范围和SHA。实际工程的输入、脚本、日志、审核和交付在工程根，学习侧只放通用方法及获准示例。
+2. 用户提供已优化原图时，直接复用其功能模块组织、横竖方向、引脚分组、直接导线、反馈/补偿/去耦及启停关系，按新需求局部融合。不可只抄BOM后把阻容拆成孤立网名行；不恢复已删除器件或参考中的已知电气错误。
+3. 横放、竖放阻容均保持位号左、完整Value右，文字水平、归属明确、锚点落工程网格；按真实字形避让本体、针号、网名、导线及邻近文字。保留脚号、极性和Kelvin关系，不为脚序或几何整齐强转器件。按功能分组对齐，不以齐表破坏电路。
+4. 读取库针距、工程单位及实际热点。本用户参考1/2 of pin to pin，换工程重新换算；符号针距须与网格相容。修针距/原点时协调全部相关线和端口，不能逐对象盲目取整。
+5. MOS使用真实G/S/D、沟道、体二极管及并脚/双管结构；BJT保留内部图形和箭头，不用空矩形代替离散器件。优先复用本机正确符号，逐脚核对封装。
+6. [电源、GND与翻页符](../../notes/capture_topology_preservation_and_grid.md#电源与翻页符按导线末段自然平接)沿所属导线末段平接，名称在外侧；水平左端翻页尖头向右进电路，右端相反。不为默认朝向加多余竖折线。按真实热点和Name偏移旋转，保持Global/OffPage原生类型、作用域及两端连接。
+7. 普通页内标识按[真实WireScalar/Alias规则](../../notes/capture_wire_net_alias_standard.md)；不能用注释、空白端口或悬空Name冒充连接。文字移动与电气热点移动分开核对。
+8. 先保留清楚电路，后调整显示文字、端部符号，最后做确有需要的局部短线；不制造长U形回折、跨区穿表或文字挤压。依据[真实文字/原生变换](../../notes/capture_text_geometry_and_readability.md)建立完整模型，未知锚点列例外。
+9. 在副本应用后原生保存、独立重开，逐Ref.Pin比较网络、NC、Value/装配/封装/关键属性；逐页检查完整元件、引脚、文字、电源/翻页、Alias、导线和表格。有PCB交接时核主工程新鲜网表和严格导入。显示、离线模型、GUI、PCB分别报告；网表等价不能替代可读性验收。
+10. 用户要求后台时不启动或激活GUI。任一已知可见问题或关键显示对象漏验时，不把候选回写为“全页排版完成”。学习规则同步不能冒充实际工程整改完成。
 
-阻容细则见[既有规范](../../notes/capture_rc_horizontal_ref_value_layout_spec.md)；原生变换、GDI 文字边界及现有参数化工具见[几何与可读性](../../notes/capture_text_geometry_and_readability.md)。A3 等纸张要求由本次任务决定，不硬编码为所有工程的默认值。
-
-此技能保存在用户 AI 学习库，供后续读取复用；保存文档不等于模型权重训练或新会话自动加载。
-
-- 2026-11-11 全页码阻容规则：同功能分组、同组紧凑等行距；本体/位号/完整Value/两侧网名分别成列，电容组与电阻组间留白。全部旧页和新页适用；保留实际脚号与连接，不因示例图加回CS/nSLEEP偏置。详见[规则与图片](../../notes/capture_rc_horizontal_ref_value_layout_spec.md#2026-11-11-新增阻容按功能分组紧凑成行整齐成列所有页码)；不将规则同步写成批量改图验收。
+[阻容细则](../../notes/capture_rc_horizontal_ref_value_layout_spec.md)及[整体方法](../../notes/capture_compact_schematic_layout_method.md)的旧方向表述以2026-11-15现行规则为准。学习技能须后续读取复用，不等于模型权重训练或自动加载。
