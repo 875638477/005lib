@@ -3,7 +3,9 @@ name: cadence-schematic-layout
 description: Preserve readable circuit topology while arranging Cadence Capture parts, grids, reference designators, values, net aliases, power symbols and off-page connectors. Use for reference-module integration or schematic cleanup with local real symbols and native save/reopen plus connectivity verification.
 ---
 
-# Capture 原理图可读性、功能拓扑与网格
+# Capture 原理图灵活设计、可读性与网格
+
+**主要目标是复用灵活判断方法**：先识别电路作用与阅读路径，分析参考为什么清楚，再比较横/竖/混合与连接方式，按局部冲突调整，最后独立验收可读性和电气。记录取舍理由；例图和坐标是上下文相关的结果，不能机械套用。详见[可复用判断流程](../../notes/capture_topology_preservation_and_grid.md#可复用的灵活判断方法)。
 
 实施前读[用户2026-11-15现行规则与正反例](../../notes/capture_topology_preservation_and_grid.md)。当前用户约束优先；旧笔记中“一律横放”不再适用。
 
