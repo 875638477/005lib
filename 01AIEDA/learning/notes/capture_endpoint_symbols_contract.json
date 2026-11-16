@@ -1,0 +1,272 @@
+{
+  "version": "ENDPOINT-20261116.1",
+  "authority": "capture_endpoint_symbols_standard.md",
+  "scope": "All OffPageConnector and Global power/ground objects on every page; all existing connector instances before/after design changes",
+  "checker": "../scripts/capture_layout_tools/check_endpoint_symbol_contract.py",
+  "checker_scope": {
+    "kind": "limited_facts_checker_not_native_extractor_or_full_contract_executor",
+    "reads_this_contract_automatically": false,
+    "implemented_rule_ids": [
+      "END-COVERAGE",
+      "END-INVENTORY",
+      "END-NATIVE",
+      "END-NONEMPTY-NAME",
+      "END-NAME",
+      "END-NAME-SOURCE",
+      "END-NAME-OUTSIDE",
+      "END-PROFILE",
+      "END-DIRECTION",
+      "END-RENDER",
+      "CONNECTOR-PRESERVE"
+    ],
+    "partially_covers_contract_checks": [
+      "EPINV",
+      "EPTYPE",
+      "EPNAME",
+      "EPDIR",
+      "EPOUTSIDE",
+      "EPCLEAR",
+      "CONNKEEP"
+    ],
+    "separate_bound_evidence_required": [
+      "extractor_accuracy",
+      "native_library_identity_and_effective_display_inheritance",
+      "electrical_equivalence",
+      "EPHOTSPOT",
+      "EPTOPO",
+      "EPGRID",
+      "EPREOPEN",
+      "actual_render_scene_coverage",
+      "connector_native_instance_and_assembly_retention"
+    ],
+    "pass_is_not_full_contract_acceptance": true
+  },
+  "checker_facts_format": {
+    "top_level": [
+      "objects",
+      "expected_endpoint_ids",
+      "connectors_before",
+      "connectors_after"
+    ],
+    "object_keys": [
+      "id",
+      "page",
+      "kind",
+      "name",
+      "name_visible",
+      "name_source",
+      "outside_axis",
+      "outside_sign",
+      "text_bounds",
+      "symbol_bounds",
+      "profile_verified",
+      "tip_vector",
+      "circuit_vector",
+      "render_reviewed",
+      "is_ground",
+      "native_ground_without_name"
+    ],
+    "name_source_required_value_if_visible": "object_name",
+    "kind_values": [
+      "OffPageConnector",
+      "Global"
+    ],
+    "outside_axis_values": [
+      "x",
+      "y"
+    ],
+    "outside_sign_values": [
+      -1,
+      1
+    ],
+    "bounds_order": [
+      "min_x",
+      "min_y",
+      "max_x",
+      "max_y"
+    ],
+    "ground_native_hidden_condition": {
+      "is_ground": true,
+      "native_ground_without_name": true,
+      "profile_verified": true
+    },
+    "vectors": "tip_vector from actual transformed contour; circuit_vector from actual owning wire/circuit geometry in same coordinate frame",
+    "scene_review_boolean_requires_source_bound_evidence": true
+  },
+  "unknown_is_pass": false,
+  "color_is_compliance_criterion": false,
+  "numeric_rotation_or_mirror_alone_proves_direction": false,
+  "required_checks": [
+    "EPINV",
+    "EPTYPE",
+    "EPNAME",
+    "EPHOTSPOT",
+    "EPDIR",
+    "EPOUTSIDE",
+    "EPCLEAR",
+    "EPTOPO",
+    "EPGRID",
+    "EPREOPEN",
+    "CONNKEEP"
+  ],
+  "check_definitions": {
+    "EPINV": "Every actual endpoint is inventoried exactly once and tied to final native/source identity; omissions/duplicates are not passes",
+    "EPTYPE": "Correct real native OffPageConnector/Global kind, name, scope and approved library/symbol identity",
+    "EPNAME": "OffPage/power own effective visible complete Name; no Alias/text substitution; ground follows calibrated native name-display profile",
+    "EPHOTSPOT": "Transformed real native hotspot connects to the intended owning wire endpoint and net",
+    "EPDIR": "Actual transformed OffPage contour points into its circuit; power/ground contour orientation matches approved native profile and local topology",
+    "EPOUTSIDE": "Visible own Name is fully outside in the calibrated native display frame; not a line-internal Alias",
+    "EPCLEAR": "Complete symbol contour, actual full text glyphs and dense neighboring scene are covered and readable without collisions",
+    "EPTOPO": "Reasonable pre-existing bus/decoupling/vertical power branches and actual junctions preserved or changes explicitly authorized",
+    "EPGRID": "Actual hotspot, required wire points and display anchors compatible with this project's measured grid/profile",
+    "EPREOPEN": "After last visual edit native save, close, independent reopen and fresh export; electrical comparison and full-scene display evidence bind final identity",
+    "CONNKEEP": "All frozen existing connector instances/refdes including extra/reserved/unused remain in final deliverable unless specific user removal permission is recorded"
+  },
+  "required_endpoint_facts": [
+    "final_source_sha256",
+    "final_native_export_sha256",
+    "page",
+    "object_id",
+    "object_kind",
+    "net_name",
+    "native_scope",
+    "library_identity",
+    "symbol_identity",
+    "symbol_geometry_sha256",
+    "native_hotspot",
+    "transformed_hotspot",
+    "instance_transform",
+    "owning_wire_id",
+    "wire_endpoint",
+    "last_segment_direction",
+    "circuit_side",
+    "approved_native_profile_id",
+    "profile_source_identity",
+    "effective_name_display_mode",
+    "name_display_owner_id",
+    "full_name_text",
+    "name_font_rotation_alignment",
+    "transformed_symbol_contour",
+    "actual_text_glyph_bounds_or_native_hidden_ground",
+    "outside_half_plane",
+    "neighbor_scene_coverage",
+    "measured_grid",
+    "source_bound_evidence"
+  ],
+  "object_policy": {
+    "OffPageConnector": {
+      "own_name_required_visible": true,
+      "visible_real_contour_required": true,
+      "arrow_points_into_circuit": true,
+      "left_horizontal_pattern": "Name >> -- circuit",
+      "right_horizontal_pattern": "circuit -- << Name",
+      "preserve_electrical_direction_type": true
+    },
+    "power_Global": {
+      "own_name_required_visible": true,
+      "approved_real_symbol_required": true,
+      "preserve_reasonable_vertical_bus_branch": true
+    },
+    "ground_Global": {
+      "own_name_required_visible": "from_approved_native_profile",
+      "complete_readable_real_ground_contour_required": true,
+      "native_hidden_name_allowed_only_with_bound_profile_evidence": true,
+      "visible_name_must_be_own_name_and_outside": true
+    },
+    "WireScalar_Alias": {
+      "local_net_only": true,
+      "anchor_on_owning_wire": true,
+      "may_replace_endpoint_own_name": false
+    }
+  },
+  "native_profile_required_fields": [
+    "source_sha256",
+    "native_export_sha256",
+    "approved_reference_id",
+    "library_identity",
+    "symbol_identity",
+    "geometry_and_hotspot",
+    "rotation_and_mirror",
+    "effective_name_visibility_and_inheritance",
+    "font_rotation_alignment_and_offset",
+    "actual_contour_and_glyph_geometry",
+    "ground_name_display_mode_if_applicable"
+  ],
+  "ground_name_policy": {
+    "allowed_profile_modes": [
+      "own_name_visible",
+      "native_hidden"
+    ],
+    "missing_profile_mode_status": "unknown",
+    "force_adding_GND_text": false,
+    "if_visible": "Own native Global Name; complete text outside; never Alias substitution"
+  },
+  "connector_retention": {
+    "freeze_baseline_inventory": true,
+    "include_extra_unused_reserved_and_variant_only": true,
+    "required_baseline_fields": [
+      "native_instance_id",
+      "refdes",
+      "physical_pin_count",
+      "footprint",
+      "assembly_export_status",
+      "source_identity"
+    ],
+    "unauthorized_missing_refdes_allowed": 0,
+    "renaming_hiding_or_assembly_status_change_is_not_retention": true,
+    "each_removal_requires_specific_user_authorization": true,
+    "already_authorized_position_or_pin_change_is_not_removal_permission": true
+  },
+  "approved_reference_asset_root": "assets/endpoint_symbols_20261116",
+  "approved_reference_assets": [
+    {
+      "file": "01_offpage_right_correct.png",
+      "original_filename": "codex-clipboard-8c4c3d08-b505-465a-8c15-3e3c77afc090.png",
+      "classification": "positive",
+      "relationship": "右端真实翻页符：尖头向内，Name在外侧；内部GPIO标签不替代端部Name。",
+      "sha256": "e1c30347501813148efe281422dbe3970d711017b40b02371eeee93944e75932",
+      "size": 50771,
+      "unmodified_original": true
+    },
+    {
+      "file": "02_offpage_left_and_gnd_incorrect.png",
+      "original_filename": "codex-clipboard-5a369009-2e2e-4dae-bff7-e44386ce5788.png",
+      "classification": "negative",
+      "relationship": "左端翻页名称在线内，GND旋转后密集重叠；不能只检查锚点在线。",
+      "sha256": "bf990addd8b865dcca1fd19e98f376686a9fdeade74620bcc23023dfdd6c8794",
+      "size": 36118,
+      "unmodified_original": true
+    },
+    {
+      "file": "03_power_name_alias_incorrect.png",
+      "original_filename": "codex-clipboard-66cb1377-3eab-4fec-9eb7-a2e94a1f8d03.png",
+      "classification": "negative",
+      "relationship": "电源呈现为横线端部圆点和线内名称；隐藏Global Name再用Alias标名不合格。",
+      "sha256": "b054568e3d4a7c5963a404df1a502e122986fa23abaf091e90c806df9c129825",
+      "size": 20706,
+      "unmodified_original": true
+    },
+    {
+      "file": "04_power_vertical_branch_correct.png",
+      "original_filename": "codex-clipboard-ee4848e0-f6bc-4ce5-ab9f-81da1424d75a.png",
+      "classification": "positive",
+      "relationship": "电源母线向上的短竖支路，真实Global在外端，完整Name在上方空白区；保留合理拓扑。",
+      "sha256": "a1eb64a2f1312ff944bb7b0a2d747398a42b6f558e93272cd923c8466049b19f",
+      "size": 27634,
+      "unmodified_original": true
+    }
+  ],
+  "forbidden_pass_shortcuts": [
+    "color",
+    "fixed_rotation_or_mirror_only",
+    "coordinates_on_grid_only",
+    "Alias_anchor_on_wire_only",
+    "RC_checker_pass_only",
+    "PST_equality_only",
+    "collision_count_zero_without_expected_relationships",
+    "renderer_unresolved_zero",
+    "screenshot_without_native_profile",
+    "estimated_true_facts_without_source_bound_evidence"
+  ],
+  "release_rule": "Every inventoried endpoint and applicable check needs bound evidence. Missing/uncalibrated/unsupported means unknown; conflict means fail. No endpoint/full-page completion claim with fail or unknown. Electrical, offline model, GUI and PCB conclusions remain separate."
+}

@@ -1,3 +1,5 @@
+> **2026-11-16端部符号优先规则：[ENDPOINT-20261116.1](learning/notes/capture_endpoint_symbols_standard.md)**，设计前先读[机器contract](learning/notes/capture_endpoint_symbols_contract.json)及[用户正反例](learning/notes/assets/endpoint_symbols_20261116/README.md)。翻页/电源必须保留真实对象自身可见Name，不可隐藏后用线内Alias代替；翻页按实际轮廓朝向电路内侧、Name在外侧。GND按批准原生profile显示完整接地图形，若显示名称则也用自身Name外置；保留合理电源竖支路。颜色、固定旋转值或锚点在线不是合规判据。全部已有接插件（包括未用/预留）未经用户明确许可不得删除。[端部事实检查器](learning/scripts/capture_layout_tools/check_endpoint_symbol_contract.py)要求逐项证据；缺项unknown，不得以RC/PST通过替代端部验收。旧端部规则冲突处以本版为准，R/C独立规则不变。
+
 > **2026-11-16唯一现行阻容规则：[RC-20261116.2](learning/notes/capture_rc_horizontal_ref_value_layout_spec.md)**。全部采用本机正式库；横件Ref/Value都横，竖件两者都竖；沿各自引脚线齐平、落网格、无干涉。功能摆放可灵活，以上要求不可豁免。后文日期较早的方向记录仅为历史，执行统一按此入口和逐件检查器。
 
 > **本轮学习重点：可复用的灵活设计判断方法**。先识别电路角色与阅读路径，再选择布局和表达；例图用于说明取舍，不是固定摆法。[后续实施按此流程执行](learning/notes/capture_topology_preservation_and_grid.md#可复用的灵活判断方法)。本机方法和GitHub同步，课程完成状态不变。

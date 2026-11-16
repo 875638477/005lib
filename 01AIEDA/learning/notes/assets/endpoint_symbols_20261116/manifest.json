@@ -1,0 +1,45 @@
+{
+  "version": "ENDPOINT-20261116.1",
+  "date": "2026-11-16",
+  "provenance": "User-supplied screenshots explicitly classified by the user; original bytes retained",
+  "color_is_criterion": false,
+  "native_calibration_required": true,
+  "files": [
+    {
+      "file": "01_offpage_right_correct.png",
+      "original_filename": "codex-clipboard-8c4c3d08-b505-465a-8c15-3e3c77afc090.png",
+      "classification": "positive",
+      "relationship": "右端真实翻页符：尖头向内，Name在外侧；内部GPIO标签不替代端部Name。",
+      "sha256": "e1c30347501813148efe281422dbe3970d711017b40b02371eeee93944e75932",
+      "size": 50771,
+      "unmodified_original": true
+    },
+    {
+      "file": "02_offpage_left_and_gnd_incorrect.png",
+      "original_filename": "codex-clipboard-5a369009-2e2e-4dae-bff7-e44386ce5788.png",
+      "classification": "negative",
+      "relationship": "左端翻页名称在线内，GND旋转后密集重叠；不能只检查锚点在线。",
+      "sha256": "bf990addd8b865dcca1fd19e98f376686a9fdeade74620bcc23023dfdd6c8794",
+      "size": 36118,
+      "unmodified_original": true
+    },
+    {
+      "file": "03_power_name_alias_incorrect.png",
+      "original_filename": "codex-clipboard-66cb1377-3eab-4fec-9eb7-a2e94a1f8d03.png",
+      "classification": "negative",
+      "relationship": "电源呈现为横线端部圆点和线内名称；隐藏Global Name再用Alias标名不合格。",
+      "sha256": "b054568e3d4a7c5963a404df1a502e122986fa23abaf091e90c806df9c129825",
+      "size": 20706,
+      "unmodified_original": true
+    },
+    {
+      "file": "04_power_vertical_branch_correct.png",
+      "original_filename": "codex-clipboard-ee4848e0-f6bc-4ce5-ab9f-81da1424d75a.png",
+      "classification": "positive",
+      "relationship": "电源母线向上的短竖支路，真实Global在外端，完整Name在上方空白区；保留合理拓扑。",
+      "sha256": "a1eb64a2f1312ff944bb7b0a2d747398a42b6f558e93272cd923c8466049b19f",
+      "size": 27634,
+      "unmodified_original": true
+    }
+  ]
+}
