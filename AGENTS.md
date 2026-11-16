@@ -1,5 +1,16 @@
 # 本机EDA公共库的现行规则入口
 
+
+## 最高优先补充：电源镜像、紧凑阻容、适当短引线（2026-11-16）
+
+本节和当前用户指令优先于下面旧版端部规则。EDA设计/排版开始先读[ENDPOINT-20261116.2](01AIEDA/learning/notes/capture_endpoint_symbols_standard.md)和[COMPACT-20261116.1](01AIEDA/learning/notes/capture_schematic_compactness_standard.md)及各自机器contract，再读现行布局技能。
+
+1. 电源/GND不能只凭“符号在外侧”验收。GND从电路向外必须最大bar靠内、其余按真实库数量向外逐级缩短，左/右互为镜像；导线从最大bar这一侧进入，不穿过短bar。真实电源Name紧贴符号外缘，按批准正例核实际字形间距上限，不能隔开一大段空白。
+2. 阻容按功能紧凑成组，同组行距、列距在完整本体、Ref、Value、端名可读无干涉的前提下收紧；不得以“零碰撞”接受大片空白。保持指定本机库及既有R/C字向、对齐和电气要求。
+3. 器件/接插件引脚到网络符号采用适当短的局部引线，不为占满页面或凑列统一拉长。先优化局部分组、文字和端符位置；有经验证的更短可行方案仍留大段线须判失败，必要较长则记录实际约束。
+
+交付须同时验端部、R/C和紧凑度/引线，左右镜像、GND内部bar顺序、电源Name间距和分组线长均要有独立事实；缺项为unknown。旧检查器历史PASS不等于通过这些新增项。接插件保留、PCB固定位置和不走线等当前任务约束继续有效。
+
 本目录维护本机正式公共库。Cadence原理图新建、整理及库复用任务先读01AIEDA/learning/skills/cadence-schematic-layout/SKILL.md，并读取其链接的RC-20261116.2规范和机器规则。原理图排版不能仅以网表/碰撞检查代替本机库、文字方向及引脚线对齐核验。
 
 先核远端与本机身份，保护本机不同版本，不盲目覆盖；学习库只存可复用方法/工具，工程源件、专用脚本、日志、校准与审核留工程。其他类型任务按自身规则执行。
@@ -7,7 +18,7 @@
 
 ## 端部符号与既有接插件优先规则（2026-11-16）
 
-本节仅适用于本仓库的EDA原理图设计、重建和排版任务；其他类型任务仍按原有规则。任务开始先读[ENDPOINT-20261116.1](01AIEDA/learning/notes/capture_endpoint_symbols_standard.md)、[机器contract](01AIEDA/learning/notes/capture_endpoint_symbols_contract.json)及其[用户正反例](01AIEDA/learning/notes/assets/endpoint_symbols_20261116/README.md)，再按上文技能入口执行现行R/C与整体方法。
+本节仅适用于本仓库的EDA原理图设计、重建和排版任务；其他类型任务仍按原有规则。任务开始先读[ENDPOINT-20261116.2](01AIEDA/learning/notes/capture_endpoint_symbols_standard.md)、[机器contract](01AIEDA/learning/notes/capture_endpoint_symbols_contract.json)及其[用户正反例](01AIEDA/learning/notes/assets/endpoint_symbols_20261116/README.md)，再按上文技能入口执行现行R/C与整体方法。
 
 翻页符/电源必须保留真实对象自身有效可见Name并放外侧，不能隐藏后用线内Alias或文本替代；翻页符按实际变换后的轮廓朝向所属电路内侧，不能凭颜色或固定rotation/mirror判断。电源保留合理母线短竖支路；GND使用完整真实接地图形，是否显名依批准原生profile，若显名也用自身Name外置。先校准原生正例，再批量应用；缺事实为unknown，端部facts checker或R/C/PST通过不能替代全量验收。
 

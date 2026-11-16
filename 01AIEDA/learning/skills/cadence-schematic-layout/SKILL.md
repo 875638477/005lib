@@ -5,7 +5,10 @@ description: Preserve readable circuit topology while arranging Cadence Capture 
 
 # Capture 原理图灵活设计、可读性与网格
 
-先读端部对象优先规范[ENDPOINT-20261116.1](../../notes/capture_endpoint_symbols_standard.md)、[机器contract](../../notes/capture_endpoint_symbols_contract.json)及[用户正反例](../../notes/assets/endpoint_symbols_20261116/README.md)。真实OffPage/电源Name不可隐藏后用Alias代替；GND按批准原生profile保留完整接地图形。用[端部事实检查器](../../scripts/capture_layout_tools/check_endpoint_symbol_contract.py)核对其覆盖事实，独立补齐contract全部证据；盘点全部端部及接插件保留，缺事实为unknown，不得以facts checker、R/C或网表通过替代全量验收。
+**最高优先三项**：①GND从电路向外最大bar靠内、其余按真实库数量向外逐级缩短，左右镜像；电源Name紧贴真实符号外缘，不能只有外置没有间距上限。②阻容按功能紧凑成组，收紧行列间隔。③器件/接插件到网络符号用适当短引线，不能因满页表格拉成长线。先读[紧凑度与引线标准COMPACT-20261116.1](../../notes/capture_schematic_compactness_standard.md)、[contract](../../notes/capture_schematic_compactness_contract.json)，并运行[独立紧凑度检查器](../../scripts/capture_layout_tools/check_schematic_compactness.py)。保留原理拓扑、库、完整文字与无干涉是收紧的前提；缺几何/候选证据为unknown。旧RC五项或端部检查通过均不能替代新增紧凑度验收。
+
+
+先读端部对象优先规范[ENDPOINT-20261116.2](../../notes/capture_endpoint_symbols_standard.md)、[机器contract](../../notes/capture_endpoint_symbols_contract.json)及[用户正反例](../../notes/assets/endpoint_symbols_20261116/README.md)。真实OffPage/电源Name不可隐藏后用Alias代替；GND按批准原生profile保留完整接地图形。用[端部事实检查器](../../scripts/capture_layout_tools/check_endpoint_symbol_contract.py)核对其覆盖事实，独立补齐contract全部证据；盘点全部端部及接插件保留，缺事实为unknown，不得以facts checker、R/C或网表通过替代全量验收。
 
 指定阻容来源：**000Resistor.OLB/R；002Capacitor.OLB/C；电解、钽用002Capacitor.OLB/C_ELEC**。这属于规格，其他本机同形符号也不能自行替代。
 
@@ -20,9 +23,9 @@ description: Preserve readable circuit topology while arranging Cadence Capture 
 3. 器件横/竖按功能灵活选择；阻容执行[RC-20261116.2](../../notes/capture_rc_horizontal_ref_value_layout_spec.md)：全部使用本机正式库，不改图形/针距冒充；横件Ref/Value都横、竖件两者都竖；文字沿各自引脚线齐平、落网格、无干涉。确定器件方向后不得自由选择字向。先验证一横一竖的原生小样，保留物理脚号与极性。
 4. 读取库针距、工程单位及实际热点。本用户参考1/2 of pin to pin，换工程重新换算；符号针距须与网格相容。修针距/原点时协调全部相关线和端口，不能逐对象盲目取整。
 5. MOS使用真实G/S/D、沟道、体二极管及并脚/双管结构；BJT保留内部图形和箭头，不用空矩形代替离散器件。优先复用本机正确符号，逐脚核对封装。
-6. [端部对象](../../notes/capture_endpoint_symbols_standard.md)先校准批准原生正例的库图形、实际热点、变换和Name显示框架，再按实际轮廓验方向：左端Name >>——电路，右端电路——<< Name；自身Name完整可见且在外侧，不能用线内Alias替代。电源保留合理母线短竖支路；GND完整可辨，是否显示Name依批准profile，若显示也须自身Name外置。保持原生类型、作用域及两端连接，完整图形/字形和邻接场景均要验，不能靠固定rotation/mirror猜。
+6. [端部对象](../../notes/capture_endpoint_symbols_standard.md)先校准批准原生正例的库图形、实际热点、变换和Name显示框架，再按实际轮廓验方向：左端Name >>——电路，右端电路——<< Name；自身Name完整可见且在外侧，不能用线内Alias替代。电源保留合理母线短竖支路；GND完整可辨，实际bar长度由电路向外递减，左右镜像；不能以glyph外置代替此内部方向检查。电源自身Name须紧贴符号外侧，核字形实际间距上限；GND是否显示Name依批准profile，若显示也须自身Name外置。保持原生类型、作用域及两端连接，完整图形/字形和邻接场景均要验，不能靠固定rotation/mirror猜。
 7. 普通页内标识按[真实WireScalar/Alias规则](../../notes/capture_wire_net_alias_standard.md)；Alias的锚点在线规则不适用于端部Name。不能用注释、空白端口或悬空Name冒充连接，不能为增加标签凭空增加连接点。文字移动与电气热点移动分开核对。
-8. 先保留清楚电路，后调整显示文字、端部符号，最后做确有需要的局部短线；不制造长U形回折、跨区穿表或文字挤压。依据[真实文字/原生变换](../../notes/capture_text_geometry_and_readability.md)建立完整模型，未知锚点列例外。
+8. 先保留清楚电路，按功能紧凑成组，后调整显示文字、端部符号，再按完整字形/本体/网格选择适当短的局部引线；不为填页面或表格列宽保留过长直线。逐组核行列间距、逐支路核实际线长和更短可行候选/必要约束；不制造长U形回折、跨区穿表或文字挤压。依据[真实文字/原生变换](../../notes/capture_text_geometry_and_readability.md)建立完整模型，未知锚点列例外。
 9. 在副本应用后原生保存、独立重开，逐Ref.Pin比较网络、NC、Value/装配/封装/关键属性；逐页检查完整元件、引脚、文字、电源/翻页、Alias、导线和表格。有PCB交接时核主工程新鲜网表和严格导入。显示、离线模型、GUI、PCB分别报告；网表等价不能替代可读性验收。
 10. 用户要求后台时不启动或激活GUI。任一已知可见问题或关键显示对象漏验时，不把候选回写为“全页排版完成”。学习规则同步不能冒充实际工程整改完成。
 

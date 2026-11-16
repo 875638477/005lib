@@ -1,5 +1,5 @@
 {
-  "version": "ENDPOINT-20261116.1",
+  "version": "ENDPOINT-20261116.2",
   "authority": "capture_endpoint_symbols_standard.md",
   "scope": "All OffPageConnector and Global power/ground objects on every page; all existing connector instances before/after design changes",
   "checker": "../scripts/capture_layout_tools/check_endpoint_symbol_contract.py",
@@ -17,7 +17,10 @@
       "END-PROFILE",
       "END-DIRECTION",
       "END-RENDER",
-      "CONNECTOR-PRESERVE"
+      "CONNECTOR-PRESERVE",
+      "END-GLOBAL-ROLE",
+      "GNDORDER",
+      "POWERGAP"
     ],
     "partially_covers_contract_checks": [
       "EPINV",
@@ -26,7 +29,9 @@
       "EPDIR",
       "EPOUTSIDE",
       "EPCLEAR",
-      "CONNKEEP"
+      "CONNKEEP",
+      "GNDORDER",
+      "POWERGAP"
     ],
     "separate_bound_evidence_required": [
       "extractor_accuracy",
@@ -37,7 +42,11 @@
       "EPGRID",
       "EPREOPEN",
       "actual_render_scene_coverage",
-      "connector_native_instance_and_assembly_retention"
+      "connector_native_instance_and_assembly_retention",
+      "user_approval_of_native_reference",
+      "truth_and_completeness_of_actual_bar_primitive_inventory",
+      "truth_of_actual_circle_and_Name_ink_extraction",
+      "compact_functional_grouping_and_lead_length"
     ],
     "pass_is_not_full_contract_acceptance": true
   },
@@ -46,7 +55,9 @@
       "objects",
       "expected_endpoint_ids",
       "connectors_before",
-      "connectors_after"
+      "connectors_after",
+      "native_source",
+      "native_source_sha256"
     ],
     "object_keys": [
       "id",
@@ -64,7 +75,10 @@
       "circuit_vector",
       "render_reviewed",
       "is_ground",
-      "native_ground_without_name"
+      "native_ground_without_name",
+      "global_role",
+      "ground_geometry",
+      "power_geometry"
     ],
     "name_source_required_value_if_visible": "object_name",
     "kind_values": [
@@ -88,10 +102,12 @@
     "ground_native_hidden_condition": {
       "is_ground": true,
       "native_ground_without_name": true,
-      "profile_verified": true
+      "profile_verified": true,
+      "does_not_waive_GNDORDER": true
     },
     "vectors": "tip_vector from actual transformed contour; circuit_vector from actual owning wire/circuit geometry in same coordinate frame",
-    "scene_review_boolean_requires_source_bound_evidence": true
+    "scene_review_boolean_requires_source_bound_evidence": true,
+    "global_role_policy": "Every Global is classified ground or power. Native name GND always forces GNDORDER even if is_ground=false; contradictory roles fail. Unclassified Global cannot pass. Every power Global requires POWERGAP; unsupported non-circle marker remains unknown."
   },
   "unknown_is_pass": false,
   "color_is_compliance_criterion": false,
@@ -107,7 +123,9 @@
     "EPTOPO",
     "EPGRID",
     "EPREOPEN",
-    "CONNKEEP"
+    "CONNKEEP",
+    "GNDORDER",
+    "POWERGAP"
   ],
   "check_definitions": {
     "EPINV": "Every actual endpoint is inventoried exactly once and tied to final native/source identity; omissions/duplicates are not passes",
@@ -120,7 +138,9 @@
     "EPTOPO": "Reasonable pre-existing bus/decoupling/vertical power branches and actual junctions preserved or changes explicitly authorized",
     "EPGRID": "Actual hotspot, required wire points and display anchors compatible with this project's measured grid/profile",
     "EPREOPEN": "After last visual edit native save, close, independent reopen and fresh export; electrical comparison and full-scene display evidence bind final identity",
-    "CONNKEEP": "All frozen existing connector instances/refdes including extra/reserved/unused remain in final deliverable unless specific user removal permission is recorded"
+    "CONNKEEP": "All frozen existing connector instances/refdes including extra/reserved/unused remain in final deliverable unless specific user removal permission is recorded",
+    "GNDORDER": "Compute complete transformed native bar ink lengths from endpoints/stroke widths, sort centers from actual circuit toward free space, require centered parallel bars perpendicular to that axis and strictly decreasing lengths; native bar count is not fixed to three.",
+    "POWERGAP": "Compute actual circle outer ink to nearest complete own-Name ink edge on the native wire outward axis; require tight outside gap within calibrated positive-reference maximum plus native quantization, and recompute reference gaps so an arbitrary upper bound cannot pass."
   },
   "required_endpoint_facts": [
     "final_source_sha256",
@@ -151,7 +171,11 @@
     "outside_half_plane",
     "neighbor_scene_coverage",
     "measured_grid",
-    "source_bound_evidence"
+    "source_bound_evidence",
+    "Global_family_from_native_inventory",
+    "conditional_complete_ground_bar_geometry",
+    "conditional_actual_power_circle_and_Name_ink_geometry",
+    "conditional_user_approved_native_gap_calibration"
   ],
   "object_policy": {
     "OffPageConnector": {
@@ -165,13 +189,22 @@
     "power_Global": {
       "own_name_required_visible": true,
       "approved_real_symbol_required": true,
-      "preserve_reasonable_vertical_bus_branch": true
+      "preserve_reasonable_vertical_bus_branch": true,
+      "own_Name_tight_to_actual_circle_outer_ink": true,
+      "gap_must_have_calibrated_upper_bound": true,
+      "unclassified_or_unsupported_marker_is_pass": false,
+      "profile_verified_alone_waives_gap_geometry": false
     },
     "ground_Global": {
       "own_name_required_visible": "from_approved_native_profile",
       "complete_readable_real_ground_contour_required": true,
       "native_hidden_name_allowed_only_with_bound_profile_evidence": true,
-      "visible_name_must_be_own_name_and_outside": true
+      "visible_name_must_be_own_name_and_outside": true,
+      "actual_bar_order_required": true,
+      "bar_count": "Exact independent native inventory, at least two; do not assume three",
+      "near_to_far": "Maximum bar nearest circuit, all remaining bars progressively shorter toward free space; left/right mirror by actual circuit direction",
+      "profile_verified_alone_waives_geometry": false,
+      "native_hidden_Name_waives_GNDORDER": false
     },
     "WireScalar_Alias": {
       "local_net_only": true,
@@ -190,7 +223,10 @@
     "effective_name_visibility_and_inheritance",
     "font_rotation_alignment_and_offset",
     "actual_contour_and_glyph_geometry",
-    "ground_name_display_mode_if_applicable"
+    "ground_name_display_mode_if_applicable",
+    "ground_full_native_bar_inventory_and_order_geometry_if_applicable",
+    "power_actual_positive_reference_circle_Name_geometry_and_gap_upper_bound_if_applicable",
+    "matching_document_units_font_signature_and_native_quantization"
   ],
   "ground_name_policy": {
     "allowed_profile_modes": [
@@ -266,7 +302,173 @@
     "collision_count_zero_without_expected_relationships",
     "renderer_unresolved_zero",
     "screenshot_without_native_profile",
-    "estimated_true_facts_without_source_bound_evidence"
+    "estimated_true_facts_without_source_bound_evidence",
+    "GND_all_glyph_points_outside_hotspot_without_bar_order",
+    "profile_verified_boolean_instead_of_actual_bar_or_circle_geometry",
+    "Name_outside_with_unbounded_circle_gap",
+    "ground_Name_hidden_mode_skips_geometry",
+    "old_version_PASS_reused_for_new_checks"
   ],
-  "release_rule": "Every inventoried endpoint and applicable check needs bound evidence. Missing/uncalibrated/unsupported means unknown; conflict means fail. No endpoint/full-page completion claim with fail or unknown. Electrical, offline model, GUI and PCB conclusions remain separate."
+  "release_rule": "Every inventoried endpoint and applicable check needs bound evidence, including GNDORDER for all native GND objects and POWERGAP for every power Global. Missing/uncalibrated/unsupported means unknown; conflict means fail. ENDPOINT-20261116.1 facts/reports without new geometry cannot be inherited as new checks PASS. Limited facts PASS is not full-scene, compact-layout, electrical, GUI or PCB acceptance.",
+  "geometry_binding_schema": {
+    "required_fields": [
+      "source_xml_sha256",
+      "native_export_sha256",
+      "symbol_geometry_sha256",
+      "extraction_method"
+    ],
+    "source_xml_sha256": "Must equal top native_source_sha256; checker hashes readable native_source file to verify that identity",
+    "native_export_sha256": "SHA256 of final native geometry evidence; extractor identity/accuracy is audited separately",
+    "symbol_geometry_sha256": "SHA256 of complete native symbol geometry, including all relevant primitives",
+    "extraction_method_required_value": "native_transformed_primitives",
+    "circuit_vector_source_required_value": "native_wire_last_segment",
+    "profile_verified_boolean_is_substitute": false
+  },
+  "ground_geometry_schema": {
+    "required_fields": [
+      "source_xml_sha256",
+      "native_export_sha256",
+      "symbol_geometry_sha256",
+      "extraction_method",
+      "circuit_vector_source",
+      "native_bar_ids",
+      "complete_bar_inventory",
+      "bars",
+      "quantization_doc"
+    ],
+    "native_bar_ids": "Complete independently enumerated native cache bar IDs; count >=2, exact one-to-one coverage by bars; all IDs unique",
+    "complete_bar_inventory_required_value": true,
+    "bars_item": {
+      "required_fields": [
+        "id",
+        "start",
+        "end",
+        "stroke_width_doc"
+      ],
+      "id": "Original native bar primitive identity",
+      "start": "Transformed actual [x,y] endpoint",
+      "end": "Transformed actual [x,y] endpoint",
+      "stroke_width_doc": "Resolved actual rendered line width >=0; ink length = endpoint distance + line width"
+    },
+    "quantization_doc": "Measured native coordinate/geometry quantization, 0 <= value <1 document unit; not an adjustable clearance or direction tolerance",
+    "algorithm": [
+      "outward = -normalize(object.circuit_vector)",
+      "all bars must be perpendicular to outward within native quantization",
+      "project actual bar centers onto outward; sort increasing",
+      "centers must share the same lateral axis",
+      "each next center is farther outward and its ink length is strictly smaller than the previous by more than quantization"
+    ],
+    "fails": [
+      "reversed size order",
+      "equal or increasing outward bar lengths",
+      "missing/duplicate/extra primitive IDs relative to independent inventory",
+      "bars not perpendicular/aligned"
+    ],
+    "unknown": [
+      "missing source/native/symbol identity",
+      "missing complete native bar inventory or endpoints/stroke width",
+      "unknown actual circuit direction",
+      "missing native quantization"
+    ],
+    "important": "No fixed three-bar assumption. No text ground and profile_verified=true still require this computation."
+  },
+  "power_geometry_schema": {
+    "required_fields": [
+      "source_xml_sha256",
+      "native_export_sha256",
+      "symbol_geometry_sha256",
+      "extraction_method",
+      "circuit_vector_source",
+      "marker_kind",
+      "circle",
+      "name_ink_source",
+      "document_units",
+      "font_signature",
+      "gap_profile"
+    ],
+    "marker_kind_required_value": "circle",
+    "circle": {
+      "required_fields": [
+        "primitive_id",
+        "center",
+        "axis_a",
+        "axis_b",
+        "stroke_width_doc"
+      ],
+      "primitive_id": "Actual native circle primitive identity",
+      "center": "Transformed actual circle center [x,y]",
+      "axis_a": "Transformed circle radius basis vector [x,y]",
+      "axis_b": "Second transformed radius basis vector, perpendicular and same length",
+      "stroke_width_doc": "Resolved actual ink stroke width >=0"
+    },
+    "name_ink_source_required_value": "actual_full_object_Name_glyph",
+    "Name_ink_input": "object.text_bounds is actual complete own-Name glyph ink [min_x,min_y,max_x,max_y], not anchor, character count or stale cache bbox",
+    "document_units": "Native document unit identity; must match calibration profile",
+    "font_signature": "Actual resolved Name font identity/signature; must match calibration profile",
+    "gap_profile": {
+      "required_fields": [
+        "approved_reference_id",
+        "reference_source_sha256",
+        "reference_native_export_sha256",
+        "document_units",
+        "font_signature",
+        "max_gap_doc",
+        "quantization_doc",
+        "reference_samples"
+      ],
+      "approved_reference_id": "Identifier of genuinely user-approved native positive reference; user approval is independently audited",
+      "reference_source_sha256": "Native positive reference source identity",
+      "reference_native_export_sha256": "Native reference export/geometry identity",
+      "max_gap_doc": "Explicit calibrated upper bound; must agree with maximum gap recomputed from all supplied approved native reference samples within quantization",
+      "quantization_doc": "Native measurement quantization 0 <= value <1 document unit; not a free layout gap",
+      "reference_samples_item": {
+        "circle": {
+          "required_fields": [
+            "primitive_id",
+            "center",
+            "axis_a",
+            "axis_b",
+            "stroke_width_doc"
+          ],
+          "primitive_id": "Actual native circle primitive identity",
+          "center": "Transformed actual circle center [x,y]",
+          "axis_a": "Transformed circle radius basis vector [x,y]",
+          "axis_b": "Second transformed radius basis vector, perpendicular and same length",
+          "stroke_width_doc": "Resolved actual ink stroke width >=0"
+        },
+        "name_ink_bounds": "Actual complete positive-reference own-Name glyph ink bounds",
+        "circuit_vector": "Actual native reference wire direction from endpoint into circuit"
+      }
+    },
+    "algorithm": [
+      "outward = -normalize(object.circuit_vector)",
+      "actual_circle_outer_support = center dot outward + hypot(axis_a dot outward, axis_b dot outward) + stroke_width/2",
+      "Name_near_support = minimum outward projection of actual full Name ink bounds",
+      "actual_gap = Name_near_support - actual_circle_outer_support",
+      "recompute reference gaps by the same method; reject an upper bound inconsistent with those reference geometries",
+      "require -quantization <= actual_gap <= calibrated_max_gap + quantization",
+      "also require perpendicular separation of Name ink interval from circle center not exceed maximum approved reference separation plus quantization; a Name far above/below cannot pass from a small axial gap alone"
+    ],
+    "supported_axes": "Horizontal/vertical actual native wire ends; unsupported circle/Name frames or other power marker families remain unknown",
+    "fails": [
+      "Name outside but too far from circle",
+      "Name overlaps circle beyond native quantization",
+      "calibrated maximum inflated beyond actual approved native reference geometry",
+      "Name far perpendicular to wire axis despite small axial gap"
+    ],
+    "unknown": [
+      "missing calibrated upper bound",
+      "missing native reference geometry/identity",
+      "missing actual circle or full Name ink",
+      "unmatched units/font",
+      "unsupported marker or end orientation"
+    ],
+    "no_pixel_inference": "Do not invent document-unit limits from screenshot pixels. Calibrate approved native instances first."
+  },
+  "additional_user_corrections_20261116": {
+    "ground": "Largest bar at circuit side; remaining true-library bar count progressively shorter outward; mirror left/right",
+    "power": "Own Name tightly adjacent to actual outside circle ink; outside alone is insufficient",
+    "compactness_boundary": "Functional R/C grouping, row spacing and device-to-symbol lead length require separate compact layout evidence; endpoint PASS does not certify them",
+    "new_screenshot_publication": "New correction screenshots remain only in project-local source; no new screenshots are included in this public rule update"
+  }
 }

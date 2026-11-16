@@ -10,6 +10,10 @@
     "RCGRID",
     "RCCLEAR"
   ],
+  "mandatory_overlays": [
+    "COMPACT-20261116.1 via capture_schematic_compactness_contract.json"
+  ],
+  "compactness_not_covered_by_this_checker": true,
   "library_policy": {
     "existing_canonical_public_symbols_only": true,
     "cache_body_and_physical_pins_must_match": true,
@@ -31,7 +35,7 @@
     "component horizontal/vertical placement by circuit role",
     "module arrangement, whitespace and local lead length within all required checks"
   ],
-  "release_rule": "All inventoried R/C instances and all five checks require bound evidence; missing or unknown blocks compliant completion",
+  "release_rule": "All inventoried R/C instances and all five checks require bound evidence AND the independent COMPACT-20261116.1 overlay must pass; missing or unknown blocks compliant completion",
   "canonical_symbols": {
     "R": {
       "relative_library": "01captureLib/000Resistor.OLB",

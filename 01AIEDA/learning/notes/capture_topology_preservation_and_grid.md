@@ -1,6 +1,9 @@
 # 原理图按电路原理融合：参考模块、文字、网格、MOS与端部连接符
 
-> **端部对象优先执行[ENDPOINT-20261116.1](capture_endpoint_symbols_standard.md)和[机器contract](capture_endpoint_symbols_contract.json)**：OffPage/电源自身Name不可隐藏改用Alias，Name外置；翻页真实轮廓向内；GND按批准原生profile；保留合理电源竖支路及全部既有接插件。旧例图颜色与固定旋转值不是判据。
+
+> **2026-11-16补正优先**：GND最大bar靠电路、向外逐级变短，左右镜像；电源自身Name紧贴符号外缘。不能把几何放在线端外侧就判方向正确，也不能仅外置而留大空白。阻容及引线同时执行[COMPACT-20261116.1](capture_schematic_compactness_standard.md)：同功能紧凑分组、行列距适当收紧、网络符号与器件间用适当短引线。存在更短且可读可连通的已验证方案仍拉长，应判失败。网表、落网格、碰撞为零或原生重开不替代这三项。
+
+> **端部对象优先执行[ENDPOINT-20261116.2](capture_endpoint_symbols_standard.md)和[机器contract](capture_endpoint_symbols_contract.json)**：OffPage/电源自身Name不可隐藏改用Alias，Name外置；翻页真实轮廓向内；GND按批准原生profile；保留合理电源竖支路及全部既有接插件。旧例图颜色与固定旋转值不是判据。
 
 2026-11-16阻容规则以[RC-20261116.2唯一现行规范](capture_rc_horizontal_ref_value_layout_spec.md)为准：正式本机库、横件横字/竖件竖字、Ref和Value沿各自引脚线齐平、网格及无干涉均为必须项。“灵活”仅用于这些要求以内的布局取舍。
 
@@ -59,7 +62,7 @@
 
 ## 电源与翻页符按导线末段自然平接
 
-当前执行[ENDPOINT-20261116.1正反例](capture_endpoint_symbols_standard.md#用户正反例与适用范围)。水平导线左端读作 **Name >> —— 电路**，右端为 **电路 —— << Name**：实际轮廓尖头朝向所属电路，完整原生Name在符号外侧空白，不压承载线或器件文字。方向不代替真实输入/输出/双向类型；颜色、符号名称、rotation/mirror数值本身都不是判断依据。
+当前执行[ENDPOINT-20261116.2正反例](capture_endpoint_symbols_standard.md#用户正反例与适用范围)。水平导线左端读作 **Name >> —— 电路**，右端为 **电路 —— << Name**：实际轮廓尖头朝向所属电路，完整原生Name在符号外侧空白，不压承载线或器件文字。方向不代替真实输入/输出/双向类型；颜色、符号名称、rotation/mirror数值本身都不是判断依据。
 
 先保留清楚的电源/去耦拓扑：用户认可的母线上方短竖支路、支路外端Global及其上方Name必须保留，不因“平接”而压平成横线端点。本来是水平自由端且有批准原生profile时，可顺末段平接，避免仅为默认朝向增加无意义折线；不一律旋转电源/GND。GND保留完整真实接地图形，原生profile可不显示名称；若显示则用自身Name外置。逐行检查完整轮廓和相邻对象，不得重叠。
 

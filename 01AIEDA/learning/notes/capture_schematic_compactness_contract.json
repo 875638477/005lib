@@ -1,0 +1,17 @@
+{
+  "version": "COMPACT-20261116.1",
+  "authority": "capture_schematic_compactness_standard.md",
+  "scope": "Inventoried local functional groups and actual component-to-terminal paths within the requested schematic scope",
+  "mandatory_with": ["RC-20261116.2 five checks", "current endpoint/topology requirements", "native electrical validation"],
+  "required_checks": ["COMPACTGRID", "COMPACTFUNCTION", "COMPACTCLEAR", "COMPACTPITCH", "COMPACTLEADS"],
+  "default_slack_grids": 1,
+  "maximum_context_slack_grids": 2,
+  "required_native_roles": ["pins", "wires", "net_symbols", "part_frames", "page_grid"],
+  "required_evidence": ["inventory", "geometry", "scene", "topology", "budgets"],
+  "required_scene_roles": ["body", "pins", "pin_names", "pin_numbers", "ref", "value", "net_names", "endpoint_glyphs", "junctions", "wires"],
+  "allowed_budget_reasons": ["approved_native_reference", "full_text_and_symbol_clearance", "shared_longest_required_text", "native_hotspot_alignment", "functional_branch_preservation", "user_locked_scope"],
+  "forbidden_budget_reason": "whole_page_column_or_canvas_fill",
+  "unknown_is_pass": false,
+  "objective": "Appropriately short within readable local circuit constraints, not mechanical global shortest",
+  "checker_scope": "Read-only bound facts and independently verified reasonable candidate budgets; no CAD edits or candidate solver"
+}
