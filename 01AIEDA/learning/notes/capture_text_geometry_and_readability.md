@@ -1,6 +1,8 @@
+> **阻容必须按[RC-20261116.2](capture_rc_horizontal_ref_value_layout_spec.md)核正式本机库、横件横字/竖件竖字、引脚线对齐、网格和无干涉；本篇几何方法不豁免任何一项。**
+
 # Capture 文字几何与可读性检查
 
-> **2026-11-15现行修正**：保留用户优化参考图的功能拓扑和直接连线，阻容横竖均允许，位号左/完整Value右并落工程网格；MOS显示内部结构，电源/GND/翻页符沿末段平接、名称外置、翻页尖头朝向电路。旧文中一律横放等冲突表述已被本条覆盖。实施前读[完整现行规则](capture_topology_preservation_and_grid.md)。
+> 功能拓扑、MOS及电源/翻页方法另见[capture_topology_preservation_and_grid.md](capture_topology_preservation_and_grid.md)；阻容要求统一按RC-20261116.2。
 
 
 此方法处理网络标签、跨页端口、电源名、器件位号和器件值的显示位置。先完成库去重、网格和符号原点调整，再从同一个已保存并重新打开的设计导出官方 XML、原生坐标表与文字表。保存后数据库 ID 可能重建，旧计划不能直接套到新设计。

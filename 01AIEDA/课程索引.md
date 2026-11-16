@@ -1,3 +1,5 @@
+> **2026-11-16唯一现行阻容规则：[RC-20261116.2](learning/notes/capture_rc_horizontal_ref_value_layout_spec.md)**。全部采用本机正式库；横件Ref/Value都横，竖件两者都竖；沿各自引脚线齐平、落网格、无干涉。功能摆放可灵活，以上要求不可豁免。后文日期较早的方向记录仅为历史，执行统一按此入口和逐件检查器。
+
 > **本轮学习重点：可复用的灵活设计判断方法**。先识别电路角色与阅读路径，再选择布局和表达；例图用于说明取舍，不是固定摆法。[后续实施按此流程执行](learning/notes/capture_topology_preservation_and_grid.md#可复用的灵活判断方法)。本机方法和GitHub同步，课程完成状态不变。
 
 > **2026-11-15 原理图现行规则**：[保留参考功能拓扑、横竖阻容左右文字、网格、MOS及电源/翻页平接正反例](learning/notes/capture_topology_preservation_and_grid.md)。旧的一律横放表述不再适用；本次只更新规范，不改课程完成状态。

@@ -5,7 +5,8 @@ description: Resume recorded Cadence 17.2 training, migrate the 01AIEDA learning
 
 # Cadence 17.2 学习与迁移
 
-> 原理图实施先读[2026-11-15现行规则](../../notes/capture_topology_preservation_and_grid.md)：参考功能拓扑优先、阻容横竖均允许且位号左/Value右、工程网格兼容、MOS内部图形、电源/地/翻页符末段平接及名称外置。此条覆盖本文件及旧链接中“一律横放”等冲突规则。
+实际原理图实施先读[布局技能](../cadence-schematic-layout/SKILL.md)与[RC-20261116.2唯一现行阻容规范](../../notes/capture_rc_horizontal_ref_value_layout_spec.md)。本机正式库、横件横字/竖件竖字、引脚线对齐、网格及无干涉逐件执行；本技能不另定方向规则。功能布局参考[拓扑方法](../../notes/capture_topology_preservation_and_grid.md)，不能用“灵活”豁免明确要求。
+
 
 先读用户本次指定的学习根目录中的 EDA.md 开头计划和课程索引；未给新位置时从本技能所在路径向上查找同时含 EDA.md 和课程索引.md 的目录。不要假定盘符/用户名/安装路径永远不变。独立复制本技能时，根目录由用户或明确配置提供。
 
@@ -24,8 +25,5 @@ description: Resume recorded Cadence 17.2 training, migrate the 01AIEDA learning
 
 可选--out只新建JSON报告并拒绝覆盖已有文件；不得把报告输出指向EDA、索引、源设计或历史证据。预检退出0只代表学习文件和固定fixture身份，不代表Cadence程序/许可/GUI就绪。
 
-- 阻容排版按[水平方向及位号/Value左右规范](../../notes/capture_rc_horizontal_ref_value_layout_spec.md)：普通阻容横放、实际1脚左/2脚右；位号紧挨1脚侧引线上方，Value紧挨2脚侧引线上方，左右网名排在两者外侧（用户2026-11-10以R332/R333确认）；文字避让网络、引脚和导线，必要时协调局部导线调整并原生重开逐脚验收，不固定上方两格。
 
-- 原理图文字重叠、位号/Value、网络标签和冗余绕线任务，先按[清晰排版技能](../cadence-schematic-layout/SKILL.md)及[统一方案](../../notes/capture_compact_schematic_layout_method.md)执行；保持位号和Value分别贴近1/2脚侧引线上方，网络名在两侧；先调整显示，再考虑局部连线，分开验收显示与真实连接。
 
-- 2026-11-11 全页码阻容规则：同功能分组、同组紧凑等行距；本体/位号/完整Value/两侧网名分别成列，电容组与电阻组间留白。全部旧页和新页适用；保留实际脚号与连接，不因示例图加回CS/nSLEEP偏置。详见[规则与图片](../../notes/capture_rc_horizontal_ref_value_layout_spec.md#2026-11-11-新增阻容按功能分组紧凑成行整齐成列所有页码)；不将规则同步写成批量改图验收。

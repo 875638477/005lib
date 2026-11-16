@@ -1,0 +1,52 @@
+{
+  "version": "RC-20261116.2",
+  "scope": "All resistor/capacitor schematic instances on every page for this user",
+  "authority": "capture_rc_horizontal_ref_value_layout_spec.md",
+  "public_library_root": "D:/005lib",
+  "required_checks": [
+    "RCLIB",
+    "RCAXIS",
+    "RCALIGN",
+    "RCGRID",
+    "RCCLEAR"
+  ],
+  "library_policy": {
+    "existing_canonical_public_symbols_only": true,
+    "cache_body_and_physical_pins_must_match": true,
+    "unapproved_clone_scale_or_pin_pitch_change": false
+  },
+  "text_axis": {
+    "horizontal_component": [
+      "horizontal",
+      "horizontal"
+    ],
+    "vertical_component": [
+      "vertical",
+      "vertical"
+    ]
+  },
+  "alignment": "Each Ref/Value follows its own lead reference line in the approved native text frame; on-grid alone is insufficient",
+  "unknown_is_pass": false,
+  "flexible_choices": [
+    "component horizontal/vertical placement by circuit role",
+    "module arrangement, whitespace and local lead length within all required checks"
+  ],
+  "release_rule": "All inventoried R/C instances and all five checks require bound evidence; missing or unknown blocks compliant completion",
+  "canonical_symbols": {
+    "R": {
+      "relative_library": "01captureLib/000Resistor.OLB",
+      "package": "R",
+      "use": "all resistors"
+    },
+    "C": {
+      "relative_library": "01captureLib/002Capacitor.OLB",
+      "package": "C",
+      "use": "ordinary nonpolar capacitors"
+    },
+    "C_ELEC": {
+      "relative_library": "01captureLib/002Capacitor.OLB",
+      "package": "C_ELEC",
+      "use": "electrolytic and tantalum capacitors; preserve physical polarity"
+    }
+  }
+}

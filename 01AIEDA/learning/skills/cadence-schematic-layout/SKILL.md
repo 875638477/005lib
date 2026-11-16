@@ -5,13 +5,17 @@ description: Preserve readable circuit topology while arranging Cadence Capture 
 
 # Capture 原理图灵活设计、可读性与网格
 
+指定阻容来源：**000Resistor.OLB/R；002Capacitor.OLB/C；电解、钽用002Capacitor.OLB/C_ELEC**。这属于规格，其他本机同形符号也不能自行替代。
+
+先读[唯一现行阻容规范](../../notes/capture_rc_horizontal_ref_value_layout_spec.md)和[机器规则](../../notes/capture_rc_layout_contract.json)，报告规则版本、库同步身份和逐件核验字段。**必须项先执行，“灵活”仅在其范围内。** 交付须运行[检查器](../../scripts/capture_layout_tools/check_rc_layout_contract.py)并覆盖全部R/C；未知/缺项阻止“排版完成”。不能用网表或碰撞为零替代库一致、文字方向与引脚线对齐。
+
 **主要目标是复用灵活判断方法**：先识别电路作用与阅读路径，分析参考为什么清楚，再比较横/竖/混合与连接方式，按局部冲突调整，最后独立验收可读性和电气。记录取舍理由；例图和坐标是上下文相关的结果，不能机械套用。详见[可复用判断流程](../../notes/capture_topology_preservation_and_grid.md#可复用的灵活判断方法)。
 
-实施前读[用户2026-11-15现行规则与正反例](../../notes/capture_topology_preservation_and_grid.md)。当前用户约束优先；旧笔记中“一律横放”不再适用。
+功能布局另读[用户参考与正反例](../../notes/capture_topology_preservation_and_grid.md)。当前用户约束优先；旧笔记中“一律横放”不再适用。
 
 1. 固定最新源件、参考图、库、PinToPin/捕捉网格、可移动范围和SHA。实际工程的输入、脚本、日志、审核和交付在工程根，学习侧只放通用方法及获准示例。
 2. 用户提供已优化原图时，直接复用其功能模块组织、横竖方向、引脚分组、直接导线、反馈/补偿/去耦及启停关系，按新需求局部融合。不可只抄BOM后把阻容拆成孤立网名行；不恢复已删除器件或参考中的已知电气错误。
-3. 按电路角色灵活选方向：完整DC/DC的去耦/分压/反馈支路常竖放，独立串联/接口电阻行常横放，同模块可混用；不把示例强制推广。横放、竖放阻容均保持位号左、完整Value右，字向结合参考与实际空间选择、归属明确、锚点落工程网格；按真实字形避让本体、针号、网名、导线及邻近文字。保留脚号、极性和Kelvin关系，不为脚序或几何整齐强转器件。按功能分组对齐，不以齐表破坏电路。
+3. 器件横/竖按功能灵活选择；阻容执行[RC-20261116.2](../../notes/capture_rc_horizontal_ref_value_layout_spec.md)：全部使用本机正式库，不改图形/针距冒充；横件Ref/Value都横、竖件两者都竖；文字沿各自引脚线齐平、落网格、无干涉。确定器件方向后不得自由选择字向。先验证一横一竖的原生小样，保留物理脚号与极性。
 4. 读取库针距、工程单位及实际热点。本用户参考1/2 of pin to pin，换工程重新换算；符号针距须与网格相容。修针距/原点时协调全部相关线和端口，不能逐对象盲目取整。
 5. MOS使用真实G/S/D、沟道、体二极管及并脚/双管结构；BJT保留内部图形和箭头，不用空矩形代替离散器件。优先复用本机正确符号，逐脚核对封装。
 6. [电源、GND与翻页符](../../notes/capture_topology_preservation_and_grid.md#电源与翻页符按导线末段自然平接)沿所属导线末段平接，名称在外侧；水平左端翻页尖头向右进电路，右端相反。不为默认朝向加多余竖折线。按真实热点和Name偏移旋转，保持Global/OffPage原生类型、作用域及两端连接。
@@ -20,4 +24,4 @@ description: Preserve readable circuit topology while arranging Cadence Capture 
 9. 在副本应用后原生保存、独立重开，逐Ref.Pin比较网络、NC、Value/装配/封装/关键属性；逐页检查完整元件、引脚、文字、电源/翻页、Alias、导线和表格。有PCB交接时核主工程新鲜网表和严格导入。显示、离线模型、GUI、PCB分别报告；网表等价不能替代可读性验收。
 10. 用户要求后台时不启动或激活GUI。任一已知可见问题或关键显示对象漏验时，不把候选回写为“全页排版完成”。学习规则同步不能冒充实际工程整改完成。
 
-[阻容细则](../../notes/capture_rc_horizontal_ref_value_layout_spec.md)及[整体方法](../../notes/capture_compact_schematic_layout_method.md)的旧方向表述以2026-11-15现行规则为准。学习技能须后续读取复用，不等于模型权重训练或自动加载。
+[阻容细则](../../notes/capture_rc_horizontal_ref_value_layout_spec.md)及[整体方法](../../notes/capture_compact_schematic_layout_method.md)的方向与对齐要求统一以RC-20261116.2为准。学习技能须后续读取复用，不等于模型权重训练或自动加载。
