@@ -36,3 +36,5 @@ description: Preserve readable circuit topology while arranging Cadence Capture 
 [阻容细则](../../notes/capture_rc_horizontal_ref_value_layout_spec.md)及[整体方法](../../notes/capture_compact_schematic_layout_method.md)的方向与对齐要求统一以RC-20261117.1为准。学习技能须后续读取复用，不等于模型权重训练或自动加载。
 
 后台核准可按[原生打印、真实字形与纸张边界](../../notes/capture_native_print_text_and_canvas.md)执行；只复用当前宿主/自有副本并验证非空输出及来源。页面原生单位/可绘范围逐页实读，不能用截图或固定比例猜；零框、未知字体、内容超边/裁切和缺项不通过。整页平移不能再次改变本地引脚/文字坐标，扩大纸张不代替功能紧凑度。
+
+**后台窗口限制优先**：Capture.exe CLI/隐藏启动不保证无窗口，原生打印可弹出主窗口和进度框。用户要求全后台/不打开窗口时，禁止未经证实的Capture宿主打印路径；使用无图形tclsh/PST及Allegro -nographic，显示缺证记UNKNOWN。详见[原生打印窗口纠正](../../notes/capture_native_print_text_and_canvas.md#2026-11-17-纠正cli及隐藏启动不等于无窗口)。
