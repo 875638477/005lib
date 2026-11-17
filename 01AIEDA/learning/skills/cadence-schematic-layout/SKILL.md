@@ -32,3 +32,5 @@ description: Preserve readable circuit topology while arranging Cadence Capture 
 10. 用户要求后台时不启动或激活GUI。任一已知可见问题或关键显示对象漏验时，不把候选回写为“全页排版完成”。学习规则同步不能冒充实际工程整改完成。
 
 [阻容细则](../../notes/capture_rc_horizontal_ref_value_layout_spec.md)及[整体方法](../../notes/capture_compact_schematic_layout_method.md)的方向与对齐要求统一以RC-20261117.1为准。学习技能须后续读取复用，不等于模型权重训练或自动加载。
+
+后台核准可按[原生打印、真实字形与纸张边界](../../notes/capture_native_print_text_and_canvas.md)执行；只复用当前宿主/自有副本并验证非空输出及来源。页面原生单位/可绘范围逐页实读，不能用截图或固定比例猜；零框、未知字体、内容超边/裁切和缺项不通过。整页平移不能再次改变本地引脚/文字坐标，扩大纸张不代替功能紧凑度。

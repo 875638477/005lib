@@ -1,6 +1,6 @@
 # 原理图功能组紧凑度与适当短引线
 
-现行版本：**COMPACT-20261116.1**。这是独立的强制验收层，与[RC-20261116.2](capture_rc_horizontal_ref_value_layout_spec.md)、[端部对象规范](capture_endpoint_symbols_standard.md)及原理拓扑要求取 AND；原 RC 五项检查器不检查紧凑度。碰撞为零、方向正确或网表相同，都不能证明本规范通过。[机器 contract](capture_schematic_compactness_contract.json)及[只读 facts 检查器](../scripts/capture_layout_tools/check_schematic_compactness.py)配套使用。
+现行版本：**COMPACT-20261116.1**。这是独立的强制验收层，与[RC-20261117.1](capture_rc_horizontal_ref_value_layout_spec.md)、[端部对象规范](capture_endpoint_symbols_standard.md)及原理拓扑要求取 AND；原 RC 五项检查器不检查紧凑度。碰撞为零、方向正确或网表相同，都不能证明本规范通过。[机器 contract](capture_schematic_compactness_contract.json)及[只读 facts 检查器](../scripts/capture_layout_tools/check_schematic_compactness.py)配套使用。
 
 ## 三项优先规则
 
@@ -33,3 +33,7 @@
 - `budgets` 每组：`basis_id/source_kind/reason/reason_codes/constraint_ids`、整数 `slack_grids`、可选局部 `shared_lead_classes`，以及该合理联合候选的有序 rows/实际 leads、独立功能/电气作用域验证和完整 scene。共享类仅限本功能组；候选的完整路径长度及行间距就是预算基准，不能另填一个无候选支持的巨大上限。
 
 最终要求为 RC 五项 AND COMPACT AND 端部/拓扑/网格及电气相应门禁。声明只限已核范围；保存规则不等于已整改当前原理图，原理图线短也不代表 PCB 已布线或满足物理长度约束。PCB 是否可移动或走线由当前用户任务单独确定。
+
+## 纸张边界与紧凑度同时检查
+
+排版求解不得把内容推出纸张来消除碰撞，也不能将负坐标/超边内容在打印时截掉后称为通过。先按[原生打印与范围核准](capture_native_print_text_and_canvas.md)核完整场景的真实边界。需要时整页网格平移/调整纸张仍须保持模块内相对关系、本机库和全部电气，再原生重开及重新打印。纸张扩大不代替独立功能组的短引线/行距预算，任何未覆盖对象或裁切仍为未通过。当前检查器的facts覆盖不能冒充全部纸张可见性自动验证。

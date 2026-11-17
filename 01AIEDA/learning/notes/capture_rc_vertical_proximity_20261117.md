@@ -28,3 +28,7 @@ RCALIGN现在同时检查原生基准线与`alignment.proximity`证据：实际�
 安全边界：只开冻结的自有副本，核源SHA和输出绑定；复用已初始化宿主，不再次装载DLL或替换用户会话；不改Startup/安全设置，不发送Windows输入，不保存用户现场。Dbo getters正确签名包括`GetDefaultFontType(state)`、`GetFont(fontType, LOGFONT)`、`GetHorizontalTextJustification()`；字体名用`DboTclHelper_sGetLFName(LOGFONT, CString)`。缓存可见性getter是`GetPinNamesAreVisible`/`GetPinNumbersAreVisible`。实际命令/参数须按当前安装验证，不把历史路径当常量。
 
 原生数据、原生渲染、GUI像素、电气和PCB分别报告。后台脚本成功不等于全页排版完成。
+
+## 进一步核准：原生打印与页面范围
+
+参见[后台原生打印、文字框架与纸张边界](capture_native_print_text_and_canvas.md)。可在已有后台宿主中以真实自有项目上下文输出非空原生PS，读取有效框、实际字形和逐页参数；保留不支持字体/零框/裁切的unknown。修正后必须实际全量复核，不能仅更新学习文件。此方法不把当前工程坐标固定成通用模板。
