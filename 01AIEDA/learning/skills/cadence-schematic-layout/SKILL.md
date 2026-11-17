@@ -5,11 +5,13 @@ description: Preserve readable circuit topology while arranging Cadence Capture 
 
 # Capture 原理图灵活设计、可读性与网格
 
+**开始先判断是否需要改，合格即保留。** 先读[适度优化与停止准则](../../notes/capture_proportionate_optimization_stop_rule.md)。逐页检查不是每页必须重排；已达到批准ADC/DCDC示例的可读程度即停止，不追求极限面积或改动数量。只有具体阅读收益或规则错误才改，并记录修改/保留理由。此条优先约束下面紧凑度的改动触发条件。
+
 **任务开始优先：功能模块紧凑与文字同行**。先读[MODULETEXT-20261117.1](../../notes/capture_compact_modules_and_single_line_text.md)。按电路功能保留清楚拓扑，局部选择横/竖/混合，收紧组内留白及过长引线；不能用扩大纸张代替。盘点全部可见文字，短通道名等既核实际控制字符，也核原生文字框自动折行；有意多行逐对象说明。完成这些优先检查后再执行下面各层规则，不能仅同步笔记。
 
 **2026-11-17竖排贴线纠正优先**：用户指定DP_C5水平样式OK、DP_C8竖排文字离引脚线太远。先读[实际字形贴线规则](../../notes/capture_rc_vertical_proximity_20261117.md)。竖件Ref/Value除了都竖、落网格，还须实际字形紧挨自己的引脚线且无干涉；锚点对齐不构成间距通过。先以当前库/字体的真实原生文字框架校准一横一竖，绑定正例间距上限，再全量执行；不得机械把水平偏移旋转、从截图像素猜坐标或只保存规则而不改当前实例。
 
-**最高优先三项**：①GND从电路向外最大bar靠内、其余按真实库数量向外逐级缩短，左右镜像；电源Name紧贴真实符号外缘，不能只有外置没有间距上限。②阻容按功能紧凑成组，收紧行列间隔。③器件/接插件到网络符号用适当短引线，不能因满页表格拉成长线。先读[紧凑度与引线标准COMPACT-20261116.1](../../notes/capture_schematic_compactness_standard.md)、[contract](../../notes/capture_schematic_compactness_contract.json)，并运行[独立紧凑度检查器](../../scripts/capture_layout_tools/check_schematic_compactness.py)。保留原理拓扑、库、完整文字与无干涉是收紧的前提；缺几何/候选证据为unknown。旧RC五项或端部检查通过均不能替代新增紧凑度验收。
+**最高优先三项**：①GND从电路向外最大bar靠内、其余按真实库数量向外逐级缩短，左右镜像；电源Name紧贴真实符号外缘，不能只有外置没有间距上限。②阻容按功能紧凑成组，收紧行列间隔。③器件/接插件到网络符号用适当短引线，不能因满页表格拉成长线。先读[紧凑度与引线标准COMPACT-20261117.1](../../notes/capture_schematic_compactness_standard.md)、[contract](../../notes/capture_schematic_compactness_contract.json)，并运行[独立紧凑度检查器](../../scripts/capture_layout_tools/check_schematic_compactness.py)。保留原理拓扑、库、完整文字与无干涉是收紧的前提；缺几何/候选证据为unknown。旧RC五项或端部检查通过均不能替代新增紧凑度验收。
 
 
 先读端部对象优先规范[ENDPOINT-20261116.2](../../notes/capture_endpoint_symbols_standard.md)、[机器contract](../../notes/capture_endpoint_symbols_contract.json)及[用户正反例](../../notes/assets/endpoint_symbols_20261116/README.md)。真实OffPage/电源Name不可隐藏后用Alias代替；GND按批准原生profile保留完整接地图形。用[端部事实检查器](../../scripts/capture_layout_tools/check_endpoint_symbol_contract.py)核对其覆盖事实，独立补齐contract全部证据；盘点全部端部及接插件保留，缺事实为unknown，不得以facts checker、R/C或网表通过替代全量验收。

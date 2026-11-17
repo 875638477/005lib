@@ -49,7 +49,8 @@
     "shared_longest_required_text",
     "native_hotspot_alignment",
     "functional_branch_preservation",
-    "user_locked_scope"
+    "user_locked_scope",
+    "user_approved_adequate_layout"
   ],
   "forbidden_budget_reason": "whole_page_column_or_canvas_fill",
   "unknown_is_pass": false,
@@ -68,5 +69,7 @@
     "zero_collisions_only",
     "source_string_without_breaks_only",
     "rules_synced_only"
-  ]
+  ],
+  "change_decision_authority": "capture_proportionate_optimization_stop_rule.md",
+  "stop_rule": "Retain adequately readable layouts; only edit concrete readability/rule defects, never minimize area or require a change on every page."
 }
