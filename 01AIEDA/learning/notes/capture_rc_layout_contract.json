@@ -1,5 +1,5 @@
 {
-  "version": "RC-20261116.2",
+  "version": "RC-20261117.1",
   "scope": "All resistor/capacitor schematic instances on every page for this user",
   "authority": "capture_rc_horizontal_ref_value_layout_spec.md",
   "public_library_root": "D:/005lib",
@@ -29,7 +29,7 @@
       "vertical"
     ]
   },
-  "alignment": "Each Ref/Value follows its own lead reference line in the approved native text frame; on-grid alone is insufficient",
+  "alignment": "Native baseline alignment AND actual full-ink proximity to each own pin-lead line; anchor alignment/grid alone never proves visual proximity",
   "unknown_is_pass": false,
   "flexible_choices": [
     "component horizontal/vertical placement by circuit role",
@@ -52,5 +52,22 @@
       "package": "C_ELEC",
       "use": "electrolytic and tantalum capacitors; preserve physical polarity"
     }
+  },
+  "proximity": {
+    "authority": "capture_rc_vertical_proximity_20261117.md",
+    "approved_horizontal_example": "Z690I_SIONPC_CARDV1_01_00 DP_C5 (user 2026-11-17)",
+    "rejected_vertical_example": "DP_C8 captions too far from own lead",
+    "required_under": "RCALIGN alignment.proximity",
+    "required_facts": [
+      "bound native text frame",
+      "current full ink bounds",
+      "own lead lines",
+      "approved reference identity and bound evidence",
+      "reference horizontal gaps",
+      "current grid and allowed quantization slack"
+    ],
+    "maximum_extra_slack_grids": 1,
+    "screenshot_pixel_to_doc_offset_allowed": false,
+    "anchor_only_pass_allowed": false
   }
 }
