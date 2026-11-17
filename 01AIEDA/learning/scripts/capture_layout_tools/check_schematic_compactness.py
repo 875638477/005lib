@@ -7,7 +7,7 @@ joint candidate budget; this tool measures paths/pitches and checks that budget.
 from pathlib import Path
 import argparse, collections, hashlib, json, math
 
-VERSION='COMPACT-20261116.1'
+VERSION='COMPACT-20261117.1'
 CHECKS=('COMPACTGRID','COMPACTFUNCTION','COMPACTCLEAR','COMPACTPITCH','COMPACTLEADS')
 class Unknown(ValueError):pass
 def need(ok,why):
