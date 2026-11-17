@@ -5,6 +5,8 @@ description: Preserve readable circuit topology while arranging Cadence Capture 
 
 # Capture 原理图灵活设计、可读性与网格
 
+**任务开始优先：功能模块紧凑与文字同行**。先读[MODULETEXT-20261117.1](../../notes/capture_compact_modules_and_single_line_text.md)。按电路功能保留清楚拓扑，局部选择横/竖/混合，收紧组内留白及过长引线；不能用扩大纸张代替。盘点全部可见文字，短通道名等既核实际控制字符，也核原生文字框自动折行；有意多行逐对象说明。完成这些优先检查后再执行下面各层规则，不能仅同步笔记。
+
 **2026-11-17竖排贴线纠正优先**：用户指定DP_C5水平样式OK、DP_C8竖排文字离引脚线太远。先读[实际字形贴线规则](../../notes/capture_rc_vertical_proximity_20261117.md)。竖件Ref/Value除了都竖、落网格，还须实际字形紧挨自己的引脚线且无干涉；锚点对齐不构成间距通过。先以当前库/字体的真实原生文字框架校准一横一竖，绑定正例间距上限，再全量执行；不得机械把水平偏移旋转、从截图像素猜坐标或只保存规则而不改当前实例。
 
 **最高优先三项**：①GND从电路向外最大bar靠内、其余按真实库数量向外逐级缩短，左右镜像；电源Name紧贴真实符号外缘，不能只有外置没有间距上限。②阻容按功能紧凑成组，收紧行列间隔。③器件/接插件到网络符号用适当短引线，不能因满页表格拉成长线。先读[紧凑度与引线标准COMPACT-20261116.1](../../notes/capture_schematic_compactness_standard.md)、[contract](../../notes/capture_schematic_compactness_contract.json)，并运行[独立紧凑度检查器](../../scripts/capture_layout_tools/check_schematic_compactness.py)。保留原理拓扑、库、完整文字与无干涉是收紧的前提；缺几何/候选证据为unknown。旧RC五项或端部检查通过均不能替代新增紧凑度验收。

@@ -1,6 +1,6 @@
 # 原理图功能组紧凑度与适当短引线
 
-现行版本：**COMPACT-20261116.1**。这是独立的强制验收层，与[RC-20261117.1](capture_rc_horizontal_ref_value_layout_spec.md)、[端部对象规范](capture_endpoint_symbols_standard.md)及原理拓扑要求取 AND；原 RC 五项检查器不检查紧凑度。碰撞为零、方向正确或网表相同，都不能证明本规范通过。[机器 contract](capture_schematic_compactness_contract.json)及[只读 facts 检查器](../scripts/capture_layout_tools/check_schematic_compactness.py)配套使用。
+现行版本：**COMPACT-20261117.1**。这是独立的强制验收层，与[RC-20261117.1](capture_rc_horizontal_ref_value_layout_spec.md)、[端部对象规范](capture_endpoint_symbols_standard.md)及原理拓扑要求取 AND；原 RC 五项检查器不检查紧凑度。碰撞为零、方向正确或网表相同，都不能证明本规范通过。[机器 contract](capture_schematic_compactness_contract.json)及[只读 facts 检查器](../scripts/capture_layout_tools/check_schematic_compactness.py)配套使用。
 
 ## 三项优先规则
 
@@ -37,3 +37,7 @@
 ## 纸张边界与紧凑度同时检查
 
 排版求解不得把内容推出纸张来消除碰撞，也不能将负坐标/超边内容在打印时截掉后称为通过。先按[原生打印与范围核准](capture_native_print_text_and_canvas.md)核完整场景的真实边界。需要时整页网格平移/调整纸张仍须保持模块内相对关系、本机库和全部电气，再原生重开及重新打印。纸张扩大不代替独立功能组的短引线/行距预算，任何未覆盖对象或裁切仍为未通过。当前检查器的facts覆盖不能冒充全部纸张可见性自动验证。
+
+## 2026-11-17 用户纠正：布局正确仍须压缩不必要面积
+
+开始先按[功能模块与文字同行优先规则](capture_compact_modules_and_single_line_text.md)读取用户真实参考，先构造可读紧凑模块再选纸张。去耦行组、温度上拉/串阻/滤波、电压分压/滤波及DCDC分别按功能处理，不能机械统一方向或拆散原理。审全部文字的意外换行与原生自动折行；短功能名/通道名同行，有意多行逐对象说明。面积下降是结果事实，不能单独证明完整场景无干涉；原生完整字形和独立候选预算仍必需。
