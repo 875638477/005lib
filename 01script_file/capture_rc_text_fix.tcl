@@ -289,7 +289,7 @@ proc ::CaptureRCFix::python {} {
     error "Set CAPTURE_RC_PYTHON to a Python 3 executable"
 }
 
-proc ::CaptureRCFix::run {design grid pagePattern refPattern mode output {pageBoundary allow-overflow}} {
+proc ::CaptureRCFix::run {design grid pagePattern refPattern mode output {pageBoundary allow-overflow} {layout avoid}} {
     variable directory
     if {$design eq "NULL" || $design eq ""} {error "Open a design first"}
     set gridSetting [gridSetting $grid]
@@ -303,7 +303,7 @@ proc ::CaptureRCFix::run {design grid pagePattern refPattern mode output {pageBo
     set state [DboState]
     try {
         set bindings [snapshot $design $snapshot $state $pagePattern $refPattern $gridSetting]
-        set summary [exec {*}[python] -B $planner $snapshot $plan $report $pageBoundary]
+        set summary [exec {*}[python] -B $planner $snapshot $plan $report $pageBoundary $layout]
         puts $summary
         if {$mode ne "preview"} {
             lassign [apply $design $plan $bindings $state] changed changedPages
@@ -324,6 +324,14 @@ proc rc_text_fix {{grid {}} {pagePattern *} {refPattern *} {mode apply} {pageBou
     set design [GetActivePMDesign]
     set output [file join $::env(TEMP) "capture_rc_fix_[pid]_[clock clicks]"]
     set report [::CaptureRCFix::run $design $grid $pagePattern $refPattern $mode $output $pageBoundary]
+    if {$mode ne "preview"} {catch {ZoomRedraw}}
+    return $report
+}
+
+proc rc_text_fix_fixed {{grid {}} {pagePattern *} {refPattern *} {mode apply} {pageBoundary allow-overflow}} {
+    set design [GetActivePMDesign]
+    set output [file join $::env(TEMP) "capture_rc_fixed_[pid]_[clock clicks]"]
+    set report [::CaptureRCFix::run $design $grid $pagePattern $refPattern $mode $output $pageBoundary fixed]
     if {$mode ne "preview"} {catch {ZoomRedraw}}
     return $report
 }

@@ -21,6 +21,12 @@ FONT_FIELDS = (
 ROLES = {"part reference": "ref", "refdes": "ref", "value": "value", "user_value": "value"}
 # Original DP_C5 print at 100 document units/inch, separately for each caption.
 APPROVED_GAP = {"ref": 0.37369, "value": 2.22222}
+# Native anchors measured from each end of the body along its physical pin axis.
+# H: approved DP_C5. V: the 14 matching P20 capacitors in the user's example.
+FIXED_LAYOUT = {
+    "H": (0, -45, 15, -10),
+    "V": (3, -30, 15, 0),
+}
 
 
 @dataclass
@@ -107,7 +113,7 @@ def read_scene(path):
             elif record == "BOX":
                 kind, *bounds = values
                 cushion = 16 if kind == "labelled_pin" else .45 if kind == "endpoint" else .25
-                page.boxes.append(expanded(tuple(map(int, bounds)), cushion))
+                page.boxes.append((kind, expanded(tuple(map(int, bounds)), cushion)))
             elif record == "REVIEW":
                 page.unresolved.append(values[0])
     return pages.values()
@@ -177,11 +183,16 @@ def on_page(bounds, page):
             and 2 <= bounds[1] < bounds[3] <= page.height - 2)
 
 
+def lead_gap(bounds, part):
+    across = part.across
+    return max(part.lead - bounds[across + 2], bounds[across] - part.lead)
+
+
 def allowed(bounds, part, role, grid, steps):
     across = part.across
     along = 1 - across
     # Use the nearest edge of the full ink and keep both ends associated.
-    gap = max(part.lead - bounds[across + 2], bounds[across] - part.lead)
+    gap = lead_gap(bounds, part)
     if not (.25 < gap and gap + .5 <= APPROVED_GAP[role] + grid):
         return False
     distance = part.low - bounds[along + 2] if role == "ref" else bounds[along] - part.high
@@ -251,7 +262,7 @@ def place_groups(groups, page, parts, fixed, grid, overflow):
     return {}
 
 
-def plan_page(page, grid, overflow):
+def candidate_groups(page):
     eligible = {}
     outcomes = {}
     parts = {p.id: p for p in page.parts}
@@ -271,7 +282,12 @@ def plan_page(page, grid, overflow):
             outcomes[part.id] = "UNCALIBRATED_TEXT_FRAME"
         else:
             eligible[part.id] = captions
-    fixed = [*page.boxes, *(b for c in page.captions if c not in eligible.get(c.part, ())
+    return parts, eligible, outcomes
+
+
+def plan_page(page, grid, overflow):
+    parts, eligible, outcomes = candidate_groups(page)
+    fixed = [*(bounds for _, bounds in page.boxes), *(b for c in page.captions if c not in eligible.get(c.part, ())
                            and (b := current_bounds(c)))]
     selected = place_groups(eligible, page, parts, fixed, grid, overflow)
     remaining = {id_: captions for id_, captions in eligible.items() if id_ not in selected}
@@ -314,22 +330,108 @@ def plan_page(page, grid, overflow):
     return changes, [(page.name, p.ref, outcomes[p.id], overflows.get(p.id, "")) for p in page.parts]
 
 
-def main(snapshot, plan, report, page_boundary):
+def fixed_targets(part, captions):
+    rotation, ref_shift, value_shift, cross_shift = FIXED_LAYOUT[part.axis]
+    positions = {"ref": part.low + ref_shift, "value": part.high + value_shift}
+    lateral = part.lead + cross_shift
+    targets = []
+    for caption in captions:
+        longitudinal = positions[caption.role]
+        x, y = (longitudinal, lateral) if part.axis == "H" else (lateral, longitudinal)
+        bounds = moved(relative_ink(caption, rotation), x, y)
+        targets.append((caption, x, y, rotation, bounds))
+    return targets
+
+
+def fixed_clearance(bounds, part, role, grid):
+    along = 1 - part.across
+    on_own_end = bounds[along + 2] <= part.low if role == "ref" else bounds[along] >= part.high
+    # The native horizontal reference has a measured 0.37-unit gap. The
+    # conservative GDI estimate can be smaller, so keep a positive model gap.
+    return on_own_end and 0 < lead_gap(bounds, part) <= APPROVED_GAP[role] + grid
+
+
+def fixed_page(page, overflow):
+    parts, eligible, outcomes = candidate_groups(page)
+    body_boxes = [bounds for kind, bounds in page.boxes if kind == "body"]
+    selected = {}
+    changes = []
+    for id_, captions in eligible.items():
+        part = parts[id_]
+        targets = fixed_targets(part, captions)
+        if any(x % page.grid or y % page.grid for _, x, y, _, _ in targets):
+            outcomes[id_] = "FIXED_OFF_GRID"
+            continue
+        if not overflow and any(not on_page(bounds, page) for _, _, _, _, bounds in targets):
+            outcomes[id_] = "FIXED_OFF_PAGE"
+            continue
+        if any(intersects(expanded(bounds, .35), body)
+               for _, _, _, _, bounds in targets for body in body_boxes):
+            outcomes[id_] = "FIXED_BODY_OVERLAP"
+            continue
+        if any(not fixed_clearance(bounds, part, caption.role, page.grid)
+               for caption, _, _, _, bounds in targets):
+            outcomes[id_] = "FIXED_CAPTION_CLEARANCE_REVIEW"
+            continue
+        edits = [(page.id, c.id, x - part.x, y - part.y, rotation)
+                 for c, x, y, rotation, _ in targets if (x, y, rotation) != (c.x, c.y, c.rotation)]
+        changes.extend(edits)
+        outcomes[id_] = "PLANNED" if edits else "KEPT"
+        selected[id_] = targets
+
+    final_text = {c.id: current_bounds(c) for c in page.captions}
+    final_text.update({c.id: expanded(b, .35) for targets in selected.values() for c, _, _, _, b in targets})
+    rows = []
+    for part in page.parts:
+        positions = {}
+        exceeded = []
+        reviews = []
+        for caption, x, y, _, bounds in selected.get(part.id, []):
+            role = caption.role
+            positions[role] = f"{x - part.x},{y - part.y}"
+            if not on_page(bounds, page):
+                exceeded.append(role)
+            guard = expanded(bounds, .35)
+            hits = {kind for kind, other in page.boxes if kind != "body" and intersects(guard, other)}
+            if any(other is not None and id_ != caption.id and intersects(guard, other)
+                   for id_, other in final_text.items()):
+                hits.add("text")
+            reviews.extend(f"{role}:{kind}" for kind in sorted(hits))
+        rows.append((page.name, part.ref, outcomes[part.id], ",".join(exceeded), page.grid,
+                     positions.get("ref", ""), positions.get("value", ""), ",".join(reviews)))
+    return changes, rows
+
+
+def main(snapshot, plan, report, page_boundary, layout="avoid"):
+    if layout not in {"avoid", "fixed"}:
+        raise ValueError("Unknown caption layout mode")
+    fixed = layout == "fixed"
+    overflow = page_boundary == "allow-overflow"
     changes = []
     results = []
     for page in read_scene(Path(snapshot)):
+        empty_cells = ("", "", "") if fixed else ()
         if page.grid <= 0:
-            results.extend((page.name, part.ref, "PAGE_GRID_UNSUPPORTED", "", "") for part in page.parts)
+            results.extend((page.name, part.ref, "PAGE_GRID_UNSUPPORTED", "", "", *empty_cells)
+                           for part in page.parts)
             continue
-        edits, rows = plan_page(page, page.grid, page_boundary == "allow-overflow")
+        if fixed:
+            edits, rows = fixed_page(page, overflow)
+        else:
+            edits, rows = plan_page(page, page.grid, overflow)
+            rows = [(*row, page.grid) for row in rows]
         changes.extend(edits)
-        results.extend((*row, page.grid) for row in rows)
-        results.extend((page.name, "", warning, "", page.grid) for warning in sorted(set(page.unresolved)))
+        results.extend(rows)
+        results.extend((page.name, "", warning, "", page.grid, *empty_cells)
+                       for warning in sorted(set(page.unresolved)))
     with Path(plan).open("x", encoding="utf-8", newline="") as stream:
         csv.writer(stream, delimiter="\t", lineterminator="\n").writerows(changes)
     with Path(report).open("x", encoding="utf-8", newline="") as stream:
         out = csv.writer(stream, delimiter="\t", lineterminator="\n")
-        out.writerow(("page", "ref", "result", "overflows_page", "grid_doc"))
+        columns = ("page", "ref", "result", "overflows_page", "grid_doc")
+        if fixed:
+            columns += ("ref_anchor_dxdy", "value_anchor_dxdy", "fixed_position_review")
+        out.writerow(columns)
         out.writerows(results)
     planned = sum(row[2] == "PLANNED" for row in results)
     partial = sum(row[2].startswith("PARTIAL_") for row in results)
@@ -337,6 +439,8 @@ def main(snapshot, plan, report, page_boundary):
     exceeded = sum(bool(row[3]) for row in results)
     print(f"RC text repair: {planned} parts planned, {partial} partial, {kept} kept, "
           f"{len(results) - planned - kept - partial} review entries, {exceeded} page overflow.")
+    if fixed:
+        print(f"Fixed-position neighbor review: {sum(bool(row[-1]) for row in results)} parts.")
 
 
 if __name__ == "__main__":
