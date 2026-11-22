@@ -64,6 +64,20 @@ proc ::CaptureRCText::axisForPins {leads} {
     return [list $axis $across $line $innerA $innerB]
 }
 
+proc ::CaptureRCText::isCandidate {ref symbol} {
+    return [expr {[regexp -nocase {(^|[^[:alnum:]])(R|C|PR|PC)([0-9]|\?)} $ref] ||
+        [regexp -nocase {^(R|C|C_ELEC)(\.|$)} $symbol]}]
+}
+
+proc ::CaptureRCText::leads {part state} {
+    set result {}
+    foreach pin [objects $part $state NewPinsIter NextPin delete_DboPartInstPinsIter] {
+        lappend result [list [stringField $pin GetPinNumber] \
+            [point [read $pin GetOffsetStartPoint $state]] [point [read $pin GetOffsetHotSpot $state]]]
+    }
+    return $result
+}
+
 proc ::CaptureRCText::textFields {part origin state} {
     set fields [dict create ref {} value {}]
     foreach dp [objects $part $state NewDisplayPropsIter NextProp delete_DboDisplayPropsIter] {
@@ -115,11 +129,7 @@ proc ::CaptureRCText::writeRow {channel row} {
 }
 
 proc ::CaptureRCText::writePart {channel schematic page units grid part id ref symbol library state} {
-    set leads {}
-    foreach pin [objects $part $state NewPinsIter NextPin delete_DboPartInstPinsIter] {
-        lappend leads [list [stringField $pin GetPinNumber] \
-            [point [read $pin GetOffsetStartPoint $state]] [point [read $pin GetOffsetHotSpot $state]]]
-    }
+    set leads [leads $part $state]
     lassign [axisForPins $leads] axis across line
     set origin [point [read $part GetLocation $state]]
     set fields [textFields $part $origin $state]
@@ -188,8 +198,7 @@ proc ::CaptureRCText::audit {design output {grid {}}} {
                             set id [read $part GetId $state]
                             set ref [stringField $part GetReferenceDesignator]
                             set symbol [stringField $part GetSourcePartName]
-                            if {![regexp -nocase {(^|[^[:alnum:]])(R|C|PR|PC)([0-9]|\?)} $ref] &&
-                                ![regexp -nocase {^(R|C|C_ELEC)(\.|$)} $symbol]} {
+                            if {![isCandidate $ref $symbol]} {
                                 continue
                             }
                             dict incr counts candidates
