@@ -20,6 +20,8 @@ description: Preserve readable circuit topology while arranging Cadence Capture 
 
 先读[唯一现行阻容规范](../../notes/capture_rc_horizontal_ref_value_layout_spec.md)和[机器规则](../../notes/capture_rc_layout_contract.json)，报告规则版本、库同步身份和逐件核验字段。**必须项先执行，“灵活”仅在其范围内。** 交付须运行[检查器](../../scripts/capture_layout_tools/check_rc_layout_contract.py)并覆盖全部R/C；未知/缺项阻止“排版完成”。不能用网表或碰撞为零替代库一致、文字方向与引脚线对齐。
 
+已有 DSN 可先在 Capture 命令窗口运行[阻容位号与 Value 快检](../../notes/capture_rc_text_quick_check.md)。方向由原生引脚轴判定，实际贴线用同次保存的完整字形和批准正例复核。
+
 **主要目标是复用灵活判断方法**：先识别电路作用与阅读路径，分析参考为什么清楚，再比较横/竖/混合与连接方式，按局部冲突调整，最后独立验收可读性和电气。记录取舍理由；例图和坐标是上下文相关的结果，不能机械套用。详见[可复用判断流程](../../notes/capture_topology_preservation_and_grid.md#可复用的灵活判断方法)。
 
 功能布局另读[用户参考与正反例](../../notes/capture_topology_preservation_and_grid.md)。当前用户约束优先；旧笔记中“一律横放”不再适用。
