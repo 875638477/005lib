@@ -68,6 +68,7 @@ class Page:
     units: float
     width: int
     height: int
+    grid: int
     parts: list = field(default_factory=list)
     captions: list = field(default_factory=list)
     boxes: list = field(default_factory=list)
@@ -91,8 +92,8 @@ def read_scene(path):
             record, page_id, *values = map(unescape, row)
             page_id = int(page_id)
             if record == "PAGE":
-                name, units, width, height = values
-                pages[page_id] = Page(page_id, name, float(units), int(width), int(height))
+                name, units, width, height, grid = values
+                pages[page_id] = Page(page_id, name, float(units), int(width), int(height), int(grid))
                 continue
             page = pages[page_id]
             if record == "PART":
@@ -313,20 +314,22 @@ def plan_page(page, grid, overflow):
     return changes, [(page.name, p.ref, outcomes[p.id], overflows.get(p.id, "")) for p in page.parts]
 
 
-def main(snapshot, plan, report, grid, page_boundary):
-    grid = int(grid)
+def main(snapshot, plan, report, page_boundary):
     changes = []
     results = []
     for page in read_scene(Path(snapshot)):
-        edits, rows = plan_page(page, grid, page_boundary == "allow-overflow")
+        if page.grid <= 0:
+            results.extend((page.name, part.ref, "PAGE_GRID_UNSUPPORTED", "", "") for part in page.parts)
+            continue
+        edits, rows = plan_page(page, page.grid, page_boundary == "allow-overflow")
         changes.extend(edits)
-        results.extend(rows)
-        results.extend((page.name, "", warning, "") for warning in sorted(set(page.unresolved)))
+        results.extend((*row, page.grid) for row in rows)
+        results.extend((page.name, "", warning, "", page.grid) for warning in sorted(set(page.unresolved)))
     with Path(plan).open("x", encoding="utf-8", newline="") as stream:
         csv.writer(stream, delimiter="\t", lineterminator="\n").writerows(changes)
     with Path(report).open("x", encoding="utf-8", newline="") as stream:
         out = csv.writer(stream, delimiter="\t", lineterminator="\n")
-        out.writerow(("page", "ref", "result", "overflows_page"))
+        out.writerow(("page", "ref", "result", "overflows_page", "grid_doc"))
         out.writerows(results)
     planned = sum(row[2] == "PLANNED" for row in results)
     partial = sum(row[2].startswith("PARTIAL_") for row in results)

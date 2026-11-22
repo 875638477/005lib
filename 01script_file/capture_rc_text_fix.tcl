@@ -44,11 +44,49 @@ proc ::CaptureRCFix::boxRow {out sheet type bbox} {
     ::CaptureRCText::writeRow $out [concat [list BOX $sheet $type] $bbox]
 }
 
-proc ::CaptureRCFix::page {sch pg number out state refPattern} {
+proc ::CaptureRCFix::integerGrid {value} {
+    if {![string is double -strict $value]} {return 0}
+    if {[catch {
+        expr {$value > 0 && $value < Inf && abs($value - round($value)) < 1e-8 ? round($value) : 0}
+    } normalized]} {return 0}
+    return $normalized
+}
+
+proc ::CaptureRCFix::pinPitchInDocumentUnits {page} {
+    # PinToPin is stored in micrometres and the page scale in document units/inch.
+    return [expr {[$page GetPinToPin] * [$page GetDocUnitsPerInch] / 25400.0}]
+}
+
+proc ::CaptureRCFix::gridSetting {override} {
+    if {$override ne ""} {
+        set grid [integerGrid $override]
+        if {!$grid} {error "The explicit grid must be a positive whole number in Capture document units, for example: rc_text_fix 5"}
+        return [list fixed $grid]
+    }
+    set ratio 0.5
+    # Capture returns 0 when focus is in the Project Manager instead of a sheet.
+    if {![catch {
+        set uiGrid [integerGrid [capGetGridSpacing]]
+        if {!$uiGrid} {error "No active grid"}
+        set activePitch [pinPitchInDocumentUnits [GetActivePage]]
+        if {$activePitch <= 0} {error "Unknown active pin pitch"}
+        set ratio [expr {$uiGrid / $activePitch}]
+    }]} {
+        return [list pitch $ratio]
+    }
+    puts "No active schematic grid. Using half pin-to-pin on each page."
+    return [list pitch 0.5]
+}
+
+proc ::CaptureRCFix::page {sch pg number out state refPattern gridSetting} {
     set page [::CaptureRCText::stringField $pg GetName]
     set size [$pg GetDocUnits 0]
+    lassign $gridSetting basis grid
+    if {$basis eq "pitch"} {
+        set grid [integerGrid [expr {[pinPitchInDocumentUnits $pg] * $grid}]]
+    }
     ::CaptureRCText::writeRow $out [list PAGE $number $page [$pg GetDocUnitsPerInch] \
-        [DboTclHelper_sGetCSizeX $size] [DboTclHelper_sGetCSizeY $size]]
+        [DboTclHelper_sGetCSizeX $size] [DboTclHelper_sGetCSizeY $size] $grid]
     set bindings {}
     foreach object [::CaptureRCText::objects $pg $state NewPartInstsIter NextPartInst delete_DboPagePartInstsIter] {
         set part [DboPartInstToDboPlacedInst $object]
@@ -138,7 +176,7 @@ proc ::CaptureRCFix::page {sch pg number out state refPattern} {
     return $bindings
 }
 
-proc ::CaptureRCFix::snapshot {design path state pagePattern refPattern} {
+proc ::CaptureRCFix::snapshot {design path state pagePattern refPattern gridSetting} {
     set out [open $path {WRONLY CREAT EXCL}]
     try {
         fconfigure $out -encoding utf-8 -translation lf
@@ -152,7 +190,7 @@ proc ::CaptureRCFix::snapshot {design path state pagePattern refPattern} {
                 set sch [DboViewToDboSchematic $view]
                 foreach pg [::CaptureRCText::objects $sch $state NewPagesIter NextPage delete_DboSchematicPagesIter] {
                     if {![string match -nocase $pagePattern [::CaptureRCText::stringField $pg GetName]]} {continue}
-                    set bindings [dict merge $bindings [page $sch $pg [incr number] $out $state $refPattern]]
+                    set bindings [dict merge $bindings [page $sch $pg [incr number] $out $state $refPattern $gridSetting]]
                 }
             }
             if {!$number} {error "No matching schematic pages"}
@@ -254,7 +292,7 @@ proc ::CaptureRCFix::python {} {
 proc ::CaptureRCFix::run {design grid pagePattern refPattern mode output {pageBoundary allow-overflow}} {
     variable directory
     if {$design eq "NULL" || $design eq ""} {error "Open a design first"}
-    if {![string is integer -strict $grid] || $grid < 1} {error "Grid must be a positive integer in Capture document units"}
+    set gridSetting [gridSetting $grid]
     if {$mode ni {apply preview apply-save}} {error "Expected apply, preview or apply-save"}
     if {$pageBoundary ni {allow-overflow stay-on-page}} {error "Expected allow-overflow or stay-on-page"}
     set planner [file normalize [file join $directory .. 01AIEDA learning scripts capture_layout_tools plan_capture_rc_text_fix.py]]
@@ -264,8 +302,8 @@ proc ::CaptureRCFix::run {design grid pagePattern refPattern mode output {pageBo
     set report [file join $output results.tsv]
     set state [DboState]
     try {
-        set bindings [snapshot $design $snapshot $state $pagePattern $refPattern]
-        set summary [exec {*}[python] -B $planner $snapshot $plan $report $grid $pageBoundary]
+        set bindings [snapshot $design $snapshot $state $pagePattern $refPattern $gridSetting]
+        set summary [exec {*}[python] -B $planner $snapshot $plan $report $pageBoundary]
         puts $summary
         if {$mode ne "preview"} {
             lassign [apply $design $plan $bindings $state] changed changedPages
@@ -283,7 +321,6 @@ proc ::CaptureRCFix::run {design grid pagePattern refPattern mode output {pageBo
 }
 
 proc rc_text_fix {{grid {}} {pagePattern *} {refPattern *} {mode apply} {pageBoundary allow-overflow}} {
-    if {$grid eq ""} {set grid [capGetGridSpacing]}
     set design [GetActivePMDesign]
     set output [file join $::env(TEMP) "capture_rc_fix_[pid]_[clock clicks]"]
     set report [::CaptureRCFix::run $design $grid $pagePattern $refPattern $mode $output $pageBoundary]
