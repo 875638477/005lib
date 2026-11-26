@@ -5711,3 +5711,9 @@
 "/600企业标准/03安全认证标准/UL(美国保险商试验所)/UL2054测试项目.pdf" filter=lfs diff=lfs merge=lfs -text
 "/600企业标准/03安全认证标准/UL(美国保险商试验所)/ul2054.pdf" filter=lfs diff=lfs merge=lfs -text
 "/devmgmt.msc" filter=lfs diff=lfs merge=lfs -text
+"/011MCU/03WiFi及网络SoC/必联电子/BL-M8852BP2_datasheet.pdf" filter=lfs diff=lfs merge=lfs -text
+"/013Power/00BUCK降压/DIODES(美台)/AP1510.pdf" filter=lfs diff=lfs merge=lfs -text
+"/013Power/00BUCK降压/DIODES(美台)/AP34063_datasheet.pdf" filter=lfs diff=lfs merge=lfs -text
+"/013Power/00BUCK降压/DIODES(美台)/PAM2301CAAB120_规格书_WJ414163.PDF" filter=lfs diff=lfs merge=lfs -text
+"/013Power/00BUCK降压/DIODES(美台)/PAM2303CFGADJR.pdf" filter=lfs diff=lfs merge=lfs -text
+"/013Power/08充电管理芯片/SOUTHCHIP(南芯)/SC8815QDER_规格书_WJ249295.PDF" filter=lfs diff=lfs merge=lfs -text
